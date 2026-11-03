@@ -5,6 +5,7 @@ import { readEvidence } from "../p2/artifacts.ts";
 import { readJudgments } from "../p2/rescore.ts";
 import type { HumanScore } from "../p2/score.ts";
 import { nativeEntries, scoreAllRealArchives } from "../p3/metrics.ts";
+import { type BookClosure, readBookClosure } from "./closure.ts";
 import { isoId, priorBatches, stageLedger } from "./main.ts";
 import {
 	assertProductMatches,
@@ -69,13 +70,15 @@ export function aggregateV5() {
 	const bookBatch = priorBatches("BOOK", "acceptance", 1);
 	if (bookBatch.length > 1) throw new Error("Fixed BOOK acceptance batch repeated");
 	let booksFinal = false;
+	let bookClosure: BookClosure | undefined;
 	for (const folder of bookBatch) {
 		roots.push(folder);
 		const manifest = json(path.join(folder, "manifest.json"));
 		assertProductMatches(freeze.product, manifest.provenance.product);
+		bookClosure = readBookClosure(folder);
 		booksFinal = existsSync(path.join(folder, "summary.json"));
 		const completionRoot = path.join(folder, "technical-completion");
-		if (existsSync(completionRoot))
+		if (!bookClosure && existsSync(completionRoot))
 			for (const item of readdirSync(completionRoot, { withFileTypes: true }).filter((item) => item.isDirectory())) {
 				if (
 					existsSync(path.join(completionRoot, item.name, "authorization.json")) &&
@@ -83,10 +86,14 @@ export function aggregateV5() {
 				)
 					booksFinal = false;
 			}
-		for (const file of readdirSync(folder).filter((name) => name.endsWith("-outcome.json"))) {
-			const originalOutcome = json(path.join(folder, file));
+		const outcomes =
+			bookClosure?.outcomes ??
+			readdirSync(folder)
+				.filter((name) => name.endsWith("-outcome.json"))
+				.map((file) => json(path.join(folder, file)));
+		for (const originalOutcome of outcomes) {
 			const completionFile = path.join(completionRoot, String(originalOutcome.id), "outcome.json");
-			const outcome = existsSync(completionFile) ? json(completionFile) : originalOutcome;
+			const outcome = !bookClosure && existsSync(completionFile) ? json(completionFile) : originalOutcome;
 			bookOutcomes.push(outcome);
 			for (const attempt of outcome.attempts as { archive: string; runId: string; qualityIncluded: boolean }[]) {
 				if (existsSync(path.join(attempt.archive, "raw/checksums.json"))) completeArchives.push(attempt.archive);
@@ -154,6 +161,7 @@ export function aggregateV5() {
 		T04: scoreToolCalls(calls, judgments),
 		books: bookScore,
 		bookOutcomes,
+		bookClosure: bookClosure ?? null,
 		booksFinal,
 		unavailableArchives,
 		unavailableQualityBooks,

@@ -7,6 +7,7 @@ import { RunControl } from "../p2/run-control.ts";
 import { balance, caseWorkspace } from "../p3/main.ts";
 import { BOOK_LIMITS, bookBudgetPreflight, nextBook, PRIMARY_BOOKS, RESERVE_BOOKS } from "./book-policy.ts";
 import { readBookInterruption, superviseBookCase } from "./book-process.ts";
+import { assertBookBatchOpen } from "./closure.ts";
 import { assertDeterministicGates } from "./freeze.ts";
 import { isoId, priorBatches, stageLedger } from "./main.ts";
 import { assertNoRpcBootstrap, readPausedMacro } from "./pause.ts";
@@ -43,6 +44,8 @@ interface Outcome {
 	attempts: { runId: string; folder: string; archive: string; classification: string; qualityIncluded: boolean }[];
 }
 export async function runBooks(development: boolean, resume?: string, resumePausedId?: number, retryBootstrap = false) {
+	if (resume) assertBookBatchOpen(path.resolve(resume));
+	if (!development) for (const folder of priorBatches("BOOK", "acceptance", 1)) assertBookBatchOpen(folder);
 	if (retryBootstrap && resumePausedId === undefined) throw new Error("Bootstrap retry needs the explicit paused case");
 	if (
 		resumePausedId !== undefined &&

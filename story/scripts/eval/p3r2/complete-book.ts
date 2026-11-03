@@ -10,12 +10,14 @@ import { balance } from "../p3/main.ts";
 import type { BookCaseConfig } from "./book-case.ts";
 import { bookBudgetPreflight } from "./book-policy.ts";
 import { readBookInterruption, superviseBookCase } from "./book-process.ts";
+import { assertBookBatchOpen } from "./closure.ts";
 import { assertDeterministicGates } from "./freeze.ts";
 import { isoId, stageLedger } from "./main.ts";
 import { readPausedMacro } from "./pause.ts";
 import { assertProductMatches, executionSource, stageRoot, writeRecord } from "./provenance.ts";
 
 export async function completeAuthorizedBook(batch: string, id: number) {
+	assertBookBatchOpen(path.resolve(batch));
 	if (!Number.isSafeInteger(id) || id < 1 || path.dirname(path.resolve(batch)) !== path.join(stageRoot, "P3R2-BOOK"))
 		throw new Error("Existing formal BOOK batch required");
 	const provenance = executionSource(true);

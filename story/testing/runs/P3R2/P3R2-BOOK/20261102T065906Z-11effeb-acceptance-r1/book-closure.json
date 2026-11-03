@@ -1,0 +1,206 @@
+{
+  "schema": "story/p3r2-book-author-closure@1",
+  "authorApproved": true,
+  "closedAt": "2026-11-03T02:00:31.893Z",
+  "authorStatement": "继续执行P3第二轮，先核对上次暂停时保存的进度，再继续剩余BOOK测试，保留已有结果和费用，不重跑已完成的付费测试。1578和1769不跑了，有三本书就够了",
+  "normalizedTypo": {
+    "provided": 1578,
+    "actual": 1587,
+    "reason": "Existing batch has 1587; no 1578 run"
+  },
+  "completedBookIds": [
+    837,
+    527,
+    42
+  ],
+  "stoppedBookIds": [
+    1587,
+    1769
+  ],
+  "stopFurtherBookDispatch": true,
+  "noReserveBooks": true,
+  "outcomes": [
+    {
+      "id": 837,
+      "target": 8,
+      "classification": "completed",
+      "qualityIncluded": true,
+      "missing": false,
+      "attempts": [
+        {
+          "runId": "20261102T065906Z-11effeb-acceptance-r1-837",
+          "folder": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\837",
+          "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\837\\book",
+          "classification": "completed",
+          "qualityIncluded": true
+        }
+      ]
+    },
+    {
+      "id": 527,
+      "target": 7,
+      "classification": "completed",
+      "qualityIncluded": true,
+      "missing": false,
+      "attempts": [
+        {
+          "runId": "20261102T065906Z-11effeb-acceptance-r1-527",
+          "folder": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\527",
+          "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\527\\book",
+          "classification": "completed",
+          "qualityIncluded": true
+        }
+      ]
+    },
+    {
+      "id": 1587,
+      "target": 8,
+      "classification": "measurement_timeout_author_closed",
+      "qualityIncluded": true,
+      "missing": false,
+      "goalIncomplete": true,
+      "originalOutcomeFile": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1587-outcome.json",
+      "attempts": [
+        {
+          "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1587\\offline-seal-20261103T020031Z",
+          "runId": "20261102T065906Z-11effeb-acceptance-r1-1587",
+          "qualityIncluded": true,
+          "originalArchive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1587\\book",
+          "classification": "measurement_timeout_author_closed",
+          "derivedArchive": true
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "target": 6,
+      "classification": "completed",
+      "qualityIncluded": true,
+      "missing": false,
+      "attempts": [
+        {
+          "runId": "20261102T065906Z-11effeb-acceptance-r1-42",
+          "folder": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\42",
+          "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\42\\book",
+          "classification": "completed",
+          "qualityIncluded": true
+        }
+      ]
+    },
+    {
+      "id": 1769,
+      "target": 10,
+      "classification": "provider_rejected_author_closed",
+      "qualityIncluded": true,
+      "missing": false,
+      "goalIncomplete": true,
+      "attempts": [
+        {
+          "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1769\\book",
+          "runId": "20261102T065906Z-11effeb-acceptance-r1-1769",
+          "qualityIncluded": true,
+          "classification": "provider_rejected_author_closed"
+        }
+      ]
+    }
+  ],
+  "observed": [
+    {
+      "id": 837,
+      "target": 8,
+      "chapters": 8,
+      "words": 9504,
+      "closedByAuthor": false,
+      "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\837\\book",
+      "runId": "20261102T065906Z-11effeb-acceptance-r1-837",
+      "fees": {
+        "knownUsd": 0.6813922560000001,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 60,
+        "totalUsd": 0.6813922560000001
+      }
+    },
+    {
+      "id": 527,
+      "target": 7,
+      "chapters": 7,
+      "words": 10849,
+      "closedByAuthor": false,
+      "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\527\\book",
+      "runId": "20261102T065906Z-11effeb-acceptance-r1-527",
+      "fees": {
+        "knownUsd": 0.43480796400000005,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 45,
+        "totalUsd": 0.43480796400000005
+      }
+    },
+    {
+      "id": 1587,
+      "target": 8,
+      "chapters": 1,
+      "words": 1636,
+      "closedByAuthor": true,
+      "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1587\\offline-seal-20261103T020031Z",
+      "runId": "20261102T065906Z-11effeb-acceptance-r1-1587",
+      "fees": {
+        "knownUsd": 0.078948156,
+        "reservedUsd": 0.0870819,
+        "unknownCalls": 2,
+        "requests": 12,
+        "totalUsd": 0.166030056
+      }
+    },
+    {
+      "id": 42,
+      "target": 6,
+      "chapters": 6,
+      "words": 9083,
+      "closedByAuthor": false,
+      "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\42\\book",
+      "runId": "20261102T065906Z-11effeb-acceptance-r1-42",
+      "fees": {
+        "knownUsd": 0.3954327839999999,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 38,
+        "totalUsd": 0.3954327839999999
+      }
+    },
+    {
+      "id": 1769,
+      "target": 10,
+      "chapters": 2,
+      "words": 3697,
+      "closedByAuthor": true,
+      "archive": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3R2\\P3R2-BOOK\\20261102T065906Z-11effeb-acceptance-r1\\1769\\book",
+      "runId": "20261102T065906Z-11effeb-acceptance-r1-1769",
+      "fees": {
+        "knownUsd": 0.12061354799999999,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 16,
+        "totalUsd": 0.12061354799999999
+      }
+    }
+  ],
+  "originalManifestUnchanged": true,
+  "originalFailuresRetained": true,
+  "qualityPopulation": "All committed chapters in all five started books, including partial 1587 and 1769",
+  "allRealToolCallsRetained": true,
+  "limits": {
+    "perBookUsd": 2,
+    "stageStopUsd": 6.5,
+    "stageMaximumUsd": 7.5
+  },
+  "fees": {
+    "knownUsd": 3.196994207999999,
+    "reservedUsd": 0.1301928,
+    "unknownCalls": 3,
+    "requests": 568,
+    "totalUsd": 3.3271870079999992
+  },
+  "acceptance": "Author changed further execution scope only; original numeric thresholds/minimums remain visible and insufficient samples are not passed"
+}
