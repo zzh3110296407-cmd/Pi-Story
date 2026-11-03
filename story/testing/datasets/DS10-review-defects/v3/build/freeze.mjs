@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { io } from '../../../../datasets/DS09-state-gold/v3/build/io.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url)),{read,write,finish}=io(root);
+const manifest=read('manifest.json'),review=read('labels/input-repair-review.json');assert(!manifest.frozenAt);assert(review.passed);assert(review.developmentInputSummary.passed);assert.equal(review.newGoldAnnotations,0);assert.equal(review.cases.length,27);assert.equal(review.describedHookOccurrences,54);
+write('labels/freeze-approval.json',{schema:'story/dataset-freeze-approval@1',date:'2026-10-30',frozenAt:'2026-10-30',sourceUserRequest:'现在开始修复，发布 DS09 v3，补齐既有伏笔编号对应的语义描述，并同步更新 DS10 的输入和底本引用。保留冻结版本及历史运行，检查通过后按方案完成复核并本地提交，不推送。',developmentRequest:'此次修复是否会同时交付基于 v1 的独立开发输入修正版或补丁（保留原正文、金标和冻结 v1），供 R4 开发轮使用？',scope:'Publish the DS10 input/source-reference successor and independent v1 development override after checks; local commit only.',reviewMode:'Existing author-accepted 48 gold decisions inherited unchanged; actual input serialization and source references verified by Codex AI.',humanPersonallyReviewedNewInputMappings:false,newGoldAnnotations:0,inheritedApproval:'labels/inherited-v2-freeze-approval.json',sourceDataset:review.sourceReferencesUpdatedTo,checks:'labels/input-repair-review.json'});
+write('LABELING.md',readFileSync(root+'LABELING.md','utf8').replace('v3 DRAFT','v3')+'\nFrozen 2026-10-30 under the explicit current input-repair publication/local-commit request after checks. Input verification is AI work; original gold approval is inherited unchanged. R4 consumption instructions are in DEVELOPMENT.md. See labels/freeze-approval.json.\n');
+finish({...manifest,id:'DS10',version:'v3',frozenAt:'2026-10-30',state:'frozen_verified_input_repair_inherited_author_accepted_gold',annotationStatus:'AI_input_verification_inherited_author_accepted_gold'});
+console.log('DS10 v3 input/reference repair frozen, with unchanged reviewed gold.');

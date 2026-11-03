@@ -1,0 +1,815 @@
+{
+  "seed": 20261029,
+  "sampleRate": 0.2,
+  "items": [
+    {
+      "itemId": "ctx-10-editor-numbered-draft",
+      "role": "editor",
+      "must": [
+        {
+          "type": "text_contains",
+          "value": "Nolan laid the brass key on the mantel."
+        },
+        {
+          "type": "json_path_exists",
+          "value": "$.intent"
+        }
+      ],
+      "forbidden": [
+        {
+          "type": "text_absent",
+          "value": "SK_TEST_P2_CANARY_FUTURE_1111111111111111"
+        }
+      ],
+      "authorVerdict": "agree",
+      "changedTo": null,
+      "note": "同意。当前草稿为c02-d01，正文确有Nolan放下黄铜钥匙的原句；编辑应收到编号草稿与第2章本章意图。future_vault要到第3章才生效，第2章不应带出其金丝雀内容。实际输入的两行编号n=1、2与草稿一致。",
+      "reviewer": "Codex（AI，受用户委托）",
+      "date": "2026-10-29",
+      "humanReviewed": false,
+      "verification": {
+        "predicateChecks": [
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "Nolan laid the brass key on the mantel.",
+            "passed": true
+          },
+          {
+            "group": "must",
+            "type": "json_path_exists",
+            "value": "$.intent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "SK_TEST_P2_CANARY_FUTURE_1111111111111111",
+            "passed": true
+          }
+        ],
+        "allPassed": true,
+        "roleInputKeys": [
+          "task",
+          "chapter",
+          "targetWords",
+          "intent",
+          "bible",
+          "state",
+          "authorSources",
+          "ledger",
+          "authorIntent",
+          "currentFocus",
+          "draft",
+          "scope",
+          "observations"
+        ],
+        "numberedDraft": [
+          {
+            "n": 1,
+            "text": "Nolan laid the brass key on the mantel."
+          },
+          {
+            "n": 2,
+            "text": "Ada watched the northern window."
+          }
+        ],
+        "futureBibleEntry": {
+          "effectiveFromChapter": 3,
+          "excluded": true
+        }
+      }
+    },
+    {
+      "itemId": "ctx-15-recheck-observation",
+      "role": "recheck",
+      "must": [
+        {
+          "type": "text_contains",
+          "value": "c02-r01-o01"
+        }
+      ],
+      "forbidden": [
+        {
+          "type": "text_absent",
+          "value": "SK_TEST_P2_CANARY_FUTURE_1111111111111111"
+        }
+      ],
+      "authorVerdict": "agree",
+      "changedTo": null,
+      "note": "同意。分支已有观察c02-r01-o01，复查必须收到该观察及其原影响说明、证据，并以相应范围关联它；不能只收到正文。第三章才生效的设定仍应排除。实际复查输入保留了该观察对象与对应scope。",
+      "reviewer": "Codex（AI，受用户委托）",
+      "date": "2026-10-29",
+      "humanReviewed": false,
+      "verification": {
+        "predicateChecks": [
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "c02-r01-o01",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "SK_TEST_P2_CANARY_FUTURE_1111111111111111",
+            "passed": true
+          }
+        ],
+        "allPassed": true,
+        "roleInputKeys": [
+          "task",
+          "chapter",
+          "targetWords",
+          "intent",
+          "bible",
+          "state",
+          "authorSources",
+          "ledger",
+          "authorIntent",
+          "currentFocus",
+          "draft",
+          "scope",
+          "observations"
+        ],
+        "numberedDraft": [
+          {
+            "n": 1,
+            "text": "Nolan laid the brass key on the mantel."
+          },
+          {
+            "n": 2,
+            "text": "Ada watched the northern window."
+          }
+        ],
+        "futureBibleEntry": {
+          "effectiveFromChapter": 3,
+          "excluded": true
+        },
+        "observation": {
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "evidence": {
+            "lines": [
+              1
+            ],
+            "stateRefs": [
+              "F-1"
+            ]
+          },
+          "impact": "Check the stated key location against the current holder.",
+          "scope": "local"
+        },
+        "scope": {
+          "spans": [
+            {
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "forObservations": [
+            "c02-r01-o01"
+          ]
+        }
+      }
+    },
+    {
+      "itemId": "ctx-19-keeper-current-state",
+      "role": "keeper",
+      "must": [
+        {
+          "type": "text_contains",
+          "value": "F-1"
+        },
+        {
+          "type": "text_contains",
+          "value": "item:brass_key"
+        },
+        {
+          "type": "text_contains",
+          "value": "char:nolan"
+        }
+      ],
+      "forbidden": [
+        {
+          "type": "field_absent",
+          "value": "outline"
+        },
+        {
+          "type": "field_absent",
+          "value": "intent"
+        },
+        {
+          "type": "field_absent",
+          "value": "ledger"
+        },
+        {
+          "type": "field_absent",
+          "value": "brief"
+        },
+        {
+          "type": "field_absent",
+          "value": "authorIntent"
+        },
+        {
+          "type": "field_absent",
+          "value": "currentFocus"
+        },
+        {
+          "type": "field_absent",
+          "value": "mustKeep"
+        },
+        {
+          "type": "field_absent",
+          "value": "beats"
+        },
+        {
+          "type": "text_absent",
+          "value": "Keep the lighthouse mystery grounded in observable evidence."
+        },
+        {
+          "type": "text_absent",
+          "value": "Emphasize Ada and Nolan learning to trust each other."
+        },
+        {
+          "type": "text_absent",
+          "value": "If the bell rings again, Ada must wait beside the red door."
+        }
+      ],
+      "authorVerdict": "agree",
+      "changedTo": null,
+      "note": "同意。第1章提交明确给出F-1：item:brass_key的holder为char:nolan；这是第2章结算前应提供的已确认状态。大纲、本章意图、台账、提要、作者意图与焦点不应进入记录员输入，所列字段及专用文本的排除均有方案20§3.1/D10依据。",
+      "reviewer": "Codex（AI，受用户委托）",
+      "date": "2026-10-29",
+      "humanReviewed": false,
+      "verification": {
+        "predicateChecks": [
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "F-1",
+            "passed": true
+          },
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "item:brass_key",
+            "passed": true
+          },
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "char:nolan",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "outline",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "intent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "ledger",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "brief",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "authorIntent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "currentFocus",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "mustKeep",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "beats",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Keep the lighthouse mystery grounded in observable evidence.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Emphasize Ada and Nolan learning to trust each other.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "If the bell rings again, Ada must wait beside the red door.",
+            "passed": true
+          }
+        ],
+        "allPassed": true,
+        "roleInputKeys": [
+          "task",
+          "chapter",
+          "sentences",
+          "state",
+          "bibleKeys",
+          "predicates"
+        ],
+        "currentFact": {
+          "id": "F-1",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:nolan",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0001"
+          ],
+          "sourceChapter": 1
+        },
+        "firstSentence": {
+          "n": 1,
+          "ref": "c02.s0001",
+          "text": "Nolan laid the brass key on the mantel."
+        }
+      }
+    },
+    {
+      "itemId": "ctx-18-keeper-numbered-sentences",
+      "role": "keeper",
+      "must": [
+        {
+          "type": "text_contains",
+          "value": "c02.s0001"
+        },
+        {
+          "type": "text_contains",
+          "value": "Nolan laid the brass key on the mantel."
+        }
+      ],
+      "forbidden": [
+        {
+          "type": "field_absent",
+          "value": "outline"
+        },
+        {
+          "type": "field_absent",
+          "value": "intent"
+        },
+        {
+          "type": "field_absent",
+          "value": "ledger"
+        },
+        {
+          "type": "field_absent",
+          "value": "brief"
+        },
+        {
+          "type": "field_absent",
+          "value": "authorIntent"
+        },
+        {
+          "type": "field_absent",
+          "value": "currentFocus"
+        },
+        {
+          "type": "field_absent",
+          "value": "mustKeep"
+        },
+        {
+          "type": "field_absent",
+          "value": "beats"
+        },
+        {
+          "type": "text_absent",
+          "value": "Keep the lighthouse mystery grounded in observable evidence."
+        },
+        {
+          "type": "text_absent",
+          "value": "Emphasize Ada and Nolan learning to trust each other."
+        },
+        {
+          "type": "text_absent",
+          "value": "If the bell rings again, Ada must wait beside the red door."
+        }
+      ],
+      "authorVerdict": "agree",
+      "changedTo": null,
+      "note": "同意。第2章当前草稿首句按s2编号为c02.s0001，文本与金标一致。记录员需要完整编号句子和既有状态；所列计划、台账、作者控制文本与字段均应隔离，不用于推定事实。",
+      "reviewer": "Codex（AI，受用户委托）",
+      "date": "2026-10-29",
+      "humanReviewed": false,
+      "verification": {
+        "predicateChecks": [
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "c02.s0001",
+            "passed": true
+          },
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "Nolan laid the brass key on the mantel.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "outline",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "intent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "ledger",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "brief",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "authorIntent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "currentFocus",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "mustKeep",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "beats",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Keep the lighthouse mystery grounded in observable evidence.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Emphasize Ada and Nolan learning to trust each other.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "If the bell rings again, Ada must wait beside the red door.",
+            "passed": true
+          }
+        ],
+        "allPassed": true,
+        "roleInputKeys": [
+          "task",
+          "chapter",
+          "sentences",
+          "state",
+          "bibleKeys",
+          "predicates"
+        ],
+        "currentFact": {
+          "id": "F-1",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:nolan",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0001"
+          ],
+          "sourceChapter": 1
+        },
+        "firstSentence": {
+          "n": 1,
+          "ref": "c02.s0001",
+          "text": "Nolan laid the brass key on the mantel."
+        }
+      }
+    },
+    {
+      "itemId": "ctx-25-edited-ledger-not-leaked",
+      "role": "keeper",
+      "must": [
+        {
+          "type": "text_contains",
+          "value": "c02.s0001"
+        }
+      ],
+      "forbidden": [
+        {
+          "type": "field_absent",
+          "value": "outline"
+        },
+        {
+          "type": "field_absent",
+          "value": "intent"
+        },
+        {
+          "type": "field_absent",
+          "value": "ledger"
+        },
+        {
+          "type": "field_absent",
+          "value": "brief"
+        },
+        {
+          "type": "field_absent",
+          "value": "authorIntent"
+        },
+        {
+          "type": "field_absent",
+          "value": "currentFocus"
+        },
+        {
+          "type": "field_absent",
+          "value": "mustKeep"
+        },
+        {
+          "type": "field_absent",
+          "value": "beats"
+        },
+        {
+          "type": "text_absent",
+          "value": "Keep the lighthouse mystery grounded in observable evidence."
+        },
+        {
+          "type": "text_absent",
+          "value": "Emphasize Ada and Nolan learning to trust each other."
+        },
+        {
+          "type": "text_absent",
+          "value": "If the bell rings again, Ada must wait beside the red door."
+        },
+        {
+          "type": "text_absent",
+          "value": "blue door"
+        }
+      ],
+      "authorVerdict": "agree",
+      "changedTo": null,
+      "note": "同意。本例的ledger_edit已把L-1改为蓝门，当前权威是author-ledger-edit，旧sourceSpans已清空；但记录员仍不接收台账或作者控制信息。本例正文及正史没有blue door，该字符串仅存在于应隔离的作者命令中，禁止其泄漏合理。不能将此断言推广为任何正文都不得出现蓝门。",
+      "reviewer": "Codex（AI，受用户委托）",
+      "date": "2026-10-29",
+      "humanReviewed": false,
+      "verification": {
+        "predicateChecks": [
+          {
+            "group": "must",
+            "type": "text_contains",
+            "value": "c02.s0001",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "outline",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "intent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "ledger",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "brief",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "authorIntent",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "currentFocus",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "mustKeep",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "field_absent",
+            "value": "beats",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Keep the lighthouse mystery grounded in observable evidence.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "Emphasize Ada and Nolan learning to trust each other.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "If the bell rings again, Ada must wait beside the red door.",
+            "passed": true
+          },
+          {
+            "group": "forbidden",
+            "type": "text_absent",
+            "value": "blue door",
+            "passed": true
+          }
+        ],
+        "allPassed": true,
+        "roleInputKeys": [
+          "task",
+          "chapter",
+          "sentences",
+          "state",
+          "bibleKeys",
+          "predicates"
+        ],
+        "currentFact": {
+          "id": "F-1",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:nolan",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0001"
+          ],
+          "sourceChapter": 1
+        },
+        "firstSentence": {
+          "n": 1,
+          "ref": "c02.s0001",
+          "text": "Nolan laid the brass key on the mantel."
+        },
+        "editedLedgerState": {
+          "text": "If the bell rings again, Ada must wait beside the blue door.",
+          "authorEditEntryId": "author-ledger-edit",
+          "sourceSpans": []
+        }
+      }
+    }
+  ],
+  "instructions": "authorVerdict沿用原字段名，此次agree/change为用户委托的AI核对结论；每项保留原must/forbidden。未冒记作者本人亲审。复核记录在外部保存，不修改已冻结DS12/v1。",
+  "reviewer": "Codex（AI，受用户委托）",
+  "date": "2026-10-29",
+  "reviewMode": "user_delegated_ai_semantic_review",
+  "state": "delegated_ai_sample_review_complete",
+  "humanReviewed": false,
+  "userInstruction": "请核对DS12固定随机20%抽查的5个用例；请替我执行。",
+  "summary": {
+    "totalAcceptanceCases": 25,
+    "seed": 20261029,
+    "samplingAlgorithm": "SHA-256(seed + \":\" + caseId)升序取前5；与冻结构建脚本相同",
+    "sampleSize": 5,
+    "sampleRate": 0.2,
+    "sampleIds": [
+      "ctx-10-editor-numbered-draft",
+      "ctx-15-recheck-observation",
+      "ctx-19-keeper-current-state",
+      "ctx-18-keeper-numbered-sentences",
+      "ctx-25-edited-ledger-not-leaked"
+    ],
+    "agree": 5,
+    "change": 0,
+    "semanticConclusion": "五例的must/forbidden均与角色职责和分支事实一致，本轮无需改判。",
+    "predicateChecks": {
+      "passed": 45,
+      "total": 45,
+      "must": 9,
+      "forbidden": 36
+    },
+    "structuredPayloadsChecked": 51,
+    "modelRequests": 0,
+    "scope": "仅本次5例抽查；不宣称其余20例已逐项复核，也不宣称P2整体通过。"
+  },
+  "limitations": [
+    {
+      "itemId": "ctx-10-editor-numbered-draft",
+      "kind": "non_blocking_test_strength",
+      "note": "现有must只要求原句和$.intent，单凭它们不足以证明编号结构完整；本轮另核验了实际draft.lines的n/text两行。后续版本可补更直接的编号结构断言，不改变本次同意结论。"
+    },
+    {
+      "itemId": "ctx-19-keeper-current-state",
+      "kind": "non_blocking_test_strength",
+      "note": "F-1、物品和人物三个字符串本身未绑定为同一事实；本轮另核验了具体subject/predicate/object。现有断言合理，但不能把通过它们解释为状态语义全覆盖。"
+    },
+    {
+      "kind": "review_identity",
+      "note": "结论由受用户委托的AI给出，没有伪造真人姓名、人工一致率或模型裁判校准记录。"
+    }
+  ],
+  "verification": {
+    "kind": "固定抽样复现、样本语义复核、冻结P1函数输入装配与谓词检查",
+    "dataset": "DS12-context-cases/v1",
+    "datasetCommit": "e6b1771c4dafde2d5b01ec02ded3889f959457f3",
+    "manifestSha256": "8f564e32a18b81f1d9ffb4e7198ce68c4a99e40c7b8d6cb42819540e47866ca1",
+    "frozenAt": "2026-10-29T07:41:53.449Z",
+    "sampledFiles": [
+      {
+        "path": "acceptance/ctx-10-editor-numbered-draft.json",
+        "sha256": "c3cd021e3140845be6b69098d35f3db0e0f9e46fe5254b5ed6ddc8fcd6762303"
+      },
+      {
+        "path": "acceptance/ctx-15-recheck-observation.json",
+        "sha256": "8d69b1e0459674841bbfe17857a7518cd5ab7de4b6e661f13c1ad506a5f8bc65"
+      },
+      {
+        "path": "acceptance/ctx-19-keeper-current-state.json",
+        "sha256": "5f7c521558d69bbceec038833bbf565f779e6deed9c96b11786be935a6c90597"
+      },
+      {
+        "path": "acceptance/ctx-18-keeper-numbered-sentences.json",
+        "sha256": "f7b19d51ce1b9ca0f21eed1d88642fe1a5e2f8c706a6f686b9fdacdb59f4eeeb"
+      },
+      {
+        "path": "acceptance/ctx-25-edited-ledger-not-leaked.json",
+        "sha256": "13ee3386bfb98d59dd45781ffce802d15ac7479591a7700eebcaa65b9b729714"
+      }
+    ],
+    "seedReproduced": true,
+    "sourceCaseLabelsMatchReview": true,
+    "sourceHashesMatchFrozenManifest": true,
+    "upstreamBoundaryPassed": true,
+    "command": "node D:/开源/test/pi-Story/p2/temp/ds12-sample-review.mjs",
+    "reproducerSha256": "f9d3ab74c17216e812f47efe3ea820ec7c96b633e398bd91b0cd0f9f42be5697",
+    "reproducerSource": "import assert from 'node:assert/strict';\nimport {readFileSync,writeFileSync} from 'node:fs';\nimport path from 'node:path';\nimport {foldBranch,stateAt} from 'file:///D:/AI/Story%20Dome/Story/pi-Story/story/packages/core/src/fold/index.ts';\nimport {schemas,validate} from 'file:///D:/AI/Story%20Dome/Story/pi-Story/story/packages/core/src/schema/index.ts';\nimport {editorInput,keeperInput} from 'file:///D:/AI/Story%20Dome/Story/pi-Story/story/packages/core/src/flow/inputs.ts';\nimport {numberedLines,sentences,digest} from 'file:///D:/AI/Story%20Dome/Story/pi-Story/story/packages/core/src/shared/text.ts';\nconst root='D:/AI/Story Dome/Story/pi-Story/story/testing/datasets/DS12-context-cases/v1';\nconst review=JSON.parse(readFileSync('D:/AI/Story Dome/新版综合方案/测试结果/P2/人工复核/DS12-v1-抽查.json','utf8'));\nconst hasField=(v,name)=>v&&typeof v==='object'&&(Object.hasOwn(v,name)||Object.values(v).some(x=>hasField(x,name)));\nconst hasPath=(v,p)=>p.slice(2).split('.').every(k=>{if(v===null||typeof v!=='object'||!Object.hasOwn(v,k))return false;v=v[k];return true;});\nconst predicate=(v,p)=>p.type==='json_path_exists'?hasPath(v,p.value):p.type==='field_absent'?!hasField(v,p.value):p.type==='text_contains'?JSON.stringify(v).includes(p.value):p.type==='text_absent'?!JSON.stringify(v).includes(p.value):false;\nconst results=[];let detailsChecked=0;\nfor(const item of review.items){const c=JSON.parse(readFileSync(path.join(root,'acceptance',item.itemId+'.json'),'utf8'));for(const e of c.entries){const d=e.details??e.data;if(!d)continue;const name=Object.keys(schemas).find(k=>schemas[k].properties?.schema?.const===d.schema);assert(name);const r=validate(schemas[name],d);assert(r.ok,JSON.stringify(r.errors));detailsChecked++;}const m=foldBranch(c.entries),draft=m.drafts.at(-1);assert.equal(m.lastChapter,1);assert.equal(draft.chapter,c.chapter);assert.equal(draft.digest,digest(draft.text));const obs=c.entries.find(e=>e.details?.schema==='story/review@1').details.observations;const scope={spans:[{start:1,end:1}],forObservations:obs.map(o=>o.id)};const input=c.role==='keeper'?keeperInput(m,draft):editorInput(m,draft,c.role==='recheck'?scope:'full',c.role==='recheck'?obs:[]);const checks=[...c.must.map(p=>({group:'must',...p,passed:predicate(input,p)})),...c.forbidden.map(p=>({group:'forbidden',...p,passed:predicate(input,p)}))];assert(checks.every(p=>p.passed),JSON.stringify({id:c.id,checks}));const detail={id:c.id,role:c.role,must:c.must.length,forbidden:c.forbidden.length,checks,roleInputKeys:Object.keys(input),input};if(c.role==='keeper'){const fact=stateAt(m).facts.find(f=>f.id==='F-1');assert.equal(fact.subject,'item:brass_key');assert.equal(fact.predicate,'holder');assert.equal(fact.object,'char:nolan');const ss=sentences(draft.text,2,'s2');assert.equal(ss[0].id,'c02.s0001');assert.equal(ss[0].text,'Nolan laid the brass key on the mantel.');detail.verifiedCurrentFact=fact;detail.firstSentence=input.sentences[0];if(c.id.includes('edited-ledger')){assert.equal(m.ledger[0].text,'If the bell rings again, Ada must wait beside the blue door.');assert.equal(m.ledger[0].authorEditEntryId,'author-ledger-edit');assert.equal(m.ledger[0].sourceSpans.length,0);detail.editedLedgerState={text:m.ledger[0].text,authorEditEntryId:m.ledger[0].authorEditEntryId,sourceSpans:m.ledger[0].sourceSpans};}}else{assert.deepEqual(input.draft.lines,numberedLines(draft.text));assert.equal(input.intent.chapter,2);detail.numberedDraft=input.draft.lines;detail.futureBibleEntry={effectiveFromChapter:m.bible['place:future_vault'].effectiveFromChapter,excluded:!JSON.stringify(input).includes('SK_TEST_P2_CANARY_FUTURE_1111111111111111')};if(c.role==='recheck'){assert.equal(input.observations[0].id,'c02-r01-o01');assert.equal(input.observations[0].impact,obs[0].impact);assert.deepEqual(input.observations[0].evidence,obs[0].evidence);assert.deepEqual(input.scope,scope);}}results.push(detail);}\nconst report={cases:5,detailsChecked,passedPredicates:results.flatMap(r=>r.checks).filter(p=>p.passed).length,totalPredicates:results.flatMap(r=>r.checks).length,results,modelRequests:0};writeFileSync('D:/开源/test/pi-Story/p2/temp/ds12-sample-review-result.json',JSON.stringify(report,null,2)+'\\n');console.log(JSON.stringify({cases:report.cases,detailsChecked,passed:report.passedPredicates,total:report.totalPredicates,results:results.map(r=>({id:r.id,must:r.must,forbidden:r.forbidden,passed:true})),modelRequests:0}));\n",
+    "originalReviewJsonSha256": "0c1d7b1ef58026f18fd9cefff8092e3f804d565e98608cd8b79ca2e01a301f70",
+    "originalReviewMarkdownSha256": "6ea5d11c955ba220912d5b608882dfb9fdad73ce0740d626d608c351ec6a0028",
+    "runtimeScope": "直接调用core的foldBranch/editorInput/keeperInput，复查scope与观察取自本用例；没有调用Pi模型端口、P2运行驱动或付费模型。"
+  },
+  "archiveNote": "DS12/v1已冻结，原始labels/review.json和manifest保持不变；本外部复核记录可由负责归档的会话按真实AI身份另行归档，不原地改写冻结版。"
+}

@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal. Need parse chapter. Facts upserts 1-4. Need only stated states. We need choose facts. Subject likely \"he\" or \"the traveler\"? We can use \"he\". Need exact sentence IDs. Facts confirmed or uncertain with reason. Modes narrated or recalled_past. Need summary title characters events mood. Issues.\n\nWe need identify states:\n- He crossed rise at stumble and saw dark mound. Sentence 1.\n- Dark mound was woolly mammoth. Sentence 4. Could fact: mammoth carcass is a woolly mammoth? subject \"the dark mound\" predicate \"is\" object \"a woolly mammoth\", sentences [1,4]. Mode narrated confirmed.\n- Mammoth body whole no cuts/spear marks/nothing fed. Facts maybe \"the mammoth body\" \"was whole with no cuts or spear marks\" sentences [6,7]. But minimal.\n- He had aimed for late Pleistocene. Sentence 11 recalled_past? It says had aimed. Could fact: he aimed for late Pleistocene. mode recalled_past? Actually past perfect recollection. Use recalled_past confirmed sentences [11].\n- Jump missed / this was older tens thousands years. Sentence 14 uncertain? \"The jump had missed, or he had, and error not one he could walk back from.\" Could be uncertain because \"or he had\" ambiguity. But minimal.\n- He wrapped hide around wrist and put bone in coat. Sentence 18.\n- Then looked at ravine and started walking. Sentence 19.\n\nNeed 1-4 fact upserts. Minimal P0 subset tests 1 to 4. We should include maybe 4. Must ensure no future plans. \"started walking\" stated. Could include. Need exact sentence IDs.\n\nNeed JSON only.\n\nPotential facts:\n1 ref f1 op upsert subject \"he\" predicate \"saw\" object \"a dark mound in the snow\" mode narrated certainty confirmed uncertainReason \"\" sentences [1]. But \"saw\" is event, fact state? It's narrated action. okay.\n2 f2 subject \"the dark mound\" predicate \"was\" object \"a woolly mammoth\" mode narrated confirmed sentences [1,4].\n3 f3 subject \"he\" predicate \"had aimed for\" object \"the late Pleistocene\" mode recalled_past confirmed sentences [11].\n4 f4 subject \"he\" predicate \"wrapped\" object \"a strip of mammoth hide around his wrist\" mode narrated confirmed sentences [17,18]. Hmm \"wrapped hide around wrist\" sentence 18. Object string can be \"a strip of hide around his wrist\". Fine.\n\nMaybe include \"put bone in coat\" but max 4. Which is minimal? We need summary.\n\nNeed issues: e.g., \"Subject 'he' is unnamed in chapter.\" \"Fact granularity may combine sentences.\" Need include issues array. Could be empty? Include maybe one.\n\nNeed no claims etc empty arrays.\n\nEnsure JSON valid. Schema: facts minItems 1. Each fact required all fields. uncertainReason nonempty when uncertain; empty confirmed. We use confirmed empty.\n\nNeed summary title characters events mood. Characters [\"he\"]. Events [\"He discovers a well-preserved woolly mammoth carcass in the snow.\", \"He realizes he aimed for the late Pleistocene but landed in an older era.\", \"He takes a rib shard and hide, wraps the hide around his wrist, and starts walking toward a ravine.\"] Mood \"bleak, isolated, resigned\". Title maybe \"The Older Snow\" or \"A Dead Thing in the Snow\". Use \"The Dead Thing in the Snow\".\n\nNeed ensure summary doesn't add unstated. \"realizes\" maybe not stated? He had aimed, this was older, jump missed. Fine.\n\nNeed cite exact sentence numbers as integers. For f3 sentences [11,12,13,14]? If object late Pleistocene aim only [11]. But if include \"jump missed\" uncertain? Let's decide. Need 4 facts only. Need no future plans. Fact 4 started walking toward ravine [19]. Could replace hide. But fact 4 \"he started walking toward the ravine\" confirmed [19]. Good.\n\nBut P0 \"fact upserts\" each state. 4 facts:\n- He saw a dark mound in the snow. [1]\n- The dark mound was a woolly mammoth. [1,4]\n- He had aimed for the late Pleistocene. [11]\n- He started walking toward the ravine beyond the rise. [19]\nThese are minimal. But maybe \"the jump missed\" confirmed? Sentence 14 says \"The jump had missed, or he had\" uncertain. Not include.\n\nCould include \"This was older tens of thousands years\" as fact: \"the time/era\" \"was\" \"tens of thousands of years older than late Pleistocene\" but uncertain? No.\n\nNeed \"mode\" for f3 recalled_past. Sentence 11 is \"He had aimed...\" yes recalled_past. For f1 narrated. f2 narrated. f4 narrated.\n\nPotential issue: f2 subject \"the dark mound\" object \"a woolly mammoth\" sentence 4 says \"A woolly mammoth.\" It is a fragment referring to animal. Good.\n\nNeed exact sentence IDs. Good.\n\nNeed include issues maybe [\"The chapter never names the protagonist; facts use 'he'.\"] This is an issue.\n\nNeed final JSON only. Ensure no markdown? User says JSON schema. We can output raw JSON. Use valid JSON object.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a dark mound in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the dark mound\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started walking toward\",\"object\":\"the ravine beyond the rise\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[19]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Dead Thing in the Snow\",\"characters\":[\"he\"],\"events\":[\"He sees a dark mound in the snow.\",\"The mound is a woolly mammoth.\",\"He had aimed for the late Pleistocene.\",\"He starts walking toward the ravine beyond the rise.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed in the chapter; facts use 'he'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1468,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1149,
+      "totalTokens": 2436,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0017615999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0018262079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177789288,
+    "responseId": "149d9d40-727c-46d5-95fe-fd509275375e",
+    "rawStopReason": "stop",
+    "durationMs": 9124
+  },
+  "record": {
+    "time": "2026-10-28T08:56:38.412Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-012",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1468,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1149,
+      "totalTokens": 2436,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0017615999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0018262079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0018262079999999997,
+    "inputTokens": 200,
+    "outputTokens": 1468,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 9124
+  }
+}

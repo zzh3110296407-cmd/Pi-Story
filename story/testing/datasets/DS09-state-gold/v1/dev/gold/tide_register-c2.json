@@ -1,0 +1,352 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "tide_register-c2",
+  "storyId": "tide_register",
+  "chapter": 2,
+  "title": "The Lever in the Rain",
+  "cast": [
+    "char:lena",
+    "char:tomas",
+    "char:ivo",
+    "char:rook"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1715
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:lena",
+      "predicate": "location",
+      "object": "place:bridge",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0005",
+        "c02.s0120"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "By midnight Lena was standing on the survey bridge."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:brass_key",
+      "predicate": "holder",
+      "object": "char:ivo",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0014"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Tomas handed the brass key to Ivo before entering the rain."
+    },
+    {
+      "id": "F-203",
+      "subject": "char:lena",
+      "predicate": "quantity:coins",
+      "object": {
+        "value": 17,
+        "unit": "coins"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:lena",
+      "evidence": [
+        "c02.s0044",
+        "c02.s0045"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+      "arithmetic": {
+        "before": 15,
+        "change": 2,
+        "after": 17
+      }
+    },
+    {
+      "id": "F-204",
+      "subject": "char:rook",
+      "predicate": "alive",
+      "object": "dead",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0021"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Lena found Rook beneath the broken rail; he was dead."
+    },
+    {
+      "id": "F-205",
+      "subject": "char:ivo",
+      "predicate": "true_identity",
+      "object": "the former municipal cartographer",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0033"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The sealed appointment proved that Ivo was the former municipal cartographer."
+    },
+    {
+      "id": "F-206",
+      "subject": "item:tide_register",
+      "predicate": "holder",
+      "object": "char:lena",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0053"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Lena took the tide register from Ivo and tucked it beneath her jacket."
+    },
+    {
+      "id": "F-207",
+      "subject": "char:tomas",
+      "predicate": "location",
+      "object": "place:hall",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0090"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Tomas waited inside the town hall with the watch officer."
+    },
+    {
+      "id": "F-208",
+      "subject": "item:red_marker",
+      "predicate": "location",
+      "object": "place:bridge",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0099"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The watch officer brought the red marker to the survey bridge."
+    },
+    {
+      "id": "F-290",
+      "subject": "item:second_tide_entry",
+      "predicate": "purpose",
+      "object": "a concealed meeting",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0066"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "The text presents a suspicion, not independently established evidence.",
+      "statement": "Lena suspected the second tide entry concealed a meeting rather than a measurement."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:ivo",
+      "content": "I never drew that map.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c02.s0036"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:lena",
+      "content": "I have seventeen coins now,",
+      "truth": "true",
+      "evidence": [
+        "c02.s0045"
+      ],
+      "corroboratedBy": "F-203"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:lena",
+      "kind": "knows",
+      "content": "Lena knew the bridge lever had been moved by a human hand.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0082"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:tomas",
+      "kind": "misbelieves",
+      "content": "Tomas believed Rook was still waiting in the hall, but the chair he remembered was empty.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0088"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:lena",
+      "kind": "suspects",
+      "content": "Lena suspected the second tide entry concealed a meeting rather than a measurement.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0066"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:lena",
+      "kind": "believes",
+      "content": "Lena believed the watch officer would attend the hearing.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0095"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:lena->tomas",
+      "from": "char:lena",
+      "to": "char:tomas",
+      "stance": "conditional cooperation",
+      "keyFact": true,
+      "evidence": [
+        "c02.s0093"
+      ],
+      "statement": "Lena agreed to work with Tomas only while their notes remained open to the watch officer."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "advance",
+      "statement": "The second tide entry matched the hour on the watch log.",
+      "evidence": [
+        "c02.s0064"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "mention",
+      "statement": "The blue thread remained visible along the wet spine.",
+      "evidence": [
+        "c02.s0056"
+      ]
+    },
+    {
+      "id": "H-4",
+      "operation": "upsert",
+      "statement": "A crescent of green wax clung to the bridge lever.",
+      "evidence": [
+        "c02.s0077"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "tide_register-c2-trap-1",
+      "kind": "plan",
+      "statement": "Lena planned to question the watch officer after sunrise.",
+      "evidence": [
+        "c02.s0106"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "tide_register-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the second mark meant a meeting, someone else might have attended.",
+      "evidence": [
+        "c02.s0068"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "tide_register-c2-trap-3",
+      "kind": "dream",
+      "statement": "She dreamed of Rook sitting dry and unhurt at the municipal desk.",
+      "evidence": [
+        "c02.s0112"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Lena suspected the second tide entry concealed a meeting rather than a measurement.",
+      "evidence": [
+        "c02.s0066"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "F-280",
+      "subject": "char:lena",
+      "predicate": "location",
+      "object": "Merrow Quay",
+      "validFrom": 1,
+      "validUntil": 1,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c02.s0102",
+        "c02.s0103",
+        "c02.s0104"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Lena recalled stepping onto Merrow Quay during her first visit, one chapter of the inquiry earlier.",
+      "note": "A within-chapter remembered location does not create a second single-valued fact at that chapter granularity.",
+      "recordPolicy": "narrative_history_only",
+      "expectedOperation": "no_new_state_fact"
+    }
+  ]
+}

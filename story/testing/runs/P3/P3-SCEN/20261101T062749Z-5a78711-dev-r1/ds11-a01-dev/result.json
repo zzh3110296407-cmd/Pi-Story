@@ -1,0 +1,105 @@
+{
+  "id": "ds11-a01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "purpose": "Tobin leads the document check of the missing repair-record page while Anwen assists him rather than directing the work.",
+            "turn": "Ruth supplies a duplicate page; Tobin's leading comparison exposes a discrepancy in the label, and the team agrees to finish checking before the public demonstration."
+          }
+        ],
+        "reason": "Author asks that unwritten chapter 3 have Tobin lead the document check with Anwen assisting, keeping the chapter number and six-chapter count unchanged."
+      },
+      "id": "call_00_U0TV34PvdHetKTMqnUy73847"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "purpose": "Tobin leads the document check of the missing repair-record page while Anwen assists him rather than directing the work.",
+          "turn": "Ruth supplies a duplicate page; Tobin's leading comparison exposes a discrepancy in the label, and the team agrees to finish checking before the public demonstration."
+        }
+      ],
+      "reason": "Author asks that unwritten chapter 3 have Tobin lead the document check with Anwen assisting, keeping the chapter number and six-chapter count unchanged."
+    },
+    "id": "call_00_U0TV34PvdHetKTMqnUy73847"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Tobin leads the document check while Anwen assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "eb18782cb57c6bd91fa607a1e7af4d29d8dcaf045a1e7e0f5c7eb022d33d840a",
+    "sessionSha256": "47a2b738920dac9760a322b59f43001783a29fb1a4efa6b98a296cf19c81219b",
+    "fee": {
+      "knownUsd": 0.0023288999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023288999999999996
+    },
+    "measuredMainRequests": 2
+  }
+}

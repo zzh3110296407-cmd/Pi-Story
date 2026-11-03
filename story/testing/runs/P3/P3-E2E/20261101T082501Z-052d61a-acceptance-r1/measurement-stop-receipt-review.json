@@ -1,0 +1,46 @@
+{
+  "schema": "story/p3-measurement-revision@3",
+  "productCommit": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "measurementCommit": "f2920aa32673a29bed95935178f3365e29444289",
+  "priorRevision": {
+    "commit": "e7245caa28e8fc68c40379cc7d63444b6caeaaee",
+    "evidence": "P3-E2E/20261101T082501Z-052d61a-acceptance-r1/measurement-check-repair.json"
+  },
+  "reason": "The original E09 condition requires a reported budget stop, not a particular customType. The expanded checker was too narrow when treating absence of story.stop as a definitive failure despite a visible BUDGET_EXHAUSTED tool receipt.",
+  "correction": "Keep explicit story.stop as programmatic proof; route the semantic sufficiency of the actual budget error receipt to independent S09/program judgment for ds14-e09:program:5. Absence of both remains failed. This is not a passing judgment or a waiver.",
+  "observations": {
+    "budgetGuardDenied": true,
+    "separateProductionMainProbeDenied": true,
+    "probeModelRequests": 0,
+    "explicitStoryStop": false,
+    "budgetToolReceipt": true
+  },
+  "tests": {
+    "specificTests": 15,
+    "files": 2,
+    "passed": true,
+    "projectCheckPassed": true
+  },
+  "unchanged": [
+    "frozen product",
+    "rules and settings",
+    "dataset",
+    "budgets",
+    "samples, repetitions, numeric formula and thresholds",
+    "raw archives and original metrics",
+    "paid runs"
+  ],
+  "historicalRecord": "Preserve the earlier measurement-check-repair.json and its initial failed classification; this explanation supersedes that interpretation only.",
+  "changedFiles": [
+    "story/packages/pi-story/test/p3-dataset-contract.test.ts",
+    "story/packages/pi-story/test/p3-scenario-score.test.ts",
+    "story/packages/pi-story/test/p3-scenario.test.ts",
+    "story/scripts/eval/p3/checks.ts",
+    "story/scripts/eval/p3/datasets.ts",
+    "story/scripts/eval/p3/main.ts",
+    "story/scripts/eval/p3/metrics.ts",
+    "story/scripts/eval/p3/scenario-score.ts",
+    "story/scripts/eval/p3/scenario.ts",
+    "story/scripts/eval/p3/session.ts"
+  ]
+}

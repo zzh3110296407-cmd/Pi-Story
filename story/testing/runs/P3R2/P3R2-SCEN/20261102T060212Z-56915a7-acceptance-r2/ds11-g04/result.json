@@ -1,0 +1,131 @@
+{
+  "id": "ds11-g04",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+            "key": "rule:green_copy",
+            "kind": "rule",
+            "op": "set",
+            "source": "user",
+            "value": {
+              "description": "Every duplicate page is marked with a green triangle.",
+              "appliesFrom": "future chapters only (author said \"From now on\")"
+            }
+          }
+        ],
+        "reason": "The author supplied a future marking rule; key slug corrected to lowercase with underscore."
+      },
+      "id": "call_00_9MpXHOW39auuTHUPC2qn0054"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+          "key": "rule:green_copy",
+          "kind": "rule",
+          "op": "set",
+          "source": "user",
+          "value": {
+            "description": "Every duplicate page is marked with a green triangle.",
+            "appliesFrom": "future chapters only (author said \"From now on\")"
+          }
+        }
+      ],
+      "reason": "The author supplied a future marking rule; key slug corrected to lowercase with underscore."
+    },
+    "id": "call_00_9MpXHOW39auuTHUPC2qn0054"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "ebee799dbd73943a0c5ff65b3b5f0284661d9f2b2f63fb0dfe3d97a47ff64dbd",
+    "sessionSha256": "3f89ec8fbbd152f28287519e0c98c0fd59c5ca6eff29c897923e788c2c3c300f",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026031,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026031
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "story/metrics@1",
+  "suiteId": "P1-COV",
+  "metrics": [
+    {
+      "id": "H01",
+      "n": 63,
+      "value": 1,
+      "confidence95": [
+        0.9425288004111484,
+        1
+      ],
+      "threshold": 1,
+      "type": "gate",
+      "passed": true,
+      "judgment": "program",
+      "records": [
+        "raw/vitest.json",
+        "raw/observations.jsonl"
+      ],
+      "exemptions": [
+        {
+          "rule": "C5",
+          "reason": "作者修改后的插话通知由Pi适配层实现",
+          "phase": "P3"
+        },
+        {
+          "rule": "R2",
+          "reason": "模型/预算/档位的适配层生效时机",
+          "phase": "P3"
+        },
+        {
+          "rule": "X1",
+          "reason": "状态更正属于v1.1",
+          "phase": "P10"
+        },
+        {
+          "rule": "X2",
+          "reason": "状态更正属于v1.1",
+          "phase": "P10"
+        },
+        {
+          "rule": "X3",
+          "reason": "状态更正属于v1.1",
+          "phase": "P10"
+        },
+        {
+          "rule": "X4",
+          "reason": "状态更正属于v1.1",
+          "phase": "P10"
+        },
+        {
+          "rule": "U5",
+          "reason": "主笔请求预算由Pi适配层实现",
+          "phase": "P3"
+        },
+        {
+          "rule": "U6",
+          "reason": "自动压缩预算由Pi适配层实现",
+          "phase": "P3"
+        }
+      ],
+      "missing": []
+    }
+  ]
+}

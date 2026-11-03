@@ -1,0 +1,1519 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T081133Z-0ae2186-r1",
+  "suiteId": "P2-EDIT",
+  "scores": [
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-1:c01-r02:c01-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-1:c01-r02:c01-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 41 states that Rafi 'had been left-handed from birth and had never been right-handed.' The bible entry char:rafi (embodiment) states that 'Rafi is right-handed from birth and has never been the opposite-handed person,' and its invariants require 'Dominant hand remains right-handed.' Both claims describe the same person's inborn handedness over the same whole life, so they cannot both hold; line 13, which has a stone strike Rafi's right shin, does nothing to reconcile them.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 41 now states Rafi is right-handed from birth and has never been left-handed, matching the char:rafi embodiment invariant."
+        },
+        "beforeDigest": "d9dc9fdd03509a2946963d84d22469cddf69a1d9772294d510e94e6194b2297a",
+        "afterDigest": "a9602dca03ce8f60eb7537a3438f5e33dfbc2cbab0dfbdf66e64f30d8ae028bc"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-1:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-1:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 43 gives the final water balance as '25 litres, not 18 litres,' explicitly with 'no intervening gain or loss after that completed count.' Draft line 9 gives that same completed count: the team used two litres for supper, reducing twenty litres to eighteen, and 'They had collected no additional water that evening,' which Jun restates as eighteen litres. The same unchanged final balance cannot be both 18 and 25 litres.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              43
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 43 now gives the unchanged balance as 18 litres, agreeing with the two-litre supper deduction in line 9; the residual awkwardness of the sentence is noted separately."
+        },
+        "beforeDigest": "d9dc9fdd03509a2946963d84d22469cddf69a1d9772294d510e94e6194b2297a",
+        "afterDigest": "a9602dca03ce8f60eb7537a3438f5e33dfbc2cbab0dfbdf66e64f30d8ae028bc"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-2:c01-r02:c01-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-2:c01-r02:c01-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c1-injected-2",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "narrative_style",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 41 uses first-person present narration outside quoted speech or a dream: “I am standing here now” and “I want the reader to hear my voice.” L-2 requires third-person narration outside quoted speech and dreams, and L-3 requires unfolding actions in the past tense. Under the same narration and moment, the text cannot be both third-person past-tense narration and a first-person present-tense narrator addressing the reader; no quotation or dream frame is supplied.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 41 now uses third-person past-tense narration (“Rafi stood… He listened… said nothing”), with no first-person present-tense address to a reader."
+        },
+        "beforeDigest": "5ad1617294027bc63cefe5c964cc6cd653cf4c66dd37261280c619b3a5c605e7",
+        "afterDigest": "1f4e63f27245314987520036cd344714932d94d6a58e03cdf2dd941358156393"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-2:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c1-injected-2:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c1-injected-2",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 43 asserts that “Eamon had already died before this expedition began and had never returned alive,” while also saying the present expedition included his living actions. Bible rule:chronology states that Eamon is alive when this expedition begins and that no death before its departure is part of the story; draft line 7 also presents Eamon alive and mending a strap during the expedition. Under the same actor and time, Eamon cannot both be alive and acting on the present expedition and have died before it began and never returned alive.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              43
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 43 now states that Eamon was alive when the expedition began and remained at the shelter, consistent with rule:chronology and the earlier living action in line 7."
+        },
+        "beforeDigest": "5ad1617294027bc63cefe5c964cc6cd653cf4c66dd37261280c619b3a5c605e7",
+        "afterDigest": "1f4e63f27245314987520036cd344714932d94d6a58e03cdf2dd941358156393"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-control:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-control:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c2-control",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "原观察扩大了 L-6 的保全含义，应在 E03 记误报；修订确已撤去 final handover 并写取回，被指出的形式现已消失。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 15 says the route book underwent its “final handover to Rafi” in chapter two. Ledger L-6 requires the route book’s custody transfer to occur in chapter three and permits only temporary inspection or handling before then. The same route book cannot both receive its final handover to Rafi during this chapter and remain in Jun’s custody until the chapter-three transfer; a final handover is a custody transfer, not temporary handling.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              15
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 15 now shows only temporary handling: Jun places the route book in Rafi's dry bag so her hands are free, notes that this changes neither the contents nor Jun's custody, and takes the book back once she is clear of the step. No final handover occurs, so the chapter-three custody transfer required by L-6 remains intact."
+        },
+        "beforeDigest": "d88a0ff26e6d147d44c5545ae3ebc3b8875a5a0c6a37e543e5598930962a46e7",
+        "afterDigest": "d68e5a6f96484e749a63ea7f3f543b94e628241270d5c470515eb2d584120712"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-1:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-1:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "worldbuilding",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 narrates the intact river gate moving fully open by itself while the hand capstan stayed motionless and no one operated it. Bible rule:mechanism and ledger L-4 state that the river gate moves only when its hand capstan is turned, and that the intact gate has no motor, remote control or automatic release. The same intact gate at the same time cannot both require a turned capstan and open fully with a motionless capstan and no operator.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 39 now states the gate stayed shut with its capstan motionless and no one having turned it, which agrees with rule:mechanism and L-4."
+        },
+        "beforeDigest": "1e876e52576a3b0ee5325851e3a97867b452c703823767558a4a07b61289940a",
+        "afterDigest": "8c467816ca90eb83e97013f1af00294c882c6f7acbfd9bb9935978eb0e36bac8"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-1:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-1:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 asserts that Jun died permanently at that moment and that her death was confirmed before the chapter ended. Ledger L-7 explicitly requires Jun to remain alive through the end of chapter three. The same character cannot be both permanently dead in chapter two and alive through the end of chapter three.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now states Jun remained alive, so L-7's keep-alive requirement through chapter three is no longer contradicted."
+        },
+        "beforeDigest": "1e876e52576a3b0ee5325851e3a97867b452c703823767558a4a07b61289940a",
+        "afterDigest": "8c467816ca90eb83e97013f1af00294c882c6f7acbfd9bb9935978eb0e36bac8"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-2:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-2:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 39 states that Rafi had been left-handed from birth and had never been right-handed. Bible character char:rafi, effective from chapter 2, establishes that Rafi is right-handed from birth, has never been the opposite-handed person, and his dominant hand remains right-handed. The same character cannot both be left-handed from birth and never right-handed while also being right-handed from birth and never opposite-handed.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 39 now states that Rafi was right-handed from birth and had never been the opposite-handed person, matching the Bible."
+        },
+        "beforeDigest": "ddd9087792352340115c8c05751da02fd9450a46eb97f619a6d1bcfc93fcb616",
+        "afterDigest": "cd1a0bb7656dbf78c43867f78ba9cb0b4e2bbe9a72b54b7646c9cfd25b596728"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-2:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c2-injected-2:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 19 narrates that they collected five litres and then used two, taking the measured supply from eighteen litres to twenty-one litres. State F-103 gives the starting supply as eighteen litres, so 18 + 5 - 2 = 21. Draft line 41 then says that, after that same completed count and with no intervening gain or loss, the very same balance was 28 litres, not 21 litres. The same completed water balance cannot be both 21 and 28 litres.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              19,
+              41
+            ],
+            "stateRefs": [
+              "F-103"
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now keeps the completed water balance at twenty-one litres, consistent with line 19 and state F-103."
+        },
+        "beforeDigest": "ddd9087792352340115c8c05751da02fd9450a46eb97f619a6d1bcfc93fcb616",
+        "afterDigest": "cd1a0bb7656dbf78c43867f78ba9cb0b4e2bbe9a72b54b7646c9cfd25b596728"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-1:c03-r02:c03-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-1:c03-r02:c03-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c3-injected-1",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "narrative_style",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 39 uses unquoted first-person present narration: “I am standing here now and I can feel the next decision waiting.” Ledger L-2 requires third-person narration outside quoted speech and dreams, and L-3 requires unfolding actions to be narrated in the past tense. The same unquoted narration cannot simultaneously be third-person past-tense narration and a first-person present-tense “I” statement.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 39 is now third-person past-tense narration and contains no unquoted first-person present statement."
+        },
+        "beforeDigest": "bc01df063fe4656c18d546275363087c71cdc038e997a763002b52ec1a498a50",
+        "afterDigest": "c359e293177917c07ea47ace3c0d8c482a07131136bb67706ba4264c0b4795fa"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-1:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-1:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c3-injected-1",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 states that in the ordinary waking present Eamon stepped off the relief boat alive and spoke to Jun, and that he had not been revived. Bible key rule:chronology says Eamon died on the ledge in chapter two and does not return alive in chapter three; state F-207 confirms char:eamon is dead, and K-21 records that Jun knows Eamon died after the rock strike. Under the same chapter-three present, Eamon cannot both be confirmed dead and be alive speaking to Jun without revival.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ],
+            "stateRefs": [
+              "F-207"
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now states that Eamon remained on the high granite ledge where they had left him, preserving his confirmed death and not depicting him alive."
+        },
+        "beforeDigest": "bc01df063fe4656c18d546275363087c71cdc038e997a763002b52ec1a498a50",
+        "afterDigest": "c359e293177917c07ea47ace3c0d8c482a07131136bb67706ba4264c0b4795fa"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-2:c03-r02:c03-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-2:c03-r02:c03-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "worldbuilding",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 asserts that the intact river gate moved fully open by itself while the hand capstan stayed motionless and no one operated it. Ledger L-4 and bible rule:mechanism require that the river gate moves only when its hand capstan is turned and that the intact gate has no motor, remote control or automatic release. Under the same intact gate and same operation, it cannot both move only by turning the capstan and move fully open without the capstan being turned or anyone operating it.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "The revised line 39 now shows the pilot operating the hand capstan to open the gate, with no self-opening mechanism."
+        },
+        "beforeDigest": "c3f62492f96f5e3db2df203b1fa65cdf2995391f2c4882a89f4930752e2ef75a",
+        "afterDigest": "6013e31aa9d1440867c6cdac2d35fa0d0bacff064c73628c95fcfd8fe26331e4"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-2:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:second_cairn-c3-injected-2:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "second_cairn-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 asserts that Jun died permanently at that moment and that the death was confirmed before the chapter ended. Ledger L-7 requires Jun to remain alive through the end of chapter three. Under the same character and chapter timeframe, Jun cannot both be alive through the chapter’s end and die permanently before that end.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "The revised line 41 explicitly keeps Jun alive through the chapter’s end."
+        },
+        "beforeDigest": "c3f62492f96f5e3db2df203b1fa65cdf2995391f2c4882a89f4930752e2ef75a",
+        "afterDigest": "6013e31aa9d1440867c6cdac2d35fa0d0bacff064c73628c95fcfd8fe26331e4"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 45 asserts that Ada was left-handed from birth and had never been right-handed. The bible entry char:ada states that Ada is right-handed from birth, has never been the opposite-handed person, and that her dominant hand remains right-handed. Under the same subject and time span, Ada cannot be both left-handed from birth and right-handed from birth.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              45
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 45 now states Ada was right-handed from birth and had never been otherwise, matching the Bible entry for char:ada."
+        },
+        "beforeDigest": "762bf547566016d954f42fc1e5c51ec076f2381b3835f6c9a28c91d8e5e88f46",
+        "afterDigest": "8668fe3d5ca3e182ab8fc3972630dae8b8e5212618fe0c659f77b4cb69551b9b"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 11 gives the travel fund after the ten-pound entry payment as eighty-four pounds, reduced from ninety-four. Draft line 47 says that, with no intervening gain or loss after that completed count, the very same balance was 91 pounds, not 84 pounds. The same unchanged completed count cannot be both eighty-four and ninety-one pounds.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              11,
+              47
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 47 now gives the same unchanged amount as line 11: ninety-four pounds before the entry payment and eighty-four pounds after."
+        },
+        "beforeDigest": "762bf547566016d954f42fc1e5c51ec076f2381b3835f6c9a28c91d8e5e88f46",
+        "afterDigest": "8668fe3d5ca3e182ab8fc3972630dae8b8e5212618fe0c659f77b4cb69551b9b"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o03",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-1:c01-r02:c01-r01-o03",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 41 has Ada hand the relay card to Nessa, who tucks it inside her zipped vest, and calls this a deliberate transfer rather than an inspection. L-6 requires the relay card to remain intact until its custody transfer in chapter three and allows only temporary inspection or handling before then. At this chapter-one moment, Nessa cannot both take deliberate custody of the card and leave the required chapter-three custody transfer as the transfer that ends Ada’s custody.",
+          "scope": "local",
+          "id": "c01-r01-o03",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o03",
+          "resolved": true,
+          "note": "Line 41 now explicitly frames the handoff as a brief loan rather than a custody transfer; Nessa returns the card in the same scene, which is consistent with temporary handling before the chapter-three transfer."
+        },
+        "beforeDigest": "762bf547566016d954f42fc1e5c51ec076f2381b3835f6c9a28c91d8e5e88f46",
+        "afterDigest": "8668fe3d5ca3e182ab8fc3972630dae8b8e5212618fe0c659f77b4cb69551b9b"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-2:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c1-injected-2:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1-injected-2",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 45 asserts that, in the ordinary waking present, Coach Roland entered alive and shook Nessa’s hand, explicitly neither as a memory nor as an imagined scene. Bible rule rule:chronology states that Coach Roland died two years before the meet and never returns alive in present action; draft line 3 also says the current scene occurs two years after his funeral. Under the same actor and time, Roland cannot be both dead and buried two years earlier and alive entering and shaking hands in the present action.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              45
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 45 now shows only Nessa returning and Ada staying beneath the photograph; Coach Roland is no longer depicted alive or shaking hands in present action. The only Roland appearance is the explicitly framed nap dream at line 43, which ends when the narrator wakes to the empty bench."
+        },
+        "beforeDigest": "5cb3614645e30e5e9b31ee5692b92595fc3ba79ae5550237a3fc3b03b5b507b2",
+        "afterDigest": "8beaa19d28dc7bc6fcc4721249b681abbd172aed678f9ef604a69e8c62b4e81a"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-1:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-1:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "worldbuilding",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "(a) Draft line 45 asserts that the still-intact locked calibration cabinet opened through its built-in electronic release without any key turning. (b) Ledger L-4 and bible rule:mechanism require the cabinet to stay locked unless its single brass key turns the lock and state that it has no electronic release or duplicate key during this story. (c) The same cabinet, under the same story rules, cannot both lack an electronic release and open through one without a key turning.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              45
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 45 now affirms that the cabinet remained locked, that only the single brass key could turn the lock and that no electronic release opened it, matching L-4 and rule:mechanism."
+        },
+        "beforeDigest": "bc1081321fff3a00d97e9c2938da2e147cdc631ce0e9f0e274eefb1a1b368b4a",
+        "afterDigest": "4715e6f0432874842969904efa7c7ae99da99102cededcd3a986b6de19bc896d"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-1:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-1:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "(a) Draft line 47 asserts that Nessa died permanently at that moment and that the death was confirmed before the chapter ended. (b) Ledger L-7 requires Nessa to stay alive through the end of chapter three. (c) The same character cannot be permanently dead in chapter 2 and also remain alive through the end of chapter 3.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              47
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 47 now states that Nessa remained alive at the track, so L-7's keep-alive through chapter three is no longer contradicted."
+        },
+        "beforeDigest": "bc1081321fff3a00d97e9c2938da2e147cdc631ce0e9f0e274eefb1a1b368b4a",
+        "afterDigest": "4715e6f0432874842969904efa7c7ae99da99102cededcd3a986b6de19bc896d"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-2:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-2:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 45 asserts that Ada had been left-handed from birth and had never been right-handed. The char:ada Bible card, effective from chapter 2, states that Ada is right-handed from birth and has never been the opposite-handed person, with the invariant that her dominant hand remains right-handed. The same person’s birth handedness cannot be both left and right under the same “from birth” condition.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              45
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 45 now states Ada was right-handed from birth and never left-handed, matching the char:ada Bible card and its invariant."
+        },
+        "beforeDigest": "9e20c92f86beed8007f968309d84b118d63d37d638dfdb3bbd3336456aef9601",
+        "afterDigest": "b474ace6a3ad44a4426d3b986e5986f433b6163ffe0daf6d516c6d5979de4e90"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-2:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c2-injected-2:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 47 asserts that, with no intervening gain or loss after that completed count, the very same balance was 97 pounds, not 90 pounds. Draft line 7 narrates the six-pound rebate raising the travel fund from eighty-four pounds to ninety and explicitly says nothing else entered or left the fund during that count; the chapter intent’s mustKeep item and state F-103 also supply the eighty-four-pound starting balance. The same completed unchanged total cannot be both 90 pounds and 97 pounds.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              7,
+              47
+            ],
+            "stateRefs": [
+              "F-103"
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 47 now gives the unchanged balance as ninety pounds, consistent with the six-pound rebate raising eighty-four to ninety in line 7 and with state F-103."
+        },
+        "beforeDigest": "9e20c92f86beed8007f968309d84b118d63d37d638dfdb3bbd3336456aef9601",
+        "afterDigest": "b474ace6a3ad44a4426d3b986e5986f433b6163ffe0daf6d516c6d5979de4e90"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-control:c03-r02:c03-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-control:c03-r02:c03-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3-control",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 21 states that Ada filed the relay card at that point. Draft line 31 then states that Imani returned the intact relay card to Ada in the officials’ room, after which Ada slid it into the envelope. The same card cannot already have been filed by Ada before Imani returns it to her as the custody transfer in the same continuous scene; the draft reverses the custody order required by intent beat 1 and leaves the card both filed and still being returned.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              21,
+              31
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 21 no longer states that Ada filed the relay card. In line 31, Imani returns the intact card to Ada, and Ada’s filing follows that return, so the custody order is no longer reversed."
+        },
+        "beforeDigest": "c711e9eb90e3a2125a17142556d604dda833e3aad90cf30eafe15d8214d13fb7",
+        "afterDigest": "9fba66f6b81d6e1b43a88496d281126c3aab9dffdcd6435101b3277df9334768"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-1:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-1:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3-injected-1",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 states that “In the ordinary waking present, Coach Roland entered alive and shook Nessa’s hand,” explicitly excluding memory or imagination. Bible rule:chronology states that Coach Roland died two years before the meet and never returns alive in present action. Under the same present-time waking action, Roland cannot both be dead and enter alive to shake Nessa’s hand.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now keeps the present scene ordinary and confirms that the doorway stayed empty and Roland had been dead for two years, so the prior contradiction with rule:chronology is removed."
+        },
+        "beforeDigest": "342c79997edd51bdc7c91a198c61d6551f21f6610539ceb5b9880041d16eeb66",
+        "afterDigest": "c6bc1d8a891244a4b2cf40abf0f382aaf1872a71fbe8e995fe1fa31c96f6bdde"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-2:c03-r02:c03-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-2:c03-r02:c03-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "worldbuilding",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Line 41 states that the locked calibration cabinet opened through a built-in electronic release without any key turning. L-4 and the bible rule rule:mechanism state that the cabinet stays locked unless its single brass key turns the lock and that it has no electronic release; line 29 shows Imani closing the lock with that key and the cabinet remaining secure. Under the same locked cabinet and the same story rules, it cannot both be locked with no electronic release and open electronically without a key.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              29,
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 41 now states the cabinet stayed locked behind its single brass key with no electronic release and no duplicate, matching L-4, rule:mechanism and the locked cabinet in line 29."
+        },
+        "beforeDigest": "11621ffeddf4abcb43de3cac193dbceef309563a5ac97f9c775a41faa452cfa0",
+        "afterDigest": "7db8946b78ee589e166c6898892b75f1c2578ec503f7c7541afc3353ee7152ae"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-2:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_lane-c3-injected-2:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Line 43 states that Nessa died permanently at that moment and that the death was confirmed before the chapter ended. L-7 requires Nessa to be kept alive through the end of chapter three. The same character cannot be both alive through the chapter’s end and permanently dead before it ends.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              43
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "Line 43 now says Nessa was alive and impatient and that the afternoon ended with both of them still planning, so L-7 is satisfied and no death is narrated."
+        },
+        "beforeDigest": "11621ffeddf4abcb43de3cac193dbceef309563a5ac97f9c775a41faa452cfa0",
+        "afterDigest": "7db8946b78ee589e166c6898892b75f1c2578ec503f7c7541afc3353ee7152ae"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-1:c01-r02:c01-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-1:c01-r02:c01-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 39 states that Leila had been right-handed from birth and had never been left-handed. The bible entry char:leila states that Leila is left-handed from birth, has never been the opposite-handed person, and that her dominant hand remains left-handed. The same character cannot have been right-handed from birth and left-handed from birth with the same lifelong dominant hand.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 39 now states Leila was left-handed from birth and never right-handed, matching the bible's char:leila invariant."
+        },
+        "beforeDigest": "416398724cb475ba390d5cb956baf6a6143ea29c13b38671920d4b971f78f57e",
+        "afterDigest": "c1e51229652bada65e4b4bdbbfca296ea62b8b8c9bb827c990424e9f751c2947"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-1:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-1:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1-injected-1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 41 states that, with no intervening gain or loss after the completed count, the very same balance was 71 pounds, not 64 pounds. Draft line 9 and the chapter intent state that an eight-pound tape purchase reduced petty cash from 72 pounds to 64, and Bev confirms sixty-four pounds in the tin. After an eight-pound reduction from seventy-two with no intervening gain or loss, that same completed balance cannot be both 64 pounds and 71 pounds.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              9,
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now gives the same balance as 64 pounds, consistent with line 9's 72-to-64 tape purchase and Bev's confirmation of sixty-four pounds in the tin."
+        },
+        "beforeDigest": "416398724cb475ba390d5cb956baf6a6143ea29c13b38671920d4b971f78f57e",
+        "afterDigest": "c1e51229652bada65e4b4bdbbfca296ea62b8b8c9bb827c990424e9f751c2947"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-2:c01-r02:c01-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c1-injected-2:c01-r02:c01-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1-injected-2",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 asserts that 'In the ordinary waking present, Orson entered alive and shook Tom’s hand; this was neither a memory nor an imagined scene.' Bible rule:chronology states that the former caretaker Orson died five years before the exhibition and does not return alive. Under the same waking present and exhibition timeline, Orson cannot both be dead five years earlier and enter alive; the sentence explicitly denies memory or imagination, so it cannot be read as a qualified recollection.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "Line 39 now states that Orson died five years before the exhibition and that nobody expected him to return; it no longer narrates him entering alive in the waking present."
+        },
+        "beforeDigest": "d2ce749e3c1565ed683673b5b8ad8582f7696a71844831f74427b4f513c248cb",
+        "afterDigest": "c8dc3988f96abf48f9415bc0b3b2ef798f80fbc6ecb70ee0f9ddb0b226d89146"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-1:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-1:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "worldbuilding",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 asserts that the intact receipt machine printed a new paper receipt while its numbered paper roll was removed and no other paper was supplied. L-4 and bible key rule:mechanism require that the intact machine print only on its numbered paper roll and be unable to produce a paper receipt once that roll is removed; draft line 15 also says the actual machine produced nothing while its roll was away, and line 37 says it remained silent. Under the same intact machine and the same roll-removed condition, it cannot both print a new receipt and produce no receipt.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 39 now says the intact receipt machine produced no receipt while its paper roll was removed and no other paper was supplied, matching L-4 and draft lines 15 and 37."
+        },
+        "beforeDigest": "b6a0f5bcfadb6f0c102d83291cb8c9c5b5e9480e5d50813bfa31dc4a70af80a5",
+        "afterDigest": "13a3d0263e3db5f7c2f1c023f5a6c4e8a213f14af0ddc73ac8df1d5e9534aa65"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-1:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-1:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2-injected-1",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 asserts that Tom died permanently at that moment, with the death confirmed before the chapter ended. L-7 requires Tom to remain alive through the end of chapter three, and draft line 37 still shows Tom stacking chairs after the rehearsal. Under the same character and story time, Tom cannot both die permanently in chapter 2 and remain alive through chapter 3.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now states that Tom was still alive, matching L-7 and removing the asserted chapter 2 death."
+        },
+        "beforeDigest": "b6a0f5bcfadb6f0c102d83291cb8c9c5b5e9480e5d50813bfa31dc4a70af80a5",
+        "afterDigest": "13a3d0263e3db5f7c2f1c023f5a6c4e8a213f14af0ddc73ac8df1d5e9534aa65"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-2:c02-r02:c02-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-2:c02-r02:c02-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "characterization",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 39 asserts that Leila had been right-handed from birth and had never been left-handed. The Bible character card for char:leila states that she is left-handed from birth and has never been the opposite-handed person, with the invariant that her dominant hand remains left-handed. Under the same actor and the same lifetime, Leila cannot both have been right-handed from birth and never left-handed and also have been left-handed from birth and never opposite-handed.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Draft line 39 now states that Leila had been left-handed from birth and had never been right-handed, matching the Bible character card."
+        },
+        "beforeDigest": "e98f83a9e9bf1e7ff819fa28daf3ac00e9be5fdcb4a5a5550d78757f2021aeee",
+        "afterDigest": "22990aef4788462ceed11a6e0c4a0b9a78fd2b7ef00a9ceaa141d7ff3dd69f8d"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-2:c02-r02:c02-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c2-injected-2:c02-r02:c02-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2-injected-2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 41 asserts that, after the completed count and with no intervening gain or loss, the very same petty-cash balance was 81 pounds, not 74 pounds. Draft line 7 states that a ten-pound deposit refund increased petty cash from sixty-four pounds to seventy-four pounds; state fact F-103 and claim S-12 supply the same sixty-four-pound starting balance. The same completed unchanged count cannot be both seventy-four pounds and eighty-one pounds.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              7,
+              41
+            ],
+            "stateRefs": [
+              "F-103",
+              "S-12"
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Draft line 41 now gives the unchanged petty-cash balance as seventy-four pounds, matching draft line 7, F-103 and S-12."
+        },
+        "beforeDigest": "e98f83a9e9bf1e7ff819fa28daf3ac00e9be5fdcb4a5a5550d78757f2021aeee",
+        "afterDigest": "22990aef4788462ceed11a6e0c4a0b9a78fd2b7ef00a9ceaa141d7ff3dd69f8d"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-1:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-1:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3-injected-1",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 asserts that “in the ordinary waking present, Orson entered alive and shook Tom’s hand,” explicitly denying that this is a memory or imagined scene. Bible rule:chronology states that Orson died five years before the exhibition and “does not return alive,” and draft line 11 also says Orson “had died five years earlier.” Under the same exhibition-time present, Orson cannot be both dead five years earlier and alive entering to shake Tom’s hand.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39,
+              11
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "Line 39 now states that Orson remained dead in the ordinary waking present, consistent with rule:chronology and line 11; the previous assertion that he entered alive and shook Tom’s hand is gone."
+        },
+        "beforeDigest": "87c2e41d12d41ebacdae37ed39dbf584c4cc2776186a5bd0a26ea14830e593ba",
+        "afterDigest": "0c610843cc0653e983649c523fa6c1ad6b90e466184361e802643a3eb877f9af"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-2:c03-r02:c03-r01-o01",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-2:c03-r02:c03-r01-o01",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 39 states that, while the receipt machine's paper roll was removed and no other paper was supplied, the intact receipt machine printed a new paper receipt. This conflicts with ledger L-4 and the Bible rule mechanism, which state that the intact receipt machine prints only on its numbered paper roll and cannot produce a paper receipt with the roll removed; it also conflicts with draft line 17, where Leila prints only after installing the roll. Under the same intact machine and the same chapter, printing a receipt without a roll and requiring the roll for printing cannot both be true.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 39 now states the mechanism rule and confirms the numbered roll was installed; no receipt is printed without it."
+        },
+        "beforeDigest": "3119c524ca4711bba2e0d218249f293948ad0b110d7b56ea9158a85d8f5953b9",
+        "afterDigest": "185e91c828614dafe6180fbcf802ef4a4d3e211904ad3ec5bdb9280b74b8159f"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-2:c03-r02:c03-r01-o02",
+      "itemId": "20261031T081133Z-0ae2186-r1:unclaimed_pedestal-c3-injected-2:c03-r02:c03-r01-o02",
+      "runId": "20261031T081133Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3-injected-2",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "已对照修订前后正文，原冲突在修订稿中消除，复查 resolved 与实际一致。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "blocking",
+          "objective": true,
+          "impact": "Draft line 41 states that Tom died permanently at that moment and that his death was confirmed before the chapter ended. Ledger L-7 explicitly requires Tom to remain alive through the end of chapter three, and the surrounding draft action has him speaking, planning next week's briefing, and being expected to arrive tomorrow. Tom cannot both remain alive through the chapter's end and die, confirmed, before that end.",
+          "scope": "local",
+          "id": "c03-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              41
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o02",
+          "resolved": true,
+          "note": "Line 41 now has Tom check the door, say he will see Leila in the morning and leave; he remains alive through the chapter's end."
+        },
+        "beforeDigest": "3119c524ca4711bba2e0d218249f293948ad0b110d7b56ea9158a85d8f5953b9",
+        "afterDigest": "185e91c828614dafe6180fbcf802ef4a4d3e211904ad3ec5bdb9280b74b8159f"
+      }
+    }
+  ]
+}

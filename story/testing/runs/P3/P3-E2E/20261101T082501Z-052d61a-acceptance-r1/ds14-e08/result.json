@@ -1,0 +1,256 @@
+{
+  "id": "ds14-e08",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_qaZ4kCkRLbPgpnDApvmM5138"
+    },
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "plan"
+      },
+      "id": "call_01_U8toO9urwEaWNu5si1K92306"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2, \"Comparison\": Aster and Jo compare the capsule's outer label with the canopy register, working quietly and precisely at the canopy station. Aster may or may not wear a protective glove — treat it as her free, optional choice, not required. Do not ring any bells at any point. The seed capsule stays sealed and intact throughout. Jo openly disagrees with one of Aster's readings and Aster takes the objection seriously. Kei can appear briefly with the public records. They find the register's second page is missing and decide not to open the capsule before the demonstration; end on that definite stopping point."
+      },
+      "id": "call_00_pDhVlDTygvzBYx8hY4wR6831"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, \"The Duplicate\": Aster reads the handling note, then obtains the duplicate register page from Kei. No bells are rung at any point; Aster's protective glove remains optional and her own choice. The seed capsule stays sealed and intact, and no character is physically injured. Keep all handling actions precise. Jo's disagreement is respected as the check is resolved. They complete the small demonstration quietly, store the intact capsule, and the delivery dispute ends on a definite stopping beat."
+      },
+      "id": "call_00_xN2wqwI4hz6z3yapBgUT5993"
+    },
+    {
+      "reply": "第3章已提交，无风险，目标三章达成。\n\n三章概要：\n- 第1章《抵达》：Aster 接收封好的种子胶囊，核对外部标签，发现红色封缝但未拆开。\n- 第2章《比对》：Aster 与 Jo 将标签与树冠站登记录逐项核对；Jo 直言异议，促使 Aster 修正判断；查明第二页缺失，示范前决定不开胶囊，铃未响，手套与否由 Aster 自己决定。\n- 第3章《副本》：Aster 阅读处理说明，从 Kei 处取得重复页，争议解决；胶囊始终保持完整并封存，小型示范顺利完成。\n\n三条台账要求（胶囊完整、不敲铃、手套可选）在后续章节均已落实。"
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "control"
+    },
+    "id": "call_00_qaZ4kCkRLbPgpnDApvmM5138"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 5,
+      "check": "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "44fa35ed80881afd3770c3b7c7de2e39869a9ebe1aa805c79229838b846db049",
+    "sessionSha256": "b7e65ce2ca1d01e9bda5a8a230b41493eb165b579f03598c7dba8837422101c5",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.07156074,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 12,
+      "totalUsd": 0.07156074
+    },
+    "measuredMainRequests": 4
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "batchRunId": "20261101T103609Z-9a54cb7-acceptance-r1",
+  "runIds": [
+    "20261101T103609Z-9a54cb7-acceptance-r1-837",
+    "20261101T103609Z-9a54cb7-acceptance-r1-527"
+  ],
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build exposed. No independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-BOOK-837-527@1",
+    "promptPath": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-ai/protocol.md",
+    "promptSha256": "60cc5f624b01770613cbe0590466045f13060d8c1e6566993f3e02ba17f5e338",
+    "independence": "Separate judging chat from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": false,
+  "scores": [
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "下一步重试submit_bible，将错误回执指向的items[11].kind和items[12].kind从line改为conflictLine，其余设定保持；工具成功建立14项圣经。修正了明确字段错误，没有重发相同无效参数，恢复合理。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "failedCall": {
+          "entryId": "6395edfb",
+          "sessionLine1": 8,
+          "toolCallId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+          "ordinal": 2
+        },
+        "errorResult": {
+          "entryId": "0be74366",
+          "sessionLine1": 9,
+          "toolCallId": "call_00_1D4EO8tmA5T47viXgIUV3472"
+        },
+        "nextDecision": {
+          "entryId": "db649b20",
+          "sessionLine1": 10
+        },
+        "nextToolCallId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+        "nextToolResult": {
+          "entryId": "eeded119",
+          "sessionLine1": 11
+        }
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "call_00_ET_rP9KWko83djXhrWzxWm93965",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "记录员导致第4章TRANSPORT_FAILURE且无提交；主笔下一步仍调用write_next_chapter重试第4章一次，保持原任务而未跳章、改正史或改预算。当前只经历一次该章宏失败，实际重试随后成功提交第4章，因此恢复合理。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "failedCall": {
+          "entryId": "bd561e3e",
+          "sessionLine1": 25,
+          "toolCallId": "call_00_ET_rP9KWko83djXhrWzxWm93965",
+          "ordinal": 8
+        },
+        "errorResult": {
+          "entryId": "910e934a",
+          "sessionLine1": 26,
+          "toolCallId": "call_00_ET_rP9KWko83djXhrWzxWm93965"
+        },
+        "nextDecision": {
+          "entryId": "8ef126b5",
+          "sessionLine1": 27
+        },
+        "nextToolCallId": "call_00_MzsrAdA0ScoAQBbiJ0SN1443",
+        "nextToolResult": {
+          "entryId": "770d1142",
+          "sessionLine1": 28
+        }
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "下一步按提示重新提交一个完整可解析JSON对象，submit_bible成功建立12项设定。原错误为引号／分隔符等JSON语法错误；不要求逐字保留没有落库的自选设定，幽灵姓名改变也没有覆盖已生效人物或违反作者的指定姓名。保留故事主题和当前开书任务，恢复合理。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "failedCall": {
+          "entryId": "b9955acb",
+          "sessionLine1": 8,
+          "toolCallId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+          "ordinal": 2
+        },
+        "errorResult": {
+          "entryId": "453b0ef1",
+          "sessionLine1": 9,
+          "toolCallId": "call_00_ZkkNRMZrg4cTwXTZOzS50943"
+        },
+        "nextDecision": {
+          "entryId": "394fac4c",
+          "sessionLine1": 10
+        },
+        "nextToolCallId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+        "nextToolResult": {
+          "entryId": "8a74baff",
+          "sessionLine1": 11
+        }
+      }
+    }
+  ],
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/approval.json",
+    "sha256": "ba62615b0d2a199785ee968c5afc03f3100105d4056a2bf3fccf9da7b1155690",
+    "conditionSatisfied": true
+  },
+  "sourcePreliminary": {
+    "commit": "63ca3c7a3f021a68965caf95cdfb37d3db5451b6",
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-ai/T03-preliminary.json",
+    "sha256": "cfe64506420d74eb35bb794d1a7b0001ffe2e670bc121dce5a74e90df4755dea"
+  },
+  "evidenceErratum": {
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/evidence-erratum.json",
+    "sha256": "f7209c193c82b468d19635ccd393c3f4642401a3875390d91f3e1e024df53d08"
+  }
+}

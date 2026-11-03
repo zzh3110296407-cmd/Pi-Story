@@ -1,0 +1,1431 @@
+{
+  "schema": "story/p3r2-batch-result@1",
+  "scoringVersion": "p3r2-32@1",
+  "runId": "20261102T051311Z-40ad1da-dev-r1",
+  "phase": "development",
+  "repetition": 1,
+  "complete": true,
+  "expected": 7,
+  "results": [
+    {
+      "id": "ds14-e02-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 3,
+      "firstMeasuredIndex": 9,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 1, 750 words. Third-person past, centred on Vera. Vera receives the disputed sealed glaze box at the pottery studio and inspects its outer label and straps without opening it. Ash assists precisely; Fin notes the delivery in the public record. Practical actions precise, quiet tone. Close the chapter on Vera noticing a red seam on the seal, deciding not to break it. The glaze box stays intact; nobody is injured."
+          },
+          "id": "call_00_k8RYxvK7cDMPv5qg6fdc5420"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2, 750 words. Vera and Ash compare the box label against the kiln register in the studio. Ash is allowed to disagree and does, plainly. They find the second page of the register is missing, which is why the delivery is disputed. They defer opening the glaze box rather than force it; the box stays intact. Practical, precise actions; quiet tone. Close on them setting the box back in the locked cupboard, undecided but calm."
+          },
+          "id": "call_00_ET_4LCkDzGQUru6pDHf2nJL8983"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3, 750 words. Vera reads the handling note, then Fin supplies the duplicate page of the public record. The dispute resolves. They carry out the small public demonstration quietly at the pottery studio with the glaze box still sealed and intact. No injuries. Practical actions precise, third-person past, centred on Vera. Close with the box stored intact and the record reconciled."
+          },
+          "id": "call_00_ET_cUZS5xPQnYjRbVrvQPGF4456"
+        },
+        {
+          "reply": "The three chapters are committed and the goal is reached.\n\n- **Chapter 1 — Arrival:** Vera received the sealed glaze box, checked the straps and outer label, and left the seal unbroken after spotting a red seam. No risks retained.\n- **Chapter 2 — Comparison:** Vera and Ash checked the box label against the kiln register; Ash disagreed with her reading, allowing the missing second page to surface. The box stayed intact. Some risks were retained in the draft and carried forward.\n- **Chapter 3 — The Duplicate:** Fin produced the duplicate page, the delivery dispute was settled, and the small demonstration went ahead with the glaze box still sealed. No risks retained.\n\nAcross all three chapters the glaze box remains intact and no character is physically injured."
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {
+          "brief": "Chapter 1, 750 words. Third-person past, centred on Vera. Vera receives the disputed sealed glaze box at the pottery studio and inspects its outer label and straps without opening it. Ash assists precisely; Fin notes the delivery in the public record. Practical actions precise, quiet tone. Close the chapter on Vera noticing a red seam on the seal, deciding not to break it. The glaze box stays intact; nobody is injured."
+        },
+        "id": "call_00_k8RYxvK7cDMPv5qg6fdc5420"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 0,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 0,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached",
+            "probeError": "GOAL_REACHED"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 0,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached",
+            "probeError": "GOAL_REACHED"
+          }
+        },
+        {
+          "index": 2,
+          "check": "Exactly chapters 1, 2 and 3 commit, once each, and no author action is required between them.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 0,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached",
+            "probeError": "GOAL_REACHED"
+          }
+        },
+        {
+          "index": 3,
+          "check": "A read-only driver probe of a fourth writing attempt returns GOAL_REACHED without a model call or chapter 4; the showrunner itself does not issue that probe.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 0,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached",
+            "probeError": "GOAL_REACHED"
+          }
+        },
+        {
+          "index": 4,
+          "check": "The showrunner reports completion and automatic continuation stops.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 0,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached",
+            "probeError": "GOAL_REACHED"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "505f3a0bd922e512e107fb5cb5746c0080ea45b925ab44ddfa590d69ef66068e",
+        "sessionSha256": "d8211ee8121fbcab00c93ab5f32cb8281dc2ef1987030d0f364df304f21cb466",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0.08150596799999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 15,
+          "totalUsd": 0.08150596799999998
+        },
+        "measuredMainRequests": 4
+      }
+    },
+    {
+      "id": "ds14-e04-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 3,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2 \"Comparison\": Vera and Ash compare the glaze box label with the kiln register. They find the second page of the register is missing; Vera decides to keep the box unopened and defer the dispute. Quiet, precise handling, third-person past tense, Vera's viewpoint."
+          },
+          "id": "call_00_GIfIBESNVwQGTCJ4dLax2248"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2 \"Comparison\" (rewrite under the new author input). Vera and Ash compare the glaze box label with the kiln register at the pottery studio; the second page of the register is missing. A duplicate of that page surfaces, and Ash discovers a blue square on the duplicate page and explains out loud to Vera what it means. Vera keeps the glaze box closed and unopened; the delivery stays disputed. Quiet, precise handling, third-person past tense, Vera's viewpoint, no injuries, glaze box intact."
+          },
+          "id": "call_00_SRFHB0sDdueJtYajab5l4183"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3 \"The Duplicate\": Fin, who keeps the public records, verifies the duplicate page and the blue square against the studio's copies, settling the disputed delivery without opening the glaze box. Vera and Ash finish the small public demonstration in the studio, then store the glaze box intact with a written handling note. Quiet, precise practical actions, third-person past tense, Vera's viewpoint, no injuries, the glaze box remains sealed and intact; the delivery dispute ends."
+          },
+          "id": "call_00_OR3bm2RqElL7GH0YB1p91194"
+        },
+        {
+          "reply": "Target reached — all three planned chapters are committed.\n\n- Chapter 1 — the box arrives at the pottery studio; Vera checks the outer label and leaves the red seam unopened.\n- Chapter 2 (rewritten to your interjection) — Vera and Ash compare the label against the kiln register, the second page is found missing, then a duplicate of it surfaces and Ash spots the blue square on it and explains it aloud to Vera. One editorial risk was retained, not dropped; the box stayed closed and intact.\n- Chapter 3 — Fin's public records settle the dispute; the small demonstration is completed and the glaze box goes back into storage intact, sealed and unopened, no one hurt.\n\nIf you'd like the blue square's meaning pressed further or a fourth chapter added, say the word and I'll adjust the plan before writing."
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {
+          "brief": "Chapter 2 \"Comparison\": Vera and Ash compare the glaze box label with the kiln register. They find the second page of the register is missing; Vera decides to keep the box unopened and defer the dispute. Quiet, precise handling, third-person past tense, Vera's viewpoint."
+        },
+        "id": "call_00_GIfIBESNVwQGTCJ4dLax2248"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Chapter 2 includes Ash noticing the blue square and explaining it aloud to Vera, not only in a title, summary or planning note. Chapter 1 is unchanged.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              "INTERJECTED",
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              "INTERJECTED",
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 2,
+          "check": "The first chapter-2 attempt returns INTERJECTED and has no commit; interjection sequence increases exactly once.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              "INTERJECTED",
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 3,
+          "check": "The second attempt still targets chapter 2 and commits once; discarded draft text never becomes canon.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              "INTERJECTED",
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "3b0093205d8b343259db3f67c082a9231ef3f34781d072b3dcbe437deb3884db",
+        "sessionSha256": "e5b1cf3484831d008bc48bf7e09b987a4ff81494571d7a8f02bb4a704d82d12f",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0.05556483599999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 15,
+          "totalUsd": 0.05556483599999999
+        },
+        "measuredMainRequests": 4
+      }
+    },
+    {
+      "id": "ds14-e08-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 2,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "read_story",
+          "args": {
+            "section": "control"
+          },
+          "id": "call_00_MgYE1yrivv6op4xlMS9L3214"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2 \"Comparison\": Vera and Ash in the pottery studio compare the glaze box's outer label against the kiln register without opening the box; Vera chooses not to wear the protective glove, since it is optional. No bells are rung anywhere in the chapter. They discover the second page of the register is missing and defer opening the glaze box; end on that definite stopping beat. Third-person past tense, Vera viewpoint, precise practical actions."
+          },
+          "id": "call_00_rwXPCrHaAfFAVa1K9d598278"
+        },
+        {
+          "reply": "Chapter 2 is committed with no risks retained. Vera chose not to wear the protective glove, no bells appeared anywhere, and the glaze box was never opened; they found the missing second page of the kiln register and stopped there."
+        },
+        {
+          "tool": "read_chapter",
+          "args": {
+            "n": 2
+          },
+          "id": "call_00_BGAU6XTb6zCBw8k0YzNw2378"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3 \"The Duplicate\": Vera still works bare-handed, having chosen against the optional glove earlier. Fin arrives in the pottery studio and produces the duplicate of the missing register page from the public records; Vera and Ash read it and establish which batch the glaze box's label refers to, so the delivery dispute is settled without opening the box. They then complete the small public demonstration with the box sealed and intact, store it on the shelf, and close the work note. No bells are rung or mentioned as sounding. End on a definite quiet stopping beat. Third-person past tense, Vera viewpoint, precise practical action."
+          },
+          "id": "call_00_Px9MxvhSUOYuPc7MkdhH8918"
+        },
+        {
+          "reply": "Chapter 3 is committed, no risks retained, and the three-chapter target is reached. Vera stayed bare-handed by her earlier choice, Fin supplied the duplicate register page, the delivery question was settled with the glaze box still sealed, and no bells sounded anywhere. The box is stored intact and the work note closed.\n\nThe book now stands at three chapters; tell me if you want it extended, revised forward from here, or branch-point changes."
+        }
+      ],
+      "firstAction": {
+        "tool": "read_story",
+        "args": {
+          "section": "control"
+        },
+        "id": "call_00_MgYE1yrivv6op4xlMS9L3214"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 2,
+          "check": "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 3,
+          "check": "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 4,
+          "check": "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 5,
+          "check": "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [
+              "ledger_edit",
+              "ledger_edit",
+              "ledger_edit"
+            ],
+            "continued": 1,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "1898a26f0e9e9d6f09fc7953454fecd6ef3cb62e06d3e8a2de78e86c2f2e8e78",
+        "sessionSha256": "d0eca56c0cda034c3a942a4af7762b7d56055d617b4ee73408c24e8defe253fe",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0.07102480799999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 13,
+          "totalUsd": 0.07102480799999998
+        },
+        "measuredMainRequests": 6
+      }
+    },
+    {
+      "id": "ds14-e10-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 1,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793597273939:k7xdvy9etq"
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {},
+        "id": "tool:1793597273939:k7xdvy9etq"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 1,
+      "stopReason": "budget_exhausted",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 1,
+            "macroErrors": [
+              "BUDGET_EXHAUSTED"
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 1,
+            "macroErrors": [
+              "BUDGET_EXHAUSTED"
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        },
+        {
+          "index": 2,
+          "check": "Force a genuine local-revision path; a clean writer/editor/keeper cycle has only three calls and is not this test.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 1,
+            "macroErrors": [
+              "BUDGET_EXHAUSTED"
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        },
+        {
+          "index": 3,
+          "check": "After draft, full review and writer patch, the fourth internal call (recheck editor) is blocked as BUDGET_EXHAUSTED.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 1,
+            "macroErrors": [
+              "BUDGET_EXHAUSTED"
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        },
+        {
+          "index": 4,
+          "check": "The failed chapter is not committed and no keeper request or automatic retry is dispatched.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 1,
+            "macroErrors": [
+              "BUDGET_EXHAUSTED"
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "d6a5084b9eb98cc149c622f2e041b1d61aa014344358852723f4e67cc3e5d2ec",
+        "sessionSha256": "5b88d7dbf1755ea63140793b44ea4bf4ce978711c066474ce30a59133cc9cf6b",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 0,
+          "totalUsd": 0
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds14-e15-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 1,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793597274153:kkgutwnzjod"
+        },
+        {
+          "reply": "Current result: goal_off."
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {},
+        "id": "tool:1793597274153:kkgutwnzjod"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 2,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 2,
+          "check": "Inject one local writer stream interruption after generation starts, not a parse error or pre-generation rejection.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 3,
+          "check": "Exactly one transport retry occurs automatically, with a fresh reservation and retryOf pointing to the first call.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 4,
+          "check": "Both attempts remain in details.calls and the session journal; unknown first usage is charged conservatively.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 5,
+          "check": "The second writer attempt succeeds and chapter 2 commits exactly once.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 2,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "fce735b141ff1b3e6227e88c814aebe720ed1c30f3389e19da11838ab0f888e4",
+        "sessionSha256": "641e61fef21e4b659b35f6c7c9b0ea39361ee7d0f705d779d1b510812640cca6",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 0,
+          "totalUsd": 0
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds14-e05-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 2,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "call_00_FJOPRiIifiFjYd7oFhdy5157"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Nell inspects the duplicate register page from Bryn before the demonstration. Before that inspection, Oli ties an orange wool loop to the tray handle, marking the tray's ownership for the shed staff. Nell reads the handling note, compares the duplicate page with the label and the intact reed basket, and the delivery dispute resolves without opening or damaging the basket. The small public demonstration at the weaving shed proceeds and finishes; the basket is stored intact. Practical actions stay precise, no one is injured, and the chapter ends at a definite stopping point."
+          },
+          "id": "call_00_2DZryVgCH8S2U03lSj2v5799"
+        },
+        {
+          "reply": "All three chapters are now committed.\n\n- **Chapter 1** — committed clean; Nell checks the sealed reed basket's outer label and leaves a suspect red seam unopened.\n- **Chapter 2** — committed with risks retained; Nell and Oli compare the label against the loom register and find the second page missing, so they defer opening the basket.\n- **Chapter 3** — committed clean; before Nell inspects the duplicate page, Oli ties an orange wool loop to the tray handle as you asked, and the chapter finishes with the demonstration done and the reed basket stored intact.\n\nThat completes the three-chapter target. No character was injured, the basket stayed whole, and the dispute was settled through the records rather than guesswork."
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {},
+        "id": "call_00_FJOPRiIifiFjYd7oFhdy5157"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Chapter2 does not include the orange wool loop. In committed chapter3, Oli actually ties an orange wool loop to the tray handle before Nell inspects the duplicate page; mention only in a title, summary or plan is insufficient.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 2,
+          "check": "The followUp is queued during the first chapter2 writer request, without INTERJECTED or an interjection-sequence increment; chapter2 commits normally once.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 3,
+          "check": "The queued message becomes a native author message after chapter2 commits and before the first chapter3 writer request; no chapter3 writer request may precede activation.",
+          "status": "pending_judgment",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 4,
+          "check": "The first chapter3 writer input contains the complete requested orange-wool-loop action, including Oli, the tray handle and its order before Nell inspects the duplicate page.",
+          "status": "incomplete",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 5,
+          "check": "Chapter3 commits once and automatic continuation stops at the goal of3.",
+          "status": "incomplete",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "335f76f1a7bcb836d1765a34469ec21dbe8d1dc538967ba9bd6878107bd5ee08",
+        "sessionSha256": "933805af8d53fa01ded4e7bfe443c728f009c784d9881f92ec9a9fe19af879b3",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0.04461634799999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 11,
+          "totalUsd": 0.04461634799999999
+        },
+        "measuredMainRequests": 3
+      }
+    },
+    {
+      "id": "ds14-e11-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 2,
+      "firstMeasuredIndex": 17,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2: Quiet comparison at the weaving shed. Nell and Oli lay the sealed reed basket on the padded trestle and compare its label with the loom register Bryn keeps. Nell handles only the outer wrapper; she does not open the basket and nothing inside is disturbed. Oli is allowed to disagree and does — he argues the label is a copyist's error and wants to open the basket now; they hold the basket closed. They find the register's second page is missing, so the discrepancy cannot be settled today. Precise hands-on detail: weights, linen ties, humidity reading, pencil marks, shelf marks. Stop when they decide to leave the basket sealed. No injuries; basket stays intact. No new facts beyond the outline."
+          },
+          "id": "call_00_FOmm9pitRJbu2k4gCTUc3122"
+        },
+        {
+          "tool": "ask_author",
+          "args": {
+            "question": "For chapter 3, should the next parcel arriving at the weaving shed be a return from the buyer, or a new donation? The receipt-book entry and how Nell records it will differ.",
+            "options": [
+              "A return from the buyer",
+              "A new donation"
+            ]
+          },
+          "id": "call_00_TQgNRnIR2p7jBztTBKCL5520"
+        },
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3, final chapter, quiet close. Nell reads the handling note and gets the duplicate page of the loom register from Bryn, who confirms the copyist's error and that the delivery's label is legitimate. A second, much smaller parcel arrives during the work: it is a NEW DONATION from a donor, not a return from the buyer. Bryn hands it to Nell; she opens it on the padded trestle, describes the few items plainly (a folded sampler, a bobbin, a written note), and she and Bryn enter it in the receipt book as a donation, in the donation column, dated, with the donor named and the condition noted. Oli is allowed to disagree and does — about how the items should be described and about whether the demonstration should wait; Nell weighs it and settles it practically. The reed basket is carried to the display table still sealed, weighed one last time, and set down intact; the brief public demonstration happens quietly at the shed with the basket closed. No injuries; basket intact throughout. Practical detail precise. Definite stopping point: the shed closed up, receipt book put away, basket intact on its shelf."
+          },
+          "id": "call_00_H80zLv2NpeQHmDxPHbL74558"
+        },
+        {
+          "reply": "Target of three chapters reached, so I've stopped there.\n\n- **Chapter 2** committed with no flagged risks: Nell and Oli compared the basket's label against the loom register on the padded trestle, kept the basket sealed, and found the register's second page missing. Oli disagreed openly about opening it; they held off.\n- **Chapter 3** committed with no flagged risks: Bryn lodged the missing page, which showed a copyist's error, and the delivery's label stood. The new parcel was handled as a **donation** and entered that way in the receipt book. The reed basket was set on the display table sealed and intact for the short demonstration, then shelved. No one was injured and the basket never opened.\n\nThe book now stands at three chapters, each near its 750-word target, with the disputed delivery settled and the donation properly recorded."
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {
+          "brief": "Chapter 2: Quiet comparison at the weaving shed. Nell and Oli lay the sealed reed basket on the padded trestle and compare its label with the loom register Bryn keeps. Nell handles only the outer wrapper; she does not open the basket and nothing inside is disturbed. Oli is allowed to disagree and does — he argues the label is a copyist's error and wants to open the basket now; they hold the basket closed. They find the register's second page is missing, so the discrepancy cannot be settled today. Precise hands-on detail: weights, linen ties, humidity reading, pencil marks, shelf marks. Stop when they decide to leave the basket sealed. No injuries; basket stays intact. No new facts beyond the outline."
+        },
+        "id": "call_00_FOmm9pitRJbu2k4gCTUc3122"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The question distinguishes a buyer return from a new donation and does not choose or combine them. After the answer, committed chapter3 treats the arriving parcel as a new donation with the corresponding receipt entry, rather than a return or both.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 1,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "All pre-measurement committed chapter bytes remain unchanged.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 2,
+          "check": "The queued author message activates after chapter2 commits and before any chapter3 writer request.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 3,
+          "check": "The showrunner calls ask_author before writing chapter3 or mutating story state to choose a parcel identity; automatic continuation pauses while the answer is pending.",
+          "status": "pending_judgment",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 4,
+          "check": "The scripted answer is delivered through the real UI/RPC dialog only after the pause assertion, is persisted in native conversation history, and execution then resumes.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 5,
+          "check": "The first chapter3 writer input contains the author's answer that the parcel is a new donation, not a buyer return; chapter3 commits and stops at goal3.",
+          "status": "incomplete",
+          "evidence": {
+            "committedBefore": 1,
+            "committedAfter": 3,
+            "macroErrors": [
+              null,
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper",
+              "writer",
+              "editor",
+              "keeper",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "1f3ec576fb0aa9faf64faad1a3d309b1e25089194e2709eaa211d8a7dc0ff0b4",
+        "sessionSha256": "855697d8c201a4d16c255afd75abc55f57e2dd67b4fe9e5aaca88be7cf04d178",
+        "sessionSource": "native_file",
+        "fee": {
+          "knownUsd": 0.067502268,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 11,
+          "totalUsd": 0.067502268
+        },
+        "measuredMainRequests": 4
+      }
+    }
+  ],
+  "fee": {
+    "knownUsd": 0.5835746519999997,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 134,
+    "totalUsd": 0.5835746519999997
+  }
+}

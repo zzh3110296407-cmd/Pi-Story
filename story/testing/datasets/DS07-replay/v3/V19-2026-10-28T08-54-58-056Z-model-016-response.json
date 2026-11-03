@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal. Facts 1-4 upserts. Need exact sentence IDs. Subject/predicate/object strings. Modes narrated or recalled_past, certainty confirmed/uncertain. Need only stated in chapter. Let's identify facts.\n\nSentence 1: He crossed rise and saw dark mound too regular to be rock. Could fact: \"he\" saw dark mound? Subject maybe \"he\" predicate \"saw\" object \"a dark mound in the white\". Mode narrated confirmed sentences [1].\nSentence 4: \"A woolly mammoth.\" Fact: animal is woolly mammoth. Subject \"the animal\" predicate \"is\" object \"a woolly mammoth\". Sentences [3,4]? Sentence 4 alone maybe. Confirmed narrated.\nSentence 6: body whole no cuts spear marks trampled ring. Fact: mammoth body was whole with no cuts/spear marks/trampled ring. Could be object string. Sentences [6]. Confirmed narrated.\nSentence 11: He had aimed for late Pleistocene. Recalled past? It's stated past intention. mode recalled_past confirmed sentences [11]. Good.\nSentence 12-13: This was older, tens thousands years older. Could fact subject \"this\" predicate \"was\" object \"older\" or \"tens of thousands of years older\". Sentences [12,13]. Confirmed narrated? It's narrator assessment. Good.\nSentence 14: jump had missed, or he had, error not walk back from. Uncertain? \"or he had\" uncertain. But maybe fact: \"The jump had missed, or he had\" uncertain reason ambiguity. Could include but limited. Need minimal 1-4. We have 4 facts. Choose best.\n\nNeed summary title characters events mood. Characters: he, woolly mammoth? Events: crosses rise, finds mammoth carcass, takes rib/hide, walks toward ravine. Mood: bleak/isolated? Include issues maybe [] or note ambiguity pronoun. Need JSON only.\n\nNeed ensure schema exact. Facts array min 1 max? no max but prompt 1-4. Use temp refs f1..f4. Object string.\n\nPotential concern uncertain fact: sentence 14 \"The jump had missed, or he had\" could be uncertain. But minimal. Maybe include uncertain fact to test uncertainReason. Prompt says certainty confirmed or uncertain; uncertainReason nonempty when uncertain. They probably expect at least one uncertain? P0 subset tests 1-4 fact upserts. Could include a fact with uncertain. Sentence 14 explicitly uncertain (\"or\"). Fact: subject \"the jump\" predicate \"had\" object \"missed, or he had\" not clean. Better subject \"the error\" predicate \"was\" object \"not one he could walk back from\" confirmed? Hmm.\n\nNeed extract exact states. We can have:\n1. subject \"he\", predicate \"saw\", object \"a dark mound in the white\", mode narrated, certainty confirmed, sentences [1].\n2. subject \"the animal\", predicate \"was\", object \"a woolly mammoth\", mode narrated, certainty confirmed, sentences [3,4].\n3. subject \"the mammoth body\", predicate \"was\", object \"whole, with no cuts, spear marks, or trampled ring\", mode narrated confirmed sentences [6,7]? Sentence 7 nothing fed. Include [6,7].\n4. subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\", mode recalled_past confirmed sentences [11].\n\nThat's enough. But maybe include older than target? Could replace #1? Minimal.\n\nNeed summary title maybe \"The Dead Mammoth in the Snow\". Characters [\"he\",\"woolly mammoth\"]. Events [\"He crosses a rise and sees a dark mound in the snow.\", \"He finds a whole woolly mammoth carcass, unmarked and untouched.\", \"He recalls aiming for the late Pleistocene and realizes this is far older.\", \"He takes a rib shard and hide strip, then walks toward the ravine.\"] Mood \"bleak and isolated\". Issues [\"The protagonist is unnamed; 'he' is used throughout.\", \"The exact nature of the time-jump error is ambiguous in sentence 14.\"] Could include.\n\nNeed JSON object only. Ensure claims etc empty arrays. Additional properties false, facts item additionalProperties false. Summary additionalProperties false. Good.\n\nNeed maybe no markdown. final JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a dark mound in the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the animal\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3,4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the mammoth body\",\"predicate\":\"was\",\"object\":\"whole, with no cuts, spear marks, or trampled ring\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Dead Mammoth in the Snow\",\"characters\":[\"he\",\"woolly mammoth\"],\"events\":[\"He crosses a rise and sees a dark mound in the snow.\",\"He finds a whole woolly mammoth carcass, unmarked and untouched.\",\"He recalls aiming for the late Pleistocene and realizes this is far older.\",\"He takes a rib shard and a strip of hide, then walks toward the ravine.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\",\"Sentence 14 leaves ambiguous whether the jump missed or he did.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1284,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 916,
+      "totalTokens": 2252,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0015408,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016054079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177830631,
+    "responseId": "1e131d3b-e9a3-4f4d-b4d1-baef605ba2f3",
+    "rawStopReason": "stop",
+    "durationMs": 7644
+  },
+  "record": {
+    "time": "2026-10-28T08:57:18.275Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-016",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1284,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 916,
+      "totalTokens": 2252,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0015408,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016054079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0016054079999999998,
+    "inputTokens": 200,
+    "outputTokens": 1284,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 7644
+  }
+}

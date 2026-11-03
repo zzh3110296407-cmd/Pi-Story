@@ -1,0 +1,94 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "bakery_apartment-c2-injected-2",
+  "storyId": "bakery_apartment",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "b25d8a1bfb457932c1fbc0c6930c1a1e41877329b0d3c04c38985034252e43b3",
+    "path": "acceptance/chapters/bakery_apartment-c2.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "bakery_apartment-c2-injected-2-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Naomi waited with Ruth in the neighbourhood clinic.",
+      "changed": "Naomi waited with Ruth in the neighbourhood clinic. Naomi had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Naomi waited with Ruth in the neighbourhood clinic.",
+          "changed": "Naomi waited with Ruth in the neighbourhood clinic. Naomi had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 5,
+            "end": 5
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:naomi",
+          "quote": "Naomi is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim.",
+      "lines": [
+        5
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "bakery_apartment-c2-injected-2-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+      "changed": "A forty-pound refund brought the household fund to two hundred and sixty pounds. With no intervening gain or loss, that same completed count stood at 267 pounds.",
+      "spans": [
+        {
+          "original": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+          "changed": "A forty-pound refund brought the household fund to two hundred and sixty pounds. With no intervening gain or loss, that same completed count stood at 267 pounds.",
+          "lines": {
+            "start": 15,
+            "end": 15
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+          "ref": "line:15"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "lines": [
+        15
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review-r2.json",
+      "reviewStatus": "r2_review_and_requested_prose_repairs_applied",
+      "revision": "r2-retained-narrated-count",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

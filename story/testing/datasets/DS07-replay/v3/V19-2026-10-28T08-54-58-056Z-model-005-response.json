@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal from chapter. Need facts 1-4 upserts each temp ref, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty when uncertain else empty, sentences array integer numbers from chapter. Leave claims cognitions relations hooks empty. Summary title characters events mood. Include issues.\n\nNeed only states stated. Chapter 1 numbered sentences. Need extract facts. P0 subset tests only 1 to 4 fact upserts. We need choose facts clearly stated. Potential facts: He woke cold? Sentence 1 \"Cold woke him first, before memory did\" narrated. Subject \"he\" predicate \"woke to\" object \"cold\"? Better \"Cold woke him first\" but subject cold predicate woke object him. Need facts. Sentence 2: He lay on his back in the white; sky above flat colorless lid. Sentence 5 pushed himself up on one elbow. Sentence 10 got his knees under him. Sentence 11 wind came across tundra carrying ice stung cheek; he turned from it scanning. Sentence 12 rise dark rock west low broken beyond shadow might have been ravine (uncertain). Sentence 13 had spent lifetime learning to arrive (recalled_past, confirmed? stated). Sentence 14 no one taught him first thing about surviving it. Sentence 15 started walking counting steps because counting something to do.\n\nNeed minimal 1-4. We need exact sentence IDs. Could extract:\n1. subject \"he\", predicate \"woke\", object \"cold\" mode narrated certainty confirmed sentences [1]. But object string? \"cold\" yes.\n2. subject \"he\", predicate \"lay on his back in\", object \"the white\" sentences [2]. Or \"he lay on his back\" object \"white\"? Fact: He lay on his back in the white. predicate \"lay on his back in\" object \"the white\". \n3. subject \"he\", predicate \"pushed himself up on\", object \"one elbow\" sentences [5].\n4. subject \"he\", predicate \"started walking\" object \"counting his steps\" sentences [15]. Hmm object string \"counting his steps\" maybe.\n\nNeed not include future plans. It asks \"following interface design 12 section 6\" but not provided. We just adhere schema.\n\nCould include fact from sentence 1 \"Cold woke him first, before memory did\". Mode narrated. Certainty confirmed. Sentence [1]. Subject \"cold\", predicate \"woke\", object \"him first\". That is stated. But \"before memory did\" not needed.\n\nNeed summary title, characters, events, mood. Title maybe \"Cold Awakening\". Characters [\"He\"] (unnamed protagonist). Events: \"He wakes in cold white snow, pushes himself up, scans the tundra, sees dark rock and possible ravine to the west, and starts walking while counting steps.\" Mood \"bleak, disoriented, cold\". Issues maybe \"Protagonist is unnamed.\" Need include issues array. Could mention no issues? Since include issues. maybe [\"Protagonist is unnamed; pronoun 'he' used.\"] But issues optional? Required. Use [].\n\nNeed fact certainty uncertainReason: for confirmed empty string. For uncertain if fact \"shadow might have been a ravine\" certainty uncertain uncertainReason \"narrator states 'might have been'\". But minimal maybe avoid uncertain.\n\nNeed ensure each fact sentences minItems 1. Use integer sentence numbers. Need exact sentence numbers. Fact 1 sentences [1]; fact 2 [2]; fact 3 [10]? \"He got his knees under him.\" Could use [10]. Fact 4 [15]. 4 facts.\n\nCould include \"He got his knees under him\" and \"He started walking, counting his steps\". But sentence 15 includes \"because counting was something to do\" not needed. Subject he predicate started walking object counting his steps. Good.\n\nNeed maybe facts only 3 to be minimal. It says 1 to 4 fact upserts. Minimal could be 3. Need not overdo. We can include 4? \"minimal DeltaProposal\" maybe only essential. P0 tests only 1-4; choose 3 clear facts. Summary events can mention scanning? But summary events should reflect chapter. If no fact about scanning okay. We need not include all.\n\nNeed no claims/cognitions/relations/hooks empty arrays. JSON object only. Ensure schema. \"type\":\"json_object\" but response must be JSON. We should output only JSON.\n\nNeed decide facts. Let's craft 3 facts:\n- ref \"f1\", op upsert, subject \"he\", predicate \"woke to\", object \"cold\", mode narrated, certainty confirmed, uncertainReason \"\", sentences [1]. Is \"woke to cold\" exactly? Sentence says \"Cold woke him first\" not \"he woke to cold.\" Could phrase subject \"cold\" predicate \"woke\" object \"him first\". Better exact: subject \"cold\", predicate \"woke\", object \"him first\". That's exact. But \"first\" maybe. Use object \"him\". Sentence 1 states cold woke him first. Subject cold predicate woke object him. Good.\n- ref f2: subject \"he\", predicate \"lay on his back in\", object \"the white\", sentences [2]. Exact enough.\n- ref f3: subject \"he\", predicate \"got\", object \"his knees under him\", sentences [10].\n- ref f4: subject \"he\", predicate \"started walking\", object \"counting his steps\", sentences [15].\n\nCould include fact \"He pushed himself up on one elbow\" sentence 5 rather than knees. Both. Minimal 3 maybe choose f1, f2, f4? Need events. But summary can include. The fact extraction maybe should capture key actions. Use 4 facts within max. Fine.\n\nNeed summary title \"Cold Awakening\" characters [\"He\"] events [\"Cold wakes him in a white landscape; he lies on his back, then gets his knees under him and starts walking, counting his steps.\"] mood \"Cold, disoriented, bleak.\" But events mention getting knees. Good. If include only f1,f2,f3,f4, events exactly. Title. Issues: [] maybe. But include issues maybe [\"The protagonist is unnamed and referred to only as 'he'.\"] Is that an issue? It is true. Might be okay. But \"issues\" likely extraction issues, not story. Use [] to be safe? Required array can be empty. Include []? The user says \"Include issues.\" Could be empty. Maybe include [] if none. But \"include issues\" might expect array. Use [\"Protagonist is unnamed; referred to only as 'he'.\"] maybe not an extraction issue. Hmm.\n\nNeed \"minimal DeltaProposal\" no future. OK.\n\nNeed ensure no additional properties. JSON only.\n\nPotential issue: \"mode\": \"narrated\" for sentence 1? Yes. \"recalled_past\" only if recalled. No.\n\nLet's final JSON. Need valid no markdown? likely only JSON. Use exact.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"cold\",\"predicate\":\"woke\",\"object\":\"him first\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"got\",\"object\":\"his knees under him\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[10]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started walking\",\"object\":\"counting his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Awakening\",\"characters\":[\"He\"],\"events\":[\"Cold wakes him first; he lies on his back in the white, gets his knees under him, and starts walking while counting his steps.\"],\"mood\":\"Cold, disoriented, and bleak\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1771,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1477,
+      "totalTokens": 2698,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0021252,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002177508
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177733220,
+    "responseId": "d7c2d896-6fab-47b8-b822-cfd0c64a2a34",
+    "rawStopReason": "stop",
+    "durationMs": 10675
+  },
+  "record": {
+    "time": "2026-10-28T08:55:43.895Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-005",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1771,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1477,
+      "totalTokens": 2698,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0021252,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002177508
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.002177508,
+    "inputTokens": 159,
+    "outputTokens": 1771,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 10676
+  }
+}

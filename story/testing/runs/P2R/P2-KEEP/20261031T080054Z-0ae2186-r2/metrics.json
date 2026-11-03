@@ -1,0 +1,643 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-KEEP",
+  "runId": "20261031T080054Z-0ae2186-r2",
+  "metrics": [
+    {
+      "id": "K01",
+      "n": 9,
+      "value": {
+        "first": 0.7777777777777778,
+        "final": 1
+      },
+      "successes": {
+        "first": 7,
+        "final": 9
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.45258896910698887,
+          0.9367748928821533
+        ],
+        "final": [
+          0.7008549515804559,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K02",
+      "n": 9,
+      "value": {
+        "first": 0.4444444444444444,
+        "final": 0.7777777777777778
+      },
+      "successes": {
+        "first": 4,
+        "final": 7
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.9
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.18877852109766452,
+          0.733348706504507
+        ],
+        "final": [
+          0.45258896910698887,
+          0.9367748928821533
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K03",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K04",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K05",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K06",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K08",
+      "n": 0,
+      "value": {
+        "precision": null,
+        "recall": null
+      },
+      "threshold": {
+        "precision": 0.7,
+        "recall": 0.5
+      },
+      "minimum": 20,
+      "confidence95": {
+        "precision": null,
+        "recall": null
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "manual": true,
+      "components": {
+        "precision": {
+          "n": 0,
+          "successes": 0
+        },
+        "recall": {
+          "n": 0,
+          "successes": 0
+        }
+      },
+      "precisionBasis": "qualified judgment of each output operation; recall remains one-to-one gold matching"
+    },
+    {
+      "id": "H12",
+      "n": 16,
+      "successes": 16,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.8063923194655637,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 16,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8063923194655637,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 16,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8063923194655637,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 16,
+      "successes": 16,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.8063923194655637,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 16,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8063923194655637,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 16,
+        "knownUsd": 0.13705618199999997,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 16,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [
+        {
+          "caseId": "second_cairn-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 59603,
+          "knownUsd": 0.012010428,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "second_cairn-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 51446,
+          "knownUsd": 0.010663919999999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "second_cairn-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 62213,
+          "knownUsd": 0.016039392,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 102938,
+          "knownUsd": 0.024431676,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 88455,
+          "knownUsd": 0.021427056,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 64550,
+          "knownUsd": 0.013658855999999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 47490,
+          "knownUsd": 0.015009342,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 38730,
+          "knownUsd": 0.01095642,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 46121,
+          "knownUsd": 0.012859091999999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 106,
+        "provisional": 6,
+        "provisionalRate": 0.05660377358490566,
+        "issues": 13,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 16,
+      "median": 1.645041342485894,
+      "max": 1.783214833403039
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 2,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "7f566f73-4146-4d80-a04a-d73ed88570fa",
+        "caseId": "second_cairn-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0431352
+      },
+      {
+        "type": "call_audit",
+        "requestId": "9ff94904-f438-4002-9681-5b7b20e28060",
+        "caseId": "second_cairn-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0435825
+      },
+      {
+        "type": "call_audit",
+        "requestId": "efb39bc5-ed58-4337-805b-8c00e2d17695",
+        "caseId": "second_cairn-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043718099999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c582bb58-58a1-4538-b5b7-b52cffd1565f",
+        "caseId": "second_cairn-c3",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.044249699999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0f88f273-93d1-41cd-b4ed-6ffd81715425",
+        "caseId": "unclaimed_lane-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0431658
+      },
+      {
+        "type": "call_audit",
+        "requestId": "865a73a1-e2fd-48bf-8e51-16d72cb88ab7",
+        "caseId": "unclaimed_lane-c1",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0438051
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2f9322a6-4d78-45b2-840e-fcd0c6b30fb7",
+        "caseId": "unclaimed_lane-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0436119
+      },
+      {
+        "type": "call_audit",
+        "requestId": "d3759a94-47b1-4c68-81d0-fb2e9483fced",
+        "caseId": "unclaimed_lane-c2",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0443364
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0d91f77c-8a04-4666-9a8b-1d5b14610696",
+        "caseId": "unclaimed_lane-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0436695
+      },
+      {
+        "type": "call_audit",
+        "requestId": "711495e0-2b96-42ba-97e3-7bbe2e232050",
+        "caseId": "unclaimed_pedestal-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0431589
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2fc99e6b-1e25-443d-a67b-d3b07974ae82",
+        "caseId": "unclaimed_pedestal-c1",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439887
+      },
+      {
+        "type": "call_audit",
+        "requestId": "fca6594b-1b50-40a3-b51f-272f07d322ba",
+        "caseId": "unclaimed_pedestal-c1",
+        "reservationId": "reservation-3",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439254
+      },
+      {
+        "type": "call_audit",
+        "requestId": "41832107-183c-44d6-8fdd-9b219870e8c2",
+        "caseId": "unclaimed_pedestal-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043594799999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a3317ac3-53e8-464a-a274-b0a1ccac5a0c",
+        "caseId": "unclaimed_pedestal-c2",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0440106
+      },
+      {
+        "type": "call_audit",
+        "requestId": "6ca171bc-8007-42f6-9f90-028bd3db1715",
+        "caseId": "unclaimed_pedestal-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0437241
+      },
+      {
+        "type": "call_audit",
+        "requestId": "4d3113b0-b1f7-4bfc-90f3-546f52eb7252",
+        "caseId": "unclaimed_pedestal-c3",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0442908
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

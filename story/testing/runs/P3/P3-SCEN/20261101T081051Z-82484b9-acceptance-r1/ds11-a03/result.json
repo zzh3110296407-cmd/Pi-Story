@@ -1,0 +1,107 @@
+{
+  "id": "ds11-a03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "targetWords": 750,
+            "purpose": "Nadi runs the scheduled demonstration of the checked delivery with no audience present in the kite hall, while Sol keeps a written record of each step.",
+            "turn": "The demonstration is completed as a documented, unobserved procedure; the written record becomes the account of what happened, and the chapter stops when Nadi signs it."
+          }
+        ],
+        "reason": "作者要求把未写的第5章改为无观众的演示并保留书面记录，章号与总章数不变，已写章节不动。"
+      },
+      "id": "call_00_jAdtRZkK7oQyhUnBB7Jv9151"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 5,
+          "title": "Demonstration",
+          "targetWords": 750,
+          "purpose": "Nadi runs the scheduled demonstration of the checked delivery with no audience present in the kite hall, while Sol keeps a written record of each step.",
+          "turn": "The demonstration is completed as a documented, unobserved procedure; the written record becomes the account of what happened, and the chapter stops when Nadi signs it."
+        }
+      ],
+      "reason": "作者要求把未写的第5章改为无观众的演示并保留书面记录，章号与总章数不变，已写章节不动。"
+    },
+    "id": "call_00_jAdtRZkK7oQyhUnBB7Jv9151"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Run the demonstration without an audience and keep a written record.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "10e062e61f55af9a56760b56f3d3997bba78719fd55cfff1887529e553919ccc",
+    "sessionSha256": "d0606cdfb150d2e2dffe8ed4bfed43727d27c6fbb3772bb19671907f85d66a2a",
+    "fee": {
+      "knownUsd": 0.0025299,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025299
+    },
+    "measuredMainRequests": 2
+  }
+}

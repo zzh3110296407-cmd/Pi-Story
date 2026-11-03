@@ -1,0 +1,15 @@
+# P3 J3 BOOK42 protocol v1 —2026-11-01
+
+Identity: Codex (AI), GPT-6 session-disclosed family; no finer immutable snapshot exposed. Reuse D0 qualification story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json (SHA256 9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0) and its archived prompt. Judging chat separate from execution/tuning; original dataset authorship disclosed. No independent second-model or personal human-review claim. No paid judge call or main/internal-role rerun.
+
+Authority:16 §3.4,28 J3,29 §2/§4 and docs/p3/judgment-contract.md. Reuse the previously accepted BOOK method. Only the sealed42 archive and frozen DS08 v2 prompt are newly judged. Include all15 native showrunner tools and match each result; do not confuse16 main requests with the tool-call count. Preserve active parentId branch, source IDs, one-based native lines and compressed archive SHA256s.
+
+T04/relevance pass=true means related to the task at that emission point. Judge opening, chapter briefs and reads against the actual prompt, plan and latest committed chapter. A control read verifies author requirements; a plan read verifies planned sequence. Reading each newly committed chapter once can support continuity and delivery checks even when the macro receipt already contains prose. Do not call such a read unrelated merely because information overlaps. A final chapter read after the goal is met is not writing a sixth chapter. Do not replace the frozen invalid/repeated/unrelated criteria with an unrequested optimal-call-count rule. Preserve program-invalid/repeated flags separately, union by toolCallId and do not double count.
+
+T03/recovery requires an observed native main-tool isError result and the next main decision.42 has no main-tool errors, so create0 recovery Boolean/NA rows, not a success rate with invented opportunities. Successful goal completion or chapter reads are not error recovery samples.
+
+Call-time progress is production foldBranch(translateBranch(nativeEntriesBeforeCall)), never copied from final result.target. Three opening calls have targetChapter=null before the persisted goal at JSONL line12; following calls have5. Verify lastCommittedChapter at every call. A content-quality or precise ledger/gold issue is outside T04 relatedness; do not claim the full post meets its length/literary requirements from tool relevance alone.
+
+Scope is42 only,15 new T04 judgments,0 T03 errors,0 missing results/NA. Existing38 approved837/527/1587 rows remain untouched. If this batch is approved, cumulative T04 is2 invalid of50 calls (4%), below minimum100. BOOK T03 stays3/3 and SCEN+observed BOOK25/27;1769 remains outstanding and837's interrupted result gap remains. No whole BOOK/P3 threshold-pass claim.
+
+All new rows remain ai_preliminary pending actual overall author acceptance under29 §4. Keep preliminary normalized snapshots under support, excluded from root scoring; afterwards add new formal files and approval evidence. No original judgment, dataset, raw, result, fee or metric is overwritten. Any author-approved projection is explicitly hypothetical.

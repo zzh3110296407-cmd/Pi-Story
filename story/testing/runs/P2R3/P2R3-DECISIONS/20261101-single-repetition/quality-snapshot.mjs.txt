@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import path from 'node:path';
+import {readEvidence,sha256,publicEvidence} from '../../../scripts/eval/p2/artifacts.ts';
+import {scoreEvidenceV3} from '../../../scripts/eval/p2/score-v3.ts';
+import {singleMetrics} from './p2r3-single-score.mjs';
+const root=path.resolve('story/testing/runs/P2R3'),freeze='102c3edb352914934da701a4f6fb717fc610f46a';
+const policy='P2R3-DECISIONS/20261101-single-repetition/decision.json',decision=JSON.parse(readFileSync(path.join(root,policy),'utf8'));
+const approvalFile=path.join(root,'P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approval.json'),approval=JSON.parse(readFileSync(approvalFile,'utf8'));
+if(approval.status!=='author_accepted'||approval.J2Open.status!=='author_accepted')throw new Error('OPEN author acceptance absent');
+const viewPath=path.resolve(approval.approvedOpenView.path),viewBytes=readFileSync(viewPath);if(sha256(viewBytes)!==approval.approvedOpenView.sha256)throw new Error('Approved OPEN view changed');
+for(const ref of approval.J2Open.sources)if(sha256(readFileSync(path.resolve(ref.path)))!==ref.sha256)throw new Error('Original OPEN judgment changed');
+const approved=JSON.parse(viewBytes).scores;
+const selected=[['P2-OPEN',decision.selected.OPEN],['P2-CHAP',decision.selected.CHAP],['P2-KEEP','P2-KEEP/20261101T015406Z-102c3ed-r1']];
+const sourceBindings=[];
+const runs=selected.map(([suiteId,relative])=>{
+ const folder=path.join(root,relative),manifestFile=path.join(folder,'run-manifest.json'),metricsFile=path.join(folder,'metrics.json'),manifest=JSON.parse(readFileSync(manifestFile,'utf8'));
+ if(manifest.suiteId!==suiteId||manifest.repositoryCommit!==freeze||manifest.dirty!==false||manifest.repetition!==1||manifest.split!=='acceptance'||manifest.selectedCaseId)throw new Error('Invalid first formal repetition');
+ const judgments=approved.filter(x=>x.runId===manifest.runId);if(judgments.some(x=>x.status!=='author_approved'))throw new Error('Unapproved source selected');
+ sourceBindings.push({folder:relative,runId:manifest.runId,manifestSha256:sha256(readFileSync(manifestFile)),originalMetricsSha256:sha256(readFileSync(metricsFile)),rawEvidenceSha256:JSON.parse(readFileSync(path.join(folder,'raw/checksums.json'),'utf8')).evidenceSha256,approvedJudgments:judgments.length});
+ return {suiteId,runId:manifest.runId,repetition:1,executionComplete:manifest.status==='measured_pending_gates'&&!manifest.caseFailures?.length,metrics:scoreEvidenceV3(readEvidence(folder,true),judgments).metrics};
+});
+const aggregate=singleMetrics(runs,decision),programPath=path.join(root,'P2R3-ACCEPTANCE/20261101T020615Z-single-program/program-summary.json'),program=JSON.parse(readFileSync(programPath,'utf8'));
+if(program.repositoryCommit!==freeze||program.rescore.checks!==13||!program.rescore.equal)throw new Error('Original program evidence missing');
+const result={...aggregate,repositoryCommit:freeze,metrics:[...aggregate.metrics,...program.allRealMetrics],pendingManual:aggregate.metrics.filter(x=>x.manual&&x.passed===null).map(x=>x.id),knownUnmet:aggregate.metrics.filter(x=>x.passed===false).map(x=>x.id),fees:program.costs,selectionSources:sourceBindings,policy:{path:policy,sha256:sha256(readFileSync(path.join(root,policy))),standardSha256:sha256(readFileSync(path.join(root,'P2R3-DECISIONS/20261101-single-repetition/26-after.md')))},judgments:{approvalPath:path.relative(process.cwd(),approvalFile).replaceAll('\\','/'),approvalSha256:sha256(readFileSync(approvalFile)),viewPath:path.relative(process.cwd(),viewPath).replaceAll('\\','/'),viewSha256:sha256(viewBytes),formalSelected:349,supplementaryExcluded:353,remaining:'CHAP/KEEP independent J2 and actual author acceptance pending; no executor judgments supplied'},hardAudit:{path:path.relative(root,programPath).replaceAll('\\','/'),sha256:sha256(readFileSync(programPath)),physicalRuns:7,internalDispatches:113},inherited:{source:'story/testing/runs/P2R/P2-ACCEPTANCE/20261031-d4-final',E02:{successes:36,n:36},E03:{successes:45,n:50},E04:{successes:42,n:50},E05:{successes:45,n:50},P2D:'Author terminal approval 2026-10-30; reused without new demonstration'},status:'not_passed_pending_remaining_judgments',modelRequests:0};
+assert.equal(result.metrics.find(x=>x.id==='T01').n,90);assert.equal(result.metrics.find(x=>x.id==='T01').counts.successes,83);
+assert.equal(result.metrics.find(x=>x.id==='K01').counts.final.successes,30);assert.equal(result.metrics.find(x=>x.id==='K02').counts.final.successes,29);
+assert.deepEqual(result.knownUnmet.sort(),['E01','W01']);
+const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z'),folder=path.join(root,'P2R3-ACCEPTANCE',`${stamp}-single-quality`);if(existsSync(folder))throw new Error('Derived snapshot exists');mkdirSync(folder,{recursive:true});
+function write(name,data){const text=JSON.stringify(data,null,2)+'\n';publicEvidence(text);writeFileSync(path.join(folder,name),text,{flag:'wx'});}
+write('scoring-inputs.json',{runs,decision});write('summary.json',result);
+const stored=JSON.parse(readFileSync(path.join(folder,'scoring-inputs.json'),'utf8'));assert.deepEqual(singleMetrics(stored.runs,stored.decision),aggregate);
+write('reproduction.json',{schema:'story/p2r3-single-reproduction@1',equal:true,source:'Original 13 raw metrics reproduced separately; saved first-repetition scoring inputs reproduce the single policy counts, minima and decisions',scoringVersion:'p2r3-26-single@1',scorerSha256:sha256(readFileSync('story/testing/exec/temp/p2r3-single-score.mjs')),summarySha256:sha256(readFileSync(path.join(folder,'summary.json'))),modelRequests:0});
+console.log(JSON.stringify({folder,status:result.status,pendingManual:result.pendingManual,knownUnmet:result.knownUnmet,metrics:result.metrics.filter(x=>!x.manual).map(({id,n,value,passed})=>({id,n,value,passed})),fees:result.fees,reproduced:true}));

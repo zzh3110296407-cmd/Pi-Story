@@ -1,0 +1,23 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {readEvidence,sha256} from '../../../scripts/eval/p2/artifacts.ts';
+import {readJudgments,rescoreRun,aggregateScores} from '../../../scripts/eval/p2/rescore.ts';
+import {scoreEvidenceV3} from '../../../scripts/eval/p2/score-v3.ts';
+const approvalPath='story/testing/runs/P2R3/P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approval.json';
+const approval=JSON.parse(readFileSync(approvalPath,'utf8'));
+if(approval.status!=='author_accepted'||approval.J2Open.status!=='author_accepted'||approval.J1Erratum.status!=='author_accepted'||!approval.authorStatement)throw new Error('Author acceptance absent');
+const original=[];const files=[];
+for(const ref of approval.J2Open.sources){
+ const bytes=readFileSync(ref.path);if(sha256(bytes)!==ref.sha256)throw new Error('Accepted judgment digest changed');
+ const doc=JSON.parse(bytes);if(doc.scores.length!==ref.scores)throw new Error('Accepted judgment count differs');original.push(...doc.scores);files.push({path:ref.path,sha256:ref.sha256,rows:doc.scores.length});
+}
+for(const ref of [approval.approvedOpenView,approval.J1Erratum.sourceErratum,approval.J1Erratum.inheritedAuthorAcceptance])if(sha256(readFileSync(ref.path))!==ref.sha256)throw new Error('Acceptance binding differs');
+const view=JSON.parse(readFileSync(approval.approvedOpenView.path,'utf8'));
+const key=x=>[x.runId,x.metric,x.component,x.sampleId].join('|'),byKey=new Map(original.map(x=>[key(x),x]));
+if(original.length!==702||byKey.size!==702||view.scores.length!==702||new Set(view.scores.map(key)).size!==702)throw new Error('Missing or duplicated approved score');
+for(const row of view.scores){const source=byKey.get(key(row));if(!source||row.pass!==source.pass||row.status!=='author_approved'||row.applicability!==source.applicability)throw new Error('Approved view changed verdict or applicability');}
+const runs=approval.J2Open.runIds.map((id,index)=>{const folder=`story/testing/runs/P2R3/P2-OPEN/${id}`;const judgments=readJudgments(folder);if(judgments.length!==original.filter(x=>x.runId===id).length)throw new Error('Native reader count mismatch');const reproduced=rescoreRun(folder);if(!reproduced.equal)throw new Error('Original OPEN metrics changed');return {runId:id,repetition:index+1,metrics:scoreEvidenceV3(readEvidence(folder,true),view.scores.filter(x=>x.runId===id)).metrics};});
+const metrics=aggregateScores(runs,'p2r3-26@1').metrics.filter(x=>['T06','T07'].includes(x.id));
+if(metrics.some(x=>x.passed!==true))throw new Error('Accepted OPEN metrics failed frozen thresholds');
+const corrections=approval.J1Erratum.acceptedCorrections;if(corrections.length!==2||corrections.some(x=>x.originalVerdict!==false||x.acceptedVerdict!==true))throw new Error('Unexpected J1 correction');
+const result={schema:'story/p2r3-judgment-receipt@1',approval:{path:approvalPath,sha256:sha256(readFileSync(approvalPath)),authorStatement:approval.authorStatement},sourceRows:702,verdictChanges:0,files,originalOpenMetricsReproduced:true,metrics,J1Resolved:approval.J1Erratum.resolvedJ1Summary,judgmentOwnership:'Qualified judge chat; originals preserved and not committed by executor',externalModelCalls:0};
+const folder='story/testing/runs/P2R3/P2R3-J2-receipts/20261101-open';mkdirSync(folder,{recursive:true});writeFileSync(folder+'/validation.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({rows:702,originalMetricsReproduced:true,metrics:metrics.map(({id,n,value,passed})=>({id,n,value,passed})),J1Resolved:result.J1Resolved}));

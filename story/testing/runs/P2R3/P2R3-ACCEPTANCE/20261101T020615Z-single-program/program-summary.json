@@ -1,0 +1,137 @@
+{
+  "schema": "story/p2r3-single-program-audit@1",
+  "repositoryCommit": "102c3edb352914934da701a4f6fb717fc610f46a",
+  "acceptancePolicy": {
+    "id": "p2r3-26-single@1",
+    "decisionPath": "story/testing/runs/P2R3/P2R3-DECISIONS/20261101-single-repetition/decision.json",
+    "sha256": "ec80aebd4d9d35870756525b401564a24bda0cb0525887dc4c4e47090090c6ff",
+    "standardsBefore": "3d7264de1b343e9496b1fba2765a46e68f16628e52d9e8b64e607e7afac285a3",
+    "standardsAfter": "5e9ce411448dedebdbd535ae9e0ba592a39fb57f5099b3d8c6aff5f71db72224"
+  },
+  "selectedQuality": [
+    "P2-OPEN/20261031T153047Z-102c3ed-r1",
+    "P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete",
+    "P2-KEEP/20261101T015406Z-102c3ed-r1"
+  ],
+  "deterministic": [
+    "P2-REG/20261031T152846Z-102c3ed",
+    "P2-UNIT/20261031T152846Z-102c3ed",
+    "P2-GUARD/20261031T152846Z-102c3ed",
+    "P2-FOLD/20261031T152846Z-102c3ed",
+    "P2-CTX/20261031T152905Z-102c3ed-acceptance"
+  ],
+  "additionalAuditedPhysicalRuns": [
+    "P2-OPEN/20261031T154034Z-102c3ed-r2",
+    "P2-CHAP/20261031T154922Z-102c3ed-r1",
+    "P2-CHAP/20261101T012410Z-102c3ed-r1-cont1",
+    "P2-CHAP/20261101T013305Z-102c3ed-r1-cont2",
+    "P2-CHAP/20261101T014757Z-102c3ed-r2"
+  ],
+  "rescore": {
+    "folder": "P2-RESCORE/20261101T020615Z-102c3ed-single",
+    "checks": 13,
+    "equal": true
+  },
+  "allRealPolicy": "The unchanged p2r-24 hard-audit implementation is retained by 26; every physical V3 run including supplementary and cancelled runs is audited once. Composition is excluded from physical request accounting.",
+  "allRealMetrics": [
+    {
+      "id": "H12",
+      "n": 113,
+      "value": 1,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 1,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "H09",
+      "n": 109,
+      "value": 0,
+      "counts": {
+        "n": 109,
+        "successes": 109
+      },
+      "confidence95": [
+        0.9659570262486751,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 4,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C02",
+      "n": 113,
+      "value": 0,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C04",
+      "n": 113,
+      "value": 1,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 1,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C05",
+      "n": 113,
+      "value": 0,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 4,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    }
+  ],
+  "costs": {
+    "knownUsd": 2.609983439999997,
+    "reservedUsd": 1.5954414000000001,
+    "unknownCalls": 7,
+    "requests": 468,
+    "totalUsd": 4.205424839999997
+  },
+  "manualStatus": "Use separately approved views for selected first repetitions only; no manual judgments invented here",
+  "modelRequests": 0
+}

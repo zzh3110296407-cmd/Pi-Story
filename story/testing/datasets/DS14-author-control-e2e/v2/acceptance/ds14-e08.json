@@ -1,0 +1,200 @@
+{
+  "schema": "story/p3-scenario@1",
+  "id": "ds14-e08",
+  "split": "acceptance",
+  "category": "E08",
+  "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Aster is a practical conservator. Jo is an assistant who is allowed to disagree. Kei keeps the public records. The story takes place at the canopy station. The seed capsule must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Aster. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+  "setup": [
+    {
+      "step": "open",
+      "constraints": {
+        "op": "submit",
+        "items": [
+          {
+            "kind": "global",
+            "text": "No character may be physically injured.",
+            "quotes": [
+              "No character may be physically injured."
+            ]
+          },
+          {
+            "kind": "story",
+            "text": "The seed capsule must remain intact.",
+            "quotes": [
+              "The seed capsule must remain intact."
+            ]
+          },
+          {
+            "kind": "global",
+            "text": "Keep practical actions precise.",
+            "quotes": [
+              "Keep practical actions precise."
+            ]
+          }
+        ]
+      },
+      "bible": {
+        "items": [
+          {
+            "kind": "character",
+            "key": "char:aster",
+            "name": "Aster",
+            "source": "user",
+            "authorQuote": "Aster is a practical conservator.",
+            "value": {
+              "identity": "Aster is a practical conservator."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:jo",
+            "name": "Jo",
+            "source": "user",
+            "authorQuote": "Jo is an assistant who is allowed to disagree.",
+            "value": {
+              "identity": "Jo is an assistant who is allowed to disagree."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:kei",
+            "name": "Kei",
+            "source": "user",
+            "authorQuote": "Kei keeps the public records.",
+            "value": {
+              "identity": "Kei keeps the public records."
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:canopy_station",
+            "name": "canopy station",
+            "source": "user",
+            "authorQuote": "The story takes place at the canopy station.",
+            "value": {
+              "description": "The story takes place at the canopy station."
+            }
+          },
+          {
+            "kind": "rule",
+            "key": "rule:care",
+            "name": "Careful handling",
+            "source": "user",
+            "authorQuote": "The seed capsule must remain intact.",
+            "value": {
+              "description": "The seed capsule must remain intact.",
+              "invariants": [
+                "The seed capsule must remain intact."
+              ]
+            }
+          }
+        ]
+      },
+      "outline": {
+        "narration": {
+          "viewpoint": "Third-person limited through Aster",
+          "tone": "Quiet, practical and humane",
+          "format": "English prose"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "Arrival",
+            "targetWords": 750,
+            "purpose": "Aster receives the sealed seed capsule and checks its outer label.",
+            "turn": "Aster notices a red seam but leaves it unopened.",
+            "hookSeeds": [
+              "Who removed the second page of the canopy register?"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Comparison",
+            "targetWords": 750,
+            "purpose": "Aster and Jo compare the label with the canopy register.",
+            "turn": "They establish that the second page is absent and defer opening the seed capsule.",
+            "hookSeeds": []
+          },
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Aster reads the handling note and obtains the duplicate page from Kei.",
+            "turn": "They finish the small demonstration and store the intact seed capsule; the delivery dispute ends.",
+            "hookSeeds": []
+          }
+        ]
+      }
+    },
+    {
+      "step": "commitChapters",
+      "count": 1,
+      "texts": [
+        "Aster received the sealed seed capsule and checked its outer label. The canopy station was open, though there were no visitors at the table. Aster cleared a space before setting anything down. Jo moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Aster turned the sheet towards the window rather than writing over it. Jo read the number aloud. They compared their readings, found that they agreed, and entered it only once. The seed capsule remained intact on the cleared table throughout the check.\n\nAster made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Jo asked whether the uncertainty meant they should abandon the demonstration. Aster said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nAster noticed a red seam but left it unopened. They put the tools back in the tray. Aster recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions."
+      ],
+      "keeperHooks": [
+        []
+      ]
+    },
+    {
+      "step": "command",
+      "text": "/goal 3"
+    }
+  ],
+  "trigger": {
+    "type": "authorMessage",
+    "text": "/ledger add story Do not ring any bells."
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "tool": "write_next_chapter"
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      }
+    ],
+    "programChecks": [
+      "All pre-measurement committed chapter bytes remain unchanged.",
+      "Every setup model call is faux and excluded from measured paid-call counts.",
+      "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+      "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+      "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+      "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry."
+    ],
+    "judgeChecks": [
+      "The next committed prose does not ring bells or turn the optional glove into a compulsory action."
+    ]
+  },
+  "mode": "real",
+  "execution": {
+    "internalRoles": "real",
+    "maxShowrunnerRequests": 14,
+    "maxChapterAttempts": 3,
+    "stopAfterFirstAction": false,
+    "onBoundExceeded": "record_failure_and_stop",
+    "targetChapterMaximum": 3,
+    "afterTrigger": [
+      {
+        "type": "authorMessage",
+        "text": "/ledger set L-1 Aster may choose to wear a protective glove; wearing it is optional."
+      },
+      {
+        "type": "authorMessage",
+        "text": "/ledger remove L-3"
+      },
+      {
+        "type": "continue",
+        "text": "Write the next chapter using the updated ledger."
+      }
+    ]
+  }
+}

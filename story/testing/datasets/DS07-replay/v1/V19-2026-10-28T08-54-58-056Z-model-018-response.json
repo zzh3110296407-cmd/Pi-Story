@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need to extract minimal DeltaProposal from chapter. Need facts only 1-4 upserts. Facts must be stated in chapter, with sentence IDs. Need mode narrated or recalled_past. Certainty confirmed/uncertain. No future plans. Summary title, characters, events, mood. Issues array.\n\nNeed identify key facts. Chapter: He crossed rise, saw dark mound. Went down. Snow drifted, matted coat held animal's shape. Woolly mammoth. Trunk curled, tusk sheared. Body whole no cuts etc. Nothing fed. Lain down/caught cold kept. He stood. Wind. He had aimed for late Pleistocene caves fires people studying. This was older. Tens thousands years older. Jump missed or he had, error not walk back. Given everything to arrive, dead thing no one meet. Crouched. Hands clumsy, worked shard rib free tore hide strip. Wrapped hide wrist put bone coat. Looked ravine beyond rise started walking.\n\nNeed facts: subject maybe \"he\" / \"the man\"? No name. Could use \"he\". Predicate object strings. Need facts maybe:\n1. He finds a woolly mammoth carcass. Sentences 1,4. Mode narrated confirmed.\n2. The mammoth body is intact with no cuts/spear marks and nothing fed on it. Sentences 6,7. Confirmed.\n3. He had aimed for the late Pleistocene but arrived in a much older time. Sentences 11-13. mode recalled_past? It says had aimed = past perfect; this was older narrated. Could be recalled_past for aim? Fact \"He had intended to travel to the late Pleistocene.\" sentences 11. certainty confirmed. But object etc.\n4. He takes a rib shard and hide strip from mammoth. sentences 17-18. narrated confirmed.\n\nNeed maybe 4 facts max. Each ref temporary e.g. f1. Need ensure exact sentence IDs. No claims etc. Summary. Issues maybe mention no named character, ambiguous \"he\". Need include issues array.\n\nNeed schema exactly. Facts array min 1. Use only fields. uncertainReason empty string for confirmed. For mode recalled_past only if recalled past. The aim is recalled past? Sentence 11 \"He had aimed for the late Pleistocene—the caves, the fires, the people he had spent his life studying.\" That's a past recollection relative to narrative? It's backstory. Use recalled_past. Others narrated.\n\nNeed be careful \"This was older. Tens of thousands of years older.\" Could combine with aim fact? Fact: He had aimed for late Pleistocene, but the mammoth/time was tens of thousands of years older. But object string can be long. Mode recalled_past? Mixed. Maybe separate fact. Minimal 1-4. I'd include 4 facts:\n- f1: He discovered a woolly mammoth carcass. sentences [1,4] mode narrated confirmed.\n- f2: The mammoth carcass was intact, with no cuts, spear marks, or signs of feeding. sentences [6,7] narrated confirmed.\n- f3: He had aimed for the late Pleistocene, but the setting was tens of thousands of years older. sentences [11,12,13] recalled_past confirmed? Hmm \"had aimed\" recalled; \"was older\" narrated. Could still use recalled_past? Maybe not. Fact about his aim only: \"He had aimed for the late Pleistocene.\" sentences [11] recalled_past confirmed. But need include older? Maybe another fact f4? Then no room for taking? Could be 4 facts include older as object in f3: \"He had aimed for the late Pleistocene, but arrived in a time tens of thousands of years older.\" sentences [11,12,13,14]. Mode recalled_past? It includes jump missed. Certainty confirmed? The narration confirms. Good.\n- f4: He took a rib shard and a strip of hide from the mammoth and kept them. sentences [17,18] narrated confirmed.\n\nNeed summary events include discovery, examination, realization time error, taking materials, walking toward ravine. Characters: unnamed man, woolly mammoth (carcass). Mood: bleak, isolated, cold, disillusioned. Title maybe \"The Wrong Age\" or \"A Dead Thing in the Snow\". Issues: \"Protagonist is unnamed; referent 'he' used.\" \"Exact temporal period not specified beyond older than late Pleistocene.\" \"No named location.\" Good.\n\nNeed JSON object only. Ensure claims etc empty arrays maxItems 0. Facts sentences integers. Use \"ref\": \"fact-1\". Need no extra fields.\n\nNeed maybe issue if object strings contain em dash? fine.\n\nNeed exact sentence numbers. For f1 [1,4]. f2 [6,7]. f3 [11,12,13,14] includes \"jump missed\". Object: \"He had aimed for the late Pleistocene, but the jump missed and landed him tens of thousands of years earlier.\" Sentence 14 says jump missed or he had; uncertain? Actually \"The jump had missed, or he had\" indicates uncertainty about whether jump or he missed. If fact includes \"jump missed\" certainty uncertain? Hmm better fact: \"He had aimed for the late Pleistocene.\" confirmed recalled. Another fact: \"The time he reached was tens of thousands of years older than the late Pleistocene.\" narrated confirmed. That's two facts. Then total 5 if include taking and mammoth and intact. Need 4 max. Could drop intact? But P0 subset tests 1-4 fact upserts. We can have 4. Need minimal. Choose most central:\n1. He found a woolly mammoth carcass. [1,4]\n2. The mammoth carcass was whole and untouched by hunters or scavengers. [6,7]\n3. He had aimed for the late Pleistocene, but the time was tens of thousands of years older. [11,12,13] Mode recalled_past confirmed? It mixes. Maybe okay. Certainty confirmed because narration states. uncertainReason empty.\n4. He removed a rib shard and hide strip from the mammoth. [17,18] narrated confirmed.\n\nThis covers. Need \"object\" for f3 string: \"late Pleistocene target, but the actual time was tens of thousands of years older\" subject \"he\" predicate \"had aimed for\". Hmm grammar: subject \"he\", predicate \"had aimed for the late Pleistocene but arrived in a time tens of thousands of years older\". Object string? The schema object string. Could make subject \"his time jump\", predicate \"had aimed for late Pleistocene but landed tens of thousands of years earlier\". But subject should entity. Maybe subject \"he\", predicate \"aimed for\", object \"the late Pleistocene, but the time he reached was tens of thousands of years older\". That's okay.\n\nFor f4 object \"a rib shard and a strip of mammoth hide, which he wrapped around his wrist and put in his coat\". Predicate \"took\". Good.\n\nNeed issues mention \"Fact f3 combines aim and temporal discrepancy; sentence 14 expresses uncertainty about whether jump or he missed, so this fact excludes that uncertainty.\" But if issue? Good.\n\nNeed no future plans. Sentence 19 \"started walking\" is narrated not future. Could include in summary but not fact.\n\nNeed final only JSON. Ensure valid JSON no markdown. Use quotes. \nNeed summary title. \"A Dead Thing in the Snow\" characters [\"unnamed man\",\"woolly mammoth carcass\"]. events array strings. mood \"bleak and isolated\". Issues [\"The protagonist is unnamed and referred to only as 'he'.\", \"The exact period and location are not specified beyond being older than the late Pleistocene.\", \"Sentence 14 leaves uncertainty about whether the jump or the traveler missed, which is not represented in the extracted facts.\"]\n\nNeed facts certainty confirmed all. uncertainReason \"\". Good. \nCheck schema requires facts items additionalProperties false; only listed fields. Good. claims maxItems 0 and items properties {} additionalProperties false. Empty arrays valid. Summary additionalProperties false. Issues array strings. \nNeed type json_object. Final JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"type\":\"json_object\",\"facts\":[{\"ref\":\"fact-1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"discovered\",\"object\":\"a woolly mammoth carcass in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,4]},{\"ref\":\"fact-2\",\"op\":\"upsert\",\"subject\":\"the mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole, with no cuts, spear marks, or signs of feeding\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"fact-3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene, but the time he reached was tens of thousands of years older\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11,12,13]},{\"ref\":\"fact-4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"took\",\"object\":\"a rib shard and a strip of mammoth hide, wrapping the hide around his wrist and putting the bone in his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"A Dead Thing in the Snow\",\"characters\":[\"unnamed man\",\"woolly mammoth carcass\"],\"events\":[\"The man crosses a rise and sees a dark, regular mound in the snow.\",\"He descends and identifies the body as a woolly mammoth.\",\"He observes that the carcass is whole and untouched by hunters or scavengers.\",\"He realizes he aimed for the late Pleistocene but arrived tens of thousands of years earlier.\",\"He removes a rib shard and a strip of hide from the carcass.\",\"He wraps the hide around his wrist, pockets the bone, and walks toward the ravine beyond the rise.\"],\"mood\":\"bleak, cold, and isolated\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\",\"The exact period and location are not specified beyond being older than the late Pleistocene.\",\"Sentence 14 expresses uncertainty about whether the jump or the traveler missed; this uncertainty is not represented in the extracted facts.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 2202,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1704,
+      "totalTokens": 3170,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0026424,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0027070080000000003
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177845177,
+    "responseId": "72c8ab53-e437-4f2e-ad8b-500241a9f668",
+    "rawStopReason": "stop",
+    "durationMs": 14066
+  },
+  "record": {
+    "time": "2026-10-28T08:57:39.243Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-018",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 2202,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1704,
+      "totalTokens": 3170,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0026424,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0027070080000000003
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0027070080000000003,
+    "inputTokens": 200,
+    "outputTokens": 2202,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 14067
+  }
+}

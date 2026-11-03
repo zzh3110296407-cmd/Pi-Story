@@ -1,0 +1,15 @@
+import {readFileSync, readdirSync} from 'node:fs';
+import path from 'node:path';
+import {gunzipSync} from 'node:zlib';
+import {readEvidence,sha256} from '../../../scripts/eval/p2/artifacts.ts';
+import {BranchSource} from '../../../packages/pi-story/src/entries.ts';
+const base='story/testing/runs/P2R3/P2-CHAP/20261031T154922Z-102c3ed-r1';
+const rows=readEvidence(base,true);
+const ref=rows.find(x=>x.type==='session_file'&&x.caseId==='527');
+const text=gunzipSync(readFileSync(path.join(base,'raw',ref.rawFile))).toString('utf8');
+const all=text.trim().split('\n').map(x=>JSON.parse(x));
+const entries=all.filter(x=>x.id&&x.type!=='session'), byId=new Map(entries.map(x=>[x.id,x]));
+const branch=[];let leaf=entries.at(-1);while(leaf){branch.unshift(leaf);leaf=byId.get(leaf.parentId);}
+const source=new BranchSource(()=>branch),model=source.model();
+const tools=branch.filter(x=>x.type==='message'&&x.message.role==='toolResult');
+console.log(JSON.stringify({sessionHash:sha256(text),entryCount:all.length,lastChapter:model.lastChapter,commits:model.commits.map(x=>({chapter:x.chapter,hash:sha256(x.text)})),drafts:model.drafts.map(x=>({chapter:x.chapter,draftId:x.draftId,hash:sha256(x.text)})),lastEntries:branch.slice(-6).map(x=>({type:x.type,id:x.id,role:x.message?.role,tool:x.message?.toolName,stopReason:x.message?.stopReason,ok:x.message?.details?.ok,steps:x.message?.details?.steps})),lastMacros:tools.filter(x=>x.message.toolName==='write_next_chapter').slice(-2).map(x=>({id:x.id,ok:x.message.details?.ok,error:x.message.details?.error,drafts:x.message.details?.drafts?.map(d=>({chapter:d.chapter,hash:sha256(d.text)}))})),lastCheckpoints:rows.filter(x=>x.type==='role_checkpoint'&&x.caseId==='527').slice(-8).map(x=>({phase:x.phase,role:x.request?.role??x.record?.role,status:x.record?.status,toolCallId:x.toolCallId,reservationId:x.reservationId}))},null,2));

@@ -1,0 +1,198 @@
+{
+  "schema": "story/p3-scenario@1",
+  "id": "ds14-e11-dev",
+  "split": "dev",
+  "category": "E11",
+  "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nell is a practical conservator. Oli is an assistant who is allowed to disagree. Bryn keeps the public records. The story takes place at the weaving shed. The reed basket must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nell. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+  "setup": [
+    {
+      "step": "open",
+      "constraints": {
+        "op": "submit",
+        "items": [
+          {
+            "kind": "global",
+            "text": "No character may be physically injured.",
+            "quotes": [
+              "No character may be physically injured."
+            ]
+          },
+          {
+            "kind": "story",
+            "text": "The reed basket must remain intact.",
+            "quotes": [
+              "The reed basket must remain intact."
+            ]
+          },
+          {
+            "kind": "global",
+            "text": "Keep practical actions precise.",
+            "quotes": [
+              "Keep practical actions precise."
+            ]
+          }
+        ]
+      },
+      "bible": {
+        "items": [
+          {
+            "kind": "character",
+            "key": "char:nell",
+            "name": "Nell",
+            "source": "user",
+            "authorQuote": "Nell is a practical conservator.",
+            "value": {
+              "identity": "Nell is a practical conservator."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:oli",
+            "name": "Oli",
+            "source": "user",
+            "authorQuote": "Oli is an assistant who is allowed to disagree.",
+            "value": {
+              "identity": "Oli is an assistant who is allowed to disagree."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:bryn",
+            "name": "Bryn",
+            "source": "user",
+            "authorQuote": "Bryn keeps the public records.",
+            "value": {
+              "identity": "Bryn keeps the public records."
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:weaving_shed",
+            "name": "weaving shed",
+            "source": "user",
+            "authorQuote": "The story takes place at the weaving shed.",
+            "value": {
+              "description": "The story takes place at the weaving shed."
+            }
+          },
+          {
+            "kind": "rule",
+            "key": "rule:care",
+            "name": "Careful handling",
+            "source": "user",
+            "authorQuote": "The reed basket must remain intact.",
+            "value": {
+              "description": "The reed basket must remain intact.",
+              "invariants": [
+                "The reed basket must remain intact."
+              ]
+            }
+          }
+        ]
+      },
+      "outline": {
+        "narration": {
+          "viewpoint": "Third-person limited through Nell",
+          "tone": "Quiet, practical and humane",
+          "format": "English prose"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "Arrival",
+            "targetWords": 750,
+            "purpose": "Nell receives the sealed reed basket and checks its outer label.",
+            "turn": "Nell notices a red seam but leaves it unopened.",
+            "hookSeeds": [
+              "Who removed the second page of the loom register?"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Comparison",
+            "targetWords": 750,
+            "purpose": "Nell and Oli compare the label with the loom register.",
+            "turn": "They establish that the second page is absent and defer opening the reed basket.",
+            "hookSeeds": []
+          },
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Nell reads the handling note and obtains the duplicate page from Bryn.",
+            "turn": "They finish the small demonstration and store the intact reed basket; the delivery dispute ends.",
+            "hookSeeds": []
+          }
+        ]
+      }
+    },
+    {
+      "step": "commitChapters",
+      "count": 1,
+      "texts": [
+        "Nell received the sealed reed basket and checked its outer label. The weaving shed was open, though there were no visitors at the table. Nell cleared a space before setting anything down. Oli moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Nell turned the sheet towards the window rather than writing over it. Oli read the number aloud. They compared their readings, found that they agreed, and entered it only once. The reed basket remained intact on the cleared table throughout the check.\n\nNell made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Oli asked whether the uncertainty meant they should abandon the demonstration. Nell said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nNell noticed a red seam but left it unopened. They put the tools back in the tray. Nell recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions."
+      ],
+      "keeperHooks": [
+        []
+      ]
+    },
+    {
+      "step": "command",
+      "text": "/goal 3"
+    }
+  ],
+  "trigger": {
+    "type": "followUp",
+    "text": "For chapter 3, the next parcel could be a return from the buyer or a new donation. I have not decided which it is; those versions require different entries in the receipt book.",
+    "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "tool": "ask_author"
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      }
+    ],
+    "programChecks": [
+      "All pre-measurement committed chapter bytes remain unchanged.",
+      "Every setup model call is faux and excluded from measured paid-call counts.",
+      "The queued author message activates after chapter2 commits and before any chapter3 writer request.",
+      "The showrunner calls ask_author before writing chapter3 or mutating story state to choose a parcel identity; automatic continuation pauses while the answer is pending.",
+      "The scripted answer is delivered through the real UI/RPC dialog only after the pause assertion, is persisted in native conversation history, and execution then resumes.",
+      "The first chapter3 writer input contains the author's answer that the parcel is a new donation, not a buyer return; chapter3 commits and stops at goal3."
+    ],
+    "judgeChecks": [
+      "The question distinguishes a buyer return from a new donation and does not choose or combine them. After the answer, committed chapter3 treats the arriving parcel as a new donation with the corresponding receipt entry, rather than a return or both."
+    ]
+  },
+  "mode": "real",
+  "execution": {
+    "internalRoles": "real",
+    "maxShowrunnerRequests": 14,
+    "maxChapterAttempts": 3,
+    "stopAfterFirstAction": false,
+    "onBoundExceeded": "record_failure_and_stop",
+    "targetChapterMaximum": 3,
+    "start": {
+      "type": "continue",
+      "text": "Continue to the current target using the existing outline."
+    },
+    "dialogResponses": [
+      {
+        "on": "ask_author",
+        "reply": "It is a new donation, not a return from the buyer. Enter it as a donation in the receipt book.",
+        "delayUntilAssertion": "automatic_continuation_paused"
+      }
+    ]
+  }
+}

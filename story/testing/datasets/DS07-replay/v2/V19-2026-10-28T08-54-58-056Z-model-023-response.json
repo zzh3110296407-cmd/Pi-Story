@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal. Facts 1-4 upserts. Chapter only. Need identify stated facts. Sentences exact IDs.\n\nStory: he follows ravine down, finds shallow overhang, makes shelter with rib shard and snow, hide-wrapped wrist useless, draws device, tries charger no response, realizes decades needed, puts away, dark, sound of weight moving over snow circling, stops, sniffs, mammoth fat on coat, thing outside knows and doesn't leave.\n\nNeed facts with subject predicate object strings. Modes narrated or recalled_past. Certainty confirmed/uncertain. Need only 1-4 facts. Minimal maybe 4. Need no claims cognitions relations hooks. Summary title characters events mood. Issues.\n\nNeed be careful exact sentence numbers. Facts can be:\n- he built shelter? Subject \"he\", predicate \"built\", object \"a shallow overhang shelter\"? Sentence 2-4. But fact object string. Maybe \"a low snow wall reinforced with a rib shard\" sentences [3,4].\n- device did not respond to charger sentences [7,8,9]? object \"no glow, hum, or answer\" subject \"device\", predicate \"gave\", mode narrated confirmed.\n- device requires decades to recharge? Sentence [10,11]. Subject \"device\", predicate \"would need\", object \"decades to gather itself again\", certainty confirmed? Narrator states arithmetic; confirmed. mode narrated? It's inference narrated. Could be uncertain? Text says \"It would need decades...\" confirmed.\n- creature/thing outside is attracted by mammoth fat on his coat and remains outside sentences [14-17]. Subject \"the thing outside\", predicate \"knew\", object \"the mammoth's fat was on his coat and did not leave\" maybe.\n\nNeed facts only 1-4. Use temporary refs f1 etc. uncertainReason empty when confirmed. If uncertain use reason. Could include no uncertain. The schema requires uncertainReason string. For confirmed empty.\n\nNeed ensure sentences arrays integer. For fact \"device gave no response\" sentences [8] or [7,8,9]. Object string \"no glow, no hum, no answer\". Predicate \"gave\". Subject \"the device\". mode narrated confirmed.\n\nFact shelter: subject \"he\", predicate \"sealed himself behind\", object \"a low white wall with a bone in it\" sentences [3,4]. That's stated. Mode narrated confirmed.\n\nFact creature: subject \"the thing outside\", predicate \"circled and did not leave\", object \"in the snow outside the shelter\" sentences [14,15,16,17]. Hmm predicate object. Maybe subject \"the thing outside\", predicate \"knew\", object \"the mammoth's fat was on his coat\" sentence [17]. And \"did not leave\" sentence [17]. But one fact can only one predicate. Could have \"the thing outside\" predicate \"did not leave\" object \"outside the shelter\" sentences [14-17]. But need include sniff/circling. Maybe fact: \"a weight moving over snow circled, stopped, and sniffed outside\" subject \"a weight\", predicate \"circled, stopped, and sniffed\", object \"over snow outside the shelter\" sentences [14,15,16]. Good.\n\nNeed summary characters: maybe \"he\" only; could mention mammoth? The mammoth not present. characters array [\"he\"] or [\"the man\"]. Events: \"He builds a shelter in a shallow overhang using a rib shard and snow.\", \"The device fails to respond when charged.\", \"He realizes it would need decades to recharge and puts it away.\", \"A creature circles and sniffs outside, drawn by mammoth fat on his coat.\" Mood: \"bleak, tense, isolated\". Title: \"The Ravine Shelter\" or \"Bone in the Snow\". Good.\n\nIssues: maybe \"Subject 'he' is unnamed; summaries use generic pronoun.\" \"Uncertainty not represented; all extracted facts are narrated/confirmed.\" Need include issues array.\n\nNeed strict JSON only. Ensure no additional properties. Facts array minItems 1 max? not specified max; user says 1 to 4. Use 4.\n\nNeed \"mode\" for shelter maybe narrated. Device failed narrated. Device would need decades narrated? It's his arithmetic, but stated by narrator. Could be narrated confirmed. Creature narrated confirmed. All confirmed. uncertainReason \"\".\n\nNeed subject/predicate/object strings. Let's craft.\n\nFact 1:\nref \"f1\", op \"upsert\", subject \"he\", predicate \"sealed himself behind\", object \"a low white wall with a bone in it\", mode \"narrated\", certainty \"confirmed\", uncertainReason \"\", sentences [3,4].\n\nFact 2:\nref \"f2\", subject \"the device\", predicate \"gave\", object \"no glow, no hum, and no answer when charged\", mode narrated, confirmed, sentences [7,8,9]? Sentence 7 says lay in palm like river stone small certain; 8 pressed charger waited cold glass gave nothing. 9 tried again. Include [8,9] maybe. Object includes when charged. Good.\n\nFact 3:\nsubject \"the device\", predicate \"would need\", object \"decades to gather itself again\", sentences [10,11]. But sentence 10 just \"Decades.\" Sentence 11 states. Include [10,11]. Confirmed. Maybe predicate \"would need\" object \"decades to gather itself again\". Good.\n\nFact 4:\nsubject \"the thing outside\", predicate \"circled, stopped, and sniffed\", object \"over the snow outside the shelter\", sentences [14,15,16,17]. But sentence 17 says didn't leave and mammoth fat on coat. Could object \"over the snow and did not leave because of the mammoth fat on his coat\" too long. Predicate \"circled, stopped, sniffed, and did not leave\" object \"outside the shelter, drawn by the mammoth fat on his coat\". That's one fact with multiple predicates? Allowed predicate string arbitrary. Subject \"the thing outside\". Sentences [14,15,16,17]. Good.\n\nNeed ensure \"thing outside\" not known as creature? sentence says \"the thing outside\". Use subject \"the thing outside\". Good.\n\nNeed issues mention \"The chapter does not name the protagonist; 'he' is used as subject.\" \"The device's exact nature remains unspecified.\" Maybe.\n\nNeed output JSON. Ensure no markdown.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"sealed himself behind\",\"object\":\"a low white wall with a bone in it\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3,4]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the device\",\"predicate\":\"gave\",\"object\":\"no glow, no hum, and no answer when charged\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[8,9]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the device\",\"predicate\":\"would need\",\"object\":\"decades to gather itself again\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[10,11]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the thing outside\",\"predicate\":\"circled, stopped, sniffed, and did not leave\",\"object\":\"outside the shelter, drawn by the mammoth fat on his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[14,15,16,17]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Ravine Shelter\",\"characters\":[\"he\"],\"events\":[\"He builds a shelter in a shallow overhang using a rib shard and packed snow.\",\"The device gives no response when he tries to charge it.\",\"He realizes the device would need decades to gather itself again and puts it away.\",\"A thing outside circles, stops, sniffs, and does not leave, drawn by the mammoth fat on his coat.\"],\"mood\":\"bleak, tense, and isolated\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\",\"The exact nature and function of the device remain unspecified.\",\"The identity of the thing outside is not stated beyond 'the thing outside'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 219,
+      "output": 1767,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1347,
+      "totalTokens": 2754,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0021203999999999997,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002190708
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177892435,
+    "responseId": "4e2d3fa2-9a5c-4642-86ce-2b31449649c9",
+    "rawStopReason": "stop",
+    "durationMs": 10640
+  },
+  "record": {
+    "time": "2026-10-28T08:58:23.074Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-023",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3330,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108294,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 219,
+      "output": 1767,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1347,
+      "totalTokens": 2754,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0021203999999999997,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002190708
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.002190708,
+    "inputTokens": 219,
+    "outputTokens": 1767,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 987,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 10640
+  }
+}

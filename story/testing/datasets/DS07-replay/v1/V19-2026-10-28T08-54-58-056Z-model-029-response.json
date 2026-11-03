@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal JSON. Need facts 1-4 upserts. Chapter only. Need identify states. Sentences exact. Facts: subject he, predicate built shelter? Let's parse.\n\nNeed follow schema. Facts each ref temp, op upsert, subject, predicate, object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty if uncertain else empty, sentences array.\n\nWe need minimal 1-4 facts. Likely:\n- He found shallow overhang/shelter in ravine (sentences 1-2) confirmed narrated.\n- He built/sealed a low snow wall with rib shard at mouth (3-4) confirmed.\n- He tried device/charger multiple times but it gave no response (6-9) confirmed.\n- Device needs decades to gather itself again (10-11) maybe uncertain? He inferred arithmetic. Could be confirmed? It's his conclusion, but stated. Certainty maybe uncertain due inference? Need decide.\n- He put device away (12).\n- Something/mammoth? outside circled sniffed stopped didn't leave (14-17). Could fact: an animal outside was attracted by mammoth fat on his coat and did not leave (14-17). Confirmed narrated.\n\nNeed minimal, maybe 4 facts. Since P0 subset tests only 1-4 fact upserts. Use facts likely all confirmed. Include no claims etc. Summary title characters events mood. Issues maybe none or note omitted facts? Need ensure JSON only.\n\nNeed exact sentence IDs. Use sentence numbers.\n\nFact refs \"f1\" etc. Predicate strings. Object strings can be descriptive. Subject \"he\" or \"the man\"? Use \"he\". Predicate \"found_shelter\" object \"a shallow overhang in the narrowing ravine\". Sentences [1,2]. Mode narrated. Certainty confirmed. uncertainReason \"\".\n\nFact 2: he built a low snow wall with rib shard at shelter mouth. Sentences [3,4]. Predicate \"built_snow_wall\". object \"a low white wall packed with snow around an upright rib shard at the overhang's mouth\". confirmed.\n\nFact 3: he tried device charger three times and got no response. Sentences [6,7,8,9]. Predicate \"tried_device_charger\". object \"repeatedly with no glow, hum, or answer\". Mode narrated. confirmed. But sentence 6 \"drew out device\", 7 lay in palm, 8 pressed charger waited no answer, 9 tried again third time. Good.\n\nFact 4: he concluded device would need decades to gather itself again and put it away. Sentences [10,11,12]. Predicate \"concluded_device_needed_decades\". object \"the device would need decades to gather itself again\". Certainty uncertain? He did arithmetic, but \"would need\" stated. Could be uncertain because inference? The fact is his conclusion, not objective. But certainty maybe uncertain with uncertainReason \"He inferred it from the device's failure rather than direct evidence.\" However schema mode narrated. Hmm.\n\nCould include fact 5? Max 4. Need maybe include threat outside. But 4 max. Which are most important? Minimal. Could use 4 facts including outside creature? Need choose.\n\nWe can have 4 facts: shelter found, wall built, device failed, creature outside. Leave out device decades? But summary include. The fact \"decades\" important but can be in summary. Need facts only states. P0 subset tests 1-4. Use 4 facts. Maybe fact 4 outside creature. But then no device conclusion. Summary can include. Need include issue? No.\n\nNeed ensure facts are \"states\" not events? Interface design unknown. Fact upsert likely state fact. \"he found shelter\" is event? But okay.\n\nCould use uncertain for creature identity? It says \"the thing outside\" not named mammoth; but mammoth's fat on coat. Fact: \"something outside was circling, sniffed, and did not leave\" confirmed. Subject \"the thing outside\" predicate \"was_circling_and_sniffing\" object \"the shelter, attracted by mammoth fat on his coat\". Sentences [14,15,16,17]. Confirmed narrated.\n\nNeed summary title characters events mood. Title \"A Bone in the Snow Wall\" maybe. Characters [\"he\",\"the thing outside\"]. Events concise. Mood \"bleak, tense\". Issues maybe [\"Chapter contains more details than the minimal 4-fact subset captures (e.g., device's decades-long estimate).\"] But issues optional. Should include issues array maybe empty? Schema requires issues. We can include empty or note. Probably empty unless extraction ambiguity. Since \"Include issues\" means array can be empty. But maybe mention no issues.\n\nNeed no additional props. JSON object only.\n\nNeed maybe \"facts\" minItems 1. Good.\n\nNeed be careful \"object(string)\" nonempty. uncertainReason empty string when confirmed. Good.\n\nLet's craft JSON.\n\nTitle: \"The Bone at the Mouth\"\ncharacters: [\"he\", \"the thing outside\"].\nevents: [\"He found a shallow overhang in the narrowing ravine.\", \"He built a low snow wall with a rib shard at its mouth.\", \"He tried the device's charger repeatedly, but it gave no response.\", \"Something outside circled, sniffed, and stayed because of the mammoth fat on his coat.\"]\nmood: \"bleak and tense\"\n\nFacts:\n1 ref f1 op upsert subject he predicate found_shelter object \"a shallow overhang in the narrowing ravine\" mode narrated certainty confirmed uncertainReason \"\" sentences [1,2]\n2 f2 subject he predicate built_snow_wall object \"a low white wall packed with snow around an upright rib shard at the overhang's mouth\" mode narrated confirmed sentences [3,4]\n3 f3 subject he predicate tried_device_charger object \"repeatedly, with no glow, hum, or answer\" mode narrated confirmed sentences [6,8,9] maybe include 7? Sentence 7 describes device. Use [6,8,9]. \n4 f4 subject \"the thing outside\" predicate \"circled_and_sniffed_without_leaving\" object \"the shelter, drawn by mammoth fat on his coat\" mode narrated confirmed sentences [14,15,16,17].\n\nNeed maybe include sentence 17. Good.\n\nShould we include fact about \"decades\" instead of outside? The chapter's core is device failure and threat. 4 facts include outside but not decades. Summary can mention device failure. But if extract facts, maybe better to include device needs decades because it's a state. Yet outside is a state too. We only can 4. P0 subset tests only 1-4. Which is most critical? The threat at end is key hook, but hooks empty. We can include in summary. Facts should be stable. Maybe include \"device would need decades\" as fact with uncertain. That uses 4. Outside in summary. Hmm.\n\nNeed \"minimal\" maybe choose most salient. I think facts: shelter found, wall built, device failed, device needs decades. Outside event omitted but summary includes. However hooks empty. The prompt says do not add future plans or unstated facts. Summary can include events from chapter. Facts only 1-4. If omit outside, okay. But summary events can include outside? Summary is not facts. Yes.\n\nNeed maybe include \"he put device away\" in fact 3 object? Fact 3 \"tried charger and put device away after no response\". Sentences [6,8,9,12]. But sentence 10-11 between. That captures action. Subject he predicate \"tried_device_charger_and_put_it_away\" object \"after repeated attempts gave no response\". Good. Then fact 4 decades? Hmm.\n\nCould include fact 3: \"device did not respond to charger\" sentences [6,8,9]. Fact 4: \"he estimated device would need decades to gather itself again\" uncertain. That is good. Outside in summary. But the final threat is important. Since summary events include it.\n\nNeed mode for fact 4: narrated? He did arithmetic and thought \"Decades. It would need decades...\" This is internal cognition/estimate, but mode narrated. Certainty uncertain with reason \"It is his arithmetic-based estimate, not directly observed.\" Good. But schema says mode narrated or recalled_past. Use narrated. Predicate \"estimated_device_recovery_time\". Object \"decades to gather itself again\". Sentences [10,11]. Include 9? The arithmetic sentence. Use [9,10,11]. Certainty uncertain.\n\nThen fact 3 sentences [6,8,9]? But fact 4 also uses 9. Overlap okay? Probably okay. To avoid overlap, fact 3 [6,8]; fact 4 [9,10,11]. Fact 3 object \"no glow, hum, or answer when charger pressed\". Sentence 8. Sentence 6 device drawn. Good.\n\nNeed include sentence 12 put away? Not necessary.\n\nCould fact 2 sentences [3,4]. Good.\n\nNeed issues maybe \"No blocking issues; extraction is limited to four fact upserts.\" But schema issues array strings. Use [\"None.\"]? Better empty [].\n\nNeed JSON only. Ensure valid.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"type\":\"json_object\",\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"found_shelter\",\"object\":\"a shallow overhang in the narrowing ravine\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,2]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"built_snow_wall\",\"object\":\"a low white wall packed with snow around an upright rib shard at the overhang's mouth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3,4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"tried_device_charger\",\"object\":\"with no glow, hum, or answer\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,8]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"estimated_device_recovery_time\",\"object\":\"decades for the device to gather itself again\",\"mode\":\"narrated\",\"certainty\":\"uncertain\",\"uncertainReason\":\"It is his arithmetic-based estimate rather than a directly observed fact.\",\"sentences\":[9,10,11]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Bone at the Mouth\",\"characters\":[\"he\",\"the thing outside\"],\"events\":[\"He found a shallow overhang in the narrowing ravine.\",\"He built a low snow wall with a rib shard at its mouth.\",\"He tried the device's charger repeatedly, but it gave no response.\",\"He estimated the device would need decades to recover and put it away.\",\"Something outside circled, sniffed, and did not leave because of the mammoth fat on his coat.\"],\"mood\":\"bleak and tense\"},\"issues\":[]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 219,
+      "output": 2366,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1959,
+      "totalTokens": 3353,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0028392,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0029095080000000003
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178041298,
+    "responseId": "b1d92208-959b-4866-af78-b51d96dcf627",
+    "rawStopReason": "stop",
+    "durationMs": 16460
+  },
+  "record": {
+    "time": "2026-10-28T09:00:57.757Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-029",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3330,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108294,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 219,
+      "output": 2366,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1959,
+      "totalTokens": 3353,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0028392,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0029095080000000003
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0029095080000000003,
+    "inputTokens": 219,
+    "outputTokens": 2366,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 987,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 16459
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "ds11-f01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "get_character",
+      "args": {
+        "key": "char:hana"
+      },
+      "id": "call_00_sDdyJYcgtxncMteIwudY4856"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 2
+      },
+      "id": "call_01_iu3gRUr0Rdrzjy2vfwxy8023"
+    }
+  ],
+  "firstAction": {
+    "tool": "get_character",
+    "args": {
+      "key": "char:hana"
+    },
+    "id": "call_00_sDdyJYcgtxncMteIwudY4856"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "If answering directly, use only the setup: Hana is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "532ff2d230118912314dbdac120aa6ee7a3ff2ee6515a06c91032cca6818bf58",
+    "sessionSha256": "2449d5a9147b89e9240278bf7b4520adb556fcd6e63fad7af7b8f03a459e464b",
+    "fee": {
+      "knownUsd": 0.0021504000000000002,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0021504000000000002
+    },
+    "measuredMainRequests": 2
+  }
+}

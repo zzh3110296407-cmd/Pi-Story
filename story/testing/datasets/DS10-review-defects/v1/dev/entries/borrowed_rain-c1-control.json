@@ -1,0 +1,420 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:sera",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Sera, an orchard apprentice"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:orin",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Orin, the village bellsmith"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:mael",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Mael, the appointed reeve"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:fenn",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Fenn, an elderly herbalist"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:orchard",
+          "op": "set",
+          "source": "model",
+          "value": "The rain orchard"
+        },
+        {
+          "kind": "place",
+          "key": "place:library",
+          "op": "set",
+          "source": "model",
+          "value": "The seed library"
+        },
+        {
+          "kind": "place",
+          "key": "place:cistern",
+          "op": "set",
+          "source": "model",
+          "value": "The dry cistern"
+        },
+        {
+          "kind": "place",
+          "key": "place:square",
+          "op": "set",
+          "source": "model",
+          "value": "The village square"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:physical_limit",
+          "op": "set",
+          "source": "model",
+          "value": "A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        },
+        {
+          "kind": "character",
+          "key": "char:old_tree",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "The ancient living orchard tree"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:new_tree",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "A new sapling distinct from the old tree"
+          }
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:sera->orin",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "wary cooperation"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "authorMessage",
+    "entryId": "borrowed_rain-author",
+    "text": "Write an original fantasy story titled \"The Orchard of Borrowed Rain\".\n\nWrite this story in English.\nUse third-person narration outside quoted speech and dreams.\nUse past-tense narration outside quoted speech and dreams.\nPreserve this physical rule: A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree.\nFollow the supplied three-chapter order.\nKeep the memory book intact until its custody transfer in chapter three.\nKeep Mael alive through the end of chapter three.\nPresent remembered scenes as past events rather than current events.\n\nUse the supplied character, place and chronology bible. Let the unresolved questions develop through the supplied outline without treating a plan or dream as an event."
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-c1-ledger",
+    "toolName": "submit_constraints",
+    "isError": false,
+    "details": {
+      "schema": "story/constraints@1",
+      "rev": 1,
+      "op": "submit",
+      "items": [
+        {
+          "id": "L-1",
+          "kind": "global",
+          "text": "Write this story in English.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Write this story in English.",
+              "start": 72,
+              "end": 100
+            }
+          ]
+        },
+        {
+          "id": "L-2",
+          "kind": "global",
+          "text": "Use third-person narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Use third-person narration outside quoted speech and dreams.",
+              "start": 101,
+              "end": 161
+            }
+          ]
+        },
+        {
+          "id": "L-3",
+          "kind": "global",
+          "text": "Use past-tense narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Use past-tense narration outside quoted speech and dreams.",
+              "start": 162,
+              "end": 220
+            }
+          ]
+        },
+        {
+          "id": "L-4",
+          "kind": "given_fact",
+          "text": "Preserve this physical rule: A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Preserve this physical rule: A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree.",
+              "start": 221,
+              "end": 349
+            }
+          ]
+        },
+        {
+          "id": "L-5",
+          "kind": "story",
+          "text": "Follow the supplied three-chapter order.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Follow the supplied three-chapter order.",
+              "start": 350,
+              "end": 390
+            }
+          ]
+        },
+        {
+          "id": "L-6",
+          "kind": "story",
+          "text": "Keep the memory book intact until its custody transfer in chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Keep the memory book intact until its custody transfer in chapter three.",
+              "start": 391,
+              "end": 463
+            }
+          ]
+        },
+        {
+          "id": "L-7",
+          "kind": "story",
+          "text": "Keep Mael alive through the end of chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Keep Mael alive through the end of chapter three.",
+              "start": 464,
+              "end": 513
+            }
+          ]
+        },
+        {
+          "id": "L-8",
+          "kind": "story",
+          "text": "Present remembered scenes as past events rather than current events.",
+          "sourceSpans": [
+            {
+              "messageId": "borrowed_rain-author",
+              "quote": "Present remembered scenes as past events rather than current events.",
+              "start": 514,
+              "end": 582
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-c1-bible-review",
+    "toolName": "update_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 2,
+      "op": "update",
+      "reason": "Additional stable review-context character and chronology constraints.",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:sera",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Sera, an orchard apprentice",
+            "embodiment": "Sera is left-handed from birth and has never been the opposite-handed person.",
+            "invariants": [
+              "Dominant hand remains left-handed throughout the story."
+            ]
+          }
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "the old tree was alive at the opening; after the narrated death in chapter two, the old tree does not return alive in present action."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-c1-outline",
+    "toolName": "submit_outline",
+    "isError": false,
+    "details": {
+      "schema": "story/outline@1",
+      "rev": 1,
+      "op": "submit",
+      "narration": {
+        "viewpoint": "third person",
+        "tone": "restrained",
+        "format": "English past-tense prose"
+      },
+      "chapters": [
+        {
+          "n": 1,
+          "title": "Two Glass Seeds",
+          "targetWords": 1719,
+          "purpose": "Develop The Orchard of Borrowed Rain through its planned state changes.",
+          "turn": "The village roll identified Mael as the appointed reeve.",
+          "hookSeeds": [
+            "A seed rang softly without being touched.",
+            "A blank page remained warm inside the memory book.",
+            "Mael refused to remove a silver glove."
+          ]
+        },
+        {
+          "n": 2,
+          "title": "The Dry Cistern",
+          "targetWords": 1696,
+          "purpose": "Develop The Orchard of Borrowed Rain through its planned state changes.",
+          "turn": "The last living branch snapped; the old tree was dead.",
+          "hookSeeds": [
+            "The ringing seed answered the bell inside the cistern.",
+            "The blank page was warm even in the cold cistern air.",
+            "A child’s name appeared beneath the cistern’s mineral crust."
+          ]
+        },
+        {
+          "n": 3,
+          "title": "A Memory Freely Given",
+          "targetWords": 1721,
+          "purpose": "Develop The Orchard of Borrowed Rain through its planned state changes.",
+          "turn": "A new sapling was alive beside the dead stump.",
+          "hookSeeds": [
+            "The ringing seed held Orin’s freely offered memory.",
+            "The warm page returned the memory Mael had taken.",
+            "The glove concealed the scar of the former keeper.",
+            "The child’s name belonged to the memory’s rightful giver."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "borrowed_rain-c1-author-intent",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 2,
+      "field": "author_intent",
+      "text": "Let changing evidence alter trust without turning uncertainty into a completed event."
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "borrowed_rain-c1-focus",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 3,
+      "field": "current_focus",
+      "text": "Preserve the difference between confirmed state, speech, recollection and conjecture."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-c1-intent",
+    "toolName": "set_chapter_intent",
+    "isError": false,
+    "details": {
+      "schema": "story/intent@1",
+      "chapter": 1,
+      "rev": 1,
+      "mustKeep": [
+        "Sera reached the seed library before the last bell.",
+        "Two seeds dissolved in the basin, leaving ten in Sera’s allotment."
+      ],
+      "mustAvoid": [
+        "Do not convert dream, hypothetical or planned events into waking canon."
+      ],
+      "beats": [
+        "Sera entrusted the seed case to Orin.",
+        "A seed rang softly without being touched.",
+        "A blank page remained warm inside the memory book.",
+        "Mael refused to remove a silver glove."
+      ],
+      "hookOps": [
+        {
+          "hookId": "H-1",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-2",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-3",
+          "op": "plant"
+        }
+      ],
+      "cast": [
+        "char:sera",
+        "char:orin",
+        "char:mael",
+        "char:fenn"
+      ],
+      "brief": "Stage the planned changes through action and dialogue; retain the stated uncertainty."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-c1-control-draft",
+    "toolName": "write_draft",
+    "isError": false,
+    "details": {
+      "schema": "story/draft@1",
+      "draftId": "c01-d01",
+      "chapter": 1,
+      "author": "writer",
+      "text": "The oldest tree in the orchard had stopped casting a complete shadow. Where a branch should have darkened the dust, Sera saw sunlight lying in a pale rectangle, as if someone had already cut the wood from the world. She climbed the low wall and pressed her ear against the trunk. The old tree was still alive when Sera touched its warm bark. Its warmth was slight, and the sap moved too slowly for her to hear, but a green line appeared when she lifted the loose bark with her nail. Orin told her to leave it alone. The village had lost enough things by opening them to discover whether anything remained inside. He was carrying the new bell in both hands, taking one careful step at a time over the roots. She jumped down to move the ladder before its legs damaged the last patch of young grass.\n\nOrin hung the bronze bell beside the oldest orchard tree. The metal had been cast from broken household vessels, and Sera could identify the lip of her mother's old cooking pot in the rough curve near the rim. Orin said he could polish it smooth. She asked him not to, at least until her mother had seen it. The old tree had survived worse summers, but the glass seeds in the library were nearly exhausted and the cistern had not held water for weeks. A bell might gather people to decide what to give. It could not itself make rain. Mael arrived wearing a ceremonial coat unsuited to the heat. The village roll identified Mael as the appointed reeve. He read the appointment line aloud from the roll he carried, as if a title might add weight to the promise he was about to make. “The rain can bring back anything,” Mael said. Sera looked towards the tree and heard Orin stop adjusting the bell rope.\n\nNobody argued with the reeve before the waiting villagers. Sera asked instead which memories he had arranged for the afternoon's seeds. He said the library kept enough examples for every household. Examples were written accounts, not freely offered memories, and the difference had occupied most of her apprenticeship. A seed opened only when its giver chose a true piece of remembered life and allowed the seed to take its rain from that choice. Repeating another person's words could imitate the shape of the gift without making it voluntary. Mael told her not to make a ceremony out of a simple matter. She said it was already a ceremony, and he had brought the coat. Several villagers laughed. He did not, but he walked with her towards the library rather than order her to begin beneath the tree.\n\nSera reached the seed library before the last bell. Fenn had set two basins on the table and covered the windows with cloth to keep the glass from heating unevenly. Fenn kept the memory book under her shawl. Its leather corner made a square beneath the wool, moving when she breathed. Sera asked whether she had brought the volume for the seed receipts or the memories. Fenn answered that everything required a receipt sooner or later. She would not open it while Mael stood beside her. A blank page remained warm inside the memory book. Sera noticed the warmth when Fenn set the closed book on the table and briefly exposed the inner edge. The other pages lay cool against one another. She asked whether something had been spilled there. Fenn said no, then moved her hand over the opening so Mael could no longer see which leaf Sera meant.\n\nOrin carried the case to the table, but waited for Sera to unlock it. Sera entrusted the seed case to Orin. She wanted both hands free to steady the bowls, and the bellsmith had always treated fragile things with a patience that made his large fingers seem smaller. Sera knew Orin had received the seed case. Mael said he had arranged payment, a phrase Orin took to mean he had paid. Orin believed Mael had paid for the seeds, but Fenn’s receipt bore Sera’s name. The receipt named Sera's allotment and carried the mark she had made after selling her small kiln. She did not correct Orin in front of the reeve. Later she wondered whether silence had already made her a participant in a story she disliked. Sera trusted Orin with the case but not with the choice of whose memory to spend. Choosing a memory belonged to its giver. The custody of a box could not include the right to open another person's past, however usefully a bellsmith's hands could hold it.\n\nSera chose two small memories she could offer without giving away anybody else's confidence: the first cup she had shaped without a crack, and the sound of her mother laughing when the cup leaned to one side. She described them in her own words and touched the glass only after Fenn asked whether she wished to continue. Two seeds dissolved in the basin, leaving ten in Sera’s allotment. “Ten seeds are left,” Sera said. Rain rose from the basins and fell through a circular space in the ceiling, enough to darken the cloth over the orchard path. Mael wanted the next seed opened at once. Sera asked the waiting villagers whose memory would come next. Several looked at one another. A gift that might have been easy in private became difficult beneath an official promise. Nobody volunteered. The reeve called the silence hesitation, as if a more flattering word could turn it into consent.\n\nOne seed remained loose beside the latch. A seed rang softly without being touched. The note was too low to resemble the bell outside, yet Orin lifted his head as though someone had called his childhood name. Mael caught the seed before it rolled into the water. Mael refused to remove a silver glove. The glove covered his hand past the wrist, even while the room grew hot enough to make the ink on the receipts tacky. Sera asked him to set the seed down. He did, but not before she saw the glass brighten against the silver. Her attention slipped from the bowl she was moving. A shard of glass cut Sera’s left palm. Fenn bound the cut with a strip torn from a clean apron. The blood looked ordinary beside the strange glass, and Sera found the sight reassuring until Mael asked whether an injury could count as an offering. Fenn said pain was not permission.\n\nThey waited for the small rain to finish before discussing another seed. Sera watched a bright line move across the new bell visible through the door. Sera could not decide whether the pale mark on the bell was a letter. It could have been a letter, an uneven patch left by casting, or a reflection from Mael's coat. She wanted Orin to examine it, then saw how intently he was watching the seed that had rung. The library was becoming a room full of private recognitions. Sera remembered living in the pottery shed before she became an apprentice. She had kept clay under the bed to stop it drying too quickly and woken to her mother's feet moving around it in the dark. That room belonged to a period she could remember without dating its beginning. It was not where she lived now, and recalling it did not make her willing to spend it. Not every useful memory had to become rain simply because someone else was thirsty.\n\nFenn wrote the two spent seeds into the allotment book, leaving ten small circles untouched. Sera believed Fenn would keep a receipt for every seed. The old woman disliked losing money as much as she disliked losing memories, and for once those habits served the same purpose. Sera asked whether the warm blank page had a name attached to it. Fenn said the name had been scraped away before she received the book. Mael said such pages were common. Sera asked him whether he meant empty pages were common or warm ones. He answered by checking the window cloth. Orin placed the seed back in the case and fastened both catches, not only the nearer one. The sound of the second catch made Sera grateful. A person could answer a difficult room with a small, observable piece of care instead of another general promise.\n\nShe planned to spend another seed after the harvest meeting. The meeting would let each household decide privately, without the reeve standing beside an open basin. Mael objected that delay might cost the oldest tree its last living branch. Fenn answered that rain could nourish a living tree but could not revive a dead one, and a gift forced in panic would not open the seed anyway. If a borrowed memory were accepted, the orchard might owe someone rain. Sera wrote the question in the margin rather than enter a debt against any household. They needed to find out what Mael had done, not charge a neighbour for an attractive theory. Orin offered to lower the bell into the cistern, where the acoustics might explain the ringing seed. Mael said there was no need. He said it quickly enough that the proposal acquired a significance it had not possessed a moment before.\n\nThe library lamps were lit while the last villagers went home carrying empty bowls. Fenn took the memory book with her, and Orin retained the seed case as Sera had asked. Sera spread the damp window cloth on the table to dry. The small rain had helped the grass near the path, but it had not changed the orchard's need for another honest gift. She lay down on the narrow bench meant for waiting apprentices and watched the ceiling circle darken into night. She dreamed that the old tree walked into her childhood kitchen. In sleep its roots lifted the pots from the shelves without breaking them, and her mother asked whether they had invited it for supper. She woke with her bandaged hand against her cheek. Outside, the old tree stood where it had always stood. The dream had moved nothing except her fear, and the case still belonged in Orin's careful custody until morning. Sera stayed in the seed library until the lamps were lowered.\n",
+      "digest": "91172880881ad459",
+      "sentenceRule": "s2",
+      "basis": {
+        "canonHead": null,
+        "controlRev": 3,
+        "bibleRev": 2,
+        "intentRev": 1,
+        "stateRev": 0
+      },
+      "wordCount": {
+        "unit": "en_words",
+        "value": 1719
+      },
+      "calls": []
+    }
+  }
+]

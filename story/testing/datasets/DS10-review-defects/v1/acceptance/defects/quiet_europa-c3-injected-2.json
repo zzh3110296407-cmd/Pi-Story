@@ -1,0 +1,92 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "quiet_europa-c3-injected-2",
+  "storyId": "quiet_europa",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "8771c370232d961c161cffffae224ad6b88da462ba8cfea8ee62fe8bd086da4e",
+    "path": "acceptance/chapters/quiet_europa-c3.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "quiet_europa-c3-injected-2-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Nia crossed into the rescue shuttle carrying the final log.",
+      "changed": "Nia crossed into the rescue shuttle carrying the final log. The intact station interlock allowed the inner and outer airlock doors to remain open together.",
+      "spans": [
+        {
+          "original": "Nia crossed into the rescue shuttle carrying the final log.",
+          "changed": "Nia crossed into the rescue shuttle carrying the final log. The intact station interlock allowed the inner and outer airlock doors to remain open together.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched."
+        }
+      ],
+      "reason": "Unquoted actual-world narration contradicts the explicit supplied physical rule, with no hypothetical or reported-speech wrapper.",
+      "lines": [
+        1
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "quiet_europa-c3-injected-2-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Nia knew the beacon’s other destination was a maintenance relay, not Earth.",
+      "changed": "Nia knew the beacon’s other destination was a maintenance relay, not Earth. Mira died in the sealed room, and her death was confirmed before the next call.",
+      "spans": [
+        {
+          "original": "Nia knew the beacon’s other destination was a maintenance relay, not Earth.",
+          "changed": "Nia knew the beacon’s other destination was a maintenance relay, not Earth. Mira died in the sealed room, and her death was confirmed before the next call.",
+          "lines": {
+            "start": 15,
+            "end": 15
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Mira alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death directly violates the author’s explicit keep-alive requirement for this named person.",
+      "lines": [
+        15
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

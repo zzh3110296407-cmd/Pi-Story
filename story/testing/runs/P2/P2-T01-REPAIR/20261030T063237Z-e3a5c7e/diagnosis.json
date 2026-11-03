@@ -1,0 +1,571 @@
+{
+  "totals": {
+    "submit_constraints": {
+      "total": 30,
+      "valid": 29
+    },
+    "submit_bible": {
+      "total": 49,
+      "valid": 29
+    },
+    "submit_outline": {
+      "total": 44,
+      "valid": 29
+    },
+    "read_story": {
+      "total": 5,
+      "valid": 5
+    },
+    "write_next_chapter": {
+      "total": 22,
+      "valid": 22
+    },
+    "read_chapter": {
+      "total": 10,
+      "valid": 10
+    }
+  },
+  "failures": [
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_fTL2F7eqSrIFvwS0TziD2612",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3397 (line 1 column 3398)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "00979ea559f7f944b0b2c373d97caa17b7b9cda04fdfe26d67cc9c7af67f9e00",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_oXTVyM1s4Py9RQxlH7Lr2913",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[16].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "4a6b875074b6bfd3e7a7a66d20685aeac1ec2f994f2d2795996a4f7379d5593c"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_FFrZK29sxH9VLT4Fd1y49518",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "作者来源必须有可核对的原话",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[3].authorQuote"
+      ],
+      "quoteProvided": true,
+      "quoteNonempty": true,
+      "matchesOriginal": false,
+      "argumentDigest": "895956351664f8188548590e9f2f002b687d3297c930539cc0ca868e9d436e79"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_Uuqw7zqEspTweLYftBJV2457",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3165 (line 1 column 3166)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "060a88ed815d360c6eb26b35d53b4de03827de878e901b6b987984e9a055aac1",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_DOlmQJxokBoCBjG01PD97947",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[15].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "0838ae1d3e6e12f6bf212df4cae5a5082f45ac0704e8fee879c84aebaf16a3be"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_4424XMkhccm0pGMoU2wL0381",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3537 (line 1 column 3538)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "be5a6c329006df1bbf2bc965c6b1c9ee902fe7933b5bf1d03598154f60aa9bda",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_7O3ZsdfqjeI4nK2lPZD86765",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[18].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "c2ad996485816f7e89e64ad98861ff2caed78e7a5954f3d7cee71631d7d7b035"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_mR6lPkaSkutQ06pEgmPt4905",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2669 (line 1 column 2670)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "b0e0f6b941bf923eaab1dd0f272d9881ef31aa18d92741d052d8c791dd6f66bb",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_upZTpepFTJP1dfJ1HkFu0209",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2714 (line 1 column 2715)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "9c34ee582c71d1486855eeba30dc408dc91429db8c004736f51bddb2387e4a8a",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_X8Ri4Cri2x5VjNMkoTdQ0446",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2931 (line 1 column 2932)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "c97ad0393c900bd9ffc6ee88b34a03be83d678fc44efd5661d55e3fc9e07b79b",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_Vbyb0VU95uQAKnBTzUGW0294",
+      "tool": "submit_constraints",
+      "code": "DOMAIN_INVALID",
+      "message": "台账引文不在当前分支的作者消息中",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[2].quotes[0]"
+      ],
+      "argumentDigest": "1d65639e7c17d7756e35f44616b24c4a084d15b98bfdb3aec30d4c0be3b2f4f7"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_jp0ZQ2WmPL8b0EujBrGq4955",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3787 (line 1 column 3788)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "60572719ca7b13f8ab4dae28106ad279b81667565b8b02fab2634fd8b20ad53e",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T162346Z-175a120-r1",
+      "toolCallId": "call_00_yYmMDTxGwmHSi8oxFOZR3706",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3667 (line 1 column 3668)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "04d5af393a960c0686e1f8ca1d539b1802fb8afc86cd1110d45a7fa2828c78b3",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_Q6n81hQmaoHypXH9pQ5b7955",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[10].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "6d5f0ecfc5b84c47edd7b5ad3d20bc3b2bd395743d981b90273f3b085c3950e1"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_8EFNGmnliGUxaWcNRxlD0747",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "作者来源必须有可核对的原话",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[5].authorQuote"
+      ],
+      "quoteProvided": true,
+      "quoteNonempty": true,
+      "matchesOriginal": false,
+      "argumentDigest": "36dceab9b5d7edf468d099068f79124c28a6033329c85f2b60a306eb372cd0c1"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_LP7Ag5ywzzcP8FwJsU6i9784",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "作者来源必须有可核对的原话",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[1].authorQuote"
+      ],
+      "quoteProvided": true,
+      "quoteNonempty": true,
+      "matchesOriginal": false,
+      "argumentDigest": "b7d2472416822fc92b3802e6114fdd481ef3a4a8821c76beedb60d8a99063301"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_RDbEuSojr6Ljd24YWW9I9530",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经已建立，请使用补充操作",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items"
+      ],
+      "argumentDigest": "e8c4acdd8404bb864677dad5c08a692848f78ee0f6934f50e6df03e8b32f200e"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_7ta61DYoEzCph0JM0RJh9148",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经已建立，请使用补充操作",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items"
+      ],
+      "argumentDigest": "d74bca7acd2a610e5bba65b424dbd29a8d3e3742ac0b04812c5da13ac9201f6f"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_0tAorheon7omsp4ERd3x4589",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_bible\": Unexpected non-whitespace character after JSON at position 229 (line 1 column 230)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "48392694f4adf620c0e991ba37e6fe2b8483cfc4d63047c59160be1b2f8d5443",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_0ih2XWHdzjFMZOCcQhD15644",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_bible\": Unexpected non-whitespace character after JSON at position 5223 (line 1 column 5224)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "3c4085d4aaa22fe37c08928e416e7d9091d17ea9442110ac4bafc4c3f0d41246",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_GICoM9gWtILXQICCGpVM3851",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_bible\": Unexpected non-whitespace character after JSON at position 5211 (line 1 column 5212)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "fe03eff6cdaaf4a3854ff1fdad8fa47029807ecbc3eb46c0c1deedfa8e439fb6",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_wJnH1VUicAB4H1ZYjrC98082",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经已建立，请使用补充操作",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items"
+      ],
+      "argumentDigest": "eb7895401a6278139d61e5c3b81bb96bb18180d366329635d548b00e6aca4b2e"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_D5oKpOXbK5Zv1uOOY5Ub4602",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经已建立，请使用补充操作",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items"
+      ],
+      "argumentDigest": "eb7895401a6278139d61e5c3b81bb96bb18180d366329635d548b00e6aca4b2e"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_IXUQZ3Y3GGKqFH0AmdVE4506",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_bible\": Unexpected non-whitespace character after JSON at position 393 (line 1 column 394)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "177cfe293d2a2057c632a3a8adc46ef3ba8cb63baa1de4fbe524ce014910d663",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_XKAPxIogCSNQIIEbIlxp4270",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_bible\": Unexpected non-whitespace character after JSON at position 393 (line 1 column 394)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "177cfe293d2a2057c632a3a8adc46ef3ba8cb63baa1de4fbe524ce014910d663",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_Ck6ENuVTuEJ0YHjxOTV80733",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3056 (line 1 column 3057)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "2f6482b6fbfe4e67a6c26fa48e418002ff7727a49d4eb8c31aeb40316eda1526",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_ChUpZHKR8SWgjsUSPK965242",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2817 (line 1 column 2818)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "60c59da5adfadd5afa078aeff2450280ea0e00dcb4d350311b3c31d914063524",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_ofYjqs0JIOhyeb752xGG2271",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2736 (line 1 column 2737)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "a9f6733fc33f9b95b22833dc14997936b0faf808c34eb998f53dc90a10ee091c",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261029T163755Z-175a120-r2",
+      "toolCallId": "call_00_stGE0CeanmizdUcDRhlo7399",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3595 (line 1 column 3596)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "1b43029134fd66a923c166820eb588009c7514dc4ff43eb4b7f7b5bce303cbd7",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_nE0FfSTxagxNDNZQbFLj6071",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 3687 (line 1 column 3688)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "5e7c56890da03d7ca866354cc3031852d02746632f10e652efe1e1ec29354f4b",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_nai0ORNWMe5piVgrYSqQ1770",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[12].key"
+      ],
+      "kind": "conflictLine",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug-slug",
+      "keyPrefix": "line",
+      "duplicateKey": false,
+      "argumentDigest": "5512b8b33a971328d152ac941687430be2040539b2cb7fb5546a70ea19612ce6"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_0fK6nyGRSsHoFNf1ALSl8572",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[15].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "fad6004813ca397924710a5e8c7314c63c592c04f870268be1f72d0121122ad9"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_l8cSoR5Q3QoLqFMpCWgB5482",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[9].key"
+      ],
+      "kind": "conflictLine",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "conflictLine",
+      "duplicateKey": false,
+      "argumentDigest": "38430f8a4253fe664d573b2b8c70bd37ccd3126e55675d3408d8a3ae63eeab3d"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_X7qWJ1gTpfBddu01PoNH3840",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2691 (line 1 column 2692)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "f8c0697d3fbc4b321f53e99186ab133af5f50f95e7aaf28657563f66294aa6df",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_nFZTigdAduV3JaGnWrnS2381",
+      "tool": "submit_outline",
+      "code": "DOMAIN_INVALID",
+      "message": "Invalid arguments for tool \"submit_outline\": Unexpected non-whitespace character after JSON at position 2691 (line 1 column 2692)",
+      "hint": "修正列出的参数字段后重试",
+      "items": [
+        "$"
+      ],
+      "wireEqualsRejectedArguments": true,
+      "rawDigest": "f8c0697d3fbc4b321f53e99186ab133af5f50f95e7aaf28657563f66294aa6df",
+      "validWithoutLastBrace": true,
+      "argumentDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "runId": "20261030T023237Z-34ea13b-r1",
+      "toolCallId": "call_00_j0mTpFkACfnkZpOCvnrf7222",
+      "tool": "submit_bible",
+      "code": "DOMAIN_INVALID",
+      "message": "圣经键格式或种类不正确",
+      "hint": "请核对输入后重试",
+      "items": [
+        "items[8].key"
+      ],
+      "kind": "relationBaseline",
+      "validGeneralId": false,
+      "keyPattern": "slug:slug",
+      "keyPrefix": "rel",
+      "duplicateKey": false,
+      "argumentDigest": "71e6191b66b51ef79c18292f4f963ee5e2045f9df350181e1b203e955eeab9ef"
+    }
+  ]
+}

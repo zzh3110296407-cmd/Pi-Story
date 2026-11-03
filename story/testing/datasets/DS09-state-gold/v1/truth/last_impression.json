@@ -1,0 +1,710 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-29T07:55:52.249Z",
+  "designOrder": "truth_before_prose",
+  "id": "last_impression",
+  "split": "acceptance",
+  "genre": "historical fiction",
+  "title": "The Last Impression",
+  "cast": {
+    "elise": "Elise Martin, a compositor in 1887",
+    "jonas": "Jonas Reed, an apprentice",
+    "miriam": "Miriam Holt, a widowed printer",
+    "pike": "Constable Edwin Pike"
+  },
+  "places": {
+    "shop": "The Holt print shop",
+    "office": "The county records office",
+    "bridge": "The stone toll bridge",
+    "square": "The market square"
+  },
+  "rule": "The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence.",
+  "chapters": [
+    {
+      "title": "The Wrong Watermark",
+      "facts": [
+        {
+          "subject": "char:elise",
+          "predicate": "location",
+          "object": "place:shop",
+          "anchor": "Elise remained in the Holt print shop after the shutters were drawn.",
+          "key": true
+        },
+        {
+          "subject": "item:typecase_key",
+          "predicate": "holder",
+          "object": "char:miriam",
+          "anchor": "Elise gave the typecase key to Miriam.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 27,
+            "unit": "coins"
+          },
+          "anchor": "The three-coin delivery left Elise with twenty-seven coins.",
+          "key": true,
+          "before": 30,
+          "change": -3
+        },
+        {
+          "subject": "char:jonas",
+          "predicate": "identity",
+          "object": "Jonas Reed, an apprentice",
+          "anchor": "The workshop roll listed Jonas as Jonas Reed, apprentice.",
+          "key": true
+        },
+        {
+          "subject": "item:leaflet",
+          "predicate": "holder",
+          "object": "char:jonas",
+          "anchor": "Miriam entrusted the disputed leaflet to Jonas.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "injury",
+          "object": "burn on right thumb",
+          "anchor": "The hot type burned Elise’s right thumb.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:paper",
+          "object": {
+            "value": 7,
+            "unit": "reams"
+          },
+          "anchor": "One ream was spoiled, leaving seven usable reams.",
+          "key": true,
+          "before": 8,
+          "change": -1
+        },
+        {
+          "subject": "char:pike",
+          "predicate": "location",
+          "object": "place:bridge",
+          "anchor": "Pike took his post at the stone toll bridge.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:pike",
+        "The council has cancelled your licence.",
+        "“The council has cancelled your licence,” Pike said."
+      ],
+      "memory": "Elise remembered the attic room she had rented during her first apprenticeship.",
+      "memoryObject": "an attic room above a cooper’s yard",
+      "memoryPredicate": "location",
+      "knows": "Elise knew Miriam held the typecase key.",
+      "misbelieves": "Jonas believed the leaflet was still on Miriam’s desk, although he had folded it into his own coat.",
+      "suspect": "Elise could not decide whether the cart outside belonged to the constable.",
+      "plan": "She planned to compare the watermarks after the morning delivery.",
+      "hypothesis": "If the paper came from the county mill, its ledger might name the buyer.",
+      "dream": "She dreamed that every letter in the shop had turned itself backwards.",
+      "hooks": [
+        [
+          "H-1",
+          "upsert",
+          "The disputed leaflet carried a watermark shaped like a broken wheel."
+        ],
+        [
+          "H-2",
+          "upsert",
+          "One line of type contained a letter from a different font."
+        ],
+        [
+          "H-3",
+          "upsert",
+          "Miriam kept a sealed packet addressed to a man called Dunn."
+        ]
+      ],
+      "relationship": {
+        "from": "char:elise",
+        "to": "char:jonas",
+        "stance": "guarded trust",
+        "anchor": "Elise trusted Jonas with the leaflet but not yet with the account of how it had arrived.",
+        "key": true
+      },
+      "believes": "Miriam believed the county clerk would let them examine the register.",
+      "endStateAnchor": "Elise stayed inside the print shop while the delivery cart was loaded.",
+      "trueClaim": {
+        "speaker": "char:elise",
+        "content": "There are twenty-seven coins left,",
+        "anchor": "“There are twenty-seven coins left,” Elise said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "memoryUntil": 0,
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-180",
+              "subject": "char:elise",
+              "predicate": "location",
+              "object": "the attic room Elise rented during her first apprenticeship",
+              "validFrom": null,
+              "validUntil": 0,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c01.s0080",
+                "c01.s0081",
+                "c01.s0082"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Elise remembered the attic room she had rented during her first apprenticeship.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-12",
+              "characterId": "char:jonas",
+              "kind": "misbelieves",
+              "content": "Jonas believed the leaflet was still on Miriam’s desk, although he had folded it into his own coat.",
+              "acquiredChapter": 1,
+              "via": "inferred",
+              "evidence": [
+                "c01.s0018"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-15",
+              "temporalScope": "former_belief_superseded_within_chapter",
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          }
+        ],
+        "correctiveCognitions": [
+          {
+            "id": "K-15",
+            "characterId": "char:jonas",
+            "kind": "knows",
+            "content": "Jonas knows the disputed leaflet was in his own coat.",
+            "acquiredChapter": 1,
+            "via": "witnessed",
+            "evidence": [
+              "c01.s0062",
+              "c01.s0063"
+            ],
+            "certainty": "confirmed",
+            "supersededBy": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "The County Copy",
+      "facts": [
+        {
+          "subject": "char:elise",
+          "predicate": "location",
+          "object": "place:office",
+          "anchor": "Elise reached the county records office before noon.",
+          "key": true
+        },
+        {
+          "subject": "item:typecase_key",
+          "predicate": "holder",
+          "object": "char:elise",
+          "anchor": "Miriam returned the typecase key to Elise at the office door.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 32,
+            "unit": "coins"
+          },
+          "anchor": "The supplier repaid five coins, bringing her purse to thirty-two.",
+          "key": true,
+          "before": 27,
+          "change": 5
+        },
+        {
+          "subject": "char:jonas",
+          "predicate": "true_identity",
+          "object": "Jonas Dunn",
+          "anchor": "The birth register established that Jonas’s legal name was Jonas Dunn.",
+          "key": true
+        },
+        {
+          "subject": "item:leaflet",
+          "predicate": "holder",
+          "object": "char:elise",
+          "anchor": "Jonas passed the disputed leaflet to Elise.",
+          "key": true
+        },
+        {
+          "subject": "char:pike",
+          "predicate": "alive",
+          "object": "dead",
+          "anchor": "Miriam found Pike below the collapsed bridge arch; he was dead.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:paper",
+          "object": {
+            "value": 9,
+            "unit": "reams"
+          },
+          "anchor": "Two dry reams arrived from the mill, increasing the usable stock to nine.",
+          "key": true,
+          "before": 7,
+          "change": 2
+        },
+        {
+          "subject": "char:jonas",
+          "predicate": "location",
+          "object": "place:office",
+          "anchor": "Jonas waited in the county office while the register was copied.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:jonas",
+        "Dunn was never my name.",
+        "“Dunn was never my name,” Jonas said."
+      ],
+      "memory": "Elise recalled closing the print-shop shutters on the first evening of the dispute.",
+      "memoryObject": "the Holt print shop",
+      "memoryPredicate": "location",
+      "memoryFrom": 1,
+      "memoryUntil": 1,
+      "knows": "Elise knew the county register had not cancelled Miriam’s licence.",
+      "misbelieves": "Miriam believed the mixed letter came from their press, but its width did not fit any case they owned.",
+      "suspect": "Elise suspected the packet linked Jonas to the mill’s former owner.",
+      "plan": "She intended to print a correction once the paper had dried.",
+      "hypothesis": "If the broken wheel belonged to an older mill mark, the leaflet might predate the accusation.",
+      "dream": "She dreamed Pike stood at the bridge collecting coins from the rain.",
+      "hooks": [
+        [
+          "H-1",
+          "advance",
+          "The broken wheel appeared in the mill’s retired watermark ledger."
+        ],
+        [
+          "H-2",
+          "mention",
+          "The mismatched letter remained visible in the disputed line."
+        ],
+        [
+          "H-4",
+          "upsert",
+          "A correction proof bore the same date as the unopened packet."
+        ]
+      ],
+      "relationship": {
+        "from": "char:elise",
+        "to": "char:jonas",
+        "stance": "conditional cooperation",
+        "anchor": "Elise and Jonas agreed to compare the original records without concealing another name.",
+        "key": true
+      },
+      "believes": "Elise believed Miriam would return with a witness.",
+      "endStateAnchor": "Elise waited inside the county records office while their return carriage was called.",
+      "trueClaim": {
+        "speaker": "char:elise",
+        "content": "The purse holds thirty-two coins,",
+        "anchor": "“The purse holds thirty-two coins,” Elise said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-280",
+              "subject": "char:elise",
+              "predicate": "location",
+              "object": "place:shop",
+              "validFrom": 1,
+              "validUntil": 1,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c02.s0107",
+                "c02.s0108",
+                "c02.s0109"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Elise recalled closing the print-shop shutters on the first evening of the dispute.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one.",
+              "recordPolicy": "reference_existing",
+              "targetCollection": "historicalReferences",
+              "expectedOperation": "retain_existing",
+              "existingFactId": "F-101",
+              "mustNotCreateDuplicate": true
+            }
+          },
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-290",
+              "subject": "char:jonas",
+              "predicate": "connection",
+              "object": "the mill’s former owner",
+              "validFrom": 2,
+              "validUntil": null,
+              "mode": "narrated",
+              "speaker": null,
+              "evidence": [
+                "c02.s0043"
+              ],
+              "key": false,
+              "certainty": "provisional",
+              "uncertainReason": "Elise suspects that the sealed packet links Jonas to the former mill owner; the relationship is not established.",
+              "statement": "Elise suspected the packet linked Jonas to the mill’s former owner."
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-21",
+              "characterId": "char:elise",
+              "kind": "knows",
+              "content": "Elise knew the county register had not cancelled Miriam’s licence.",
+              "acquiredChapter": 2,
+              "via": "read",
+              "evidence": [
+                "c02.s0048",
+                "c02.s0049",
+                "c02.s0050",
+                "c02.s0051"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "acceptedVia": [
+                "read",
+                "inferred"
+              ]
+            }
+          }
+        ],
+        "correctiveCognitions": []
+      }
+    },
+    {
+      "title": "A Clean Impression",
+      "facts": [
+        {
+          "subject": "char:elise",
+          "predicate": "location",
+          "object": "place:square",
+          "anchor": "Elise carried the first clean correction to the market square.",
+          "key": true
+        },
+        {
+          "subject": "item:typecase_key",
+          "predicate": "holder",
+          "object": "char:jonas",
+          "anchor": "Elise placed the typecase key in Jonas’s hand.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 28,
+            "unit": "coins"
+          },
+          "anchor": "She paid four coins for the public notice and had twenty-eight left.",
+          "key": true,
+          "before": 32,
+          "change": -4
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "identity",
+          "object": "licensed master printer",
+          "anchor": "The council register entered Elise as a licensed master printer.",
+          "key": true
+        },
+        {
+          "subject": "item:leaflet",
+          "predicate": "holder",
+          "object": "org:workers_society",
+          "anchor": "The workers’ society accepted the disputed leaflet as evidence.",
+          "key": true
+        },
+        {
+          "subject": "char:jonas",
+          "predicate": "location",
+          "object": "place:shop",
+          "anchor": "Jonas returned to the Holt print shop to unlock the cases.",
+          "key": true
+        },
+        {
+          "subject": "char:elise",
+          "predicate": "quantity:paper",
+          "object": {
+            "value": 6,
+            "unit": "reams"
+          },
+          "anchor": "The correction used three reams, leaving six.",
+          "key": true,
+          "before": 9,
+          "change": -3
+        },
+        {
+          "subject": "char:miriam",
+          "predicate": "location",
+          "object": "place:square",
+          "anchor": "Miriam stood beside Elise in the market square.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:miriam",
+        "I kept the packet because I was afraid of losing him.",
+        "“I kept the packet because I was afraid of losing him,” Miriam said."
+      ],
+      "memory": "Elise remembered an itinerant compositor teaching her to listen for a loose sort, at a time she could not date.",
+      "memoryObject": "an itinerant compositor",
+      "memoryPredicate": "former_teacher",
+      "knows": "Elise knew the accusation had relied on paper older than Miriam’s licence.",
+      "misbelieves": "Jonas had believed the packet was an accusation, but it contained his mother’s request for an apprenticeship.",
+      "suspect": "Elise could not know whether the silent man at the edge of the crowd had read the notice.",
+      "plan": "She intended to teach the apprentices to keep every dated proof.",
+      "hypothesis": "If the public kept the correction, the false leaflet might lose its authority.",
+      "dream": "She dreamed of a press making no sound at all.",
+      "hooks": [
+        [
+          "H-1",
+          "resolve",
+          "The retired watermark and dated ledger identified the paper stock as older than the licence period named in the accusation."
+        ],
+        [
+          "H-2",
+          "resolve",
+          "The mismatched letter belonged to the former mill owner’s private press."
+        ],
+        [
+          "H-3",
+          "resolve",
+          "The packet contained Jonas’s mother’s apprenticeship request under the name Dunn."
+        ],
+        [
+          "H-4",
+          "resolve",
+          "The dated proof showed Miriam had prepared a correction before the threat arrived."
+        ]
+      ],
+      "relationship": {
+        "from": "char:elise",
+        "to": "char:jonas",
+        "stance": "earned trust",
+        "anchor": "Elise trusted Jonas to keep the proofs without hiding inconvenient names.",
+        "key": true
+      },
+      "believes": "Jonas believed the apprentices would keep their own dated copies.",
+      "endStateAnchor": "Elise returned to the market square to collect the frame from the notice board.",
+      "trueClaim": {
+        "speaker": "char:elise",
+        "content": "Twenty-eight coins remain,",
+        "anchor": "“Twenty-eight coins remain,” Elise said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "claim",
+            "label": {
+              "id": "S-31",
+              "speaker": "char:miriam",
+              "content": "I kept the packet because I was afraid of losing him.",
+              "truth": "true",
+              "evidence": [
+                "c03.s0034"
+              ],
+              "note": "Only the speech act is confirmed; do not promote its content without separate evidence.",
+              "corroboratingEvidence": [
+                "c03.s0066"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-31",
+              "characterId": "char:elise",
+              "kind": "knows",
+              "content": "Elise knew the accusation had relied on paper older than Miriam’s licence.",
+              "acquiredChapter": 3,
+              "via": "inferred",
+              "evidence": [
+                "c03.s0046",
+                "c03.s0048",
+                "c03.s0050",
+                "c03.s0052"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "acceptedVia": [
+                "inferred",
+                "read"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-32",
+              "characterId": "char:jonas",
+              "kind": "misbelieves",
+              "content": "Jonas had believed the packet was an accusation, but it contained his mother’s request for an apprenticeship.",
+              "acquiredChapter": 3,
+              "via": "inferred",
+              "evidence": [
+                "c03.s0039"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-35",
+              "historical": true,
+              "beliefStartChapter": null,
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-35",
+              "characterId": "char:jonas",
+              "kind": "knows",
+              "content": "Jonas knows the packet contains his mother’s request for an apprenticeship under the name Dunn.",
+              "acquiredChapter": 3,
+              "via": "read",
+              "evidence": [
+                "c03.s0033",
+                "c03.s0037",
+                "c03.s0038",
+                "c03.s0039"
+              ],
+              "certainty": "confirmed",
+              "note": "Correction of the explicitly former belief, not an active continuation of it.",
+              "supersededBy": null,
+              "viaScored": false
+            }
+          },
+          {
+            "type": "hook",
+            "label": {
+              "id": "H-1",
+              "operation": "resolve",
+              "statement": "The retired watermark and dated ledger identify the paper stock as older than the licence period named in the accusation.",
+              "evidence": [
+                "c03.s0046",
+                "c03.s0048",
+                "c03.s0050"
+              ]
+            }
+          }
+        ],
+        "correctiveCognitions": []
+      }
+    }
+  ],
+  "bible": [
+    {
+      "key": "char:elise",
+      "kind": "character",
+      "identity": "Elise Martin, a compositor in 1887"
+    },
+    {
+      "key": "char:jonas",
+      "kind": "character",
+      "identity": "Jonas Reed, an apprentice"
+    },
+    {
+      "key": "char:miriam",
+      "kind": "character",
+      "identity": "Miriam Holt, a widowed printer"
+    },
+    {
+      "key": "char:pike",
+      "kind": "character",
+      "identity": "Constable Edwin Pike"
+    },
+    {
+      "key": "place:shop",
+      "kind": "place",
+      "name": "The Holt print shop"
+    },
+    {
+      "key": "place:office",
+      "kind": "place",
+      "name": "The county records office"
+    },
+    {
+      "key": "place:bridge",
+      "kind": "place",
+      "name": "The stone toll bridge"
+    },
+    {
+      "key": "place:square",
+      "kind": "place",
+      "name": "The market square"
+    },
+    {
+      "key": "rule:physical_limit",
+      "kind": "rule",
+      "statement": "The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence."
+    }
+  ],
+  "relationBaseline": [
+    {
+      "from": "elise",
+      "to": "jonas",
+      "stance": "wary cooperation"
+    }
+  ],
+  "annotationPolicy": {
+    "facts": "Gold targets end-of-chapter state; explicit within-chapter before/change values remain arithmetic evidence. Do not create multiple active single-valued facts.",
+    "recalls": "Unknown starts are null, not zero. Chapter-two memories explicitly dated to chapter one use [1,1].",
+    "claims": "Keep reported dialogue separate from confirmed world facts.",
+    "traps": "Plans, hypotheses and dreams produce no asserted world facts.",
+    "provisional": "Uncertain sensory inference is provisional and never a confirmed premise."
+  },
+  "revisionHistory": [
+    {
+      "id": "explicit-relationships",
+      "at": "2026-10-29T08:11:43.556Z",
+      "note": "Designed explicit relationship and non-certain belief anchors before adding these sentences to prose; initial eight fact anchors and plot unchanged."
+    },
+    {
+      "id": "terminal-state-and-true-speech",
+      "at": "2026-10-29T08:27:56.945Z",
+      "note": "Before adding these prose sentences, explicitly design terminal position confirmations and corroborated true dialogue. For drafted acceptance prose this is a recorded design revision, not a claim that the additions existed in the initial table."
+    },
+    {
+      "id": "review-paper-date",
+      "at": "2026-10-29T09:00:33.198Z",
+      "note": "Correct watermark hook to paper-stock provenance; no assertion that watermark alone dates printing. Designed before corresponding prose replacement."
+    },
+    {
+      "id": "delegated-gold-review",
+      "at": "2026-10-29T09:05:06.993Z",
+      "note": "Apply delegated AI annotation corrections without changing the original story events; history references and cognitive correction exits are explicit design commitments."
+    }
+  ]
+}

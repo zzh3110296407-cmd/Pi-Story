@@ -1,0 +1,136 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261030T014149Z-0571303-r1",
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 21,
+      "value": 0.9523809523809523,
+      "successes": 20,
+      "failures": 1,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.7733063992587743,
+        0.9915440121901737
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T05",
+      "n": 12,
+      "value": 0.5,
+      "successes": 6,
+      "failures": 6,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.2537815976337061,
+        0.7462184023662939
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 27,
+        "knownUsd": 0.0516291,
+        "reservedUsd": 0.4628502,
+        "unknownCalls": 1,
+        "networkRequests": 21,
+        "mainLogicalRequests": 27,
+        "mainNetworkRequests": 21
+      },
+      "chapters": [],
+      "overhead": {
+        "knownUsd": 0.0516291,
+        "reservedUsd": 0.4628502,
+        "unknownCalls": 1,
+        "networkRequests": 21,
+        "mainLogicalRequests": 27,
+        "mainNetworkRequests": 21
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "25521dc8d95e4f6e1e3a6ece21cb4f8cc7892d42b78fe68cadc571ef060b148f",
+        "characters": 6505,
+        "estimatedTokens": 4059
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "a064c45fca7be9a7dd054ef12225093ed46478ffa8b01a0a8f0f0fe98cff54eb",
+        "characters": 10361,
+        "estimatedTokens": 5250
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "bbb5bd162b1e51d94359eeffe1b0fff27c0f5ca48c17b95cc53ce86109c7559b",
+        "characters": 6003,
+        "estimatedTokens": 3903
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 0,
+      "median": null,
+      "max": null
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0
+  }
+}

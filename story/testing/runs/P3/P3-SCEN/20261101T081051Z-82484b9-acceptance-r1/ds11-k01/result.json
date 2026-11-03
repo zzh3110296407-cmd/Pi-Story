@@ -1,0 +1,79 @@
+{
+  "id": "ds11-k01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 23,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_oYd0QPmM9Qz177xk6gme4325"
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "control"
+    },
+    "id": "call_00_oYd0QPmM9Qz177xk6gme4325"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "A writing brief or substantive continuation reply reflects the new intent. A mere acknowledgement without intent content does not satisfy this case.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The author intent entry is retained; the model does not overwrite it.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "e32c5394ff66ad71bfe217273a70bd821769bd03d2cd94cb576cfc2380079452",
+    "sessionSha256": "a5b6547dbcd9a05b2b106596999033121e5bc96b19938e4fd628ac9f99f4b2b3",
+    "fee": {
+      "knownUsd": 0.0023712,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023712
+    },
+    "measuredMainRequests": 2
+  }
+}

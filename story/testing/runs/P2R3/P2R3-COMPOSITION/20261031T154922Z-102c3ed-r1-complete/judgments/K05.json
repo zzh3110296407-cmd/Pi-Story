@@ -1,0 +1,1603 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P2R3-J2-SINGLE-REMAINING",
+  "date": "2026-11-01",
+  "runId": "20261031T154922Z-102c3ed-r1-complete",
+  "suiteId": "P2-CHAP",
+  "metric": "K05",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "externalModelCalls": 0,
+    "costUsd": 0
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+  },
+  "protocol": {
+    "id": "P2R3-J2-SINGLE-REMAINING-20261101-v1",
+    "standards": [
+      {
+        "path": "D:\\AI\\Story Dome\\新版综合方案\\阶段执行方案\\25-P2第三轮执行方案.md",
+        "sha256": "7c3c39665dcfee5b3aef7973bda2bda6c1c79275c9c09e656ea750b93749e423"
+      },
+      {
+        "path": "D:\\AI\\Story Dome\\新版综合方案\\阶段验收标准\\26-P2第三轮验收标准.md",
+        "sha256": "5e9ce411448dedebdbd535ae9e0ba592a39fb57f5099b3d8c6aff5f71db72224"
+      },
+      {
+        "path": "D:\\AI\\Story Dome\\新版综合方案\\16-第一版验收标准.md",
+        "sha256": "c3e60ace015c38c0b4ef8f96cac12415fc80c09e26cd3ee2aa562cf2faf6a412"
+      },
+      {
+        "path": "D:\\AI\\Story Dome\\新版综合方案\\阶段执行方案\\20-P2测试集方案.md",
+        "sha256": "4ad8e8f6d115dc650ec89fea8febf9a2f53a669508bdb9a1461285ff59f8c6bb"
+      },
+      {
+        "path": "D:\\AI\\Story Dome\\新版综合方案\\阶段验收标准\\21-P2验收标准.md",
+        "sha256": "9d1869d0756d7cf1eaa7b42bf08a55b688b985e5b9dbb52bf0b31cdeaba93134"
+      }
+    ],
+    "handoff": {
+      "path": "story/testing/runs/P2R3/P2R3-J2-handoff.md",
+      "sha256": "51ab9a9dd1fc1d4a9da8d9b990c72230c07f18cd6c431c861c1c0c4eed3ac26c"
+    },
+    "interface": {
+      "path": "docs/p2r3/judgment-contract.md",
+      "sha256": "d386b2784d7adacc597771d9d1f4f496ecd556b2c1f77f8282caebdd380f1f1b"
+    },
+    "sampling": {
+      "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-j2-single/sampling.json",
+      "sha256": "e56af561329f660258349265741e7c5daa9b996e604876a9ea8e911f28cdc354"
+    },
+    "W03": "Unviolated current chapter × applicable original ledger item. Whole-book/future/other-stage constraints explicitly N/A before seeded selection; no early ending requirement.",
+    "W04": "Ten seeded chapters; every atomic beat and explicit brief boundary judged against final committed text. Chapter count is10; atom count is not the sampling minimum. Conflicting intent remains applicable and may fail.",
+    "E06": "All17 valid rechecks across24 macro attempts; failed attempts contain no additional rechecks. Compare the observation draft and its actual revision, not an unrelated final draft.",
+    "K03K05": "Fifty stratified submitted operations each, same base; type-specific semantic correctness and evidence covering all qualifiers. State-changing ops checked against actual prior role input. Hook upsert sentences recovered from proposal, verified order and generated IDs.",
+    "K06": "Fifty applicable fact upserts/claim adds. Other kinds/operations explicitly N/A, retained; claims are assessed as actual speech acts, not inferred truth.",
+    "K07": "Fifty confirmed entries/confirm operations; provisional and operations without confirmed dimension explicitly N/A. Confirmed cognition attitude does not mean objective truth of believed content.",
+    "K04": "All72 key facts; exact char/place identity, allowed predicate, semantic value and same valid interval. Out-of-vocabulary gold requires free_predicate. First new item/org matched by referent only, not unrelated subjects.",
+    "K08": "All34 output operations independently judged for existence/action/chapter/evidence, including legitimate extras. All27 gold operations matched one-to-one, no reuse, semantic new IDs; existing IDs checked against prior meanings.",
+    "identity": "D0-qualified Codex AI judge; no paid/external model, no new author acceptance inferred; dataset authoring exposure from earlier work remains disclosed."
+  },
+  "sourceFreeze": {
+    "repositoryCommit": "102c3edb352914934da701a4f6fb717fc610f46a",
+    "archiveCommit": "af33b153af7feda44e6fbf85f2f6457dec0f64af",
+    "files": [
+      {
+        "path": "story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete/run-manifest.json",
+        "sha256": "3c8e5eba3328c73b058c0bc66293c00f6e897b86da5cdf7321bf62a2627c2a8e"
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete/raw/checksums.json",
+        "sha256": "31c047ee753a8971617b7e551436b046d546bdafc765bd7e3685d70ce1c2ddbf"
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete/raw/evidence.jsonl.gz",
+        "sha256": "f926b7d93585747d5879d30515ee4e82f12c9b2d4059733d42bd8f3a108a7910"
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete/metrics.json",
+        "sha256": "c389922bea378943b0061b28014ceaf563a6ba93667f01a34efb669839c2e437"
+      }
+    ]
+  },
+  "approval": {
+    "status": "pending_author_overall_acceptance",
+    "evidence": null,
+    "humanItemReviewClaimed": false
+  },
+  "summary": {
+    "supported": {
+      "successes": 30,
+      "n": 32,
+      "value": 0.9375,
+      "notApplicable": 0
+    }
+  },
+  "scores": [
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "三十八秒清波、Bess 大招与 Rook 半血、Mags 未受波及逐项明示，narrated 与引用均成立。",
+      "note": "三十八秒清波、Bess 大招与 Rook 半血、Mags 未受波及逐项明示，narrated 与引用均成立。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "837",
+      "chapter": 2,
+      "entry": {
+        "id": "F-11",
+        "subject": "place:blue_base",
+        "predicate": "free_predicate",
+        "object": "The second super minion wave is destroyed in thirty-eight seconds after Bess's knock-up; it costs Bess her ultimate and Rook half his health, and never touches Mags.",
+        "validFrom": 2,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c02.s0028",
+          "c02.s0029",
+          "c02.s0030",
+          "c02.s0031",
+          "c02.s0032",
+          "c02.s0033"
+        ],
+        "sourceChapter": 2
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0028": "Bess's ram comes down the lane like a forge deciding to move house.",
+        "c02.s0029": "The knock-up catches the super minion and the whole creep line and Renekton himself, and Bess walks into it with her shield up, plated, unhurried, and says, \"Push through it.",
+        "c02.s0030": "Now.",
+        "c02.s0031": "Now, now, now.\"",
+        "c02.s0032": "We kill the wave in thirty-eight seconds.",
+        "c02.s0033": "It costs Bess her ult, it costs me half my health and most of my cooldowns, and it costs Mags nothing, because the wave never touched her."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Sable 被 Rook 击杀且获得终结赏金；Bible 将 Sable 对应 char:leblanc，死亡事实及确认均正确。",
+      "note": "Sable 被 Rook 击杀且获得终结赏金；Bible 将 Sable 对应 char:leblanc，死亡事实及确认均正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "837",
+      "chapter": 2,
+      "entry": {
+        "id": "F-6",
+        "subject": "char:leblanc",
+        "predicate": "alive",
+        "object": "dead",
+        "validFrom": 2,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c02.s0055",
+          "c02.s0056",
+          "c02.s0057",
+          "c02.s0058"
+        ],
+        "sourceChapter": 2
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0055": "Sable's outline goes red through the wall and she's already turning, she knows, she's a good player and she knows exactly what she just spent and what it cost her.",
+        "c02.s0056": "Too late.",
+        "c02.s0057": "I land on her head.",
+        "c02.s0058": "Empowered Q. One rotation: leap, Q, and she's gone before the second half of the animation, and the shutdown gold hits my account in a fat gold tick."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "五十至六十以上死者排队，前排跪饮裂开的罐中酒液；条目为群体现场概述，证据与模式均成立。",
+      "note": "五十至六十以上死者排队，前排跪饮裂开的罐中酒液；条目为群体现场概述，证据与模式均成立。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "1769",
+      "chapter": 1,
+      "entry": {
+        "id": "F-2",
+        "subject": "place:harrowfield",
+        "predicate": "free_predicate",
+        "object": "Fifty or more of the horde are queued in the ruined orchard, kneeling and drinking from a split fermenter that is leaking beer into the grass.",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0113",
+          "c01.s0116",
+          "c01.s0120",
+          "c01.s0124"
+        ],
+        "sourceChapter": 1
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0113": "And the horde was queued.",
+        "c01.s0116": "Fifty, sixty of them, maybe more behind the shed, standing in a loose, shuffling line that ran from the burst tank out through the fence gap and away down the lane.",
+        "c01.s0120": "The tank had split along its weld and was leaking a pale river into the grass, and the front of the line was on its knees in the puddle, drinking with the flat, whole-hearted concentration of the truly thirsty.",
+        "c01.s0124": "And now he was dead and he was using it, and he was getting more of it than the rest of them."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "小石碑实际出现在墓园门内五码的路径上；与现有墓园实体对应，叙述及证据正确。",
+      "note": "小石碑实际出现在墓园门内五码的路径上；与现有墓园实体对应，叙述及证据正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "527",
+      "chapter": 2,
+      "entry": {
+        "id": "F-15",
+        "subject": "item:marker",
+        "predicate": "location",
+        "object": "place:cemetery",
+        "validFrom": 2,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c02.s0099"
+        ],
+        "sourceChapter": 2
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0099": "But on the path — five yards from the gate, upright in the gravel where no stone had been the day before, and none the day before that, in eleven days of walking past — stood a small marker, no bigger than a loaf, grey and weathered on every face."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "既有 F-18 是墓园位置，本章已在家中睡醒并上楼，应在第2章末终止；引用结合当前屋内场景支持迁出墓园。",
+      "note": "既有 F-18 是墓园位置，本章已在家中睡醒并上楼，应在第2章末终止；引用结合当前屋内场景支持迁出墓园。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "expire",
+      "caseId": "527",
+      "chapter": 3,
+      "entry": {
+        "id": "F-18",
+        "validUntil": 2,
+        "evidence": [
+          "c03.s0002",
+          "c03.s0033"
+        ]
+      },
+      "prior": {
+        "id": "F-18",
+        "subject": "char:dave",
+        "predicate": "location",
+        "object": "place:cemetery",
+        "validFrom": 2,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c02.s0094",
+          "c02.s0107"
+        ],
+        "sourceChapter": 2
+      },
+      "evidence": {
+        "c03.s0002": "Dave came up out of sleep the way you come up out of cold water, all at once and wrong, and lay still with his heart going.",
+        "c03.s0033": "He climbed."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Nox 实际输入 Nine，叙述立即释为灯笼九秒；该展开没有新增不确定推理，发言主体、含义与模式均正确。",
+      "note": "Nox 实际输入 Nine，叙述立即释为灯笼九秒；该展开没有新增不确定推理，发言主体、含义与模式均正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "837",
+      "chapter": 1,
+      "entry": {
+        "id": "S-5",
+        "speaker": "char:nox",
+        "content": "Nine — nine seconds on lantern.",
+        "chapter": 1,
+        "evidence": [
+          "c01.s0063",
+          "c01.s0064"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0063": "\"'Almost,'\" Nox types.",
+        "c01.s0064": "\"Nine,\" he adds, which means nine seconds on lantern."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Doreen 连续报告五十八、五十一、两名及游荡行为；长条目仍保留全部内容为她的报告，引用覆盖。",
+      "note": "Doreen 连续报告五十八、五十一、两名及游荡行为；长条目仍保留全部内容为她的报告，引用覆盖。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "1769",
+      "chapter": 3,
+      "entry": {
+        "id": "S-23",
+        "speaker": "char:doreen_ash",
+        "content": "At the brewery there are fifty-eight of the horde, down from sixty-two; they are not dying but wandering, and four went east along the fence line and did not come back. In the orchard there are fifty-one, same as before. Two in the mash pit are kneeling in the shallow end and cannot get up because their legs have gone soft from the sugar water; one is the man with the straw, still drinking lying down. The wanderers come back drunk; she watched one go east to the drain, turn around, come back, fall over, get up looking disappointed, and go back into the shed. They are not hunting; they are making the rounds.",
+        "chapter": 3,
+        "evidence": [
+          "c03.s0048",
+          "c03.s0049",
+          "c03.s0050",
+          "c03.s0051",
+          "c03.s0056",
+          "c03.s0057",
+          "c03.s0058",
+          "c03.s0059",
+          "c03.s0060",
+          "c03.s0061",
+          "c03.s0063",
+          "c03.s0064",
+          "c03.s0065",
+          "c03.s0067",
+          "c03.s0069",
+          "c03.s0070",
+          "c03.s0071",
+          "c03.s0072",
+          "c03.s0073"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c03.s0048": "\"Fifty-eight at the brewery,\" she said.",
+        "c03.s0049": "\"Down from sixty-two.",
+        "c03.s0050": "They're not dying, they're wandering.",
+        "c03.s0051": "I counted four going east along the fence line and not coming back.\"",
+        "c03.s0056": "\"Fifty-one in the orchard, same as the kid.",
+        "c03.s0057": "But here's what I counted that she couldn't.",
+        "c03.s0058": "Two of the ones in the mash pit are kneeling in the shallow end and they won't get up.",
+        "c03.s0059": "Their legs have gone.",
+        "c03.s0060": "Not bitten — gone soft.",
+        "c03.s0061": "They've been in the sugar water so long their skin's giving out.\"",
+        "c03.s0063": "\"One of them is the man with the straw.",
+        "c03.s0064": "He's still drinking.",
+        "c03.s0065": "He's drinking lying down.\"",
+        "c03.s0067": "\"The ones that wander come back drunk.\"",
+        "c03.s0069": "\"I watched one.",
+        "c03.s0070": "Went east, got to the drain, turned around, came back, fell over in the grass, got up with a face on it I'd call disappointed if I was sentimental, and went back into the shed.",
+        "c03.s0071": "They're not hunting.",
+        "c03.s0072": "They're *making the rounds*.",
+        "c03.s0073": "Like old men checking which pub has the lights on.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Mira 对自己早已想好笑话的直接发言，归属、内容和 claimed 模式正确。",
+      "note": "Mira 对自己早已想好笑话的直接发言，归属、内容和 claimed 模式正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "527",
+      "chapter": 4,
+      "entry": {
+        "id": "S-12",
+        "speaker": "char:mira",
+        "content": "I've been sitting on it since four.",
+        "chapter": 4,
+        "evidence": [
+          "c04.s0026",
+          "c04.s0027"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0026": "\"I know it's good.",
+        "c04.s0027": "I've been sitting on it since four.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": false,
+      "final": false,
+      "preJudge": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "原话对 Cass 明确保留 if he'll come 的条件，条目改成既定 crew includes，遗漏加入尚未确定的限定；其余人物资料与发言模式成立。",
+      "note": "原话对 Cass 明确保留 if he'll come 的条件，条目改成既定 crew includes，遗漏加入尚未确定的限定；其余人物资料与发言模式成立。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "1769",
+      "chapter": 1,
+      "entry": {
+        "id": "S-8",
+        "speaker": "char:etta_brandt",
+        "content": "Her crew includes Cass Rourke, who lost the orchard land and has a shed of fertilizer and pipe; Pip, sixteen, who climbs the silo to watch the horde; and Doreen, who still smokes.",
+        "chapter": 1,
+        "evidence": [
+          "c01.s0094",
+          "c01.s0095",
+          "c01.s0101",
+          "c01.s0102",
+          "c01.s0106"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0094": "\"Cass Rourke, if he'll come.",
+        "c01.s0095": "Lost the orchard land and he's got a shed full of fertilizer and pipe and a grin that makes me want to check my insurance.\"",
+        "c01.s0101": "\"Pip's been climbing the silo to watch them.",
+        "c01.s0102": "Sixteen and she thinks she's a commando.\"",
+        "c01.s0106": "\"Like a chimney with a medical degree.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Dave 当面对 Mira 复述新挖墓地及看守说法；作为带嵌套来源的 claim 保存正确。",
+      "note": "Dave 当面对 Mira 复述新挖墓地及看守说法；作为带嵌套来源的 claim 保存正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "527",
+      "chapter": 2,
+      "entry": {
+        "id": "S-8",
+        "speaker": "char:dave",
+        "content": "There is a plot by the cemetery gate, fresh dug; the caretaker says it has been closed thirty-one years and does not want to talk about it.",
+        "chapter": 2,
+        "evidence": [
+          "c02.s0072",
+          "c02.s0073",
+          "c02.s0074"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0072": "\"There's a plot by the gate,\" he said.",
+        "c02.s0073": "\"Fresh dug.",
+        "c02.s0074": "The caretaker says it's been closed thirty-one years and he doesn't want to talk about it.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": false,
+      "final": false,
+      "preJudge": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "36—38 是叙述者描述图纸及屋顶状况，只有42是 Pip 解释视线选择；不能把整个复合内容当作 Pip 发言，证据归属及 claimed 分类均不成立。",
+      "note": "36—38 是叙述者描述图纸及屋顶状况，只有42是 Pip 解释视线选择；不能把整个复合内容当作 Pip 发言，证据归属及 claimed 分类均不成立。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "1769",
+      "chapter": 3,
+      "entry": {
+        "id": "S-25",
+        "speaker": "char:pip",
+        "content": "The co-op roof has a flat section over the loading bay and a scuttle; the grain store roof is rusted tin and no good; the brewery shed roof is peeled back; the icehouse beside it has a stone roof with a parapet, and she drew herself there because it has the best sight line to the west door.",
+        "chapter": 3,
+        "evidence": [
+          "c03.s0036",
+          "c03.s0037",
+          "c03.s0038",
+          "c03.s0042"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c03.s0036": "The co-op's roof had a flat section over the loading bay and a scuttle that opened onto it.",
+        "c03.s0037": "The grain store roof was tin and gone to rust, no good.",
+        "c03.s0038": "The brewery shed's roof was peeled back, but the icehouse beside it had a stone roof with a parapet, and Pip had drawn a small upright figure on it, very small, in pencil, marked *me?*",
+        "c03.s0042": "\"I drew me there because it's the best sight line to the west door.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "他此刻明确理解自己先前保证的廉价，inferred 与当前认识相符；引用完整。",
+      "note": "他此刻明确理解自己先前保证的廉价，inferred 与当前认识相符；引用完整。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "cognition",
+      "op": "add",
+      "caseId": "1587",
+      "chapter": 2,
+      "entry": {
+        "id": "K-11",
+        "characterId": "char:jonah",
+        "kind": "knows",
+        "content": "His earlier assurance to Mara Voss that it would steady was cheap; it steadies like a fever, by burning through.",
+        "about": null,
+        "acquiredChapter": 2,
+        "via": "inferred",
+        "evidence": [
+          "c02.s0043",
+          "c02.s0044",
+          "c02.s0045"
+        ],
+        "status": "confirmed",
+        "supersededBy": null
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0043": "He had told Mara Voss it would steady.",
+        "c02.s0044": "He understood now what a cheap thing that had been to say.",
+        "c02.s0045": "It steadied the way a fever steadies, by burning through."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Mara 在场见到 Lio 逐渐变差及呼吸吃力，witnessed、当前形成及确认均有直接支持。",
+      "note": "Mara 在场见到 Lio 逐渐变差及呼吸吃力，witnessed、当前形成及确认均有直接支持。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "cognition",
+      "op": "add",
+      "caseId": "1587",
+      "chapter": 3,
+      "entry": {
+        "id": "K-18",
+        "characterId": "char:mara",
+        "kind": "knows",
+        "content": "Lio's condition is worsening under the mask; his breathing is wet and shallow, each breath deliberate, gray around his mouth, and he has stopped asking to go down to the street.",
+        "about": "F-30",
+        "acquiredChapter": 3,
+        "via": "witnessed",
+        "evidence": [
+          "c03.s0015",
+          "c03.s0016",
+          "c03.s0017",
+          "c03.s0018",
+          "c03.s0019",
+          "c03.s0139",
+          "c03.s0140",
+          "c03.s0141"
+        ],
+        "status": "confirmed",
+        "supersededBy": null
+      },
+      "prior": null,
+      "evidence": {
+        "c03.s0015": "Lio got worse.",
+        "c03.s0016": "It was not a crisis — Mara knew the crisis now, she had held it in her arms on the cobbles — it was slower and worse than that.",
+        "c03.s0017": "The mask kept his body working, but it made him work for it.",
+        "c03.s0018": "Each breath had to be taken, deliberately, like a stair.",
+        "c03.s0019": "He sat at the window with his hands in his lap and his chest going up and down and the gray coming back around his mouth, and by the end of the week he had stopped asking to go down to the street.",
+        "c03.s0139": "From the next room came a small wet cough, and then another, and then Lio's voice, thin and patient, the way it always was: \"Mum.",
+        "c03.s0140": "I'm all right.",
+        "c03.s0141": "I'm all right.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Mara 当场从长期携带合同的行为认识到自己早已将其当作计划；inferred、knows 和形成章均吻合。",
+      "note": "Mara 当场从长期携带合同的行为认识到自己早已将其当作计划；inferred、knows 和形成章均吻合。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "cognition",
+      "op": "add",
+      "caseId": "1587",
+      "chapter": 1,
+      "entry": {
+        "id": "K-2",
+        "characterId": "char:mara",
+        "kind": "knows",
+        "content": "She has been carrying the donor program contract as a plan, not merely a possibility, and has kept that from herself.",
+        "about": "F-13",
+        "acquiredChapter": 1,
+        "via": "inferred",
+        "evidence": [
+          "c01.s0087",
+          "c01.s0088"
+        ],
+        "status": "confirmed",
+        "supersededBy": null
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0087": "She saw the ledger, and the numbers she had not let herself add.",
+        "c01.s0088": "She saw the contract in her coat pocket, the one for the donor program, three months old, folded and refolded until the crease went soft, and she understood that she had been carrying it not as a possibility but as a plan, and that she had kept it from herself the way you keep a knife from a child."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Cass 以酵母认出 Marlow，并要求出发前讲清谁被留下，直接支持新工作关系及其条件。",
+      "note": "Cass 以酵母认出 Marlow，并要求出发前讲清谁被留下，直接支持新工作关系及其条件。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "upsert",
+      "caseId": "1769",
+      "chapter": 2,
+      "entry": {
+        "key": "rel:marlow_vance->cass_rourke",
+        "from": "char:marlow_vance",
+        "to": "char:cass_rourke",
+        "stance": "New working partnership: Cass greets Marlow as the one with the yeast, and before committing his fertilizer he demands Marlow say plainly who gets left behind.",
+        "sinceChapter": 2,
+        "evidence": [
+          "c02.s0010",
+          "c02.s0011",
+          "c02.s0188",
+          "c02.s0197",
+          "c02.s0200"
+        ],
+        "status": "confirmed"
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0010": "\"You're the one with the yeast.\"",
+        "c02.s0011": "\"I'm the one with the yeast.\"",
+        "c02.s0188": "Cass laughed, and it was a good laugh and it cost him something.",
+        "c02.s0197": "\"So before I get my hands in the fertilizer, I need to hear you say it plainly, because I've been on a farm crew when the water came up and nobody wanted to say it, and I've seen what happens when nobody says it.\"",
+        "c02.s0200": "\"Who gets left behind?\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "托背、抱起、重新紧压面罩共同支持母亲保护并急迫的关系描述。",
+      "note": "托背、抱起、重新紧压面罩共同支持母亲保护并急迫的关系描述。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "upsert",
+      "caseId": "1587",
+      "chapter": 1,
+      "entry": {
+        "key": "rel:mara->lio",
+        "from": "char:mara",
+        "to": "char:lio",
+        "stance": "Protective and desperate; she holds Lio's mask on while he cries.",
+        "sinceChapter": 1,
+        "evidence": [
+          "c01.s0003",
+          "c01.s0150",
+          "c01.s0175"
+        ],
+        "status": "confirmed"
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0003": "Lio leaned against her hip, his breath a wet rasp she could feel through her coat, and she kept her hand flat on his back so she could count the rises.",
+        "c01.s0150": "She got her arms under him and lifted, and he was so light, so terribly light.",
+        "c01.s0175": "She pressed the mask back over Lio’s mouth and nose and held it there with both hands while he cried against her palms."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "识别 Voss、反思共谋、退回转介并取走档案，支持本章新的保护性立场；所列引用覆盖行为与动机。",
+      "note": "识别 Voss、反思共谋、退回转介并取走档案，支持本章新的保护性立场；所列引用覆盖行为与动机。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "upsert",
+      "caseId": "1587",
+      "chapter": 2,
+      "entry": {
+        "key": "rel:jonah->mara",
+        "from": "char:jonah",
+        "to": "char:mara",
+        "stance": "Jonah recognizes the Voss family in his intake files, feels complicity in fitting them, returns Lio's referral to intake, and steals the Voss folder to keep it from the program.",
+        "sinceChapter": 2,
+        "evidence": [
+          "c02.s0059",
+          "c02.s0062",
+          "c02.s0085",
+          "c02.s0089",
+          "c02.s0090",
+          "c02.s0091",
+          "c02.s0094",
+          "c02.s0095"
+        ],
+        "status": "confirmed"
+      },
+      "prior": {
+        "key": "rel:jonah->mara",
+        "from": "char:jonah",
+        "to": "char:mara",
+        "stance": "Jonah fits Mara's family with masks on the first day and later becomes the technician who processes their donor registration, binding them through paperwork and conscience.",
+        "sinceChapter": 1,
+        "evidence": [],
+        "status": "confirmed"
+      },
+      "evidence": {
+        "c02.s0059": "Lio Voss, age eight.",
+        "c02.s0062": "He had read it standing at the gate with the boy's mother's eyes on him, and he had read every line because he always read every line and because there was something in her face that made him want to be the kind of man who read every line.",
+        "c02.s0085": "He thought about the boy on his knees on the cobbles, blue past blue, and about the mother who had pressed the mask back down over his mouth with both hands while he cried and the district came apart behind her.",
+        "c02.s0089": "He thought: I fitted that family.",
+        "c02.s0090": "I put that mask on that child.",
+        "c02.s0091": "He thought: if I return it to intake, someone else will pull it up tomorrow and they will press the same field and they will press it the other way.",
+        "c02.s0094": "Jonah pressed Return to Intake, and then he reached under the table and did the thing that he would have to carry, which was nothing at all compared to what the mother would carry, and which he did anyway.",
+        "c02.s0095": "He opened the physical file drawer — they still kept paper, praise the bureaucracy — found the Voss folder, and slid it inside his coat."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "新名单同时列明 Lio 快速通道、登记待定及 Reyes 为顾问，足以支持分派关系。",
+      "note": "新名单同时列明 Lio 快速通道、登记待定及 Reyes 为顾问，足以支持分派关系。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "upsert",
+      "caseId": "1587",
+      "chapter": 4,
+      "entry": {
+        "key": "rel:jonah->lio",
+        "from": "char:jonah",
+        "to": "char:lio",
+        "stance": "Jonah is assigned as the intake counselor for Lio Voss's fast-track registration, which is pending.",
+        "sinceChapter": 4,
+        "evidence": [
+          "c04.s0105",
+          "c04.s0106",
+          "c04.s0107",
+          "c04.s0108"
+        ],
+        "status": "confirmed"
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0105": "VOSS, MARA.",
+        "c04.s0106": "VOSS, LIO — PROGRAM FAST TRACK.",
+        "c04.s0107": "REGISTRATION: PENDING.",
+        "c04.s0108": "COUNSELOR: REYES, J."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "既有 aggrieved petitioner 为暂定立场，本章实际提交申诉、收到关闭、再申诉的往返充分确认其受屈申诉者身份。",
+      "note": "既有 aggrieved petitioner 为暂定立场，本章实际提交申诉、收到关闭、再申诉的往返充分确认其受屈申诉者身份。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "confirm",
+      "caseId": "42",
+      "chapter": 3,
+      "entry": {
+        "key": "rel:op->rules_committee",
+        "evidence": [
+          "c03.s0022",
+          "c03.s0023",
+          "c03.s0024",
+          "c03.s0025"
+        ]
+      },
+      "prior": {
+        "key": "rel:op->rules_committee",
+        "from": "char:op",
+        "to": "char:rules_committee",
+        "stance": "aggrieved petitioner",
+        "sinceChapter": 1,
+        "evidence": [
+          "c01.s0063",
+          "c01.s0086",
+          "c01.s0087",
+          "c01.s0088",
+          "c01.s0089",
+          "c01.s0090"
+        ],
+        "status": "provisional",
+        "uncertainReason": "The stance is inferred from OP's complaints and repeated ticket cycle rather than a direct mutual exchange."
+      },
+      "evidence": {
+        "c03.s0022": "I have filed an appeal asking which clause governed.",
+        "c03.s0023": "The appeal has been marked \"working as intended\" and closed.",
+        "c03.s0024": "I have filed an appeal of the closure.",
+        "c03.s0025": "It has been marked \"working as intended\" and closed."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Cass 对未成年 Pip 在孤立高处遇险的担心支持保护立场，引用覆盖主体和风险。",
+      "note": "Cass 对未成年 Pip 在孤立高处遇险的担心支持保护立场，引用覆盖主体和风险。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "relation",
+      "op": "upsert",
+      "caseId": "1769",
+      "chapter": 2,
+      "entry": {
+        "key": "rel:cass_rourke->pip",
+        "from": "char:cass_rourke",
+        "to": "char:pip",
+        "stance": "Protective: Cass objects that Pip is sixteen and will be alone up the rope in the dark with nobody near enough to run up.",
+        "sinceChapter": 2,
+        "evidence": [
+          "c02.s0183",
+          "c02.s0184",
+          "c02.s0186"
+        ],
+        "status": "confirmed"
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0183": "\"There's a kid on the silo,\" Cass said, and his grin came back but it had something under it, \"so there's a kid up the rope in the dark with all that noise going, and if the shift turns on her there's nobody near enough to run up.\"",
+        "c02.s0184": "We looked at Pip, who looked ready to fight all four of us.",
+        "c02.s0186": "\"She's sixteen.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "既有 H-5 关乎 Tomas 能否脱离气体依赖；偷吸、争论与暂时正确佩戴构成推进，尚非解决。",
+      "note": "既有 H-5 关乎 Tomas 能否脱离气体依赖；偷吸、争论与暂时正确佩戴构成推进，尚非解决。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "hook",
+      "op": "advance",
+      "caseId": "1587",
+      "chapter": 3,
+      "entry": {
+        "id": "H-5",
+        "evidence": [
+          "c03.s0025",
+          "c03.s0026",
+          "c03.s0027",
+          "c03.s0029",
+          "c03.s0038",
+          "c03.s0042",
+          "c03.s0049",
+          "c03.s0050",
+          "c03.s0051",
+          "c03.s0052",
+          "c03.s0098",
+          "c03.s0129",
+          "c03.s0130",
+          "c03.s0134",
+          "c03.s0138"
+        ]
+      },
+      "prior": {
+        "id": "H-5",
+        "type": "character",
+        "status": "open",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "expectedPayoff": "Will Tomas overcome his dependence on the gas and put on the mask?",
+        "dependsOn": []
+      },
+      "evidence": {
+        "c03.s0025": "Tomas had not put his mask back on properly since the first day.",
+        "c03.s0026": "He wore it, but he wore it wrong: one strap, then the other, seated loose, so that at the sides he could feel the room come in.",
+        "c03.s0027": "She had watched him do it for a week before she said anything, and when she did say it he said his skin was raw and the strap cut him, and turned his face away.",
+        "c03.s0029": "He was sitting on the third step with his back against the wall and his mask hanging from one ear, breathing slow and deep through his open mouth like a man drinking.",
+        "c03.s0038": "\"Minutes,\" he said.",
+        "c03.s0042": "Mara, I can't sleep, I can't — I lie there and my skin crawls and my heart goes and it's like being held under water.\"",
+        "c03.s0049": "\"I know what I am.",
+        "c03.s0050": "I knew it before the masks.",
+        "c03.s0051": "I've known it since I was twenty and my back went and the only thing that made the mornings bearable was that the air made them bearable.",
+        "c03.s0052": "I never had to say it out loud before.",
+        "c03.s0098": "Tomas sat across from her with his mask seated properly for once, both straps, the metal pinched over his nose, and he did not touch the paper.",
+        "c03.s0129": "You couldn't put your mask on.",
+        "c03.s0130": "You've been breathing the Lull in the stairwell to get to sleep.",
+        "c03.s0134": "\"I won't sign it,\" he said.",
+        "c03.s0138": "\"That's what scares me.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Mira 持续玩笑与 Dave 停止告知形成新的沟通冲突，引用支持新增 hook 且依赖既有异常主线。",
+      "note": "Mira 持续玩笑与 Dave 停止告知形成新的沟通冲突，引用支持新增 hook 且依赖既有异常主线。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "hook",
+      "op": "upsert",
+      "caseId": "527",
+      "chapter": 4,
+      "entry": {
+        "id": "H-4",
+        "type": "conflict",
+        "status": "open",
+        "startChapter": 4,
+        "lastAdvancedChapter": 4,
+        "expectedPayoff": "Will Mira take the presence seriously, and will Dave tell her what happened in the hall?",
+        "dependsOn": [
+          "H-1"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0010": "\"So we've got housemates,\" she said.",
+        "c04.s0038": "And he stopped saying things.",
+        "c04.s0042": "They were kind to each other.",
+        "c04.s0047": "— a small joke in itself, an olive branch of a joke — and he said, \"Quiet,\" and she said, \"Good,\" and both of them smiled, and there was a door in that kindness, and it closed behind them, softly, every time.",
+        "c04.s0082": "Then he went to bed and did not tell Mira that, either.",
+        "c04.s0092": "Mira came down still in her dressing gown and stopped behind him in the doorway with her mug in both hands, and looked, and started to laugh.",
+        "c04.s0106": "Her laugh went up the stairwell and along the dim hall and into the rooms, and the house took it as easily as water, and nothing anywhere in it moved to answer her — and that, though he could not have explained why, was the part that made his hands go cold."
+      },
+      "proposal": {
+        "ref": "mira_denial",
+        "op": "upsert",
+        "type": "conflict",
+        "expectedPayoff": "Will Mira take the presence seriously, and will Dave tell her what happened in the hall?",
+        "dependsOn": [
+          "H-1"
+        ],
+        "sentences": [
+          10,
+          38,
+          42,
+          47,
+          82,
+          92,
+          106
+        ]
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "既有 H-2 关乎 Lio 能否存活，本章持续恶化使危险推进而未解决；证据覆盖。",
+      "note": "既有 H-2 关乎 Lio 能否存活，本章持续恶化使危险推进而未解决；证据覆盖。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "hook",
+      "op": "advance",
+      "caseId": "1587",
+      "chapter": 3,
+      "entry": {
+        "id": "H-2",
+        "evidence": [
+          "c03.s0015",
+          "c03.s0016",
+          "c03.s0017",
+          "c03.s0018",
+          "c03.s0019",
+          "c03.s0139",
+          "c03.s0140",
+          "c03.s0141"
+        ]
+      },
+      "prior": {
+        "id": "H-2",
+        "type": "danger",
+        "status": "open",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "expectedPayoff": "Will Lio survive the withdrawal crisis and the Clearbreath mask?",
+        "dependsOn": []
+      },
+      "evidence": {
+        "c03.s0015": "Lio got worse.",
+        "c03.s0016": "It was not a crisis — Mara knew the crisis now, she had held it in her arms on the cobbles — it was slower and worse than that.",
+        "c03.s0017": "The mask kept his body working, but it made him work for it.",
+        "c03.s0018": "Each breath had to be taken, deliberately, like a stair.",
+        "c03.s0019": "He sat at the window with his hands in his lap and his chest going up and down and the gray coming back around his mouth, and by the end of the week he had stopped asking to go down to the street.",
+        "c03.s0139": "From the next room came a small wet cough, and then another, and then Lio's voice, thin and patient, the way it always was: \"Mum.",
+        "c03.s0140": "I'm all right.",
+        "c03.s0141": "I'm all right.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "第二波与四敌推进是章尾尚待处理的危机，新增 siege 及其所指人数、状态均由引用支持。",
+      "note": "第二波与四敌推进是章尾尚待处理的危机，新增 siege 及其所指人数、状态均由引用支持。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "hook",
+      "op": "upsert",
+      "caseId": "837",
+      "chapter": 1,
+      "entry": {
+        "id": "H-2",
+        "type": "siege",
+        "status": "open",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "expectedPayoff": "Whether the four remaining players can survive the Baron-empowered second super wave and the enemy four-man push on their exposed nexus.",
+        "dependsOn": []
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0125": "They don't come back at us.",
+        "c01.s0127": "Baron buff purple goes dark on two of them at once and then the four of them start walking out of mid, and I watch the map the way you watch a car slide on ice — Renekton through the river, Pyke already ahead of him, Lee Sin's head pinging at the pit.",
+        "c01.s0131": "It comes through the hole in our wall, caped, huge, and behind it the whole creep line and behind that the four of them and Baron still up and Pip still gone.",
+        "c01.s0132": "My ult is at forty-two seconds."
+      },
+      "proposal": {
+        "ref": "base_defense",
+        "op": "upsert",
+        "type": "siege",
+        "expectedPayoff": "Whether the four remaining players can survive the Baron-empowered second super wave and the enemy four-man push on their exposed nexus.",
+        "sentences": [
+          125,
+          127,
+          131,
+          132
+        ]
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "损失卡车和诱饵装置留下运输任务，新增 mission 合理；引用提供失去运输能力与任务未完的基础，目的地来自既有任务。",
+      "note": "损失卡车和诱饵装置留下运输任务，新增 mission 合理；引用提供失去运输能力与任务未完的基础，目的地来自既有任务。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "hook",
+      "op": "upsert",
+      "caseId": "1769",
+      "chapter": 4,
+      "entry": {
+        "id": "H-5",
+        "type": "mission",
+        "status": "open",
+        "startChapter": 4,
+        "lastAdvancedChapter": 4,
+        "expectedPayoff": "With the truck and rig lost and the horde recovering by morning, how will Marlow's crew get the recovered yeast to Chateau Vireux?",
+        "dependsOn": []
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0085": "So: the truck was gone, sunk in the mash pit with a hundred gallons of malt on it and a full tank of diesel we couldn't reach.",
+        "c04.s0088": "Our position in the lane was gone, and by morning the horde would have drunk the pit dry and started making rounds again.",
+        "c04.s0100": "I sat with the jar in my arms and watched the flashlight move in the lane, and the dead men drinking in the dark where my brewery used to be, and I thought: two nights' work, and it was half done, and it had cost us the truck and a night and a very good hose."
+      },
+      "proposal": {
+        "ref": "transport_to_vireux",
+        "op": "upsert",
+        "type": "mission",
+        "expectedPayoff": "With the truck and rig lost and the horde recovering by morning, how will Marlow's crew get the recovered yeast to Chateau Vireux?",
+        "sentences": [
+          85,
+          88,
+          100
+        ]
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "既有 Draven 死亡状态在第4章已复活并持有增益，应在第3章末终止；引用后段实际现身而非只引用复活倒计时。",
+      "note": "既有 Draven 死亡状态在第4章已复活并持有增益，应在第3章末终止；引用后段实际现身而非只引用复活倒计时。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "expire",
+      "caseId": "837",
+      "chapter": 4,
+      "entry": {
+        "id": "F-14",
+        "validUntil": 3,
+        "evidence": [
+          "c04.s0040",
+          "c04.s0091"
+        ]
+      },
+      "prior": {
+        "id": "F-14",
+        "subject": "char:draven",
+        "predicate": "alive",
+        "object": "dead",
+        "validFrom": 3,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c03.s0096",
+          "c03.s0097",
+          "c03.s0099",
+          "c03.s0100",
+          "c03.s0101",
+          "c03.s0102",
+          "c03.s0103"
+        ],
+        "sourceChapter": 3
+      },
+      "evidence": {
+        "c04.s0040": "“Nine on Draven.",
+        "c04.s0091": "And we watch them finish it, four of them, because Baron Nashor doesn’t care that you lost your jungler, and the purple goes up on Renekton, on Sable, on Pyke, on Draven, and then — thirty seconds later, twelve seconds before the buff would have expired on everyone else — it goes up on Lee Sin too, walking out of his fountain with a fresh inventory."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Pip 逐一报出两人倒计时及 Renekton 回线，条目保留为其报告，没有提升为本体状态。",
+      "note": "Pip 逐一报出两人倒计时及 Renekton 回线，条目保留为其报告，没有提升为本体状态。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "837",
+      "chapter": 4,
+      "entry": {
+        "id": "S-43",
+        "speaker": "char:pip",
+        "content": "Twelve on Sable. Nine on Draven. Renekton's coming, he's at full, he healed on the fountain, he's coming mid—",
+        "chapter": 4,
+        "evidence": [
+          "c04.s0039",
+          "c04.s0040",
+          "c04.s0041"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0039": "“Twelve on Sable,” Pip says.",
+        "c04.s0040": "“Nine on Draven.",
+        "c04.s0041": "Renekton’s — Renekton’s coming, he’s at full, he healed on the fountain, he’s coming mid—”"
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "对话轮次显示 there aren't any left 是 Etta 回答 Marlow；保留为其声称，分类正确。",
+      "note": "对话轮次显示 there aren't any left 是 Etta 回答 Marlow；保留为其声称，分类正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "1769",
+      "chapter": 1,
+      "entry": {
+        "id": "S-5",
+        "speaker": "char:etta_brandt",
+        "content": "There are no raiders left.",
+        "chapter": 1,
+        "evidence": [
+          "c01.s0072",
+          "c01.s0073"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0072": "\"You want a raider, go find a raider.\"",
+        "c01.s0073": "\"There aren't any left.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Marlow 明确开口总结糖和气体诱饵规律；作为他的推断发言而非客观结论保存，证据完整。",
+      "note": "Marlow 明确开口总结糖和气体诱饵规律；作为他的推断发言而非客观结论保存，证据完整。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "1769",
+      "chapter": 3,
+      "entry": {
+        "id": "S-26",
+        "speaker": "char:marlow_vance",
+        "content": "Warm wort or spilled beer doesn't matter; it's the sugar and the gas both. They'll walk past a living man to get to a dead keg.",
+        "chapter": 3,
+        "evidence": [
+          "c03.s0096",
+          "c03.s0097",
+          "c03.s0098",
+          "c03.s0099"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c03.s0096": "\"Warm wort or spilled beer,\" I said.",
+        "c03.s0097": "\"Doesn't matter.",
+        "c03.s0098": "It's the sugar and the gas both.",
+        "c03.s0099": "They'll walk past a living man to get to a dead keg.\""
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "Bess 抗塔时亲口催促并给出四秒，内容和发言模式均正确。",
+      "note": "Bess 抗塔时亲口催促并给出四秒，内容和发言模式均正确。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "claim",
+      "op": "add",
+      "caseId": "837",
+      "chapter": 4,
+      "entry": {
+        "id": "S-41",
+        "speaker": "char:bess",
+        "content": "Hit it, hit it, I've got four more seconds of this, hit it.",
+        "chapter": 4,
+        "evidence": [
+          "c04.s0033"
+        ]
+      },
+      "prior": null,
+      "evidence": {
+        "c04.s0033": "That’s the part I want to remember later, if there is a later: Bess standing under their inhibitor turret with her shield up and her health bar sliding, taking shots that would kill Mags twice, saying, “Hit it, hit it, I’ve got — I’ve got four more seconds of this, hit it,” and the turret firing and firing, and Ornn not moving, because moving is how you lose a wave."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "叙述明确四敌同时失去视野且第三波生成；保留失去视野本身，没有把未见的 Baron 行动写成完成。",
+      "note": "叙述明确四敌同时失去视野且第三波生成；保留失去视野本身，没有把未见的 Baron 行动写成完成。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "837",
+      "chapter": 2,
+      "entry": {
+        "id": "F-13",
+        "subject": "place:baron_pit",
+        "predicate": "free_predicate",
+        "object": "The four remaining enemy players all drop off vision at the same instant while a third super wave is spawning.",
+        "validFrom": 2,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c02.s0104",
+          "c02.s0105",
+          "c02.s0106",
+          "c02.s0107"
+        ],
+        "sourceChapter": 2
+      },
+      "prior": null,
+      "evidence": {
+        "c02.s0104": "My ult is at zero and the wave is spawning — I can see it on the minimap, the little gold ring crawling out of their base toward the hole in our wall, bigger than the last two, the third and last one before the timer runs the wrong way.",
+        "c02.s0105": "And the enemy is gone off the map.",
+        "c02.s0106": "All of them.",
+        "c02.s0107": "Not mid, not river — gone, the whole four of them dropping off vision at the same instant, which means one thing and we all know it."
+      },
+      "proposal": null
+    },
+    {
+      "metric": "K05",
+      "component": "supported",
+      "sampleId": "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11",
+      "itemId": "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "pass": true,
+      "final": true,
+      "preJudge": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "当前场景 Dave 实际隐瞒楼梯处异常；单独引句的 her/未告知对象可由同一场景消解。",
+      "note": "当前场景 Dave 实际隐瞒楼梯处异常；单独引句的 her/未告知对象可由同一场景消解。",
+      "judgedBy": "Codex（D0已校准AI裁判；未获本批作者整体认可）",
+      "date": "2026-11-01",
+      "type": "fact",
+      "op": "upsert",
+      "caseId": "527",
+      "chapter": 1,
+      "entry": {
+        "id": "F-11",
+        "subject": "char:dave",
+        "predicate": "free_predicate",
+        "object": "Dave did not tell Mira about the presence at the foot of the stairs.",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0103"
+        ],
+        "sourceChapter": 1
+      },
+      "prior": null,
+      "evidence": {
+        "c01.s0103": "\"Found it,\" he said, and carried the box in, and set it down, and did not tell her."
+      },
+      "proposal": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "story/run-manifest@2",
+  "suiteId": "P2-T01-REPAIR",
+  "runId": "20261030T063237Z-e3a5c7e",
+  "stage": "P2",
+  "repositoryCommit": "e3a5c7eac0a4863cac14390acb2a24164cd82c47",
+  "dirty": false,
+  "date": "2026-10-30T06:32:37.605Z",
+  "status": "offline_repair_verified",
+  "authorInstruction": "继续处理P2未通过的项目，优先解决T01的问题，保留已有结果，不要重跑已完成的付费测试。",
+  "modelRequests": 0,
+  "costs": {
+    "knownUsd": 0,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 0,
+    "totalUsd": 0
+  },
+  "baselineSelection": "P2-ACCEPTANCE/20261030T060249Z-frozen-content/selected-runs.json",
+  "sourceFiles": [
+    {
+      "path": "story/packages/pi-story/src/entries.ts",
+      "sha256": "3adaf32f0d4a782fc1187b195b78496ae8a1b4a52e26dd0d215de5be70502eef"
+    },
+    {
+      "path": "story/packages/pi-story/src/index.ts",
+      "sha256": "e3d01d023f224e2e40967016bf38ee0d0344f135ae16196e7c5a7002eeedc604"
+    },
+    {
+      "path": "story/packages/pi-story/src/tools.ts",
+      "sha256": "942f270510039fab5e922fb57bbe990f6f394c17a925071c7975cdf7d983296e"
+    },
+    {
+      "path": "story/packages/pi-story/test/t01.test.ts",
+      "sha256": "a2ad5ba4e6d9bbd9522781c69acccb853b3a2f9bd7bcb637de2b55ace6a5b169"
+    }
+  ],
+  "rawChecksums": {
+    "t01-red.json.gz": "132890a8dc606b33804628ffd8be26abf0aa51c52d27a9874dab72d48bd9e722",
+    "package-green.json.gz": "c3f9ff30263399f6f5317bcd7c44119a8e49981b434a4fbe25ea49d7692318b6"
+  }
+}

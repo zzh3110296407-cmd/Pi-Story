@@ -1,0 +1,125 @@
+{
+  "id": "ds11-b03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "rule:damp_paper",
+            "name": "Damp paper drying rule",
+            "source": "user",
+            "authorQuote": "For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+            "op": "set",
+            "kind": "rule",
+            "value": {
+              "requirement": "A damp paper copy must be laid out flat and allowed to dry fully before anyone turns its pages.",
+              "scope": "All future scenes involving damp paper copies.",
+              "handling": "Lay the copy flat, support it evenly, and wait until it is dry before any page is turned.",
+              "invariants": [
+                "No page of a damp paper copy is turned until the copy has dried flat."
+              ]
+            }
+          }
+        ],
+        "reason": "Author asked to add a future setting that damp paper copies must dry flat before any page is turned, while leaving existing descriptions and committed events unchanged."
+      },
+      "id": "call_00_LfAC9NoK06bB7DZOo5U68969"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "rule:damp_paper",
+          "name": "Damp paper drying rule",
+          "source": "user",
+          "authorQuote": "For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+          "op": "set",
+          "kind": "rule",
+          "value": {
+            "requirement": "A damp paper copy must be laid out flat and allowed to dry fully before anyone turns its pages.",
+            "scope": "All future scenes involving damp paper copies.",
+            "handling": "Lay the copy flat, support it evenly, and wait until it is dry before any page is turned.",
+            "invariants": [
+              "No page of a damp paper copy is turned until the copy has dried flat."
+            ]
+          }
+        }
+      ],
+      "reason": "Author asked to add a future setting that damp paper copies must dry flat before any page is turned, while leaving existing descriptions and committed events unchanged."
+    },
+    "id": "call_00_LfAC9NoK06bB7DZOo5U68969"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "3ee837c1d7db169a7d9389ff55b13fa753deff25dfa0d1d51820f969db76b6bc",
+    "sessionSha256": "188ab0bab2cc0715425df42110032a900dafeadf99a8baf96b14e1b2ce16ef30",
+    "fee": {
+      "knownUsd": 0.0029001,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0029001
+    },
+    "measuredMainRequests": 2
+  }
+}

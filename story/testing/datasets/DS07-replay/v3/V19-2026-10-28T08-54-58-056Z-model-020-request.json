@@ -1,0 +1,25 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are the recorder. Extract only states stated in the numbered chapter. Use the requested JSON schema and cite exact sentence IDs."
+    },
+    {
+      "role": "user",
+      "content": "Extract a minimal DeltaProposal from this chapter only, following interface design 12 section 6. Do not add future plans or unstated facts. This P0 subset tests only 1 to 4 fact upserts: each has a temporary ref, op=upsert, subject, predicate, object(string), mode=narrated or recalled_past, certainty=confirmed or uncertain, uncertainReason(a nonempty string when uncertain; empty string when confirmed), and sentences(an array of integer sentence numbers from this chapter). Leave claims, cognitions, relations, and hooks as empty arrays. Summary must have title, characters, events, mood. Include issues.\nJSON schema:\n{\"type\":\"object\",\"required\":[\"facts\",\"claims\",\"cognitions\",\"relations\",\"hooks\",\"summary\",\"issues\"],\"properties\":{\"facts\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"ref\",\"op\",\"subject\",\"predicate\",\"object\",\"mode\",\"certainty\",\"uncertainReason\",\"sentences\"],\"properties\":{\"ref\":{\"type\":\"string\"},\"op\":{\"type\":\"string\",\"const\":\"upsert\"},\"subject\":{\"type\":\"string\"},\"predicate\":{\"type\":\"string\"},\"object\":{\"type\":\"string\"},\"mode\":{\"anyOf\":[{\"type\":\"string\",\"const\":\"narrated\"},{\"type\":\"string\",\"const\":\"recalled_past\"}]},\"certainty\":{\"anyOf\":[{\"type\":\"string\",\"const\":\"confirmed\"},{\"type\":\"string\",\"const\":\"uncertain\"}]},\"uncertainReason\":{\"type\":\"string\"},\"sentences\":{\"type\":\"array\",\"items\":{\"type\":\"integer\",\"minimum\":1},\"minItems\":1}},\"additionalProperties\":false},\"minItems\":1},\"claims\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false},\"maxItems\":0},\"cognitions\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false},\"maxItems\":0},\"relations\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false},\"maxItems\":0},\"hooks\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false},\"maxItems\":0},\"summary\":{\"type\":\"object\",\"required\":[\"title\",\"characters\",\"events\",\"mood\"],\"properties\":{\"title\":{\"type\":\"string\"},\"characters\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"events\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"mood\":{\"type\":\"string\"}},\"additionalProperties\":false},\"issues\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"additionalProperties\":false}\nNumbered chapter 2:\n[1] He crossed the rise at a stumble and from the crest saw it: a dark mound in the white, too regular to be rock.\n[2] He went down.\n[3] Snow had drifted against one flank; the matted coat held the animal’s shape like a cast.\n[4] A woolly mammoth.\n[5] Its trunk lay curled against the snow, one tusk sheared near the root.\n[6] The body was whole—no cuts, no spear marks, no trampled ring where hunters had stood.\n[7] Nothing had fed on it.\n[8] It had lain down, or been caught, and the cold had kept it.\n[9] He stood a long time.\n[10] The wind worked at his coat.\n[11] He had aimed for the late Pleistocene—the caves, the fires, the people he had spent his life studying.\n[12] This was older.\n[13] Tens of thousands of years older.\n[14] The jump had missed, or he had, and the error was not one he could walk back from.\n[15] He had given everything to arrive, and here it was: a dead thing in the snow and no one to meet him.\n[16] He crouched.\n[17] His hands were clumsy, but he worked a shard of rib free and tore a strip of hide from the flank, stiff as board.\n[18] He wrapped the hide around his wrist and put the bone in his coat.\n[19] Then he looked at the ravine beyond the rise and started walking."
+    }
+  ],
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "max_tokens": 8192,
+  "thinking": {
+    "type": "enabled"
+  },
+  "reasoning_effort": "low",
+  "response_format": {
+    "type": "json_object"
+  }
+}

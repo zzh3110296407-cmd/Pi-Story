@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON. Need repair prior output: validator errors due top-level \"type\":\"json_object\" not allowed? Schema required type object but properties doesn't include \"type\"; additionalProperties false. Need remove \"type\" property. Also ensure valid. Need return exact JSON object matching schema. Keep prior content maybe remove type. Need not add future plans. Need ensure all required. Facts 1-4. claims etc empty. Summary. Issues. Need only JSON. Use no markdown. Need maybe top-level object no \"type\". Let's craft. Ensure facts objects only allowed props. Good. \nNeed think if any issue with validator: schema itself says {\"type\":\"object\",...} but required list doesn't include type. additionalProperties false means no \"type\". Remove. Good.\n\nNeed output valid JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"fact-1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"discovered\",\"object\":\"a woolly mammoth carcass in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,4]},{\"ref\":\"fact-2\",\"op\":\"upsert\",\"subject\":\"the mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole, with no cuts, spear marks, or signs of feeding\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"fact-3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene, but the time he reached was tens of thousands of years older\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11,12,13]},{\"ref\":\"fact-4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"took\",\"object\":\"a rib shard and a strip of mammoth hide, wrapping the hide around his wrist and putting the bone in his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"A Dead Thing in the Snow\",\"characters\":[\"unnamed man\",\"woolly mammoth carcass\"],\"events\":[\"The man crosses a rise and sees a dark, regular mound in the snow.\",\"He descends and identifies the body as a woolly mammoth.\",\"He observes that the carcass is whole and untouched by hunters or scavengers.\",\"He realizes he aimed for the late Pleistocene but arrived tens of thousands of years earlier.\",\"He removes a rib shard and a strip of hide from the carcass.\",\"He wraps the hide around his wrist, pockets the bone, and walks toward the ravine beyond the rise.\"],\"mood\":\"bleak, cold, and isolated\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\",\"The exact period and location are not specified beyond being older than the late Pleistocene.\",\"Sentence 14 expresses uncertainty about whether the jump or the traveler missed; this uncertainty is not represented in the extracted facts.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 621,
+      "output": 660,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 167,
+      "totalTokens": 2177,
+      "cost": {
+        "input": 0.0001863,
+        "output": 0.000792,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.000983676
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178073379,
+    "responseId": "7a2939ad-4013-499a-98c0-eb6ff1e4131d",
+    "rawStopReason": "stop",
+    "durationMs": 5479
+  },
+  "record": {
+    "time": "2026-10-28T09:01:18.857Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-032",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 4021,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.011036699999999998,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 621,
+      "output": 660,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 167,
+      "totalTokens": 2177,
+      "cost": {
+        "input": 0.0001863,
+        "output": 0.000792,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.000983676
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.000983676,
+    "inputTokens": 621,
+    "outputTokens": 660,
+    "cacheReadTokens": 896,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 1517,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 5479
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-30T09:15:31.597Z",
+  "designOrder": "truth_before_prose",
+  "split": "acceptance",
+  "id": "unclaimed_lane",
+  "title": "The Lane Nobody Claimed",
+  "genre": "contemporary sports drama",
+  "cast": {
+    "ada": "Ada Lin, a municipal relay runner",
+    "nessa": "Nessa Vale, a reserve runner",
+    "imani": "Imani Cole, an official timekeeper"
+  },
+  "places": {
+    "warmup": "the indoor warm-up hall",
+    "track": "the municipal relay track",
+    "office": "the officials’ room"
+  },
+  "rule": "The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story.",
+  "protagonist": "char:ada",
+  "dominantHand": "right-handed",
+  "deceased": "Coach Roland died two years before the meet and never returns alive in present action.",
+  "chapters": [
+    {
+      "title": "A Space on the Card",
+      "facts": [
+        {
+          "subject": "char:ada",
+          "predicate": "location",
+          "object": "place:warmup",
+          "anchor": "Ada remained in the warm-up hall when the first session ended."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "holder",
+          "object": "char:nessa",
+          "anchor": "Ada handed the relay card to Nessa, who tucked it inside her zipped vest."
+        },
+        {
+          "subject": "org:relay_team",
+          "predicate": "quantity:travel_fund",
+          "object": {
+            "value": 84,
+            "unit": "pounds"
+          },
+          "anchor": "The ten-pound entry payment reduced their travel fund from ninety-four pounds to eighty-four.",
+          "before": 94,
+          "change": -10,
+          "validFrom": 1,
+          "validUntil": null,
+          "sharedResourceKey": "item:team_travel_fund"
+        },
+        {
+          "subject": "char:nessa",
+          "predicate": "identity",
+          "object": "registered reserve runner",
+          "anchor": "The registrar entered Nessa as the registered reserve runner, not a spectator."
+        },
+        {
+          "subject": "char:ada",
+          "predicate": "injury",
+          "object": "fresh shallow scrape on left palm",
+          "anchor": "The rough starting block scraped Ada’s left palm, leaving a shallow red line."
+        },
+        {
+          "subject": "item:timing_clock",
+          "predicate": "location",
+          "object": "place:warmup",
+          "anchor": "Imani set the timing clock on the bench in the warm-up hall."
+        },
+        {
+          "subject": "char:imani",
+          "predicate": "alive",
+          "object": "alive",
+          "anchor": "Imani was alive and counting the entrants aloud beside the bench."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "entry_status",
+          "object": "provisional",
+          "anchor": "The official stamp made the relay entry provisional until both runners checked in."
+        }
+      ],
+      "claim": [
+        "char:nessa",
+        "The cabinet has a second key.",
+        "“The cabinet has a second key,” Nessa said, repeating a rumour she had heard outside."
+      ],
+      "trueClaim": [
+        "char:ada",
+        "There are eighty-four pounds left.",
+        "“There are eighty-four pounds left,” Ada said after counting the notes."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:ada",
+          "content": "Nessa is officially registered as the reserve runner.",
+          "via": "read",
+          "anchor": "Ada read Nessa’s reserve registration herself and now knew it was official."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:nessa",
+          "content": "Ada will ask her to run if a place opens.",
+          "via": "inferred",
+          "anchor": "Nessa believed Ada would ask her to run if a place opened, although Ada had made no promise."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:imani",
+          "content": "The card’s notch once served a timing purpose.",
+          "via": "inferred",
+          "anchor": "Imani suspected the notch had once served a timing purpose; its shape alone did not prove that."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:ada",
+          "content": "Nessa came only to watch.",
+          "via": "inferred",
+          "anchor": "Until she read the register, Ada had wrongly believed Nessa had come only to watch."
+        }
+      ],
+      "correction": {
+        "characterId": "char:ada",
+        "kind": "knows",
+        "content": "Nessa came as a registered reserve, not merely a spectator.",
+        "via": "read",
+        "anchor": "The register corrected that mistake: Nessa had come as a runner."
+      },
+      "relationship": [
+        "char:ada",
+        "char:nessa",
+        "guarded cooperation",
+        "Ada agreed to share the practice lane with Nessa, but kept their conversation formal."
+      ],
+      "memory": [
+        "char:ada",
+        "location",
+        "place:track",
+        null,
+        0,
+        "Years before the meet, Ada had waited alone on the outdoor track while Roland packed the hurdles."
+      ],
+      "hooks": [
+        [
+          "H-notch",
+          "upsert",
+          "A crescent notch interrupted the relay card’s margin, and neither runner could explain it."
+        ],
+        [
+          "H-empty",
+          "upsert",
+          "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there."
+        ],
+        [
+          "H-cord",
+          "upsert",
+          "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+        ]
+      ],
+      "plan": "Tomorrow, Ada intended to ask the registrar to make Nessa a starter.",
+      "hypothesis": "If the cabinet had a remote release, they could open it from the track; it had no such release.",
+      "dream": "In her nap Ada dreamed that Roland ran the final leg, but she woke to the empty bench.",
+      "uncertainty": "The mark beside the notch might have been a worn numeral, but Ada could not identify it."
+    },
+    {
+      "title": "The Exchange Zone",
+      "facts": [
+        {
+          "subject": "char:ada",
+          "predicate": "location",
+          "object": "place:track",
+          "anchor": "Ada stayed at the municipal relay track after the afternoon exchange trials."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "holder",
+          "object": "char:imani",
+          "anchor": "Nessa passed the relay card to Imani for the official handover trial."
+        },
+        {
+          "subject": "org:relay_team",
+          "predicate": "quantity:travel_fund",
+          "object": {
+            "value": 90,
+            "unit": "pounds"
+          },
+          "anchor": "A six-pound entry rebate increased the travel fund from eighty-four pounds to ninety.",
+          "before": 84,
+          "change": 6,
+          "validFrom": 2,
+          "validUntil": null,
+          "sharedResourceKey": "item:team_travel_fund"
+        },
+        {
+          "subject": "char:nessa",
+          "predicate": "identity",
+          "object": "confirmed relay starter",
+          "anchor": "The registrar changed Nessa’s status from reserve to confirmed relay starter."
+        },
+        {
+          "subject": "char:ada",
+          "predicate": "injury",
+          "object": "dry scab on left palm",
+          "anchor": "By the afternoon, the scrape on Ada’s left palm had formed a dry scab without fresh bleeding."
+        },
+        {
+          "subject": "item:timing_clock",
+          "predicate": "location",
+          "object": "place:track",
+          "anchor": "Imani carried the timing clock to the table inside the municipal relay track."
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:ada",
+          "anchor": "Imani placed the cabinet’s single brass key in Ada’s hand."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "entry_status",
+          "object": "confirmed",
+          "anchor": "Both check-in signatures changed their relay entry from provisional to confirmed."
+        }
+      ],
+      "claim": [
+        "char:nessa",
+        "Roland invented that notch.",
+        "“Roland invented that notch,” Nessa said, then admitted that nobody had told her so."
+      ],
+      "trueClaim": [
+        "char:imani",
+        "We have ninety pounds now.",
+        "“We have ninety pounds now,” Imani said, pointing to the new balance."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:nessa",
+          "content": "She is now a confirmed starter.",
+          "via": "told",
+          "anchor": "The registrar told Nessa directly that she was now a confirmed starter."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:ada",
+          "content": "Nessa will hold the exchange position.",
+          "via": "inferred",
+          "anchor": "Ada believed Nessa would hold the exchange position, based on the last three clean trials."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:imani",
+          "content": "The blank boxes concern later meets.",
+          "via": "inferred",
+          "anchor": "Imani suspected the blank boxes concerned later meets, but the unused forms gave no answer."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:nessa",
+          "content": "Ada asked the registrar to promote her.",
+          "via": "inferred",
+          "anchor": "Nessa initially misread the change as proof that Ada had asked for her promotion."
+        }
+      ],
+      "correction": {
+        "characterId": "char:nessa",
+        "kind": "knows",
+        "content": "The registrar promoted her from her trial time, without Ada making the request.",
+        "via": "told",
+        "anchor": "The registrar explained that the trial time alone had earned the promotion; Ada had not requested it."
+      },
+      "relationship": [
+        "char:ada",
+        "char:nessa",
+        "active trust",
+        "Ada gave Nessa the difficult outside exchange and accepted her suggested mark."
+      ],
+      "memoryRef": {
+        "existingFactId": "F-180",
+        "anchor": "Ada remembered that same old wait on the outdoor track; she was standing indoors now."
+      },
+      "hooks": [
+        [
+          "H-notch",
+          "advance",
+          "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker."
+        ],
+        [
+          "H-empty",
+          "advance",
+          "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed."
+        ],
+        [
+          "H-cord",
+          "mention",
+          "The unexplained blue cord still hung from the clock handle while they practised."
+        ]
+      ],
+      "plan": "After the trial, Nessa planned to call the absent captain, but her phone remained in her bag.",
+      "hypothesis": "If the last exchange were late, their trial would fail; the next exchange had not happened yet.",
+      "dream": "Ada recalled last night’s dream of floating lanes and recognised it as a dream, not a memory of this track.",
+      "uncertainty": "A distant spectator might have been the former captain, but the runners could not recognise the face."
+    },
+    {
+      "title": "The Clock After the Finish",
+      "facts": [
+        {
+          "subject": "char:ada",
+          "predicate": "location",
+          "object": "place:office",
+          "anchor": "Ada remained in the officials’ room after the results were posted."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "holder",
+          "object": "char:ada",
+          "anchor": "Imani returned the intact relay card to Ada in the officials’ room."
+        },
+        {
+          "subject": "org:relay_team",
+          "predicate": "quantity:travel_fund",
+          "object": {
+            "value": 75,
+            "unit": "pounds"
+          },
+          "anchor": "The fifteen-pound return fare took their travel fund from ninety pounds down to seventy-five.",
+          "before": 90,
+          "change": -15,
+          "validFrom": 3,
+          "validUntil": null,
+          "sharedResourceKey": "item:team_travel_fund"
+        },
+        {
+          "subject": "char:nessa",
+          "predicate": "identity",
+          "object": "elected team captain",
+          "anchor": "The runners elected Nessa team captain after the race."
+        },
+        {
+          "subject": "char:ada",
+          "predicate": "injury",
+          "object": "closed pink line on left palm",
+          "anchor": "The scrape on Ada’s left palm was closed now, a pink line that no longer needed a dressing."
+        },
+        {
+          "subject": "item:timing_clock",
+          "predicate": "location",
+          "object": "place:office",
+          "anchor": "The timing clock rested on the desk in the officials’ room."
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:imani",
+          "anchor": "Ada returned the single brass key to Imani before leaving the cabinet."
+        },
+        {
+          "subject": "item:relay_card",
+          "predicate": "result",
+          "object": "second place",
+          "anchor": "The signed result placed their relay team second, with no appeal pending."
+        }
+      ],
+      "claim": [
+        "char:nessa",
+        "Second is enough for me.",
+        "“Second is enough for me,” Nessa said, speaking only for herself."
+      ],
+      "trueClaim": [
+        "char:ada",
+        "Seventy-five pounds will get us home.",
+        "“Seventy-five pounds will get us home,” Ada said, reading the fare beside the counted notes."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:ada",
+          "content": "The notch belongs to the timing stencil, not to a secret disqualification code.",
+          "via": "read",
+          "anchor": "Ada read the stencil instructions and learned that the notch positioned the timing grid."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:nessa",
+          "content": "The team can return for another meet.",
+          "via": "inferred",
+          "anchor": "Nessa believed they could return for another meet, although no entry had been paid."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:imani",
+          "content": "The cord came from an earlier travelling team.",
+          "via": "inferred",
+          "anchor": "Imani suspected a travelling team had left the cord, but had no name or date."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:ada",
+          "content": "The notch meant their entry had already been rejected.",
+          "via": "inferred",
+          "anchor": "Ada admitted her earlier false belief that the notch marked an already rejected entry."
+        }
+      ],
+      "correction": {
+        "characterId": "char:ada",
+        "kind": "knows",
+        "content": "The notch positions a timing grid and does not reject the entry.",
+        "via": "read",
+        "anchor": "The printed instructions corrected that fear: the notch positioned the grid and carried no verdict."
+      },
+      "relationship": [
+        "char:ada",
+        "char:nessa",
+        "equal partnership",
+        "Ada asked Nessa to plan the next season with her rather than simply fill a vacant lane."
+      ],
+      "memory": [
+        "char:nessa",
+        "former_role",
+        "school sprinter",
+        null,
+        0,
+        "Before she joined this adult club, Nessa had been a school sprinter."
+      ],
+      "hooks": [
+        [
+          "H-notch",
+          "resolve",
+          "The stencil instructions finally explained the crescent notch: it positioned the timing grid."
+        ],
+        [
+          "H-empty",
+          "mention",
+          "The four NEXT SERIES boxes were still empty when Ada filed the card; nobody knew which series they meant."
+        ],
+        [
+          "H-cord",
+          "advance",
+          "Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation."
+        ]
+      ],
+      "plan": "Nessa intended to enter the next series next month; she made no entry that evening.",
+      "hypothesis": "If another team withdrew, second place might become first, but no team had withdrawn.",
+      "dream": "For a moment Ada imagined Roland applauding from the doorway; she knew the doorway was empty.",
+      "uncertainty": "Number 41 could have identified a team or an inventory batch; neither explanation was confirmed."
+    }
+  ],
+  "sharedResources": [
+    {
+      "key": "org:relay_team",
+      "predicate": "quantity:travel_fund",
+      "scope": "shared_story_resource_account",
+      "description": "The relay team’s jointly used travel account.",
+      "steward": "char:ada",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:team_travel_fund"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "ds14-e10-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 16,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "tool:1793515843536:6w5bjacnw4x"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "tool:1793515843536:6w5bjacnw4x"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 1,
+  "stopReason": "budget_exhausted",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Force a genuine local-revision path; a clean writer/editor/keeper cycle has only three calls and is not this test.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted"
+      }
+    },
+    {
+      "index": 3,
+      "check": "After draft, full review and writer patch, the fourth internal call (recheck editor) is blocked as BUDGET_EXHAUSTED.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The failed chapter is not committed and no keeper request or automatic retry is dispatched.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d8d607380f2eb19b7ce95c93ff451c1a551859dc706f2219d8ed5c504d257435",
+    "sessionSha256": "8ad76e65afd47227c8071f5c61bcdc08ca0c948f6f1428e9f625a9bba8f4f5e5",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 2
+  }
+}

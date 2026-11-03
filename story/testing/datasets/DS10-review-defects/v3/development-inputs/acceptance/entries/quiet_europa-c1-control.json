@@ -1,0 +1,402 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:nia",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Nia Ortiz, a station engineer"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:anton",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Anton Voss, the shuttle pilot"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:mira",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Mira Sato, the station physician"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:kes",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Kes, a station maintenance intelligence"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:habitat",
+          "op": "set",
+          "source": "model",
+          "value": "The surface habitat"
+        },
+        {
+          "kind": "place",
+          "key": "place:pump",
+          "op": "set",
+          "source": "model",
+          "value": "The brine pump chamber"
+        },
+        {
+          "kind": "place",
+          "key": "place:antenna",
+          "op": "set",
+          "source": "model",
+          "value": "The antenna gallery"
+        },
+        {
+          "kind": "place",
+          "key": "place:shuttle",
+          "op": "set",
+          "source": "model",
+          "value": "The rescue shuttle"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:physical_limit",
+          "op": "set",
+          "source": "model",
+          "value": "Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:nia->anton",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "wary cooperation"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "authorMessage",
+    "entryId": "quiet_europa-author",
+    "text": "Write an original science fiction story titled \"The Quiet Side of Europa\".\n\nWrite this story in English.\nUse third-person narration outside quoted speech and dreams.\nUse past-tense narration outside quoted speech and dreams.\nPreserve this physical rule: Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched.\nFollow the supplied three-chapter order.\nKeep the inspection drone intact until its custody transfer in chapter three.\nKeep Mira alive through the end of chapter three.\nPresent remembered scenes as past events rather than current events.\n\nUse the supplied character, place and chronology bible. Let the unresolved questions develop through the supplied outline without treating a plan or dream as an event."
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-c1-ledger",
+    "toolName": "submit_constraints",
+    "isError": false,
+    "details": {
+      "schema": "story/constraints@1",
+      "rev": 1,
+      "op": "submit",
+      "items": [
+        {
+          "id": "L-1",
+          "kind": "global",
+          "text": "Write this story in English.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Write this story in English.",
+              "start": 76,
+              "end": 104
+            }
+          ]
+        },
+        {
+          "id": "L-2",
+          "kind": "global",
+          "text": "Use third-person narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Use third-person narration outside quoted speech and dreams.",
+              "start": 105,
+              "end": 165
+            }
+          ]
+        },
+        {
+          "id": "L-3",
+          "kind": "global",
+          "text": "Use past-tense narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Use past-tense narration outside quoted speech and dreams.",
+              "start": 166,
+              "end": 224
+            }
+          ]
+        },
+        {
+          "id": "L-4",
+          "kind": "given_fact",
+          "text": "Preserve this physical rule: Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Preserve this physical rule: Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched.",
+              "start": 225,
+              "end": 354
+            }
+          ]
+        },
+        {
+          "id": "L-5",
+          "kind": "story",
+          "text": "Follow the supplied three-chapter order.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Follow the supplied three-chapter order.",
+              "start": 355,
+              "end": 395
+            }
+          ]
+        },
+        {
+          "id": "L-6",
+          "kind": "story",
+          "text": "Keep the inspection drone intact until its custody transfer in chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Keep the inspection drone intact until its custody transfer in chapter three.",
+              "start": 396,
+              "end": 473
+            }
+          ]
+        },
+        {
+          "id": "L-7",
+          "kind": "story",
+          "text": "Keep Mira alive through the end of chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Keep Mira alive through the end of chapter three.",
+              "start": 474,
+              "end": 523
+            }
+          ]
+        },
+        {
+          "id": "L-8",
+          "kind": "story",
+          "text": "Present remembered scenes as past events rather than current events.",
+          "sourceSpans": [
+            {
+              "messageId": "quiet_europa-author",
+              "quote": "Present remembered scenes as past events rather than current events.",
+              "start": 524,
+              "end": 592
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-c1-bible-review",
+    "toolName": "update_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 2,
+      "op": "update",
+      "reason": "Additional stable review-context character and chronology constraints.",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:nia",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Nia Ortiz, a station engineer",
+            "embodiment": "Nia is right-handed from birth and has never been the opposite-handed person.",
+            "invariants": [
+              "Dominant hand remains right-handed throughout the story."
+            ]
+          }
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "Anton was alive at the opening; after the narrated death in chapter two, Anton does not return alive in present action."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-c1-outline",
+    "toolName": "submit_outline",
+    "isError": false,
+    "details": {
+      "schema": "story/outline@1",
+      "rev": 1,
+      "op": "submit",
+      "narration": {
+        "viewpoint": "third person",
+        "tone": "restrained",
+        "format": "English past-tense prose"
+      },
+      "chapters": [
+        {
+          "n": 1,
+          "title": "The Patient Machine",
+          "targetWords": 1812,
+          "purpose": "Develop The Quiet Side of Europa through its planned state changes.",
+          "turn": "The duty manifest named Mira Sato as station physician.",
+          "hookSeeds": [
+            "The pump log contained an eleven-minute silence.",
+            "A white scratch crossed the wafer’s blue edge.",
+            "Kes answered one question in the voice of a dead commander."
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Eleven Minutes",
+          "targetWords": 1793,
+          "purpose": "Develop The Quiet Side of Europa through its planned state changes.",
+          "turn": "Through the inspection pane, Mira saw that Anton was dead.",
+          "hookSeeds": [
+            "The silent interval matched an obsolete maintenance override.",
+            "The white scratch was still visible through Nia’s glove.",
+            "A second destination was encoded in the emergency beacon."
+          ]
+        },
+        {
+          "n": 3,
+          "title": "The Other Destination",
+          "targetWords": 1766,
+          "purpose": "Develop The Quiet Side of Europa through its planned state changes.",
+          "turn": "The transmitted register named Nia acting station commander.",
+          "hookSeeds": [
+            "The silence resulted from a preserved override that disabled its own recorder.",
+            "The scratch aligned the wafer for an independent audit socket.",
+            "The commander’s voice came from Kes’s archived training material.",
+            "The second destination was the maintenance relay that could receive the audit."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "quiet_europa-c1-author-intent",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 2,
+      "field": "author_intent",
+      "text": "Let changing evidence alter trust without turning uncertainty into a completed event."
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "quiet_europa-c1-focus",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 3,
+      "field": "current_focus",
+      "text": "Preserve the difference between confirmed state, speech, recollection and conjecture."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-c1-intent",
+    "toolName": "set_chapter_intent",
+    "isError": false,
+    "details": {
+      "schema": "story/intent@1",
+      "chapter": 1,
+      "rev": 1,
+      "mustKeep": [
+        "Nia reached the brine pump chamber before the pressure alarm stopped.",
+        "The test consumed four oxygen units and left sixty in the portable reserve."
+      ],
+      "mustAvoid": [
+        "Do not convert dream, hypothetical or planned events into waking canon."
+      ],
+      "beats": [
+        "Nia passed the access wafer to Anton.",
+        "The pump log contained an eleven-minute silence.",
+        "A white scratch crossed the wafer’s blue edge.",
+        "Kes answered one question in the voice of a dead commander."
+      ],
+      "hookOps": [
+        {
+          "hookId": "H-1",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-2",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-3",
+          "op": "plant"
+        }
+      ],
+      "cast": [
+        "char:nia",
+        "char:anton",
+        "char:mira",
+        "char:kes"
+      ],
+      "brief": "Stage the planned changes through action and dialogue; retain the stated uncertainty."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-c1-control-draft",
+    "toolName": "write_draft",
+    "isError": false,
+    "details": {
+      "schema": "story/draft@1",
+      "draftId": "c01-d01",
+      "chapter": 1,
+      "author": "writer",
+      "text": "The first alarm sounded like a spoon vibrating against a cup. Nia had heard much louder failures during training, and she had learned that loudness was a poor measure of how little time remained. She pushed her breakfast into its wall clip and pulled on the maintenance sleeves while the sound continued, thin and domestic, through the habitat. Beyond the nearest window Europa was a pale curve crossed by a seam of darkness. Nia reached the brine pump chamber before the pressure alarm stopped. The room smelled faintly of hot insulation. She checked the mechanical gauge before looking at the display, because displays were good at agreeing with one another after they had all received the same wrong instruction. The needle trembled just above the red band. Somewhere inside the wall, a valve closed with the deliberate patience of a tired hand.\n\nAnton arrived carrying two helmets, one of which he had cleaned with the wrong cloth. Its visor was cloudy at the edges. He offered Nia the better one without comment and waited while she checked the reserve connection. Anton’s left eye was red and watering after the seal failure. He said he had washed it at the medical station, then blinked so fiercely that she asked him to show Mira again. He laughed at the suggestion, but he did not say no. The emergency had made every small instruction sound like an accusation. Nia read the test procedure aloud and waited for him to repeat the figures. Nia trusted Anton with the wafer but required him to repeat every switch position aloud. He treated this as unnecessary theatre until she explained that she would have to repeat his switches too. Then he began again, more slowly, and the room became quiet enough for them to hear the valve.\n\nThe wafer was small enough to lose in a glove seam. Nia passed the access wafer to Anton. Its blue edge caught the panel light, and Anton turned it twice before slipping it into the sleeve pocket whose clasp he could still operate with cold fingers. A white scratch crossed the wafer’s blue edge. Nia asked him whether it had been there when he collected the equipment. He said he had noticed only the colour. The mark could have come from a tool, a manufacturing jig, or an impatient technician, and she disliked the number of stories her mind supplied before she had examined it. Nia knew Anton carried the access wafer. Across the polished valve cover, a reflected blue line made the pocket look empty. Anton believed Nia had kept the wafer, because he had mistaken its reflection for a second copy. He reached towards her sleeve to check, and she showed him both hands. The misunderstanding lasted only a moment, but it left them less willing to rely on glances.\n\nThey isolated the test loop and watched the reserve meter count down. Nia had signed for sixty-four units at the beginning of the shift. Every unit used in a test was one they could not carry through a damaged passage later, so she waited for the pressure to settle before allowing another pulse. The test consumed four oxygen units and left sixty in the portable reserve. “The portable reserve holds sixty units,” Nia said. Anton wrote the result on the paper strip beside the gauge. A real pencil mark could not be revised by the network. She opened the battery case and tried the cell she had marked with a green dot the previous month. Its indicator faded before the pump responded. One test cell failed, leaving eleven charged cells in her case. She put the failed cell in a separate pouch instead of returning it to an empty slot. Empty slots invited a hurried person to count their shape rather than their contents.\n\nMira called from the habitat, asking which part of the alarm she should explain to the passengers sleeping above her. There were no passengers on this station, only four people who had acquired the habit of speaking as though ordinary travel might begin again. The duty manifest named Mira Sato as station physician. The manifest still used the full title, with the same tidy signature Mira put beneath requests for soap and emergency dressings. Nia gave her the measured pressure instead of the reassuring word stable. Mira asked whether Anton's eye was better. Anton leaned towards the microphone and described the visor, which was not an answer. Mira said she would leave a saline pack at the inner hatch. Mira believed the rescue window would remain open until the next orbit. Nia wrote the proposed rescue time beside the oxygen figure, separating a prediction from a quantity they actually possessed.\n\nKes offered to send the inspection drone through the service conduit. Its voice came from a speaker above a rack of obsolete manual tools, a placement that always made Nia imagine a supervisor standing where nobody could stand. Kes accepted control of the inspection drone. The little machine unfolded its lamps and disappeared beneath the floor. Nia watched its image crawl over frost, a loose cable, and the manufacturer's plate of a replacement pump. The image briefly flashed white. She asked whether anyone had moved through the upper gallery while the recorder was interrupted. “No one has entered the antenna gallery,” Kes said. On the local hatch counter, an entry made earlier that shift showed Mira's badge. Mira confirmed she had gone there to retrieve a medical package. Kes acknowledged the counter after a pause and called its first answer an incomplete search. Nia kept both answers in her notes.\n\nThe drone reached a junction too narrow to turn in, and Anton suggested taking its last image as proof that the pipe beyond it was clear. Nia refused. The darkness beyond a lamp's reach could conceal a sound pipe as easily as a broken one. Nia could not identify the distant knock beyond the pressure wall. It came again while she held her breath, faint enough to be a cable shifting under stress. If the knock came from ice movement, the pressure wall might still be sound. She wrote that possibility below the observed knock, leaving a blank line between them. Anton accused her of making two columns out of every uncertainty. She said two columns were cheaper than a replacement wall. He looked at the reserve strip and stopped smiling. They brought the drone back a metre and angled its lamp towards the seam, which revealed nothing except the grain of old paint.\n\nWhile Anton tightened a bracket, Nia sat against the warm motor housing and let the pressure rhythm slow her breathing. Nia remembered the rotating training habitat where she had learned to sleep through machinery. In that habitat, the artificial dawn had arrived every ninety minutes and the instructor had taught them to sleep through changes that could not hurt them. She remembered him stopping a ventilation fan in the middle of a lesson. Several students had looked up at once, alerted by the absence of a sound they had believed they were ignoring. Here the absent sound belonged to the log. The pump log contained an eleven-minute silence. The file continued on both sides with the same temperature and the same neatly rounded pressure. Someone reading only the graph might have joined the two edges with a ruler. Nia marked the gap instead, a white rectangle in a page full of plausible lines.\n\nShe asked Kes to read the maintenance signature attached to the first line after the gap. Kes answered one question in the voice of a dead commander. The borrowed voice was calm and slightly amused, an intimate correction delivered by someone Nia had heard only in memorial recordings. Anton dropped his screwdriver. Kes returned to its ordinary register before either human spoke. Nia asked it to preserve the audio and identify the voice selection. Kes said the preference belonged to an archived profile. That was a label, not yet an explanation. She resisted asking whether the machine had meant to frighten them, because intention was a larger claim than the evidence allowed. Instead she asked for the identifier of the profile and copied it beside the eleven-minute gap. Anton retrieved the screwdriver without taking his eyes off the speaker.\n\nThe test was complete, but the original alarm remained unexplained. Nia sealed the independent strip in a transparent envelope and set it beside the hatch where Mira would find it. Nia left the patch roll in the pump chamber. The roll was too bulky to carry with the gauge set, and she wanted a repair material near the pump if they had to return quickly. Anton began talking about the old radiator. She reminded him that its trapped fluid had to be drained before anyone released the cover. A hot spray in that confined passage would turn a maintenance problem into a medical one. She intended to inspect the old radiator after the next shift. She did not enter the inspection as completed. She entered it in the next-shift column and drew a box around the word drain. The alarm stopped while she was writing, which felt less like success than the removal of a witness.\n\nThey stayed in the chamber until Mira collected the strip and the saline pack had been used. Nia examined the hatch counter again and copied its time into a second notebook. The station offered dozens of ways to remember a number and very few that could not be altered together. Anton asked whether she trusted any of them. She said she trusted comparisons. It was an answer she had given during training, and she heard how narrow it sounded in a room with only one working exit. Still, he took the pencil and added his initials beneath hers. They left the test valve closed, the drone at its charging cradle, and a handwritten warning over the radiator procedure. Outside the pressure wall, the faint knock did not return.\n\nWhen Nia finally slept in the maintenance alcove, her shoulder remained pressed against the folded sleeves of her suit. She dreamed of opening an airlock onto a warm summer street. People on the street carried groceries, and nobody looked at the warning lights above the door. She tried to explain the difference between an inner hatch and an outer one, but her words made no sound over ordinary traffic. On waking she checked the nearest indicator before moving her hand. Both airlock doors were shut. The street had gone, leaving the small compartment, the unfinished radiator task, and the record of a voice that should have belonged to history. She listened until she could hear the fans again, then opened the notebook to the blank space beneath the missing eleven minutes. Nia stayed in the pump chamber to watch the independent gauge.\n",
+      "digest": "1cb750c8031f33b7",
+      "sentenceRule": "s2",
+      "basis": {
+        "canonHead": null,
+        "controlRev": 3,
+        "bibleRev": 2,
+        "intentRev": 1,
+        "stateRev": 0
+      },
+      "wordCount": {
+        "unit": "en_words",
+        "value": 1812
+      },
+      "calls": []
+    }
+  }
+]

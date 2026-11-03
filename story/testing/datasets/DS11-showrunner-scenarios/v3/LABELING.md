@@ -1,0 +1,9 @@
+# DS11 v3 — frozen, author overall accepted
+
+Constructed and delta-checked by Codex AI on 2026-11-02; no paid calls. This is not a human item-by-item signature or an acceptance run. The author approved the checked paired candidates on2026-11-02: “整体认可，冻结并本地提交”. This frozen release records AI construction and delta self-check plus author overall acceptance under plan31 §4 /16 §3.4. See labels/author-acceptance.json; the reviewed pending form is preserved separately as the actual review snapshot. Previous frozen versions and judgments remain immutable.
+
+DS11 uses @2 decisive-action semantics, three preparation reads, six main requests and two chapter attempts. All32 acceptance and15 retained development argsMatch sets were reviewed; additional development cases bring dev to18. Only input-determinable fields are exact-match conditions. New names, namespaces, textual wording, attribute names and reasonable classifications are semantic checks. See labels/revision-v3.json. F requires an answer rather than a read.
+
+Development reads only dev/index.json, referenced dev files, build/CONTRACT.md and build/scenario-contract.mjs. Builders/revision labels/review forms/acceptance contain gold and remain outside development input. Execute preparation through the normal extension/session constructors; the execution session verifies preparation replay and its new runner under faux providers. The supplied static/core checks do not prove RPC scheduling, automatic continuation or model behavior.
+
+Reproduce both candidate datasets with python build/build_revision.py --repo <repository> --output <fresh-ignored-draft-root>. Never rebuild a published version. The standalone validator is development-safe; the paired validate.mjs reads acceptance and belongs to data authoring. Every delivered file except manifest itself is registered with SHA256.

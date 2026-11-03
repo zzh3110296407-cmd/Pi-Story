@@ -1,0 +1,15 @@
+{
+  "schema": "story/development-sampling-protocol@1",
+  "phase": "S4",
+  "humanReviewed": false,
+  "formalUseAllowed": false,
+  "openingSeed": "P2R3-S4-OPEN-20261031",
+  "keeperSeed": "P2R3-S4-KEEP-20261031",
+  "order": "SHA-256(seed + NUL + family + NUL + sampleId), hexadecimal ascending",
+  "statePrecisionAndEvidence": "K03/K05: fixed stratified 100 validated output items; each of facts/claims/cognitions/relations/hooks at least 15, or all if fewer; fill remaining places in global hash order. No replacement based on result.",
+  "mode": "K06: sample 100 applicable fact/claim classification items with the fixed mode salt; types without narration/claim/recollection classification remain not_applicable and do not fill the denominator.",
+  "certainty": "K07: sample 100 rows actually marked confirmed, using a fixed certainty salt; provisional fraction reported separately. No absent certainty field is treated as confirmed.",
+  "factRecall": "Review every frozen v1 key fact using the revised vocabulary/entity matching. A gold counted once; preserve subject, predicate/allowed free_predicate semantics, object and effective chapters.",
+  "hooks": "K08 precision judges every validated output operation, including supported extra hooks. Recall uses distinct matching operations for the frozen gold; do not reuse one bundled operation for multiple gold hooks.",
+  "insufficientPopulation": "Report available population and any shortage; do not fabricate rows or invoke another paid development batch."
+}

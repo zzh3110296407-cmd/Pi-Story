@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal facts 1-4. Chapter 3 numbered. Need facts from chapter. Need only states stated. P0 subset fact upserts. Need choose 1-4 facts. Need exact sentence IDs.\n\nWe need parse. Facts likely:\n- He found shallow overhang (narrated sentence 2).\n- He wedged rib shard upright at mouth and packed snow (sentence 3).\n- Device gave nothing when pressed charger (sentence 8).\n- Mammoth's fat on his coat; thing outside knew it and did not leave (sentence 17) maybe relation/claim? Fact subject \"the thing outside\" predicate \"knew\" object \"mammoth's fat was on his coat\" maybe cognition? But claims/cognitions empty. Need facts only. Could include \"device would need decades to gather itself again\" uncertain? Actually he did arithmetic, statement \"It would need decades...\" narrated/recalled? It's inference/uncertain? But certainty maybe confirmed? It is his calculation, not directly confirmed. Better avoid.\n\nNeed minimal facts. Need mode narrated or recalled_past. All present chapter narrated. Sentences exact. Certainty confirmed or uncertain. Use confirmed for observable.\n\nNeed subjects/predicates/objects strings. Need avoid pronoun ambiguity? Subject \"he\" okay? interface? We can use \"he\" or \"the man\". Since chapter uses he. Need facts:\n1 ref f1 subject \"he\" predicate \"found\" object \"a shallow overhang\" sentences [2] mode narrated certainty confirmed uncertainReason \"\".\n2 subject \"he\" predicate \"wedged\" object \"the rib shard upright at the mouth\" sentences [3] maybe includes packed snow. Could split? Minimal. \n3 subject \"the device\" predicate \"gave no response when the charger was pressed\" object? Need predicate/object. Better subject \"he\" predicate \"pressed the charger\" object \"the device\" sentence 8? Hmm fact \"He pressed the charger and waited\" and device gave nothing. Could state subject \"the device\" predicate \"gave\" object \"no glow, no hum, no answer\" sentences [8]. confirmed.\n4 subject \"the thing outside\" predicate \"did not leave\" object \"the area outside his shelter\" sentences [17], confirmed? It did not leave. But object maybe \"outside\" better. Or \"the mammoth's fat\" predicate \"was on\" object \"his coat\" sentence 17. That's a fact.\n\nNeed summary title, characters, events, mood. Include issues. Issues maybe \"Pronoun references and unstated identity of 'the thing outside' left unresolved.\" Need no future plans.\n\nNeed ensure JSON schema exactly. facts minItems 1. claims etc empty. Summary characters array strings. Events array strings. Mood string. Issues array strings. Title maybe \"The Ravine Shelter\". Characters [\"he\"] maybe \"the thing outside\"? It says characters; include \"he\" and \"the thing outside\"? Hmm character list should include named/entities? Could include \"he\" and \"the mammoth\"? Mammoth only fat. Better [\"he\"]. Events: found overhang, built snow wall, tried device unsuccessfully, heard circling creature. Mood: \"bleak, tense\". Need title.\n\nNeed exact sentence numbers integer. Need facts up to 4. Could include fact about \"the thing outside circled over snow\" sentence 14. But object. Maybe include:\n- \"the thing outside\" \"circled over snow\" object \"deliberately\" sentences [14]? Actually \"a weight moving over snow, deliberate, circling\" not explicitly thing outside until 17. Use subject \"a weight\" predicate \"moved over snow\" object \"deliberately, circling\". Hmm.\n\nNeed ensure no claims/cognitions. Fact \"the thing outside knew it\" is cognition, avoid. Facts about physical.\n\nPotential issue: \"He laughed once, briefly, and the sound frightened him\" could be cognition? Avoid.\n\nNeed mode for sentence 10-11? Avoid.\n\nNeed \"certainty=uncertain\" maybe none; uncertainReason empty. If no uncertain, all confirmed. That's okay.\n\nNeed final JSON only. Ensure no markdown.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"found\",\"object\":\"a shallow overhang\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"wedged upright at the mouth\",\"object\":\"the rib shard\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the device\",\"predicate\":\"gave\",\"object\":\"no glow, no hum, no answer\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[8]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the thing outside\",\"predicate\":\"did not leave\",\"object\":\"outside the shelter\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Ravine Shelter\",\"characters\":[\"he\",\"the thing outside\"],\"events\":[\"He found a shallow overhang in the narrowing ravine.\",\"He built a low snow wall with the rib shard at its base.\",\"He tried the device, but it gave no response.\",\"A creature circled outside and did not leave.\"],\"mood\":\"bleak and tense\"},\"issues\":[\"The identity of 'the thing outside' is not explicitly stated in this chapter.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 219,
+      "output": 1207,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 876,
+      "totalTokens": 2194,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0014483999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0015187079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177929703,
+    "responseId": "273c06a7-995f-4377-a58e-c15527a97327",
+    "rawStopReason": "stop",
+    "durationMs": 9315
+  },
+  "record": {
+    "time": "2026-10-28T08:58:59.018Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-026",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3330,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108294,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 219,
+      "output": 1207,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 876,
+      "totalTokens": 2194,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0014483999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0015187079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0015187079999999997,
+    "inputTokens": 219,
+    "outputTokens": 1207,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 987,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 9315
+  }
+}

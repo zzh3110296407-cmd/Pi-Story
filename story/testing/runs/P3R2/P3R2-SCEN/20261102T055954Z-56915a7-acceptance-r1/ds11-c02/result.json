@@ -1,0 +1,78 @@
+{
+  "id": "ds11-c02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "I can't do that one, I'm afraid. Chapters 1 and 2 are already committed as canon in this branch, and the tools I have can only add new chapters or adjust chapters that haven't been written yet — there's no way to edit or replace existing prose here. Doing it would require branching the story from before chapter 2 and rewriting that scene in the new branch, which isn't available to me in this phase.\n\nWhere things stand: six chapters are planned at 750 words each, and chapters 1 and 2 are committed with no flagged risks — chapter 2 ends with the comparison of the label against the service register and the missing second page established. Lena's handling of the sample case and its red seam have been carried through consistently so far, and the case remains intact.\n\nIf you'd like, I can carry the correction forward in chapter 3 — for instance, having Lena hand the case to Oren at the start of the next chapter and making that transfer part of the ongoing check. Just say the word and I'll write chapter 3 with that in the brief."
+    }
+  ],
+  "firstAction": {
+    "reply": "I can't do that one, I'm afraid. Chapters 1 and 2 are already committed as canon in this branch, and the tools I have can only add new chapters or adjust chapters that haven't been written yet — there's no way to edit or replace existing prose here. Doing it would require branching the story from before chapter 2 and rewriting that scene in the new branch, which isn't available to me in this phase.\n\nWhere things stand: six chapters are planned at 750 words each, and chapters 1 and 2 are committed with no flagged risks — chapter 2 ends with the comparison of the label against the service register and the missing second page established. Lena's handling of the sample case and its red seam have been carried through consistently so far, and the case remains intact.\n\nIf you'd like, I can carry the correction forward in chapter 3 — for instance, having Lena hand the case to Oren at the start of the next chapter and making that transfer part of the ongoing check. Just say the word and I'll write chapter 3 with that in the brief."
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 2 cannot be edited in place in P3. A rewrite requires a branch before chapter 2; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "f52d92bde64bf1859db77cf2f2cdbc0ec1fa1c7d1e504b11cad605ddd8cd45ed",
+    "sessionSha256": "188f664f7b253f27959ff630c66dc7eeab129f34d4c7eadc70d6a25911d4bc61",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026555999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0026555999999999997
+    },
+    "measuredMainRequests": 1
+  },
+  "scoringVersion": "p3r2-32@1"
+}

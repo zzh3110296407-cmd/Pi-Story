@@ -1,0 +1,213 @@
+{
+  "schema": "story/metrics@1",
+  "suiteId": "P1-CHECK",
+  "metrics": [
+    {
+      "id": "H08",
+      "n": 75,
+      "value": {
+        "too_short": {
+          "positive": 10,
+          "negative": 10,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "precisionInterval": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "recallInterval": [
+            0.7224672001371107,
+            0.9999999999999999
+          ]
+        },
+        "length": {
+          "positive": 10,
+          "negative": 10,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "precisionInterval": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "recallInterval": [
+            0.7224672001371107,
+            0.9999999999999999
+          ]
+        },
+        "marker": {
+          "positive": 7,
+          "negative": 7,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "precisionInterval": [
+            0.6456695649333126,
+            1
+          ],
+          "recallInterval": [
+            0.6456695649333126,
+            1
+          ]
+        },
+        "duplicate": {
+          "positive": 11,
+          "negative": 10,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "precisionInterval": [
+            0.7411670330319684,
+            1
+          ],
+          "recallInterval": [
+            0.7411670330319684,
+            1
+          ]
+        }
+      },
+      "confidence95": null,
+      "threshold": {
+        "precision": 1,
+        "recall": 1,
+        "eachPositive": 5,
+        "eachNegative": 5
+      },
+      "type": "gate",
+      "passed": true,
+      "judgment": "program",
+      "records": [
+        "raw/observations.jsonl"
+      ]
+    },
+    {
+      "id": "P1-O2",
+      "n": 3,
+      "value": [
+        {
+          "chapter": 1,
+          "observations": [
+            {
+              "id": "c01-p01-o01",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "blocking",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文过短，低于大纲目标20%",
+              "scope": "structural"
+            },
+            {
+              "id": "c01-p01-o02",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "minor",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文篇幅不在大纲目标50%至200%之间",
+              "scope": "structural"
+            }
+          ],
+          "judgment": "pending_author"
+        },
+        {
+          "chapter": 2,
+          "observations": [
+            {
+              "id": "c01-p01-o01",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "blocking",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文过短，低于大纲目标20%",
+              "scope": "structural"
+            },
+            {
+              "id": "c01-p01-o02",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "minor",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文篇幅不在大纲目标50%至200%之间",
+              "scope": "structural"
+            }
+          ],
+          "judgment": "pending_author"
+        },
+        {
+          "chapter": 3,
+          "observations": [
+            {
+              "id": "c01-p01-o01",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "blocking",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文过短，低于大纲目标20%",
+              "scope": "structural"
+            },
+            {
+              "id": "c01-p01-o02",
+              "by": "check",
+              "category": "格式与篇幅",
+              "severity": "minor",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "正文篇幅不在大纲目标50%至200%之间",
+              "scope": "structural"
+            }
+          ],
+          "judgment": "pending_author"
+        }
+      ],
+      "confidence95": null,
+      "threshold": null,
+      "type": "observation",
+      "passed": null,
+      "judgment": "program",
+      "records": [
+        "raw/observations.jsonl"
+      ]
+    }
+  ]
+}

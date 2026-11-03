@@ -1,0 +1,464 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-30T09:15:31.598Z",
+  "designOrder": "truth_before_prose",
+  "split": "acceptance",
+  "id": "unclaimed_pedestal",
+  "title": "The Unclaimed Pedestal",
+  "genre": "workplace comedy",
+  "cast": {
+    "leila": "Leila Moss, a municipal exhibition coordinator",
+    "tom": "Tom Reed, a temporary stage assistant",
+    "bev": "Bev Ortiz, the exhibition’s accounts clerk"
+  },
+  "places": {
+    "workshop": "the exhibition workshop",
+    "gallery": "the civic gallery",
+    "loading": "the loading room"
+  },
+  "rule": "The intact receipt machine prints only on its numbered paper roll; with the roll removed it cannot produce a paper receipt.",
+  "protagonist": "char:leila",
+  "dominantHand": "left-handed",
+  "deceased": "The former caretaker Orson died five years before the exhibition and does not return alive.",
+  "chapters": [
+    {
+      "title": "A Plinth with No Object",
+      "facts": [
+        {
+          "subject": "char:leila",
+          "predicate": "location",
+          "object": "place:workshop",
+          "anchor": "Leila stayed in the exhibition workshop after the morning briefing."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "holder",
+          "object": "char:tom",
+          "anchor": "Leila gave the delivery slip to Tom, who put it in his folder."
+        },
+        {
+          "subject": "org:exhibition",
+          "predicate": "quantity:petty_cash",
+          "object": {
+            "value": 64,
+            "unit": "pounds"
+          },
+          "anchor": "An eight-pound tape purchase reduced petty cash from seventy-two pounds to sixty-four.",
+          "before": 72,
+          "change": -8,
+          "validFrom": 1,
+          "validUntil": null,
+          "sharedResourceKey": "item:exhibition_petty_cash"
+        },
+        {
+          "subject": "char:tom",
+          "predicate": "identity",
+          "object": "temporary stage assistant",
+          "anchor": "Tom’s badge identified him as the temporary stage assistant."
+        },
+        {
+          "subject": "char:leila",
+          "predicate": "injury",
+          "object": "small blister on right heel",
+          "anchor": "A stiff shoe raised a small blister on Leila’s right heel."
+        },
+        {
+          "subject": "item:pedestal",
+          "predicate": "location",
+          "object": "place:workshop",
+          "anchor": "The empty pedestal stood in the exhibition workshop."
+        },
+        {
+          "subject": "char:bev",
+          "predicate": "alive",
+          "object": "alive",
+          "anchor": "Bev was alive and arguing cheerfully with the adding machine."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "delivery_status",
+          "object": "unchecked",
+          "anchor": "The delivery register marked the pedestal unchecked, not missing."
+        }
+      ],
+      "claim": [
+        "char:tom",
+        "The mayor has already cancelled the exhibition.",
+        "“The mayor has already cancelled the exhibition,” Tom said, quoting a message from an anonymous account."
+      ],
+      "trueClaim": [
+        "char:bev",
+        "There are sixty-four pounds in the tin.",
+        "“There are sixty-four pounds in the tin,” Bev said after making two neat piles."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:leila",
+          "content": "The pedestal’s delivery has not yet been checked.",
+          "via": "read",
+          "anchor": "Leila read UNCHECKED in the register and knew it was not a missing-object report."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:tom",
+          "content": "The exhibition will expose his inexperience.",
+          "via": "inferred",
+          "anchor": "Tom believed the exhibition would expose his inexperience, although nobody had criticised his work."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:bev",
+          "content": "The spare screws belong to a display attachment.",
+          "via": "inferred",
+          "anchor": "Bev suspected the three spare screws belonged to an attachment, but had not seen that attachment."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:leila",
+          "content": "Tom has ignored her briefing.",
+          "via": "inferred",
+          "anchor": "Leila initially misbelieved Tom had ignored the briefing because he kept consulting his folder."
+        }
+      ],
+      "correction": {
+        "characterId": "char:leila",
+        "kind": "knows",
+        "content": "Tom consulted the folder because the replacement badge hid the printed instructions.",
+        "via": "witnessed",
+        "anchor": "When Tom unfolded the badge backing, Leila saw the briefing instructions printed underneath it."
+      },
+      "relationship": [
+        "char:leila",
+        "char:tom",
+        "awkward cooperation",
+        "Leila agreed to work beside Tom instead of sending him away for another badge."
+      ],
+      "memory": [
+        "char:leila",
+        "location",
+        "place:gallery",
+        null,
+        0,
+        "Long before this exhibition, Leila had slept in the civic gallery during a student installation."
+      ],
+      "hooks": [
+        [
+          "H-screws",
+          "upsert",
+          "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them."
+        ],
+        [
+          "H-label",
+          "upsert",
+          "The empty object label carried a blue dot that appeared on no public catalogue."
+        ],
+        [
+          "H-bell",
+          "upsert",
+          "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell."
+        ]
+      ],
+      "plan": "Tom intended to call the mayor after lunch, but had not dialled the number.",
+      "hypothesis": "If the crate held a live performer, the bell might be a signal; nobody opened it on that assumption.",
+      "dream": "In a brief doze Leila dreamed that the pedestal delivered a speech, then woke to Tom’s real voice.",
+      "uncertainty": "The dot might have been a packing code, but the unsigned label did not establish that."
+    },
+    {
+      "title": "An Audience for the Wrapping",
+      "facts": [
+        {
+          "subject": "char:leila",
+          "predicate": "location",
+          "object": "place:gallery",
+          "anchor": "Leila remained in the civic gallery after the public rehearsal."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "holder",
+          "object": "char:bev",
+          "anchor": "Tom handed the delivery slip to Bev for the reconciliation."
+        },
+        {
+          "subject": "org:exhibition",
+          "predicate": "quantity:petty_cash",
+          "object": {
+            "value": 74,
+            "unit": "pounds"
+          },
+          "anchor": "A ten-pound deposit refund increased petty cash from sixty-four pounds to seventy-four.",
+          "before": 64,
+          "change": 10,
+          "validFrom": 2,
+          "validUntil": null,
+          "sharedResourceKey": "item:exhibition_petty_cash"
+        },
+        {
+          "subject": "char:tom",
+          "predicate": "identity",
+          "object": "acting stage manager for the afternoon rehearsal only",
+          "anchor": "The director appointed Tom acting stage manager for the afternoon rehearsal.",
+          "validFrom": 2,
+          "validUntil": 2
+        },
+        {
+          "subject": "char:leila",
+          "predicate": "injury",
+          "object": "protected healing blister on right heel",
+          "anchor": "A fresh pad protected the healing blister on Leila’s right heel; it had not vanished."
+        },
+        {
+          "subject": "item:pedestal",
+          "predicate": "location",
+          "object": "place:gallery",
+          "anchor": "Tom wheeled the pedestal into the civic gallery and locked its castors."
+        },
+        {
+          "subject": "item:paper_roll",
+          "predicate": "holder",
+          "object": "char:bev",
+          "anchor": "Leila removed the numbered paper roll and gave it to Bev to count."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "delivery_status",
+          "object": "checked and intact",
+          "anchor": "Bev signed the delivery register after checking that the pedestal was intact."
+        }
+      ],
+      "claim": [
+        "char:tom",
+        "The blue dot means the object is radioactive.",
+        "“The blue dot means the object is radioactive,” Tom joked, and immediately said he was inventing that."
+      ],
+      "trueClaim": [
+        "char:bev",
+        "The fund is seventy-four pounds now.",
+        "“The fund is seventy-four pounds now,” Bev said, matching the refund to the cash."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:tom",
+          "content": "He is acting stage manager for this rehearsal.",
+          "via": "told",
+          "anchor": "The director told Tom he was acting stage manager for that rehearsal only."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:leila",
+          "content": "A plain explanation will work better than another apology.",
+          "via": "inferred",
+          "anchor": "Leila believed a plain explanation would work better than another apology, but the audience had not yet arrived."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:bev",
+          "content": "The bell belongs to reusable packaging.",
+          "via": "inferred",
+          "anchor": "Bev suspected the bell belonged to reusable packaging rather than the missing artwork."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:tom",
+          "content": "The audience has been told the empty pedestal is the exhibit.",
+          "via": "inferred",
+          "anchor": "Tom briefly believed, wrongly, that the audience had been told the empty pedestal was the exhibit."
+        }
+      ],
+      "correction": {
+        "characterId": "char:tom",
+        "kind": "knows",
+        "content": "The audience was invited to an unpacking demonstration, not an empty-pedestal artwork.",
+        "via": "read",
+        "anchor": "The invitation corrected Tom’s mistake: it advertised a demonstration of unpacking, not an empty-pedestal artwork."
+      },
+      "relationship": [
+        "char:leila",
+        "char:tom",
+        "shared professional confidence",
+        "Leila let Tom lead the rehearsal and stood ready to answer only when he asked."
+      ],
+      "memoryRef": {
+        "existingFactId": "F-180",
+        "anchor": "Leila recalled the same student night in the gallery; recalling it did not put her back in that earlier year."
+      },
+      "hooks": [
+        [
+          "H-screws",
+          "advance",
+          "The workshop diagram showed three holes beneath a removable reading shelf, but the shelf was not in the crate."
+        ],
+        [
+          "H-label",
+          "advance",
+          "A private loan form repeated the blue dot beside an unnamed regional depot."
+        ],
+        [
+          "H-bell",
+          "mention",
+          "The unexplained bell sounded again when they tilted the sealed crate for the rehearsal."
+        ]
+      ],
+      "plan": "Bev planned to refund the ticket deposits tomorrow; no ticket refund was made that afternoon.",
+      "hypothesis": "If the audience refused the demonstration, they would need a new programme; the audience had not voted.",
+      "dream": "Tom described a dream in which the mayor arrived disguised as a pedestal; nobody treated it as a visit.",
+      "uncertainty": "A muffled sound from the corridor could have been the mayor’s laugh, but no one saw who made it."
+    },
+    {
+      "title": "What the Public Paid For",
+      "facts": [
+        {
+          "subject": "char:leila",
+          "predicate": "location",
+          "object": "place:loading",
+          "anchor": "Leila stayed in the loading room after the exhibition closed."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "holder",
+          "object": "char:leila",
+          "anchor": "Bev returned the intact delivery slip to Leila in the loading room."
+        },
+        {
+          "subject": "org:exhibition",
+          "predicate": "quantity:petty_cash",
+          "object": {
+            "value": 62,
+            "unit": "pounds"
+          },
+          "anchor": "The twelve-pound van charge reduced petty cash from seventy-four pounds to sixty-two.",
+          "before": 74,
+          "change": -12,
+          "validFrom": 3,
+          "validUntil": null,
+          "sharedResourceKey": "item:exhibition_petty_cash"
+        },
+        {
+          "subject": "char:tom",
+          "predicate": "identity",
+          "object": "appointed display custodian",
+          "anchor": "The director appointed Tom display custodian for the exhibition’s remaining week."
+        },
+        {
+          "subject": "char:leila",
+          "predicate": "injury",
+          "object": "closed skin on right heel",
+          "anchor": "By closing time the blister on Leila’s right heel had settled under closed skin, still tender but unbroken."
+        },
+        {
+          "subject": "item:pedestal",
+          "predicate": "location",
+          "object": "place:loading",
+          "anchor": "The dismantled pedestal waited in the loading room beside its labelled shelf."
+        },
+        {
+          "subject": "item:paper_roll",
+          "predicate": "holder",
+          "object": "char:leila",
+          "anchor": "Bev gave the counted numbered paper roll back to Leila."
+        },
+        {
+          "subject": "item:delivery_slip",
+          "predicate": "closure_status",
+          "object": "reconciled",
+          "anchor": "The closing account marked the delivery reconciled without charging anyone for a missing object."
+        }
+      ],
+      "claim": [
+        "char:tom",
+        "We should charge the pedestal an appearance fee.",
+        "“We should charge the pedestal an appearance fee,” Tom said; it was a joke, not an invoice."
+      ],
+      "trueClaim": [
+        "char:bev",
+        "Sixty-two pounds remains.",
+        "“Sixty-two pounds remains,” Bev said, closing the actual cashbook."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:leila",
+          "content": "The screws secure the removable reading shelf.",
+          "via": "witnessed",
+          "anchor": "Leila watched the three screws secure the reading shelf and knew what they were for."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:tom",
+          "content": "The team can admit errors without losing the audience.",
+          "via": "inferred",
+          "anchor": "Tom believed the team could admit an error without losing its audience; tomorrow’s audience remained unknown."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:bev",
+          "content": "The blue dot identifies an old depot route.",
+          "via": "inferred",
+          "anchor": "Bev suspected the dot identified an old depot route, but the depot’s name was still missing."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:leila",
+          "content": "The spare screws proved a part had been lost.",
+          "via": "inferred",
+          "anchor": "Leila acknowledged her earlier wrong belief that spare screws proved a part had been lost."
+        }
+      ],
+      "correction": {
+        "characterId": "char:leila",
+        "kind": "knows",
+        "content": "The screws were packed separately for the removable reading shelf, not evidence of a lost part.",
+        "via": "read",
+        "anchor": "The packing note corrected that belief: the shelf travelled separately and the screws were deliberately supplied loose."
+      },
+      "relationship": [
+        "char:leila",
+        "char:tom",
+        "collegial trust",
+        "Leila asked Tom to write next week’s briefing with her and put both names on it."
+      ],
+      "memory": [
+        "char:tom",
+        "former_role",
+        "cinema usher",
+        null,
+        0,
+        "Before this temporary job, Tom had been a cinema usher."
+      ],
+      "hooks": [
+        [
+          "H-screws",
+          "resolve",
+          "The separate shelf and its packing note explained all three spare screws."
+        ],
+        [
+          "H-label",
+          "mention",
+          "The blue dot’s depot was still unnamed when Bev filed the loan form."
+        ],
+        [
+          "H-bell",
+          "advance",
+          "The crate maker’s mark matched a bell-shaped stamp under the lid, but nobody could identify the maker or the bell’s purpose."
+        ]
+      ],
+      "plan": "Leila planned to ask the regional depot about the blue dot next week; no answer arrived that night.",
+      "hypothesis": "If the bell were an alarm, opening the lid might stop it, but they did not establish any alarm mechanism.",
+      "dream": "Leila imagined the pedestal taking a bow and smiled at the image; the actual pedestal stayed still.",
+      "uncertainty": "The bell-shaped stamp might be a maker’s emblem rather than an operating instruction."
+    }
+  ],
+  "sharedResources": [
+    {
+      "key": "org:exhibition",
+      "predicate": "quantity:petty_cash",
+      "scope": "shared_story_resource_account",
+      "description": "The exhibition’s petty-cash account.",
+      "steward": "char:leila",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:exhibition_petty_cash"
+    }
+  ]
+}

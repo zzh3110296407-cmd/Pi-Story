@@ -1,0 +1,48 @@
+{
+  "schema": "story/consistent-controls@1",
+  "id": "unclaimed_pedestal-c3-control",
+  "source": {
+    "dataset": "DS09",
+    "version": "v3",
+    "path": "acceptance/chapters/unclaimed_pedestal-c3.md",
+    "sha256": "85e170ae424355daeb081007fcd91b72e60145b8086801d675269225f15532c7"
+  },
+  "labels": [
+    {
+      "id": "unclaimed_pedestal-c3-control-consistent-1",
+      "category": "quantity_chain",
+      "expected": "no_defect",
+      "objective": true,
+      "quote": "The full account showed an intervening ten-pound return and a later twelve-pound charge, neither of which could be discarded for convenience.",
+      "lines": {
+        "start": 21,
+        "end": 21
+      },
+      "sources": [
+        {
+          "ref": "mustKeep[1]"
+        }
+      ],
+      "reason": "Monday 64 + refund 10 - van 12 = 62. Comparing only first and last balances cannot establish a two-pound purchase or arithmetic error.",
+      "reviewStatus": "pending_author_review"
+    },
+    {
+      "id": "unclaimed_pedestal-c3-control-consistent-2",
+      "category": "ordinary_omission",
+      "expected": "no_defect",
+      "objective": true,
+      "quote": "Only after the roll was installed did she print the supplier acknowledgement.",
+      "lines": {
+        "start": 17,
+        "end": 17
+      },
+      "sources": [
+        {
+          "ref": "rule:mechanism"
+        }
+      ],
+      "reason": "The roll is explicitly returned and reinstalled before printing; a prior empty machine and a later printed receipt are consistent.",
+      "reviewStatus": "pending_author_review"
+    }
+  ]
+}

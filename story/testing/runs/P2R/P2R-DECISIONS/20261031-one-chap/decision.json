@@ -1,0 +1,32 @@
+{
+  "schema": "story/author-decision@1",
+  "stage": "P2R",
+  "recordedAt": "2026-10-31T07:50:56Z",
+  "authorInstruction": "CHAP只进行一轮",
+  "freeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "scope": {
+    "P2-OPEN": 2,
+    "P2-CHAP": 1,
+    "P2-KEEP": 2,
+    "P2-EDIT": 2
+  },
+  "qualityChapRun": "20261031T064958Z-0ae2186-r1",
+  "cancelledChapRun": "20261031T074430Z-0ae2186-r2",
+  "cancellation": {
+    "method": "Graceful STOP file observed by the existing measurement driver",
+    "status": "failed",
+    "committedChapters": 1,
+    "draftAttempts": 2,
+    "requests": 14,
+    "knownUsd": 0.05391222,
+    "reservedUsd": 0.0436812,
+    "totalUsd": 0.09759342
+  },
+  "accounting": "Keep cancelled run, raw evidence and all costs; include it in V2 all-real hard gates and raw rescore. Exclude it from the selected quality cohorts and do not represent it as a completed second CHAP repetition.",
+  "limitations": [
+    "The author reduced CHAP repetitions; no minimum sample size or quality threshold was waived.",
+    "The single full CHAP has twenty W01 samples, below the original minimum thirty. Report insufficient evidence rather than a pass.",
+    "Report single-round W02 and other chapter observations directly; do not invent a second-round value.",
+    "KEEP and EDIT remain two repetitions; no further reduction is inferred."
+  ]
+}

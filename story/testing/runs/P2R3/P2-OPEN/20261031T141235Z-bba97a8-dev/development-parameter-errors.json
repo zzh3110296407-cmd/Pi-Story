@@ -1,0 +1,151 @@
+{
+  "phase": "development",
+  "rawUnchanged": true,
+  "failedCalls": [
+    {
+      "caseId": "1713",
+      "tool": "submit_bible",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "作者来源必须有可核对的原话",
+        "items": [
+          "items[1].authorQuote"
+        ],
+        "hint": "请核对输入后重试"
+      }
+    },
+    {
+      "caseId": "1773",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - tone: must have required properties tone, chapters\n  - viewpoint: must not have more than 240 characters",
+        "items": [
+          "$",
+          "/viewpoint"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    },
+    {
+      "caseId": "1986",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - viewpoint: must not have more than 240 characters",
+        "items": [
+          "/viewpoint"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    },
+    {
+      "caseId": "580",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - chapters.6.points: must not have more than 5 items",
+        "items": [
+          "/chapters/6/points"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    },
+    {
+      "caseId": "580",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - chapters.6.points: must not have more than 5 items",
+        "items": [
+          "/chapters/6/points"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    },
+    {
+      "caseId": "724",
+      "tool": "submit_constraints",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "台账引文不在当前分支的作者消息中",
+        "items": [
+          "items[7].quotes[0]"
+        ],
+        "hint": "请核对输入后重试"
+      }
+    },
+    {
+      "caseId": "103",
+      "tool": "submit_bible",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_bible\":\n  - items.1.kind: must have required properties kind",
+        "items": [
+          "/items/1"
+        ],
+        "hint": "修正列出的参数字段后重试"
+      }
+    },
+    {
+      "caseId": "103",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - tone: must have required properties tone, chapters\n  - viewpoint: must not have more than 240 characters",
+        "items": [
+          "$",
+          "/viewpoint"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    },
+    {
+      "caseId": "1124",
+      "tool": "submit_constraints",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "工具参数不是有效JSON对象：Unexpected non-whitespace character after JSON at position 1859 (line 1 column 1860)",
+        "items": [
+          "$"
+        ],
+        "hint": "只提交一个完整JSON对象；修正括号或引号后重试，末尾不要多加右括号或说明文字"
+      }
+    },
+    {
+      "caseId": "1946",
+      "tool": "submit_bible",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_bible\":\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must be equal to constant\n  - items.13.kind: must match a schema in anyOf",
+        "items": [
+          "/items/13/kind"
+        ],
+        "hint": "修正列出的参数字段后重试"
+      }
+    },
+    {
+      "caseId": "919",
+      "tool": "submit_outline",
+      "error": {
+        "code": "DOMAIN_INVALID",
+        "message": "Validation failed for tool \"submit_outline\":\n  - tone: must have required properties tone, chapters\n  - viewpoint: must not have more than 240 characters",
+        "items": [
+          "$",
+          "/viewpoint"
+        ],
+        "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+      }
+    }
+  ],
+  "classification": {
+    "author_quote": 2,
+    "outline_missing_roots_or_encoded_viewpoint": 3,
+    "outline_viewpoint_length": 1,
+    "outline_points_over_limit": 2,
+    "bible_kind_missing": 1,
+    "bible_kind_invalid": 1,
+    "json_syntax_in_constraints": 1
+  },
+  "actualSchemaObservation": "HTTP published bible item allows invariants for every kind; no character-only allOf remains. Outline fields are flat. No implementation rewrite or hidden argument repair is added."
+}

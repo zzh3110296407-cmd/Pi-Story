@@ -1,0 +1,119 @@
+{
+  "id": "ds11-a01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author asked to change only unwritten chapter 3 so Oren leads the document check while Lena assists, keeping chapter number and total count.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Oren leads the document check of the handling note and the missing service-register page while Lena assists him as second pair of hands and eyes.",
+            "turn": "Oren sets the order of checks and asks Suri for the duplicate page; Lena follows his lead, supplies measurements and keeps the sample case unopened, and the team agrees to finish the check before the demonstration."
+          }
+        ]
+      },
+      "id": "call_00_CkwjkT0sfhqWKEuHW5nJ2890"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author asked to change only unwritten chapter 3 so Oren leads the document check while Lena assists, keeping chapter number and total count.",
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Oren leads the document check of the handling note and the missing service-register page while Lena assists him as second pair of hands and eyes.",
+          "turn": "Oren sets the order of checks and asks Suri for the duplicate page; Lena follows his lead, supplies measurements and keeps the sample case unopened, and the team agrees to finish the check before the demonstration."
+        }
+      ]
+    },
+    "id": "call_00_CkwjkT0sfhqWKEuHW5nJ2890"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Oren leads the document check while Lena assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "e0f3dc4c4aab327567a85c0f96d4551c44dbced00ed1c1d3624acc4f4b68fb62",
+    "sessionSha256": "48d66cc90f96671740a0917abc95a2fadf9bc3d2f23d3d03ab2180a83a57b1bf",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026333999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026333999999999997
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,315 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261030T163044Z-55223ea-dev",
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 55,
+      "value": 0.7272727272727273,
+      "successes": 40,
+      "failures": 15,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.5976780188832919,
+        0.8271924806089416
+      ],
+      "passed": null,
+      "status": "insufficient_evidence",
+      "failureCategories": {
+        "DOMAIN_INVALID": 12,
+        "json_syntax": 2,
+        "json_syntax_repaired": 1
+      },
+      "afterRepairUsability": {
+        "n": 55,
+        "successes": 41
+      }
+    },
+    {
+      "id": "T05",
+      "n": 20,
+      "value": 0.65,
+      "successes": 13,
+      "failures": 7,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.43285427668523624,
+        0.818808175898918
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 5,
+      "successes": 5,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.5655175352168251,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 5,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.5655175352168251,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 5,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.5655175352168251,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 5,
+      "successes": 5,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.5655175352168251,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 5,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.5655175352168251,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 74,
+        "knownUsd": 0.126377208,
+        "reservedUsd": 0.46404809999999996,
+        "unknownCalls": 1,
+        "networkRequests": 62,
+        "mainLogicalRequests": 69,
+        "mainNetworkRequests": 57
+      },
+      "chapters": [
+        {
+          "caseId": "1713",
+          "toolCallId": "call_00_j3KosRBmjJSDCgKVjGtK6558",
+          "chapter": 1,
+          "mode": "macro",
+          "committed": true,
+          "quality": "with_risk",
+          "internalCalls": 5,
+          "elapsedMs": 219897,
+          "knownUsd": 0.05096230799999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 12,
+          "mainLogicalRequests": 7,
+          "mainNetworkRequests": 7
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0.0754149,
+        "reservedUsd": 0.46404809999999996,
+        "unknownCalls": 1,
+        "networkRequests": 50,
+        "mainLogicalRequests": 62,
+        "mainNetworkRequests": 50
+      },
+      "risk": {
+        "n": 1,
+        "withRisk": 1,
+        "rate": 1
+      },
+      "state": {
+        "n": 9,
+        "provisional": 1,
+        "provisionalRate": 0.1111111111111111,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": [
+        {
+          "caseId": "1713",
+          "reviewId": "c01-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        }
+      ]
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 5,
+      "median": 1.6195560550716492,
+      "max": 1.7882780554293503
+    },
+    "writerOutputTokens": [
+      1946
+    ],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "87f169db-76ca-479b-927c-7db85c1645f6",
+        "caseId": "1713",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0416832
+      },
+      {
+        "type": "call_audit",
+        "requestId": "fe6d307e-d31f-4b08-94df-3a1519047b05",
+        "caseId": "1713",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.04278
+      },
+      {
+        "type": "call_audit",
+        "requestId": "e8587347-0f11-4cf7-ae30-e8310d802b47",
+        "caseId": "1713",
+        "reservationId": "reservation-3",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043212
+      },
+      {
+        "type": "call_audit",
+        "requestId": "3fbab27c-627a-42e3-9baf-4925fa411bdc",
+        "caseId": "1713",
+        "reservationId": "reservation-4",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.042915299999999997
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ad72ad83-8e03-46a5-9077-b3425353b219",
+        "caseId": "1713",
+        "reservationId": "reservation-5",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0429282
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

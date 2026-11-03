@@ -1,0 +1,7 @@
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex');
+const changes=[];
+for(const name of readdirSync(root+'truth/')){const p=root+'truth/'+name,before=readFileSync(p),truth=JSON.parse(before);const memory=truth.chapters[2].memory;if(memory[1]!=='identity')continue;memory[1]='former_role';const after=JSON.stringify(truth,null,2)+'\n';writeFileSync(p,after);changes.push({path:'truth/'+name,beforeSha256:sha(before),afterSha256:sha(after),beforePredicate:'identity',afterPredicate:'former_role',unchangedEvidence:memory[5]});}
+if(changes.length){mkdirSync(root+'labels/',{recursive:true});const p=root+'labels/historical-role-revision.json';if(existsSync(p))throw Error('Do not overwrite revision audit');writeFileSync(p,JSON.stringify({date:new Date().toISOString(),phase:'after_prose_before_gold_review',reason:'The frozen P1 D4 boundary forbids a batch from expiring current identity while also adding a recalled identity for that subject, even when the new appointment has independent evidence. Express a former role as former_role rather than a second current identity. Historical single-value coverage remains the bounded chapter-one location and its chapter-two reference. No prose or narrative event changes; product code and frozen fixtures are untouched.',changes},null,2)+'\n');}

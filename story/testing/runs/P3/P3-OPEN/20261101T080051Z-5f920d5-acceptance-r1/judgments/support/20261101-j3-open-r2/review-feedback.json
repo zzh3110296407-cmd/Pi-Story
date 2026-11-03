@@ -1,0 +1,13 @@
+{
+  "schema": "story/judge-review-feedback@1",
+  "date": "2026-11-01",
+  "runId": "20261101T080051Z-5f920d5-acceptance-r1",
+  "status": "changes_requested_before_overall_acceptance",
+  "feedbackSource": "Current user reply to the335-item overall-acceptance request",
+  "reviewerIdentity": "User-provided review feedback; no further reviewer identity or personal human review is inferred.",
+  "feedbackText": "已逐项检查 335 项。建议先修正，再整体认可：333 项结论可维持，2 项应改判，另有 1 处理由需更正。\n- 用例 378 的两项误判：原提示只说邻居是 couple，台账却写成“夫妻”，新增了婚姻身份限定。按“不扩大或缩小限制”的口径，T06 精确率 L-5 和召回率 378-g10 应从正确改为错误。\n- 用例 1253 的理由措辞：试炼规则说明应写“不得在屋顶下睡觉”，不能拆成禁止屋顶、禁止睡眠。T07 判为 model 仍正确。\n按上述建议修订后：T06 精确率113/126＝89.68%；T06 召回率145/159＝91.19%；T07 50/50＝100%。\n三项仍达到数值门槛，0 项不适用可维持。原始证据、固定抽样、335 项计数及计分文件一致性已核对。",
+  "transcriptionNote": "Substantive user feedback transcribed; clickable line links to the original reading copy omitted. Original message remains the authority.",
+  "authorOverallAcceptance": false,
+  "authorApprovalPending": true,
+  "AIResponse": "Agree with all three corrections after checking the archived native outputs; apply as a new revision, preserve initial judgments."
+}

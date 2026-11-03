@@ -1,0 +1,65 @@
+{
+  "id": "ds11-j01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [],
+  "firstAction": null,
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "0e06dc9905803626fc65da6b037ca5905ec0309a65ce0719651f68deebead30a",
+    "sessionSha256": "28593209abf294b120d7a67d9a014ab0911e52abd39da0b7b311051cfb36d3ce",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 0
+  }
+}

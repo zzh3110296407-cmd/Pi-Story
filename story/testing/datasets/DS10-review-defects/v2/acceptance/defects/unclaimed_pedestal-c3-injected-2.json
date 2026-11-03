@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "unclaimed_pedestal-c3-injected-2",
+  "storyId": "unclaimed_pedestal",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/unclaimed_pedestal-c3.md",
+    "sha256": "85e170ae424355daeb081007fcd91b72e60145b8086801d675269225f15532c7"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "While its paper roll was removed and no other paper was supplied, the intact receipt machine printed a new paper receipt.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "While its paper roll was removed and no other paper was supplied, the intact receipt machine printed a new paper receipt.",
+          "lines": {
+            "start": 39,
+            "end": 39
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:mechanism",
+          "quote": "The intact receipt machine prints only on its numbered paper roll; with the roll removed it cannot produce a paper receipt."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this mechanism rule: The intact receipt machine prints only on its numbered paper roll; with the roll removed it cannot produce a paper receipt."
+        }
+      ],
+      "reason": "A narrated actual event violates the supplied mechanism rule under the exact conditions the rule excludes.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c3-injected-2-defect-1",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Tom died permanently at that moment, and the death was confirmed before the chapter ended.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Tom died permanently at that moment, and the death was confirmed before the chapter ended.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Tom alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death violates the explicit author requirement to keep this named person alive through chapter three.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c3-injected-2-defect-2",
+      "lines": [
+        41
+      ]
+    }
+  ]
+}

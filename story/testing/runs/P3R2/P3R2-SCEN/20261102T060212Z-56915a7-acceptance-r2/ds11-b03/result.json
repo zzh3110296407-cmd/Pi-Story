@@ -1,0 +1,137 @@
+{
+  "id": "ds11-b03",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "rule:damp_paper",
+            "kind": "rule",
+            "name": "Damp paper handling",
+            "source": "user",
+            "authorQuote": "For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+            "op": "set",
+            "value": {
+              "description": "A damp paper copy must be laid out and dried flat before anyone turns its pages; no one may turn the pages while the sheet is still damp.",
+              "invariants": [
+                "Damp paper dries flat before anyone turns its pages."
+              ]
+            }
+          }
+        ],
+        "reason": "Author adds a future handling rule for damp paper copies; all existing cards and committed chapters stay unchanged."
+      },
+      "id": "call_00_N7IoiNzwAdgBw1UrinFf9469"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "rule:damp_paper",
+          "kind": "rule",
+          "name": "Damp paper handling",
+          "source": "user",
+          "authorQuote": "For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+          "op": "set",
+          "value": {
+            "description": "A damp paper copy must be laid out and dried flat before anyone turns its pages; no one may turn the pages while the sheet is still damp.",
+            "invariants": [
+              "Damp paper dries flat before anyone turns its pages."
+            ]
+          }
+        }
+      ],
+      "reason": "Author adds a future handling rule for damp paper copies; all existing cards and committed chapters stay unchanged."
+    },
+    "id": "call_00_N7IoiNzwAdgBw1UrinFf9469"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "4b957049df2265d2715a2f94010ffefcc23518f2ec0cb8696922494a83a6acac",
+    "sessionSha256": "d780fa8f87a2bc4abc604ac6986a0ac96e539659e3e7c09a9869608c4eb9bc74",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025976999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025976999999999997
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

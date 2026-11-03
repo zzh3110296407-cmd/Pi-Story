@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>P0 Pi RPC 桥接验证</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;margin:24px;color:#283042}main{max-width:960px;margin:auto}button,input,textarea{font:inherit;padding:6px}button{cursor:pointer;margin:4px}textarea{display:block;width:100%;min-height:80px}pre{white-space:pre-wrap;background:#f1f4f8;padding:16px}dialog{min-width:420px;border:1px solid #aeb7c6;border-radius:8px}#status{color:#557}</style></head>
+<body><main><h1>Pi RPC 桥接验证</h1><p id="status">正在连接</p>
+<section><h2>故事</h2><button id="new">新建故事</button><button id="refresh">刷新故事</button><ul id="stories"></ul></section>
+<section><h2>对话</h2><label for="message">消息</label><textarea id="message"></textarea><button id="send">发送</button><button id="steer">立即插话</button><button id="follow">本轮结束后再说</button><button id="stop">停止</button></section>
+<section><h2>正文预览</h2><p id="draft-label">等待草稿</p><pre id="draft-preview"></pre><p id="commit-state" data-saved="false">尚无提交</p></section>
+<dialog id="editor"><form id="dialog-form"><h2 id="dialog-title">作者输入</h2><label for="answer">作者回复</label><textarea id="answer"></textarea><button type="submit">保存回复</button></form></dialog>
+</main><script type="module">
+let currentStory = null;
+let pendingDialog = null;
+const status = document.querySelector('#status');
+async function api(path, value) {
+  const response = await fetch(path, value === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
+  const data = await response.json(); if (!response.ok) throw new Error(data.error || response.statusText); return data;
+}
+async function refresh() {
+  const data = await api('/api/stories');
+  document.querySelector('#stories').replaceChildren(...data.stories.map(story => {
+    const row = document.createElement('li'); const button = document.createElement('button'); button.textContent = `打开 ${story.name}`;
+    button.onclick = async () => { await api(`/api/stories/${story.id}/open`,{}); currentStory = story.id; status.textContent = `已打开 ${story.id}`; };
+    row.append(button); return row;
+  }));
+}
+document.querySelector('#new').onclick = async () => { const story = await api('/api/stories',{name:'浏览器故事'}); currentStory=story.id; status.textContent=`已打开 ${story.id}`; await refresh(); };
+document.querySelector('#refresh').onclick = refresh;
+async function send(streamingBehavior) { if (!currentStory) throw new Error('请先打开故事'); await api(`/api/stories/${currentStory}/prompt`, {message:document.querySelector('#message').value,...(streamingBehavior?{streamingBehavior}:{})}); }
+document.querySelector('#send').onclick = () => send();
+document.querySelector('#steer').onclick = () => send('steer');
+document.querySelector('#follow').onclick = () => send('followUp');
+document.querySelector('#stop').onclick = async () => { await api(`/api/stories/${currentStory}/stop`,{}); status.textContent='已停止'; };
+document.querySelector('#dialog-form').onsubmit = async event => { event.preventDefault(); await api(`/api/stories/${currentStory}/dialog`,{requestId:pendingDialog.id,value:document.querySelector('#answer').value}); document.querySelector('#editor').close(); };
+const socket = new WebSocket(`${location.protocol==='https:'?'wss:':'ws:'}//${location.host}/events`);
+socket.onopen = () => { status.textContent='已连接'; refresh(); };
+socket.onmessage = message => {
+  const envelope = JSON.parse(message.data);
+  if (envelope.storyId !== currentStory) return;
+  const event = envelope.event;
+  if (envelope.kind === 'ui.request') { pendingDialog=event; document.querySelector('#dialog-title').textContent=event.title || '作者输入'; document.querySelector('#answer').value=event.prefill || ''; document.querySelector('#editor').showModal(); }
+  if (envelope.kind === 'draft.preview') { document.querySelector('#draft-preview').textContent=event.text; document.querySelector('#draft-label').textContent='未提交'; }
+  if (envelope.kind === 'chapter.pending') document.querySelector('#commit-state').textContent='提交中';
+  if (envelope.kind === 'chapter.committed') { document.querySelector('#commit-state').textContent=`第 ${event.chapter} 章已提交`; document.querySelector('#commit-state').dataset.saved='true'; document.querySelector('#draft-label').textContent='本轮草稿已提交'; }
+  if (envelope.kind === 'run.state') status.textContent=`${event.statusKey}: ${event.statusText}`;
+  if (envelope.kind === 'run.error') { status.textContent=`${event.code}: ${event.reason}`; document.querySelector('#commit-state').textContent='提交失败，需要重新打开故事'; document.querySelector('#commit-state').dataset.saved='false'; }
+  if (envelope.kind === 'pi' && event.type === 'extension_ui_request' && event.method === 'notify') status.textContent=event.message;
+};
+</script></body></html>

@@ -1,0 +1,30 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {readEvidence,publicEvidence} from '../../../scripts/eval/p2/artifacts.ts';
+import {parseWriter,schemas,validate} from '../../../packages/core/src/schema/index.ts';
+const folder='story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete',rows=readEvidence(folder,true);
+const parse=text=>{try{return JSON.parse(text);}catch{return undefined;}};
+const original=value=>{while(value&&typeof value==='object'&&'originalInput' in value)value=value.originalInput;return value;};
+const groups=new Map();
+for(const call of rows.filter(x=>x.type==='role_call')){
+ const input=original(parse(call.request.user)),role=call.request.role;if(!['writer','editor'].includes(role)||(role==='writer'&&input.task!=='draft'))continue;
+ const key=JSON.stringify([call.caseId,call.toolCallId??'direct',role,String(input.task),String(input.draft?.draftId??'')]);
+ const group=groups.get(key)??[];group.push(call);groups.set(key,group);
+}
+const failures=[];
+for(const [key,calls] of groups){
+ const role=calls[0].request.role,flags=calls.map(call=>{const text=call.response.content.filter(x=>x.type==='text').map(x=>x.text).join('\n');return role==='writer'?parseWriter(text).ok:validate(schemas.ReviewOutput,parse(text)).ok;});
+ if(flags.some(Boolean))continue;
+ const first=calls[0],requestIds=new Set();
+ for(let i=0;i<rows.length;i++){
+  const checkpoint=rows[i];if(checkpoint.type!=='role_checkpoint'||checkpoint.phase!=='started'||checkpoint.caseId!==first.caseId||checkpoint.toolCallId!==first.toolCallId||checkpoint.request?.role!==role)continue;
+  for(let j=i+1;j<rows.length;j++){
+   const row=rows[j];if(row.type==='role_checkpoint'&&row.caseId===checkpoint.caseId&&row.toolCallId===checkpoint.toolCallId&&row.reservationId===checkpoint.reservationId&&row.phase!=='started')break;
+   if(row.type==='request'&&row.caseId===checkpoint.caseId&&row.role===role&&row.inputDigest===checkpoint.request.inputSources?.inputDigest){requestIds.add(row.requestId);break;}
+  }
+ }
+ const requests=rows.filter(x=>x.type==='request'&&requestIds.has(x.requestId));
+ const macro=rows.find(x=>x.type==='tool_result'&&x.caseId===first.caseId&&x.message?.toolCallId===first.toolCallId);
+ failures.push({group:key,role,caseId:first.caseId,toolCallId:first.toolCallId,attempts:calls.length,parseFlags:flags,macroError:macro?.message?.details?.error,terminals:requests.map(req=>{const terminal=rows.find(x=>x.type==='response'&&x.requestId===req.requestId);return {requestId:req.requestId,physicalRunId:req.physicalRunId,classification:terminal?.classification,stopReason:terminal?.response?.stopReason,error:terminal?.response?.errorMessage,outputTokens:terminal?.response?.usage?.output,networkAttempts:terminal?.networkAttempts};})});
+}
+const result={schema:'story/p2r3-first-chap-failure-diagnostics@1',logicalRunId:'20261031T154922Z-102c3ed-r1-complete',scorerSource:'story/scripts/eval/p2/score.ts: role_call groups keyed by case, tool call, role, task and draft; failed groups remain in first/final format denominators',failures,rootCausePolicy:'Read-only diagnostics; no raw record removed, product or scoring fix attempted after V3 freeze',modelRequests:0};
+const text=JSON.stringify(result,null,2)+'\n';publicEvidence(text);writeFileSync('story/testing/runs/P2R3/P2R3-DECISIONS/20261101-single-repetition/first-chap-failures.json',text,{flag:'wx'});console.log(text);

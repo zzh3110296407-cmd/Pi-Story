@@ -1,0 +1,2775 @@
+{
+  "schema": "story/ds11-v3-revision@1",
+  "date": "2026-11-02",
+  "baseline": "DS11/v2",
+  "acceptanceCaseCount": 32,
+  "retainedDevCount": 15,
+  "changes": [
+    {
+      "id": "ds11-a01-dev",
+      "split": "dev",
+      "beforeSha256": "0cd504f4d251c21a5b79076b96fe403c60472199f956e084f927cc1d6f974769",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "reason": "Retain chapters[0].n: the author explicitly names this unwritten chapter. No new name, text or arbitrary field is constrained."
+      },
+      "afterSha256": "340f20340c778911a19aff6f37b85ce711a91628c5a75c2e849f134ec3f46a8f"
+    },
+    {
+      "id": "ds11-b01-dev",
+      "split": "dev",
+      "beforeSha256": "cfc12e477786478f43ac8a1e83914c2d30cc0970453be464fbec54bf75c609f4",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].key": "char:orla",
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight."
+          ],
+          "after": [
+            "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+            "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "char:orla",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+      },
+      "afterSha256": "47b7e52b42b92ab58c6d126331246803a29f8dbd1a22e43f28212077666d58af"
+    },
+    {
+      "id": "ds11-b02-dev",
+      "split": "dev",
+      "beforeSha256": "9e65b0a9097f1f0d479cf2b1537aad7bc67ca45e84f4ea5907dbbc236070cf1b",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].key": "place:ferry_office",
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door."
+          ],
+          "after": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door.",
+            "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "place:ferry_office",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+      },
+      "afterSha256": "96e80c0b278dee29dfc6c4da27588d0a9c405612d9993be336a0f6348ec5aae9"
+    },
+    {
+      "id": "ds11-c01-dev",
+      "split": "dev",
+      "beforeSha256": "a9b96eb22cc35a615d9471dc704fb14555344f4e4577e540947dff1e1e762637",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "6f288dd79ce340622c59081288b2983fb96e0fbea7cfa288b47007ef272fa87e"
+    },
+    {
+      "id": "ds11-d01-dev",
+      "split": "dev",
+      "beforeSha256": "e8d59080071ed098eea77a121d283159ab78bb97d74d2d4b52cb8e465a442976",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "56c6e4a1f3b177bb7b9f65233f8ca95ecbfb9bf0c0f1314c9cbbf49c511aaac5"
+    },
+    {
+      "id": "ds11-e01-dev",
+      "split": "dev",
+      "beforeSha256": "a25e487cce4e12af6d37ad14226e182dbe81da4a215b3e16fd24b04fa4d26d83",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 3,
+                "chapters[0].title": "The Duplicate Page"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 3
+              }
+            }
+          ],
+          "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [],
+          "after": [
+            "Implement the author-requested change on the named unwritten chapter, preserving all other specified fields: Set the title of unwritten chapter 3 to The Duplicate Page. Leave its events, number and target length unchanged."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3,
+              "chapters[0].title": "The Duplicate Page"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+      },
+      "afterSha256": "2e009099c0881a3a871bcf22595edcc345c9cc0f016e8fb93f728b5ebd93b0e6"
+    },
+    {
+      "id": "ds11-f01-dev",
+      "split": "dev",
+      "beforeSha256": "2d435a205b1b11e5a2eb38301dee9fd0a01e34d6de8c8a646faafcdba09beaea",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "get_character",
+              "argsMatch": {
+                "key": "char:hana"
+              }
+            },
+            {
+              "tool": "read_story",
+              "argsMatch": {
+                "section": "bible"
+              }
+            },
+            {
+              "reply": true
+            }
+          ],
+          "after": [
+            {
+              "reply": true
+            }
+          ],
+          "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "If answering directly, use only the setup: Hana is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+          ],
+          "after": [
+            "Answer the actual character question: Hana is an assistant who is allowed to disagree. The committed chapters show this assistant helping the protagonist check and compare the record. Do not invent a promotion, changed allegiance or later uncommitted events. Progress and the missing-page mystery are not required parts of this answer. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "get_character",
+            "argsMatch": {
+              "key": "char:hana"
+            }
+          },
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "bible"
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+      },
+      "afterSha256": "03fa3d7ebabb27b2aec662f1906cbc0a09d70ef2d73b8815ef443b0263b11b18"
+    },
+    {
+      "id": "ds11-g01-dev",
+      "split": "dev",
+      "beforeSha256": "6eee13ae0ffb483406b6e5472cff7f6f825ccdb2e23ac0e4fed588d5a5a470e0",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "fc0808a65ac396126c1e0b303bd889aa6ea499c0e2f2d8c227968f890ab649a6"
+    },
+    {
+      "id": "ds11-g02-dev",
+      "split": "dev",
+      "beforeSha256": "3f63d06363e39a441a1f1d36baf2b41063d21110dc68aa33dc680720143627cd",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "d581c187da53cfe5e3df99c0d0b1c63ae92096fa1b7e60d471499d3b188aa37c"
+    },
+    {
+      "id": "ds11-h01-dev",
+      "split": "dev",
+      "beforeSha256": "c78b125de63c3cd8894c3108af6a6f7e46800da7c5be48946c17117914c0202c",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "40c6874f382d9d2ac206f5848f035b2e6d1b1a2917c7af657a52c92dba51cc47"
+    },
+    {
+      "id": "ds11-i01-dev",
+      "split": "dev",
+      "beforeSha256": "eb398fba31f35cdf1a3194c3075cff239a1a8197547716dfd15418417091c277",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "ab40d4a00ada7e104c90dfb7c4fb3900373e167c92166e6f4dd7cbcfd57d213f"
+    },
+    {
+      "id": "ds11-j01-dev",
+      "split": "dev",
+      "beforeSha256": "60ebd222ad782ab9cd2e0d6473e58987f09bbd5c14bdc8f1b342aef70c920ba4",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "445a4fb83fb5d89a172a14349aba00a5b8b3e9374be0fcfa2ecdd272a2f0c394"
+    },
+    {
+      "id": "ds11-k01-dev",
+      "split": "dev",
+      "beforeSha256": "69a4bbfe62ada5499b0b80e583cf2b5ae38c12ce1f95501cfe588107ed5b18b5",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "236b26e74d7d18b7f5c4ea409f93e181e841ce1b23042e9b441038165678df8b"
+    },
+    {
+      "id": "ds11-l01-dev",
+      "split": "dev",
+      "beforeSha256": "e4d1573d90b8f3b8d78a1db456adb8a8438f4660fc005fb0a1478ec61e3cdfd4",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "29b3c548a6196baa1b3f842c653c55f274855a4c85a7514ab4055b63822aed27"
+    },
+    {
+      "id": "ds11-m01-dev",
+      "split": "dev",
+      "beforeSha256": "4058cfe81dffc23e0e50cee69eedce7c0adc3ed5f816e83ba4de44018ce10b67",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop",
+            "usageSnapshot": {
+              "knownUsd": 0.031,
+              "unknownReservationsUsd": 0.007,
+              "conservativeTotalUsd": 0.038,
+              "status": "scripted_observation_not_live_spend"
+            }
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop",
+            "usageSnapshot": {
+              "knownUsd": 0.031,
+              "unknownReservationsUsd": 0.007,
+              "conservativeTotalUsd": 0.038,
+              "status": "scripted_observation_not_live_spend"
+            }
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "8ce46641aad725df6b7d41d465a1337c2f7de0a1ac8359e60c2336560be30079"
+    },
+    {
+      "id": "ds11-a01",
+      "split": "acceptance",
+      "beforeSha256": "ccca7e9c94d0942f4e20806947aa0b5c36f4dfdfd87612ef003be8f0ef57d19a",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "reason": "Retain chapters[0].n: the author explicitly names this unwritten chapter. No new name, text or arbitrary field is constrained."
+      },
+      "afterSha256": "8f041bce76affae02228fe815fc5fdfbeb44af84de79b43cd4599556920d8014"
+    },
+    {
+      "id": "ds11-a02",
+      "split": "acceptance",
+      "beforeSha256": "dc929c37b23e4ea72775e876a9cd06cde32a161b7d734e369a37356544600939",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4
+            }
+          }
+        ],
+        "reason": "Retain chapters[0].n: the author explicitly names this unwritten chapter. No new name, text or arbitrary field is constrained."
+      },
+      "afterSha256": "a2854b1b4325438c391ab7643dcbc96f0a0824921bc6e430db0a1e76d3691e32"
+    },
+    {
+      "id": "ds11-a03",
+      "split": "acceptance",
+      "beforeSha256": "3e9b481f86771a9798a7b8f744da0daafe87c9f8cc230f4c2837be6788a13c8c",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 5
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 5
+            }
+          }
+        ],
+        "reason": "Retain chapters[0].n: the author explicitly names this unwritten chapter. No new name, text or arbitrary field is constrained."
+      },
+      "afterSha256": "ce02218e948609dbe4a4c2fdc210b46991cf2f914b399d290578165af29fa2bc"
+    },
+    {
+      "id": "ds11-b01",
+      "split": "acceptance",
+      "beforeSha256": "b36ea32b2dbbce364e57c30d7a2d1c9f33fbb80b4eec39eb541e70dee4467b44",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].key": "char:pema",
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight."
+          ],
+          "after": [
+            "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+            "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "char:pema",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+      },
+      "afterSha256": "c3afe88270a02c25e22a09d060a99c34d21a26b7d25064d35ad45f51f1827bf9"
+    },
+    {
+      "id": "ds11-b02",
+      "split": "acceptance",
+      "beforeSha256": "54e87f7d17dabd571ec475a3e0148fd69a11a1dfa97de65dc248da559a3ecb59",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].key": "place:kite_hall",
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door."
+          ],
+          "after": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door.",
+            "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "place:kite_hall",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+      },
+      "afterSha256": "158e8cc04fe7ecf1500965df028f982fc9cf12cfa2f7fc448797f89310b00fa4"
+    },
+    {
+      "id": "ds11-b03",
+      "split": "acceptance",
+      "beforeSha256": "3389bf85e31a583c594e1452dadd8e61dffc46ee396528b6b8428471543e9c9a",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].key": "rule:dry_copy",
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "update_bible",
+              "argsMatch": {
+                "changes[0].op": "set",
+                "changes[0].source": "user"
+              }
+            }
+          ],
+          "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages."
+          ],
+          "after": [
+            "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+            "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "rule:dry_copy",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "reason": "No single card/key representation is uniquely determined; source=user and additive op=set are determined. Existing-card addition and a new rule are both admissible content representations."
+      },
+      "afterSha256": "c3bfa85e55a8069e7948383f698703428648b3991837c1fba1034095e5ae7dbd"
+    },
+    {
+      "id": "ds11-c01",
+      "split": "acceptance",
+      "beforeSha256": "5bcae98cd3ae16d6d8e08091d17bc09cf7beee7cbe0a9bf9b928efb7732a68cb",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "96e5889526b9608e765b2677a851426808f42597382c3bec8b0f7365fc854167"
+    },
+    {
+      "id": "ds11-c02",
+      "split": "acceptance",
+      "beforeSha256": "6325334f602f3f9f6b9bdd763279e3227aebff6d05f1a1c60aeeb0397aa9d121",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "9be7ffd1dc3d16c8d630e32654ab9bfba8904b798db7a66d558b54f81b1a21a1"
+    },
+    {
+      "id": "ds11-d01",
+      "split": "acceptance",
+      "beforeSha256": "56de195fa1fcaaacd2f9c7831c06e3d611969785dfc37a14536c85274f1db42b",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "a43caaf9ab3137cc2d11d1f303164548b61509ec6f96b0c0d6fcfb8f7a9b0f41"
+    },
+    {
+      "id": "ds11-d02",
+      "split": "acceptance",
+      "beforeSha256": "82f609cfb0444810c459788cc506aa874653f3435435fe6d3fe367eeb21a3582",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "d2413b15fd29f4ae3b25a0b35049c87c4b1b17044a76fd9e0f16d03c64ee1e09"
+    },
+    {
+      "id": "ds11-d03",
+      "split": "acceptance",
+      "beforeSha256": "6119b02a5b63de9113566460620e455ed62150f5a4e2884ab7cc69384c74e8ab",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "2e9365ce84b9ab3405a4a4926d7f26446f8fe4dbbebe751dee9d372be0a0c783"
+    },
+    {
+      "id": "ds11-e01",
+      "split": "acceptance",
+      "beforeSha256": "35f5870d8f7254d83a69e4b13c3c88dd95cd7fd0a0aa7230d9457ce0d3c7b86d",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 3,
+                "chapters[0].title": "The Duplicate Page"
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 3
+              }
+            }
+          ],
+          "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [],
+          "after": [
+            "Implement the author-requested change on the named unwritten chapter, preserving all other specified fields: Set the title of unwritten chapter 3 to The Duplicate Page. Leave its events, number and target length unchanged."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3,
+              "chapters[0].title": "The Duplicate Page"
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+      },
+      "afterSha256": "dfa6c3ac88ab698e3fbae2d211c858b767de9e189ebbee14ad05c3120242468e"
+    },
+    {
+      "id": "ds11-e02",
+      "split": "acceptance",
+      "beforeSha256": "ba2d12fae7b3ab50ac41a4b000f3cb42b051af0e722a5261b2c8b8c00e2e677a",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "reason": "Only the requested writing tool is constrained; the envelope/action content remains a semantic check."
+      },
+      "afterSha256": "0ce644a320e9eaa8712ceb2cee3c3bfcf7606d571071a238cc97a61df81c4b4c"
+    },
+    {
+      "id": "ds11-e03",
+      "split": "acceptance",
+      "beforeSha256": "052068953e72ed7336bec37ad13b921499ceaa599f59d25f88e8a2cc09364b13",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 4,
+                "chapters[0].targetWords": 800
+              }
+            }
+          ],
+          "after": [
+            {
+              "tool": "patch_outline",
+              "argsMatch": {
+                "chapters[0].n": 4
+              }
+            }
+          ],
+          "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [],
+          "after": [
+            "Implement the author-requested change on the named unwritten chapter, preserving all other specified fields: For unwritten chapter 4, set targetWords to 800. Keep all other outline fields unchanged."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4,
+              "chapters[0].targetWords": 800
+            }
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4
+            }
+          }
+        ],
+        "reason": "Retain the input-named chapter; check the requested title/target change by content rather than a free-text or chosen-field matcher."
+      },
+      "afterSha256": "cdce81f8af0beb6232434ee0b42e6d1a0817c2e76ba77452aeda8e1a95595115"
+    },
+    {
+      "id": "ds11-f01",
+      "split": "acceptance",
+      "beforeSha256": "f8f52ea400cc83c642c1a0c426d7ac337575b23ef299a395293d6435c3da4600",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "get_character",
+              "argsMatch": {
+                "key": "char:wren"
+              }
+            },
+            {
+              "tool": "read_story",
+              "argsMatch": {
+                "section": "bible"
+              }
+            },
+            {
+              "reply": true
+            }
+          ],
+          "after": [
+            {
+              "reply": true
+            }
+          ],
+          "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "If answering directly, use only the setup: Wren is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+          ],
+          "after": [
+            "Answer the actual character question: Wren is an assistant who is allowed to disagree. The committed chapters show this assistant helping the protagonist check and compare the record. Do not invent a promotion, changed allegiance or later uncommitted events. Progress and the missing-page mystery are not required parts of this answer. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "get_character",
+            "argsMatch": {
+              "key": "char:wren"
+            }
+          },
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "bible"
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+      },
+      "afterSha256": "51aeb68e49ae33a847bd214151cf5c950d882848f16ff1b97053a9bafe396240"
+    },
+    {
+      "id": "ds11-f02",
+      "split": "acceptance",
+      "beforeSha256": "c800182e127a556198c2d33d91129b7d683b8db3355ce1d92624feba6ad5bdba",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "read_story",
+              "argsMatch": {
+                "section": "plan"
+              }
+            },
+            {
+              "reply": true
+            }
+          ],
+          "after": [
+            {
+              "reply": true
+            }
+          ],
+          "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "If answering directly, use only the setup: Oren is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+          ],
+          "after": [
+            "Answer both progress points: exactly two chapters are committed and chapter3 comes next. Do not count outline chapters as committed prose or claim the next chapter has already been written. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "plan"
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+      },
+      "afterSha256": "7901ff80fc723547771002a2dc8fc4f4b6c5ad2a6023b81f1ac6eceff45670b0"
+    },
+    {
+      "id": "ds11-f03",
+      "split": "acceptance",
+      "beforeSha256": "20791237437cf310d8fa28b6280b70d3b51fe68246aec26b66464295ed2d16ca",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        },
+        {
+          "field": "expect.acceptable",
+          "before": [
+            {
+              "tool": "read_story",
+              "argsMatch": {
+                "section": "hooks"
+              }
+            },
+            {
+              "tool": "read_chapter",
+              "argsMatch": {
+                "n": 2
+              }
+            },
+            {
+              "reply": true
+            }
+          ],
+          "after": [
+            {
+              "reply": true
+            }
+          ],
+          "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+        },
+        {
+          "field": "expect.judgeChecks",
+          "before": [
+            "If answering directly, use only the setup: Cal is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+          ],
+          "after": [
+            "Answer the open hook: the second page of the tide register is absent; why it is absent and who removed it remain unresolved. Chapter2 establishes absence, not the remover or an explanation. Do not present an outline seed, intention or invented solution as a known fact. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required."
+          ],
+          "reason": "Plan31 §2 transfers removed matcher content to semantic review and supplies F answer points."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "hooks"
+            }
+          },
+          {
+            "tool": "read_chapter",
+            "argsMatch": {
+              "n": 2
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "Remove preparatory reads from the acceptable decisive-action set. Existing read keys/sections are not constraints on a final reply; require the question-specific answer."
+      },
+      "afterSha256": "40627bed6e0003ad2ef1b1e83f213a9998f105938d4149ad3b822bc2af1966cf"
+    },
+    {
+      "id": "ds11-g01",
+      "split": "acceptance",
+      "beforeSha256": "71253278b0553bed281956afb47c170bd8ac8f1658608f5e927ccd59f0b405aa",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "e86bde5e0d42baed9cee689d6a55f8831bad23bcdd75c380b02983f7bb0157e0"
+    },
+    {
+      "id": "ds11-g02",
+      "split": "acceptance",
+      "beforeSha256": "7de74d930763fde23be185dfaf9a5de85fd92fa5d9ba419323bba5bdeec74584",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "after": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "016dead882dde5f12f3dd789d1280f0d9e777c6c1e4c8f1592514b379f05e150"
+    },
+    {
+      "id": "ds11-g03",
+      "split": "acceptance",
+      "beforeSha256": "c24556ed9d53685ff8b88aa02c1ec97933b9bdef14cb14c48793ab102b80474e",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "ea0a01041ed71b1f3bac37a27a3b5383c0501853db328885d56739eae8a1cde7"
+    },
+    {
+      "id": "ds11-g04",
+      "split": "acceptance",
+      "beforeSha256": "25330afdd32307ba38d3f149bc6992640325f4c10be107be280d58a51e5884f2",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "after": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "1e24854dd02b8e437ec118d2ba85125dd0f39abeecf05c2287fd6da88352c125"
+    },
+    {
+      "id": "ds11-h01",
+      "split": "acceptance",
+      "beforeSha256": "172292924a2e58f0cef95413d1f5f3a665bfe4c2743b49b573ee471607b88598",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "76a00ef8d1498b3d9d3d30ebf862ab9def47bf5968f32c0080ef72fcae013616"
+    },
+    {
+      "id": "ds11-h02",
+      "split": "acceptance",
+      "beforeSha256": "98551b4230803779a085fb5ef070fcc2eda0efc2685b2b7fb88b805c501d1ab6",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "be07520e0e017c88a14205be94ef79100c7003e179e96334f4cda85694900c91"
+    },
+    {
+      "id": "ds11-i01",
+      "split": "acceptance",
+      "beforeSha256": "9de6634f5ed16a42df4760bd2c9325c9ab3a7edd636e264c44e9fe602f278892",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "be0f73af40f5d23bce3465e15bb6ed0e014a132785d39d2575b1e40716237179"
+    },
+    {
+      "id": "ds11-i02",
+      "split": "acceptance",
+      "beforeSha256": "0a325e02baadcddea2946e9d0dbdc0bf9fd5a9704d461df6eadb8d9c113786b1",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "15672223f20a92033dd350c7490304c0fcd0742a8591e98c6db377be2fb7ffa9"
+    },
+    {
+      "id": "ds11-j01",
+      "split": "acceptance",
+      "beforeSha256": "fe1813fab32403e377bc5886deee0be61fcaf9b1cf62dea5006fb7d3a91cdc82",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "4e6fb76c62229bc47a2b43aa18bc52b1f670088001e365f3c605b6e584536bac"
+    },
+    {
+      "id": "ds11-j02",
+      "split": "acceptance",
+      "beforeSha256": "590934b696626391eb9148970baeaf6c2719b27dd40b57f39b9466bb87e21d6a",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "8d211d1838e6fb0cfb02305411ad3a1018f94bd1c2fc356d5024ad032b344479"
+    },
+    {
+      "id": "ds11-k01",
+      "split": "acceptance",
+      "beforeSha256": "7ae1492ed375bbfcb0115492d9c57bdd608f145fc626a3156e97bc9743c5a433",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "94822ea9daf40bde43382f07843832f40fc22d0e14e429876a06e4b6790c9774"
+    },
+    {
+      "id": "ds11-k02",
+      "split": "acceptance",
+      "beforeSha256": "105465230e93abdfbd28650bc19c74fe11907a85fb6ac205285a4a2c70ec315a",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "3342119c8cc6f4d63769b15456c65234d231f9c75b4a4e89a87d6a96cc9a427e"
+    },
+    {
+      "id": "ds11-l01",
+      "split": "acceptance",
+      "beforeSha256": "1885cdf9db894e057c4762b4ac58721f535aa31ab27ad4cbb67a1b52fc3f9c60",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "158b8b520f0628c1ab72289d848b6ed916e8493358791c41760ba2adb5dac73d"
+    },
+    {
+      "id": "ds11-l02",
+      "split": "acceptance",
+      "beforeSha256": "279a4c54e53fa9dc77b240fb35e8d66fb3c1f82e640f7c5caa71227f7a37ee09",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop"
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "de1380dadc28d19a6f6214a195d1ec680a08443b9d843e5ae411521002d8fe5d"
+    },
+    {
+      "id": "ds11-m01",
+      "split": "acceptance",
+      "beforeSha256": "e3f6e4c871a380e2ae3dc4f145f2e1e4eae235c5263a81c2437a0070740f50d7",
+      "changes": [
+        {
+          "field": "schema",
+          "before": "story/p3-scenario@1",
+          "after": "story/p3-scenario@2",
+          "reason": "Plan31 §1 versions the decisive-action execution semantics."
+        },
+        {
+          "field": "execution",
+          "before": {
+            "internalRoles": "faux",
+            "maxShowrunnerRequests": 4,
+            "maxChapterAttempts": 2,
+            "stopAfterFirstAction": true,
+            "onBoundExceeded": "record_failure_and_stop",
+            "usageSnapshot": {
+              "knownUsd": 0.031,
+              "unknownReservationsUsd": 0.007,
+              "conservativeTotalUsd": 0.038,
+              "status": "scripted_observation_not_live_spend"
+            }
+          },
+          "after": {
+            "internalRoles": "faux",
+            "stopAt": "decisive_action",
+            "maxReadOnlyCalls": 3,
+            "maxShowrunnerRequests": 6,
+            "maxChapterAttempts": 2,
+            "onBoundExceeded": "record_failure_and_stop",
+            "usageSnapshot": {
+              "knownUsd": 0.031,
+              "unknownReservationsUsd": 0.007,
+              "conservativeTotalUsd": 0.038,
+              "status": "scripted_observation_not_live_spend"
+            }
+          },
+          "reason": "Plan31 §1 exact decision/read/request bounds; keep visible usageSnapshot."
+        }
+      ],
+      "argsMatchAudit": {
+        "before": [
+          {
+            "reply": true
+          }
+        ],
+        "after": [
+          {
+            "reply": true
+          }
+        ],
+        "reason": "No exact argument constraint is needed; content remains covered by the existing checks."
+      },
+      "afterSha256": "f7b72a0b5819af7f62e05427de5afa54d83d348f2336faf25e8d48dd48ce82a1"
+    }
+  ],
+  "additions": [
+    {
+      "id": "ds11-d02-dev",
+      "title": "作者尚未决定：两人私下谈，还是三人闭门谈",
+      "source": "New authoring using only the previous dev preparation family; no acceptance text adapted."
+    },
+    {
+      "id": "ds11-d03-dev",
+      "title": "作者尚未决定封蜡印章的来源，不是故事内保持未定",
+      "source": "New authoring using only the previous dev preparation family; no acceptance text adapted."
+    },
+    {
+      "id": "ds11-e02-dev",
+      "title": "明确改第四章收束；铅笔勾只是可选例子",
+      "source": "New authoring using only the previous dev preparation family; no acceptance text adapted."
+    }
+  ]
+}

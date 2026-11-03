@@ -1,0 +1,43 @@
+{
+  "schema": "story/p2-author-scope@1",
+  "date": "2026-10-30",
+  "authorInstruction": "EDIT也执行一轮即可",
+  "previousScopeDecision": "P2-DECISIONS/20261030-single-chap/decision.json",
+  "sourceFreeze": "34ea13b082443cd31bee785f067fb5a243906069",
+  "retainedChap": {
+    "suiteId": "P2-CHAP",
+    "runId": "20261030T023237Z-34ea13b-r1",
+    "repetition": 1,
+    "completedStories": 5,
+    "committedChapters": 20
+  },
+  "retainedEdit": {
+    "suiteId": "P2-EDIT",
+    "runId": "20261030T052339Z-34ea13b-r1",
+    "repetition": 1,
+    "measuredSamples": 27,
+    "successfulSamples": 26,
+    "retainedFailureCode": "TRANSPORT_FAILURE"
+  },
+  "cancelledChap": { "runId": "20261030T035818Z-34ea13b-r2" },
+  "cancelledEdit": {
+    "runId": "20261030T055614Z-34ea13b-r2",
+    "reason": "Author reduced EDIT to one repetition; stopped using the existing graceful cancellation signal.",
+    "excludedFromFormalQuality": true,
+    "retainedInAllRealAndFees": true,
+    "knownUsd": 0.063972528,
+    "reservedUsd": 0.0427887,
+    "unknownCalls": 1
+  },
+  "requiredRepetitions": {
+    "P2-OPEN": [1, 2],
+    "P2-CHAP": [1],
+    "P2-KEEP": [1, 2],
+    "P2-EDIT": [1]
+  },
+  "selectedRoleRuns": 3,
+  "modelRunsForFinalReport": 6,
+  "deterministicRunsForRescore": 5,
+  "rescoreTargetCount": 11,
+  "policy": "No further paid calls. Reuse original OPEN twice, the complete first CHAP, both complete KEEP runs, and the first EDIT run including its one connection failure. Exclude author-cancelled second CHAP/EDIT partial outputs from formal quality only. Preserve every fee and all-real hard-gate evidence. Do not fabricate second CHAP/EDIT values or balanced two-repetition averages. Other thresholds and minimum samples remain unchanged. Frozen scoring algorithms remain unchanged; affected program metrics show clearly labelled single-run or pooled descriptive values."
+}

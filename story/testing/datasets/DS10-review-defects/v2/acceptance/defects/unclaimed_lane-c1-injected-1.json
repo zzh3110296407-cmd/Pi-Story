@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "unclaimed_lane-c1-injected-1",
+  "storyId": "unclaimed_lane",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/unclaimed_lane-c1.md",
+    "sha256": "d5abc171f7eb33be8c27b4f65495758c832b3930c589c64ab966dd1f68873765"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Ada had been left-handed from birth and had never been right-handed.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Ada had been left-handed from birth and had never been right-handed.",
+          "lines": {
+            "start": 45,
+            "end": 45
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:ada",
+          "quote": "Ada is right-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifelong dominant-hand invariant; an injury or temporary use of the other hand cannot explain it.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_lane-c1-injected-1-defect-1",
+      "lines": [
+        45
+      ]
+    },
+    {
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "With no intervening gain or loss after that completed count, the very same balance was 91 pounds, not 84 pounds.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "With no intervening gain or loss after that completed count, the very same balance was 91 pounds, not 84 pounds.",
+          "lines": {
+            "start": 47,
+            "end": 47
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The ten-pound entry payment reduced their travel fund from ninety-four pounds to eighty-four.",
+          "ref": "line:11"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The ten-pound entry payment reduced their travel fund from ninety-four pounds to eighty-four."
+        }
+      ],
+      "reason": "The correct narrated count is retained in this actual variant; the added count contradicts that same completed balance with all intervening changes explicitly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_lane-c1-injected-1-defect-2",
+      "lines": [
+        47
+      ]
+    }
+  ]
+}

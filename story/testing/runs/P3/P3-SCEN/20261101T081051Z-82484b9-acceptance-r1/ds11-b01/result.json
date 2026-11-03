@@ -1,0 +1,115 @@
+{
+  "id": "ds11-b01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "char:pema",
+            "kind": "character",
+            "name": "Pema",
+            "op": "set",
+            "source": "user",
+            "authorQuote": "From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+            "value": {
+              "abilities": "Pema can decode semaphore, but only in daylight."
+            }
+          }
+        ],
+        "reason": "作者新增未来设定：从下一章起Pema能在日光下解读旗语；仅补充新字段，不改动已有描述与已写正文。"
+      },
+      "id": "call_00_oBbNWMkIQdLhaNzv3Rhb2136"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "char:pema",
+          "kind": "character",
+          "name": "Pema",
+          "op": "set",
+          "source": "user",
+          "authorQuote": "From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+          "value": {
+            "abilities": "Pema can decode semaphore, but only in daylight."
+          }
+        }
+      ],
+      "reason": "作者新增未来设定：从下一章起Pema能在日光下解读旗语；仅补充新字段，不改动已有描述与已写正文。"
+    },
+    "id": "call_00_oBbNWMkIQdLhaNzv3Rhb2136"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "99e0ba4f74c59a096ea384ae08669e62fdb18b1f78a5aa1da1e0046d42fc6b56",
+    "sessionSha256": "529b6e67713ca47a656df0d71a55b20df3b723cc7339d22c95c3927ce07bd5cc",
+    "fee": {
+      "knownUsd": 0.0025565999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025565999999999996
+    },
+    "measuredMainRequests": 2
+  }
+}

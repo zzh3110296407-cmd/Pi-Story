@@ -1,0 +1,253 @@
+{
+  "id": "ds14-e08",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_fwLmZ512iTxlZ6pTG5BJ8154"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 1
+      },
+      "id": "call_00_iZLSomIxfXWTc1Dy12aB5488"
+    },
+    {
+      "tool": "read_state",
+      "args": {},
+      "id": "call_01_TNbydkDgmP2JNoYYfMa11760"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2, \"Comparison\": Aster and Jo carry the intact sealed capsule (still unopened, red seam untouched) to the station's record table and compare its outer label against the canopy register that Kei keeps. Practical, precise actions: lifting with both hands, setting on felt, reading figures aloud, noting a blank. Aster may choose whether to wear a protective glove; either way is fine, and no glove is required. Jo is allowed to disagree and does, about whether the missing second page justifies delaying the public demonstration. Kei supplies the register and states that a page is absent. No bells are rung anywhere; avoid bells entirely. No one is injured. End with the delivery still disputed, the capsule intact, and the decision to seek the duplicate page before opening anything."
+      },
+      "id": "call_00_xUneGoXJv7wgXTRg824D2860"
+    },
+    {
+      "reply": "Chapter 2 is committed: Aster and Jo compared the label against Kei's canopy register, confirmed the second page was missing, and left the capsule sealed. Jo disagreed about delaying the demonstration; the dispute stays open. No bells, no injuries, capsule intact.\n\nGoal is 3 chapters — one to go."
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, \"The Duplicate\": Aster reads the delivery handling note, then obtains from Kei the duplicate of the register's missing second page and matches the figures. Aster may or may not wear a protective glove; it is optional and either choice is acceptable — do not present it as required. Jo disagrees once more, briefly, about the order of work, and is heard. Precise practical actions: aligning sheets on the table, marking a match in pencil, keeping the sealed seed capsule on its felt pad and intact, never opening the red seam. No bells are rung and no bell is heard anywhere. No character is physically injured. The delivery dispute is settled quietly, the small public demonstration proceeds without the capsule being opened, and the chapter ends with the capsule stored and the record closed."
+      },
+      "id": "call_00_QN5tnqFX5HvUK4IzqTe60838"
+    },
+    {
+      "reply": "Chapter 3 is committed and the three-chapter goal is reached.\n\n- Delivery dispute settled: Kei's duplicate page matched the capsule's label figures, with the match marked lightly in pencil.\n- The capsule stayed sealed on its felt pad, red seam untouched, and was stored intact at the end.\n- Jo disagreed once more about the order of work, and was heard rather than overruled.\n- No bells, no injuries; the demonstration went ahead quietly without opening the capsule."
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "control"
+    },
+    "id": "call_00_fwLmZ512iTxlZ6pTG5BJ8154"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 5,
+      "check": "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "8fb4472bcd0cf5aebbed055df4f07edf5459fa4618ef5c958a062f5d3c474d75",
+    "sessionSha256": "72fd32eb0c0dbd0b171df03af32478d6a72481efa96aeeb47ddeb5c0582f9e65",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.043254468,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 12,
+      "totalUsd": 0.043254468
+    },
+    "measuredMainRequests": 6
+  },
+  "scoringVersion": "p3r2-32@1"
+}

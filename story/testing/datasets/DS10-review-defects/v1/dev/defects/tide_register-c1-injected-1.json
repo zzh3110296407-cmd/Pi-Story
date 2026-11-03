@@ -1,0 +1,87 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "tide_register-c1-injected-1",
+  "storyId": "tide_register",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "87f43211f9a32b015415ffb4fc88df0c9bd51d13badea59b4f0a1a467bedf65b",
+    "path": "dev/chapters/tide_register-c1.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "tide_register-c1-injected-1-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Lena remained in the archive when the public doors were locked.",
+      "changed": "Lena remained in the archive when the public doors were locked. Lena had been left-handed from birth and had never been right-handed.",
+      "spans": [
+        {
+          "original": "Lena remained in the archive when the public doors were locked.",
+          "changed": "Lena remained in the archive when the public doors were locked. Lena had been left-handed from birth and had never been right-handed.",
+          "lines": {
+            "start": 21,
+            "end": 21
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:lena",
+          "quote": "Lena is right-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute.",
+      "lines": [
+        21
+      ]
+    },
+    {
+      "id": "tide_register-c1-injected-1-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "After paying three coins for the copied chart, Lena had fifteen left.",
+      "changed": "After paying three coins for the copied chart, Lena had fifteen left. With no intervening gain or loss, that same completed count stood at 22 coins.",
+      "spans": [
+        {
+          "original": "After paying three coins for the copied chart, Lena had fifteen left.",
+          "changed": "After paying three coins for the copied chart, Lena had fifteen left. With no intervening gain or loss, that same completed count stood at 22 coins.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "After paying three coins for the copied chart, Lena had fifteen left.",
+          "ref": "line:1"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "After paying three coins for the copied chart, Lena had fifteen left.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "revision": "r2-retained-narrated-count",
+      "reviewStatus": "AI_development_only",
+      "lines": [
+        1
+      ]
+    }
+  ]
+}

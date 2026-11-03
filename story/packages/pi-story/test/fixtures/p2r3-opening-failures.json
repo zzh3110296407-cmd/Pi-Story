@@ -1,0 +1,769 @@
+{
+	"schema": "story/p2r3-opening-regressions@1",
+	"purpose": "25 S1 explicitly authorizes these already-seen V2 raw arguments as regressions. No new acceptance input was read.",
+	"cases": [
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T063135Z-0ae2186-r1",
+			"sourceEvidenceSha256": "a734591fbfb0451d616867d6f8983afba095d711130ed434f96503015e3792d4",
+			"caseId": "1073",
+			"toolCallId": "call_00_5yGeu36t3sy49NwjFzuU2518",
+			"toolName": "submit_bible",
+			"authorPrompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:elia",
+						"name": "Elia Voss",
+						"source": "model",
+						"kind": "character",
+						"description": "A solitary terraforming engineer in her fifties, once a junior technician during Earth's ecological collapse and now the last active steward of Mars's seawater seed program. Methodical, dry-humored, and prone to self-blame; she keeps a paper log because digital archives failed her once. She measures hope in data and distrusts her own longing for it.",
+						"invariants": [
+							"Speaks in terse, precise sentences",
+							"Keeps a handwritten log",
+							"Blames herself for a death during the Earth evacuation"
+						]
+					},
+					{
+						"key": "char:jun",
+						"name": "Jun Aoyama",
+						"source": "model",
+						"kind": "character",
+						"description": "A microbiologist who designed the seed cultures and died during Earth's final evacuation. Appears in flashback as Elia's mentor and conscience: patient, unsentimental, convinced that life is a process rather than a possession. His recorded notes reach Elia only through fragmented archives.",
+						"invariants": ["Never claims ownership over a living thing", "Corrects Elia's metaphors with observations"]
+					},
+					{
+						"key": "char:tamsin",
+						"name": "Tamsin Voss",
+						"source": "model",
+						"kind": "character",
+						"description": "Elia's younger sister, who refused evacuation and stayed in the flooded northern city where they grew up. Her stubborn attachment to home is the wound beneath Elia's mission; Elia last hears her voice on a failing relay."
+					},
+					{
+						"key": "place:shore",
+						"name": "The First Shore",
+						"source": "model",
+						"kind": "place",
+						"description": "A basalt shoreline on the edge of Mars's first open sea, in a shallow basin called Aeolis Deep. Black sand, salt rime, orange sky at sunset, and the slow slap of water that has never learned the shape of its own coast.",
+						"invariants": ["Black basalt sand", "Salt crusts whiten the stones"]
+					},
+					{
+						"key": "place:sea",
+						"name": "Aeolis Sea",
+						"source": "model",
+						"kind": "place",
+						"description": "A young, shallow, landlocked sea a few decades old, warmed by residual geothermal vents and a thickened atmosphere. Its water is slightly saline and clouded with life that arrived as shipped cultures and engineered mats."
+					},
+					{
+						"key": "place:earth",
+						"name": "Earth in Its Last Decades",
+						"source": "model",
+						"kind": "place",
+						"description": "A world of failed monsoons, dead reefs, flooded cities, and evacuation queues. Not a single catastrophe but a cascade of them, remembered in heat, static, and the smell of drowned concrete."
+					},
+					{
+						"key": "rule:seed_cycle",
+						"name": "The Seeding Cycle",
+						"source": "model",
+						"kind": "rule",
+						"description": "Life is shipped as dormant cultures and released in stages. Microbes adapt faster than the models predict, exchange genes across engineered lines, and reshape the chemistry they depend on. Each world's biosphere is therefore a descendant, not a copy, of the one that seeded it."
+					},
+					{
+						"key": "line:hope_resignation",
+						"name": "Hope Against Resignation",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "Elia must decide whether to approve a second-stage release that could repeat Earth's mistakes, or refuse and let the young sea stabilize without her. Her doubt is not whether life can survive Mars, but whether humans deserve to direct it."
+					},
+					{
+						"key": "fw:dual_timeline",
+						"name": "Present Shore, Past Earth",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "Alternating present-tense shoreline chapters with close-third flashbacks to Earth's last days, both filtered through Elia's memory and professional eye.",
+						"authorQuote": "weaving in flashbacks to Earth’s last days"
+					},
+					{
+						"key": "rel:elia->jun",
+						"name": "Elia and Jun",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Mentor and student, then colleagues, then the living and the dead. Elia wants absolution from Jun's archived voice and knows she will not get it."
+					},
+					{
+						"key": "rel:elia->tamsin",
+						"name": "Elia and Tamsin",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Estranged sisters divided by the decision to leave. Elia reads Tamsin's absence as judgment until the final flashback reframes it as a different kind of courage."
+					}
+				]
+			},
+			"parametersSha256": "adf5e8b3c0cf2b5c5f938ed4737b9c2747787a9301f540198dc127f8d644f108"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T063135Z-0ae2186-r1",
+			"sourceEvidenceSha256": "a734591fbfb0451d616867d6f8983afba095d711130ed434f96503015e3792d4",
+			"caseId": "378",
+			"toolCallId": "call_00_dBqKO7e0MJ3RUeimtwhk4304",
+			"toolName": "submit_bible",
+			"authorPrompt": "Write a story about a guy who’s been convinced for weeks that his neighbors are locked in a violent, abusive relationship. One night he hears them shout “Bitch, is that the best you can do?” followed by fighting sounds, then moans—and realizes it’s actually rough, consensual sex. Start with him nervously peeking through the curtains and build up his confusion, embarrassment, and growing curiosity. Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door in about 8,000 to 10,000 words.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:owen",
+						"name": "Owen Vasquez",
+						"source": "model",
+						"kind": "character",
+						"description": "A solitary, observant man in his mid-thirties who works from home editing audio. Divorced two years ago after a quiet, careful marriage that ended without a fight. He catalogues sound the way other people catalogue faces, and he has spent weeks building a case against the neighbors next door, casting himself as the only witness who noticed. His certainty is really a way of avoiding his own loneliness. He is decent, nosy, and ashamed of being nosy.",
+						"invariants": [
+							"He edits audio for a living and is professionally attentive to sound.",
+							"He is divorced and uneasy about his own history of avoiding conflict.",
+							"He never considers physically intervening or calling for help on the night of the shout, which shames him afterward."
+						]
+					},
+					{
+						"key": "char:marisol",
+						"name": "Marisol",
+						"source": "model",
+						"kind": "character",
+						"description": "The neighbor on the other side of Owen's bedroom wall. A physical therapist in her late thirties, direct, warm-voiced, and unembarrassed by her own appetite. She has a loud, carrying laugh and no interest in performing respectability for a stranger who shares her wall.",
+						"invariants": ["She is a physical therapist.", "She knows exactly what she wants and says so plainly."]
+					},
+					{
+						"key": "char:dane",
+						"name": "Dane",
+						"source": "model",
+						"kind": "character",
+						"description": "Marisol's partner. A carpenter who restores old houses, big-framed, soft-spoken in daylight, theatrical in the bedroom. He is the one who shouts the line Owen overhears. He and Marisol have negotiated their games over years and treat the noise as an ordinary fact of shared walls.",
+						"invariants": ["He works with wood and old buildings.", "He is the one who shouts the line Owen overhears."]
+					},
+					{
+						"key": "place:duplex",
+						"name": "The duplex on Fennel Street",
+						"source": "model",
+						"kind": "place",
+						"description": "A converted duplex with cheap, thin walls between Owen's bedroom and the neighbors' bedroom. Shared laundry in the basement, a narrow side yard, and a hallway where the three of them cross paths with grocery bags and small talk.",
+						"invariants": [
+							"The walls between the bedrooms are thin enough for muffled shouting to carry but not for words to be clear until Owen stands close."
+						]
+					},
+					{
+						"key": "line:assumption",
+						"name": "Owen's certainty about the neighbors",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "For weeks Owen has assembled evidence—a raised voice, a slammed cupboard, a bruise he thinks he saw on Marisol's wrist, a night she sat crying on the front steps—and concluded the neighbors are in an abusive relationship. None of the evidence is false; his interpretation is. The story turns on the gap between the two."
+					},
+					{
+						"key": "rule:privacy",
+						"name": "The ethics of the shared wall",
+						"source": "model",
+						"kind": "rule",
+						"description": "Sound crosses the wall whether anyone wants it to or not. Listening is passive; standing at the wall and trying to hear more is a choice. Owen keeps moving back and forth across that line, and the story never lets him pretend the two are the same."
+					},
+					{
+						"key": "fw:voice",
+						"name": "Close third person, wry and sensory",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "Close third person limited to Owen, present-tense-adjacent past, with heavy attention to sound and to the comedy of his own embarrassment. Interiority carries the turn from suspicion to confusion to curiosity."
+					}
+				]
+			},
+			"parametersSha256": "cab43c587e9c53ad19af9dfa4010acc369147d083f46597bb0e9add457d774cb"
+		},
+		{
+			"kind": "outline_fields",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T063135Z-0ae2186-r1",
+			"sourceEvidenceSha256": "a734591fbfb0451d616867d6f8983afba095d711130ed434f96503015e3792d4",
+			"caseId": "886",
+			"toolCallId": "call_00_1417UIArbmFDHjouU20X1827",
+			"toolName": "submit_outline",
+			"authorPrompt": "Continue writing this Reddit post as a friendly but in-depth guide to tweaking world options in Don’t Starve so it stays challenging without feeling unfair. Pick up where you left off—talk about which settings to adjust (day length, season lengths, resource abundance, boss frequency) and show how to make up for missing materials through exploration, alternative builds, or smart gameplay. Keep it engaging and conversational, and aim for a full 8,000–10,000-word walkthrough packed with practical tips and trade-offs.",
+			"parameters": {
+				"viewpoint": "Second-person, conversational guide voice addressing fellow Don’t Starve players\", \"tone\": \"Friendly, candid, practical and in-depth\", \"format\": \"Single long-form Reddit post with headings, bullet lists and short parenthetical asides\", \"chapters\": [{\"n\": 1, \"title\": \"Tune the world, not the fun out of it\", \"targetWords\": 9000, \"points\": [\"Pick up the thread by framing the goal: a world that still pushes back, but whose losses feel earned rather than cheap.\", \"Walk through day length and season lengths, explaining how each lever changes planning, exposure and preparation windows, with practical settings and trade-offs.\", \"Cover resource abundance and boss frequency, including how scarcity changes exploration and how boss timing changes base life and combat prep.\", \"Show how to cover missing materials through wider exploration, alternative builds and smarter routines rather than simply lowering difficulty.\", \"Close with sample world presets, a tuning checklist and a clear sign-off that leaves readers ready to test their own settings.\"]}]}"
+			},
+			"parametersSha256": "a4f750e0425db847c0b54d41ce201f83e7451db1b07a776cf81e46703cbdc251"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1073",
+			"toolCallId": "call_00_VJ678qvqkVibZmzseiFJ2895",
+			"toolName": "submit_bible",
+			"authorPrompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:mara",
+						"name": "Mara Voss",
+						"source": "model",
+						"kind": "character",
+						"description": "A solitary terraforming engineer stationed at the first stable shoreline on Mars. Methodical, dry-humored, physically worn by years of solo maintenance. She carries guilt from Earth’s last days and privately doubts whether the seeding project preserves anything worth saving. Her mission log is her only company.",
+						"invariants": [
+							"Works alone and prefers it",
+							"Keeps precise scientific records",
+							"Hides her doubts behind procedure"
+						]
+					},
+					{
+						"key": "place:mars_sea",
+						"name": "The New Sea",
+						"source": "model",
+						"kind": "place",
+						"description": "A young, shallow sea filling the Valles Marineris basin after decades of atmospheric seeding. Its water is mineral-rich and faintly briny; rust-colored dunes meet wet sediment. First microbial mats, translucent films and pale algae blooms are spreading along the shore. Sunsets turn the water copper and violet.",
+						"invariants": [
+							"Newly formed and still changing",
+							"Hosts only microbial and early colonial life",
+							"Sunset light colors the water copper and violet"
+						]
+					},
+					{
+						"key": "place:earth_last_days",
+						"name": "Earth’s Last Days",
+						"source": "model",
+						"kind": "place",
+						"description": "The remembered Earth of the evacuation era: heat-scoured coastlines, failing crops, crowded departure ports and a sky darkened by particulates. Appears only in flashbacks and archived logs, never as a present-day location."
+					},
+					{
+						"key": "rule:microbial_cycle",
+						"name": "The Seeding Cycle",
+						"source": "model",
+						"kind": "rule",
+						"description": "Engineered extremophile microbes were released to build soil, release oxygen and hold water on Mars. The same lineages were originally isolated from Earth’s dying ecosystems. The cycle links both worlds: life carried from a failing biosphere becomes the seed of a new one, though no one knows whether the transfer preserves or merely imitates what was lost."
+					},
+					{
+						"key": "line:hope_resignation",
+						"name": "Hope Against Resignation",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "Mara oscillates between believing the sea is a genuine beginning and believing it is a museum of borrowed microbes, a decorative grave for a dead world. Her decision to keep working or to stop defines the story’s tension."
+					},
+					{
+						"key": "fw:dual_timeline",
+						"name": "Shoreline and Flashback",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "Present-tense chapters unfold during one sunset-to-sunrise at the shoreline; flashbacks and log excerpts carry Earth’s last days and the seeding decisions. The two timelines converge on the meaning of the microbial cycle."
+					},
+					{
+						"key": "rel:mara->mars_sea",
+						"name": "Engineer and Sea",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Mara is the sea’s closest caretaker and its most skeptical witness. She samples it, repairs its instruments and speaks to it more easily than to people."
+					}
+				]
+			},
+			"parametersSha256": "72ee9a1a34643eab14279c9f28d7186a8683689e4578f86664a25a91689b4a9a"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1253",
+			"toolCallId": "call_00_dnf4XDazUJDjBe45OhML1587",
+			"toolName": "submit_bible",
+			"authorPrompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:kirill",
+						"name": "Kirill Sokolov",
+						"source": "model",
+						"kind": "character",
+						"description": "A young man in his early twenties, lean and wind-burned, back from the trial on the tundra. He carries frostbite scars across his hands and left cheek and a tremor he tries to hide. Once gentle and bookish, he now flinches at silence and keeps counting days out loud. He insists he survived and wants the true account told, not the legend.",
+						"invariants": [
+							"Survived the full month-long trial",
+							"Physically scarred and psychologically shaken",
+							"Determined to recount what really happened"
+						]
+					},
+					{
+						"key": "char:anton",
+						"name": "Anton Vasilyev",
+						"source": "model",
+						"kind": "character",
+						"description": "Kirill's older friend and former mentor, a broad, grey-bearded trapper in his fifties who lost two fingers to frost long before. Patient, dry-humored, unsentimental. He taught Kirill to read weather, track, and survive the cold. He keeps the old stories of the trial written in a battered notebook and presses Kirill to separate memory from myth.",
+						"invariants": [
+							"Older friend and mentor to Kirill",
+							"Knows the legend's versions and doubts them",
+							"Helps Kirill reconstruct the truth"
+						]
+					},
+					{
+						"key": "char:vera",
+						"name": "Vera",
+						"source": "model",
+						"kind": "character",
+						"description": "The young woman Kirill loved, dead before the story opens. Warm, stubborn, given to laughing at her own jokes. Death wears her shape during the trial, down to her chapped lips and the scarf she always forgot. Kirill must face her face and voice without being able to save her again.",
+						"invariants": ["Dead before the trial begins", "Her form is worn by Death", "Her appearances haunt Kirill"]
+					},
+					{
+						"key": "char:death",
+						"name": "Death",
+						"source": "model",
+						"kind": "character",
+						"description": "An old presence of the far north that answers to no name. It bargains in rules and durations rather than open violence, wearing a shape it takes from the challenger's grief. It is patient, courteous, cruel by precision, and it never lies outright. It leaves a promise at the end that Kirill cannot interpret alone.",
+						"invariants": [
+							"Takes the form of the challenger's lost love",
+							"Bound by the stated terms of the trial",
+							"Leaves a cryptic promise behind"
+						]
+					},
+					{
+						"key": "place:tundra",
+						"name": "The Barren Ground",
+						"source": "model",
+						"kind": "place",
+						"description": "A stretch of frozen Siberian tundra beyond the last settlement: black rock, wind-packed snow, no cover, and days that shorten toward polar night. Blizzards erase tracks within minutes. The trial ground is marked by a ring of old cairns that Kirill must not leave.",
+						"invariants": [
+							"Frozen, featureless, and lethal",
+							"Bounded by a ring of cairns",
+							"Cut off from help for the trial's duration"
+						]
+					},
+					{
+						"key": "place:settlement",
+						"name": "Ust-Yenisey Camp",
+						"source": "model",
+						"kind": "place",
+						"description": "A shabby settlement of timber huts, a diesel generator, and a radio that works when the wind allows. Kirill returns here to Anton's cabin, where a stove, tea, and a table become the frame for the recounting.",
+						"invariants": ["Kirill's home settlement", "Site of the present-day recounting"]
+					},
+					{
+						"key": "rule:trial",
+						"name": "The Month Trial",
+						"source": "model",
+						"kind": "rule",
+						"description": "Anyone who challenges Death must endure one full month on the marked tundra, from the first dusk to the last. Leaving the cairn ring or dying ends the trial and forfeits the wager. Death may appear in any shape drawn from the challenger's grief, but must honor its spoken terms and cannot strike first.",
+						"invariants": [
+							"Lasts one full month on the marked ground",
+							"Leaving the cairn ring forfeits the challenge",
+							"Death honors spoken terms and never lies"
+						]
+					},
+					{
+						"key": "line:truth",
+						"name": "The Truth Against the Legend",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "The settlement's legend says the trial makes a man a saint or a monster. Kirill's account keeps contradicting both versions, and Anton must decide which details are memory, which are hallucination, and which are the promise Death actually made.",
+						"invariants": [
+							"Legend and firsthand account conflict",
+							"The resolution must be pieced together, not revealed"
+						]
+					},
+					{
+						"key": "fw:frame",
+						"name": "Framed Recounting",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "Present-day scenes in Anton's cabin alternate with Kirill's flashbacks to training, to Vera, and to the trial itself, until the two timelines meet at the promise.",
+						"invariants": ["Present frame in Anton's cabin", "Flashbacks carry training, Vera, and the trial"]
+					},
+					{
+						"key": "rel:anton->kirill",
+						"name": "Mentor and Friend",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Anton taught Kirill survival and half-believes the legend; Kirill trusts him enough to tell the unsanitized version. Their bond is tested by what Kirill admits he did in the last days.",
+						"source_note": ""
+					}
+				]
+			},
+			"parametersSha256": "5c700971348cf0fc778f31aaaf481c82e2be45c1b6a17b7e7ad4c23b23fe3a11"
+		},
+		{
+			"kind": "outline_fields",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1253",
+			"toolCallId": "call_00_sTK05M9LZtNTgBF6Lko70343",
+			"toolName": "submit_outline",
+			"authorPrompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+			"parameters": {
+				"viewpoint": "Third person limited, anchored to Kirill in both the present-day frame and the flashbacks, with Anton's interpretations filtered through Kirill's hearing.\", \"tone\": \"Bleak, intimate, slow-burning; tenderness cutting against dread.\", \"format\": \"Framed narrative alternating Anton's cabin with flashbacks to training, Vera, and the trial.\", \"chapters\": [{\"n\": 1, \"title\": \"The Return\", \"targetWords\": 1000, \"points\": [\"Kirill walks out of the tundra into Ust-Yenisey, frostbitten and counting days, and Anton brings him to the cabin.\", \"Anton offers tea and silence instead of questions; Kirill's scars and tremor surface.\", \"Kirill agrees to give the true account only if Anton writes it down without softening it.\", \"He begins with the first dusk, when Death came wearing Vera's face, and stops there.\"]}, {\"n\": 2, \"title\": \"The Legend's Versions\", \"targetWords\": 1050, \"points\": [\"Anton opens his notebook and lays out the settlement's competing legends of the month trial.\", \"Kirill rejects both the saint and the monster versions, naming where each one lies.\", \"Neighbors' claims and the old cairn stories press in on the cabin.\", \"Kirill recalls the night he chose to go, and the chapter stops on that decision.\"]}, {\"n\": 3, \"title\": \"Learning the Cold\", \"targetWords\": 1100, \"points\": [\"A flashback follows Anton teaching a younger Kirill to read wind, ice, and his own fear.\", \"Vera appears in the training days, alive, stubborn, and unimpressed by legend.\", \"Anton drills the cairn rule into him without explaining why it matters.\", \"The flashback ends at Vera's death and Kirill's first thought of challenging Death.\"]}, {\"n\": 4, \"title\": \"First Dusk\", \"targetWords\": 1100, \"points\": [\"Kirill enters the cairn ring and speaks the terms; the trial begins at dusk.\", \"Death arrives as Vera, down to her scarf, and greets him with her voice.\", \"Kirill holds the rule that Death cannot strike first and refuses to leave the ring.\", \"She asks him to step outside, and he realizes the trial will be an argument, not a war.\"]}, {\"n\": 5, \"title\": \"The Brutal Hours\", \"targetWords\": 1100, \"points\": [\"A blizzard and a first assault force Kirill to fight for warmth, shelter, and his own mind.\", \"He wounds the thing wearing Vera and sees it bleed something that is not blood.\", \"The psychological toll shows in his counting, his bargaining, and his failing memory.\", \"A false dawn lets him believe the month is over, and the chapter stops on that cruelty.\"]}, {\"n\": 6, \"title\": \"Counting Days\", \"targetWords\": 1050, \"points\": [\"Deep in the trial, Kirill talks to Vera's coat and loses whole stretches of time.\", \"He finds a contradiction in the legend that no one in the settlement ever mentioned.\", \"Death returns and makes a promise he cannot yet parse, in Vera's exact phrasing.\", \"He writes the promise in the snow and the wind erases half of it.\"]}, {\"n\": 7, \"title\": \"What Anton Didn't Teach\", \"targetWords\": 1100, \"points\": [\"A flashback reveals a survival lesson Anton deliberately withheld.\", \"In the cabin, Anton admits the legend omits what previous challengers did at the end.\", \"Kirill confesses he broke a term of the trial, and Anton makes him say which one.\", \"The confession lands, and the chapter stops before the last night.\"]}, {\"n\": 8, \"title\": \"The Last Night\", \"targetWords\": 1100, \"points\": [\"Kirill faces the final night and Death's last shape of Vera.\", \"The brutal fight becomes an interrogation of what he is willing to lose.\", \"Death speaks the cryptic promise in full and names its price.\", \"Dawn comes, the ring breaks, and Kirill walks out alive but not whole.\"]}, {\"n\": 9, \"title\": \"The Promise\", \"targetWords\": 1100, \"points\": [\"Feverish on the return, Kirill repeats the promise until Anton writes it down.\", \"Anton pieces the wording against the notebook's older versions.\", \"They arrive at a meaning that is neither salvation nor curse.\", \"Kirill decides what he will tell the village, and the chapter stops on that choice.\"]}, {\"n\": 10, \"title\": \"What Really Happened\", \"targetWords\": 1150, \"points\": [\"Kirill recounts his account to the settlement and refuses the legend's tidy ending.\", \"Anton reads the promise aloud and the listeners split over what it means.\", \"Kirill and Anton return to the cabin and close the notebook together.\", \"The story ends on Kirill no longer counting days, with the promise still open.\"]}]}"
+			},
+			"parametersSha256": "8d8b77aa5399c8e8564af2bef0da7e5c47d6270bbd87b2427357b9b3207a072d"
+		},
+		{
+			"kind": "outline_fields",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1253",
+			"toolCallId": "call_00_aidwV4cMlpXIuBXWkL515883",
+			"toolName": "submit_outline",
+			"authorPrompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+			"parameters": {
+				"viewpoint": "Third person limited, fixed on Kirill in the present frame and in every flashback.\", \"tone\": \"Bleak, intimate, slow-burning; tenderness cutting against dread.\", \"format\": \"Framed narrative alternating Anton's cabin with flashbacks to training, Vera, and the trial.\", \"chapters\": [{\"n\": 1, \"title\": \"The Return\", \"targetWords\": 1000, \"points\": [\"Kirill walks out of the tundra into Ust-Yenisey, frostbitten and counting days, and Anton brings him to the cabin.\", \"Anton offers tea and silence instead of questions; Kirill's scars and tremor surface.\", \"Kirill agrees to give the true account only if Anton writes it down without softening it.\", \"He begins with the first dusk, when Death came wearing Vera's face, and stops there.\"]}, {\"n\": 2, \"title\": \"The Legend's Versions\", \"targetWords\": 1050, \"points\": [\"Anton opens his notebook and lays out the settlement's competing legends of the month trial.\", \"Kirill rejects both the saint and the monster versions, naming where each one lies.\", \"Neighbors' claims and the old cairn stories press in on the cabin.\", \"Kirill recalls the night he chose to go, and the chapter stops on that decision.\"]}, {\"n\": 3, \"title\": \"Learning the Cold\", \"targetWords\": 1100, \"points\": [\"A flashback follows Anton teaching a younger Kirill to read wind, ice, and his own fear.\", \"Vera appears in the training days, alive, stubborn, and unimpressed by legend.\", \"Anton drills the cairn rule into him without explaining why it matters.\", \"The flashback ends at Vera's death and Kirill's first thought of challenging Death.\"]}, {\"n\": 4, \"title\": \"First Dusk\", \"targetWords\": 1100, \"points\": [\"Kirill enters the cairn ring and speaks the terms; the trial begins at dusk.\", \"Death arrives as Vera, down to her scarf, and greets him with her voice.\", \"Kirill holds the rule that Death cannot strike first and refuses to leave the ring.\", \"She asks him to step outside, and he realizes the trial will be an argument, not a war.\"]}, {\"n\": 5, \"title\": \"The Brutal Hours\", \"targetWords\": 1100, \"points\": [\"A blizzard and a first assault force Kirill to fight for warmth, shelter, and his own mind.\", \"He wounds the thing wearing Vera and sees it bleed something that is not blood.\", \"The psychological toll shows in his counting, his bargaining, and his failing memory.\", \"A false dawn lets him believe the month is over, and the chapter stops on that cruelty.\"]}, {\"n\": 6, \"title\": \"Counting Days\", \"targetWords\": 1050, \"points\": [\"Deep in the trial, Kirill talks to Vera's coat and loses whole stretches of time.\", \"He finds a contradiction in the legend that no one in the settlement ever mentioned.\", \"Death returns and makes a promise he cannot yet parse, in Vera's exact phrasing.\", \"He writes the promise in the snow and the wind erases half of it.\"]}, {\"n\": 7, \"title\": \"What Anton Didn't Teach\", \"targetWords\": 1100, \"points\": [\"A flashback reveals a survival lesson Anton deliberately withheld.\", \"In the cabin, Anton admits the legend omits what previous challengers did at the end.\", \"Kirill confesses he broke a term of the trial, and Anton makes him say which one.\", \"The confession lands, and the chapter stops before the last night.\"]}, {\"n\": 8, \"title\": \"The Last Night\", \"targetWords\": 1100, \"points\": [\"Kirill faces the final night and Death's last shape of Vera.\", \"The brutal fight becomes an interrogation of what he is willing to lose.\", \"Death speaks the cryptic promise in full and names its price.\", \"Dawn comes, the ring breaks, and Kirill walks out alive but not whole.\"]}, {\"n\": 9, \"title\": \"The Promise\", \"targetWords\": 1100, \"points\": [\"Feverish on the return, Kirill repeats the promise until Anton writes it down.\", \"Anton pieces the wording against the notebook's older versions.\", \"They arrive at a meaning that is neither salvation nor curse.\", \"Kirill decides what he will tell the village, and the chapter stops on that choice.\"]}, {\"n\": 10, \"title\": \"What Really Happened\", \"targetWords\": 1150, \"points\": [\"Kirill recounts his account to the settlement and refuses the legend's tidy ending.\", \"Anton reads the promise aloud and the listeners split over what it means.\", \"Kirill and Anton return to the cabin and close the notebook together.\", \"The story ends on Kirill no longer counting days, with the promise still open.\"]}]}"
+			},
+			"parametersSha256": "48d7263178c16b2d74fac25f52dd254e98afd005717c71cf7bf1ccbb760f1195"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1587",
+			"toolCallId": "call_00_IoHcsjHM8CMfFIB1S80G2054",
+			"toolName": "submit_bible",
+			"authorPrompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:dessa",
+						"name": "Dessa Halim",
+						"source": "model",
+						"kind": "character",
+						"description": "34, a respiratory therapist assigned to a municipal mask distribution hub in Kestrel Bay. Precise, tired, secretly relieved that her chronic headaches might have a cause. She keeps a private log of what she sees on the first day and slowly becomes the story's scientific conscience.",
+						"invariants": [
+							"Trained to read breathing and vital signs",
+							"Distrusts official explanations but fears losing her license",
+							"Documents what she witnesses"
+						]
+					},
+					{
+						"key": "char:tomas",
+						"name": "Tomas Reyes",
+						"source": "model",
+						"kind": "character",
+						"description": "41, a night-shift warehouse loader and father of Ilan. Gentle, proud, bad at asking for help. He has spent two years watching his son decline and has begun to suspect that his own calm acceptance of it was never entirely his own.",
+						"invariants": [
+							"Refuses charity but will trade labor for it",
+							"Believes he is the family's last line of defense",
+							"Loves his son without reservation"
+						]
+					},
+					{
+						"key": "char:ines",
+						"name": "Ines Reyes",
+						"source": "model",
+						"kind": "character",
+						"description": "39, Tomas's wife, a hospital laundry supervisor. Practical and exhausted; she is the one who finds the donor-program advertisement and reads the fine print aloud because Tomas will not.",
+						"invariants": [
+							"Keeps the household's accounts in a paper ledger",
+							"Will not lie to Ilan",
+							"Makes decisions by naming their cost"
+						]
+					},
+					{
+						"key": "char:ilan",
+						"name": "Ilan Reyes",
+						"source": "model",
+						"kind": "character",
+						"description": "8, Tomas and Ines's son, in late-stage Vellner's syndrome, a progressive lung disease. Sharp-eyed, patient beyond his years, and frightened of the masks because they make his parents cry.",
+						"invariants": ["Needs supplemental oxygen at night", "Notices adult lies", "Wants to be a cartographer"]
+					},
+					{
+						"key": "char:orin",
+						"name": "Dr. Orin Vale",
+						"source": "model",
+						"kind": "character",
+						"description": "56, chief science officer of the Meridian Atmospheric Trust, the consortium that manufactured and distributed the masks. Courteous, exhausted, convinced that Serevin prevented a century of war and that the donor program is a necessary bridge to a cleaner solution.",
+						"invariants": [
+							"Speaks in measured, fiduciary language",
+							"Genuinely believes the gas saved lives",
+							"Will sacrifice individuals for continuity"
+						]
+					},
+					{
+						"key": "place:kestrel",
+						"name": "Kestrel Bay",
+						"source": "model",
+						"kind": "place",
+						"description": "A mid-sized port city of rusted cranes, municipal housing towers and a hospital built on the hill. Its air has tasted faintly sweet for as long as anyone remembers; residents called it the harbor smell.",
+						"invariants": [
+							"Economy built on shipping and the Meridian plant",
+							"Hospital on the hill serves the poor districts"
+						]
+					},
+					{
+						"key": "rule:serevin",
+						"name": "Serevin",
+						"source": "model",
+						"kind": "rule",
+						"description": "An aerosolized neuroregulator released into the atmosphere for generations, ostensibly to suppress panic and aggression. It blunts fear, urgency and grief while creating lifelong physiological dependency. Withdrawal produces tremors, intrusive memory, rage and grief that arrive all at once.",
+						"invariants": [
+							"Invisible and odorless except for a faint sweetness",
+							"Creates dependency from birth",
+							"Suppresses negative affect rather than removing its cause"
+						]
+					},
+					{
+						"key": "rule:masks",
+						"name": "The masks",
+						"source": "model",
+						"kind": "rule",
+						"description": "Specialized filter masks distributed free in a single coordinated rollout. They strip Serevin from inhaled air. Wearing one for the first time produces immediate sobriety; continuous wear triggers withdrawal. Supply is limited and replacement cartridges cost money.",
+						"invariants": [
+							"Cartridges deplete and must be purchased",
+							"First wear causes acute emotional shock",
+							"Protection is individual, not environmental"
+						]
+					},
+					{
+						"key": "line:donors",
+						"name": "The donor program",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "Meridian pays cash to volunteers who re-enter controlled Serevin exposure and donate blood, plasma and cerebrospinal samples so researchers can map dependency and develop a taper. Repeated donations cause cumulative neurological damage; donors are quietly called 'bridges.'",
+						"invariants": [
+							"Payment scales with number of donations",
+							"Consent forms are long and legal",
+							"Advanced donors lose memory and volition"
+						]
+					},
+					{
+						"key": "line:control",
+						"name": "Who owns the air",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "The masks expose that a private consortium shaped human feeling for generations. Governments, courts and citizens fight over whether Meridian can be trusted to sell the cure for a condition it created.",
+						"invariants": [
+							"Meridian controls cartridge patents",
+							"Public anger grows as withdrawal spreads",
+							"Official statements emphasize stability over truth"
+						]
+					},
+					{
+						"key": "fw:dual_pov",
+						"name": "Two-point-of-view structure",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "The story alternates between Dessa Halim's clinical, institutional view and Tomas Reyes's domestic, desperate view, so that the societal collapse and one family's private choice illuminate each other."
+					}
+				]
+			},
+			"parametersSha256": "c9786b15fdf9e744a7460981d1932e5bc7a192c778cb7dc4a383fef1ce7c4b78"
+		},
+		{
+			"kind": "outline_fields",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "1769",
+			"toolCallId": "call_00_A1uapp3bGRBbKNTmAlv92072",
+			"toolName": "submit_outline",
+			"authorPrompt": "Write a new tale featuring a hardened homebrewer who’s enlisted to lead a raid against beer-thirsty zombies overtaking a once-quiet farm community. Focus on dark humor and survival as he recruits a ragtag team, engineers daring brew rescues, and faces a final showdown in an abandoned chateau turned brewery. Weave in themes of addiction, loyalty, and the absurdity of war. 12,000-15,000 words.",
+			"parameters": {
+				"viewpoint": "First-person past tense, limited strictly to Milo Varga's knowledge and senses\", \"tone\": \"Darkly comic, gritty, unsentimental, with moments of bleak tenderness\", \"format\": \"Novel in twelve chapters\", \"chapters\": [{\"n\": 1, \"title\": \"The Man Who Smelled Like a Cellar\", \"targetWords\": 1150, \"points\": [\"Milo tends his sour ale in a cellar while the farm community's barricades fail outside.\", \"June Okafor arrives with a request: the zombies want beer, and Milo is the only one who understands beer.\", \"Milo walks the ruined orchard and sees the horde pressing toward the grain silo.\", \"He agrees to lead a raid, on the condition that no one touches his yeast.\"]}, {\"n\": 2, \"title\": \"Ragtag, Bottled\", \"targetWords\": 1150, \"points\": [\"Milo and June recruit a team: a teenage yeast obsessive, a drunk ex-sergeant, and a baker with a crossbow.\", \"The first training session becomes a comedy of errors and one genuine near-death.\", \"Milo realizes the team's flaws mirror his own and names them aloud.\", \"They settle on a destination: the old brewery depot beyond the orchard.\"]}, {\"n\": 3, \"title\": \"The Barn With the Good Yeast\", \"targetWords\": 1150, \"points\": [\"The team raids a barn for a surviving yeast culture and a working fermenter.\", \"Cutter's reckless gunfire draws the horde and forces an improvised brew spill as a lure.\", \"Tobias saves the culture but loses his notes; the team escapes at a cost.\", \"The escape reveals that the infected will follow a strong wort scent for miles.\"]}, {\"n\": 4, \"title\": \"Reconnaissance, Poorly Done\", \"targetWords\": 1150, \"points\": [\"Milo and June scout the brewery depot and find it already overrun.\", \"They discover a map pointing to Château Bellême and evidence of a larger brew operation.\", \"A zombie wearing a sommelier's apron provides the chapter's grimmest joke.\", \"They return with the map and the knowledge that the farm's supplies are nearly gone.\"]}, {\"n\": 5, \"title\": \"The Relapse\", \"targetWords\": 1150, \"points\": [\"The team argues over whether to assault the chateau or flee the valley.\", \"Cutter drinks the emergency whiskey and endangers the group during a night watch.\", \"June demands Milo choose between the mission and his own habits.\", \"Milo pours out his private bottle and commits to the raid.\"]}, {\"n\": 6, \"title\": \"Engineering a Hangover\", \"targetWords\": 1150, \"points\": [\"Milo designs a plan to lure the horde with a massive brew and divert it from the farm.\", \"Tobias calculates fermentation timing while June inventories every container in Harrowfield.\", \"The team builds a wagon-mounted kettle and a network of spill channels.\", \"The plan is ready, and everyone knows it depends on the chateau's intact equipment.\"]}, {\"n\": 7, \"title\": \"The Depot Run\", \"targetWords\": 1150, \"points\": [\"The team raids the overrun depot for copper fittings and sugar.\", \"A brew rescue turns into a running fight through flooded cellars.\", \"Cutter redeems himself by holding a door, then ruins it by complaining.\", \"They return with the fittings and a new respect for the horde's patience.\"]}, {\"n\": 8, \"title\": \"What Loyalty Costs\", \"targetWords\": 1150, \"points\": [\"A horde attack on Harrowfield's barricades forces the team to defend before the raid.\", \"The baker is bitten while saving Tobias, and the group must decide what to do.\", \"June makes the hard call; Milo carries the guilt.\", \"The farm's grain store is destroyed, leaving the chateau as the only source of supplies.\"]}, {\"n\": 9, \"title\": \"The Cellar Confession\", \"targetWords\": 1150, \"points\": [\"Milo and June share a night watch and admit their fears about addiction and leadership.\", \"Milo confesses why he stopped brewing for others after the collapse.\", \"June reveals what she lost before Harrowfield.\", \"They agree that survival without loyalty is just a slower death.\"]}, {\"n\": 10, \"title\": \"The Road to Bellême\", \"targetWords\": 1150, \"points\": [\"The team moves toward the chateau, towing the brew wagon through zombie country.\", \"A planned diversion goes wrong when the wind shifts.\", \"They reach the chateau gates with the horde close behind.\", \"The gates close behind them, and the chateau's kettles are still warm.\"]}, {\"n\": 11, \"title\": \"The Last Brew\", \"targetWords\": 1150, \"points\": [\"Milo finds the chateau brewery operational and turns it into a trap.\", \"The horde floods the courtyard as the team brews a final batch and opens the valves.\", \"Cutter dies badly and hilariously, and Tobias proves indispensable.\", \"The brewery floods with boiling wort and the horde follows it into the cellars.\"]}, {\"n\": 12, \"title\": \"Aftertaste\", \"targetWords\": 1150, \"points\": [\"The survivors escape the chateau as fire consumes the brewery and the trapped horde.\", \"Milo and June count the cost and the remaining supplies.\", \"They return to Harrowfield with enough to rebuild, but not enough to forget.\", \"Milo pours the last bottle into the ground and starts a new batch.\"]}]"
+			},
+			"parametersSha256": "139e43eac68f6ff1535cc482e180b394694f2475940e2e6c7cc57d2beaa0a719"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+			"sourceEvidenceSha256": "8ef53cc6621f867b0728dc0ab2623d8f2a8ebcb7a1cc451b9e2839424e8a96e0",
+			"caseId": "840",
+			"toolCallId": "call_00_s0I3AlsB2rwJwzgqsRsM1714",
+			"toolName": "submit_bible",
+			"authorPrompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:corin",
+						"name": "Corin Vael",
+						"source": "model",
+						"kind": "character",
+						"description": "Twenty-two-year-old heir of House Vael, the family that controls the Aerie's water allotment. Raised inside the merit doctrine, ranked high since childhood. Restless, precise, quietly ashamed of his own comfort. Sneaks into the Lowmarch out of curiosity and comes back changed.",
+						"invariants": [
+							"He is the heir to House Vael and has never lived below the Aerie.",
+							"He was taught that merit score reflects a person's true worth."
+						]
+					},
+					{
+						"key": "char:mira",
+						"name": "Mira Ash",
+						"source": "model",
+						"kind": "character",
+						"description": "Lowmarch water-runner in her late twenties. Sharp-tongued, practical, keeps a ledger of her own — of who owes whom, who is sick, who has gone quiet. Distrusts anyone from above on sight, including Corin.",
+						"invariants": ["She lives in the Lowmarch and has never held a citizen merit score of her own."]
+					},
+					{
+						"key": "char:odren",
+						"name": "Chancellor Odren",
+						"source": "model",
+						"kind": "character",
+						"description": "Head of the Aerie council and keeper of the merit rolls. Believes scarcity is the only honest teacher and that aid without merit destroys the system that lifted the city out of collapse. Courteous, immovable, and not personally cruel.",
+						"invariants": ["He chairs the council debate over whether to release reserve stores."]
+					},
+					{
+						"key": "place:aerie",
+						"name": "The Aerie",
+						"source": "model",
+						"kind": "place",
+						"description": "The spire district: glass towers, filtered air, terraced gardens, a council hall where the merit rolls are read aloud. Water, air and food are metered by score.",
+						"invariants": ["Residence and rations are assigned by merit score."]
+					},
+					{
+						"key": "place:lowmarch",
+						"name": "The Lowmarch",
+						"source": "model",
+						"kind": "place",
+						"description": "The shadowed lower city under the spires' foundations. Flooded service tunnels, salvaged housing, a black market fed by depot leakage. Air thick with rust and cooking smoke; every drop of water carried by hand.",
+						"invariants": ["It lies below the spires and receives no official allotment."]
+					},
+					{
+						"key": "rule:merit_ledger",
+						"name": "The Merit Ledger",
+						"source": "model",
+						"kind": "rule",
+						"description": "Every citizen's score is computed from aptitude tests, labor output and lineage credit, then used to set housing tier, rations and medical priority. Scores can be amended by the council; amendments are sealed from public view.",
+						"invariants": ["Rations and residence tiers are set by score.", "Council amendments to scores are sealed."]
+					},
+					{
+						"key": "rule:depot_curfew",
+						"name": "Depot Curfew",
+						"source": "model",
+						"kind": "rule",
+						"description": "Food and water depots on the boundary wall are guarded and shuttered from the ninth bell to dawn; unauthorized approach is answered by drones. Crates lost in transit are written off as spoilage rather than returned to the Lowmarch.",
+						"invariants": ["Depots are sealed and drone-guarded between the ninth bell and dawn."]
+					},
+					{
+						"key": "line:corin_doubt",
+						"name": "The Heir's Doubt",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "Corin's loyalty to the merit doctrine against what he sees in the Lowmarch, sharpened when he discovers the ledger's sealed amendments.",
+						"invariants": ["Corin must eventually choose between defending the ledger and exposing it."]
+					},
+					{
+						"key": "line:relief_vote",
+						"name": "The Relief Vote",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "The council's decision on whether to open the reserve stores to the lower city, split between those who call it charity that breeds dependence and those who call it a debt owed.",
+						"invariants": ["The council votes on releasing reserve stores to the Lowmarch."]
+					},
+					{
+						"key": "fw:voice",
+						"name": "Close Third, Corin",
+						"source": "model",
+						"kind": "frameworkChoice",
+						"description": "Third person limited, past tense, anchored closely to Corin's perception; the council chamber and the Lowmarch are both rendered only through what he can see, hear and be told.",
+						"invariants": ["No scene reveals information Corin cannot access."]
+					},
+					{
+						"key": "rel:corin->mira",
+						"name": "Corin and Mira",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Wary alliance: Mira tolerates Corin because he can carry and keep his mouth shut; Corin follows her because she is the only person below who will answer a question straight.",
+						"invariants": ["Mira does not trust Corin with the raid's real purpose at first."]
+					}
+				]
+			},
+			"parametersSha256": "289e8a88f09819afda7b044a6962fd70ffad5178fc146f59c7cc5e1ba4cbef90"
+		},
+		{
+			"kind": "bible_invariants",
+			"sourceRun": "story/testing/runs/P2R/P2-CHAP/20261031T064958Z-0ae2186-r1",
+			"sourceEvidenceSha256": "48a31627594b5bacc92ad2a0c013cf03bdaff6866f6d82f7605414a6e7506375",
+			"caseId": "527",
+			"toolCallId": "call_00_tPzz74TYPSKFbReQCOdf9936",
+			"toolName": "submit_bible",
+			"authorPrompt": "Hey, can you write a detailed story based on this concept: Dave moves into an old house with streaky windows and starts seeing ghosts, while his partner teases him so much it drives a wedge between them. Then Dave has a sensual encounter with one of the spirits, leaving him torn between disbelief and desire. Set it in the dim hallways of the house and the misty cemetery he passes every day, include furniture that shifts on its own and fleeting shadow figures, and explore themes of respect, belief, and longing. Make it roughly 8,000–10,000 words long.",
+			"parameters": {
+				"items": [
+					{
+						"key": "char:dave",
+						"name": "Dave",
+						"source": "model",
+						"kind": "character",
+						"description": "A man in early middle age who moves with his partner into an old house. Practical, quietly stubborn, used to being the reasonable one; he keeps a daily walking route past the cemetery. His matter-of-fact self-image is what makes the haunting so destabilizing: he would rather be wrong about his senses than admit he wants something from the dead.",
+						"invariants": [
+							"He does not believe in ghosts at the start.",
+							"He keeps his doubts and his desire private from his partner."
+						]
+					},
+					{
+						"key": "char:partner",
+						"name": "Dave's partner",
+						"source": "model",
+						"kind": "character",
+						"description": "Dave's long-term partner, unnamed and ungendered in the text. Warm in ordinary moments and quick with jokes; treats Dave's sightings as a running bit that curdles into real contempt. Not a villain: their teasing comes from fear of the house and of Dave's changing attention, and it is the refusal to stop that drives the wedge.",
+						"invariants": [
+							"Teasing is affectionate at first, dismissive later.",
+							"Never acknowledges a single supernatural event as real."
+						]
+					},
+					{
+						"key": "char:spirit",
+						"name": "The woman at the stair",
+						"source": "model",
+						"kind": "character",
+						"description": "A long-dead woman bound to the house, glimpsed first as motion and cold air, later as a figure in a high-collared dress. She is courteous, watchful and hungry for acknowledgement. She responds to respect rather than fear: what she offers Dave is attention and touch, and what she wants is to be believed and remembered. Her encounter with Dave is sensual and deliberate, and she never claims to be harmless.",
+						"invariants": [
+							"She never forces Dave; she waits to be invited in some form.",
+							"She fades where she is dismissed or mocked."
+						]
+					},
+					{
+						"key": "place:old_house",
+						"name": "The house on the lane",
+						"source": "model",
+						"kind": "place",
+						"description": "A narrow two-storey house at the end of a lane, older than its neighbours, with tall windows that streak and smear no matter how often they are cleaned. Dim hallway with worn runner, a stair that turns at a landing, rooms that hold cold pockets. Moves furniture by inches when unobserved.",
+						"invariants": ["The windows never come fully clean.", "Nothing moves while it is being watched."]
+					},
+					{
+						"key": "place:cemetery",
+						"name": "The misty cemetery",
+						"source": "model",
+						"kind": "place",
+						"description": "The overgrown burial ground Dave passes on his daily walk, between the house and the shops: tilted stones, yew trees, ground mist that sits low even in dry weather. The mist thickens along the oldest rows, where the names have worn away.",
+						"invariants": ["Mist gathers low and does not lift with wind.", "Nothing there is ever clearly seen twice."]
+					},
+					{
+						"key": "rule:furniture_shift",
+						"name": "Furniture shifts",
+						"source": "user",
+						"authorQuote": "include furniture that shifts on its own",
+						"kind": "rule",
+						"description": "Furniture in the house shifts on its own."
+					},
+					{
+						"key": "rule:shadow_figures",
+						"name": "Shadow figures",
+						"source": "user",
+						"authorQuote": "fleeting shadow figures",
+						"kind": "rule",
+						"description": "Fleeting shadow figures appear at the edge of sight."
+					},
+					{
+						"key": "line:belief_wedge",
+						"name": "Believe me or lose me",
+						"source": "model",
+						"kind": "conflictLine",
+						"description": "Dave needs his partner to concede that what he sees is real, even in part; the partner needs Dave to admit he is unwell so the house stops being frightening. Each demand sounds reasonable and each one costs them the other."
+					},
+					{
+						"key": "fw:themes",
+						"name": "Respect, belief, longing",
+						"source": "user",
+						"authorQuote": "explore themes of respect, belief, and longing",
+						"kind": "frameworkChoice",
+						"description": "The story explores the themes of respect, belief and longing."
+					},
+					{
+						"key": "rel:dave->partner",
+						"name": "Dave and his partner",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Long together, easy with each other until the move. Affection survives as habit while trust thins; neither is cruel on purpose and neither apologises properly."
+					},
+					{
+						"key": "rel:dave->spirit",
+						"name": "Dave and the woman at the stair",
+						"source": "model",
+						"kind": "relationBaseline",
+						"description": "Begins as dread, becomes curiosity, then a mutual courtesy that goes further than Dave intends. She gives him what his partner will not: belief in his own perception, and desire that asks nothing reasonable of him."
+					}
+				]
+			},
+			"parametersSha256": "56c053fe67bae17859380cff6bf0bb631c3f504ebd9dae1eabee11819f284660"
+		}
+	]
+}

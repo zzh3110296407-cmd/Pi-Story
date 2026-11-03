@@ -1,0 +1,98 @@
+{
+  "id": "ds11-e01-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate Page"
+          }
+        ],
+        "reason": "Author requested the title of unwritten chapter 3 be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+      },
+      "id": "call_00_ET_D10jM7ndIKXK9lm6ga3S3678"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate Page"
+        }
+      ],
+      "reason": "Author requested the title of unwritten chapter 3 be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+    },
+    "id": "call_00_ET_D10jM7ndIKXK9lm6ga3S3678"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Implement the author-requested change on the named unwritten chapter, preserving all other specified fields: Set the title of unwritten chapter 3 to The Duplicate Page. Leave its events, number and target length unchanged.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "c1cb8971e1c3dba2968565fdae59311b194e5d09895cc0611d79495afa9d2c37",
+    "sessionSha256": "b2ebdc80a23d1c5d88d16b7152bdba75983a175675430f62aa7a2dbb851ddddc",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0024543,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0024543
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,282 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261030T094737Z-0e9b3c9-dev-dirty",
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 67,
+      "value": 0.8805970149253731,
+      "successes": 59,
+      "failures": 8,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.7816797416192777,
+        0.9382376746649551
+      ],
+      "passed": null,
+      "status": "insufficient_evidence",
+      "failureCategories": {
+        "DOMAIN_INVALID": 5,
+        "json_syntax_repaired": 1,
+        "json_syntax": 1,
+        "author_quote": 1
+      },
+      "afterRepairUsability": {
+        "n": 67,
+        "successes": 60
+      }
+    },
+    {
+      "id": "T05",
+      "n": 20,
+      "value": 0.95,
+      "successes": 19,
+      "failures": 1,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 3,
+      "successes": 3,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 3,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 3,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 3,
+      "successes": 3,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 3,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 89,
+        "knownUsd": 0.21346896,
+        "reservedUsd": 0.46304609999999996,
+        "unknownCalls": 1,
+        "networkRequests": 71,
+        "mainLogicalRequests": 86,
+        "mainNetworkRequests": 68
+      },
+      "chapters": [
+        {
+          "caseId": "1264",
+          "toolCallId": "call_00_3N2T0PqoVcsDi3YR0J2W8125",
+          "chapter": 1,
+          "mode": "macro",
+          "committed": true,
+          "quality": "clean",
+          "internalCalls": 3,
+          "elapsedMs": 120935,
+          "knownUsd": 0.026691095999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 8,
+          "mainLogicalRequests": 5,
+          "mainNetworkRequests": 5
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0.18677786400000002,
+        "reservedUsd": 0.46304609999999996,
+        "unknownCalls": 1,
+        "networkRequests": 63,
+        "mainLogicalRequests": 81,
+        "mainNetworkRequests": 63
+      },
+      "risk": {
+        "n": 1,
+        "withRisk": 0,
+        "rate": 0
+      },
+      "state": {
+        "n": 14,
+        "provisional": 0,
+        "provisionalRate": 0,
+        "issues": 2,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "25521dc8d95e4f6e1e3a6ece21cb4f8cc7892d42b78fe68cadc571ef060b148f",
+        "characters": 6505,
+        "estimatedTokens": 4059
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "a064c45fca7be9a7dd054ef12225093ed46478ffa8b01a0a8f0f0fe98cff54eb",
+        "characters": 10361,
+        "estimatedTokens": 5250
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 3,
+      "median": 1.7794236032844952,
+      "max": 1.8540983606557377
+    },
+    "writerOutputTokens": [
+      2393
+    ],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "6a6a73d9-51cd-4f71-9255-71a428109a79",
+        "caseId": "1264",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0413574
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ce095335-2053-41a1-814f-486e6f5fd9c7",
+        "caseId": "1264",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0424164
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0752e1bb-c3a5-4544-8793-07f3f90d3984",
+        "caseId": "1264",
+        "reservationId": "reservation-3",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0426372
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

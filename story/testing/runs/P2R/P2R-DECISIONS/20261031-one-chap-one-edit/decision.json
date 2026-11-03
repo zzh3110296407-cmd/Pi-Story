@@ -1,0 +1,30 @@
+{
+  "schema": "story/author-decision@1",
+  "stage": "P2R",
+  "recordedAt": "2026-10-31T08:45:11Z",
+  "previousDecision": "story/testing/runs/P2R/P2R-DECISIONS/20261031-one-chap/decision.json",
+  "authorInstructions": ["CHAP只进行一轮", "EDIT进行一轮即可"],
+  "freeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "scope": {"P2-OPEN": 2, "P2-CHAP": 1, "P2-KEEP": 2, "P2-EDIT": 1},
+  "qualityChapRun": "20261031T064958Z-0ae2186-r1",
+  "qualityEditRun": "20261031T081133Z-0ae2186-r1",
+  "cancelledRuns": ["20261031T074430Z-0ae2186-r2", "20261031T083200Z-0ae2186-r2"],
+  "editCancellation": {
+    "method": "Graceful STOP file observed by the existing measurement driver",
+    "status": "failed",
+    "casesWithOutcome": 13,
+    "usableCases": 12,
+    "interruptedCases": 1,
+    "requests": 33,
+    "knownUsd": 0.136563078,
+    "reservedUsd": 0.0427737,
+    "totalUsd": 0.179336778
+  },
+  "accounting": "Both cancelled runs and all fees remain in V2 all-real hard gates and raw rescore. Neither cancelled run is an eligible second quality repetition.",
+  "interpretation": [
+    "The author reduced repetition counts, without explicitly changing sample minimums or quality thresholds.",
+    "Keep the frozen aggregation API unchanged. Where a second repetition is absent, retain its null result and separately report observed single-round rates.",
+    "Keep all nine attempted cases of each KEEP run, including the two domain-invalid cases in repetition two.",
+    "OPEN and KEEP remain two repetitions. W01 still has only twenty full-cohort samples and cannot satisfy the original minimum thirty."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "ds11-b02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "place:kite_hall",
+            "source": "user",
+            "op": "set",
+            "kind": "place",
+            "name": "kite hall",
+            "authorQuote": "For future scenes, carts may enter the kite hall only through the west door.",
+            "value": {
+              "cart_access": "Carts may enter the kite hall only through the west door; no other entrance admits carts."
+            }
+          }
+        ],
+        "reason": "记录作者新增的未来设定：运货车只能经西侧门进入风筝厅，现有设定与已写章节不变。"
+      },
+      "id": "call_00_3C559SrVLjtMHFtsqJiq7703"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "place:kite_hall",
+          "source": "user",
+          "op": "set",
+          "kind": "place",
+          "name": "kite hall",
+          "authorQuote": "For future scenes, carts may enter the kite hall only through the west door.",
+          "value": {
+            "cart_access": "Carts may enter the kite hall only through the west door; no other entrance admits carts."
+          }
+        }
+      ],
+      "reason": "记录作者新增的未来设定：运货车只能经西侧门进入风筝厅，现有设定与已写章节不变。"
+    },
+    "id": "call_00_3C559SrVLjtMHFtsqJiq7703"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "6f6468c4916682799da7113ab722b4df6bff8b14ca3d781b264e03236cfea83e",
+    "sessionSha256": "9209bef1b503d828898e84aa4162f4444c97439324023cce728a0f60775fdcc6",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026457,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026457
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

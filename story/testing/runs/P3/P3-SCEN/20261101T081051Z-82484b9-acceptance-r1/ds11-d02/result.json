@@ -1,0 +1,91 @@
+{
+  "id": "ds11-d02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "The credit for spotting the transposed tide line can land in three workable ways before I patch the unwritten chapters (3–6). Which do you want?",
+        "options": [
+          "Pema receives the public credit, and Cal accepts it",
+          "Cal receives the public credit, and Pema stands aside for it",
+          "Pema and Cal share the credit explicitly, with Eli recording both names",
+          "Keep it unresolved on the page: the credit is offered but not settled before the book ends"
+        ]
+      },
+      "id": "call_00_HB8lVFoHbazKJYAaHFl45347"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "The credit for spotting the transposed tide line can land in three workable ways before I patch the unwritten chapters (3–6). Which do you want?",
+      "options": [
+        "Pema receives the public credit, and Cal accepts it",
+        "Cal receives the public credit, and Pema stands aside for it",
+        "Pema and Cal share the credit explicitly, with Eli recording both names",
+        "Keep it unresolved on the page: the credit is offered but not settled before the book ends"
+      ]
+    },
+    "id": "call_00_HB8lVFoHbazKJYAaHFl45347"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "932179dce8c913280fcb2f39c131eed6a97375670bce68a14bbb79538bbad851",
+    "sessionSha256": "bcbe02c5daa61c67033a468accc4770713118e3882b83c10d1bc2a3382b120ea",
+    "fee": {
+      "knownUsd": 0.0026385000000000002,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026385000000000002
+    },
+    "measuredMainRequests": 2
+  }
+}

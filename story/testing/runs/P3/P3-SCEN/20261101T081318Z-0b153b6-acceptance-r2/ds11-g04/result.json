@@ -1,0 +1,123 @@
+{
+  "id": "ds11-g04",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+            "key": "rule:green_copy",
+            "kind": "rule",
+            "op": "set",
+            "source": "user",
+            "value": {
+              "description": "From now on, every duplicate page is marked with a green triangle.",
+              "invariants": [
+                "Every duplicate page is marked with a green triangle."
+              ]
+            }
+          }
+        ],
+        "reason": "The author supplied a future-only marking rule; the key slug now uses an underscore as required."
+      },
+      "id": "call_00_KKORvjBIcW5k43ivuT6c0762"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+          "key": "rule:green_copy",
+          "kind": "rule",
+          "op": "set",
+          "source": "user",
+          "value": {
+            "description": "From now on, every duplicate page is marked with a green triangle.",
+            "invariants": [
+              "Every duplicate page is marked with a green triangle."
+            ]
+          }
+        }
+      ],
+      "reason": "The author supplied a future-only marking rule; the key slug now uses an underscore as required."
+    },
+    "id": "call_00_KKORvjBIcW5k43ivuT6c0762"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "5eda6e3dd4547269dbbf216879941dbef26dbc053540fe69a89e34a1ef001c09",
+    "sessionSha256": "db66a4dfaa6a62f7287941ccbb5f723df706e5c76f02b0edd41caba72b138f51",
+    "fee": {
+      "knownUsd": 0.0026295,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026295
+    },
+    "measuredMainRequests": 2
+  }
+}

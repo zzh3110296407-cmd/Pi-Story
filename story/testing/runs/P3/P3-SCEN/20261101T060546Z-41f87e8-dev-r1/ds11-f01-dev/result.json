@@ -1,0 +1,51 @@
+{
+  "id": "ds11-f01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [],
+  "firstAction": null,
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "If answering directly, use only the setup: Hana is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "68f4f4584dfb2df6946842eb6e8fc33534d172b635bb706bb74f10f621566fff",
+    "sessionSha256": "cacff867d81154862875d7576c14397914c1657bd60c19b14f283d9316e265a8",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 0
+  }
+}

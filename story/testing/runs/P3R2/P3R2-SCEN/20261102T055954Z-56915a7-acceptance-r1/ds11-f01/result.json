@@ -1,0 +1,91 @@
+{
+  "id": "ds11-f01",
+  "status": "measured",
+  "errors": [],
+  "behaviorFailed": true,
+  "completedMainRequests": 2,
+  "decisionLimitReached": true,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "get_character",
+      "args": {
+        "key": "char:wren"
+      },
+      "id": "call_00_PCCDbmzaPXrbYxXkcxJR0067"
+    },
+    {
+      "tool": "read_state",
+      "args": {
+        "filter": {
+          "subjects": [
+            "wren"
+          ]
+        }
+      },
+      "id": "call_01_fn4mFS83rPLfFtRXOB8T8021"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 1
+      },
+      "id": "call_00_iBO5rESudESpgB2WTZIi7384"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 2
+      },
+      "id": "call_01_8L6XDW2tj1zr95lxX2RZ8455"
+    }
+  ],
+  "firstAction": null,
+  "firstAcceptable": false,
+  "readOnlyCalls": 4,
+  "readOnlyExceeded": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Answer the actual character question: Wren is an assistant who is allowed to disagree. The committed chapters show this assistant helping the protagonist check and compare the record. Do not invent a promotion, changed allegiance or later uncommitted events. Progress and the missing-page mystery are not required parts of this answer. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 4,
+        "readOnlyExceeded": true
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "8c4f941ff66c317edacc6c86c0481244588b65bf60660e2f2322eb7152ac4498",
+    "sessionSha256": "0ce2c376089510f79b90bbe8f4d39f909dcd9e2caee868a82bf6db729ebc5203",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0027180480000000003,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 3,
+      "totalUsd": 0.0027180480000000003
+    },
+    "measuredMainRequests": 3
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { io } from './io.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url)),{read,write,finish}=io(root);
+const manifest=read('manifest.json'),review=read('labels/input-repair-review.json');assert(!manifest.frozenAt);assert(review.actualKeeperInput.passed);assert(review.developmentInputSummary.passed);assert.equal(review.newGoldAnnotations,0);assert.equal(review.mappings.length,9);assert(review.entryChecks.every(c=>c.p1CommitPassed));
+const approval={schema:'story/dataset-freeze-approval@1',date:'2026-10-30',frozenAt:'2026-10-30',sourceUserRequest:'现在开始修复，发布 DS09 v3，补齐既有伏笔编号对应的语义描述，并同步更新 DS10 的输入和底本引用。保留冻结版本及历史运行，检查通过后按方案完成复核并本地提交，不推送。',developmentRequest:'此次修复是否会同时交付基于 v1 的独立开发输入修正版或补丁（保留原正文、金标和冻结 v1），供 R4 开发轮使用？',scope:'Publish the verified input-only repair and separate v1 development override; local commit only.',reviewMode:'Existing author-accepted seed/gold semantics inherited byte-for-byte; new serialization and propagation reviewed by Codex AI.',humanPersonallyReviewedNewInputMappings:false,newGoldAnnotations:0,inheritedApproval:'labels/inherited-v2-freeze-approval.json',checks:'labels/input-repair-review.json'};
+write('labels/freeze-approval.json',approval);
+write('LABELING.md',readFileSync(root+'LABELING.md','utf8').replace('v3 DRAFT','v3')+'\nFrozen 2026-10-30 under the explicit current publication/local-commit request after input checks. New input verification is AI work; original gold approval is inherited unchanged. See labels/freeze-approval.json.\n');
+finish({...manifest,id:'DS09',version:'v3',frozenAt:'2026-10-30',state:'frozen_verified_input_repair_inherited_author_accepted_gold',annotationStatus:'AI_input_verification_inherited_author_accepted_gold'});
+console.log('DS09 v3 input repair frozen with inherited gold review and current publication instruction.');

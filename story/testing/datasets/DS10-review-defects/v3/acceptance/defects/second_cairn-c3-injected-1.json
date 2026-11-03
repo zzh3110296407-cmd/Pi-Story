@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "second_cairn-c3-injected-1",
+  "storyId": "second_cairn",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v3",
+    "path": "acceptance/chapters/second_cairn-c3.md",
+    "sha256": "c1bfc4b8eeb16cfd004d8c679f2030cb6db713e5d22355860d554b4b5567bbac"
+  },
+  "injectionOrder": [
+    "narrative_style",
+    "timeline_plot"
+  ],
+  "defects": [
+    {
+      "category": "narrative_style",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "I am standing here now and I can feel the next decision waiting. I want the reader to hear my voice before this scene goes on.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "I am standing here now and I can feel the next decision waiting. I want the reader to hear my voice before this scene goes on.",
+          "lines": {
+            "start": 39,
+            "end": 39
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-2",
+          "quote": "Use third-person narration outside quoted speech and dreams."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-3",
+          "quote": "Narrate unfolding actions in the past tense; timeless mechanism explanations may use the present tense."
+        }
+      ],
+      "reason": "One plainly removable narrator aside breaks third-person past action. Deleting this paragraph restores the untouched body, so the scope is local.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c3-injected-1-defect-1",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "category": "timeline_plot",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "In the ordinary waking present, Eamon stepped off the relief boat alive and spoke to Jun; he had not been revived and this was neither a memory nor an imagined scene.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "In the ordinary waking present, Eamon stepped off the relief boat alive and spoke to Jun; he had not been revived and this was neither a memory nor an imagined scene.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:chronology",
+          "quote": "Eamon died on the ledge in chapter two. He does not return alive in chapter three."
+        }
+      ],
+      "reason": "The actual-world event contradicts the explicit life/death chronology; dream, memory, temporal uncertainty and a new revival are expressly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c3-injected-1-defect-2",
+      "lines": [
+        41
+      ]
+    }
+  ]
+}

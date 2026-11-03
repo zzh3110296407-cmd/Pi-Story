@@ -1,0 +1,101 @@
+{
+  "id": "ds11-j01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, revised per the author's interjection: Oren — not Suri — brings the duplicate page of the service register to Lena. Lena reads the handling note, notes that the sealed sample case stays closed and intact, asks Suri to confirm what the public record actually holds, and Suri explains the record-keeping situation rather than supplying the page herself. Oren offers the duplicate he copied and filed earlier, states plainly that he disagrees with proceeding on the incomplete register, and Lena accepts the document for comparison. Quiet tone, precise hands-on actions, third-person past tense centred on Lena, no injuries, case never opened. End on a definite beat: Lena sets the duplicate beside the original and begins a line-by-line comparison."
+      },
+      "id": "call_00_uhdUrVV0Ci2Zc2TERlzy4878"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 3, revised per the author's interjection: Oren — not Suri — brings the duplicate page of the service register to Lena. Lena reads the handling note, notes that the sealed sample case stays closed and intact, asks Suri to confirm what the public record actually holds, and Suri explains the record-keeping situation rather than supplying the page herself. Oren offers the duplicate he copied and filed earlier, states plainly that he disagrees with proceeding on the incomplete register, and Lena accepts the document for comparison. Quiet tone, precise hands-on actions, third-person past tense centred on Lena, no injuries, case never opened. End on a definite beat: Lena sets the duplicate beside the original and begins a line-by-line comparison."
+    },
+    "id": "call_00_uhdUrVV0Ci2Zc2TERlzy4878"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 3,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "310f69c7cf0f6f928e23da3755a359598a901104bb835a0ab67e3d8950f12700",
+    "sessionSha256": "a4cdada74807332016d9c14a75faa463a0b29d711254d06aaf3aa856213cec7d",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0027993,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0027993
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

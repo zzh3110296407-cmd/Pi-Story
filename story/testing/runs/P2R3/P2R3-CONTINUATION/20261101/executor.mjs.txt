@@ -1,0 +1,88 @@
+import {spawnSync} from 'node:child_process';
+import {existsSync,readFileSync,writeFileSync,mkdirSync,copyFileSync,watchFile,unwatchFile} from 'node:fs';
+import path from 'node:path';
+import {gunzipSync} from 'node:zlib';
+import {EvidenceArchive,readEvidence,sha256,publicEvidence} from '../../../scripts/eval/p2/artifacts.ts';
+import {splitDataset,openingPrompts} from '../../../scripts/eval/p2/datasets.ts';
+import {UsageLedger} from '../../../scripts/eval/p2/ledger.ts';
+import {RunControl} from '../../../scripts/eval/p2/run-control.ts';
+import {P2_LIMITS} from '../../../scripts/eval/p2/metering.ts';
+import {scoreEvidenceV3} from '../../../scripts/eval/p2/score-v3.ts';
+import {scanSecrets} from '../../../scripts/eval/p2/secrets.mjs';
+import {wordCount} from '../../../packages/core/src/shared/text.ts';
+import {createDriver} from './p2r3-resume-driver.ts';
+const freeze='102c3edb352914934da701a4f6fb717fc610f46a',originalId='20261031T154922Z-102c3ed-r1';
+const repository=process.cwd(),root=path.resolve('story/testing/runs/P2R3'),exec=path.resolve('story/testing/exec');
+const originalFolder=path.join(root,'P2-CHAP',originalId),old=JSON.parse(readFileSync(path.join(originalFolder,'run-manifest.json'),'utf8'));
+const records=readEvidence(originalFolder,true),meta=records.find(x=>x.type==='meta'),config=records.find(x=>x.type==='configuration');
+const protocol='story/testing/runs/P2R3/P2R3-CONTINUATION/20261101';
+function write(file,value){const text=JSON.stringify(value,null,2)+'\n';publicEvidence(text);writeFileSync(file,text);}
+function git(...args){const r=spawnSync('git',['--no-optional-locks',...args],{encoding:'utf8',windowsHide:true});if(r.status!==0)throw new Error('Git evidence failed');return r.stdout.trim();}
+if(git('diff','--name-only',freeze,'HEAD','--','.',':(exclude)story/testing/runs')||git('status','--porcelain=v1','--untracked-files=all','--','.',':(exclude)story/testing/runs'))throw new Error('Source differs from clean V3');
+if(old.repositoryCommit!==freeze||old.stage!=='P2R3'||old.status!=='failed'||old.repetition!==1||old.dirty!==false)throw new Error('Wrong continuation source');
+if(JSON.stringify(meta.expectedCaseIds)!==JSON.stringify(['1587','1769','42','527','837']))throw new Error('Unexpected frozen case composition');
+const data=splitDataset(path.resolve('story/testing'),'DS08-opening-prompts','v2','acceptance','E13');
+if(data.manifestDigest!==old.datasets[0].manifestDigest)throw new Error('Dataset changed');
+const prompts=openingPrompts(data,true),committed=records.filter(x=>x.type==='chapter_result');
+const oldPairs=new Set(committed.map(x=>`${x.caseId}:${x.chapter}`));
+if(oldPairs.size!==15||['1','2','3','4'].some(n=>oldPairs.has(`837:${n}`))||oldPairs.has('527:4'))throw new Error('Unexpected checkpoint chapter set');
+const sessionRef=records.find(x=>x.type==='session_file'&&x.caseId==='527');
+const sessionBytes=gunzipSync(readFileSync(path.join(originalFolder,'raw',sessionRef.rawFile)));
+const ledger=new UsageLedger(path.join(root,'usage-ledger.jsonl'),path.join(root,'request-reservations.jsonl'),{stopUsd:6.5,maximumUsd:8});
+const oldFees=ledger.snapshot(originalId),runLimitUsd=old.driverLimits.runLimitUsd-oldFees.totalUsd;
+if(runLimitUsd<=0)throw new Error('Original logical run fee allowance exhausted');
+const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
+const runId=`${stamp}-102c3ed-r1-cont1`,folder=path.join(root,'P2-CHAP',runId),work=path.join(exec,'runs/P2-CHAP',runId);
+const dry=process.argv.includes('--dry-run');
+const configuration={...config,evidenceHead:git('rev-parse','HEAD'),continuationOf:originalId,measurementDriver:JSON.parse(readFileSync(protocol+'/driver-delta.json','utf8'))};
+let archive;
+if(dry){mkdirSync(work,{recursive:true});archive={emit(){},session(){}};}
+else{
+ const preflight=JSON.parse(readFileSync(protocol+'/balance-preflight.json','utf8'));
+ if(!preflight.available||Date.now()-Date.parse(preflight.queriedAt)>120000)throw new Error('Fresh balance preflight required');
+ if(ledger.snapshot().totalUsd>=6.5)throw new Error('Round stop threshold reached');
+ archive=new EvidenceArchive(folder,path.join(work,'archive'),{suiteId:'P2-CHAP',runId,stage:'P2R3',expectedCaseIds:['527','837'],split:'acceptance',phase:'E13',repetition:1,continuationOf:originalId});
+ archive.emit(configuration);
+}
+const sourceWork=path.join(work,sha256('527').slice(0,16));mkdirSync(path.join(sourceWork,'sessions'),{recursive:true});
+const sessionFile=path.join(sourceWork,'sessions','resume-checkpoint.jsonl');writeFileSync(sessionFile,sessionBytes,{flag:'wx'});
+const expectedCommitHashes=committed.filter(x=>x.caseId==='527').map(x=>sha256(x.commit.text));
+const requestCount=records.filter(x=>x.type==='request'&&x.caseId==='527'&&x.role==='showrunner').length;
+const control=new RunControl(),caseFailures=[];
+const manifest={...old,runId,date:new Date().toISOString(),...configuration,type:undefined,status:'running',selectedCaseId:'continuation-missing-chapters-only',caseFailures,driverLimits:{...old.driverLimits,runLimitUsd,logicalRunLimitUsd:old.driverLimits.runLimitUsd},costs:ledger.snapshot(runId),continuation:{of:originalId,originalManifestSha256:sha256(readFileSync(path.join(originalFolder,'run-manifest.json'))),sessionSha256:sha256(sessionBytes),completedPairs:[...oldPairs],requestedPairs:['527:4','837:1','837:2','837:3','837:4'],oldFees,runLimitUsd,priorShowrunnerRequests:requestCount},rawChecksums:{}};
+if(!dry)write(path.join(folder,'run-manifest.json'),manifest);
+let failure;const started=Date.now();
+try{
+ for(const id of dry?['527']:['527','837']){
+  control.assertActive();const resuming=id==='527',scenario=prompts.find(x=>String(x.id)===id);
+  const driver=await createDriver({work:path.join(work,sha256(id).slice(0,16)),runId,suiteId:'P2-CHAP',caseId:id,archive,ledger:dry?{reserve(){throw new Error('Dry run must never dispatch');}}:ledger,runLimitUsd,phase:'E13',maxChapters:4,control,...(resuming?{resumeSession:sessionFile,maxShowrunnerRequests:P2_LIMITS.showrunnerRequests-requestCount}:{})});
+  let cancelled=false;const stopFile=path.join(work,'STOP');
+  const stop=()=>{if(cancelled)return;cancelled=true;archive.emit({type:'measurement_stop',caseId:id,reason:'operator cancellation'});driver.cancel();};
+  process.once('SIGINT',stop);process.once('SIGTERM',stop);watchFile(stopFile,{interval:500,persistent:false},()=>{if(existsSync(stopFile))stop();});
+  try{
+   const state=driver.state().source.model();
+   if(resuming&&(state.lastChapter!==3||JSON.stringify(state.commits.map(x=>sha256(x.text)))!==JSON.stringify(expectedCommitHashes)))throw new Error('Restored session does not match all three committed chapters');
+   if(dry){console.log(JSON.stringify({dryRun:true,networkRequests:0,lastChapter:state.lastChapter,commitHashesMatch:true,historyMessages:driver.session.messages.length,remainingShowrunnerRequests:P2_LIMITS.showrunnerRequests-requestCount,requestedPairs:manifest.continuation.requestedPairs,logicalRemainingAllowanceUsd:runLimitUsd}));continue;}
+   console.log(`${runId}: ${id}, restored=${state.lastChapter}`);
+   archive.emit({type:'continuation_checkpoint',caseId:id,restoredChapters:state.lastChapter,sourceSessionSha256:resuming?sha256(sessionBytes):null});
+   const priorRounds=resuming?records.filter(x=>x.type==='author_prompt'&&x.caseId===id).length:0;
+   let rounds=priorRounds;
+   do{
+    const text=!resuming&&rounds===0?scenario.prompt:'Write the next chapter.';
+    archive.emit({type:'author_prompt',caseId:id,text});await driver.session.prompt(text);rounds++;
+   }while(!cancelled&&driver.state().source.model().lastChapter<4&&rounds<P2_LIMITS.authorRounds);
+   const model=driver.state().source.model();
+   if(!model.controlRev||!model.bibleRev||!model.outlineRev)caseFailures.push({caseId:id,code:'OPENING_INCOMPLETE'});
+   if(model.lastChapter!==4)caseFailures.push({caseId:id,code:'CHAPTER_TARGET_NOT_REACHED'});
+   if(resuming&&JSON.stringify(model.commits.filter(x=>x.chapter<=3).map(x=>sha256(x.text)))!==JSON.stringify(expectedCommitHashes))throw new Error('A previously completed chapter changed');
+   const attempts={};for(const entry of driver.manager.getBranch())if(entry.type==='message'&&entry.message.role==='toolResult')attempts[entry.message.toolName]=(attempts[entry.message.toolName]??0)+1;
+   archive.emit({type:resuming?'continuation_opening_result':'opening_result',caseId:id,model:{controlRev:model.controlRev,bibleRev:model.bibleRev,outlineRev:model.outlineRev},attempts,entries:driver.state().source.branch()});
+   for(const commit of model.commits)if(!oldPairs.has(`${id}:${commit.chapter}`))archive.emit({type:'chapter_result',caseId:id,chapter:commit.chapter,targetWords:model.outline.find(x=>x.n===commit.chapter)?.targetWords,wordCount:wordCount(commit.text).value,commit});
+   archive.emit({type:resuming?'continuation_story_result':'story_result',caseId:id,requestedChapters:4,committedChapters:model.lastChapter,risks:model.commits.map(x=>x.quality)});
+   if(driver.errors.length)throw new Error('Pi extension reported execution error');control.assertActive();if(cancelled)throw new Error('Continuation cancelled');
+  }finally{process.off('SIGINT',stop);process.off('SIGTERM',stop);unwatchFile(stopFile);driver.close();}
+ }
+}catch(cause){failure=cause instanceof Error?cause.message:String(cause);if(!dry)archive.emit({type:'run_failure',diagnostic:failure});}
+finally{if(!dry){manifest.rawChecksums=archive.finish();manifest.fatalProviderError=control.fatal;manifest.costs=ledger.snapshot(runId);manifest.totalP2Costs=ledger.snapshot();manifest.elapsedMs=Date.now()-started;manifest.status=failure?'failed':caseFailures.length?'measured_with_failures':'measured_pending_gates';write(path.join(folder,'run-manifest.json'),manifest);}}
+if(!dry){write(path.join(folder,'metrics.json'),scoreEvidenceV3(readEvidence(folder,true),[]));const scan=scanSecrets([folder],repository);write(path.join(folder,'secret-scan.json'),scan);if(!scan.passed)throw new Error('Continuation evidence failed secret scan');console.log(JSON.stringify({folder,status:manifest.status,costs:manifest.costs,total:manifest.totalP2Costs,logicalRunFeesUsd:oldFees.totalUsd+manifest.costs.totalUsd,failure}));}
+if(failure)throw new Error(failure);

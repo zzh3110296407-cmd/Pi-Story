@@ -1,0 +1,131 @@
+{
+  "id": "ds11-b01-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "char:orla",
+            "kind": "character",
+            "name": "Orla",
+            "source": "user",
+            "authorQuote": "Orla can decode semaphore, but only in daylight.",
+            "op": "set",
+            "value": {
+              "abilities": "Orla can decode semaphore, but only in daylight."
+            }
+          }
+        ],
+        "reason": "Author adds a future capability for Orla; nothing existing is altered."
+      },
+      "id": "call_00_fQtKN57fnh17eBOl0avd5723"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "char:orla",
+          "kind": "character",
+          "name": "Orla",
+          "source": "user",
+          "authorQuote": "Orla can decode semaphore, but only in daylight.",
+          "op": "set",
+          "value": {
+            "abilities": "Orla can decode semaphore, but only in daylight."
+          }
+        }
+      ],
+      "reason": "Author adds a future capability for Orla; nothing existing is altered."
+    },
+    "id": "call_00_fQtKN57fnh17eBOl0avd5723"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d26358cce594c0d63eedf0bd6ea021d0433abf38e5db8170a51379a0b891e00c",
+    "sessionSha256": "a7657dd14165ab6e16a75e5ef8aa74c218d2a8b2fc5789f3d3e5d956426f1d69",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026718,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026718
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

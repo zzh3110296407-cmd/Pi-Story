@@ -1,0 +1,220 @@
+{
+  "id": "ds14-e02-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 3,
+  "firstMeasuredIndex": 9,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 1, 750 words. Third-person past, centred on Vera. Vera receives the disputed sealed glaze box at the pottery studio and inspects its outer label and straps without opening it. Ash assists precisely; Fin notes the delivery in the public record. Practical actions precise, quiet tone. Close the chapter on Vera noticing a red seam on the seal, deciding not to break it. The glaze box stays intact; nobody is injured."
+      },
+      "id": "call_00_k8RYxvK7cDMPv5qg6fdc5420"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2, 750 words. Vera and Ash compare the box label against the kiln register in the studio. Ash is allowed to disagree and does, plainly. They find the second page of the register is missing, which is why the delivery is disputed. They defer opening the glaze box rather than force it; the box stays intact. Practical, precise actions; quiet tone. Close on them setting the box back in the locked cupboard, undecided but calm."
+      },
+      "id": "call_00_ET_4LCkDzGQUru6pDHf2nJL8983"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, 750 words. Vera reads the handling note, then Fin supplies the duplicate page of the public record. The dispute resolves. They carry out the small public demonstration quietly at the pottery studio with the glaze box still sealed and intact. No injuries. Practical actions precise, third-person past, centred on Vera. Close with the box stored intact and the record reconciled."
+      },
+      "id": "call_00_ET_cUZS5xPQnYjRbVrvQPGF4456"
+    },
+    {
+      "reply": "The three chapters are committed and the goal is reached.\n\n- **Chapter 1 — Arrival:** Vera received the sealed glaze box, checked the straps and outer label, and left the seal unbroken after spotting a red seam. No risks retained.\n- **Chapter 2 — Comparison:** Vera and Ash checked the box label against the kiln register; Ash disagreed with her reading, allowing the missing second page to surface. The box stayed intact. Some risks were retained in the draft and carried forward.\n- **Chapter 3 — The Duplicate:** Fin produced the duplicate page, the delivery dispute was settled, and the small demonstration went ahead with the glaze box still sealed. No risks retained.\n\nAcross all three chapters the glaze box remains intact and no character is physically injured."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 1, 750 words. Third-person past, centred on Vera. Vera receives the disputed sealed glaze box at the pottery studio and inspects its outer label and straps without opening it. Ash assists precisely; Fin notes the delivery in the public record. Practical actions precise, quiet tone. Close the chapter on Vera noticing a red seam on the seal, deciding not to break it. The glaze box stays intact; nobody is injured."
+    },
+    "id": "call_00_k8RYxvK7cDMPv5qg6fdc5420"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 0,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached",
+        "probeError": "GOAL_REACHED"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached",
+        "probeError": "GOAL_REACHED"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Exactly chapters 1, 2 and 3 commit, once each, and no author action is required between them.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached",
+        "probeError": "GOAL_REACHED"
+      }
+    },
+    {
+      "index": 3,
+      "check": "A read-only driver probe of a fourth writing attempt returns GOAL_REACHED without a model call or chapter 4; the showrunner itself does not issue that probe.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached",
+        "probeError": "GOAL_REACHED"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The showrunner reports completion and automatic continuation stops.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached",
+        "probeError": "GOAL_REACHED"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "505f3a0bd922e512e107fb5cb5746c0080ea45b925ab44ddfa590d69ef66068e",
+    "sessionSha256": "d8211ee8121fbcab00c93ab5f32cb8281dc2ef1987030d0f364df304f21cb466",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.08150596799999998,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 15,
+      "totalUsd": 0.08150596799999998
+    },
+    "measuredMainRequests": 4
+  },
+  "scoringVersion": "p3r2-32@1"
+}

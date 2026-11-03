@@ -1,0 +1,97 @@
+{
+  "id": "ds11-d03-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "Before I write chapter 3: who pressed the wax seal on the arriving parcel? I will treat your answer as fixed canon for the rest of the book.",
+        "options": [
+          "Mara pressed it herself when she sealed the portfolio for transport",
+          "A clerk pressed it before delivery, and Mara only verified it on arrival"
+        ]
+      },
+      "id": "call_00_wfKg4mKUZuM0L7MJ1TIJ3788"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "Before I write chapter 3: who pressed the wax seal on the arriving parcel? I will treat your answer as fixed canon for the rest of the book.",
+      "options": [
+        "Mara pressed it herself when she sealed the portfolio for transport",
+        "A clerk pressed it before delivery, and Mara only verified it on arrival"
+      ]
+    },
+    "id": "call_00_wfKg4mKUZuM0L7MJ1TIJ3788"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Ask the author to resolve who pressed the seal before committing to an account. Do not choose an origin, do both, or encode the author's indecision as an in-world fact, mystery, bible setting or outline instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "8a7952b26165e26533c36faee5c940b1ce537ee4e2f725fe72f9a2490f27b73c",
+    "sessionSha256": "c7feee8c31762debf37807cf65d3b6c5c58a3ca6e3ae867391c37dd3fffc39a4",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025499999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025499999999999997
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

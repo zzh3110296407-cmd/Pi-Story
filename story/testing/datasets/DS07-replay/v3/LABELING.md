@@ -1,0 +1,9 @@
+# DS07 v3 回放归类与语义修订
+
+2026-10-29，作者要求按审核建议修正。v2与37对原始请求/响应原字节保留；pairs.json的原始摘要不变。judgments.json增加逐条独立预期：30份缺P1人物键表的子集差异、6份额外type字段、1份空输出的格式问题；消费测试必须对照预期，而非只检查归类枚举合法。
+
+原始021与035的facts[2]将角色推算未来恢复耗时标成recalled_past。此问题在semanticFindings中独立列出，即使021先被type格式拒绝、035先被身份边界拒绝，也不能被遮蔽。其他35份只核对格式/人物边界，不据空findings断言全面语义合格。
+
+corrections.json为两份明确标记的AI修订参考：从事实upsert中移出未来推测，保留在excludedEstimate中，建议识别人物后作为believes/inferred认知；在没有圣经身份映射时不捏造characterId。同时显式清理额外type与P0要求的confirmed空uncertainReason，使修订参考符合P1结构合同。人物键仍未映射，完整领域校验依然拒绝，不能计作模型成功结算。
+
+原始回放统计保持37份，修订参考另计2份；原始请求编号仍是证据权威。作者批准按建议修正，不等同新增37项逐条人工金标已填写。labels/replay-review.json提供可编辑副本来源；最终认可另留记录。

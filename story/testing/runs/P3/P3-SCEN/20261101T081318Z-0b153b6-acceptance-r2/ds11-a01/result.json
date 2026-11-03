@@ -1,0 +1,107 @@
+{
+  "id": "ds11-a01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Oren leads the document check on the disputed delivery while Lena assists and keeps the sample case sealed; Suri fields their questions about the missing register page.",
+            "turn": "Suri supplies a duplicate page of the register. Oren, leading, sets the order of checks and Lena supplies handling facts and corrections; the team agrees to continue checking before the public demonstration, with the sample case still intact and unopened."
+          }
+        ],
+        "reason": "Author asked to change only the unwritten chapter 3 so Oren leads the document check while Lena assists, keeping chapter number and count."
+      },
+      "id": "call_00_WmZ5KdZRVEOJxOzOjCeo0102"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Oren leads the document check on the disputed delivery while Lena assists and keeps the sample case sealed; Suri fields their questions about the missing register page.",
+          "turn": "Suri supplies a duplicate page of the register. Oren, leading, sets the order of checks and Lena supplies handling facts and corrections; the team agrees to continue checking before the public demonstration, with the sample case still intact and unopened."
+        }
+      ],
+      "reason": "Author asked to change only the unwritten chapter 3 so Oren leads the document check while Lena assists, keeping chapter number and count."
+    },
+    "id": "call_00_WmZ5KdZRVEOJxOzOjCeo0102"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Oren leads the document check while Lena assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "27fda7a8e2a3800ccaa0b3b132dfec710c5957f5bd8552a4f38c74f6f49f92a9",
+    "sessionSha256": "945954ebbac23064dc2fa2366d933353f52cca58e9e7fd77583a767a08c95b18",
+    "fee": {
+      "knownUsd": 0.0027342,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0027342
+    },
+    "measuredMainRequests": 2
+  }
+}

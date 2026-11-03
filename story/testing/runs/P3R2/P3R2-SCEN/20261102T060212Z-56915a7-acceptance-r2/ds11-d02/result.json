@@ -1,0 +1,99 @@
+{
+  "id": "ds11-d02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "The ending will change depending on who receives credit for resolving the disputed delivery. Who should get it: Pema or Cal?",
+        "options": [
+          "Pema receives the credit",
+          "Cal receives the credit",
+          "They share the credit jointly"
+        ]
+      },
+      "id": "call_00_49cdgFnplJtQKrpLoUNV8577"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "The ending will change depending on who receives credit for resolving the disputed delivery. Who should get it: Pema or Cal?",
+      "options": [
+        "Pema receives the credit",
+        "Cal receives the credit",
+        "They share the credit jointly"
+      ]
+    },
+    "id": "call_00_49cdgFnplJtQKrpLoUNV8577"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "2429df7e5515aa8e7f68725a05c27dd8103ac44e4c9c564fac85b056fec109ba",
+    "sessionSha256": "517f15fe9e4528b026641c1f38d33a5491ebfa00ecb4793ab4bb7a064b8f6038",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026357999999999998,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026357999999999998
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

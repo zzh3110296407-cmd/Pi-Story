@@ -1,0 +1,2360 @@
+{
+  "schema": "story/p3-j3-e2e-items@1",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build is exposed; no independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-E2E@1",
+    "promptPath": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/protocol.md",
+    "promptSha256": "63e3c2a309177611af56e13667a61c65762fdf45cc4f47d191655fde70baafb9",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "items": [
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e04:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "重写并提交的第2章正文第17–29行中，Jo主动找出副本页，指出蓝色方块，并对Aster解释其隔夜留置／重检含义及其不代表检查已完成；不是标题、摘要或计划中的提及。第1章保持原提交字节。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/raw/session.jsonl.gz",
+          "sha256": "01a816a9c29215ba5f5e2121df809a8f95baf5bcc045a1e373283557cab2a5f6"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/raw/evidence.jsonl.gz",
+          "sha256": "9b88ea99a0a7a0887213d8e97bd505f75e8ebbb9fa452f1bbe6788e165ee8290"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/result.json",
+          "sha256": "1785d38495c8a867f3029d520b95a3fae7595953f260b174a27945074742a9ba"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e04.json",
+          "sha256": "ff5f0227dc2e83748ab0cb7b59550d12906b4be7dd04bd8409e24af35da37095"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d03",
+          "textSha256": "5d021bd8662a5e2eed4aabb51159dd3b7328a263f6eb24f3cbe73e1c7b3e7a1e",
+          "sessionLine1": 26,
+          "entryId": "8a0222db",
+          "toolCallId": "call_00_P9Vyw0zsotRz51GW28fA2939",
+          "lines1": [
+            17,
+            21,
+            23,
+            25,
+            27,
+            29
+          ]
+        },
+        "priorChaptersUnchanged": true
+      },
+      "caseId": "ds14-e04",
+      "check": "Chapter 2 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged.",
+      "trigger": {
+        "type": "steer",
+        "text": "In the rewritten second chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+        "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d03",
+          "draftDigest": "5d021bd8662a5e2e",
+          "textSha256": "5d021bd8662a5e2eed4aabb51159dd3b7328a263f6eb24f3cbe73e1c7b3e7a1e",
+          "sessionLine1": 26,
+          "entryId": "8a0222db",
+          "toolCallId": "call_00_P9Vyw0zsotRz51GW28fA2939",
+          "text": "The delivery label was a single sheet, its ink gone brown at the folds. Aster laid it at the top of the table, then weighted the corners with two small glass blocks rather than holding it flat with her hand. Beside it she set the canopy station's working papers in their folder, squared the edges, and opened the folder at the current week.\n\n\"Read the label to me,\" she said. \"Slowly. I want to hear whether I read the same thing you do.\"\n\nJo read it in a low, even voice: the consignment number, the date of dispatch, the destination code, the number of items — one — and the seal code stamped at the foot. Aster followed the line with the tip of her pencil but did not write on either sheet. Where the label said something, she checked it against the working papers. Where the working papers said something, she checked it against the label. Twice she found a discrepancy only in her own reading and corrected herself aloud, so that Jo would not have to take her word for it.\n\nThe case stayed where it had been since the morning, closed, at the end of the table farthest from the lamp. Inside, the seed capsule sat untouched in its cradle of padded card. Neither of them moved it, and Aster had already written on the sheet that handling was not required for the checks of the day.\n\n\"The public register,\" Aster said. \"Kei's file. It should be two pages in this week's copy.\"\n\nJo found one. Aster turned it over, then held it up to the window, then laid it down again. There was no second page, and no torn edge to show there ever had been one — only the register's own line at the foot instructing the reader to turn over.\n\n\"Nothing on this page carries the seal code from the label,\" Aster said. She read the column of codes twice. \"Not the same code, not a near one. So either the entry was never made, or it is on the page we do not have.\"\n\nJo was already at the working file, going through it without being asked. Aster let her. Jo's way was to pull everything out first and sort afterwards, and it was faster than being careful in Aster's order. She had just pulled the delivery label across the table to compare the fold marks when she stopped.\n\n\"Here,\" she said. \"This is a duplicate of the register's second page — the one that should follow the page we have. Same stock, same printing. Someone filed it with our working papers by mistake.\"\n\n\"Or on purpose,\" Aster said.\n\n\"Or on purpose.\" Jo smoothed it flat. \"And look at the corner. There's a blue square.\"\n\nAster came around the table and looked. In the upper right, small as a thumbnail, printed in flat blue rather than the register's black: a square, with the seal code from the label printed inside it.\n\n\"That's the depot's overnight mark,\" Jo said. \"It's not a record of receipt. It means the consignment was held at the depot overnight before it went out, and any consignment held overnight has to be rechecked at the canopy before the demonstration. The blue square is how the depot tells the station to expect that. It matters because if the capsule was rechecked there, there should be a second signature against that code. And there isn't one on this page.\"\n\nAster leaned closer. \"The square is printed, though. Not stamped.\"\n\n\"Printed with everything else,\" Jo said. \"That's why it matters. Someone set the mark before the run, not after it. So the mark is a plan, not proof the check was done.\"\n\nAster considered this, then nodded once. \"That is the strongest thing on the table,\" she said. \"And the weakest thing is that we still cannot see Kei's copy of the second page.\"\n\nJo pushed the papers together with the flat of her hand. \"Then open it. Break the seal, take the capsule out, and settle it tonight. Nothing on that case will tell us more than the thing inside it, and the demonstration is tomorrow.\"\n\n\"No,\" Aster said quietly. She sat down and drew a fresh sheet towards her. \"If we break the seal, we lose the one fact nobody can dispute — that it arrived as it was sent. We keep that. What we can still check: the case's outer tape for a depot mark that matches this square; the cradle card for a date; Kei's office copy of the register for a second page; and the label's own fold marks against this duplicate. Any of those may give us the signature. None of them require the capsule to leave its case.\"\n\nJo did not look convinced, but she pulled her stool up to the table, and read the numbers aloud while Aster wrote them down.\n\nThey laid the two sheets side by side in the middle of the cleared table — the label, and the blue square in the corner of the duplicate page — and left them there, the lamp on them, no one touching them.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e05:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "第3章最终提交正文虽有副本页和Jo发言，但全章没有蓝色方块，也没有Jo发现并向Aster解释该标记的场景；第19–27行实际写的是核对序列、日期、搬运次数及Jo质疑副本的证明力。第1章未变、第2章未提前纳入排队要求，只满足了该复合检查的部分条件。排队作者消息在第3章提交之后才成为原生作者条目；这是作者控制链路的可观察失败，不据此指控写手忽略了其从未收到的要求，也不是缺测或不适用。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/session.jsonl.gz",
+          "sha256": "bb1508c7dc1123bf5c7b7c38e6807417159764934cd7cbb6c6591c71b2a76dbc"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/evidence.jsonl.gz",
+          "sha256": "56427efefd0441892a77c445fe98ac7bdb5fefc12c8af937047955c3b09e15df"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/result.json",
+          "sha256": "f92dfaf4d8b5d3281d5a3213092dd8be69a9124631936cdd5c920bd42f526ce4"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e05.json",
+          "sha256": "c557223793c0dd957222b08bf0fc5aa951c72707b97a89fbbcceb1d2df7eafb2"
+        },
+        "committedProse": {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "textSha256": "eea457ae90924a1bf4b1aedb0f0cd6038d522eefcda2799104c462854b81a777",
+          "sessionLine1": 26,
+          "entryId": "a25ed520",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974",
+          "lines1": [
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            39,
+            41
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "firstChapter3WriterInput": {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974"
+        },
+        "authorActivatedAfterChapter3Commit": {
+          "authorSessionLine1": 29,
+          "authorEntryId": "29831c45",
+          "chapter3CommitSessionLine1": 26,
+          "chapter3CommitEntryId": "a25ed520"
+        }
+      },
+      "caseId": "ds14-e05",
+      "check": "Chapter 3 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged. Chapter 2 must not preemptively incorporate the queued request.",
+      "trigger": {
+        "type": "followUp",
+        "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+        "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "draftDigest": "26e3eb6811920be4",
+          "textSha256": "26e3eb6811920be44133f3bedc05c8927c1cb6a20bb90505d7118fbc05c19827",
+          "sessionLine1": 23,
+          "entryId": "be220316",
+          "toolCallId": "call_00_SfARxvAKmQlCDbAGoGhl8791",
+          "text": "The canopy station opened at seven, and Aster had the worktable cleared by ten past. She laid the delivery papers out in three shallow stacks: the arrival label with its string still knotted through the eyelet, the delivery note folded on its creases, and the canopy register, a cloth-bound book that had to be held open with a weighted brass bar. Jo took the far side of the table without being asked. At the public desk near the door, Kei set out the demonstration ledger and left it open, the certification line still blank.\n\nThey began with dates. Aster read the arrival label aloud, one line at a time, and Jo followed the delivery note with a fingertip. The dispatch date matched. The receipt date matched, to the day. Then the serials, which were longer and less forgiving. Aster read the label's serial and Jo checked it against the register's entry; then they reversed, Jo reading and Aster checking, so that neither of them was only agreeing with herself.\n\nThe disagreement came at the handling marks. The label carried a stamped mark near the lower edge, a small barred box, and beside it the register noted *two handlings, both dry*. Jo leaned in.\n\n\"That isn't a two,\" she said. \"The stamp has a crossbar. It's a seven.\"\n\nAster looked. The mark sat partly over the paper's grain, and the ink had feathered at one corner. She had read it as a two on the first pass and had not questioned it since. \"It could be a two with a bad strike.\"\n\n\"It could be. But you're reading it as a two because that's what the register says, not because the stamp says it.\"\n\nThat was a fair objection, and Aster did not answer it with an opinion. She fetched the straightedge from the tray and laid it along the stamp's vertical stroke, then along the crossbar, sighting down the brass to the ruled margin of the register page. The crossbar was real. It ran flat and true, the same weight as the register's own ruling, not a blot. She set the straightedge against the register entry next and found the ink there thinner, the stroke stopping short where a two would have curved back.\n\n\"Seven,\" Aster said. \"You're right. It's a seven, and the register wrote two.\"\n\nJo did not look pleased so much as relieved. Aster amended the working sheet in pencil, not ink, and wrote the correction in the margin where it could be challenged later.\n\nThen the page. The register was paginated in a clerk's steady hand, and the entry they were checking ended at the foot of page eleven with an instruction to continue. Aster turned the leaf. Page twelve was present. Page thirteen was not. A stub remained at the gutter, a finger's width of paper, cut clean.\n\nShe did not take that on trust either. She laid the straightedge along the gutter and checked the ruling, which stopped at the stub and resumed on the next leaf with no gap in the counting; she checked the ink offset opposite, where the missing page's writing had pressed faintly into its neighbour, a smear of reversed letters with no reading in them. The numbering ran eleven, twelve, fourteen. The hand never skipped.\n\n\"Absent,\" Aster said. \"Not misfiled in the book. Gone.\"\n\nKei came over at that, the demonstration ledger under one arm. \"What do I enter for the public record?\"\n\n\"Enter that the papers were compared. Leave the certification line open.\" Aster wiped the straightedge and set it back in the tray. \"We can't settle it from the capsule, either. It stays sealed until someone authorized says otherwise. Opening it to win an argument isn't a reason.\"\n\nKei nodded and went back to the desk, and the ledger stayed open on the table by the door with its line still empty.\n\nAster squared the stacks and put the brass bar aside. She wrote the day's finding in the work log — label states seven, register states two, page thirteen of the register absent — and then, beneath it, the decision.\n\n\"The delivery cannot be certified yet,\" she said, and Jo wrote it down as spoken.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        },
+        {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "draftDigest": "eea457ae90924a1b",
+          "textSha256": "eea457ae90924a1bf4b1aedb0f0cd6038d522eefcda2799104c462854b81a777",
+          "sessionLine1": 26,
+          "entryId": "a25ed520",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974",
+          "text": "Chapter 3\n\nAster read the handling note before she touched anything else. It had been folded into the second crease of the delivery note, a half-sheet in the carrier's hurried hand, and it listed the handlings at the transfer bay: five, all dry, all between the noon and evening watches. Five at the bay, two at the station. Seven.\n\nShe set it under the corner of the tray so it could not slide, and looked again at the register entry — *two handlings, both dry*. Not a contradiction, then. A difference of scope. The register counted what happened under the canopy. The label counted what had happened to the parcel.\n\nBut page thirteen was not there to say so.\n\n\"Kei.\" Aster drew on her gloves, though there was nothing yet to lift. \"Does the public-records set hold duplicates of the register leaves?\"\n\n\"It holds the pressed copies. They come with the book and stay at the desk.\"\n\n\"Then bring me page thirteen.\"\n\nKei went. Jo came round the table with the straightedge already in her hand, and Aster set the tray square between them, the brass bar laid crosswise so the book could not close on itself.\n\nThe duplicate came back in a paper folder, thin as an onion skin, the reverse of the original's ink held in grey. Aster slid it out onto the tray with two fingers and let it settle flat before she touched it.\n\nShe read the serial first, aloud, and Jo read it back from the arrival label. Then the other way, Jo reading and Aster checking. The duplicate carried the same serial, character for character, down to the check letter at the end. The dispatch and receipt dates matched the label to the day. Aster laid the straightedge along the duplicate's ruling where the page had been ruled in the clerk's steady hand, then along page twelve, and the two lines of ruling agreed.\n\nThe handling entry sat at the foot: *handlings one and two, station, all dry.*\n\n\"Seven,\" Aster said. \"The register stopped at two because the station only wrote what the station did. The bay's five never entered here — they came in on the carrier's handling note.\" She touched the duplicate's margin, not the ink.\n\n\"It's a copy,\" Jo said. \"It proves what the register said. It doesn't prove what happened to the parcel.\"\n\nAster set the pencil down and did not answer at once, because the objection was fair and did not need softening. She drew the work log over and wrote beneath the previous day's finding, in ink now: *Duplicate of page thirteen consulted at the public desk. Serial and dates agree with the arrival label. Handling count reconciled: seven, five of them at the bay. Jo's objection entered — a copy proves the record, not the handling.* She read it back, added the date, and initialled it.\n\n\"That stays in the log,\" she said. \"Whoever comes after us can weigh it.\"\n\nKei entered the same line in the public ledger and left the certification blank until the demonstration was done.\n\nIt was a small one. Three visitors under the canopy, standing back from the table because Aster asked them to. The seed capsule stayed in its cradle the whole while, the seal wire unbroken, the wax unmarked, the lid of the cradle lifting only far enough for the number on the capsule's shoulder to be read aloud and read again. Jo held the tray. Aster set the straightedge against the light to show the seal's shadow, and the visitors leaned in and saw it whole. Nobody asked to open it. Nobody was hurt. The canopy ticked overhead in the heat and the visitors wrote their names in the book and went away again.\n\nAfterwards Aster wiped the straightedge, coiled the seal wire's slack back along the cradle's channel, and set the cradle in its case. The case went into the store, and the store was locked, and the key went onto its hook.\n\nKei wrote the certification at last: *received sealed, reconciled, stored.* The line came out even and did not need a second pass.\n\nAster closed the register, closed the ledger, and stacked the papers in their three stacks with the duplicate on top, where it could be found.\n\nThe delivery was reconciled. The capsule was stored. The records were closed.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [
+        {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974",
+          "input": {
+            "task": "draft",
+            "chapter": 3,
+            "targetWords": 750,
+            "intent": {
+              "chapter": 3,
+              "mustKeep": [
+                "No character may be physically injured.",
+                "The seed capsule must remain intact.",
+                "Keep practical actions precise."
+              ],
+              "mustAvoid": [],
+              "beats": [
+                "Aster reads the handling note and obtains the duplicate page from Kei.",
+                "They finish the small demonstration and store the intact seed capsule; the delivery dispute ends."
+              ],
+              "hookOps": [],
+              "cast": [
+                "char:aster",
+                "char:jo",
+                "char:kei"
+              ],
+              "brief": "Chapter 3, final. Aster reads the handling note and asks Kei for the duplicate copy of the missing register page; Kei produces it from the public-records set so the record stays open and accountable. Compare again: the duplicate resolves the serial and date discrepancy without opening the seed capsule. Jo's disagreement is acknowledged in Aster's written note. Practical, precise handling: gloves, tray, straightedge, log entries. The small demonstration proceeds quietly under the canopy with the capsule sealed and intact in its cradle. No injuries. End on a definite stopping beat: delivery reconciled, capsule stored, records closed.",
+              "schema": "story/intent@1",
+              "rev": 1
+            },
+            "bible": [
+              {
+                "kind": "character",
+                "key": "char:aster",
+                "op": "set",
+                "source": "user",
+                "name": "Aster",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Aster is a practical conservator."
+                },
+                "card": {
+                  "identity": "Aster is a practical conservator."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:jo",
+                "op": "set",
+                "source": "user",
+                "name": "Jo",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Jo is an assistant who is allowed to disagree."
+                },
+                "card": {
+                  "identity": "Jo is an assistant who is allowed to disagree."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:kei",
+                "op": "set",
+                "source": "user",
+                "name": "Kei",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Kei keeps the public records."
+                },
+                "card": {
+                  "identity": "Kei keeps the public records."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "place",
+                "key": "place:canopy_station",
+                "op": "set",
+                "source": "user",
+                "name": "canopy station",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The story takes place at the canopy station."
+                },
+                "value": {
+                  "description": "The story takes place at the canopy station."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "rule",
+                "key": "rule:care",
+                "op": "set",
+                "source": "user",
+                "name": "Careful handling",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The seed capsule must remain intact."
+                },
+                "value": {
+                  "description": "The seed capsule must remain intact.",
+                  "invariants": [
+                    "The seed capsule must remain intact."
+                  ]
+                },
+                "effectiveFromChapter": 1
+              }
+            ],
+            "state": {
+              "asOfChapter": 2,
+              "facts": [
+                {
+                  "id": "F-1",
+                  "subject": "char:aster",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0001"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-2",
+                  "subject": "char:jo",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0003"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-3",
+                  "subject": "char:kei",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0004"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-4",
+                  "subject": "item:arrival_label",
+                  "predicate": "free_predicate",
+                  "object": "The arrival label and delivery note agree on dispatch and receipt dates to the day.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0006",
+                    "c02.s0007",
+                    "c02.s0008"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-5",
+                  "subject": "item:arrival_label",
+                  "predicate": "free_predicate",
+                  "object": "The arrival label's stamped handling mark near the lower edge is a seven; the canopy register records two handlings.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0012",
+                    "c02.s0025",
+                    "c02.s0026",
+                    "c02.s0027",
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-6",
+                  "subject": "item:canopy_register",
+                  "predicate": "free_predicate",
+                  "object": "Page thirteen of the canopy register is absent, cut clean at the gutter; the page numbering runs eleven, twelve, fourteen.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0037",
+                    "c02.s0038",
+                    "c02.s0041"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-7",
+                  "subject": "item:demonstration_ledger",
+                  "predicate": "free_predicate",
+                  "object": "The demonstration ledger's certification line is blank and remains open.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0004",
+                    "c02.s0054"
+                  ],
+                  "sourceChapter": 2
+                }
+              ],
+              "claims": [
+                {
+                  "id": "S-1",
+                  "speaker": "char:jo",
+                  "content": "The label's stamped handling mark is a seven, not a two; it has a crossbar.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0014",
+                    "c02.s0015",
+                    "c02.s0016"
+                  ]
+                },
+                {
+                  "id": "S-2",
+                  "speaker": "char:aster",
+                  "content": "The mark could be a two with a bad strike.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0020"
+                  ]
+                },
+                {
+                  "id": "S-3",
+                  "speaker": "char:aster",
+                  "content": "The label's mark is a seven, and the register records two.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ]
+                },
+                {
+                  "id": "S-4",
+                  "speaker": "char:aster",
+                  "content": "Page thirteen of the register is absent, not merely misfiled.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0043",
+                    "c02.s0044",
+                    "c02.s0045"
+                  ]
+                },
+                {
+                  "id": "S-5",
+                  "speaker": "char:aster",
+                  "content": "The capsule must stay sealed until an authorized person permits otherwise; opening it to win an argument is not a reason.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0051",
+                    "c02.s0052",
+                    "c02.s0053"
+                  ]
+                },
+                {
+                  "id": "S-6",
+                  "speaker": "char:aster",
+                  "content": "The delivery cannot be certified yet.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0057"
+                  ]
+                }
+              ],
+              "cognitions": [
+                {
+                  "id": "K-1",
+                  "characterId": "char:aster",
+                  "kind": "knows",
+                  "content": "The arrival label's handling mark is a seven, while the register records two.",
+                  "about": "F-5",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0025",
+                    "c02.s0026",
+                    "c02.s0027",
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-2",
+                  "characterId": "char:jo",
+                  "kind": "knows",
+                  "content": "The arrival label's handling mark is a seven, not a two.",
+                  "about": "F-5",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0014",
+                    "c02.s0015",
+                    "c02.s0016"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-3",
+                  "characterId": "char:aster",
+                  "kind": "knows",
+                  "content": "Page thirteen of the canopy register is absent, cut clean at the gutter.",
+                  "about": "F-6",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0037",
+                    "c02.s0038",
+                    "c02.s0043",
+                    "c02.s0044",
+                    "c02.s0045"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                }
+              ],
+              "relations": [],
+              "hooks": [
+                {
+                  "id": "H-1",
+                  "type": "mystery",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "Who cut page thirteen out of the canopy register, and what did it record?",
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-2",
+                  "type": "mystery",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "Why does the arrival label's handling mark read seven while the canopy register records two?",
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-3",
+                  "type": "question",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "What will an authorized inspection of the sealed capsule reveal, and can the delivery be certified?",
+                  "dependsOn": []
+                }
+              ]
+            },
+            "authorSources": [
+              {
+                "messageId": "3a02c967",
+                "sourceText": "Write a quiet English story about checking a disputed delivery before a public demonstration. Aster is a practical conservator. Jo is an assistant who is allowed to disagree. Kei keeps the public records. The story takes place at the canopy station. The seed capsule must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Aster. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed."
+              }
+            ],
+            "ledger": [
+              {
+                "id": "L-1",
+                "kind": "global",
+                "text": "No character may be physically injured.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "No character may be physically injured."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-2",
+                "kind": "story",
+                "text": "The seed capsule must remain intact.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "The seed capsule must remain intact."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-3",
+                "kind": "global",
+                "text": "Keep practical actions precise.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "Keep practical actions precise."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              }
+            ],
+            "authorIntent": "",
+            "currentFocus": "",
+            "wordRange": {
+              "min": 638,
+              "max": 863
+            },
+            "narration": {
+              "viewpoint": "Third-person limited through Aster",
+              "tone": "Quiet, practical and humane",
+              "format": "English prose"
+            },
+            "committed": [
+              {
+                "chapter": 1,
+                "text": "Aster received the sealed seed capsule and checked its outer label. The canopy station was open, though there were no visitors at the table. Aster cleared a space before setting anything down. Jo moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Aster turned the sheet towards the window rather than writing over it. Jo read the number aloud. They compared their readings, found that they agreed, and entered it only once. The seed capsule remained intact on the cleared table throughout the check.\n\nAster made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Jo asked whether the uncertainty meant they should abandon the demonstration. Aster said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nAster noticed a red seam but left it unopened. They put the tools back in the tray. Aster recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+                "summary": {
+                  "chapter": 1,
+                  "title": "Chapter 1",
+                  "characters": [],
+                  "events": [
+                    "Aster received the sealed seed capsule and checked its outer label."
+                  ],
+                  "mood": "quiet",
+                  "stateChanges": [],
+                  "hookActivity": []
+                }
+              },
+              {
+                "chapter": 2,
+                "text": "The canopy station opened at seven, and Aster had the worktable cleared by ten past. She laid the delivery papers out in three shallow stacks: the arrival label with its string still knotted through the eyelet, the delivery note folded on its creases, and the canopy register, a cloth-bound book that had to be held open with a weighted brass bar. Jo took the far side of the table without being asked. At the public desk near the door, Kei set out the demonstration ledger and left it open, the certification line still blank.\n\nThey began with dates. Aster read the arrival label aloud, one line at a time, and Jo followed the delivery note with a fingertip. The dispatch date matched. The receipt date matched, to the day. Then the serials, which were longer and less forgiving. Aster read the label's serial and Jo checked it against the register's entry; then they reversed, Jo reading and Aster checking, so that neither of them was only agreeing with herself.\n\nThe disagreement came at the handling marks. The label carried a stamped mark near the lower edge, a small barred box, and beside it the register noted *two handlings, both dry*. Jo leaned in.\n\n\"That isn't a two,\" she said. \"The stamp has a crossbar. It's a seven.\"\n\nAster looked. The mark sat partly over the paper's grain, and the ink had feathered at one corner. She had read it as a two on the first pass and had not questioned it since. \"It could be a two with a bad strike.\"\n\n\"It could be. But you're reading it as a two because that's what the register says, not because the stamp says it.\"\n\nThat was a fair objection, and Aster did not answer it with an opinion. She fetched the straightedge from the tray and laid it along the stamp's vertical stroke, then along the crossbar, sighting down the brass to the ruled margin of the register page. The crossbar was real. It ran flat and true, the same weight as the register's own ruling, not a blot. She set the straightedge against the register entry next and found the ink there thinner, the stroke stopping short where a two would have curved back.\n\n\"Seven,\" Aster said. \"You're right. It's a seven, and the register wrote two.\"\n\nJo did not look pleased so much as relieved. Aster amended the working sheet in pencil, not ink, and wrote the correction in the margin where it could be challenged later.\n\nThen the page. The register was paginated in a clerk's steady hand, and the entry they were checking ended at the foot of page eleven with an instruction to continue. Aster turned the leaf. Page twelve was present. Page thirteen was not. A stub remained at the gutter, a finger's width of paper, cut clean.\n\nShe did not take that on trust either. She laid the straightedge along the gutter and checked the ruling, which stopped at the stub and resumed on the next leaf with no gap in the counting; she checked the ink offset opposite, where the missing page's writing had pressed faintly into its neighbour, a smear of reversed letters with no reading in them. The numbering ran eleven, twelve, fourteen. The hand never skipped.\n\n\"Absent,\" Aster said. \"Not misfiled in the book. Gone.\"\n\nKei came over at that, the demonstration ledger under one arm. \"What do I enter for the public record?\"\n\n\"Enter that the papers were compared. Leave the certification line open.\" Aster wiped the straightedge and set it back in the tray. \"We can't settle it from the capsule, either. It stays sealed until someone authorized says otherwise. Opening it to win an argument isn't a reason.\"\n\nKei nodded and went back to the desk, and the ledger stayed open on the table by the door with its line still empty.\n\nAster squared the stacks and put the brass bar aside. She wrote the day's finding in the work log — label states seven, register states two, page thirteen of the register absent — and then, beneath it, the decision.\n\n\"The delivery cannot be certified yet,\" she said, and Jo wrote it down as spoken.",
+                "summary": {
+                  "chapter": 2,
+                  "title": "Page Thirteen",
+                  "characters": [
+                    "char:aster",
+                    "char:jo",
+                    "char:kei"
+                  ],
+                  "events": [
+                    "Aster and Jo compare the arrival label, delivery note, and canopy register at the canopy station.",
+                    "They find the label's handling mark is a seven while the register records two.",
+                    "Page thirteen is missing from the register, cut clean at the gutter.",
+                    "Kei leaves the public certification line blank, and Aster records that the delivery cannot be certified yet."
+                  ],
+                  "mood": "methodical",
+                  "stateChanges": [
+                    "F-1",
+                    "F-2",
+                    "F-3",
+                    "F-4",
+                    "F-5",
+                    "F-6",
+                    "F-7",
+                    "K-1",
+                    "K-2",
+                    "K-3"
+                  ],
+                  "hookActivity": [
+                    "upsert:H-1",
+                    "upsert:H-2",
+                    "upsert:H-3"
+                  ]
+                }
+              }
+            ],
+            "brief": "Chapter 3, final. Aster reads the handling note and asks Kei for the duplicate copy of the missing register page; Kei produces it from the public-records set so the record stays open and accountable. Compare again: the duplicate resolves the serial and date discrepancy without opening the seed capsule. Jo's disagreement is acknowledged in Aster's written note. Practical, precise handling: gloves, tray, straightedge, log entries. The small demonstration proceeds quietly under the canopy with the capsule sealed and intact in its cradle. No injuries. End on a definite stopping beat: delivery reconciled, capsule stored, records closed.",
+            "format": {
+              "bodyThenSeparator": "<<<写手说明>>>",
+              "afterSeparator": "writer_note"
+            }
+          }
+        }
+      ],
+      "nativeDetails": [
+        {
+          "sessionLine1": 29,
+          "entryId": "29831c45",
+          "type": "message",
+          "message": {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1."
+              }
+            ],
+            "timestamp": 1793522394553
+          }
+        }
+      ],
+      "timingEvents": [
+        {
+          "evidenceLine1": 86,
+          "type": "driver_input",
+          "input": {
+            "type": "continue",
+            "text": "Continue to the current target using the existing outline."
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 109,
+          "type": "injection_hold",
+          "at": "write_next_chapter:chapter=2:draft_request:attempt=1",
+          "chapter": 2,
+          "input": {
+            "task": "draft",
+            "chapter": 2,
+            "targetWords": 750,
+            "intent": {
+              "chapter": 2,
+              "mustKeep": [
+                "No character may be physically injured.",
+                "The seed capsule must remain intact.",
+                "Keep practical actions precise."
+              ],
+              "mustAvoid": [],
+              "beats": [
+                "Aster and Jo compare the label with the canopy register.",
+                "They establish that the second page is absent and defer opening the seed capsule."
+              ],
+              "hookOps": [],
+              "cast": [
+                "char:aster",
+                "char:jo",
+                "char:kei"
+              ],
+              "brief": "Chapter 2. Quiet comparison of the arrival label against the canopy register. Aster and Jo lay the delivery papers on the worktable, check dates, serials and handling marks line by line. Jo is permitted to disagree; she argues for a reading Aster initially rejects, and Aster tests it with a straightedge and the register's own ink and ruling rather than by opinion. They establish that the second page of the register is absent, and that the capsule is still sealed and must not be opened to settle the question. Kei is present briefly or nearby, keeping the public record open for the demonstration. Keep practical actions exact, no injuries, capsule stays intact. End on the definite beat: the missing page is confirmed absent, and Aster decides the delivery cannot be certified yet.",
+              "schema": "story/intent@1",
+              "rev": 1
+            },
+            "bible": [
+              {
+                "kind": "character",
+                "key": "char:aster",
+                "op": "set",
+                "source": "user",
+                "name": "Aster",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Aster is a practical conservator."
+                },
+                "card": {
+                  "identity": "Aster is a practical conservator."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:jo",
+                "op": "set",
+                "source": "user",
+                "name": "Jo",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Jo is an assistant who is allowed to disagree."
+                },
+                "card": {
+                  "identity": "Jo is an assistant who is allowed to disagree."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:kei",
+                "op": "set",
+                "source": "user",
+                "name": "Kei",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Kei keeps the public records."
+                },
+                "card": {
+                  "identity": "Kei keeps the public records."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "place",
+                "key": "place:canopy_station",
+                "op": "set",
+                "source": "user",
+                "name": "canopy station",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The story takes place at the canopy station."
+                },
+                "value": {
+                  "description": "The story takes place at the canopy station."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "rule",
+                "key": "rule:care",
+                "op": "set",
+                "source": "user",
+                "name": "Careful handling",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The seed capsule must remain intact."
+                },
+                "value": {
+                  "description": "The seed capsule must remain intact.",
+                  "invariants": [
+                    "The seed capsule must remain intact."
+                  ]
+                },
+                "effectiveFromChapter": 1
+              }
+            ],
+            "state": {
+              "asOfChapter": 1,
+              "facts": [],
+              "claims": [],
+              "cognitions": [],
+              "relations": [],
+              "hooks": []
+            },
+            "authorSources": [
+              {
+                "messageId": "3a02c967",
+                "sourceText": "Write a quiet English story about checking a disputed delivery before a public demonstration. Aster is a practical conservator. Jo is an assistant who is allowed to disagree. Kei keeps the public records. The story takes place at the canopy station. The seed capsule must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Aster. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed."
+              }
+            ],
+            "ledger": [
+              {
+                "id": "L-1",
+                "kind": "global",
+                "text": "No character may be physically injured.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "No character may be physically injured."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-2",
+                "kind": "story",
+                "text": "The seed capsule must remain intact.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "The seed capsule must remain intact."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-3",
+                "kind": "global",
+                "text": "Keep practical actions precise.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "Keep practical actions precise."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              }
+            ],
+            "authorIntent": "",
+            "currentFocus": "",
+            "wordRange": {
+              "min": 638,
+              "max": 863
+            },
+            "narration": {
+              "viewpoint": "Third-person limited through Aster",
+              "tone": "Quiet, practical and humane",
+              "format": "English prose"
+            },
+            "committed": [
+              {
+                "chapter": 1,
+                "text": "Aster received the sealed seed capsule and checked its outer label. The canopy station was open, though there were no visitors at the table. Aster cleared a space before setting anything down. Jo moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Aster turned the sheet towards the window rather than writing over it. Jo read the number aloud. They compared their readings, found that they agreed, and entered it only once. The seed capsule remained intact on the cleared table throughout the check.\n\nAster made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Jo asked whether the uncertainty meant they should abandon the demonstration. Aster said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nAster noticed a red seam but left it unopened. They put the tools back in the tray. Aster recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+                "summary": {
+                  "chapter": 1,
+                  "title": "Chapter 1",
+                  "characters": [],
+                  "events": [
+                    "Aster received the sealed seed capsule and checked its outer label."
+                  ],
+                  "mood": "quiet",
+                  "stateChanges": [],
+                  "hookActivity": []
+                }
+              }
+            ],
+            "brief": "Chapter 2. Quiet comparison of the arrival label against the canopy register. Aster and Jo lay the delivery papers on the worktable, check dates, serials and handling marks line by line. Jo is permitted to disagree; she argues for a reading Aster initially rejects, and Aster tests it with a straightedge and the register's own ink and ruling rather than by opinion. They establish that the second page of the register is absent, and that the capsule is still sealed and must not be opened to settle the question. Kei is present briefly or nearby, keeping the public record open for the demonstration. Keep practical actions exact, no injuries, capsule stays intact. End on the definite beat: the missing page is confirmed absent, and Aster decides the delivery cannot be certified yet.",
+            "format": {
+              "bodyThenSeparator": "<<<写手说明>>>",
+              "afterSeparator": "writer_note"
+            }
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 110,
+          "type": "driver_input",
+          "input": {
+            "type": "followUp",
+            "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+            "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 112,
+          "type": "injection_release",
+          "at": "write_next_chapter:chapter=2:draft_request:attempt=1",
+          "sequence": 0,
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        }
+      ]
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e06:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "刷新依据后首先提交的仍是第2章。正文第7–11行Jo扶稳托盘，第17–33行Aster让Jo独立复读并记录其异议而非压过她，第49–55行把共同记录视为更好并请Jo再读数字，实际体现接受实务帮助的作者意图。旧依据的在途稿未充当本次正文证据。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/raw/session.jsonl.gz",
+          "sha256": "662e6ef804d7652f03ce6af8d97f8d7a32be57962884970de44c64dd8639d418"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/raw/evidence.jsonl.gz",
+          "sha256": "d00a67596151b570935e5dbf6a947e6245b4c52ab7e35884364d6d0e3054d498"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/result.json",
+          "sha256": "85ac0d811ea463533d840ae8ae8523b56493cb5b3e603f7bf1dd9202bb9e8cea"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e06.json",
+          "sha256": "e40a5b975b9589bd4cfadb0ddc9693f7582ab530fb97f1be3f4948cff2036d72"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "bbd7cb58acfa5fe76759477ec7e013137e17c657cb6b371335664adbff23bddc",
+          "sessionLine1": 29,
+          "entryId": "8d8591f9",
+          "toolCallId": "call_00_4l80y6SbSIcu6PN16GmT4008",
+          "lines1": [
+            7,
+            11,
+            17,
+            21,
+            23,
+            31,
+            33,
+            49,
+            53,
+            55
+          ]
+        },
+        "priorChaptersUnchanged": true
+      },
+      "caseId": "ds14-e06",
+      "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "/intent Explore Aster accepting practical help instead of silently doing everything alone.",
+        "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "draftDigest": "bbd7cb58acfa5fe7",
+          "textSha256": "bbd7cb58acfa5fe76759477ec7e013137e17c657cb6b371335664adbff23bddc",
+          "sessionLine1": 29,
+          "entryId": "8d8591f9",
+          "toolCallId": "call_00_4l80y6SbSIcu6PN16GmT4008",
+          "text": "The workroom at the canopy station held the smell of cool metal and paper. Aster unlocked the cabinet at seven and laid a felt mat on the long table before anything else came out of storage.\n\nKei arrived with the register volume in both hands, its corners squared, its spine taped where the binding had begun to give. \"Public records,\" Kei said, setting it down with the care of someone returning a borrowed thing. \"It doesn't leave the room. Sign for it and I'll sign it back in.\"\n\nAster signed. The pencil was blunt, so she sharpened it over the bin first, then wrote the date and her name and the time, and passed the pen to Kei, who added a second line beneath. Jo came in while they were doing it and stood with her hands folded, waiting.\n\nThe capsule sat in its padded box at the end of the table. Aster had checked it the day before and found the label sound as far as she could see, but seeing was not the same as agreeing with a record. She pulled on the cotton gloves, flexed her fingers twice, and lifted the box onto a level tray. Jo took the other edge without being asked. They carried it together.\n\n\"Flat,\" Aster said. \"If it tilts, the padding shifts.\"\n\n\"It's flat.\" Jo held her side steady. \"I'll keep it there.\"\n\nAster read the label aloud in a low voice and wrote each figure in the notebook as she went: the batch number, the date of packing, the string of letters stamped along the lower edge where the ink had blurred into the paper. The red seam on the capsule's cap caught the light, unbroken, wax still seated in the groove. She did not touch it. She noted instead that it was untouched, and the time, and who had been in the room.\n\nThen she opened the register to the page for that batch and read the same figures from the other direction.\n\nThey did not match at the fourth digit. Aster read the label again. Jo read the register. Aster read the register. Jo read the label.\n\n\"One of us is tired,\" Jo said. \"It isn't me.\"\n\n\"Then we're both tired.\" Aster laid the pencil down and did not pick it up until she had looked at the two numbers side by side for a while. \"Say yours again, slowly.\"\n\nJo said it slowly. The difference held. Aster wrote Jo's reading in the notebook beneath her own, marked *second reading, independent*, and drew a line between them so no one later would think the second had been copied from the first.\n\n\"That's wrong,\" Jo said, meaning the notebook. \"You've put mine under yours like it's an amendment.\"\n\n\"It is an amendment. It's the second reading. If I'm wrong, the record should show I was wrong in my own hand.\"\n\n\"That's not what I meant.\" Jo turned the tray a quarter turn, careful, and set it back level. \"I don't think the register is wrong. I think the label is. Somebody stamped it badly and packed it anyway.\"\n\n\"You might be right.\" Aster did not soften it. \"I'm writing that you said so.\"\n\nShe did write it, in the margin, with Jo's initials beside the sentence and her own beneath it as witness. It was a small thing, and it felt like removing a stone from a shoe.\n\nKei came back at the half hour, checked the clock on the wall against the one on the register's first page, and asked whether the volume could go back into the cabinet. Aster asked for ten more minutes. Kei sat on the stool by the door and did not read over anyone's shoulder.\n\nTen minutes was enough to find the trouble. The register was paginated, each leaf numbered in the corner, and the leaf for that batch's second page was not there. Not torn, not loose — simply absent, the stitching drawn tight where the page should have been, and the next page beginning a new batch as though nothing had been skipped. Aster ran her thumb along the gutter and found no stub.\n\n\"Missing,\" she said.\n\n\"Missing,\" Kei agreed, and came to look, and looked for a long moment without touching. \"It was bound in. There'd be a stub.\"\n\n\"There's no stub.\"\n\n\"Then it went out before binding, or it went out whole.\" Kei's mouth was flat. \"Either way it isn't public record any more. I'll note the volume was consulted and the page was not present.\"\n\n\"Do that,\" Aster said. \"And note we didn't open the capsule.\"\n\nKei wrote it down. That made three of them in the record now, which was better than one.\n\nWhen Kei had taken the register away, Aster lifted the capsule from the tray with both gloved hands and set it back into its padded box, settling it until the box's inner lip met the capsule's shoulder all the way around. The red seam she left exactly as it had been. She closed the lid but did not latch it.\n\n\"Read the numbers aloud to me,\" she said. \"The label ones. All of them, from the top.\"\n\nJo drew the notebook over and began.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e07:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "刷新后首先提交的第2章第5、9、15、19、21、29行持续写纸张干响、翻页细响，以及左掌、右手、指尖、拇指和压纸的位置，焦点已进入正文。该章处理的是标签抄页和登记册，不把它说成缺失登记页的副本已经取回；真正取得另一份副本的第3章第19–25行又明确写手的位置与纸的低语、翻落声，补充支持条件性焦点在处理副本时同样落实。后章仅作补充，不替代首个刷新后提交章。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/raw/session.jsonl.gz",
+          "sha256": "91071db3416ad5a5d8d11dc7974032f6e4248207fefd0f7cec8aea9482f0fd7e"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/raw/evidence.jsonl.gz",
+          "sha256": "5209d2f949d9f11672120768b771623e3f5edd5637022dc307a15a3f0327131c"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/result.json",
+          "sha256": "b6b7e2b67e9a64bfe977c581ff1b41dbc83d41450d03fa90ffe74c193da9d1bb"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e07.json",
+          "sha256": "de1d9c877e16bb21f5658b6ca25abc6c59b450898c51aa93905c04ebe755a8b3"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "a77050d612360422bff5448ae74e519d34d3e95449a32367152ed042b3d539aa",
+          "sessionLine1": 29,
+          "entryId": "c4144f8e",
+          "toolCallId": "call_00_Q07KGc1qJHQIU4PbPCUD6722",
+          "lines1": [
+            5,
+            9,
+            15,
+            19,
+            21,
+            29
+          ]
+        },
+        "priorChaptersUnchanged": true
+      },
+      "caseId": "ds14-e07",
+      "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "/focus Focus on the sound of paper and the placement of hands while Aster handles the duplicate.",
+        "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "draftDigest": "a77050d612360422",
+          "textSha256": "a77050d612360422bff5448ae74e519d34d3e95449a32367152ed042b3d539aa",
+          "sessionLine1": 29,
+          "entryId": "c4144f8e",
+          "toolCallId": "call_00_Q07KGc1qJHQIU4PbPCUD6722",
+          "text": "Chapter 2\n\nThe canopy station bench was the length of two arms and no wider than one. Aster set the seed capsule at the far end of it, where the wood was dry and nothing could be knocked against it, and put her own papers in the middle. The capsule stayed closed. It had come closed, and it would go into the demonstration closed, unless someone produced a reason and a record for opening it.\n\nKei had left the canopy register on the shelf beneath the bench before the visitors' hour, as Kei left it every morning, with a chalk slip tucked into the cover to mark the placed page. Aster drew it out by the spine. The binding was soft with use; the paper inside had gone the yellow of weak tea, and when she let the first page fall open it made a small dry sound, like a leaf turning over on stone.\n\nJo brought the stool round to her side of the bench. \"Read me the label first,\" Jo said. \"Then the register. That way we aren't matching a memory to a memory.\"\n\nAster agreed. She laid her left palm flat along the bench edge to keep the register from sliding, and with her right hand turned the label copy towards the window. The copy was hers, made the day before: a single sheet, ruled, with the capsule's outer markings set down in her own hand at the size they appeared.\n\n\"Number, forty-one,\" she read. \"Word, canopy. Word, replacement. Date, the eleventh. Countermark, a crescent, faint.\"\n\nJo leaned in. \"Countermark's not on the register. Go on.\"\n\nShe turned the register to page one. Her fingertips walked down the column, and the paper lifted and settled under them, ticking softly each time she let a line go. Page one carried the delivery date, the count, the carrier's mark, and a note in Kei's square hand: *opened in the presence of* — then a space, then nothing.\n\n\"That's the first page,\" Jo said. \"The countermark should be on the second. The register runs two pages to a delivery.\"\n\nAster turned the page. Her thumb held the corner, and the leaf came over with the same dry riffle, and beneath it was page three: a different delivery, a different date, a full month earlier, with the receipt signed and countersigned and the ink rubbed where a thumb had gone over it many times.\n\nShe laid her hand flat on the page and did not turn it again.\n\n\"Second page is gone,\" Jo said.\n\n\"It isn't here.\" Aster said it carefully, because the two sentences were not the same sentence. \"There's no stub, no tear at the binding. It was never sewn in, or it was taken out whole.\"\n\nJo was quiet a moment. \"I'd rather it were taken out whole,\" she said. \"A page taken out leaves a gap someone can see. A page never sewn in is a mistake in the making of the register, and mistakes get fixed.\"\n\n\"Either way, we don't have it.\" Aster set the register down square with the bench edge. She put the label copy on top of it, aligned corner to corner, and weighted both with the small brass rule from the tray. \"And I'm not opening the capsule to supply what the page would have told us. The countermark goes on the inside leaf, by the sound of it, and I'd be opening a sealed delivery to answer a question about a missing page. That's the wrong order.\"\n\n\"It might be the only order left,\" Jo said. Then, after a breath: \"I'm not arguing for it. I'm saying I can hear someone arguing for it.\"\n\n\"Then let them argue in the log.\" Aster took up her pen and wrote the date, the hour, and what they had seen: *register page one present, page three present, page two absent. No stub. Capsule unopened, intact.* She wrote the phrase *not yet established* beside the countermark, because she would not write a guess and later be read as having known.\n\nKei came back along the walkway at the end of the hour, and Aster showed her the register open at the join. Kei looked at it for a while without touching it, then went and fetched the index book and read the entry aloud — delivery, carrier, count, two pages — and closed the index and held it against her chest.\n\n\"I keep the records,\" Kei said. \"I don't make them. But I'll write that this one doesn't match, and I'll write it today, so it's dated before the demonstration rather than after.\"\n\nAster slid the label copy into the folder and tied the folder shut. The capsule sat at the end of the bench, sealed, unmoved, its shadow steady on the wood.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        },
+        {
+          "chapter": 3,
+          "draftId": "c03-d01",
+          "draftDigest": "a75d7e809afaf8f6",
+          "textSha256": "a75d7e809afaf8f6278a5fec0e4c7edb55390ddd352cfc186b9ee511a16e5241",
+          "sessionLine1": 32,
+          "entryId": "e5d430a0",
+          "toolCallId": "call_00_ET_29EHDIWLiDx0cCrsqbCn8626",
+          "text": "Chapter 3\n\nThe handling note was pinned inside the lid of the capsule's carrying case, folded twice, and Aster had left it there through two days of checking because it belonged to the case and not to her.\n\nOn the morning of the demonstration she unpinned it. The paper had been folded so long that it opened along its creases by itself, and the sound was soft and granular, like a hand drawn across a linen sheet. She laid it on the bench with her left palm flat beside it rather than on it, holding the sheet steady at the corner with two fingers while she read.\n\nTwelve lines, in a clerk's small upright hand. Keep the case level. Do not turn the capsule. Do not break the red seam. Open only in the presence of two named witnesses and the keeper of the records. Return the inner leaf, if opened, to the case, marked side out.\n\nAster read the last line twice. She set her right index finger under *two named witnesses* and kept it there a moment, then took her hand away and let the note lie flat.\n\n\"So it's three people in the room or the capsule stays shut,\" Jo said, from the other end of the bench. \"That's not a difficulty. That's the arrangement.\"\n\n\"It's the arrangement written down,\" Aster said, which was not the same as it being easy. \"The note says open, not that we must open. Nothing today requires it.\"\n\nShe carried the note to Kei at the record desk, walking slowly and keeping the sheet level, and Kei read it standing, then turned it over to look at the back, which was blank except for a faint square where a label had once been.\n\n\"There's a duplicate,\" Kei said. \"The station keeps one copy of the handling notes in the register folder. I'll bring it.\"\n\nKei was gone a short while. When she came back she carried a single leaf between the flats of both hands, the way a person carries something not quite dry, and set it down on the bench with a small settling tap. Aster put her left hand on the bench edge first, then brought her right hand to the leaf and drew it towards her by the corner, not the middle.\n\nThe duplicate was thinner than the original, and it whispered when it moved. She turned it over with one finger under the top edge; the paper lifted, hesitated, and fell back with a dry flick. The creases ran the other way, mirroring the original. The twelve lines were the same. The last line was the same.\n\n\"Read them against each other,\" Jo said. \"Out loud. I'll follow on the first.\"\n\nThey read the two sheets line by line, Aster holding one flat and Jo the other, and at the end of it there was no disagreement to record, only agreement, which was its own kind of relief. Kei wrote in the register beneath her earlier entry: *duplicate handling note produced and compared, twelve lines, no variance.* She dated it, and the three of them signed, and the delivery was, as far as the station's records could make it, reconciled: one page absent and noted as absent, one note doubled and noted as doubled, and nothing invented to fill either gap.\n\nThe visitors came at the hour. There were four of them and they stood at a respectful distance. Aster set the capsule on its stand, level, and did not turn it. She read the outer markings aloud — number forty-one, canopy, replacement, the eleventh, the faint crescent — and said plainly that the inner leaf had not been examined and would not be examined that day. Jo held the case steady. Kei stood by with the register open and her pen uncapped, and when someone asked whether the delivery was disputed, Kei said, \"It was. It's written now,\" and wrote.\n\nThe demonstration took eleven minutes. Nobody touched the capsule except Aster, and Aster touched only the stand.\n\nAfterwards she lifted the capsule in both hands, feeling its small weight settle, and set it back in the case with the red seam upward. She laid the inner padding over it. She closed the lid and pressed the two brass catches until each one clicked, and then she pinned the handling note back where it had come from, folded twice, inside the lid.\n\nShe put the case on the shelf beneath the bench and squared it to the edge with her fingertips.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e08:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "下一份提交正文为第2章，通读未发生敲铃。第1–7行明确没有戴手套的规定，可徒手接触，由Aster自选只戴左手手套，随后第47行自主脱下；没有把可选动作变成必须执行。戴手套本身符合可选要求，不因实际选择佩戴而扣分。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/raw/session.jsonl.gz",
+          "sha256": "b7e65ce2ca1d01e9bda5a8a230b41493eb165b579f03598c7dba8837422101c5"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/raw/evidence.jsonl.gz",
+          "sha256": "44fa35ed80881afd3770c3b7c7de2e39869a9ebe1aa805c79229838b846db049"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/result.json",
+          "sha256": "21e0539c1f4cd4f6f76d488037d5fc10fee51a53bc20ccaffd197a645e74af71"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e08.json",
+          "sha256": "ec82712977d517d7be39eadb0c2da48f6328bd45a1be522acc30e2445dca3de2"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d01",
+          "textSha256": "3058cd2a3cad723aa9425290cd4a034514d1624a71288235efe02909caf8e951",
+          "sessionLine1": 32,
+          "entryId": "5d804944",
+          "toolCallId": "call_00_pDhVlDTygvzBYx8hY4wR6831",
+          "lines1": [
+            1,
+            3,
+            5,
+            7,
+            47
+          ]
+        },
+        "priorChaptersUnchanged": true
+      },
+      "caseId": "ds14-e08",
+      "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "/ledger add story Do not ring any bells."
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d01",
+          "draftDigest": "3058cd2a3cad723a",
+          "textSha256": "3058cd2a3cad723aa9425290cd4a034514d1624a71288235efe02909caf8e951",
+          "sessionLine1": 32,
+          "entryId": "5d804944",
+          "toolCallId": "call_00_pDhVlDTygvzBYx8hY4wR6831",
+          "text": "The canopy station was cool and dry that morning, which was the first thing Aster checked. She set the sealed seed capsule on the cleared table, then stood a moment with the drawer of gloves open in front of her. There was no rule about it. The capsule’s outer case was a plain cylinder of lacquered board, dusted but sound, and she could handle it bare-handed without harm.\n\n“Do you want one?” Jo asked, already reaching for the tray.\n\n“I’ll wear the left,” Aster said, and drew it on herself. “Not for the capsule. For the register. That binding sheds.”\n\nShe had chosen it; that was all. The glove went on, and the work began.\n\nThe capsule’s outer label was tied to the case with a linen thread, and Aster untied it slowly rather than sliding it off. The label was a rectangle of good paper, creased twice, and it carried four things: an accession number, a collection date, a sender’s mark, and a short line of description in a cramped hand. Aster read the number twice before saying it aloud.\n\n“Eight, dash, one, one, four.”\n\nJo came around the table with the canopy register open across both palms. The register was a bound book of receipts, one line for each delivery accepted under the canopy, and Jo turned to the last written page and laid a finger under a line.\n\n“That agrees,” Jo said. “Same number. Same date, if the date on the label is the twelfth.”\n\n“It is.”\n\n“Then it agrees twice.” Jo shifted the book. “The sender’s mark, though. You read a K.”\n\n“I read a K,” Aster said. “Marrow, I thought.”\n\n“It’s a Narrow. The N is worn, but the crossbar is there. It sits under the glass better than it does to the eye.” Jo said it plainly, without apology, the way they always did when they disagreed.\n\nAster did not answer at once. She drew the lens across and held it over the mark, and the small letters swelled and blurred and settled. There was a diagonal stroke, yes; there was also a faint second stroke beside it, fainter still, or perhaps a fiber in the paper. She turned the label towards the window and tried again from the other side, and the mark declined to become one thing or the other.\n\n“You may be right,” she said. “I can’t get it to be certainly a K. And I can’t get it to be certainly an N either, from here.”\n\n“Then we leave it.”\n\n“We leave it.” Aster wrote *sender mark: unresolved* in the day’s note, and set the capsule exactly where it had been, and did not touch the red seam on its case. “I’d rather carry an open question into the demonstration than a wrong name.”\n\nJo nodded and turned the register’s page to check the station’s countersignature, and that was when the book showed its gap. The first leaf ended with the receipt entered and signed; the line beneath it read *continued overleaf* in the same steady clerk’s hand. The second leaf was not there. What remained was a stub, cut close to the binding, its inner edge ragged where a blade had gone through.\n\nThey looked at the stub for a while.\n\n“Kei keeps the public records,” Aster said. “Ask if the copy runs past this page.”\n\nKei came down from the front office with the public folder under one arm and did not stay long. The copy inside was a carbon, clean and legible, made for the visitors’ table, and it ran to exactly the same line and stopped. Kei turned it over to show the blank back, then took the folder away again.\n\n“So the copy matches the book,” Jo said. “And the book is short.”\n\n“Both are short in the same place.” Aster closed the register gently and set the linen thread back around the label, tied as it had been. “Which means we know what page one says, and we don’t know what page two would have told us.”\n\nJo looked at the sealed capsule. “We could open it.”\n\n“We could.” Aster drew off the glove and laid it flat on the tray. “But not before the demonstration. If page two names something else in the case, I want to have said so in public first, with the register in my hand, rather than be surprised by it in front of visitors.”\n\nJo considered that, and did not argue.\n\nAster wrote the decision down in her own words, dated it, and drew a line beneath it. The capsule stayed shut on the cleared table. They put the tools away and left the station ready for the next day’s work, and nothing further was opened that morning.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e12:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "实际update_bible的description及invariants均保留west door只能从里面打开，没有弱化成通常如此。下一份提交的第2章第49行明确Kei从里面操作门闩穿过西门；通读该章未引入从外解锁。该检查不要求凭空新增更多门的动作。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/raw/session.jsonl.gz",
+          "sha256": "e58daaa31086763e8c1a9fce6193fff8eb8a766e2dd0e026712925ed0f14bdf8"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/raw/evidence.jsonl.gz",
+          "sha256": "3a23efafc8dbb4e71e90689ab4c7cea17be7fe1f182db91a708c65f56409ddac"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/result.json",
+          "sha256": "432e11c7f22b9e9645170d2ee26e71d09ad0830649f1891cd0a3f9fbbe82ce4d"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e12.json",
+          "sha256": "200db1e556384cc7fe18546e01c4225dc9dfb4bec3ed46443b70a9351c2f8754"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "7791971f16d05db4336b08c05f14947f2f7d2365d153f2301566c931960ee487",
+          "sessionLine1": 25,
+          "entryId": "d7a28f51",
+          "toolCallId": "call_00_X15jdx6SaTVHdtx8o5b05667",
+          "lines1": [
+            49
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "planOrRuleAction": {
+          "sessionLine1": 22,
+          "entryId": "13803baa",
+          "toolCallId": "call_00_AeeRMKbVSqqYeRfcQ7A49120",
+          "tool": "update_bible"
+        }
+      },
+      "caseId": "ds14-e12",
+      "check": "The new rule keeps the inside-only condition; no outside unlocking is introduced in the next chapter.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "From the next chapter onward, the west door can be opened only from inside. Add this rule for future scenes and then continue."
+      },
+      "committedProse": [
+        {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "draftDigest": "7791971f16d05db4",
+          "textSha256": "7791971f16d05db4336b08c05f14947f2f7d2365d153f2301566c931960ee487",
+          "sessionLine1": 25,
+          "entryId": "d7a28f51",
+          "toolCallId": "call_00_X15jdx6SaTVHdtx8o5b05667",
+          "text": "Chapter 2 — Comparison\n\nThe canopy register lived in a shallow drawer beneath the public counter, and Aster lifted it out with both hands because the boards had swollen with years of damp air. The drawer had no lock, only a groove worn smooth where many thumbs had pulled it open. Kei had told her, on the first morning, that anything in the drawer was public and anything asked of it should be answered plainly.\n\n\"Second page,\" Aster said. \"The delivery record should name the grower and the harvest week.\"\n\nJo set down the tray of loose tools before answering, which Aster had come to recognize as a habit of taking the question seriously. \"The label on the capsule names a grower. It doesn't name a week.\"\n\n\"Then we start with what the two share.\"\n\nThey arranged the work along the cleared table. Aster placed the seed capsule at the left, still sealed, its red seam unbroken and its outer label facing up. She set the register at the right, open, and laid a clean sheet between them for notes. Nothing touched the capsule but the table and the air. Jo drew the lamp closer and turned the shade so the light fell across the label rather than into their eyes.\n\nAster read the label aloud, slowly, and Jo followed with a fingertip under each line of the register. The first line matched exactly: the station's own name, entered in the register by a hand that pressed harder on the first letter than the rest. The second line held a figure. Aster read it, and Jo read it back without prompting.\n\n\"Six hundred and twelve,\" Jo said.\n\nAster looked again. \"Six hundred and twelve. Same placement, same spacing. That one is settled.\"\n\nThey entered it once on the clean sheet, with the time beside it, and Aster marked the source of each reading in the margin so that no number stood without a record of where it had come from. It was slow work. It was the kind of work that went wrong when hurried.\n\nThe grower's name came next. On the label it was printed in a narrow band of dark ink that had not faded. In the register the same name appeared in a different hand, cramped and leaning, and one letter was ambiguous between two shapes. Aster turned the page towards the window. Jo leaned in and said which shape she saw, and Aster said which shape she saw, and they agreed on one reading and wrote it.\n\nThen Aster turned the register to where its second page should have been.\n\nThe page was not there. That was the first thing she established — the first leaf and the third were bound in place, their edges sewn to the spine like every other, but between them the stitching lay exposed in a narrow strip where a leaf had been removed. No harvest week, no countermark, no signature. Not a faded entry, not an entry scraped away, but a page that was absent and could carry no record at all.\n\n\"Nothing,\" Jo said.\n\n\"Nothing yet,\" Aster said, and heard how the correction sounded, and did not take it back. \"The page is gone. The stitching shows where it sat. Those are two observations. A missing page is not proof the entry was made and lost.\"\n\nJo was quiet for a moment. Then she said, \"It's also not proof it was never made. Someone could have removed the page because they meant to complete it later.\"\n\n\"Yes.\"\n\n\"Or because there was nothing on it worth keeping.\"\n\n\"Yes.\" Aster set her pencil down flat. \"Both are possible. Neither is the same as knowing.\"\n\nThey worked backwards through the register for another quarter hour, checking whether the harvest week appeared anywhere else — a summary line, a cross-reference, a note tucked into the margin of a neighbouring entry. Jo found a countermark two pages on that referred to a week, but when they followed it the reference pointed back to the blank page, and the circle closed without content. Aster wrote *second page absent* on the clean sheet, and beside it *stitching exposed, no entry*, and then, because precision required it, *not opened*.\n\nThe demonstration was tomorrow. The capsule would be shown at the counter, sealed, to whoever came.\n\n\"We don't open it,\" Jo said. It was not quite a question.\n\n\"We don't open it,\" Aster said. \"If the register cannot tell us what is inside, the demonstration is a demonstration of the seal and the label. Nothing more. We say that plainly and let people draw their own conclusions from a thing they can see.\"\n\nJo nodded and began returning the tools to the tray, and Aster closed the register and carried it back to the drawer.\n\nThe west door opened. Aster looked up in time to see Kei come through it from the inside, one hand on the latch, the other holding a folded notice, and the door swinging shut behind her on its own weight. There was no handle on this side of it either, Aster noticed — nothing but the smooth panel and the latch Kei had just worked from within.\n\n\"Records office closes at six,\" Kei said, laying the notice down. \"Anything you need copied, ask me before then.\"\n\nAster put her hand flat on the sealed capsule, not lifting it, only confirming that it was where she had left it.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [
+        {
+          "sessionLine1": 22,
+          "entryId": "13803baa",
+          "toolCall": {
+            "type": "toolCall",
+            "id": "call_00_AeeRMKbVSqqYeRfcQ7A49120",
+            "name": "update_bible",
+            "arguments": {
+              "reason": "Author added a new physical rule for future scenes: the west door can only be opened from inside.",
+              "changes": [
+                {
+                  "key": "rule:west_door",
+                  "source": "user",
+                  "op": "set",
+                  "kind": "rule",
+                  "name": "West door",
+                  "authorQuote": "From the next chapter onward, the west door can be opened only from inside.",
+                  "value": {
+                    "description": "The west door of the canopy station can be opened only from inside.",
+                    "invariants": [
+                      "The west door can be opened only from inside."
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e13:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "patch_outline的第3章purpose与turn明确由Jo作最后的公开说明。第3章最终正文第31–43行让Aster只做实物操作，Jo向观众说明争议如何解决并回答问题。第13–21行Aster此前向Kei核对记录属于准备阶段，不是取代Jo面向观众的最终说明，因此不判为仍由Aster主讲。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/raw/session.jsonl.gz",
+          "sha256": "25f15a2e35327dbe6090eede641dc4ac33be20f40f64946ab1246f5f7246217b"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/raw/evidence.jsonl.gz",
+          "sha256": "8a3de6d1a89bac895cc334e0fe0de14660da8d58b4bb03691d64ddaf4e18790d"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/result.json",
+          "sha256": "021bec8fc5a7333841e338724b13d2987970e89482991a4f4e7c311fcdfa3a60"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e13.json",
+          "sha256": "109625f1dcdbb9ac68ec95f014bcc042f67583f4a596f915bc9902d86ac5a41f"
+        },
+        "committedProse": {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "textSha256": "3d59767ba20248855c8e7cea96d1f145a473008cb1026dcedfd81c1764f995e4",
+          "sessionLine1": 30,
+          "entryId": "117bd771",
+          "toolCallId": "call_00_wFGc3SsADmid9XP46Hpe0261",
+          "lines1": [
+            13,
+            17,
+            21,
+            31,
+            35,
+            39,
+            41,
+            43
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "planOrRuleAction": {
+          "sessionLine1": 22,
+          "entryId": "14a41ad6",
+          "toolCallId": "call_00_rAypgoet3z8pkBbnYNPY5210",
+          "tool": "patch_outline"
+        }
+      },
+      "caseId": "ds14-e13",
+      "check": "The patched chapter-3 plan and eventual chapter-3 prose give the final explanation to Jo; the writer must not silently retain Aster as presenter.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Change only unwritten chapter 3 so that Jo, not Aster, presents the final explanation. Keep all other chapter numbers and targets unchanged, then continue."
+      },
+      "committedProse": [
+        {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "draftDigest": "3d59767ba2024885",
+          "textSha256": "3d59767ba20248855c8e7cea96d1f145a473008cb1026dcedfd81c1764f995e4",
+          "sessionLine1": 30,
+          "entryId": "117bd771",
+          "toolCallId": "call_00_wFGc3SsADmid9XP46Hpe0261",
+          "text": "Kei was already at the public counter when Aster came down the east walk, and the register was open in front of her with a second book beside it, thinner, its cover a paler brown.\n\n\"Duplicate register,\" Kei said before Aster asked. \"Kept in the office. Copy of everything entered at the counter, made the same week.\"\n\n\"The handling note,\" Aster said. \"Four-one-seven. I need the note that travels with the accession.\"\n\nKei turned the duplicate to a page ruled in two columns and ran her finger down the left side. \"Here. Written by the collector, not by me.\" She turned the book around. \"Read it yourself. I'd rather you had it in your hand.\"\n\nThe handwriting was small and upright. Aster read it aloud, slowly, the way she read anything she meant to rely on: *Capsule sealed at collection. Contents not examined. Two seeds, counted at the east walk, ninth. Bench number to be entered at the station, as the walk has no fixed bench at the collection point.*\n\nShe read the last line twice.\n\n\"The slip omitted the bench because the collector had none to give,\" she said. \"Your register supplied one from the station side. Both are correct.\"\n\n\"The page that went missing from the counter copy—\"\n\n\"Was a duplicate of this one.\" Aster set her pencil down on the duplicate and looked at the torn edge of nothing at all. \"The counter copy had the handling note slipped inside it as the second page. When the note was pulled out, a quarter-inch stayed in the binding. Nothing was taken away. It was a page that belonged to the folder and was left in the book.\"\n\nKei let out a breath and closed her eyes for a moment. \"So the dispute isn't a dispute.\"\n\n\"It's a filing error at handover. The capsule was sealed at collection, we received it sealed, and it is sealed now. Nothing about it needs opening.\"\n\n\"Then I'll sign the duplicate out to you,\" Kei said, \"and you keep the copy on the table during the demonstration, where people can see it. Not handed round. Seen.\"\n\nAster took the duplicate page in both hands, carried it flat, and set it on the counter under a clean weight.\n\n---\n\nThe audience came in ones and twos and stood at a respectful distance from the table. Jo had laid out the tray, the work sheet, and the duplicate register page under its weight, and had set the seed capsule on the blotting paper in its cradle with the red seam facing the room.\n\nAster stayed at the end of the table and did not speak. That had been settled the night before, and settled again that morning: Jo would give the explanation. Aster would handle the object.\n\nJo waited until the shuffling stopped.\n\n\"Accession four-one-seven,\" she said, in a voice that carried without being raised. \"Two seeds, one capsule, collected at the east walk on the ninth. The delivery was held because one page of the handling note could not be found at the counter, and we would not open a sealed capsule to answer a question a piece of paper could answer. The page has been found in the duplicate register. It says the capsule was sealed at collection and its contents were not examined then, and they have not been examined since. That is the whole of the dispute. It was a page out of place, not a delivery gone wrong.\"\n\nSomeone at the back asked whether the seeds were alive.\n\n\"We don't know,\" Jo said. \"That is what the seal is for. We can tell you the capsule is intact and the record agrees with it. We can't tell you what's inside without breaking the one thing that makes the answer worth having.\"\n\nThe questions were few and practical, and Jo answered them the same way, without hurry.\n\nThen Aster lifted the capsule. She turned it once so the seam showed against the window light — dull glass, unbroken red — and set it back in the cradle. She took the duplicate page and held it open at the bench line; Jo read the wording aloud so the room could hear it, and Aster laid the page down again. She wrote the time on the work sheet, signed beneath it, and passed the pen to Jo, who signed under her.\n\nThe audience drifted out the way it had come in.\n\nAster returned the tools to the tray one by one and closed the lid. She carried the capsule in its cradle to the cabinet, set it in its slot, and turned the key until the bolt settled. The duplicate page went into the folder and the folder into the drawer. Kei locked the register drawer, and Aster locked the outer storehouse door, and they stood a moment in the corridor while the bolt went home.",
+          "lineConvention": "one-based splitlines, including blank lines"
+        }
+      ],
+      "writerInputs": [],
+      "nativeDetails": [
+        {
+          "sessionLine1": 22,
+          "entryId": "14a41ad6",
+          "toolCall": {
+            "type": "toolCall",
+            "id": "call_00_rAypgoet3z8pkBbnYNPY5210",
+            "name": "patch_outline",
+            "arguments": {
+              "reason": "作者要求由 Jo 而非 Aster 做最后的公开说明，仅改动未写的第3章。",
+              "chapters": [
+                {
+                  "n": 3,
+                  "title": "The Duplicate",
+                  "targetWords": 750,
+                  "purpose": "Aster reads the handling note and obtains the duplicate register page from Kei; Jo prepares to give the final public explanation.",
+                  "turn": "Jo, not Aster, presents the final explanation to the gathered audience; the small demonstration proceeds and the intact seed capsule is stored, closing the delivery dispute."
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timingEvents": []
+    },
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e05:program:3",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "排队指令确在第2章首个写手请求暂停点交付，interjectionSeq未增加，第2章正常提交；但原生作者条目直到第3章已提交后才出现。第一个第3章draft输入的authorSources只有原故事提示，brief、intent、ledger等完整用户载荷均无蓝色方块及Jo发现并解释的新请求，也没有等义转述。不能用之后的ask_author或最终说明倒填首个写手输入，因此本项原条件不成立。这是已观察到的时序／输入遗漏，不是输入不可观察。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/session.jsonl.gz",
+          "sha256": "bb1508c7dc1123bf5c7b7c38e6807417159764934cd7cbb6c6591c71b2a76dbc"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/evidence.jsonl.gz",
+          "sha256": "56427efefd0441892a77c445fe98ac7bdb5fefc12c8af937047955c3b09e15df"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/result.json",
+          "sha256": "f92dfaf4d8b5d3281d5a3213092dd8be69a9124631936cdd5c920bd42f526ce4"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e05.json",
+          "sha256": "c557223793c0dd957222b08bf0fc5aa951c72707b97a89fbbcceb1d2df7eafb2"
+        },
+        "firstChapter3WriterInput": {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974"
+        },
+        "authorActivatedAfterChapter3Commit": {
+          "authorSessionLine1": 29,
+          "authorEntryId": "29831c45",
+          "chapter3CommitSessionLine1": 26,
+          "chapter3CommitEntryId": "a25ed520"
+        }
+      },
+      "caseId": "ds14-e05",
+      "check": "The queued author message becomes active only after chapter 2 settles; the first chapter-3 writer input contains the new request.",
+      "trigger": {
+        "type": "followUp",
+        "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+        "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+      },
+      "committedProse": [],
+      "writerInputs": [
+        {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974",
+          "input": {
+            "task": "draft",
+            "chapter": 3,
+            "targetWords": 750,
+            "intent": {
+              "chapter": 3,
+              "mustKeep": [
+                "No character may be physically injured.",
+                "The seed capsule must remain intact.",
+                "Keep practical actions precise."
+              ],
+              "mustAvoid": [],
+              "beats": [
+                "Aster reads the handling note and obtains the duplicate page from Kei.",
+                "They finish the small demonstration and store the intact seed capsule; the delivery dispute ends."
+              ],
+              "hookOps": [],
+              "cast": [
+                "char:aster",
+                "char:jo",
+                "char:kei"
+              ],
+              "brief": "Chapter 3, final. Aster reads the handling note and asks Kei for the duplicate copy of the missing register page; Kei produces it from the public-records set so the record stays open and accountable. Compare again: the duplicate resolves the serial and date discrepancy without opening the seed capsule. Jo's disagreement is acknowledged in Aster's written note. Practical, precise handling: gloves, tray, straightedge, log entries. The small demonstration proceeds quietly under the canopy with the capsule sealed and intact in its cradle. No injuries. End on a definite stopping beat: delivery reconciled, capsule stored, records closed.",
+              "schema": "story/intent@1",
+              "rev": 1
+            },
+            "bible": [
+              {
+                "kind": "character",
+                "key": "char:aster",
+                "op": "set",
+                "source": "user",
+                "name": "Aster",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Aster is a practical conservator."
+                },
+                "card": {
+                  "identity": "Aster is a practical conservator."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:jo",
+                "op": "set",
+                "source": "user",
+                "name": "Jo",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Jo is an assistant who is allowed to disagree."
+                },
+                "card": {
+                  "identity": "Jo is an assistant who is allowed to disagree."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:kei",
+                "op": "set",
+                "source": "user",
+                "name": "Kei",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Kei keeps the public records."
+                },
+                "card": {
+                  "identity": "Kei keeps the public records."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "place",
+                "key": "place:canopy_station",
+                "op": "set",
+                "source": "user",
+                "name": "canopy station",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The story takes place at the canopy station."
+                },
+                "value": {
+                  "description": "The story takes place at the canopy station."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "rule",
+                "key": "rule:care",
+                "op": "set",
+                "source": "user",
+                "name": "Careful handling",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The seed capsule must remain intact."
+                },
+                "value": {
+                  "description": "The seed capsule must remain intact.",
+                  "invariants": [
+                    "The seed capsule must remain intact."
+                  ]
+                },
+                "effectiveFromChapter": 1
+              }
+            ],
+            "state": {
+              "asOfChapter": 2,
+              "facts": [
+                {
+                  "id": "F-1",
+                  "subject": "char:aster",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0001"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-2",
+                  "subject": "char:jo",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0003"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-3",
+                  "subject": "char:kei",
+                  "predicate": "location",
+                  "object": "place:canopy_station",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0004"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-4",
+                  "subject": "item:arrival_label",
+                  "predicate": "free_predicate",
+                  "object": "The arrival label and delivery note agree on dispatch and receipt dates to the day.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0006",
+                    "c02.s0007",
+                    "c02.s0008"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-5",
+                  "subject": "item:arrival_label",
+                  "predicate": "free_predicate",
+                  "object": "The arrival label's stamped handling mark near the lower edge is a seven; the canopy register records two handlings.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0012",
+                    "c02.s0025",
+                    "c02.s0026",
+                    "c02.s0027",
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-6",
+                  "subject": "item:canopy_register",
+                  "predicate": "free_predicate",
+                  "object": "Page thirteen of the canopy register is absent, cut clean at the gutter; the page numbering runs eleven, twelve, fourteen.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0037",
+                    "c02.s0038",
+                    "c02.s0041"
+                  ],
+                  "sourceChapter": 2
+                },
+                {
+                  "id": "F-7",
+                  "subject": "item:demonstration_ledger",
+                  "predicate": "free_predicate",
+                  "object": "The demonstration ledger's certification line is blank and remains open.",
+                  "validFrom": 2,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c02.s0004",
+                    "c02.s0054"
+                  ],
+                  "sourceChapter": 2
+                }
+              ],
+              "claims": [
+                {
+                  "id": "S-1",
+                  "speaker": "char:jo",
+                  "content": "The label's stamped handling mark is a seven, not a two; it has a crossbar.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0014",
+                    "c02.s0015",
+                    "c02.s0016"
+                  ]
+                },
+                {
+                  "id": "S-2",
+                  "speaker": "char:aster",
+                  "content": "The mark could be a two with a bad strike.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0020"
+                  ]
+                },
+                {
+                  "id": "S-3",
+                  "speaker": "char:aster",
+                  "content": "The label's mark is a seven, and the register records two.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ]
+                },
+                {
+                  "id": "S-4",
+                  "speaker": "char:aster",
+                  "content": "Page thirteen of the register is absent, not merely misfiled.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0043",
+                    "c02.s0044",
+                    "c02.s0045"
+                  ]
+                },
+                {
+                  "id": "S-5",
+                  "speaker": "char:aster",
+                  "content": "The capsule must stay sealed until an authorized person permits otherwise; opening it to win an argument is not a reason.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0051",
+                    "c02.s0052",
+                    "c02.s0053"
+                  ]
+                },
+                {
+                  "id": "S-6",
+                  "speaker": "char:aster",
+                  "content": "The delivery cannot be certified yet.",
+                  "chapter": 2,
+                  "evidence": [
+                    "c02.s0057"
+                  ]
+                }
+              ],
+              "cognitions": [
+                {
+                  "id": "K-1",
+                  "characterId": "char:aster",
+                  "kind": "knows",
+                  "content": "The arrival label's handling mark is a seven, while the register records two.",
+                  "about": "F-5",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0025",
+                    "c02.s0026",
+                    "c02.s0027",
+                    "c02.s0028",
+                    "c02.s0029",
+                    "c02.s0030"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-2",
+                  "characterId": "char:jo",
+                  "kind": "knows",
+                  "content": "The arrival label's handling mark is a seven, not a two.",
+                  "about": "F-5",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0014",
+                    "c02.s0015",
+                    "c02.s0016"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-3",
+                  "characterId": "char:aster",
+                  "kind": "knows",
+                  "content": "Page thirteen of the canopy register is absent, cut clean at the gutter.",
+                  "about": "F-6",
+                  "acquiredChapter": 2,
+                  "via": "witnessed",
+                  "evidence": [
+                    "c02.s0037",
+                    "c02.s0038",
+                    "c02.s0043",
+                    "c02.s0044",
+                    "c02.s0045"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                }
+              ],
+              "relations": [],
+              "hooks": [
+                {
+                  "id": "H-1",
+                  "type": "mystery",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "Who cut page thirteen out of the canopy register, and what did it record?",
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-2",
+                  "type": "mystery",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "Why does the arrival label's handling mark read seven while the canopy register records two?",
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-3",
+                  "type": "question",
+                  "status": "open",
+                  "startChapter": 2,
+                  "lastAdvancedChapter": 2,
+                  "expectedPayoff": "What will an authorized inspection of the sealed capsule reveal, and can the delivery be certified?",
+                  "dependsOn": []
+                }
+              ]
+            },
+            "authorSources": [
+              {
+                "messageId": "3a02c967",
+                "sourceText": "Write a quiet English story about checking a disputed delivery before a public demonstration. Aster is a practical conservator. Jo is an assistant who is allowed to disagree. Kei keeps the public records. The story takes place at the canopy station. The seed capsule must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Aster. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed."
+              }
+            ],
+            "ledger": [
+              {
+                "id": "L-1",
+                "kind": "global",
+                "text": "No character may be physically injured.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "No character may be physically injured."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-2",
+                "kind": "story",
+                "text": "The seed capsule must remain intact.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "The seed capsule must remain intact."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-3",
+                "kind": "global",
+                "text": "Keep practical actions precise.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "Keep practical actions precise."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              }
+            ],
+            "authorIntent": "",
+            "currentFocus": "",
+            "wordRange": {
+              "min": 638,
+              "max": 863
+            },
+            "narration": {
+              "viewpoint": "Third-person limited through Aster",
+              "tone": "Quiet, practical and humane",
+              "format": "English prose"
+            },
+            "committed": [
+              {
+                "chapter": 1,
+                "text": "Aster received the sealed seed capsule and checked its outer label. The canopy station was open, though there were no visitors at the table. Aster cleared a space before setting anything down. Jo moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Aster turned the sheet towards the window rather than writing over it. Jo read the number aloud. They compared their readings, found that they agreed, and entered it only once. The seed capsule remained intact on the cleared table throughout the check.\n\nAster made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Jo asked whether the uncertainty meant they should abandon the demonstration. Aster said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nAster noticed a red seam but left it unopened. They put the tools back in the tray. Aster recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+                "summary": {
+                  "chapter": 1,
+                  "title": "Chapter 1",
+                  "characters": [],
+                  "events": [
+                    "Aster received the sealed seed capsule and checked its outer label."
+                  ],
+                  "mood": "quiet",
+                  "stateChanges": [],
+                  "hookActivity": []
+                }
+              },
+              {
+                "chapter": 2,
+                "text": "The canopy station opened at seven, and Aster had the worktable cleared by ten past. She laid the delivery papers out in three shallow stacks: the arrival label with its string still knotted through the eyelet, the delivery note folded on its creases, and the canopy register, a cloth-bound book that had to be held open with a weighted brass bar. Jo took the far side of the table without being asked. At the public desk near the door, Kei set out the demonstration ledger and left it open, the certification line still blank.\n\nThey began with dates. Aster read the arrival label aloud, one line at a time, and Jo followed the delivery note with a fingertip. The dispatch date matched. The receipt date matched, to the day. Then the serials, which were longer and less forgiving. Aster read the label's serial and Jo checked it against the register's entry; then they reversed, Jo reading and Aster checking, so that neither of them was only agreeing with herself.\n\nThe disagreement came at the handling marks. The label carried a stamped mark near the lower edge, a small barred box, and beside it the register noted *two handlings, both dry*. Jo leaned in.\n\n\"That isn't a two,\" she said. \"The stamp has a crossbar. It's a seven.\"\n\nAster looked. The mark sat partly over the paper's grain, and the ink had feathered at one corner. She had read it as a two on the first pass and had not questioned it since. \"It could be a two with a bad strike.\"\n\n\"It could be. But you're reading it as a two because that's what the register says, not because the stamp says it.\"\n\nThat was a fair objection, and Aster did not answer it with an opinion. She fetched the straightedge from the tray and laid it along the stamp's vertical stroke, then along the crossbar, sighting down the brass to the ruled margin of the register page. The crossbar was real. It ran flat and true, the same weight as the register's own ruling, not a blot. She set the straightedge against the register entry next and found the ink there thinner, the stroke stopping short where a two would have curved back.\n\n\"Seven,\" Aster said. \"You're right. It's a seven, and the register wrote two.\"\n\nJo did not look pleased so much as relieved. Aster amended the working sheet in pencil, not ink, and wrote the correction in the margin where it could be challenged later.\n\nThen the page. The register was paginated in a clerk's steady hand, and the entry they were checking ended at the foot of page eleven with an instruction to continue. Aster turned the leaf. Page twelve was present. Page thirteen was not. A stub remained at the gutter, a finger's width of paper, cut clean.\n\nShe did not take that on trust either. She laid the straightedge along the gutter and checked the ruling, which stopped at the stub and resumed on the next leaf with no gap in the counting; she checked the ink offset opposite, where the missing page's writing had pressed faintly into its neighbour, a smear of reversed letters with no reading in them. The numbering ran eleven, twelve, fourteen. The hand never skipped.\n\n\"Absent,\" Aster said. \"Not misfiled in the book. Gone.\"\n\nKei came over at that, the demonstration ledger under one arm. \"What do I enter for the public record?\"\n\n\"Enter that the papers were compared. Leave the certification line open.\" Aster wiped the straightedge and set it back in the tray. \"We can't settle it from the capsule, either. It stays sealed until someone authorized says otherwise. Opening it to win an argument isn't a reason.\"\n\nKei nodded and went back to the desk, and the ledger stayed open on the table by the door with its line still empty.\n\nAster squared the stacks and put the brass bar aside. She wrote the day's finding in the work log — label states seven, register states two, page thirteen of the register absent — and then, beneath it, the decision.\n\n\"The delivery cannot be certified yet,\" she said, and Jo wrote it down as spoken.",
+                "summary": {
+                  "chapter": 2,
+                  "title": "Page Thirteen",
+                  "characters": [
+                    "char:aster",
+                    "char:jo",
+                    "char:kei"
+                  ],
+                  "events": [
+                    "Aster and Jo compare the arrival label, delivery note, and canopy register at the canopy station.",
+                    "They find the label's handling mark is a seven while the register records two.",
+                    "Page thirteen is missing from the register, cut clean at the gutter.",
+                    "Kei leaves the public certification line blank, and Aster records that the delivery cannot be certified yet."
+                  ],
+                  "mood": "methodical",
+                  "stateChanges": [
+                    "F-1",
+                    "F-2",
+                    "F-3",
+                    "F-4",
+                    "F-5",
+                    "F-6",
+                    "F-7",
+                    "K-1",
+                    "K-2",
+                    "K-3"
+                  ],
+                  "hookActivity": [
+                    "upsert:H-1",
+                    "upsert:H-2",
+                    "upsert:H-3"
+                  ]
+                }
+              }
+            ],
+            "brief": "Chapter 3, final. Aster reads the handling note and asks Kei for the duplicate copy of the missing register page; Kei produces it from the public-records set so the record stays open and accountable. Compare again: the duplicate resolves the serial and date discrepancy without opening the seed capsule. Jo's disagreement is acknowledged in Aster's written note. Practical, precise handling: gloves, tray, straightedge, log entries. The small demonstration proceeds quietly under the canopy with the capsule sealed and intact in its cradle. No injuries. End on a definite stopping beat: delivery reconciled, capsule stored, records closed.",
+            "format": {
+              "bodyThenSeparator": "<<<写手说明>>>",
+              "afterSeparator": "writer_note"
+            }
+          }
+        }
+      ],
+      "nativeDetails": [
+        {
+          "sessionLine1": 29,
+          "entryId": "29831c45",
+          "type": "message",
+          "message": {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1."
+              }
+            ],
+            "timestamp": 1793522394553
+          }
+        }
+      ],
+      "timingEvents": [
+        {
+          "evidenceLine1": 86,
+          "type": "driver_input",
+          "input": {
+            "type": "continue",
+            "text": "Continue to the current target using the existing outline."
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 109,
+          "type": "injection_hold",
+          "at": "write_next_chapter:chapter=2:draft_request:attempt=1",
+          "chapter": 2,
+          "input": {
+            "task": "draft",
+            "chapter": 2,
+            "targetWords": 750,
+            "intent": {
+              "chapter": 2,
+              "mustKeep": [
+                "No character may be physically injured.",
+                "The seed capsule must remain intact.",
+                "Keep practical actions precise."
+              ],
+              "mustAvoid": [],
+              "beats": [
+                "Aster and Jo compare the label with the canopy register.",
+                "They establish that the second page is absent and defer opening the seed capsule."
+              ],
+              "hookOps": [],
+              "cast": [
+                "char:aster",
+                "char:jo",
+                "char:kei"
+              ],
+              "brief": "Chapter 2. Quiet comparison of the arrival label against the canopy register. Aster and Jo lay the delivery papers on the worktable, check dates, serials and handling marks line by line. Jo is permitted to disagree; she argues for a reading Aster initially rejects, and Aster tests it with a straightedge and the register's own ink and ruling rather than by opinion. They establish that the second page of the register is absent, and that the capsule is still sealed and must not be opened to settle the question. Kei is present briefly or nearby, keeping the public record open for the demonstration. Keep practical actions exact, no injuries, capsule stays intact. End on the definite beat: the missing page is confirmed absent, and Aster decides the delivery cannot be certified yet.",
+              "schema": "story/intent@1",
+              "rev": 1
+            },
+            "bible": [
+              {
+                "kind": "character",
+                "key": "char:aster",
+                "op": "set",
+                "source": "user",
+                "name": "Aster",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Aster is a practical conservator."
+                },
+                "card": {
+                  "identity": "Aster is a practical conservator."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:jo",
+                "op": "set",
+                "source": "user",
+                "name": "Jo",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Jo is an assistant who is allowed to disagree."
+                },
+                "card": {
+                  "identity": "Jo is an assistant who is allowed to disagree."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "character",
+                "key": "char:kei",
+                "op": "set",
+                "source": "user",
+                "name": "Kei",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "Kei keeps the public records."
+                },
+                "card": {
+                  "identity": "Kei keeps the public records."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "place",
+                "key": "place:canopy_station",
+                "op": "set",
+                "source": "user",
+                "name": "canopy station",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The story takes place at the canopy station."
+                },
+                "value": {
+                  "description": "The story takes place at the canopy station."
+                },
+                "effectiveFromChapter": 1
+              },
+              {
+                "kind": "rule",
+                "key": "rule:care",
+                "op": "set",
+                "source": "user",
+                "name": "Careful handling",
+                "authorQuote": {
+                  "messageId": "3a02c967",
+                  "quote": "The seed capsule must remain intact."
+                },
+                "value": {
+                  "description": "The seed capsule must remain intact.",
+                  "invariants": [
+                    "The seed capsule must remain intact."
+                  ]
+                },
+                "effectiveFromChapter": 1
+              }
+            ],
+            "state": {
+              "asOfChapter": 1,
+              "facts": [],
+              "claims": [],
+              "cognitions": [],
+              "relations": [],
+              "hooks": []
+            },
+            "authorSources": [
+              {
+                "messageId": "3a02c967",
+                "sourceText": "Write a quiet English story about checking a disputed delivery before a public demonstration. Aster is a practical conservator. Jo is an assistant who is allowed to disagree. Kei keeps the public records. The story takes place at the canopy station. The seed capsule must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Aster. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed."
+              }
+            ],
+            "ledger": [
+              {
+                "id": "L-1",
+                "kind": "global",
+                "text": "No character may be physically injured.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "No character may be physically injured."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-2",
+                "kind": "story",
+                "text": "The seed capsule must remain intact.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "The seed capsule must remain intact."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              },
+              {
+                "id": "L-3",
+                "kind": "global",
+                "text": "Keep practical actions precise.",
+                "authorQuotes": [
+                  {
+                    "messageId": "3a02c967",
+                    "quote": "Keep practical actions precise."
+                  }
+                ],
+                "authority": {
+                  "kind": "author_quotes",
+                  "establishes": "source_only"
+                }
+              }
+            ],
+            "authorIntent": "",
+            "currentFocus": "",
+            "wordRange": {
+              "min": 638,
+              "max": 863
+            },
+            "narration": {
+              "viewpoint": "Third-person limited through Aster",
+              "tone": "Quiet, practical and humane",
+              "format": "English prose"
+            },
+            "committed": [
+              {
+                "chapter": 1,
+                "text": "Aster received the sealed seed capsule and checked its outer label. The canopy station was open, though there were no visitors at the table. Aster cleared a space before setting anything down. Jo moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Aster turned the sheet towards the window rather than writing over it. Jo read the number aloud. They compared their readings, found that they agreed, and entered it only once. The seed capsule remained intact on the cleared table throughout the check.\n\nAster made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Jo asked whether the uncertainty meant they should abandon the demonstration. Aster said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nAster noticed a red seam but left it unopened. They put the tools back in the tray. Aster recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+                "summary": {
+                  "chapter": 1,
+                  "title": "Chapter 1",
+                  "characters": [],
+                  "events": [
+                    "Aster received the sealed seed capsule and checked its outer label."
+                  ],
+                  "mood": "quiet",
+                  "stateChanges": [],
+                  "hookActivity": []
+                }
+              }
+            ],
+            "brief": "Chapter 2. Quiet comparison of the arrival label against the canopy register. Aster and Jo lay the delivery papers on the worktable, check dates, serials and handling marks line by line. Jo is permitted to disagree; she argues for a reading Aster initially rejects, and Aster tests it with a straightedge and the register's own ink and ruling rather than by opinion. They establish that the second page of the register is absent, and that the capsule is still sealed and must not be opened to settle the question. Kei is present briefly or nearby, keeping the public record open for the demonstration. Keep practical actions exact, no injuries, capsule stays intact. End on the definite beat: the missing page is confirmed absent, and Aster decides the delivery cannot be certified yet.",
+            "format": {
+              "bodyThenSeparator": "<<<写手说明>>>",
+              "afterSeparator": "writer_note"
+            }
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 110,
+          "type": "driver_input",
+          "input": {
+            "type": "followUp",
+            "text": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+            "at": "write_next_chapter:chapter=2:draft_request:attempt=1"
+          },
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        },
+        {
+          "evidenceLine1": 112,
+          "type": "injection_release",
+          "at": "write_next_chapter:chapter=2:draft_request:attempt=1",
+          "sequence": 0,
+          "caseId": "ds14-e05",
+          "driverPhase": "measurement",
+          "runId": "20261101T082501Z-052d61a-acceptance-r1-ds14-e05"
+        }
+      ]
+    },
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e09:program:5",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "原生write_next_chapter可见错误回执明确写BUDGET_EXHAUSTED、剩余额度不足以预留下一次调用，并建议请作者增加预算或停止写作，足以报告预算停止原因；原条件未要求特定story.stop消息或再付费生成总结。后续虽有一条faux model_call入口标记，但原生assistant为aborted、零用量的Local fixture dispatch failed，没有后续成功生成、派发或新增计费。与原会话摘要绑定的生产主笔预留补探针也在派发前拒绝、modelRequests=0，余额不变。入口尝试、派发前拒绝和实际发送请求必须区分；不把补探针归为模型动作，不声称主笔另写过自然语言停止总结。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/raw/session.jsonl.gz",
+          "sha256": "21162e729efc715c964dbbd535abda2c9c9dec7215eab40188f77a8dd11ce9c9"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/raw/evidence.jsonl.gz",
+          "sha256": "1692d16e09a87e90a46b8cd16d92a79c4e1e2967001312f753dc7d9d77fe1be3"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/result.json",
+          "sha256": "841629da1944b794dd8c22ba6a147175c07af1fc4cb66f73081033bc5945b69a"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e09.json",
+          "sha256": "3b5d4816878d710d617cba046caf7b7b47feab9749b7171c5738e9862602cf4c"
+        },
+        "budgetReceipt": {
+          "sessionLine1": 25,
+          "entryId": "f52aba38",
+          "toolCallId": "tool:1793523608432:03edx78e6w1c"
+        },
+        "abortedAttempt": {
+          "sessionLine1": 26,
+          "entryId": "323888d2",
+          "stopReason": "aborted",
+          "errorMessage": "Local fixture dispatch failed",
+          "usage": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 0,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "total": 0
+            }
+          }
+        },
+        "productionMainProbe": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/saved-showrunner-probe.json",
+          "sha256": "af32aefe5542df3a1fc5e18981d61eb9dffb50fd18b0a718001b184d75ae13dd"
+        }
+      },
+      "caseId": "ds14-e09",
+      "check": "No request is sent after BUDGET_EXHAUSTED and the stop reason is reported.",
+      "trigger": {
+        "type": "authorMessage",
+        "text": "/budget usd=0.01"
+      },
+      "committedProse": [],
+      "writerInputs": [],
+      "nativeDetails": [
+        {
+          "sessionLine1": 25,
+          "entryId": "f52aba38",
+          "type": "message",
+          "message": {
+            "role": "toolResult",
+            "toolCallId": "tool:1793523608432:03edx78e6w1c",
+            "toolName": "write_next_chapter",
+            "content": [
+              {
+                "type": "text",
+                "text": "错误 BUDGET_EXHAUSTED：剩余额度不足以预留下一次调用。建议：请作者增加预算或停止写作"
+              }
+            ],
+            "details": {
+              "schema": "story/macro-result@1",
+              "ok": false,
+              "revision": true,
+              "interjectionSeq": {
+                "atStart": 0
+              },
+              "steps": [
+                {
+                  "step": "intent",
+                  "ref": "2",
+                  "ok": true
+                },
+                {
+                  "step": "draft",
+                  "ok": false
+                }
+              ],
+              "drafts": [],
+              "checks": [],
+              "reviews": [],
+              "responses": [],
+              "calls": [],
+              "intent": {
+                "chapter": 2,
+                "mustKeep": [
+                  "No character may be physically injured.",
+                  "The seed capsule must remain intact.",
+                  "Keep practical actions precise."
+                ],
+                "mustAvoid": [],
+                "beats": [
+                  "Aster and Jo compare the label with the canopy register.",
+                  "They establish that the second page is absent and defer opening the seed capsule."
+                ],
+                "hookOps": [],
+                "cast": [
+                  "char:aster",
+                  "char:jo",
+                  "char:kei"
+                ],
+                "brief": "Aster and Jo compare the label with the canopy register.",
+                "schema": "story/intent@1",
+                "rev": 1
+              },
+              "error": {
+                "code": "BUDGET_EXHAUSTED",
+                "message": "剩余额度不足以预留下一次调用",
+                "hint": "请作者增加预算或停止写作"
+              }
+            },
+            "isError": true,
+            "durationMs": 8,
+            "timestamp": 1793523608442
+          }
+        },
+        {
+          "sessionLine1": 26,
+          "entryId": "323888d2",
+          "type": "message",
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ],
+            "api": "p3-faux",
+            "provider": "faux",
+            "model": "priced",
+            "usage": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "totalTokens": 0,
+              "cost": {
+                "input": 0,
+                "output": 0,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0
+              }
+            },
+            "stopReason": "aborted",
+            "timestamp": 1793523608446,
+            "errorMessage": "Local fixture dispatch failed",
+            "durationMs": 1,
+            "thinkingLevel": "low"
+          }
+        }
+      ],
+      "timingEvents": []
+    }
+  ]
+}

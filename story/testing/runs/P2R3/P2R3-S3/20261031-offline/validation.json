@@ -1,0 +1,287 @@
+{
+  "schema": "story/p2r3-offline-validation@1",
+  "phase": "S1-S3-development",
+  "evidenceHead": "498c487645dce4973247afe504f85eb4e8645879",
+  "sourceDirty": true,
+  "reports": [
+    {
+      "source": "story/testing/exec/temp/p2r3-red.json",
+      "sha256": "28297732888698bb9604ea4957a4d499302c1e1217157d4cb3886152185ee7b7",
+      "total": 15,
+      "passed": 1,
+      "failed": 14,
+      "failures": [
+        {
+          "name": "writer receives a rounded 85–115 percent interval only for a supplied target",
+          "reason": "AssertionError: expected { task: 'draft', chapter: 1, …(12) } to match object { targetWords: 1299, …(1) }"
+        },
+        {
+          "name": "keeper keys include every effective bible kind and existing state entities, excluding future bible",
+          "reason": "AssertionError: expected [ { key: 'char:ada', …(1) } ] to deeply equal ArrayContaining{…}"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 1073 call_00_5yGeu36t3sy49NwjFzuU2518",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 378 call_00_dBqKO7e0MJ3RUeimtwhk4304",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw outline_fields 886 call_00_1417UIArbmFDHjouU20X1827",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: true, details: { …(1) } }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 1073 call_00_VJ678qvqkVibZmzseiFJ2895",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 1253 call_00_dnf4XDazUJDjBe45OhML1587",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw outline_fields 1253 call_00_sTK05M9LZtNTgBF6Lko70343",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: true, details: { …(1) } }"
+        },
+        {
+          "name": "25 S1 raw outline_fields 1253 call_00_aidwV4cMlpXIuBXWkL515883",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: true, details: { …(1) } }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 1587 call_00_IoHcsjHM8CMfFIB1S80G2054",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw outline_fields 1769 call_00_A1uapp3bGRBbKNTmAlv92072",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: true, details: { …(1) } }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 840 call_00_s0I3AlsB2rwJwzgqsRsM1714",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "25 S1 raw bible_invariants 527 call_00_tPzz74TYPSKFbReQCOdf9936",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "all six bible kinds retain invariants through the adapter and core",
+          "reason": "AssertionError: expected undefined to match object { Object (invariants) }"
+        }
+      ]
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-green.json",
+      "sha256": "533f23faf35f8ac8ead971e95b96e90465d8c1236fe464daa3c8b5fbabaa154c",
+      "total": 15,
+      "passed": 13,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "25 S1 raw bible_invariants 1253 call_00_dnf4XDazUJDjBe45OhML1587",
+          "reason": "AssertionError: expected { role: 'toolResult', …(7) } to match object { isError: false }"
+        },
+        {
+          "name": "all six bible kinds retain invariants through the adapter and core",
+          "reason": "AssertionError: expected undefined to match object { Object (invariants) }"
+        }
+      ]
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-rules-red.json",
+      "sha256": "767bc7979585bb6561b6112dd5091361f98c4e2313e68ccfdbdd18f2c114f1de",
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "25 S3 time and cognition positive/negative examples exercise unchanged core validators",
+          "reason": "AssertionError: expected [] to have a length of 4 but got +0"
+        }
+      ]
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-contracts-green.json",
+      "sha256": "11cd293b0b7bde6bebd272f943cc2607d6f3e95b7223210180e6c06f7248f01b",
+      "total": 21,
+      "passed": 21,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-eval-red.json",
+      "sha256": "727633a26aac13994dfd97ca053087169677bf70914a31e1c9c32cc93c0145c0",
+      "total": 3,
+      "passed": 1,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "round-three scan enforces 8 USD without changing legacy raw scoring",
+          "reason": "AssertionError: expected { id: 'P2-Z', n: 1, …(5) } to match object { passed: false, threshold: { …(1) } }"
+        },
+        {
+          "name": "round-three judgment NA is retained as NA and excluded from scored rows",
+          "reason": "Error: Unknown P2 judgment schema"
+        }
+      ]
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-eval-green.json",
+      "sha256": "32bbc746849243c8bf99327d4ff6c42b3f0cd6b893345c6a1d5f0f47a1046f3f",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "failures": []
+    },
+    {
+      "source": "story/testing/exec/temp/p2r3-stage-green.json",
+      "sha256": "f71a320d2d38a9f02221a253de8b0b6f115b35a1e50e32e265e0f27b8a0272e7",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "failures": []
+    }
+  ],
+  "suites": [
+    {
+      "folder": "story/testing/runs/P2R3/P2-REG/20261031T140346Z-498c487-dirty",
+      "manifest": {
+        "schema": "story/run-manifest@2",
+        "stage": "P2R3",
+        "suiteId": "P2-REG",
+        "runId": "20261031T140346Z-498c487-dirty",
+        "repositoryCommit": "498c487645dce4973247afe504f85eb4e8645879",
+        "evidenceHead": "498c487645dce4973247afe504f85eb4e8645879",
+        "dirty": true,
+        "status": "passed",
+        "modelRequests": 0,
+        "costs": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0
+        },
+        "programSha256": "554dbf195514ea4127373fd74a226b11dfe3dc03076c621a6bad0befa248bd5b"
+      },
+      "metrics": {
+        "schema": "story/metrics@2",
+        "suiteId": "P2-REG",
+        "runId": "20261031T140346Z-498c487-dirty",
+        "metrics": [
+          {
+            "id": "H01-H08,H13",
+            "n": 11,
+            "value": 1,
+            "threshold": 1,
+            "confidence95": null,
+            "passed": true,
+            "status": "measured"
+          }
+        ]
+      },
+      "metricsSha256": "61467c6b4d10876ff8a20be15707af885c1c2808fa494905f2c2ede4be88a99c"
+    },
+    {
+      "folder": "story/testing/runs/P2R3/P2-UNIT/20261031T140346Z-498c487-dirty",
+      "manifest": {
+        "schema": "story/run-manifest@2",
+        "stage": "P2R3",
+        "suiteId": "P2-UNIT",
+        "runId": "20261031T140346Z-498c487-dirty",
+        "repositoryCommit": "498c487645dce4973247afe504f85eb4e8645879",
+        "evidenceHead": "498c487645dce4973247afe504f85eb4e8645879",
+        "dirty": true,
+        "status": "passed",
+        "modelRequests": 0,
+        "costs": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0
+        },
+        "programSha256": "d99be55b71cf2b050f03764afb493db17759fc8481ed0ac1c3629117ac6e1894"
+      },
+      "metrics": {
+        "schema": "story/metrics@2",
+        "suiteId": "P2-UNIT",
+        "runId": "20261031T140346Z-498c487-dirty",
+        "metrics": [
+          {
+            "id": "H02",
+            "n": 128,
+            "value": 1,
+            "skipped": 0,
+            "threshold": 1,
+            "confidence95": null,
+            "passed": true,
+            "status": "measured"
+          }
+        ]
+      },
+      "metricsSha256": "4eda85c6a6d4da583b617c5b449c7323c8fab66b52f8f4d9934cf0ca114b6100"
+    }
+  ],
+  "historicalRescore": [
+    {
+      "folder": "story/testing/runs/P2R/P2-OPEN/20261031T063135Z-0ae2186-r1",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-CHAP/20261031T064958Z-0ae2186-r1",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-KEEP/20261031T075152Z-0ae2186-r1",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-KEEP/20261031T080054Z-0ae2186-r2",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-EDIT/20261031T081133Z-0ae2186-r1",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-CHAP/20261031T074430Z-0ae2186-r2",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-EDIT/20261031T083200Z-0ae2186-r2",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-REG/20261031T063135Z-0ae2186",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-UNIT/20261031T063318Z-0ae2186",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-GUARD/20261031T063354Z-0ae2186",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-FOLD/20261031T063403Z-0ae2186",
+      "equal": true
+    },
+    {
+      "folder": "story/testing/runs/P2R/P2-CTX/20261031T063412Z-0ae2186-acceptance",
+      "equal": true
+    }
+  ],
+  "authorClarification": "只有 item:、org: 允许新建键；char:、place: 按 D1 照常校验，core 的校验一行都不改。",
+  "unchanged": [
+    "core/canon",
+    "core/schema",
+    "datasets",
+    "editor rules"
+  ],
+  "notes": [
+    "Seven raw bible cases retained: six original inputs now succeed; the compound source_note case still correctly rejects the undeclared field and succeeds after only that field is removed.",
+    "Four malformed raw outlines are rejected with actionable flat-field receipts; no hidden reparsing.",
+    "The P2-UNIT snapshot is 128 tests; subsequently added stage-isolation test is independently checked in p2r3-stage-green.json."
+  ]
+}

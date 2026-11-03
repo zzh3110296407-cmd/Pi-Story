@@ -1,0 +1,17 @@
+# @pi-story/core（P1 已验收）
+
+公共入口为src/index.ts。领域层只依赖TypeBox与node:crypto，通过中立BranchEntry重建当前分支，不读写文件、不读配置或密钥、不直接连接模型服务。P1冻结数据、流程替身测试、作者金标认可与设计终审及固定提交复现均已通过；P2尚未启动。
+
+调用方提供CommandContext：当前模型、角色设置、ModelPort、EntrySource、PriceTable、BudgetGuard、RuleSource与插话序号。命令返回CommandResult；适配层负责把结果追加到会话，并确认写盘。writeNextChapter内部的草稿、检查、审稿与处置存在一条macro-result中，临时工作区不跨回合保存；最终正文与状态在同一CommitRecord中。
+
+预算参考构造器以BudgetGuard公开，端口类型仍是可替换的结构类型。snapshot回调应提供权威会话用量、相关各分支的未知义务及最新预算。已结算而尚未持久化的调用由参考实现保留；适配层确认这批调用进入权威快照后，按settledReservations取得的明确编号调用acknowledge。不可按内容相同去重，不可把Pi总用量与已包含的内部调用再加一次。
+
+调用方在同一批命令间共享batch对象，提交成功后committed为true。progress接收步骤名及可选草稿预览。提交前会重新读取EntrySource并比较持久化依据，且再次核对插话序号。
+
+台账的初始主笔整理以sourceSpans中的作者原话为依据，text只作解释；角色还收到按messageId去重的完整authorSources，来源核对不等于完整语义授权。作者直接新增或set之后，当前项清空旧sourceSpans，并用派生字段authorEditEntryId指向该条story.control；此时text是作者命令的字面内容。角色输入的authority显式区分author_quotes和author_command。旧引文保存在原始分支条目中，不再作为当前项的有效原话传给写手、编辑或修订写手；回看旧分支仍可还原。
+
+signal取消在模型返回后及最终同步提交闸门检查。正常完成的内部调用仍按实际结果记录CallRecord并结算已知用量；取消使整个命令返回TRANSPORT_FAILURE，不带commit，也不将batch.committed置为true。最终闸门之后的持久化由适配层负责，P2/P4仍需验证落盘前的取消与原子写入；本阶段没有落盘能力。
+
+readStory统一承载六分区、章节、状态和人物查询。toStoryView的persisted集合由调用方提供；toManuscript接受可选故事名；toExport接受故事ID、名称、导出时间与包版本等可选上下文，缺省导出时间为null，避免读取时钟。导出只返回名称和内容，写盘由适配层负责。
+
+v1.1的correctState、authorSettings没有命令实现。部分逐步创作函数供标准流程复用，P1不注册L2工具。具体取值、已经终审的设计选择与后续验证范围及实际验证状态见docs/p1/design-deltas.md与docs/p1/report.md。

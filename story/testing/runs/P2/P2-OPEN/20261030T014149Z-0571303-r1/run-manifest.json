@@ -1,0 +1,592 @@
+{
+  "schema": "story/run-manifest@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261030T014149Z-0571303-r1",
+  "stage": "P2",
+  "date": "2026-10-30T01:41:49.713Z",
+  "repositoryCommit": "0571303d9c82add12aaa9d98d0d260f6147701ed",
+  "evidenceHead": "be6750d7d0b0e7b3af6c8b54375d0efa7e4c2666",
+  "dirty": false,
+  "rules": [
+    {
+      "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+      "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+      "characters": 4897,
+      "estimatedTokens": 3566
+    },
+    {
+      "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+      "sha256": "25521dc8d95e4f6e1e3a6ece21cb4f8cc7892d42b78fe68cadc571ef060b148f",
+      "characters": 6505,
+      "estimatedTokens": 4059
+    },
+    {
+      "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+      "sha256": "a064c45fca7be9a7dd054ef12225093ed46478ffa8b01a0a8f0f0fe98cff54eb",
+      "characters": 10361,
+      "estimatedTokens": 5250
+    },
+    {
+      "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+      "sha256": "bbb5bd162b1e51d94359eeffe1b0fff27c0f5ca48c17b95cc53ce86109c7559b",
+      "characters": 6003,
+      "estimatedTokens": 3903
+    }
+  ],
+  "templates": [
+    {
+      "path": "story/packages/core/src/flow/inputs.ts",
+      "sha256": "99a4cf35eb1ff09f541c2a9624cd5d305eb8472c2c67595c20f4e90d6556bfcf"
+    },
+    {
+      "path": "story/packages/core/src/flow/calls.ts",
+      "sha256": "42d7df99db0b799602787b1a5687cd9af69614497dee29c4217a77d0f1910899"
+    },
+    {
+      "path": "story/scripts/prepare-p2.mjs",
+      "sha256": "ca723c178fae32650910173b557e40ccb6c5af57f8756dadf90e5d67a4c06f4a"
+    }
+  ],
+  "piBuild": {
+    "schema": "story/pi-build@1",
+    "commit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+    "sourceKind": "git_archive",
+    "archiveSha256": "596363e6d3f047dca2d52d9ff272a382d3eb03a82b887c97a03ded937819f4d2",
+    "modelSnapshot": {
+      "manifestSha256": "6d94a53c421b4872507885c97cd898528c65bf8671ba4646b4398f46ee55b708",
+      "files": {
+        "amazon-bedrock.json": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+        "ant-ling.json": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+        "anthropic.json": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+        "azure.json": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+        "baseten.json": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+        "cerebras.json": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+        "cloudflare-ai-gateway.json": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+        "cloudflare-workers-ai.json": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+        "deepseek.json": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+        "fireworks.json": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+        "github-copilot.json": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+        "google-vertex.json": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+        "google.json": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+        "groq.json": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+        "huggingface.json": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+        "kimi-coding.json": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+        "meta.json": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+        "minimax-cn.json": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+        "minimax.json": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+        "mistral.json": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+        "moonshotai-cn.json": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+        "moonshotai.json": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+        "nvidia.json": "98b47c4da26c8e649f48a874602fd7e9dc8a54ee0bdb40e3d07fe49189a842d2",
+        "openai-codex.json": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+        "openai.json": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+        "opencode-go.json": "39408ee6da7302e3202d7f7b27d31d4d50a05c340bebd7da25ee23755d506475",
+        "opencode.json": "ecf8c62258249de738efee09932f1068c3feaf555779d0196aa129ea8339dd28",
+        "openrouter.json": "d303cf8e4ad2cfd322ea5fc8c9e617d46b21d36d9ebe0454be26ae92d91440aa",
+        "qwen-token-plan-cn.json": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+        "qwen-token-plan-individual.json": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+        "qwen-token-plan.json": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+        "radius.json": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+        "together.json": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+        "typesafe.json": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+        "vercel-ai-gateway.json": "154de982552dff9874764e724980aad167e2ff58be06d8477f2456494ef1e458",
+        "xai.json": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+        "xiaomi-token-plan-ams.json": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+        "xiaomi-token-plan-cn.json": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+        "xiaomi-token-plan-sgp.json": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+        "xiaomi.json": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+        "zai-coding-cn.json": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+        "zai.json": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f"
+      }
+    },
+    "node": "v24.11.0",
+    "install": "npm ci --ignore-scripts",
+    "build": "npm run build:offline",
+    "built": true,
+    "expectedModelSnapshot": {
+      "manifestSha256": "9506560e3130e3bbab01027d629cd60034249e39450912adbff44bcff1e8a974",
+      "files": {
+        "amazon-bedrock.json": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+        "ant-ling.json": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+        "anthropic.json": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+        "azure.json": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+        "baseten.json": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+        "cerebras.json": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+        "cloudflare-ai-gateway.json": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+        "cloudflare-workers-ai.json": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+        "deepseek.json": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+        "fireworks.json": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+        "github-copilot.json": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+        "google-vertex.json": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+        "google.json": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+        "groq.json": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+        "huggingface.json": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+        "kimi-coding.json": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+        "meta.json": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+        "minimax-cn.json": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+        "minimax.json": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+        "mistral.json": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+        "moonshotai-cn.json": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+        "moonshotai.json": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+        "nvidia.json": "cc7b418f706178f0aac2384324cd63f7641ff03656ef25551a1859e2c69381bc",
+        "openai-codex.json": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+        "openai.json": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+        "opencode-go.json": "04584e57d8f8a76d9f00a853c4772bcb1a826826c03a54d371b7f78e5f38e277",
+        "opencode.json": "756c40dc7f471feadd4f0f5b8b8ba055186f2ee61b3dae7926f4b6916304a6ec",
+        "openrouter.json": "18123b2fda4e970d4b2a9f50b375a90badae1c93ef5d47f3cd93b099ccba1039",
+        "qwen-token-plan-cn.json": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+        "qwen-token-plan-individual.json": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+        "qwen-token-plan.json": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+        "radius.json": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+        "together.json": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+        "typesafe.json": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+        "vercel-ai-gateway.json": "bb62e8a267e0e94be31cdad7ea95dbdb1608adc1ab910341e8761144982940f0",
+        "xai.json": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+        "xiaomi-token-plan-ams.json": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+        "xiaomi-token-plan-cn.json": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+        "xiaomi-token-plan-sgp.json": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+        "xiaomi.json": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+        "zai-coding-cn.json": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+        "zai.json": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f"
+      }
+    },
+    "recovery": "Source code and dependencies remain pinned. Paid Deepseek catalog and Kimi protocol restored to exact frozen hashes; five unused provider catalogs from published 1.3.0 differ. Manifest accurately records actual bytes.",
+    "modelSnapshotComparison": {
+      "usedProvider": "deepseek",
+      "usedProviderUnchanged": true,
+      "protocolBoundaryKimiUnchanged": true,
+      "entireSnapshotUnchanged": false,
+      "priorManifestSha256": "9506560e3130e3bbab01027d629cd60034249e39450912adbff44bcff1e8a974",
+      "currentManifestSha256": "6d94a53c421b4872507885c97cd898528c65bf8671ba4646b4398f46ee55b708",
+      "exactFiles": 37,
+      "unusedProviderDifferences": [
+        "nvidia.json",
+        "opencode-go.json",
+        "opencode.json",
+        "openrouter.json",
+        "vercel-ai-gateway.json"
+      ],
+      "files": [
+        {
+          "name": "amazon-bedrock.json",
+          "sha256": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+          "expectedSha256": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "ant-ling.json",
+          "sha256": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+          "expectedSha256": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "anthropic.json",
+          "sha256": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+          "expectedSha256": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+          "expectedMatch": true,
+          "sourceVersion": "1.2.0",
+          "sourceIntegrity": "sha512-U5/1zXqfV1on7/9sbez03tT4Ru49Lvfb4+zXSDK3DBKF5cRk6KxvAOTOY3HJ4jimlZth+rs7vbJqN6iBQAoNuQ=="
+        },
+        {
+          "name": "azure.json",
+          "sha256": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+          "expectedSha256": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "baseten.json",
+          "sha256": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+          "expectedSha256": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "cerebras.json",
+          "sha256": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+          "expectedSha256": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "cloudflare-ai-gateway.json",
+          "sha256": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+          "expectedSha256": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "cloudflare-workers-ai.json",
+          "sha256": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+          "expectedSha256": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "deepseek.json",
+          "sha256": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+          "expectedSha256": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "fireworks.json",
+          "sha256": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+          "expectedSha256": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "github-copilot.json",
+          "sha256": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+          "expectedSha256": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "google-vertex.json",
+          "sha256": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+          "expectedSha256": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "google.json",
+          "sha256": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+          "expectedSha256": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "groq.json",
+          "sha256": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+          "expectedSha256": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "huggingface.json",
+          "sha256": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+          "expectedSha256": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "kimi-coding.json",
+          "sha256": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+          "expectedSha256": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "meta.json",
+          "sha256": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+          "expectedSha256": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "minimax-cn.json",
+          "sha256": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+          "expectedSha256": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "minimax.json",
+          "sha256": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+          "expectedSha256": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "mistral.json",
+          "sha256": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+          "expectedSha256": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "moonshotai-cn.json",
+          "sha256": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+          "expectedSha256": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "moonshotai.json",
+          "sha256": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+          "expectedSha256": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "nvidia.json",
+          "sha256": "98b47c4da26c8e649f48a874602fd7e9dc8a54ee0bdb40e3d07fe49189a842d2",
+          "expectedSha256": "cc7b418f706178f0aac2384324cd63f7641ff03656ef25551a1859e2c69381bc",
+          "expectedMatch": false,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "openai-codex.json",
+          "sha256": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+          "expectedSha256": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "openai.json",
+          "sha256": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+          "expectedSha256": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "opencode-go.json",
+          "sha256": "39408ee6da7302e3202d7f7b27d31d4d50a05c340bebd7da25ee23755d506475",
+          "expectedSha256": "04584e57d8f8a76d9f00a853c4772bcb1a826826c03a54d371b7f78e5f38e277",
+          "expectedMatch": false,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "opencode.json",
+          "sha256": "ecf8c62258249de738efee09932f1068c3feaf555779d0196aa129ea8339dd28",
+          "expectedSha256": "756c40dc7f471feadd4f0f5b8b8ba055186f2ee61b3dae7926f4b6916304a6ec",
+          "expectedMatch": false,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "openrouter.json",
+          "sha256": "d303cf8e4ad2cfd322ea5fc8c9e617d46b21d36d9ebe0454be26ae92d91440aa",
+          "expectedSha256": "18123b2fda4e970d4b2a9f50b375a90badae1c93ef5d47f3cd93b099ccba1039",
+          "expectedMatch": false,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "qwen-token-plan-cn.json",
+          "sha256": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+          "expectedSha256": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "qwen-token-plan-individual.json",
+          "sha256": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+          "expectedSha256": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "qwen-token-plan.json",
+          "sha256": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+          "expectedSha256": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "radius.json",
+          "sha256": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+          "expectedSha256": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "together.json",
+          "sha256": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+          "expectedSha256": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "typesafe.json",
+          "sha256": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+          "expectedSha256": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "vercel-ai-gateway.json",
+          "sha256": "154de982552dff9874764e724980aad167e2ff58be06d8477f2456494ef1e458",
+          "expectedSha256": "bb62e8a267e0e94be31cdad7ea95dbdb1608adc1ab910341e8761144982940f0",
+          "expectedMatch": false,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "xai.json",
+          "sha256": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+          "expectedSha256": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "xiaomi-token-plan-ams.json",
+          "sha256": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+          "expectedSha256": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "xiaomi-token-plan-cn.json",
+          "sha256": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+          "expectedSha256": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "xiaomi-token-plan-sgp.json",
+          "sha256": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+          "expectedSha256": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "xiaomi.json",
+          "sha256": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+          "expectedSha256": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "zai-coding-cn.json",
+          "sha256": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+          "expectedSha256": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        },
+        {
+          "name": "zai.json",
+          "sha256": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f",
+          "expectedSha256": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f",
+          "expectedMatch": true,
+          "sourceVersion": "1.3.0",
+          "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+        }
+      ]
+    }
+  },
+  "settings": {
+    "schema": "story/global-settings@1",
+    "storiesDir": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\stories",
+    "defaultLevel": "L1",
+    "localRevision": true,
+    "roles": {
+      "writer": {
+        "model": "deepseek/deepseek-flash",
+        "thinking": "low",
+        "maxTokens": 32768,
+        "temperature": 0.9
+      },
+      "editor": {
+        "model": "deepseek/deepseek-flash",
+        "thinking": "low",
+        "maxTokens": 32768,
+        "temperature": 0.2
+      },
+      "keeper": {
+        "model": "deepseek/deepseek-flash",
+        "thinking": "low",
+        "maxTokens": 32768,
+        "temperature": 0
+      },
+      "verifier": {
+        "model": "deepseek/deepseek-flash",
+        "thinking": "low",
+        "maxTokens": 8192,
+        "temperature": 0
+      }
+    },
+    "defaultBudget": {
+      "tokens": null,
+      "costUsd": null
+    },
+    "bridge": {
+      "port": 0
+    }
+  },
+  "nodeVersion": "v24.11.0",
+  "split": "acceptance",
+  "phase": "E13",
+  "smoke": false,
+  "selectedCaseId": null,
+  "repetition": 1,
+  "datasets": [
+    {
+      "id": "DS08",
+      "version": "v1",
+      "manifestDigest": "fe29c637fdbd132920267dcc704fe64c1196074fe9c06218334946014dd6ab59",
+      "annotationStatus": "user_delegated_AI_review_accepted_by_author"
+    }
+  ],
+  "driverLimits": {
+    "authorRounds": 12,
+    "showrunnerRequests": 48,
+    "runLimitUsd": 3
+  },
+  "status": "failed",
+  "costs": {
+    "knownUsd": 0.0516291,
+    "reservedUsd": 0.4628502,
+    "unknownCalls": 1,
+    "requests": 27,
+    "totalUsd": 0.5144793
+  },
+  "totalP2Costs": {
+    "knownUsd": 3.650189627999997,
+    "reservedUsd": 2.5435098000000003,
+    "unknownCalls": 12,
+    "requests": 722,
+    "totalUsd": 6.193699427999997
+  },
+  "elapsedMs": 286114,
+  "rawChecksums": {
+    "evidenceSha256": "17dbee4798c44cb9b03aae2a16b790e51836434fd1e8b790ee3a28c40c5ef7bd"
+  },
+  "caseFailures": [
+    {
+      "caseId": "262",
+      "code": "OPENING_INCOMPLETE"
+    }
+  ]
+}

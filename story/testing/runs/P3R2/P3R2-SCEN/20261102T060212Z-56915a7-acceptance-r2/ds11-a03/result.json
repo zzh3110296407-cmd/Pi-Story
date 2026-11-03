@@ -1,0 +1,125 @@
+{
+  "id": "ds11-a03",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author asked to change only unwritten chapter 5: the demonstration runs with no audience and a written record is kept.",
+        "chapters": [
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "targetWords": 750,
+            "purpose": "Carry out the public demonstration's flight handling at the kite hall with no audience present, so the disputed item can be checked in a controlled, unobserved run.",
+            "turn": "Nadi runs the demonstration solo before the empty hall and writes down every measurement and action as it happens, while Wren reads the steps aloud from the corrected label; the written record becomes the account the dispute will rest on.",
+            "hookSeeds": [
+              "The written record has to stand in for witnesses."
+            ]
+          }
+        ]
+      },
+      "id": "call_00_NckYY1PpOIoNWFhMVnUa1429"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author asked to change only unwritten chapter 5: the demonstration runs with no audience and a written record is kept.",
+      "chapters": [
+        {
+          "n": 5,
+          "title": "Demonstration",
+          "targetWords": 750,
+          "purpose": "Carry out the public demonstration's flight handling at the kite hall with no audience present, so the disputed item can be checked in a controlled, unobserved run.",
+          "turn": "Nadi runs the demonstration solo before the empty hall and writes down every measurement and action as it happens, while Wren reads the steps aloud from the corrected label; the written record becomes the account the dispute will rest on.",
+          "hookSeeds": [
+            "The written record has to stand in for witnesses."
+          ]
+        }
+      ]
+    },
+    "id": "call_00_NckYY1PpOIoNWFhMVnUa1429"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Run the demonstration without an audience and keep a written record.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "4813f1b9545f2813e4eb87f1c1af9c6e5fe98e0b8f2e2ed4281baccef2ada6cf",
+    "sessionSha256": "44c50fa0c034f037d02858215cdc5fe1d43f413ed075534db22639515af0c651",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0031632,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0031632
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

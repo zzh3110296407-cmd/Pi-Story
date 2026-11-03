@@ -1,0 +1,506 @@
+{
+  "suite": "SCEN",
+  "runId": "20261101T062749Z-5a78711-dev-r1",
+  "cases": 5,
+  "results": [
+    {
+      "id": "ds11-a01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "chapters": [
+              {
+                "n": 3,
+                "title": "The Duplicate",
+                "purpose": "Tobin leads the document check of the missing repair-record page while Anwen assists him rather than directing the work.",
+                "turn": "Ruth supplies a duplicate page; Tobin's leading comparison exposes a discrepancy in the label, and the team agrees to finish checking before the public demonstration."
+              }
+            ],
+            "reason": "Author asks that unwritten chapter 3 have Tobin lead the document check with Anwen assisting, keeping the chapter number and six-chapter count unchanged."
+          },
+          "id": "call_00_U0TV34PvdHetKTMqnUy73847"
+        }
+      ],
+      "firstAction": {
+        "tool": "patch_outline",
+        "args": {
+          "chapters": [
+            {
+              "n": 3,
+              "title": "The Duplicate",
+              "purpose": "Tobin leads the document check of the missing repair-record page while Anwen assists him rather than directing the work.",
+              "turn": "Ruth supplies a duplicate page; Tobin's leading comparison exposes a discrepancy in the label, and the team agrees to finish checking before the public demonstration."
+            }
+          ],
+          "reason": "Author asks that unwritten chapter 3 have Tobin lead the document check with Anwen assisting, keeping the chapter number and six-chapter count unchanged."
+        },
+        "id": "call_00_U0TV34PvdHetKTMqnUy73847"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The patch implements this requested event change rather than merely renaming the chapter: Tobin leads the document check while Anwen assists.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "eb18782cb57c6bd91fa607a1e7af4d29d8dcaf045a1e7e0f5c7eb022d33d840a",
+        "sessionSha256": "47a2b738920dac9760a322b59f43001783a29fb1a4efa6b98a296cf19c81219b",
+        "fee": {
+          "knownUsd": 0.0023288999999999996,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0023288999999999996
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-b01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "update_bible",
+          "args": {
+            "changes": [
+              {
+                "kind": "character",
+                "key": "char:orla",
+                "name": "Orla",
+                "op": "set",
+                "source": "user",
+                "authorQuote": "From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+                "value": {
+                  "skills": "Orla can decode semaphore, but only in daylight; she cannot read semaphore in darkness or artificial light insufficient for the signal."
+                }
+              }
+            ],
+            "reason": "The author added a new ability for Orla that must apply from the next unwritten chapter onward while leaving all committed events and existing descriptions unchanged."
+          },
+          "id": "call_00_ojOpF3AOSvDfKdpy2cel2922"
+        }
+      ],
+      "firstAction": {
+        "tool": "update_bible",
+        "args": {
+          "changes": [
+            {
+              "kind": "character",
+              "key": "char:orla",
+              "name": "Orla",
+              "op": "set",
+              "source": "user",
+              "authorQuote": "From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+              "value": {
+                "skills": "Orla can decode semaphore, but only in daylight; she cannot read semaphore in darkness or artificial light insufficient for the signal."
+              }
+            }
+          ],
+          "reason": "The author added a new ability for Orla that must apply from the next unwritten chapter onward while leaving all committed events and existing descriptions unchanged."
+        },
+        "id": "call_00_ojOpF3AOSvDfKdpy2cel2922"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "9857dd44ab3dab339a450b2155b97075ff3d5e4cf22dd34ad8ccd050d36d47e0",
+        "sessionSha256": "e2dd625455365e2aa349d74acd1824e9ce222ef99d3e34e5387da2b8b0135a08",
+        "fee": {
+          "knownUsd": 0.0023651999999999996,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0023651999999999996
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-b02-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "update_bible",
+          "args": {
+            "reason": "作者要求补充未来场景中手推车进出渡轮办公室的通行限制；不改动已有设定与已写章节。",
+            "changes": [
+              {
+                "kind": "rule",
+                "key": "rule:cart_access",
+                "name": "Cart access",
+                "source": "user",
+                "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+                "op": "set",
+                "value": {
+                  "description": "Carts may enter the ferry office only through the west door.",
+                  "scope": "future scenes",
+                  "invariants": [
+                    "Carts enter the ferry office only through the west door."
+                  ]
+                }
+              }
+            ]
+          },
+          "id": "call_00_rQdST72e4QiuYSL2iUxi2836"
+        }
+      ],
+      "firstAction": {
+        "tool": "update_bible",
+        "args": {
+          "reason": "作者要求补充未来场景中手推车进出渡轮办公室的通行限制；不改动已有设定与已写章节。",
+          "changes": [
+            {
+              "kind": "rule",
+              "key": "rule:cart_access",
+              "name": "Cart access",
+              "source": "user",
+              "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+              "op": "set",
+              "value": {
+                "description": "Carts may enter the ferry office only through the west door.",
+                "scope": "future scenes",
+                "invariants": [
+                  "Carts enter the ferry office only through the west door."
+                ]
+              }
+            }
+          ]
+        },
+        "id": "call_00_rQdST72e4QiuYSL2iUxi2836"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "02cd7fbea5f40e65bff066b6175dbde90760fec52465305348accdad1970b5e2",
+        "sessionSha256": "9fbb74c773249feeb092e080afa4582bb401a64cebebe7fbb71d54ed9141e633",
+        "fee": {
+          "knownUsd": 0.0025374,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0025374
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-j01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 1,
+      "firstMeasuredIndex": 24,
+      "actions": [
+        {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3, \"The Duplicate\": Tobin—not Ruth—brings Anwen the duplicate page from the records; Ruth remains the keeper of the public records and is consulted only for confirmation of provenance. Anwen reads the handling note, compares the duplicate, keeps the brass case closed and intact, and the team agrees to finish checking before the public demonstration. Precise, quiet practical actions; no injuries."
+          },
+          "id": "call_00_ptOV1oME6KOMb8RflRe82059"
+        }
+      ],
+      "firstAction": {
+        "tool": "write_next_chapter",
+        "args": {
+          "brief": "Chapter 3, \"The Duplicate\": Tobin—not Ruth—brings Anwen the duplicate page from the records; Ruth remains the keeper of the public records and is consulted only for confirmation of provenance. Anwen reads the handling note, compares the duplicate, keeps the brass case closed and intact, and the team agrees to finish checking before the public demonstration. Precise, quiet practical actions; no injuries."
+        },
+        "id": "call_00_ptOV1oME6KOMb8RflRe82059"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 3,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 3,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 3,
+            "macroErrors": [
+              null
+            ],
+            "roles": [
+              "writer",
+              "editor",
+              "keeper"
+            ],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "9e3fac82db434d1ddab50c3015e3ff89beae16a884673b64e9ebc73a5a75cf30",
+        "sessionSha256": "758f8aa385e8efb1d021dc4588286f4c5bde122e6a4eb750637e0d084d0e5fc3",
+        "fee": {
+          "knownUsd": 0.0024027,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0024027
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-m01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 24,
+      "actions": [
+        {
+          "reply": "**Spend so far**\n\n- Known spend: **$0.031**\n- Unknown reservations: **$0.007**\n- Conservative total: **$0.038**\n\nThe known amount is what has been definitively accounted for; the $0.007 is reserved but not yet confirmed, so treat $0.038 as the upper-bound estimate rather than a settled total.\n\n**Progress (unchanged, nothing written)**\n- Chapters committed: 2 of 6 planned, both clean with no retained risks\n- Next chapter: 3 (\"The Duplicate\"), not started\n- Budget: none set"
+        }
+      ],
+      "firstAction": {
+        "reply": "**Spend so far**\n\n- Known spend: **$0.031**\n- Unknown reservations: **$0.007**\n- Conservative total: **$0.038**\n\nThe known amount is what has been definitively accounted for; the $0.007 is reserved but not yet confirmed, so treat $0.038 as the upper-bound estimate rather than a settled total.\n\n**Progress (unchanged, nothing written)**\n- Chapters committed: 2 of 6 planned, both clean with no retained risks\n- Next chapter: 3 (\"The Duplicate\"), not started\n- Budget: none set"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Report 0.031 USD known and 0.007 USD reserved with unknown final usage, conservative total 0.038 USD. Do not present unknown usage as known zero or known actual spend.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "5f78163e1dd8a4147459b345be03ec5f0a704ee31ddc6d5c5da70e13e036798d",
+        "sessionSha256": "97b246461c3c85b7e982ad83c09cb2f0b872fbec088c80aa4396454d55d25d0c",
+        "fee": {
+          "knownUsd": 0.0023318999999999996,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 1,
+          "totalUsd": 0.0023318999999999996
+        },
+        "measuredMainRequests": 1
+      }
+    }
+  ],
+  "fees": {
+    "knownUsd": 0.0445824,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 35,
+    "totalUsd": 0.0445824
+  },
+  "formalAcceptance": false
+}

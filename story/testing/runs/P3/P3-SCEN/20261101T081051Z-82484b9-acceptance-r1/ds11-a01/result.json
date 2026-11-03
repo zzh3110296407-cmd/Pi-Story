@@ -1,0 +1,107 @@
+{
+  "id": "ds11-a01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Oren leads the document check of the handling note and the missing second page while Lena assists, reading aloud for him and holding the sample case aside rather than opening it.",
+            "turn": "Suri supplies a duplicate page; Oren states plainly what the record does and does not support, and the team agrees to finish the document check before the demonstration."
+          }
+        ],
+        "reason": "作者要求未写的第3章改由Oren主导文件核对、Lena协助，章号与总章数不变。"
+      },
+      "id": "call_00_9Fsj3JoNn6H0XkWDMRmf6448"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Oren leads the document check of the handling note and the missing second page while Lena assists, reading aloud for him and holding the sample case aside rather than opening it.",
+          "turn": "Suri supplies a duplicate page; Oren states plainly what the record does and does not support, and the team agrees to finish the document check before the demonstration."
+        }
+      ],
+      "reason": "作者要求未写的第3章改由Oren主导文件核对、Lena协助，章号与总章数不变。"
+    },
+    "id": "call_00_9Fsj3JoNn6H0XkWDMRmf6448"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Oren leads the document check while Lena assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "026737196122cc8243746fd1ad74f6f8ee81c4482a17433e4e5f5170d060bb95",
+    "sessionSha256": "da896370e0f62c5c7076805d2d461dbcb293d3974453628ae574a65ee8fa87c2",
+    "fee": {
+      "knownUsd": 0.0025965,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025965
+    },
+    "measuredMainRequests": 2
+  }
+}

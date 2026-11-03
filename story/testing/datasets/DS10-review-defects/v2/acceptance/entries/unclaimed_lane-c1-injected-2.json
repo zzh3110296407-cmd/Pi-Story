@@ -1,0 +1,391 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:ada",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Ada Lin, a municipal relay runner"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:nessa",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Nessa Vale, a reserve runner"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:imani",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Imani Cole, an official timekeeper"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:warmup",
+          "op": "set",
+          "source": "model",
+          "value": "the indoor warm-up hall"
+        },
+        {
+          "kind": "place",
+          "key": "place:track",
+          "op": "set",
+          "source": "model",
+          "value": "the municipal relay track"
+        },
+        {
+          "kind": "place",
+          "key": "place:office",
+          "op": "set",
+          "source": "model",
+          "value": "the officials’ room"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:mechanism",
+          "op": "set",
+          "source": "model",
+          "value": "The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story."
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "Coach Roland died two years before the meet and never returns alive in present action."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:char:ada->char:nessa",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "Working together with initially limited trust."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "authorMessage",
+    "entryId": "unclaimed_lane-author",
+    "text": "Write an original contemporary sports drama story titled \"The Lane Nobody Claimed\".\n\nWrite the story in English.\nUse third-person narration outside quoted speech and dreams.\nNarrate unfolding actions in the past tense; timeless mechanism explanations may use the present tense.\nPreserve this mechanism rule: The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story.\nFollow the supplied three-chapter event order.\nKeep the relay card intact until its custody transfer in chapter three; temporary inspection or handling is allowed.\nKeep Nessa alive through the end of chapter three.\nTreat remembered scenes, dreams, plans and hypotheses according to their stated temporal or epistemic status.\n\nUse the supplied Bible and outline. Maintain natural prose and the difference between a suspicion and an established fact."
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-c1-ledger",
+    "toolName": "submit_constraints",
+    "isError": false,
+    "details": {
+      "schema": "story/constraints@1",
+      "rev": 1,
+      "op": "submit",
+      "items": [
+        {
+          "id": "L-1",
+          "kind": "global",
+          "text": "Write the story in English.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Write the story in English.",
+              "start": 85,
+              "end": 112
+            }
+          ]
+        },
+        {
+          "id": "L-2",
+          "kind": "global",
+          "text": "Use third-person narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Use third-person narration outside quoted speech and dreams.",
+              "start": 113,
+              "end": 173
+            }
+          ]
+        },
+        {
+          "id": "L-3",
+          "kind": "global",
+          "text": "Narrate unfolding actions in the past tense; timeless mechanism explanations may use the present tense.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Narrate unfolding actions in the past tense; timeless mechanism explanations may use the present tense.",
+              "start": 174,
+              "end": 277
+            }
+          ]
+        },
+        {
+          "id": "L-4",
+          "kind": "given_fact",
+          "text": "Preserve this mechanism rule: The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Preserve this mechanism rule: The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story.",
+              "start": 278,
+              "end": 453
+            }
+          ]
+        },
+        {
+          "id": "L-5",
+          "kind": "story",
+          "text": "Follow the supplied three-chapter event order.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Follow the supplied three-chapter event order.",
+              "start": 454,
+              "end": 500
+            }
+          ]
+        },
+        {
+          "id": "L-6",
+          "kind": "story",
+          "text": "Keep the relay card intact until its custody transfer in chapter three; temporary inspection or handling is allowed.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Keep the relay card intact until its custody transfer in chapter three; temporary inspection or handling is allowed.",
+              "start": 501,
+              "end": 617
+            }
+          ]
+        },
+        {
+          "id": "L-7",
+          "kind": "story",
+          "text": "Keep Nessa alive through the end of chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Keep Nessa alive through the end of chapter three.",
+              "start": 618,
+              "end": 668
+            }
+          ]
+        },
+        {
+          "id": "L-8",
+          "kind": "story",
+          "text": "Treat remembered scenes, dreams, plans and hypotheses according to their stated temporal or epistemic status.",
+          "sourceSpans": [
+            {
+              "messageId": "unclaimed_lane-author",
+              "quote": "Treat remembered scenes, dreams, plans and hypotheses according to their stated temporal or epistemic status.",
+              "start": 669,
+              "end": 778
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-c1-bible-review",
+    "toolName": "update_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 2,
+      "op": "update",
+      "reason": "Stable handedness and already-applicable chronology for review context.",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:ada",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Ada Lin, a municipal relay runner",
+            "embodiment": "Ada is right-handed from birth and has never been the opposite-handed person.",
+            "invariants": [
+              "Dominant hand remains right-handed."
+            ]
+          }
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "Coach Roland died two years before the meet and never returns alive in present action."
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-c1-outline",
+    "toolName": "submit_outline",
+    "isError": false,
+    "details": {
+      "schema": "story/outline@1",
+      "rev": 1,
+      "op": "submit",
+      "narration": {
+        "viewpoint": "third person",
+        "tone": "restrained",
+        "format": "English prose; unfolding action in past tense"
+      },
+      "chapters": [
+        {
+          "n": 1,
+          "title": "A Space on the Card",
+          "targetWords": 1662,
+          "purpose": "Develop the designed events through action and dialogue.",
+          "turn": "The registrar entered Nessa as the registered reserve runner, not a spectator.",
+          "hookSeeds": [
+            "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+            "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+            "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+          ]
+        },
+        {
+          "n": 2,
+          "title": "The Exchange Zone",
+          "targetWords": 1656,
+          "purpose": "Develop the designed events through action and dialogue.",
+          "turn": "The registrar changed Nessa’s status from reserve to confirmed relay starter.",
+          "hookSeeds": [
+            "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker.",
+            "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed.",
+            "The unexplained blue cord still hung from the clock handle while they practised."
+          ]
+        },
+        {
+          "n": 3,
+          "title": "The Clock After the Finish",
+          "targetWords": 1591,
+          "purpose": "Develop the designed events through action and dialogue.",
+          "turn": "The runners elected Nessa team captain after the race.",
+          "hookSeeds": [
+            "The stencil instructions finally explained the crescent notch: it positioned the timing grid.",
+            "The four NEXT SERIES boxes were still empty when Ada filed the card; nobody knew which series they meant.",
+            "Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "unclaimed_lane-c1-author-intent",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 2,
+      "field": "author_intent",
+      "text": "Let practical cooperation and changing evidence alter trust without treating unknowns as confirmed facts."
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "unclaimed_lane-c1-focus",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 3,
+      "field": "current_focus",
+      "text": "Preserve quantities, custody, epistemic qualifications and the difference between past and current events."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-c1-intent",
+    "toolName": "set_chapter_intent",
+    "isError": false,
+    "details": {
+      "schema": "story/intent@1",
+      "chapter": 1,
+      "rev": 1,
+      "mustKeep": [
+        "Ada remained in the warm-up hall when the first session ended.",
+        "The ten-pound entry payment reduced their travel fund from ninety-four pounds to eighty-four."
+      ],
+      "mustAvoid": [
+        "Do not turn a dream, conditional, conjecture or plan into a completed event."
+      ],
+      "beats": [
+        "Ada handed the relay card to Nessa, who tucked it inside her zipped vest.",
+        "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+        "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+        "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+      ],
+      "hookOps": [
+        {
+          "hookId": "H-1",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-2",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-3",
+          "op": "plant"
+        }
+      ],
+      "cast": [
+        "char:ada",
+        "char:nessa",
+        "char:imani"
+      ],
+      "brief": "Stage the planned changes while preserving source conditions and unresolved questions."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-c1-injected-2-draft",
+    "toolName": "write_draft",
+    "isError": false,
+    "details": {
+      "schema": "story/draft@1",
+      "draftId": "c01-d01",
+      "chapter": 1,
+      "author": "writer",
+      "text": "# A Space on the Card\n\nI had always thought the warm-up hall would smell different without Roland. Two years after his funeral, it still smelled of rubber soles, damp coats and the particular disinfectant that made every municipal building resemble a swimming pool. Somebody had replaced the bench beneath his photograph. Nobody had moved the photograph. I stood under it with a relay card and tried to decide whether arriving early counted as courage when nobody else was there to see it.\n\nThe caretaker's daughter came through the doors carrying a box of paper cups. She asked me whether this was the room for the pension meeting. I pointed towards the stairs, then wondered why it had sounded so natural to direct somebody elsewhere. On my previous visit I had been the person who knew every doorway. Now the lockers had new numbers, and the route to the track went through a glass partition I remembered as a wall.\n\nNessa arrived without an overnight bag. That detail irritated me before I had a reason for it. The club had paid for two beds, and the bus home would not leave until Sunday. A person who came without a bag looked like a person reserving the option to leave. I asked whether she wanted tea. Nessa said she wanted to see the exchange marks. We stood beside the kettle, each waiting for the other to recognise that an ordinary question had become an argument.\n\n“I brought everything in this,” Nessa said, lifting the narrow pack under her coat. It was so small that I had mistaken it for the coat lining. “Including the shirt you said we should wear.”\n\nI could have apologised. Instead I pulled the entry envelope out of my pocket. The ten-pound entry payment reduced our travel fund from ninety-four pounds to eighty-four. I counted the remaining notes twice on the kettle table, partly because Imani wanted a clear account and partly because numbers offered a conversation I understood. “There are eighty-four pounds left,” I said after counting the notes. Nessa asked whether we should reserve the return fare before buying lunches. It was the first sensible question either of us had asked.\n\nImani was alive and counting the entrants aloud beside the bench. She counted faces rather than cards because a team had once entered a dog as its fourth runner. The dog had behaved well until the starter's whistle. This story was apparently funny every year. I remembered laughing at it when Roland told it, and found myself smiling before Imani reached the whistle. Nessa smiled too, without asking who had first told the story. For a moment our different histories in the club seemed less like competing qualifications.\n\nAt the registration desk a clerk asked for the relay card. I let him take it to compare the printed numbers, watched him smooth a bent corner with his thumb, then accepted it back without a mark added or a piece removed. Its brief passage through his hands did not alter its condition. He needed to read the whole card, not possess it for the weekend. When he offered a transparent sleeve, I declined because the sleeve would not fit the pocket in which I had promised myself to keep it.\n\nThe registrar entered Nessa as the registered reserve runner, not a spectator. I read Nessa’s reserve registration myself and now knew it was official. Until I read the register, I had wrongly believed Nessa had come only to watch. The register corrected that mistake: Nessa had come as a runner. Nessa said nothing about the surprise on my face. She signed where the registrar pointed and used the same small, careful letters she put on the club's practice charts.\n\nThe official stamp made the relay entry provisional until both runners checked in. There was nothing dramatic about the stamp. It was a rectangular blur with a corner worn off, and the clerk had to lean on it twice. I found the word provisional more troubling than I expected. At training, a name on a sheet meant a place in the lane. Here there were stages between arriving and being allowed to start, and every stage seemed to belong to somebody behind a desk.\n\nA crescent notch interrupted the relay card’s margin, and neither of us could explain it. I turned the card over, looking for a legend. Four empty boxes remained beneath our team’s names, with no heading to explain what belonged there. The mark beside the notch might have been a worn numeral, but I could not identify it. I did not ask the registrar immediately. I feared sounding like the person who arrived without understanding the most ordinary part of an event I claimed to know.\n\nImani set the timing clock on the bench in the warm-up hall. A blue cord was knotted around the clock handle, although Imani had never tied it there. She tried to loosen the knot with a pencil, then left it alone when the pencil threatened to break. The clock had been borrowed from another club, she said, through a chain of people who all assumed the next person knew its history. I liked its plain face. It had hands, not a screen telling me what sort of runner I had become.\n\nWe went through the movements of an exchange without a baton, using a rolled programme instead. I took the inside position by habit. Nessa suggested moving half a stride farther out, where the painted line was easier to see. I resisted until I tried it and discovered that my shoulder no longer brushed the partition. I agreed to share the practice lane with Nessa, but kept our conversation formal. I called distances and corrections in the same voice I used when reading a committee minute.\n\nThe rough starting block scraped my left palm, leaving a shallow red line. I rinsed the scrape at the sink behind the equipment partition, still inside the warm-up hall. Nessa found a dressing in the club bag and held the backing while I pressed it down. The dressing was wider than the injury and made my hand look injured beyond usefulness. I flexed my fingers to demonstrate that it was not. Nessa looked at the sink rather than at the demonstration.\n\n“You don't have to prove the skin works,” she said. “I can see the fingers moving.”\n\nI almost laughed. I had spent weeks expecting Nessa to ask for reassurance and had not prepared myself to receive any. In the alcove by the sink, the noise from the track arrived muffled through two doors. I could hear a coach counting beats, then stopping to let somebody begin again. Years before the meet, I had waited alone on the outdoor track while Roland packed the hurdles. I had thought his silence meant disappointment. Much later he told me he had been trying to remember where he had parked.\n\n“The cabinet has a second key,” Nessa said, repeating a rumour she had heard outside. Imani shook her head and showed us the single key on its stiff brass ring. The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story. Imani turned that key, took out a stencil and locked the door again. Nessa accepted the correction without inventing another entrance. I envied the ease with which she could put a rumour down.\n\nIf the cabinet had a remote release, we could open it from the track; it had no such release. Imani mentioned that possibility only to explain why someone had once requested an electronic replacement. The request had been refused. She put the stencil beside the clock but left the relay card alone until the next day's official trial. Imani's programme had been marked with so many coloured tabs that I could not tell whether the event was efficiently organised or only comprehensively anticipated.\n\nNessa believed I would ask her to run if a place opened, although I had made no promise. I could sense an expectation without knowing its exact shape. I offered Nessa half the bench and asked what she had been practising since the old captain stopped coming. Nessa described early shifts, late buses and a stretch of level pavement behind a warehouse. None of it resembled my memories of being discovered by a coach. It resembled work undertaken without any witness at all.\n\nTomorrow, I intended to ask the registrar to make Nessa a starter. I did not go back to the desk that morning. The place on the team still felt like something I had been entrusted to protect, and I needed time to understand that protecting it might mean letting somebody new stand there. Imani suspected the notch had once served a timing purpose; its shape alone did not prove that. She promised to look for the older instruction sheet instead of guessing from the cut.\n\nI handed the relay card to Nessa, who tucked it inside her zipped vest. The transfer was deliberate, different from letting a clerk inspect it. Nessa asked whether I was certain. I said that one of us ought to have a pocket that closed. It was a practical reason, and it allowed me to do something generous without describing myself as generous. Nessa checked the zip twice and then stopped touching it.\n\nWhen the first session ended, the others went to inspect the track. I remained in the warm-up hall when the first session ended. I sat for a few minutes beneath Roland's photograph and let my eyes close. In my nap I dreamed that Roland ran the final leg, but I woke to the empty bench. The dream left no runner behind. There was only a cup of cold tea, a clock with an unexplained cord, and a place in a team that had begun to feel less like an absence.\n\nIn the ordinary waking present, Coach Roland entered alive and shook Nessa’s hand; this was neither a memory nor an imagined scene.\n",
+      "digest": "5cb3614645e30e5e",
+      "sentenceRule": "s2",
+      "basis": {
+        "canonHead": null,
+        "controlRev": 3,
+        "bibleRev": 2,
+        "intentRev": 1,
+        "stateRev": 0
+      },
+      "wordCount": {
+        "unit": "en_words",
+        "value": 1685
+      },
+      "calls": []
+    }
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "id": "ds11-e01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [],
+  "firstAction": null,
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "a49aed1e5ee7d6afccd769ceb23d0cf60bed03d087d64b86215822d5547d2c12",
+    "sessionSha256": "c3bbdcbfd0b66002f5369c721977438f13fa125ca47f98ffd319aa20a0a628fb",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 0
+  }
+}

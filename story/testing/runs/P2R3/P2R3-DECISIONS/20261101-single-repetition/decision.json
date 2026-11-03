@@ -1,0 +1,30 @@
+{
+  "schema": "story/p2r3-author-single-repetition@1",
+  "date": "2026-11-01",
+  "authorStatement": "只做一轮，验收标准也改为一轮",
+  "reason": "Author reduces paid formal repetitions and requests corresponding acceptance-standard revision after the completed first CHAP results became visible.",
+  "scope": "Only this V3 acceptance round; previous P2/P2R conclusions unchanged",
+  "repetitions": {"P2-OPEN": 1, "P2-CHAP": 1, "P2-KEEP": 1},
+  "selection": "First complete repetition only; no outcome-based selection or borrowing from supplementary repeats",
+  "selected": {
+    "OPEN": "P2-OPEN/20261031T153047Z-102c3ed-r1",
+    "CHAP": "P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete",
+    "KEEP": "Pending full first repetition on unchanged V3"
+  },
+  "supplementary": [
+    {"run": "P2-OPEN/20261031T154034Z-102c3ed-r2", "status": "complete, excluded from formal quality but all actual requests and fees retained"},
+    {"run": "P2-CHAP/20261101T014757Z-102c3ed-r2", "status": "stopped immediately on author decision; zero committed chapters, seven requests and terminal records retained"}
+  ],
+  "minimumRule": "ceil(previous two-repetition minimum / 2), with unchanged percentage thresholds and complete case coverage mandatory",
+  "minimum": {"T01":50,"T05":12,"T06":30,"T07":25,"W01":15,"W02":10,"W03":30,"W04":10,"W05":10,"E01":15,"E06":10,"K01":15,"K02":15,"K03":50,"K04":30,"K05":50,"K06":50,"K07":50,"K08":10},
+  "stratifiedMinimumPerType": 8,
+  "formalCoverage": {"OPEN":12,"CHAP":"5 prompts x 4 chapters, twenty unique commits","KEEP":9},
+  "scoringVersion": "p2r3-26-single@1",
+  "rawScoringVersionUnchanged": "p2r3-26@1",
+  "freeze": "102c3edb352914934da701a4f6fb717fc610f46a",
+  "roundStopUsd":6.5,
+  "roundMaximumUsd":8,
+  "allActualRunsRemainInHardAudit":true,
+  "datasetOrProductChanges":0,
+  "noSecondKEEPOrCHAPResume":true
+}

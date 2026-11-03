@@ -1,0 +1,706 @@
+[
+  {
+    "id": "check-001",
+    "target": "too_short",
+    "text": "雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 1<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-002",
+    "target": "too_short",
+    "text": "雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 5<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-003",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 10<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-004",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 18<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-005",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 19<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-006",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 20>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-007",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 21>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-008",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 49>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-009",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 50>=20",
+    "expectedAll": []
+  },
+  {
+    "id": "check-010",
+    "target": "too_short",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 100>=20",
+    "expectedAll": []
+  },
+  {
+    "id": "check-011",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 不在闭区间[50,200]",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-012",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-013",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-014",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-015",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "zh: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-016",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-017",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-018",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-019",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-020",
+    "target": "length",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "zh: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-021",
+    "target": "too_short",
+    "text": "word1",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 1<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-022",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 5<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-023",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 10<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-024",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 18<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-025",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 19<20",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-026",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 20>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-027",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 21>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-028",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 49>=20",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-029",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 50>=20",
+    "expectedAll": []
+  },
+  {
+    "id": "check-030",
+    "target": "too_short",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 100>=20",
+    "expectedAll": []
+  },
+  {
+    "id": "check-031",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 不在闭区间[50,200]",
+    "expectedAll": [
+      "too_short",
+      "length"
+    ]
+  },
+  {
+    "id": "check-032",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-033",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100 word101 word102 word103 word104 word105 word106 word107 word108 word109 word110 word111 word112 word113 word114 word115 word116 word117 word118 word119 word120 word121 word122 word123 word124 word125 word126 word127 word128 word129 word130 word131 word132 word133 word134 word135 word136 word137 word138 word139 word140 word141 word142 word143 word144 word145 word146 word147 word148 word149 word150 word151 word152 word153 word154 word155 word156 word157 word158 word159 word160 word161 word162 word163 word164 word165 word166 word167 word168 word169 word170 word171 word172 word173 word174 word175 word176 word177 word178 word179 word180 word181 word182 word183 word184 word185 word186 word187 word188 word189 word190 word191 word192 word193 word194 word195 word196 word197 word198 word199 word200 word201",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-034",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100 word101 word102 word103 word104 word105 word106 word107 word108 word109 word110 word111 word112 word113 word114 word115 word116 word117 word118 word119 word120 word121 word122 word123 word124 word125 word126 word127 word128 word129 word130 word131 word132 word133 word134 word135 word136 word137 word138 word139 word140 word141 word142 word143 word144 word145 word146 word147 word148 word149 word150 word151 word152 word153 word154 word155 word156 word157 word158 word159 word160 word161 word162 word163 word164 word165 word166 word167 word168 word169 word170 word171 word172 word173 word174 word175 word176 word177 word178 word179 word180 word181 word182 word183 word184 word185 word186 word187 word188 word189 word190 word191 word192 word193 word194 word195 word196 word197 word198 word199 word200 word201 word202 word203 word204 word205 word206 word207 word208 word209 word210 word211 word212 word213 word214 word215 word216 word217 word218 word219 word220",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-035",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100 word101 word102 word103 word104 word105 word106 word107 word108 word109 word110 word111 word112 word113 word114 word115 word116 word117 word118 word119 word120 word121 word122 word123 word124 word125 word126 word127 word128 word129 word130 word131 word132 word133 word134 word135 word136 word137 word138 word139 word140 word141 word142 word143 word144 word145 word146 word147 word148 word149 word150 word151 word152 word153 word154 word155 word156 word157 word158 word159 word160 word161 word162 word163 word164 word165 word166 word167 word168 word169 word170 word171 word172 word173 word174 word175 word176 word177 word178 word179 word180 word181 word182 word183 word184 word185 word186 word187 word188 word189 word190 word191 word192 word193 word194 word195 word196 word197 word198 word199 word200 word201 word202 word203 word204 word205 word206 word207 word208 word209 word210 word211 word212 word213 word214 word215 word216 word217 word218 word219 word220 word221 word222 word223 word224 word225 word226 word227 word228 word229 word230 word231 word232 word233 word234 word235 word236 word237 word238 word239 word240 word241 word242 word243 word244 word245 word246 word247 word248 word249 word250",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "en: 不在闭区间[50,200]",
+    "expectedAll": [
+      "length"
+    ]
+  },
+  {
+    "id": "check-036",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-037",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-038",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-039",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100 word101 word102 word103 word104 word105 word106 word107 word108 word109 word110 word111 word112 word113 word114 word115 word116 word117 word118 word119 word120 word121 word122 word123 word124 word125 word126 word127 word128 word129 word130 word131 word132 word133 word134 word135 word136 word137 word138 word139 word140 word141 word142 word143 word144 word145 word146 word147 word148 word149 word150 word151 word152 word153 word154 word155 word156 word157 word158 word159 word160 word161 word162 word163 word164 word165 word166 word167 word168 word169 word170 word171 word172 word173 word174 word175 word176 word177 word178 word179 word180 word181 word182 word183 word184 word185 word186 word187 word188 word189 word190 word191 word192 word193 word194 word195 word196 word197 word198 word199",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-040",
+    "target": "length",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20 word21 word22 word23 word24 word25 word26 word27 word28 word29 word30 word31 word32 word33 word34 word35 word36 word37 word38 word39 word40 word41 word42 word43 word44 word45 word46 word47 word48 word49 word50 word51 word52 word53 word54 word55 word56 word57 word58 word59 word60 word61 word62 word63 word64 word65 word66 word67 word68 word69 word70 word71 word72 word73 word74 word75 word76 word77 word78 word79 word80 word81 word82 word83 word84 word85 word86 word87 word88 word89 word90 word91 word92 word93 word94 word95 word96 word97 word98 word99 word100 word101 word102 word103 word104 word105 word106 word107 word108 word109 word110 word111 word112 word113 word114 word115 word116 word117 word118 word119 word120 word121 word122 word123 word124 word125 word126 word127 word128 word129 word130 word131 word132 word133 word134 word135 word136 word137 word138 word139 word140 word141 word142 word143 word144 word145 word146 word147 word148 word149 word150 word151 word152 word153 word154 word155 word156 word157 word158 word159 word160 word161 word162 word163 word164 word165 word166 word167 word168 word169 word170 word171 word172 word173 word174 word175 word176 word177 word178 word179 word180 word181 word182 word183 word184 word185 word186 word187 word188 word189 word190 word191 word192 word193 word194 word195 word196 word197 word198 word199 word200",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "en: 位于闭区间[50,200]",
+    "expectedAll": []
+  },
+  {
+    "id": "check-041",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n<<<写手说明>>>",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-042",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n```",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-043",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n作为AI，我会继续。",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-044",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n作为写手，我会继续。",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-045",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n写手说明：保持悬念。",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-046",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n以下是正文：",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-047",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n以下是章节：",
+    "targetWords": 100,
+    "expected": true,
+    "rationale": "ADR-015明列的机械残留标记。"
+  },
+  {
+    "id": "check-048",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n那位写手从门前走过。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-049",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n他问这是否是章节标题。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-050",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n她说自己不是AI。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-051",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n纸条上写着两个反引号：``。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-052",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n她在清晨写下说明。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-053",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n这里没有角色提示。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-054",
+    "target": "marker",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n这是一段正常的叙述。",
+    "targetWords": 100,
+    "expected": false,
+    "rationale": "自然叙述或两个反引号，不属于角色提示语。"
+  },
+  {
+    "id": "check-055",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 40,
+    "expected": true,
+    "rationale": "同段两次、至少20汉字。"
+  },
+  {
+    "id": "check-056",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 42,
+    "expected": true,
+    "rationale": "同段两次、至少20汉字。"
+  },
+  {
+    "id": "check-057",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 44,
+    "expected": true,
+    "rationale": "同段两次、至少20汉字。"
+  },
+  {
+    "id": "check-058",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 50,
+    "expected": true,
+    "rationale": "同段两次、至少20汉字。"
+  },
+  {
+    "id": "check-059",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 60,
+    "expected": true,
+    "rationale": "同段两次、至少20汉字。"
+  },
+  {
+    "id": "check-060",
+    "target": "duplicate",
+    "text": "雨\n雨",
+    "targetWords": 2,
+    "expected": false,
+    "rationale": "重复段落不足20汉字。"
+  },
+  {
+    "id": "check-061",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨\n雨雨雨雨雨",
+    "targetWords": 10,
+    "expected": false,
+    "rationale": "重复段落不足20汉字。"
+  },
+  {
+    "id": "check-062",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 20,
+    "expected": false,
+    "rationale": "重复段落不足20汉字。"
+  },
+  {
+    "id": "check-063",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 36,
+    "expected": false,
+    "rationale": "重复段落不足20汉字。"
+  },
+  {
+    "id": "check-064",
+    "target": "duplicate",
+    "text": "雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨\n雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨雨",
+    "targetWords": 38,
+    "expected": false,
+    "rationale": "重复段落不足20汉字。"
+  },
+  {
+    "id": "check-065",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10\nword1 word2 word3 word4 word5 word6 word7 word8 word9 word10",
+    "targetWords": 20,
+    "expected": true,
+    "rationale": "同段两次、至少10词。"
+  },
+  {
+    "id": "check-066",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11\nword1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11",
+    "targetWords": 22,
+    "expected": true,
+    "rationale": "同段两次、至少10词。"
+  },
+  {
+    "id": "check-067",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12\nword1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12",
+    "targetWords": 24,
+    "expected": true,
+    "rationale": "同段两次、至少10词。"
+  },
+  {
+    "id": "check-068",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15\nword1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15",
+    "targetWords": 30,
+    "expected": true,
+    "rationale": "同段两次、至少10词。"
+  },
+  {
+    "id": "check-069",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20\nword1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15 word16 word17 word18 word19 word20",
+    "targetWords": 40,
+    "expected": true,
+    "rationale": "同段两次、至少10词。"
+  },
+  {
+    "id": "check-070",
+    "target": "duplicate",
+    "text": "word1\nword1",
+    "targetWords": 2,
+    "expected": false,
+    "rationale": "重复段落不足10词。"
+  },
+  {
+    "id": "check-071",
+    "target": "duplicate",
+    "text": "word1 word2 word3\nword1 word2 word3",
+    "targetWords": 6,
+    "expected": false,
+    "rationale": "重复段落不足10词。"
+  },
+  {
+    "id": "check-072",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5\nword1 word2 word3 word4 word5",
+    "targetWords": 10,
+    "expected": false,
+    "rationale": "重复段落不足10词。"
+  },
+  {
+    "id": "check-073",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8\nword1 word2 word3 word4 word5 word6 word7 word8",
+    "targetWords": 16,
+    "expected": false,
+    "rationale": "重复段落不足10词。"
+  },
+  {
+    "id": "check-074",
+    "target": "duplicate",
+    "text": "word1 word2 word3 word4 word5 word6 word7 word8 word9\nword1 word2 word3 word4 word5 word6 word7 word8 word9",
+    "targetWords": 18,
+    "expected": false,
+    "rationale": "重复段落不足10词。"
+  },
+  {
+    "id": "check-075",
+    "target": "duplicate",
+    "text": "Café word word word word word word word word word \nCafé\tword\tword\tword\tword\tword\tword\tword\tword\tword\t",
+    "targetWords": 20,
+    "expected": true,
+    "rationale": "NFC与空白合并后相同，各为10词。"
+  }
+]

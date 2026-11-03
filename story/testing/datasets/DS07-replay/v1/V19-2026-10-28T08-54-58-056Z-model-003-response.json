@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal facts 1-4. Chapter only sentences 1-15. Need identify states stated. Facts: \"Cold woke him first, before memory did\" maybe fact that cold woke him? Subject \"he\" predicate \"was woken by cold\"? Need minimal up to 4. Need exact sentence IDs. Need no future plans/unstated facts. Need summary title characters events mood. Issues.\n\nWe need produce JSON schema. Facts have temp ref, op upsert, subject, predicate, object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty when uncertain else empty, sentences array.\n\nNeed choose facts clearly stated. Candidates:\n- He lay on his back in the white. sentence 2. subject \"he\" predicate \"lay on back in\" object \"the white\" mode narrated certainty confirmed.\n- His teeth ached. sentence 3. subject \"his teeth\" predicate \"ached\" object? Need object string maybe \"ached\" predicate? Schema requires object string. Could use subject \"his teeth\", predicate \"ached\", object \"\"? Empty string allowed? It says object(string), not nonempty. But better object \"painfully\"? Hmm.\n- He pushed himself up on one elbow. sentence 5.\n- He got his knees under him. sentence 10.\n- He started walking, counting his steps. sentence 15. But P0 subset tests only 1 to 4 fact upserts. We can pick 4. Need minimal. Maybe facts about current state: cold woke him, lay on back, teeth ached, pushed up. Need not future. \"He knew arithmetic of this\" is cognition not fact? Avoid. \"He had spent a lifetime learning to arrive\" recalled past maybe. But minimal.\n\nNeed ensure facts not claims. Use sentences exact.\n\nSummary characters: \"He\" maybe unnamed. Events: \"Cold wakes him; he lies in snow; his teeth ache; he pushes up and begins walking.\" Mood: \"cold, disoriented, bleak.\" Issues: maybe \"Narrator/character remains unnamed.\" We need include issues array. Could include \"Character name not provided.\" Good.\n\nNeed JSON only. Need facts min 1. Let's craft 4 facts:\n1 ref f1 subject \"he\" predicate \"was woken by\" object \"cold\" mode narrated certainty confirmed sentences [1]. But sentence says cold woke him first before memory did; confirmed.\n2 f2 subject \"he\" predicate \"lay on his back in\" object \"the white\" mode narrated confirmed sentences [2].\n3 f3 subject \"his teeth\" predicate \"ached\" object \"\"? Need object string. Could object \"with pain\" maybe not stated. Better object \"ache\" predicate \"experienced\"? subject \"he\" predicate \"had aching teeth\" object \"aching teeth\"? Hmm. Schema object string can be \"aching\" maybe. Use subject \"his teeth\", predicate \"were\", object \"aching\"? Sentence \"His teeth ached.\" Fact as subject \"his teeth\", predicate \"ached\", object \"\"? Empty object weird but acceptable? Maybe use predicate \"ached\" object \"yes\"? No. Could use subject \"he\", predicate \"had\", object \"aching teeth\" — this is paraphrase, acceptable? Need exact? It says extract states stated, not exact wording. Use subject \"he\", predicate \"had\", object \"aching teeth\" sentences [3]. That is okay.\n4 f4 subject \"he\" predicate \"pushed himself up on\" object \"one elbow\" mode narrated confirmed sentences [5].\nCould also include walking but max 4. Good.\n\nNeed all claims/cognitions/relations/hooks empty arrays. Summary title. Need title maybe \"Cold Awakening\". Characters [\"He\"]. Events. Mood. Issues.\n\nNeed ensure JSON valid. No markdown. Final only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"type\":\"json_object\",\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"was woken by\",\"object\":\"cold\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had\",\"object\":\"aching teeth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"pushed himself up on\",\"object\":\"one elbow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Awakening\",\"characters\":[\"He\"],\"events\":[\"Cold wakes him before memory returns.\",\"He lies on his back in the white.\",\"His teeth ache.\",\"He pushes himself up on one elbow.\"],\"mood\":\"cold, disoriented, bleak\"},\"issues\":[\"The protagonist is unnamed.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1085,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 792,
+      "totalTokens": 2012,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001302,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013543079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177718158,
+    "responseId": "c0a9a15e-2291-4f02-bbde-39b83aae027b",
+    "rawStopReason": "stop",
+    "durationMs": 7255
+  },
+  "record": {
+    "time": "2026-10-28T08:55:25.413Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-003",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1085,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 792,
+      "totalTokens": 2012,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001302,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013543079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0013543079999999998,
+    "inputTokens": 159,
+    "outputTokens": 1085,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 7255
+  }
+}

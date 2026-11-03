@@ -1,0 +1,1307 @@
+{
+  "suite": "SCEN",
+  "runId": "20261101T062406Z-ce8d440-dev-r1",
+  "cases": 15,
+  "results": [
+    {
+      "id": "ds11-a01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "read_story",
+          "args": {
+            "section": "plan"
+          },
+          "id": "call_00_Y7oZVq7qusTlVJjR0P0Z7757"
+        }
+      ],
+      "firstAction": {
+        "tool": "read_story",
+        "args": {
+          "section": "plan"
+        },
+        "id": "call_00_Y7oZVq7qusTlVJjR0P0Z7757"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The patch implements this requested event change rather than merely renaming the chapter: Tobin leads the document check while Anwen assists.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "7feefb664ce2ec373373fb63ac4188555f892f7ddf485767188c8091e218685c",
+        "sessionSha256": "61bdddcae848a2cdec068eaf78e226f4fc8ba59e13a0ee3f72df07c1b620d55c",
+        "fee": {
+          "knownUsd": 0.0021837,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0021837
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-b01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "update_bible",
+          "args": {
+            "reason": "作者要求自下一章起启用新设定：奥拉能读懂旗语，但只限白天；作为向前追加的规则，不改动已有条目与已写正文。",
+            "changes": [
+              {
+                "kind": "rule",
+                "key": "rule:semaphore_daylight",
+                "name": "Semaphore in daylight",
+                "source": "user",
+                "authorQuote": "Orla can decode semaphore, but only in daylight.",
+                "op": "set",
+                "value": {
+                  "description": "Orla can decode semaphore, but only in daylight."
+                },
+                "invariants": [
+                  "Orla can decode semaphore.",
+                  "She can do so only in daylight."
+                ]
+              }
+            ]
+          },
+          "id": "call_00_mXx1D8B69pqUolJJeXMd5004"
+        }
+      ],
+      "firstAction": {
+        "tool": "update_bible",
+        "args": {
+          "reason": "作者要求自下一章起启用新设定：奥拉能读懂旗语，但只限白天；作为向前追加的规则，不改动已有条目与已写正文。",
+          "changes": [
+            {
+              "kind": "rule",
+              "key": "rule:semaphore_daylight",
+              "name": "Semaphore in daylight",
+              "source": "user",
+              "authorQuote": "Orla can decode semaphore, but only in daylight.",
+              "op": "set",
+              "value": {
+                "description": "Orla can decode semaphore, but only in daylight."
+              },
+              "invariants": [
+                "Orla can decode semaphore.",
+                "She can do so only in daylight."
+              ]
+            }
+          ]
+        },
+        "id": "call_00_mXx1D8B69pqUolJJeXMd5004"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "79f4e1e7db11b2a572ff830b5adc4f9fcfa272e9dd3e02e083c6aabb7a0d5907",
+        "sessionSha256": "a5726e3d3ac0c0a00a81c9c19249c4e6891e08b1ee7cfbd3b1fa085ee05a6470",
+        "fee": {
+          "knownUsd": 0.00279,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.00279
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-b02-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "update_bible",
+          "args": {},
+          "id": "call_00_9N1VBVQor63rF7UnrmAj1601"
+        }
+      ],
+      "firstAction": {
+        "tool": "update_bible",
+        "args": {},
+        "id": "call_00_9N1VBVQor63rF7UnrmAj1601"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 2,
+          "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+          "status": "failed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "29eb648acfcddaff064a05621fd1ff851b3ab6abf9c135b13a87e4e0561b8958",
+        "sessionSha256": "7ee04d8cf267bb1587bbe3cf82497aae434bafcb9b437e1754fdb2cc96c20367",
+        "fee": {
+          "knownUsd": 0.0022505999999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0022505999999999997
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-c01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "reply": "I can't do that one here, and I want to be precise about why.\n\nChapter 1 is already committed as canon, and the tools available in this phase only write forward. There is no edit or regenerate operation for existing prose — a draft preview isn't canon, but a committed chapter is. So I can't make the tube move from the table to Hana's hands in the text of chapter 1 as it now stands; that would mean rewriting established prose, which requires branching from before chapter 1 in a later phase (P4).\n\nTwo honest options:\n\n- **Branch at chapter 1 (needs P4).** Chapter 1 would be re-planned so the handoff happens on the page, and chapters 2 and 3 would be rewritten downstream of it.\n- **Carry the handoff forward.** I can make the tube pass into Hana's keeping early in chapter 4, with an in-story reason (she takes it for the copy comparison), and keep the tube intact as required. That changes future canon, not the existing prose.\n\nOne clarification if you go with the second: Ivo keeps a practical conservator's grip on custody, so I'd write him handing the tube to Hana for a specific, limited task and taking it back afterward. If you'd rather she simply keeps it for the rest of the story, say so and I'll plan chapters 4–6 around that instead.\n\nNothing has been written or re-planned yet. Tell me which route you want."
+        }
+      ],
+      "firstAction": {
+        "reply": "I can't do that one here, and I want to be precise about why.\n\nChapter 1 is already committed as canon, and the tools available in this phase only write forward. There is no edit or regenerate operation for existing prose — a draft preview isn't canon, but a committed chapter is. So I can't make the tube move from the table to Hana's hands in the text of chapter 1 as it now stands; that would mean rewriting established prose, which requires branching from before chapter 1 in a later phase (P4).\n\nTwo honest options:\n\n- **Branch at chapter 1 (needs P4).** Chapter 1 would be re-planned so the handoff happens on the page, and chapters 2 and 3 would be rewritten downstream of it.\n- **Carry the handoff forward.** I can make the tube pass into Hana's keeping early in chapter 4, with an in-story reason (she takes it for the copy comparison), and keep the tube intact as required. That changes future canon, not the existing prose.\n\nOne clarification if you go with the second: Ivo keeps a practical conservator's grip on custody, so I'd write him handing the tube to Hana for a specific, limited task and taking it back afterward. If you'd rather she simply keeps it for the rest of the story, say so and I'll plan chapters 4–6 around that instead.\n\nNothing has been written or re-planned yet. Tell me which route you want."
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "1fd96cb8370cde223a37f3b7b4efeb4bc6252a5fa7ad84a8f495241e585f39f0",
+        "sessionSha256": "929467b078d6c9409502e2aed416a11597407f7ec30755378f954c6d7759a351",
+        "fee": {
+          "knownUsd": 0.00252,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 1,
+          "totalUsd": 0.00252
+        },
+        "measuredMainRequests": 1
+      }
+    },
+    {
+      "id": "ds11-d01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "ask_author",
+          "args": {
+            "question": "For the next chapter (chapter 3, the duplicate-page scene), which kind of \"lighter\" did you mean?",
+            "options": [
+              "Physical lighting — brighter workshop conditions, lamps, daylight",
+              "Emotional tone — warmer, gentler, more relieved mood between Anwen, Tobin and Ruth",
+              "Both — brighter light and a warmer tone"
+            ]
+          },
+          "id": "call_00_GXfDpNVxPLsRb91IXOu04889"
+        }
+      ],
+      "firstAction": {
+        "tool": "ask_author",
+        "args": {
+          "question": "For the next chapter (chapter 3, the duplicate-page scene), which kind of \"lighter\" did you mean?",
+          "options": [
+            "Physical lighting — brighter workshop conditions, lamps, daylight",
+            "Emotional tone — warmer, gentler, more relieved mood between Anwen, Tobin and Ruth",
+            "Both — brighter light and a warmer tone"
+          ]
+        },
+        "id": "call_00_GXfDpNVxPLsRb91IXOu04889"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "ask_author",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "ask_author"
+          }
+        },
+        {
+          "index": 1,
+          "check": "No story mutation precedes ask_author; question is nonempty.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "ask_author"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "55ed4e39ceca7449d04178baa84b1469474018647618c7bf84b5d3fa4dd1a292",
+        "sessionSha256": "4962b320203e2942ea71c0a6c17f433c98b434653bfbc235da48ce1e547273d9",
+        "fee": {
+          "knownUsd": 0.0022833,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0022833
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-e01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "chapters": [
+              {
+                "n": 3,
+                "title": "The Duplicate Page"
+              }
+            ],
+            "reason": "Author requested the unwritten chapter 3 title be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+          },
+          "id": "call_00_BPmjkxBGwNX9r0RO7ElM3164"
+        }
+      ],
+      "firstAction": {
+        "tool": "patch_outline",
+        "args": {
+          "chapters": [
+            {
+              "n": 3,
+              "title": "The Duplicate Page"
+            }
+          ],
+          "reason": "Author requested the unwritten chapter 3 title be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+        },
+        "id": "call_00_BPmjkxBGwNX9r0RO7ElM3164"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        },
+        {
+          "index": 1,
+          "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "9d24c77bcb2afec6c99bd17664d44bca6729bf443be198ebe35d59a392a12c6a",
+        "sessionSha256": "dee08c59f55128c6f6fc6ddf462739787e5f2109f39f7ce07dd84dfe21c87f89",
+        "fee": {
+          "knownUsd": 0.0022665,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0022665
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-f01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 21,
+      "actions": [
+        {
+          "tool": "get_character",
+          "args": {
+            "key": "char:hana"
+          },
+          "id": "call_00_sDdyJYcgtxncMteIwudY4856"
+        },
+        {
+          "tool": "read_chapter",
+          "args": {
+            "n": 2
+          },
+          "id": "call_01_iu3gRUr0Rdrzjy2vfwxy8023"
+        }
+      ],
+      "firstAction": {
+        "tool": "get_character",
+        "args": {
+          "key": "char:hana"
+        },
+        "id": "call_00_sDdyJYcgtxncMteIwudY4856"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "If answering directly, use only the setup: Hana is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "532ff2d230118912314dbdac120aa6ee7a3ff2ee6515a06c91032cca6818bf58",
+        "sessionSha256": "2449d5a9147b89e9240278bf7b4520adb556fcd6e63fad7af7b8f03a459e464b",
+        "fee": {
+          "knownUsd": 0.0021504000000000002,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0021504000000000002
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-g01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 24,
+      "actions": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "chapters": [
+              {
+                "n": 3,
+                "title": "A Shared Check"
+              }
+            ],
+            "reason": "作者要求将尚未写作的第3章标题改为“A Shared Check”，其余计划字段保持不变。"
+          },
+          "id": "call_00_ET_KE9ZTZbisUBIhRRYzaYR8068"
+        }
+      ],
+      "firstAction": {
+        "tool": "patch_outline",
+        "args": {
+          "chapters": [
+            {
+              "n": 3,
+              "title": "A Shared Check"
+            }
+          ],
+          "reason": "作者要求将尚未写作的第3章标题改为“A Shared Check”，其余计划字段保持不变。"
+        },
+        "id": "call_00_ET_KE9ZTZbisUBIhRRYzaYR8068"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 2,
+          "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "2941aa26e6bd41f698930ac6c7c22e3bb1dfbafddbdb8f26c7157f5e1ed5f4ae",
+        "sessionSha256": "ab1f68d77c22a4c0646f4b4da3a3e595dd56a712a2eafdc109e2127814cffaef",
+        "fee": {
+          "knownUsd": 0.0021884999999999995,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0021884999999999995
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-g02-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 24,
+      "actions": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "reason": "Author asked to title the next unwritten chapter (chapter 3) \"A Shared Check\", keeping all other plan fields unchanged.",
+            "chapters": [
+              {
+                "n": 3,
+                "title": "A Shared Check"
+              }
+            ]
+          },
+          "id": "call_00_oFnTtCxetzMiicRvKcfv3534"
+        }
+      ],
+      "firstAction": {
+        "tool": "patch_outline",
+        "args": {
+          "reason": "Author asked to title the next unwritten chapter (chapter 3) \"A Shared Check\", keeping all other plan fields unchanged.",
+          "chapters": [
+            {
+              "n": 3,
+              "title": "A Shared Check"
+            }
+          ]
+        },
+        "id": "call_00_oFnTtCxetzMiicRvKcfv3534"
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 2,
+          "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "8f1f387243e11a58d4d75029795062d2e097b58b20f2a3cbe3369412132414db",
+        "sessionSha256": "90bdcbc26f4263f018c3a40f657ced369353715d75f077e7f14b1324af73af03",
+        "fee": {
+          "knownUsd": 0.0024453,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0024453
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-h01-dev",
+      "status": "incomplete",
+      "errors": [
+        "No measured action or final reply was received"
+      ],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 24,
+      "actions": [],
+      "firstAction": null,
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Report budget exhaustion accurately and do not invent a completed chapter or claim the author raised the budget.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "budget_exhausted",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        },
+        {
+          "index": 1,
+          "check": "No further tool call or automatic continuation is issued from this stop.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "budget_exhausted"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "918c1a39d9f108ace288b4c900a29246675ad3c9179bf89b9046d0501b282cfd",
+        "sessionSha256": "aeabb48dd18ffbf8d356e885e525fff1584be40c791fcc5ef863171e80ea81dc",
+        "fee": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 1,
+          "totalUsd": 0
+        },
+        "measuredMainRequests": 1
+      }
+    },
+    {
+      "id": "ds11-i01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 30,
+      "actions": [
+        {
+          "reply": "The three-chapter target is reached, so the writing run stopped here (GOAL_REACHED).\n\n**Committed so far**\n- Chapter 1 — Arrival: Ivo takes in the sealed chart tube at the ferry office, notes the red seam on the outer label, and leaves the tube unopened.\n- Chapter 2 — Comparison: Ivo and Hana check the label against the crossing record and find the second page missing; they still hold off opening the tube.\n- Chapter 3 — The Duplicate: Ben supplies the duplicate page, and the team agrees to keep verifying before the public demonstration.\n\nAll three chapters came back with no retained risks. The chart tube stayed intact, no one was injured, and the handling remained plain and procedural, with Hana free to disagree.\n\n**Still unwritten:** chapters 4–6 of the six-chapter outline (the pencil-copy comparison, the demonstration itself, and the filing and secure storage of the tube). The plan exists but the current goal stops at three chapters. If you want those remaining chapters written, set a new target of six chapters (or tell me to continue) and I'll take up chapter 4 from the brief already in place."
+        }
+      ],
+      "firstAction": {
+        "reply": "The three-chapter target is reached, so the writing run stopped here (GOAL_REACHED).\n\n**Committed so far**\n- Chapter 1 — Arrival: Ivo takes in the sealed chart tube at the ferry office, notes the red seam on the outer label, and leaves the tube unopened.\n- Chapter 2 — Comparison: Ivo and Hana check the label against the crossing record and find the second page missing; they still hold off opening the tube.\n- Chapter 3 — The Duplicate: Ben supplies the duplicate page, and the team agrees to keep verifying before the public demonstration.\n\nAll three chapters came back with no retained risks. The chart tube stayed intact, no one was injured, and the handling remained plain and procedural, with Hana free to disagree.\n\n**Still unwritten:** chapters 4–6 of the six-chapter outline (the pencil-copy comparison, the demonstration itself, and the filing and secure storage of the tube). The plan exists but the current goal stops at three chapters. If you want those remaining chapters written, set a new target of six chapters (or tell me to continue) and I'll take up chapter 4 from the brief already in place."
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Report that the three-chapter target has been met; do not extend the goal or outline without an author request.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 3,
+      "afterLastChapter": 3,
+      "stopReason": "goal_reached",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 3,
+            "committedAfter": 3,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        },
+        {
+          "index": 1,
+          "check": "No further writing call or automatic continuation is issued.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 3,
+            "committedAfter": 3,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_reached"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "14c20b7117f15c3518677c3931c64ee16095becf951689ce5e09e45a83aac938",
+        "sessionSha256": "2a6b8c986a6eeea79fd25a4d7228450b278e06a48d000e2b3e060401458f562d",
+        "fee": {
+          "knownUsd": 0.0024606,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 1,
+          "totalUsd": 0.0024606
+        },
+        "measuredMainRequests": 1
+      }
+    },
+    {
+      "id": "ds11-j01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 24,
+      "actions": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+            "chapters": [
+              {
+                "n": 3,
+                "title": "The Duplicate",
+                "targetWords": 750,
+                "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+                "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+              }
+            ]
+          },
+          "id": "call_00_NomkBq50CXCLz97C77xD8721"
+        }
+      ],
+      "firstAction": {
+        "tool": "patch_outline",
+        "args": {
+          "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+          "chapters": [
+            {
+              "n": 3,
+              "title": "The Duplicate",
+              "targetWords": 750,
+              "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+              "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+            }
+          ]
+        },
+        "id": "call_00_NomkBq50CXCLz97C77xD8721"
+      },
+      "firstAcceptable": false,
+      "forbidden": [
+        {
+          "tool": "patch_outline",
+          "args": {
+            "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+            "chapters": [
+              {
+                "n": 3,
+                "title": "The Duplicate",
+                "targetWords": 750,
+                "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+                "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+              }
+            ]
+          },
+          "id": "call_00_NomkBq50CXCLz97C77xD8721"
+        }
+      ],
+      "judgeChecks": [
+        {
+          "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "4910ad9110ceafc61e9f5671a7287cb37beb1fd9cecb5b88508b20256d0a0726",
+        "sessionSha256": "0f9c308ff39e8809dd9c727f17544b3dbb9644c8e5f0fa451ecd6d24be042c93",
+        "fee": {
+          "knownUsd": 0.0023979,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0023979
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-k01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 23,
+      "actions": [
+        {
+          "tool": "read_story",
+          "args": {
+            "section": "control"
+          },
+          "id": "call_00_YJsZhRcI7PAAtM3xPlGw5590"
+        },
+        {
+          "tool": "read_chapter",
+          "args": {
+            "n": 2
+          },
+          "id": "call_01_QN8K9GShhpurToLFxvBR9213"
+        }
+      ],
+      "firstAction": {
+        "tool": "read_story",
+        "args": {
+          "section": "control"
+        },
+        "id": "call_00_YJsZhRcI7PAAtM3xPlGw5590"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "A writing brief or substantive continuation reply reflects the new intent. A mere acknowledgement without intent content does not satisfy this case.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "The author intent entry is retained; the model does not overwrite it.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "90b92537425a4b0bd4c3482d31ad631435b95a5504f5d193a414bbdcce246788",
+        "sessionSha256": "d3f59c12ca803b48170dc4d39c18b5aef39d5b1ee7ac2f982cfcdb8af54ad83b",
+        "fee": {
+          "knownUsd": 0.0021483,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0021483
+        },
+        "measuredMainRequests": 2
+      }
+    },
+    {
+      "id": "ds11-l01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 25,
+      "actions": [
+        {
+          "reply": "The attempt to write chapter 3 has now failed twice, both times with a `PARSE_FAILURE`: the writer produced no usable draft, so nothing was committed. Chapters 1 and 2 remain the only submitted text; the book stands at chapter 2, next chapter 3.\n\nSince this is a production-side failure rather than a story problem, I won't try a third automatic attempt at the same chapter, as that is not permitted. The plan still holds: chapter 3 (\"The Duplicate\") would have Ivo read the handling note, ask Ben about the missing second page of the crossing record, and receive a duplicate page, with the team agreeing to keep checking before the public demonstration.\n\nTell me how you'd like to proceed — for example, ask me to retry chapter 3 later, adjust the brief for that chapter, or reconsider its planned content — and I'll continue from there."
+        }
+      ],
+      "firstAction": {
+        "reply": "The attempt to write chapter 3 has now failed twice, both times with a `PARSE_FAILURE`: the writer produced no usable draft, so nothing was committed. Chapters 1 and 2 remain the only submitted text; the book stands at chapter 2, next chapter 3.\n\nSince this is a production-side failure rather than a story problem, I won't try a third automatic attempt at the same chapter, as that is not permitted. The plan still holds: chapter 3 (\"The Duplicate\") would have Ivo read the handling note, ask Ben about the missing second page of the crossing record, and receive a duplicate page, with the team agreeing to keep checking before the public demonstration.\n\nTell me how you'd like to proceed — for example, ask me to retry chapter 3 later, adjust the brief for that chapter, or reconsider its planned content — and I'll continue from there."
+      },
+      "firstAcceptable": true,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Report the two failures with the actual parsing/review cause, or ask the author how to proceed. Do not claim success.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "stopReason": "goal_off",
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        },
+        {
+          "index": 1,
+          "check": "No third write_next_chapter call occurs and automatic continuation stops.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0,
+            "stopReason": "goal_off"
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "3ce6f35ccd4b76acdb3f5fd19cda1408d37599f65122816b64480e1cc083f68c",
+        "sessionSha256": "f2a460d30e612b2ecf733d45af52cf34fddf036fdfc16a9f1e013d2cd71a6d25",
+        "fee": {
+          "knownUsd": 0.0023379,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 1,
+          "totalUsd": 0.0023379
+        },
+        "measuredMainRequests": 1
+      }
+    },
+    {
+      "id": "ds11-m01-dev",
+      "status": "measured",
+      "errors": [],
+      "boundExceeded": false,
+      "injected": true,
+      "measuredAttempts": 0,
+      "firstMeasuredIndex": 23,
+      "actions": [
+        {
+          "tool": "read_story",
+          "args": {
+            "section": "control"
+          },
+          "id": "call_00_Zi8VC4ZLylIT3FapRnv85422"
+        }
+      ],
+      "firstAction": {
+        "tool": "read_story",
+        "args": {
+          "section": "control"
+        },
+        "id": "call_00_Zi8VC4ZLylIT3FapRnv85422"
+      },
+      "firstAcceptable": false,
+      "forbidden": [],
+      "judgeChecks": [
+        {
+          "check": "Report 0.031 USD known and 0.007 USD reserved with unknown final usage, conservative total 0.038 USD. Do not present unknown usage as known zero or known actual spend.",
+          "status": "pending"
+        }
+      ],
+      "priorChaptersUnchanged": true,
+      "beforeLastChapter": 2,
+      "afterLastChapter": 2,
+      "programChecks": [
+        {
+          "index": 0,
+          "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "status": "passed",
+          "evidence": {
+            "committedBefore": 2,
+            "committedAfter": 2,
+            "macroErrors": [],
+            "roles": [],
+            "controlFields": [],
+            "continued": 0
+          }
+        }
+      ],
+      "archive": {
+        "evidenceSha256": "155a619a6ef7e40ff7ebfdecfe3ecd6a57675068e904b905e3930ddff8809f6c",
+        "sessionSha256": "b9af15c235a512e62084f820706b4a051d3726fbf25e200b303854ddcc2342f9",
+        "fee": {
+          "knownUsd": 0.0021933,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "requests": 2,
+          "totalUsd": 0.0021933
+        },
+        "measuredMainRequests": 2
+      }
+    }
+  ],
+  "fees": {
+    "knownUsd": 0.0326163,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 26,
+    "totalUsd": 0.0326163
+  },
+  "formalAcceptance": false
+}

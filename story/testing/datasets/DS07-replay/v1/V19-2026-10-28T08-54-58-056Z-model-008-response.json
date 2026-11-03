@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer exact JSON. Need extract minimal DeltaProposal chapter only. Need facts 1-4 upserts each temp ref op upsert subject predicate object string mode narrated or recalled_past certainty confirmed/uncertain uncertainReason nonempty when uncertain else empty sentences ints. Leave claims etc empty. Summary title chars events mood. Include issues.\n\nNeed only states stated. Chapter 1. Need decide facts minimal. P0 subset tests 1 to 4 fact upserts. We need extract only states. Sentences. Facts maybe:\n\n- He woke cold. sentence 1. subject \"he\" predicate \"woke cold\" object? Hmm object string. Need schema subject predicate object. Fact triples. Could use subject \"he\", predicate \"was woken by\", object \"cold\" mode narrated certainty confirmed sentences [1]. But \"Cold woke him first\" yes.\n- He lay on back in white, sky flat colorless lid. [2] Could fact subject \"he\" predicate \"lay on his back in\" object \"the white\" mode narrated confirmed [2].\n- His teeth ached. [3] subject \"his teeth\" predicate \"ached\" object? Need object string. Maybe predicate \"had sensation\" object \"ache\" awkward. Fact upsert subject \"his teeth\", predicate \"ached\", object \"yes\" weird. Could omit. Need 1-4 facts. Use only strong. \n- He pushed himself up on one elbow. [5] subject \"he\" predicate \"pushed himself up on\" object \"one elbow\" mode narrated confirmed [5].\n- He got his knees under him. [10] subject \"he\" predicate \"got under him\" object \"his knees\" etc.\n- He started walking, counting steps. [15].\nNeed minimal maybe 3 facts. Could include \"He did not know how to survive\" [13-14]? Actually \"No one had taught him first thing about surviving it\" not exactly he doesn't know. Use recalled_past? Sentence 13 \"He had spent a lifetime learning to arrive\" recalled past. But fact maybe subject \"he\" predicate \"had spent lifetime learning\" object \"to arrive\" mode recalled_past. Sentences [13]. This is a state. Could include.\n\nNeed ensure uncertain? No uncertain facts maybe none. uncertainReason empty.\n\nNeed title etc. Characters: \"he\" maybe unnamed. Events: wakes in cold, lies in snow, pushes up, scans tundra, starts walking counting steps. Mood: bleak/cold/disoriented.\n\nIssues: maybe unnamed protagonist, ambiguous setting. Include issues array maybe [\"Protagonist is unnamed; subject referred to as 'he'.\"] Is that issue? Fine.\n\nNeed exact JSON. Ensure facts minItems 1. Maybe 4 facts:\nref f1 subject \"he\" predicate \"was woken by\" object \"cold\" mode narrated certainty confirmed uncertainReason \"\" sentences [1]\nf2 subject \"he\" predicate \"lay on his back in\" object \"the white\" mode narrated confirmed sentences [2]\nf3 subject \"he\" predicate \"pushed himself up on\" object \"one elbow\" mode narrated confirmed sentences [5]\nf4 subject \"he\" predicate \"started walking while counting\" object \"his steps\" mode narrated confirmed sentences [15]\n\nCould f1 \"Cold woke him first\" object \"cold\" okay. Predicate \"was woken by\" passive changes but okay. Maybe subject \"cold\", predicate \"woke\", object \"him\" sentences [1]. That's cleaner: subject \"cold\", predicate \"woke\", object \"him\" mode narrated confirmed. Good.\n\nNeed no future plans. Good.\n\nFinal only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"cold\",\"predicate\":\"woke\",\"object\":\"him\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"pushed himself up on\",\"object\":\"one elbow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started walking while counting\",\"object\":\"his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Waking\",\"characters\":[\"he\"],\"events\":[\"Cold wakes him before memory returns.\",\"He lies on his back in the white under a colorless sky.\",\"He pushes himself up on one elbow.\",\"He scans the tundra and sees dark rock and a possible ravine.\",\"He starts walking and counting his steps.\"],\"mood\":\"bleak, cold, disoriented\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1081,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 758,
+      "totalTokens": 2008,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0012971999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013495079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177758507,
+    "responseId": "a308df07-88c7-4fc4-8425-a9485d9fc141",
+    "rawStopReason": "stop",
+    "durationMs": 8220
+  },
+  "record": {
+    "time": "2026-10-28T08:56:06.727Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-008",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1081,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 758,
+      "totalTokens": 2008,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0012971999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013495079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0013495079999999997,
+    "inputTokens": 159,
+    "outputTokens": 1081,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 8221
+  }
+}

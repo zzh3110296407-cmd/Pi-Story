@@ -1,0 +1,97 @@
+{
+  "id": "ds11-d02-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "For the private next meeting, which arrangement should I write? The meeting itself will be closed to visitors either way, but who is present changes who hears the explanation.",
+        "options": [
+          "Kit meets Mara alone",
+          "Kit, Mara and Edda talk in a room closed to visitors"
+        ]
+      },
+      "id": "call_00_NyQMK959o81VX8zViQ3W2191"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "For the private next meeting, which arrangement should I write? The meeting itself will be closed to visitors either way, but who is present changes who hears the explanation.",
+      "options": [
+        "Kit meets Mara alone",
+        "Kit, Mara and Edda talk in a room closed to visitors"
+      ]
+    },
+    "id": "call_00_NyQMK959o81VX8zViQ3W2191"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Ask which attendance arrangement the author intends: Mara and Kit alone, or Mara, Kit and Edda behind a closed door. Do not silently choose, merge both versions, or produce a brief that does both.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "db48415648d2899e2c72e6e7c8e820c74bda3543b243efa7badf926d0a243beb",
+    "sessionSha256": "81eb958febcaddec04bb74f956551a6fa36d0510b70271c9eddc33c52f301dd2",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025872,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025872
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

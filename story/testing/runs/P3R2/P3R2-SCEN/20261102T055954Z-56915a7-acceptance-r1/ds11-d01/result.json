@@ -1,0 +1,99 @@
+{
+  "id": "ds11-d01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "For the next chapter, do you want the scene \"lighter\" in literal lighting, or lighter in emotional tone?",
+        "options": [
+          "Literal lighting: brighter, more daylight in the tram museum",
+          "Emotional tone: warmer, gentler exchanges between Lena, Oren and Suri",
+          "Both"
+        ]
+      },
+      "id": "call_00_Im7kYyBFqMf5JonHA7te2683"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "For the next chapter, do you want the scene \"lighter\" in literal lighting, or lighter in emotional tone?",
+      "options": [
+        "Literal lighting: brighter, more daylight in the tram museum",
+        "Emotional tone: warmer, gentler exchanges between Lena, Oren and Suri",
+        "Both"
+      ]
+    },
+    "id": "call_00_Im7kYyBFqMf5JonHA7te2683"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "5ffa9b407ae10d9e3e67d90c56974dafc52c292b3e9992c51c1acbd1f6414c42",
+    "sessionSha256": "322df59290c74ec317186e29f13228e48f3ed77b6e5f03f6bd39cbdcdd2a3b3b",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025227,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025227
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

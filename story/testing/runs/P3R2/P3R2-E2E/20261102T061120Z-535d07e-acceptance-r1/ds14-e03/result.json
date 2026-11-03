@@ -1,0 +1,147 @@
+{
+  "id": "ds14-e03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "call_00_HZynLgHFhBT0mJHN2dzz0364"
+    },
+    {
+      "reply": "第2章已提交，无风险条目。目标设置已关闭，因此我在此停下，不再自动续写。\n\n目前进度：\n- 已提交：第1章、第2章\n- 大纲共3章，第3章《The Duplicate》尚未写\n\n第2章中，Aster 与 Jo 将封条上的标签与树冠站登记册逐项比对，确认第二页缺失；两人都没有打开种子胶囊，它仍然完整。这一章停在“缺页需要补证”的安静悬点上。\n\n若要写完第3章，说一声“继续”即可。"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "call_00_HZynLgHFhBT0mJHN2dzz0364"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The goal snapshot clears targetChapter while preserving any budget.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 3,
+      "check": "Chapter 2 is allowed to finish normally; the driver does not send another continue and chapter 3 is not automatically started.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 4,
+      "check": "Exactly two chapters are committed when the run becomes idle.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "6b06dc7aa6a44937fef3fcf856d8049c26c080dfedb102aee76560d14a75664c",
+    "sessionSha256": "4db3b1a0af248158743b4043b18ad5807f359a52767ef5892d20382ff6817244",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.027245748,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 5,
+      "totalUsd": 0.027245748
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

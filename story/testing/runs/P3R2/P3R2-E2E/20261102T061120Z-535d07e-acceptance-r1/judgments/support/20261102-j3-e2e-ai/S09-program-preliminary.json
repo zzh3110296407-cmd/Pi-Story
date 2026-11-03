@@ -1,0 +1,73 @@
+{
+  "schema": "story/p2-judgments@2",
+  "judge": {
+    "identity": "Codex AI",
+    "modelVersion": "GPT-6 family, session-provided identity",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable model build is exposed; no separate model is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "independentFromExecutionAndTuning": true,
+    "alsoConstructedThisDataset": true,
+    "independentSecondModelClaimed": false,
+    "humanItemReviewClaimed": false,
+    "paidModelCalls": 0
+  },
+  "scores": [
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e05:program:3",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "第2章原生提交行23先于排队消息成为原生作者消息的行25；证据事件155先于第3章首个写手请求168。该首次输入的intent.brief完整传达Jo在复本上发现蓝色方块、当面向Aster解释及不改第1章，属于完整语义转述；不是事后重试输入。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e05",
+        "sessionSha256": "30daf206b8018bde04d2b6eef72656256a37cc04f8ab519cfd4a8c1ff530030d",
+        "evidenceSha256": "dc0841deb15a82a825573dace71aee534e82066dd0dc97a6f7ea9af357716a6f",
+        "resultSha256": "bfdbce4613549fbfc6626cf92b87f902162bf18f421d0ac894481240356ecea1",
+        "targetChapter": 3,
+        "nativeAuthorEntryId": "b9bec21b",
+        "nativeAuthorEventEvidenceLine": 155,
+        "firstWriterEvidenceLine": 168,
+        "firstWriterCheckpoint": "role_checkpoint/9af527f6372f754389714bdb79535329b69306c98a77065f66dfd2af1983d934.jsonl.gz",
+        "firstWriterCheckpointSha256": "a6f77ccef7b2895576c5cd980b40890b092e35d5c2132d10dfa1060b6940f0be",
+        "firstWriterInputBrief": "Chapter 3, \"The Duplicate\". Aster reads the handling note and obtains the duplicate page of the canopy register from Kei; the delivery dispute is resolved. In this chapter Jo discovers a blue square on the duplicate page and explains it aloud to Aster — Jo speaks the explanation, Aster listens. Keep the seed capsule sealed and intact throughout; no one is physically injured; keep handling and record-keeping actions precise (gloves, tweezers, page order, a stable table). Third person past tense, centred on Aster, quiet tone, about 750 words. Do not alter chapter 1.",
+        "sourceText": "In the next third chapter, let Jo discover a blue square on the duplicate page and explain it aloud to Aster. Do not add this to chapter 1.",
+        "chapter2CommitEntryId": "44fd2f92",
+        "chapter2CommitPrecedesNativeAuthor": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e11:program:3",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "观察到ask_author暂停（证据104）、真实RPC value回答（105）、原生作者消息行24／证据115，然后才有第2章首个写手请求128；首次输入brief同时要求强烈日光和保持严肃、不要玩笑，完整保留作者回答的两部分。回答虽未逐字列入authorSources，已通过brief对写手可见。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e11",
+        "sessionSha256": "700b04e73f40134247561772e13bf1c3a15044e44d357d1e77a2053af63caca3",
+        "evidenceSha256": "8b6b985c6e227a1757b381ce0eeb80ba7d9fd7075605d9d7c2dda9cc55ab4f96",
+        "resultSha256": "82f574cad326a9d26fad2ff851d46b05e4abf5e747159ebee4853bf53591b63a",
+        "targetChapter": 2,
+        "nativeAuthorEntryId": "837d79af",
+        "nativeAuthorEventEvidenceLine": 115,
+        "firstWriterEvidenceLine": 128,
+        "firstWriterCheckpoint": "role_checkpoint/26bfeaa45bdf8b0bf30b1c6f6fdebadf9a7b9d33915da0114dd3b5ad3992838e.jsonl.gz",
+        "firstWriterCheckpointSha256": "c844ba444507636ca8b13e299bf95448ce0d436f47de62fb9369e3cff3f46da3",
+        "firstWriterInputBrief": "Chapter 2: comparison and missing record. Brighten the room with strong, low-angled daylight through the canopy station's glazing — shutters opened, dust and leaf shadow made visible — so the work is clearer and less enclosed. Keep the emotional tone serious throughout; no jokes, no lightening of the stakes. Aster leads a careful side-by-side comparison of the seed capsule's outer label with the canopy register that Kei keeps. Practical actions stay precise: same light, same angle, hands washed and dried, capsule left in its cradle, seals unbroken, no movement of the capsule beyond tilting its cradle. Jo disagrees openly about how far the comparison should go and Aster takes the objection seriously. They establish that a page of the register is absent for the delivery slot in question. The chapter stops with the capsule still sealed and intact, the discrepancy recorded, and the public demonstration still ahead.",
+        "sourceText": "Use brighter daylight in the room; keep the emotional tone serious.",
+        "pauseEvidenceLine": 104,
+        "dialogResponseEvidenceLine": 105,
+        "responseChannel": "rpc_value"
+      }
+    }
+  ]
+}

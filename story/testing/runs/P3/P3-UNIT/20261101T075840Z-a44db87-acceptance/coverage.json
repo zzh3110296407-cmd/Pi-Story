@@ -1,0 +1,184 @@
+{
+  "schema": "story/p3-retry-coverage@1",
+  "freeze": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "source": {
+    "file": "story\\testing\\runs\\P3\\P3-UNIT\\20261101T075840Z-a44db87-acceptance\\raw\\vitest.json",
+    "sha256": "0525bb92e08521070cef5e0e4ec71885166b0a172e56fea8126532e0e9ce732d"
+  },
+  "metric": "P3-R1",
+  "categories": [
+    {
+      "label": "stream",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries stream exactly once, with separate reservation and linked records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "connection",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries connection exactly once, with separate reservation and linked records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "timeout",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries timeout exactly once, with separate reservation and linked records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "5xx",
+      "n": 2,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries http500 exactly once, with separate reservation and linked records",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries http503 exactly once, with separate reservation and linked records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "429",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 retries http429 exactly once, with separate reservation and linked records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "rejected",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 does not retry rejected or dispatch a later fatal call",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "401",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-transport.test.ts",
+          "name": "P3 ModelPort classifies HTTP 401 without hidden provider retries",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "402",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-transport.test.ts",
+          "name": "P3 ModelPort classifies HTTP 402 without hidden provider retries",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "403",
+      "n": 1,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-transport.test.ts",
+          "name": "P3 ModelPort classifies HTTP 403 without hidden provider retries",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "cancel",
+      "n": 2,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 does not retry aborted or dispatch a later fatal call",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 cancellation during backoff prevents a retry and keeps the failed attempt",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "budget",
+      "n": 2,
+      "minimum": 1,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 checks perChapterCalls again before retry",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+          "name": "U7 checks budget again before retry",
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "fatal": {
+    "label": "fatal-no-retry",
+    "n": 1,
+    "minimum": 1,
+    "passed": true,
+    "evidence": [
+      {
+        "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/core/test/transport-retry.test.ts",
+        "name": "U7 does not retry fatal or dispatch a later fatal call",
+        "status": "passed"
+      }
+    ]
+  },
+  "passed": true,
+  "composition": "Per-code ModelPort classification plus the common fatal no-retry CallSession path. Successful retry tests assert separate reservations and linked records."
+}

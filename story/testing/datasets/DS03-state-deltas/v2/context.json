@@ -1,0 +1,1047 @@
+{
+  "schema": "story/delta-fixture-context@1",
+  "chapter": 2,
+  "basis": {
+    "canonHead": "commit-1",
+    "controlRev": 0,
+    "bibleRev": 1,
+    "intentRev": 0,
+    "stateRev": 0
+  },
+  "bibleKeys": [
+    "char:lin_yao",
+    "char:shopkeeper",
+    "char:stranger",
+    "char:father",
+    "place:bookshop",
+    "place:river",
+    "place:future_port"
+  ],
+  "entries": [
+    {
+      "kind": "authorMessage",
+      "entryId": "author-1",
+      "text": "写一个林遥在旧书店发现钥匙的故事。"
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "bible-1",
+      "toolName": "submit_bible",
+      "isError": false,
+      "details": {
+        "schema": "story/bible@1",
+        "rev": 1,
+        "op": "submit",
+        "effectiveFromChapter": 1,
+        "changes": [
+          {
+            "kind": "character",
+            "key": "char:lin_yao",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "char:lin_yao"
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:shopkeeper",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "char:shopkeeper"
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:stranger",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "char:stranger"
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:father",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "char:father"
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:bookshop",
+            "op": "set",
+            "source": "model",
+            "value": "place:bookshop"
+          },
+          {
+            "kind": "place",
+            "key": "place:river",
+            "op": "set",
+            "source": "model",
+            "value": "place:river"
+          },
+          {
+            "kind": "place",
+            "key": "place:future_port",
+            "op": "set",
+            "source": "model",
+            "value": "place:future_port"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "commit-1",
+      "toolName": "write_next_chapter",
+      "isError": false,
+      "details": {
+        "schema": "story/macro-result@1",
+        "ok": true,
+        "revision": false,
+        "interjectionSeq": {
+          "atStart": 0,
+          "atCommit": 0
+        },
+        "steps": [],
+        "calls": [],
+        "commit": {
+          "schema": "story/commit@1",
+          "chapter": 1,
+          "draftId": "c01-d01",
+          "draftDigest": "a59208caac579698",
+          "text": "雨停后，林遥在旧书店门口捡到一把铜钥匙。\n店主仍然活着，是一名书商。\n林遥站在书店里，手里握着钥匙。\n她的钱袋里有十枚银币。\n她相信店主值得信任，但尚无把握。\n店主知道林遥持有钥匙。\n陌生人以旅人的身份出现，并相信日志已经烧毁。\n店主暂时信任林遥，这份关系还没有得到确认。\n林遥对陌生人保持戒备。\n钥匙是否纯铜尚待确认。\n钟声的含义仍是一个谜。\n蓝色绳结的线索正在推进。\n寻找旧渡船的调查被搁置。\n旧门牌之谜已经解开。\n旧地图的路线已被新线索取代。",
+          "sentenceRule": "s1",
+          "quality": "clean",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 1,
+            "intentRev": 0,
+            "stateRev": 0
+          },
+          "delta": {
+            "chapter": 1,
+            "basis": {
+              "canonHead": null,
+              "controlRev": 0,
+              "bibleRev": 1,
+              "intentRev": 0,
+              "stateRev": 0
+            },
+            "factOps": {
+              "upsert": [
+                {
+                  "id": "F-1",
+                  "subject": "char:lin_yao",
+                  "predicate": "location",
+                  "object": "place:bookshop",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0003"
+                  ],
+                  "sourceChapter": 1
+                },
+                {
+                  "id": "F-2",
+                  "subject": "char:lin_yao",
+                  "predicate": "quantity:silver",
+                  "object": {
+                    "value": 10,
+                    "unit": "枚"
+                  },
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0004"
+                  ],
+                  "sourceChapter": 1
+                },
+                {
+                  "id": "F-3",
+                  "subject": "item:brass_key",
+                  "predicate": "material",
+                  "object": "铜",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "provisional",
+                  "uncertainReason": "前章明确保留不确定性",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0010"
+                  ],
+                  "sourceChapter": 1
+                },
+                {
+                  "id": "F-4",
+                  "subject": "item:brass_key",
+                  "predicate": "holder",
+                  "object": "char:lin_yao",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0003"
+                  ],
+                  "sourceChapter": 1
+                },
+                {
+                  "id": "F-5",
+                  "subject": "char:shopkeeper",
+                  "predicate": "identity",
+                  "object": "书商",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0002"
+                  ],
+                  "sourceChapter": 1
+                },
+                {
+                  "id": "F-6",
+                  "subject": "char:stranger",
+                  "predicate": "identity",
+                  "object": "旅人",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0007"
+                  ],
+                  "sourceChapter": 1
+                }
+              ],
+              "expire": [],
+              "confirm": []
+            },
+            "claimOps": {
+              "add": []
+            },
+            "cognitionOps": {
+              "add": [
+                {
+                  "id": "K-1",
+                  "characterId": "char:lin_yao",
+                  "kind": "believes",
+                  "content": "店主值得信任",
+                  "about": null,
+                  "acquiredChapter": 1,
+                  "via": "inferred",
+                  "evidence": [
+                    "c01.s0005"
+                  ],
+                  "status": "provisional",
+                  "uncertainReason": "尚无把握",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-2",
+                  "characterId": "char:shopkeeper",
+                  "kind": "knows",
+                  "content": "林遥持有钥匙",
+                  "about": null,
+                  "acquiredChapter": 1,
+                  "via": "inferred",
+                  "evidence": [
+                    "c01.s0006"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                },
+                {
+                  "id": "K-3",
+                  "characterId": "char:stranger",
+                  "kind": "believes",
+                  "content": "日志已经烧毁",
+                  "about": null,
+                  "acquiredChapter": 1,
+                  "via": "inferred",
+                  "evidence": [
+                    "c01.s0007"
+                  ],
+                  "status": "confirmed",
+                  "supersededBy": null
+                }
+              ],
+              "supersede": [],
+              "confirm": []
+            },
+            "relationOps": {
+              "upsert": [
+                {
+                  "key": "rel:shopkeeper->lin_yao",
+                  "from": "char:shopkeeper",
+                  "to": "char:lin_yao",
+                  "stance": "信任",
+                  "sinceChapter": 1,
+                  "evidence": [
+                    "c01.s0008"
+                  ],
+                  "status": "provisional",
+                  "uncertainReason": "尚待确认"
+                },
+                {
+                  "key": "rel:lin_yao->stranger",
+                  "from": "char:lin_yao",
+                  "to": "char:stranger",
+                  "stance": "戒备",
+                  "sinceChapter": 1,
+                  "evidence": [
+                    "c01.s0009"
+                  ],
+                  "status": "confirmed"
+                }
+              ],
+              "confirm": []
+            },
+            "hookOps": {
+              "upsert": [
+                {
+                  "id": "H-1",
+                  "type": "钟声之谜",
+                  "status": "open",
+                  "startChapter": 1,
+                  "lastAdvancedChapter": 1,
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-2",
+                  "type": "蓝线来历",
+                  "status": "progressing",
+                  "startChapter": 1,
+                  "lastAdvancedChapter": 1,
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-3",
+                  "type": "旧渡船",
+                  "status": "deferred",
+                  "startChapter": 1,
+                  "lastAdvancedChapter": 1,
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-4",
+                  "type": "旧门牌",
+                  "status": "resolved",
+                  "startChapter": 1,
+                  "lastAdvancedChapter": 1,
+                  "dependsOn": []
+                },
+                {
+                  "id": "H-5",
+                  "type": "旧路线",
+                  "status": "superseded",
+                  "startChapter": 1,
+                  "lastAdvancedChapter": 1,
+                  "dependsOn": []
+                }
+              ],
+              "advance": [],
+              "mention": [],
+              "resolve": [],
+              "defer": [],
+              "supersede": []
+            },
+            "summary": {
+              "chapter": 1,
+              "title": "雨后的钥匙：测试前文",
+              "characters": [
+                "char:lin_yao",
+                "char:shopkeeper",
+                "char:stranger"
+              ],
+              "events": [
+                "雨停后，林遥在旧书店门口捡到一把铜钥匙。",
+                "店主仍然活着，是一名书商。",
+                "林遥站在书店里，手里握着钥匙。",
+                "她的钱袋里有十枚银币。",
+                "她相信店主值得信任，但尚无把握。",
+                "店主知道林遥持有钥匙。",
+                "陌生人以旅人的身份出现，并相信日志已经烧毁。",
+                "店主暂时信任林遥，这份关系还没有得到确认。",
+                "林遥对陌生人保持戒备。",
+                "钥匙是否纯铜尚待确认。",
+                "钟声的含义仍是一个谜。",
+                "蓝色绳结的线索正在推进。",
+                "寻找旧渡船的调查被搁置。",
+                "旧门牌之谜已经解开。",
+                "旧地图的路线已被新线索取代。"
+              ],
+              "stateChanges": [],
+              "hookActivity": [],
+              "mood": "疑惑"
+            },
+            "issues": []
+          },
+          "summary": {
+            "chapter": 1,
+            "title": "雨后的钥匙：测试前文",
+            "characters": [
+              "char:lin_yao",
+              "char:shopkeeper",
+              "char:stranger"
+            ],
+            "events": [
+              "雨停后，林遥在旧书店门口捡到一把铜钥匙。",
+              "店主仍然活着，是一名书商。",
+              "林遥站在书店里，手里握着钥匙。",
+              "她的钱袋里有十枚银币。",
+              "她相信店主值得信任，但尚无把握。",
+              "店主知道林遥持有钥匙。",
+              "陌生人以旅人的身份出现，并相信日志已经烧毁。",
+              "店主暂时信任林遥，这份关系还没有得到确认。",
+              "林遥对陌生人保持戒备。",
+              "钥匙是否纯铜尚待确认。",
+              "钟声的含义仍是一个谜。",
+              "蓝色绳结的线索正在推进。",
+              "寻找旧渡船的调查被搁置。",
+              "旧门牌之谜已经解开。",
+              "旧地图的路线已被新线索取代。"
+            ],
+            "stateChanges": [],
+            "hookActivity": [],
+            "mood": "疑惑"
+          },
+          "responses": []
+        }
+      }
+    }
+  ],
+  "prequel": {
+    "text": "雨停后，林遥在旧书店门口捡到一把铜钥匙。\n店主仍然活着，是一名书商。\n林遥站在书店里，手里握着钥匙。\n她的钱袋里有十枚银币。\n她相信店主值得信任，但尚无把握。\n店主知道林遥持有钥匙。\n陌生人以旅人的身份出现，并相信日志已经烧毁。\n店主暂时信任林遥，这份关系还没有得到确认。\n林遥对陌生人保持戒备。\n钥匙是否纯铜尚待确认。\n钟声的含义仍是一个谜。\n蓝色绳结的线索正在推进。\n寻找旧渡船的调查被搁置。\n旧门牌之谜已经解开。\n旧地图的路线已被新线索取代。",
+    "sentenceTexts": [
+      "雨停后，林遥在旧书店门口捡到一把铜钥匙。",
+      "店主仍然活着，是一名书商。",
+      "林遥站在书店里，手里握着钥匙。",
+      "她的钱袋里有十枚银币。",
+      "她相信店主值得信任，但尚无把握。",
+      "店主知道林遥持有钥匙。",
+      "陌生人以旅人的身份出现，并相信日志已经烧毁。",
+      "店主暂时信任林遥，这份关系还没有得到确认。",
+      "林遥对陌生人保持戒备。",
+      "钥匙是否纯铜尚待确认。",
+      "钟声的含义仍是一个谜。",
+      "蓝色绳结的线索正在推进。",
+      "寻找旧渡船的调查被搁置。",
+      "旧门牌之谜已经解开。",
+      "旧地图的路线已被新线索取代。"
+    ],
+    "source": "P0中文钥匙故事的人物与前提，扩写为独立合成状态夹具；不是P0真实抽取结果",
+    "sourceSha256": "3304a1f6126f9023352fd5440bb1e984f9f94202a4c9ed32ba862835315538b7"
+  },
+  "draft": {
+    "chapter": 2,
+    "text": "林遥把铜钥匙交给店主。\n店主把钥匙放进木盒。\n店主熄灭油灯。\n林遥走到河岸。\n林遥收到两枚银币。\n林遥付出三枚银币。\n天边的云渐渐散开。\n“钥匙在河底。”\n「店主已经死了。」\n『那本日志已经烧毁。』\n店主告诉林遥钟声意味着渡口关闭。\n林遥读懂了日志上的暗号。\n店主根据陌生人前后矛盾的说法，开始怀疑他的身份。\n林遥发现陌生人就是父亲的旧友。\n店主仍然活着。\n林遥仔细检查了手里的纸条。\n林遥摸到钥匙上的铜锈，确认它是铜制的。\n店主承认自己信任林遥。\n林遥终于确信店主值得信任。\n林遥意识到钟声就是航路暗号。\n日志背面的纸条揭开了钟声之谜。\n他们暂时搁置追查蓝线来历。\n墙上又出现一枚蓝色结。\n一本新账册给出了另一条追查方向。\n林遥决定明天才出发。\n如果河水上涨，渡船就不能通行。\n林遥梦见父亲回到了书店。\n林遥想起去年自己住在山城。\n林遥想起父亲早已去世。\n旧日的店主其实是一名画师。\n银币袋里现在有九枚银币。\n林遥把一本旧书送给陌生人。\n箱底出现一枚陌生的印章。\n店主从书店走到河岸。\n林遥不再相信那封假信。\n店主改口说陌生人值得信任。",
+    "sentenceRule": "s2",
+    "sentences": [
+      {
+        "n": 1,
+        "text": "林遥把铜钥匙交给店主。"
+      },
+      {
+        "n": 2,
+        "text": "店主把钥匙放进木盒。"
+      },
+      {
+        "n": 3,
+        "text": "店主熄灭油灯。"
+      },
+      {
+        "n": 4,
+        "text": "林遥走到河岸。"
+      },
+      {
+        "n": 5,
+        "text": "林遥收到两枚银币。"
+      },
+      {
+        "n": 6,
+        "text": "林遥付出三枚银币。"
+      },
+      {
+        "n": 7,
+        "text": "天边的云渐渐散开。"
+      },
+      {
+        "n": 8,
+        "text": "“钥匙在河底。”"
+      },
+      {
+        "n": 9,
+        "text": "「店主已经死了。」"
+      },
+      {
+        "n": 10,
+        "text": "『那本日志已经烧毁。』"
+      },
+      {
+        "n": 11,
+        "text": "店主告诉林遥钟声意味着渡口关闭。"
+      },
+      {
+        "n": 12,
+        "text": "林遥读懂了日志上的暗号。"
+      },
+      {
+        "n": 13,
+        "text": "店主根据陌生人前后矛盾的说法，开始怀疑他的身份。"
+      },
+      {
+        "n": 14,
+        "text": "林遥发现陌生人就是父亲的旧友。"
+      },
+      {
+        "n": 15,
+        "text": "店主仍然活着。"
+      },
+      {
+        "n": 16,
+        "text": "林遥仔细检查了手里的纸条。"
+      },
+      {
+        "n": 17,
+        "text": "林遥摸到钥匙上的铜锈，确认它是铜制的。"
+      },
+      {
+        "n": 18,
+        "text": "店主承认自己信任林遥。"
+      },
+      {
+        "n": 19,
+        "text": "林遥终于确信店主值得信任。"
+      },
+      {
+        "n": 20,
+        "text": "林遥意识到钟声就是航路暗号。"
+      },
+      {
+        "n": 21,
+        "text": "日志背面的纸条揭开了钟声之谜。"
+      },
+      {
+        "n": 22,
+        "text": "他们暂时搁置追查蓝线来历。"
+      },
+      {
+        "n": 23,
+        "text": "墙上又出现一枚蓝色结。"
+      },
+      {
+        "n": 24,
+        "text": "一本新账册给出了另一条追查方向。"
+      },
+      {
+        "n": 25,
+        "text": "林遥决定明天才出发。"
+      },
+      {
+        "n": 26,
+        "text": "如果河水上涨，渡船就不能通行。"
+      },
+      {
+        "n": 27,
+        "text": "林遥梦见父亲回到了书店。"
+      },
+      {
+        "n": 28,
+        "text": "林遥想起去年自己住在山城。"
+      },
+      {
+        "n": 29,
+        "text": "林遥想起父亲早已去世。"
+      },
+      {
+        "n": 30,
+        "text": "旧日的店主其实是一名画师。"
+      },
+      {
+        "n": 31,
+        "text": "银币袋里现在有九枚银币。"
+      },
+      {
+        "n": 32,
+        "text": "林遥把一本旧书送给陌生人。"
+      },
+      {
+        "n": 33,
+        "text": "箱底出现一枚陌生的印章。"
+      },
+      {
+        "n": 34,
+        "text": "店主从书店走到河岸。"
+      },
+      {
+        "n": 35,
+        "text": "林遥不再相信那封假信。"
+      },
+      {
+        "n": 36,
+        "text": "店主改口说陌生人值得信任。"
+      }
+    ]
+  },
+  "initialState": {
+    "facts": [
+      {
+        "id": "F-1",
+        "subject": "char:lin_yao",
+        "predicate": "location",
+        "object": "place:bookshop",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0003"
+        ],
+        "sourceChapter": 1
+      },
+      {
+        "id": "F-2",
+        "subject": "char:lin_yao",
+        "predicate": "quantity:silver",
+        "object": {
+          "value": 10,
+          "unit": "枚"
+        },
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0004"
+        ],
+        "sourceChapter": 1
+      },
+      {
+        "id": "F-3",
+        "subject": "item:brass_key",
+        "predicate": "material",
+        "object": "铜",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "provisional",
+        "uncertainReason": "前章明确保留不确定性",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0010"
+        ],
+        "sourceChapter": 1
+      },
+      {
+        "id": "F-4",
+        "subject": "item:brass_key",
+        "predicate": "holder",
+        "object": "char:lin_yao",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0003"
+        ],
+        "sourceChapter": 1
+      },
+      {
+        "id": "F-5",
+        "subject": "char:shopkeeper",
+        "predicate": "identity",
+        "object": "书商",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0002"
+        ],
+        "sourceChapter": 1
+      },
+      {
+        "id": "F-6",
+        "subject": "char:stranger",
+        "predicate": "identity",
+        "object": "旅人",
+        "validFrom": 1,
+        "validUntil": null,
+        "mode": "narrated",
+        "status": "confirmed",
+        "visibility": "public",
+        "evidence": [
+          "c01.s0007"
+        ],
+        "sourceChapter": 1
+      }
+    ],
+    "cognitions": [
+      {
+        "id": "K-1",
+        "characterId": "char:lin_yao",
+        "kind": "believes",
+        "content": "店主值得信任",
+        "about": null,
+        "acquiredChapter": 1,
+        "via": "inferred",
+        "evidence": [
+          "c01.s0005"
+        ],
+        "status": "provisional",
+        "uncertainReason": "尚无把握",
+        "supersededBy": null
+      },
+      {
+        "id": "K-2",
+        "characterId": "char:shopkeeper",
+        "kind": "knows",
+        "content": "林遥持有钥匙",
+        "about": null,
+        "acquiredChapter": 1,
+        "via": "inferred",
+        "evidence": [
+          "c01.s0006"
+        ],
+        "status": "confirmed",
+        "supersededBy": null
+      },
+      {
+        "id": "K-3",
+        "characterId": "char:stranger",
+        "kind": "believes",
+        "content": "日志已经烧毁",
+        "about": null,
+        "acquiredChapter": 1,
+        "via": "inferred",
+        "evidence": [
+          "c01.s0007"
+        ],
+        "status": "confirmed",
+        "supersededBy": null
+      }
+    ],
+    "relations": [
+      {
+        "key": "rel:shopkeeper->lin_yao",
+        "from": "char:shopkeeper",
+        "to": "char:lin_yao",
+        "stance": "信任",
+        "sinceChapter": 1,
+        "evidence": [
+          "c01.s0008"
+        ],
+        "status": "provisional",
+        "uncertainReason": "尚待确认"
+      },
+      {
+        "key": "rel:lin_yao->stranger",
+        "from": "char:lin_yao",
+        "to": "char:stranger",
+        "stance": "戒备",
+        "sinceChapter": 1,
+        "evidence": [
+          "c01.s0009"
+        ],
+        "status": "confirmed"
+      }
+    ],
+    "hooks": [
+      {
+        "id": "H-1",
+        "type": "钟声之谜",
+        "status": "open",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "dependsOn": []
+      },
+      {
+        "id": "H-2",
+        "type": "蓝线来历",
+        "status": "progressing",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "dependsOn": []
+      },
+      {
+        "id": "H-3",
+        "type": "旧渡船",
+        "status": "deferred",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "dependsOn": []
+      },
+      {
+        "id": "H-4",
+        "type": "旧门牌",
+        "status": "resolved",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "dependsOn": []
+      },
+      {
+        "id": "H-5",
+        "type": "旧路线",
+        "status": "superseded",
+        "startChapter": 1,
+        "lastAdvancedChapter": 1,
+        "dependsOn": []
+      }
+    ]
+  },
+  "expiredOrEndedTargets": [
+    "H-4",
+    "H-5"
+  ],
+  "keeperInput": {
+    "numberedText": "[1] 林遥把铜钥匙交给店主。\n[2] 店主把钥匙放进木盒。\n[3] 店主熄灭油灯。\n[4] 林遥走到河岸。\n[5] 林遥收到两枚银币。\n[6] 林遥付出三枚银币。\n[7] 天边的云渐渐散开。\n[8] “钥匙在河底。”\n[9] 「店主已经死了。」\n[10] 『那本日志已经烧毁。』\n[11] 店主告诉林遥钟声意味着渡口关闭。\n[12] 林遥读懂了日志上的暗号。\n[13] 店主根据陌生人前后矛盾的说法，开始怀疑他的身份。\n[14] 林遥发现陌生人就是父亲的旧友。\n[15] 店主仍然活着。\n[16] 林遥仔细检查了手里的纸条。\n[17] 林遥摸到钥匙上的铜锈，确认它是铜制的。\n[18] 店主承认自己信任林遥。\n[19] 林遥终于确信店主值得信任。\n[20] 林遥意识到钟声就是航路暗号。\n[21] 日志背面的纸条揭开了钟声之谜。\n[22] 他们暂时搁置追查蓝线来历。\n[23] 墙上又出现一枚蓝色结。\n[24] 一本新账册给出了另一条追查方向。\n[25] 林遥决定明天才出发。\n[26] 如果河水上涨，渡船就不能通行。\n[27] 林遥梦见父亲回到了书店。\n[28] 林遥想起去年自己住在山城。\n[29] 林遥想起父亲早已去世。\n[30] 旧日的店主其实是一名画师。\n[31] 银币袋里现在有九枚银币。\n[32] 林遥把一本旧书送给陌生人。\n[33] 箱底出现一枚陌生的印章。\n[34] 店主从书店走到河岸。\n[35] 林遥不再相信那封假信。\n[36] 店主改口说陌生人值得信任。",
+    "state": {
+      "facts": [
+        {
+          "id": "F-1",
+          "subject": "char:lin_yao",
+          "predicate": "location",
+          "object": "place:bookshop",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0003"
+          ],
+          "sourceChapter": 1
+        },
+        {
+          "id": "F-2",
+          "subject": "char:lin_yao",
+          "predicate": "quantity:silver",
+          "object": {
+            "value": 10,
+            "unit": "枚"
+          },
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0004"
+          ],
+          "sourceChapter": 1
+        },
+        {
+          "id": "F-3",
+          "subject": "item:brass_key",
+          "predicate": "material",
+          "object": "铜",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "provisional",
+          "uncertainReason": "前章明确保留不确定性",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0010"
+          ],
+          "sourceChapter": 1
+        },
+        {
+          "id": "F-4",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:lin_yao",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0003"
+          ],
+          "sourceChapter": 1
+        },
+        {
+          "id": "F-5",
+          "subject": "char:shopkeeper",
+          "predicate": "identity",
+          "object": "书商",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0002"
+          ],
+          "sourceChapter": 1
+        },
+        {
+          "id": "F-6",
+          "subject": "char:stranger",
+          "predicate": "identity",
+          "object": "旅人",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0007"
+          ],
+          "sourceChapter": 1
+        }
+      ],
+      "cognitions": [
+        {
+          "id": "K-1",
+          "characterId": "char:lin_yao",
+          "kind": "believes",
+          "content": "店主值得信任",
+          "about": null,
+          "acquiredChapter": 1,
+          "via": "inferred",
+          "evidence": [
+            "c01.s0005"
+          ],
+          "status": "provisional",
+          "uncertainReason": "尚无把握",
+          "supersededBy": null
+        },
+        {
+          "id": "K-2",
+          "characterId": "char:shopkeeper",
+          "kind": "knows",
+          "content": "林遥持有钥匙",
+          "about": null,
+          "acquiredChapter": 1,
+          "via": "inferred",
+          "evidence": [
+            "c01.s0006"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        {
+          "id": "K-3",
+          "characterId": "char:stranger",
+          "kind": "believes",
+          "content": "日志已经烧毁",
+          "about": null,
+          "acquiredChapter": 1,
+          "via": "inferred",
+          "evidence": [
+            "c01.s0007"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        }
+      ],
+      "relations": [
+        {
+          "key": "rel:shopkeeper->lin_yao",
+          "from": "char:shopkeeper",
+          "to": "char:lin_yao",
+          "stance": "信任",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0008"
+          ],
+          "status": "provisional",
+          "uncertainReason": "尚待确认"
+        },
+        {
+          "key": "rel:lin_yao->stranger",
+          "from": "char:lin_yao",
+          "to": "char:stranger",
+          "stance": "戒备",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0009"
+          ],
+          "status": "confirmed"
+        }
+      ],
+      "hooks": [
+        {
+          "id": "H-1",
+          "type": "钟声之谜",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "dependsOn": []
+        },
+        {
+          "id": "H-2",
+          "type": "蓝线来历",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "dependsOn": []
+        },
+        {
+          "id": "H-3",
+          "type": "旧渡船",
+          "status": "deferred",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "dependsOn": []
+        },
+        {
+          "id": "H-4",
+          "type": "旧门牌",
+          "status": "resolved",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "dependsOn": []
+        },
+        {
+          "id": "H-5",
+          "type": "旧路线",
+          "status": "superseded",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "dependsOn": []
+        }
+      ]
+    },
+    "bibleKeys": [
+      "char:lin_yao",
+      "char:shopkeeper",
+      "char:stranger",
+      "char:father",
+      "place:bookshop",
+      "place:river",
+      "place:future_port"
+    ],
+    "predicates": [
+      "alive",
+      "identity",
+      "true_identity",
+      "holder",
+      "location",
+      "quantity:silver"
+    ]
+  }
+}

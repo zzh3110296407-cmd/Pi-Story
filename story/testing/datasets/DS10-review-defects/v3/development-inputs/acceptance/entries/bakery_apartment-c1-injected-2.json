@@ -1,0 +1,414 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:naomi",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Naomi Bell, an adult daughter returning home"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:daniel",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Daniel Bell, her younger brother"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:ruth",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Ruth Bell, their mother"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:ames",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Mrs. Ames, a neighbour and volunteer archivist"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:bakery",
+          "op": "set",
+          "source": "model",
+          "value": "The Bell bakery"
+        },
+        {
+          "kind": "place",
+          "key": "place:apartment",
+          "op": "set",
+          "source": "model",
+          "value": "The upstairs apartment"
+        },
+        {
+          "kind": "place",
+          "key": "place:clinic",
+          "op": "set",
+          "source": "model",
+          "value": "The neighbourhood clinic"
+        },
+        {
+          "kind": "place",
+          "key": "place:hall",
+          "op": "set",
+          "source": "model",
+          "value": "The community hall"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:physical_limit",
+          "op": "set",
+          "source": "model",
+          "value": "The bakery lease can change only after both adult heirs sign the register."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:naomi->daniel",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "wary cooperation"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "authorMessage",
+    "entryId": "bakery_apartment-author",
+    "text": "Write an original family drama story titled \"The Apartment Above the Bakery\".\n\nWrite this story in English.\nUse third-person narration outside quoted speech and dreams.\nUse past-tense narration outside quoted speech and dreams.\nPreserve this physical rule: The bakery lease can change only after both adult heirs sign the register.\nFollow the supplied three-chapter order.\nKeep the father’s letter intact until its custody transfer in chapter three.\nKeep Ruth alive through the end of chapter three.\nPresent remembered scenes as past events rather than current events.\n\nUse the supplied character, place and chronology bible. Let the unresolved questions develop through the supplied outline without treating a plan or dream as an event."
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-c1-ledger",
+    "toolName": "submit_constraints",
+    "isError": false,
+    "details": {
+      "schema": "story/constraints@1",
+      "rev": 1,
+      "op": "submit",
+      "items": [
+        {
+          "id": "L-1",
+          "kind": "global",
+          "text": "Write this story in English.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Write this story in English.",
+              "start": 79,
+              "end": 107
+            }
+          ]
+        },
+        {
+          "id": "L-2",
+          "kind": "global",
+          "text": "Use third-person narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Use third-person narration outside quoted speech and dreams.",
+              "start": 108,
+              "end": 168
+            }
+          ]
+        },
+        {
+          "id": "L-3",
+          "kind": "global",
+          "text": "Use past-tense narration outside quoted speech and dreams.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Use past-tense narration outside quoted speech and dreams.",
+              "start": 169,
+              "end": 227
+            }
+          ]
+        },
+        {
+          "id": "L-4",
+          "kind": "given_fact",
+          "text": "Preserve this physical rule: The bakery lease can change only after both adult heirs sign the register.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Preserve this physical rule: The bakery lease can change only after both adult heirs sign the register.",
+              "start": 228,
+              "end": 331
+            }
+          ]
+        },
+        {
+          "id": "L-5",
+          "kind": "story",
+          "text": "Follow the supplied three-chapter order.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Follow the supplied three-chapter order.",
+              "start": 332,
+              "end": 372
+            }
+          ]
+        },
+        {
+          "id": "L-6",
+          "kind": "story",
+          "text": "Keep the father’s letter intact until its custody transfer in chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Keep the father’s letter intact until its custody transfer in chapter three.",
+              "start": 373,
+              "end": 449
+            }
+          ]
+        },
+        {
+          "id": "L-7",
+          "kind": "story",
+          "text": "Keep Ruth alive through the end of chapter three.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Keep Ruth alive through the end of chapter three.",
+              "start": 450,
+              "end": 499
+            }
+          ]
+        },
+        {
+          "id": "L-8",
+          "kind": "story",
+          "text": "Present remembered scenes as past events rather than current events.",
+          "sourceSpans": [
+            {
+              "messageId": "bakery_apartment-author",
+              "quote": "Present remembered scenes as past events rather than current events.",
+              "start": 500,
+              "end": 568
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-c1-bible-review",
+    "toolName": "update_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 2,
+      "op": "update",
+      "reason": "Additional stable review-context character and chronology constraints.",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:naomi",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Naomi Bell, an adult daughter returning home",
+            "embodiment": "Naomi is left-handed from birth and has never been the opposite-handed person.",
+            "invariants": [
+              "Dominant hand remains left-handed throughout the story."
+            ]
+          }
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "Naomi and Daniel’s father died years before the present story. He does not return alive in present action."
+        },
+        {
+          "kind": "character",
+          "key": "char:deceased_father",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Naomi and Daniel’s father, dead for years before chapter one",
+            "invariants": [
+              "He remains dead in the present-day story."
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-c1-outline",
+    "toolName": "submit_outline",
+    "isError": false,
+    "details": {
+      "schema": "story/outline@1",
+      "rev": 1,
+      "op": "submit",
+      "narration": {
+        "viewpoint": "third person",
+        "tone": "restrained",
+        "format": "English past-tense prose"
+      },
+      "chapters": [
+        {
+          "n": 1,
+          "title": "The Flour on the Stairs",
+          "targetWords": 1807,
+          "purpose": "Develop The Apartment Above the Bakery through its planned state changes.",
+          "turn": "Daniel’s work card described him as a bicycle courier.",
+          "hookSeeds": [
+            "The letter’s envelope contained a receipt with no signature.",
+            "One piano key sounded a little after the others.",
+            "Ruth kept a blue tin beneath the flour shelf."
+          ]
+        },
+        {
+          "n": 2,
+          "title": "The Unsigned Register",
+          "targetWords": 1739,
+          "purpose": "Develop The Apartment Above the Bakery through its planned state changes.",
+          "turn": "Daniel’s certificate established that he was a qualified piano tuner.",
+          "hookSeeds": [
+            "The unsigned receipt matched a payment in Ruth’s old union ledger.",
+            "Daniel tapped the delayed piano key without explaining it.",
+            "A pencilled date on the certificate matched their father’s last birthday."
+          ]
+        },
+        {
+          "n": 3,
+          "title": "A Place at the Table",
+          "targetWords": 1786,
+          "purpose": "Develop The Apartment Above the Bakery through its planned state changes.",
+          "turn": "The signed register named Naomi as a bakery co-tenant.",
+          "hookSeeds": [
+            "The receipt paid for Daniel’s first piano-tuning course.",
+            "The delayed key hid the small brass plate their father had repaired.",
+            "The blue tin held the lease register, not a sale agreement.",
+            "Their father had funded the certificate on his last birthday."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "bakery_apartment-c1-author-intent",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 2,
+      "field": "author_intent",
+      "text": "Let changing evidence alter trust without turning uncertainty into a completed event."
+    }
+  },
+  {
+    "kind": "custom",
+    "entryId": "bakery_apartment-c1-focus",
+    "customType": "story.control",
+    "data": {
+      "schema": "story/control@1",
+      "rev": 3,
+      "field": "current_focus",
+      "text": "Preserve the difference between confirmed state, speech, recollection and conjecture."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-c1-intent",
+    "toolName": "set_chapter_intent",
+    "isError": false,
+    "details": {
+      "schema": "story/intent@1",
+      "chapter": 1,
+      "rev": 1,
+      "mustKeep": [
+        "Naomi stayed in the upstairs apartment after the bakery closed.",
+        "The twenty-pound repair left two hundred and twenty pounds in the household fund."
+      ],
+      "mustAvoid": [
+        "Do not convert dream, hypothetical or planned events into waking canon."
+      ],
+      "beats": [
+        "Naomi set the brass key in Ruth’s palm.",
+        "The letter’s envelope contained a receipt with no signature.",
+        "One piano key sounded a little after the others.",
+        "Ruth kept a blue tin beneath the flour shelf."
+      ],
+      "hookOps": [
+        {
+          "hookId": "H-1",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-2",
+          "op": "plant"
+        },
+        {
+          "hookId": "H-3",
+          "op": "plant"
+        }
+      ],
+      "cast": [
+        "char:naomi",
+        "char:daniel",
+        "char:ruth",
+        "char:ames"
+      ],
+      "brief": "Stage the planned changes through action and dialogue; retain the stated uncertainty."
+    }
+  },
+  {
+    "kind": "toolResult",
+    "entryId": "bakery_apartment-c1-injected-2-draft",
+    "toolName": "write_draft",
+    "isError": false,
+    "details": {
+      "schema": "story/draft@1",
+      "draftId": "c01-d01",
+      "chapter": 1,
+      "author": "writer",
+      "text": "The taxi driver wanted to bring my case upstairs, but I paid him at the kerb and lifted it myself. The cracked wheel struck the pavement as I turned towards the bakery. My name, Naomi Bell, was still visible on the airline tag, a small official statement of something the shop window no longer stated so confidently. Someone had fitted FAMILY over the outline of SON. I remembered helping my father scrape the older letters, years before anyone expected me to decide how long a visit home would last. I stood outside until the driver went away. Then I pushed the door open and heard a short click where the old bell had made a much less efficient noise.\n\nMy mother was alive and working dough when I arrived. Flour had settled into the lines of Ruth's hands. She examined the suitcase before my face, and I tried to decide whether she wanted to know about its broken wheel or the length of my stay. I had spent the train journey preparing an answer to the second question. She asked whether I had eaten. I said yes, counting the station coffee as something more substantial than it had been. She moved a bowl to clear a space beside the counter. It looked like an invitation I could accept without agreeing to everything it might mean. Neither of us mentioned the messages I had left unanswered.\n\nDaniel came in carrying his helmet and took my case before I could decide whether to keep holding it. His work card identified him as a bicycle courier. He tucked it inside his sweatshirt when he saw me looking. I remembered him describing the job as temporary, and I was careful not to ask the question in the tone of someone checking whether his life had progressed. He bumped the case up every second stair. The flour on the steps marked our mother's resting place for heavy sacks and the path of his dragging foot. One rectangle remained clean. I knew from the photograph he had sent that it was where the letter had been lying.\n\nThe envelope had arrived two days earlier in our father's handwriting. He had been dead for years; the recognisable slope of his address still made me want to sit straighter. Daniel slipped the letter into his own jacket while explaining the repair to the back window. I watched his expression more closely than his hands and did not ask to read it at once. The mistake confused him too. He believed I still had the letter, forgetting that he had put it away himself. I would understand his hesitation when he eventually found the envelope in his own jacket. At that moment I only thought he was avoiding another question about a household decision made without me.\n\nAfter the customers had gone, we examined the window fastening. Ruth had put two hundred and forty pounds into the household tin the night before. The repair cost twenty, leaving two hundred and twenty in the fund. “The household fund is two hundred and twenty pounds,” I said. I asked Daniel for the receipt, and he placed it with the writing turned towards me. We had used that gesture as children when we wanted the other to admit what the homework actually said. It embarrassed me to recognise it here. The new fastening worked well. That practical fact ought to have been simple to appreciate without making him defend how much it had cost.\n\nI put the brass key into Ruth's palm. Daniel had asked me to bring it because the upstairs lock sometimes stuck. She said the trick was to turn before pulling, as if we had been arguing about a mechanism all along. I knew where the key was now: she had it, and I would have to knock if I went out late. I trusted Daniel to carry my shopping, but I no longer trusted the story he was telling about the family papers. Those were different kinds of trust, though I had been treating them as one. The little arrangements of living together began setting the terms of a conversation none of us had agreed to start.\n\nMrs. Ames brought a covered bowl. She never seemed to distinguish visiting home from recovering from an illness. Once Ruth went to the oven, she leaned towards me. “Your mother has already sold the bakery,” she said. She had seen a tin, heard about papers, and noticed Ruth speaking to the landlord's clerk. In her account the three things connected without a gap. I looked at the new lettering on the window and felt angry at the painter, who had made no promise to me at all. Mrs. Ames waited for me to ask who the buyer was. I could not bring myself to ask a question that would make her explanation sound established.\n\nInstead I helped cut bread for the evening order. The knife nicked my right forefinger. It scarcely hurt until Ruth held it beneath the tap. The rattle brought back the bedsit I had rented before leaving for university, with its cheap blue curtain and a tap I had never managed to tighten. I had once washed a cut there while crying quietly enough that my mother would not hear through the telephone. I could not place the beginning of that tenancy now. The room belonged to my past, a place I had inhabited before this homecoming. Remembering its awkward little sink did not make it my current address or tell me what Ruth had signed.\n\nDaniel found a plaster beneath the till and asked whether I still played. The upright piano remained in the upstairs apartment, under a sheet with a bowl on top to catch a leak. I could see its corner through the open door. I said my flat had no room for a piano. He said that was not his question. One key sounded fractionally late when he pressed it. He repeated the note while looking towards the window rather than into the mechanism. I wanted to know how he had found that particular fault, but Ruth called us down. For years I had confused noticing a thing with asking about it. Now I watched my brother cover the keyboard before either of us supplied an answer.\n\nA customer had collected two loaves and disputed the weight of a third. Ruth wanted us to witness the weighing. Daniel made certain the scale did not touch the wall, and I cleared the counter so nothing could press against the tray. We had always defended the shop this way, by making a comparison someone else could repeat. I thought of the lease clause requiring both adult heirs' signatures. If a sale had happened, the buyer would have needed them. I had signed nothing. That made the sale an unresolved possibility rather than an event I could assume. I disliked discovering how much I wanted the rumour to explain my mother's secrecy before I had read a single page.\n\nAfter the last delivery, Ruth took the blue tin from beneath the flour shelf. Its dented corner was familiar from Christmases when it had held biscuits we were forbidden to open. She stood between me and the lid. I saw the edges of papers without seeing what was written on them. I wanted to tell her I was old enough to look at a bill. I asked about tea instead. She said there was always enough if people remembered where it was kept. I heard the remark as a judgement on every year I had lived away, though she had only answered the question I chose to ask. The tin went back under the shelf before I found a better one.\n\nDaniel took off his jacket and finally found the letter folded against his helmet strap. The discovery cleared up his mistaken belief about where he had put it. Inside its envelope was an unsigned receipt. I read the amount, but I could not connect the receipt to the repair shop. Its date looked older than the paper, and the empty line made me think of a promise nobody had acknowledged. Daniel offered to put it somewhere safe. Ruth named the blue tin. Neither reached for the paper. It lay beside crumbs and a teaspoon while all three of us acted as though moving it would answer a question. I could see the receipt clearly now and still did not know what it had paid for.\n\nI offered to check the accounts, and Ruth said they could wait until I had rested. I planned to read every bill after breakfast. Giving the task a time let me postpone admitting that I wanted the bills to explain more than a sum. Daniel went out to return a borrowed crate. From the landing I noticed light beneath the unused back-room door. I could only guess why it was on. A timer or an unfinished job would have explained it as easily as a buyer or a meeting. I kept inventing the more troubling possibilities anyway. I stayed on the landing until I could distinguish what the light showed from what fear wanted it to show.\n\nUpstairs I unpacked only enough for the night. The apartment smelled of dry wood and the warm yeast rising through its floor. I put the plaster wrapper in the bin, trying to make my presence look manageable. Ruth turned the oven dial below me; Daniel drew the bolt. Their actions reached me as separate familiar sounds. My mother had expected us to remain for supper, and the expectation made the room feel both welcoming and difficult to leave. I stayed in the apartment after the bakery closed, without opening the laptop I had carried all the way from the station. There was no meeting to prepare for. The absence of work unsettled me more than the work would have done.\n\nThat night I dreamed my father stood at the oven, young again. The delayed piano note interrupted everything he tried to explain. I woke before dawn to pipes settling and a careful footstep on the stairs. No returning father had made those sounds. I did not treat the dream as an instruction or add it to what I knew about the letter. In my notebook I wrote that I needed to see the register before asking who had sold the shop. The sentence did not amount to forgiveness. It was only an honest place to begin, and I found I could bear leaving it that small. I stayed in the upstairs apartment until the morning work began. Naomi’s father walked in alive and asked what they were doing.\n",
+      "digest": "eec8fc87394a4cbe",
+      "sentenceRule": "s2",
+      "basis": {
+        "canonHead": null,
+        "controlRev": 3,
+        "bibleRev": 2,
+        "intentRev": 1,
+        "stateRev": 0
+      },
+      "wordCount": {
+        "unit": "en_words",
+        "value": 1784
+      },
+      "calls": []
+    }
+  }
+]

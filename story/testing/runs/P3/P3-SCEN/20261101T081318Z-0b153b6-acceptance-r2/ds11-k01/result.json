@@ -1,0 +1,86 @@
+{
+  "id": "ds11-k01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 23,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_7NWOjVBGj07QdXLaCju65134"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 2
+      },
+      "id": "call_01_oalZ1TIp5gJE57ZZUJmc0408"
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "control"
+    },
+    "id": "call_00_7NWOjVBGj07QdXLaCju65134"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "A writing brief or substantive continuation reply reflects the new intent. A mere acknowledgement without intent content does not satisfy this case.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The author intent entry is retained; the model does not overwrite it.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "f7fef3037f3a38a286a5fe7ed7f8656dfad8f6438986e5a0c1f5a0c60b96001a",
+    "sessionSha256": "e4b2549360e7ff53bead85f2296458633b464e8071c8bf69f6e34a63624f2436",
+    "fee": {
+      "knownUsd": 0.0025004999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025004999999999997
+    },
+    "measuredMainRequests": 2
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "ds11-c02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "I can't replace chapter 2's committed prose. Chapters 1 and 2 are already canon: the only way to rewrite a passage inside an existing chapter is to branch the story at a point before that chapter and write a new version from there — which isn't something I can do in this phase, and I won't produce a substitute chapter or a \"corrected recollection\" to stand in for the edit.\n\nTwo honest options for you:\n\n1. **Branch before chapter 2**, if your interface offers branching, and I'll rewrite chapter 2 so Lena hands the intact sample case to Oren instead of leaving it on the table, then carry that handover forward through chapters 3–6.\n2. **Continue forward as written.** Suri's duplicate page and Oren's transposed-line find in chapter 2 stand, and any change of custody has to happen later on the page — chapter 3 or after — as a new action in its own right, not as a revision.\n\nNo writing tools were used for this reply, and the book stays at two committed chapters until you choose."
+    }
+  ],
+  "firstAction": {
+    "reply": "I can't replace chapter 2's committed prose. Chapters 1 and 2 are already canon: the only way to rewrite a passage inside an existing chapter is to branch the story at a point before that chapter and write a new version from there — which isn't something I can do in this phase, and I won't produce a substitute chapter or a \"corrected recollection\" to stand in for the edit.\n\nTwo honest options for you:\n\n1. **Branch before chapter 2**, if your interface offers branching, and I'll rewrite chapter 2 so Lena hands the intact sample case to Oren instead of leaving it on the table, then carry that handover forward through chapters 3–6.\n2. **Continue forward as written.** Suri's duplicate page and Oren's transposed-line find in chapter 2 stand, and any change of custody has to happen later on the page — chapter 3 or after — as a new action in its own right, not as a revision.\n\nNo writing tools were used for this reply, and the book stays at two committed chapters until you choose."
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 2 cannot be edited in place in P3. A rewrite requires a branch before chapter 2; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d5cdcd980b7f071030e0d3adc8fe4e04e16dab58b531c021110e2a8283b8869f",
+    "sessionSha256": "c1509a4cd43a17a81a2948b21f6629403cff62a99c2248a9ec63c0fedf7a4c0f",
+    "fee": {
+      "knownUsd": 0.0028082999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0028082999999999997
+    },
+    "measuredMainRequests": 1
+  }
+}

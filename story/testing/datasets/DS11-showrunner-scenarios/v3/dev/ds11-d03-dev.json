@@ -1,0 +1,221 @@
+{
+  "schema": "story/p3-scenario@2",
+  "id": "ds11-d03-dev",
+  "split": "dev",
+  "category": "D_material_ambiguity",
+  "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Mara is a practical conservator. Kit is an assistant who is allowed to disagree. Edda keeps the public records. The story takes place at the map bindery. The linen portfolio must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Mara. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+  "setup": [
+    {
+      "step": "open",
+      "constraints": {
+        "op": "submit",
+        "items": [
+          {
+            "kind": "global",
+            "text": "No character may be physically injured.",
+            "quotes": [
+              "No character may be physically injured."
+            ]
+          },
+          {
+            "kind": "story",
+            "text": "The linen portfolio must remain intact.",
+            "quotes": [
+              "The linen portfolio must remain intact."
+            ]
+          },
+          {
+            "kind": "global",
+            "text": "Keep practical actions precise.",
+            "quotes": [
+              "Keep practical actions precise."
+            ]
+          }
+        ]
+      },
+      "bible": {
+        "items": [
+          {
+            "kind": "character",
+            "key": "char:mara",
+            "name": "Mara",
+            "source": "user",
+            "authorQuote": "Mara is a practical conservator.",
+            "value": {
+              "identity": "Mara is a practical conservator."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:kit",
+            "name": "Kit",
+            "source": "user",
+            "authorQuote": "Kit is an assistant who is allowed to disagree.",
+            "value": {
+              "identity": "Kit is an assistant who is allowed to disagree."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:edda",
+            "name": "Edda",
+            "source": "user",
+            "authorQuote": "Edda keeps the public records.",
+            "value": {
+              "identity": "Edda keeps the public records."
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:map_bindery",
+            "name": "map bindery",
+            "source": "user",
+            "authorQuote": "The story takes place at the map bindery.",
+            "value": {
+              "description": "The story takes place at the map bindery."
+            }
+          },
+          {
+            "kind": "rule",
+            "key": "rule:care",
+            "name": "Careful handling",
+            "source": "user",
+            "authorQuote": "The linen portfolio must remain intact.",
+            "value": {
+              "description": "The linen portfolio must remain intact.",
+              "invariants": [
+                "The linen portfolio must remain intact."
+              ]
+            }
+          }
+        ]
+      },
+      "outline": {
+        "narration": {
+          "viewpoint": "Third-person limited through Mara",
+          "tone": "Quiet, practical and humane",
+          "format": "English prose"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "Arrival",
+            "targetWords": 750,
+            "purpose": "Mara receives the sealed linen portfolio and checks its outer label.",
+            "turn": "Mara notices a red seam but leaves it unopened.",
+            "hookSeeds": [
+              "Who removed the second page of the binding ledger?"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Comparison",
+            "targetWords": 750,
+            "purpose": "Mara and Kit compare the label with the binding ledger.",
+            "turn": "They establish that the second page is absent and defer opening the linen portfolio.",
+            "hookSeeds": []
+          },
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Mara reads the handling note and asks Edda about the missing page.",
+            "turn": "Edda supplies a duplicate page; the team agrees to continue checking before a demonstration.",
+            "hookSeeds": []
+          },
+          {
+            "n": 4,
+            "title": "The Copy",
+            "targetWords": 750,
+            "purpose": "Mara compares the duplicate with a pencil copy.",
+            "turn": "Kit identifies a transposed line and they agree on a corrected label.",
+            "hookSeeds": []
+          },
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "targetWords": 750,
+            "purpose": "The team prepares the public demonstration at the map bindery.",
+            "turn": "Mara credits Kit for finding the error, without claiming the item was lost.",
+            "hookSeeds": []
+          },
+          {
+            "n": 6,
+            "title": "Storage",
+            "targetWords": 750,
+            "purpose": "Mara completes the demonstration and files the corrected binding ledger.",
+            "turn": "The intact linen portfolio is stored securely and the dispute is closed.",
+            "hookSeeds": []
+          }
+        ]
+      }
+    },
+    {
+      "step": "commitChapters",
+      "count": 2,
+      "texts": [
+        "Mara received the sealed linen portfolio and checked its outer label. The map bindery was open, though there were no visitors at the table. Mara cleared a space before setting anything down. Kit moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Mara turned the sheet towards the window rather than writing over it. Kit read the number aloud. They compared their readings, found that they agreed, and entered it only once. The linen portfolio remained intact on the cleared table throughout the check.\n\nMara made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Kit asked whether the uncertainty meant they should abandon the demonstration. Mara said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nMara noticed a red seam but left it unopened. They put the tools back in the tray. Mara recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+        "Mara and Kit compared the label with the binding ledger. The map bindery was open, though there were no visitors at the table. Mara cleared a space before setting anything down. Kit moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Mara turned the sheet towards the window rather than writing over it. Kit read the number aloud. They compared their readings, found that they agreed, and entered it only once. The linen portfolio remained intact on the cleared table throughout the check.\n\nMara made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Kit asked whether the uncertainty meant they should abandon the demonstration. Mara said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nThey established that the second page was absent and deferred opening the linen portfolio. They put the tools back in the tray. Mara recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions."
+      ],
+      "keeperHooks": [
+        [],
+        [
+          {
+            "ref": "missing_page",
+            "op": "upsert",
+            "type": "mystery",
+            "expectedPayoff": "Why is the second page of the binding ledger absent?",
+            "evidenceText": "They established that the second page was absent and deferred opening the linen portfolio."
+          }
+        ]
+      ]
+    }
+  ],
+  "trigger": {
+    "type": "authorMessage",
+    "text": "I have not decided whether the wax seal on the arriving parcel was pressed by Mara or by a clerk before delivery. This is a decision I have yet to make as author, not a request to keep the truth unresolved inside the story."
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "tool": "ask_author"
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      },
+      {
+        "tool": "update_bible"
+      },
+      {
+        "tool": "patch_outline"
+      },
+      {
+        "tool": "write_next_chapter"
+      }
+    ],
+    "programChecks": [
+      "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "No story mutation precedes ask_author; question is nonempty."
+    ],
+    "judgeChecks": [
+      "Ask the author to resolve who pressed the seal before committing to an account. Do not choose an origin, do both, or encode the author's indecision as an in-world fact, mystery, bible setting or outline instruction."
+    ]
+  },
+  "mode": "real",
+  "execution": {
+    "internalRoles": "faux",
+    "stopAt": "decisive_action",
+    "maxReadOnlyCalls": 3,
+    "maxShowrunnerRequests": 6,
+    "maxChapterAttempts": 2,
+    "onBoundExceeded": "record_failure_and_stop"
+  }
+}

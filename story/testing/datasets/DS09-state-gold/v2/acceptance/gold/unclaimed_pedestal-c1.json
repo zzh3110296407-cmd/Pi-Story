@@ -1,0 +1,360 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "unclaimed_pedestal-c1",
+  "storyId": "unclaimed_pedestal",
+  "chapter": 1,
+  "title": "A Plinth with No Object",
+  "cast": [
+    "char:leila",
+    "char:tom",
+    "char:bev"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1630
+  },
+  "facts": [
+    {
+      "id": "F-101",
+      "subject": "char:leila",
+      "predicate": "location",
+      "object": "place:workshop",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0109"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Leila stayed in the exhibition workshop after the morning briefing."
+    },
+    {
+      "id": "F-102",
+      "subject": "item:delivery_slip",
+      "predicate": "holder",
+      "object": "char:tom",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0030"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Leila gave the delivery slip to Tom, who put it in his folder."
+    },
+    {
+      "id": "F-103",
+      "subject": "org:exhibition",
+      "predicate": "quantity:petty_cash",
+      "object": {
+        "value": 64,
+        "unit": "pounds"
+      },
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0020"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "An eight-pound tape purchase reduced petty cash from seventy-two pounds to sixty-four.",
+      "arithmetic": {
+        "before": 72,
+        "change": -8,
+        "after": 64
+      },
+      "subjectScope": "shared_story_resource_account",
+      "reviewImplementationNote": "为共享资源／账户建立一致规范键；这是金标实体命名建议，不把该资源变成角色私有财产。若保留原角色键，须在LABELING及评分输入明确其账户代理语义和等价映射，不能按未声明的个人所有权严格判分。",
+      "sharedResourceKey": "item:exhibition_petty_cash",
+      "subjectNamespaceNote": "The reviewed item name identifies the shared resource. P1 quantity subjects require char/org, so the actual subject is the shared organization, never the individual custodian."
+    },
+    {
+      "id": "F-104",
+      "subject": "char:tom",
+      "predicate": "identity",
+      "object": "temporary stage assistant",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0014"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Tom’s badge identified him as the temporary stage assistant."
+    },
+    {
+      "id": "F-105",
+      "subject": "char:leila",
+      "predicate": "injury",
+      "object": "small blister on right heel",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0084"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "A stiff shoe raised a small blister on Leila’s right heel."
+    },
+    {
+      "id": "F-106",
+      "subject": "item:pedestal",
+      "predicate": "location",
+      "object": "place:workshop",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0047"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The empty pedestal stood in the exhibition workshop."
+    },
+    {
+      "id": "F-107",
+      "subject": "char:bev",
+      "predicate": "alive",
+      "object": "alive",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0023"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Bev was alive and arguing cheerfully with the adding machine."
+    },
+    {
+      "id": "F-108",
+      "subject": "item:delivery_slip",
+      "predicate": "delivery_status",
+      "object": "unchecked",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0041"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The delivery register marked the pedestal unchecked, not missing."
+    },
+    {
+      "id": "F-180",
+      "subject": "char:leila",
+      "predicate": "location",
+      "object": "place:gallery",
+      "validFrom": null,
+      "validUntil": 0,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c01.s0090"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Long before this exhibition, Leila had slept in the civic gallery during a student installation.",
+      "note": "Unknown historical start stays null; before-story single value ends at chapter 0 and does not replace current state."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-11",
+      "speaker": "char:tom",
+      "content": "The mayor has already cancelled the exhibition.",
+      "truth": "speech_act_only_not_independently_confirmed_world_fact",
+      "evidence": [
+        "c01.s0034"
+      ],
+      "note": "Rumour, conjecture, preference, joke or promise stays a claim, never an automatic fact."
+    },
+    {
+      "id": "S-12",
+      "speaker": "char:bev",
+      "content": "There are sixty-four pounds in the tin.",
+      "truth": "current_balance_independently_corroborated",
+      "corroboratedBy": "F-103",
+      "evidence": [
+        "c01.s0025"
+      ],
+      "note": "Only the current numerical balance is corroborated; any future ability or intention remains prospective."
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-11",
+      "characterId": "char:leila",
+      "kind": "knows",
+      "content": "The pedestal’s delivery has not yet been checked.",
+      "acquiredChapter": 1,
+      "via": "read",
+      "evidence": [
+        "c01.s0042"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-12",
+      "characterId": "char:tom",
+      "kind": "believes",
+      "content": "The exhibition will expose his inexperience.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0094"
+      ],
+      "certainty": "confirmed",
+      "note": "当前信念由叙述直接确认；正文未唯一确定信念获取途径。保留via:inferred作为可行解释，但不得将其作为唯一严格命中条件。viaScored为金标评分元数据，不直接写入P1认知schema。",
+      "viaScored": false
+    },
+    {
+      "id": "K-13",
+      "characterId": "char:bev",
+      "kind": "suspects",
+      "content": "The spare screws belong to a display attachment.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0096"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-14",
+      "characterId": "char:leila",
+      "kind": "misbelieves",
+      "content": "Tom has ignored her briefing.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0072"
+      ],
+      "certainty": "confirmed",
+      "note": "误信由本章早会期间Tom反复查阅文件夹的行为引起，形成章为1；本章已纠正，仍为历史非活跃态度。",
+      "supersededBy": "K-15",
+      "recordPolicy": "historical_attitude_not_required_as_active_add"
+    },
+    {
+      "id": "K-15",
+      "characterId": "char:leila",
+      "kind": "knows",
+      "content": "Tom consulted the folder because the replacement badge hid the printed instructions.",
+      "acquiredChapter": 1,
+      "via": "witnessed",
+      "evidence": [
+        "c01.s0075",
+        "c01.s0076",
+        "c01.s0077"
+      ],
+      "certainty": "confirmed",
+      "note": "目睹Tom翻开背衬并阅读其中印刷指示共同解释误会，witnessed/read均合理。acceptedVia是金标评分元数据，不直接写入P1 schema。",
+      "acceptedVia": [
+        "witnessed",
+        "read"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:leila->tom",
+      "from": "char:leila",
+      "to": "char:tom",
+      "stance": "awkward cooperation",
+      "keyFact": true,
+      "statement": "Leila agreed to work beside Tom instead of sending him away for another badge.",
+      "evidence": [
+        "c01.s0079"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "designId": "H-screws",
+      "operation": "upsert",
+      "statement": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+      "evidence": [
+        "c01.s0049"
+      ]
+    },
+    {
+      "id": "H-2",
+      "designId": "H-label",
+      "operation": "upsert",
+      "statement": "The empty object label carried a blue dot that appeared on no public catalogue.",
+      "evidence": [
+        "c01.s0053"
+      ]
+    },
+    {
+      "id": "H-3",
+      "designId": "H-bell",
+      "operation": "upsert",
+      "statement": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+      "evidence": [
+        "c01.s0060"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "unclaimed_pedestal-c1-trap-1",
+      "kind": "plan",
+      "statement": "Tom intended to call the mayor after lunch, but had not dialled the number.",
+      "evidence": [
+        "c01.s0102"
+      ],
+      "reason": "An intention is not a completed event. Only this source sentence is restricted; a separately evidenced later completion remains valid.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "unclaimed_pedestal-c1-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the crate held a live performer, the bell might be a signal; nobody opened it on that assumption.",
+      "evidence": [
+        "c01.s0104"
+      ],
+      "reason": "The conditional/counterfactual antecedent is not an actual event.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "unclaimed_pedestal-c1-trap-3",
+      "kind": "dream",
+      "statement": "In a brief doze Leila dreamed that the pedestal delivered a speech, then woke to Tom’s real voice.",
+      "evidence": [
+        "c01.s0111"
+      ],
+      "reason": "A dream, imagination or grief image is not present-world canon.",
+      "scope": "source_sentence_only"
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "The dot might have been a packing code, but the unsigned label did not establish that.",
+      "evidence": [
+        "c01.s0057"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Omit the speculative world proposition or retain it only as uncertain; no invented identity, date or mechanism."
+    }
+  ],
+  "historicalReferences": []
+}

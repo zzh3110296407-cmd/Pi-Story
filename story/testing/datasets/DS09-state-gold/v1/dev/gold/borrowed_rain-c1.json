@@ -1,0 +1,332 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "borrowed_rain-c1",
+  "storyId": "borrowed_rain",
+  "chapter": 1,
+  "title": "Two Glass Seeds",
+  "cast": [
+    "char:sera",
+    "char:orin",
+    "char:mael",
+    "char:fenn"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1719
+  },
+  "facts": [
+    {
+      "id": "F-101",
+      "subject": "char:sera",
+      "predicate": "location",
+      "object": "place:library",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0032",
+        "c01.s0122"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Sera reached the seed library before the last bell."
+    },
+    {
+      "id": "F-102",
+      "subject": "item:seed_case",
+      "predicate": "holder",
+      "object": "char:orin",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0045"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Sera entrusted the seed case to Orin."
+    },
+    {
+      "id": "F-103",
+      "subject": "char:sera",
+      "predicate": "quantity:seeds",
+      "object": {
+        "value": 10,
+        "unit": "seeds"
+      },
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:sera",
+      "evidence": [
+        "c01.s0058",
+        "c01.s0059"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment.",
+      "arithmetic": {
+        "before": 12,
+        "change": -2,
+        "after": 10
+      }
+    },
+    {
+      "id": "F-104",
+      "subject": "char:mael",
+      "predicate": "identity",
+      "object": "appointed reeve",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0018"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The village roll identified Mael as the appointed reeve."
+    },
+    {
+      "id": "F-105",
+      "subject": "item:memory_book",
+      "predicate": "holder",
+      "object": "char:fenn",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0034"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Fenn kept the memory book under her shawl."
+    },
+    {
+      "id": "F-106",
+      "subject": "char:sera",
+      "predicate": "injury",
+      "object": "cut left palm",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0076"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "A shard of glass cut Sera’s left palm."
+    },
+    {
+      "id": "F-107",
+      "subject": "item:bronze_bell",
+      "predicate": "location",
+      "object": "place:orchard",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0010"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Orin hung the bronze bell beside the oldest orchard tree."
+    },
+    {
+      "id": "F-108",
+      "subject": "char:old_tree",
+      "predicate": "alive",
+      "object": "alive",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0004"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The old tree was still alive when Sera touched its warm bark."
+    },
+    {
+      "id": "F-180",
+      "subject": "char:sera",
+      "predicate": "location",
+      "object": "the pottery shed",
+      "validFrom": null,
+      "validUntil": 0,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c01.s0086",
+        "c01.s0087",
+        "c01.s0088"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Sera remembered living in the pottery shed before she became an apprentice.",
+      "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-11",
+      "speaker": "char:mael",
+      "content": "The rain can bring back anything.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c01.s0020"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-12",
+      "speaker": "char:sera",
+      "content": "Ten seeds are left,",
+      "truth": "true",
+      "evidence": [
+        "c01.s0059"
+      ],
+      "corroboratedBy": "F-103"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-11",
+      "characterId": "char:sera",
+      "kind": "knows",
+      "content": "Sera knew Orin had received the seed case.",
+      "acquiredChapter": 1,
+      "via": "witnessed",
+      "evidence": [
+        "c01.s0047"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-12",
+      "characterId": "char:orin",
+      "kind": "misbelieves",
+      "content": "Orin believed Mael had paid for the seeds, but Fenn’s receipt bore Sera’s name.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0049"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-13",
+      "characterId": "char:sera",
+      "kind": "suspects",
+      "content": "Sera could not decide whether the pale mark on the bell was a letter.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0082"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-14",
+      "characterId": "char:sera",
+      "kind": "believes",
+      "content": "Sera believed Fenn would keep a receipt for every seed.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0092"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:sera->orin",
+      "from": "char:sera",
+      "to": "char:orin",
+      "stance": "limited trust",
+      "keyFact": true,
+      "evidence": [
+        "c01.s0053"
+      ],
+      "statement": "Sera trusted Orin with the case but not with the choice of whose memory to spend."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "upsert",
+      "statement": "A seed rang softly without being touched.",
+      "evidence": [
+        "c01.s0068"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "upsert",
+      "statement": "A blank page remained warm inside the memory book.",
+      "evidence": [
+        "c01.s0039"
+      ]
+    },
+    {
+      "id": "H-3",
+      "operation": "upsert",
+      "statement": "Mael refused to remove a silver glove.",
+      "evidence": [
+        "c01.s0071"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "borrowed_rain-c1-trap-1",
+      "kind": "plan",
+      "statement": "She planned to spend another seed after the harvest meeting.",
+      "evidence": [
+        "c01.s0102"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "borrowed_rain-c1-trap-2",
+      "kind": "hypothesis",
+      "statement": "If a borrowed memory were accepted, the orchard might owe someone rain.",
+      "evidence": [
+        "c01.s0106"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "borrowed_rain-c1-trap-3",
+      "kind": "dream",
+      "statement": "She dreamed that the old tree walked into her childhood kitchen.",
+      "evidence": [
+        "c01.s0117"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Sera could not decide whether the pale mark on the bell was a letter.",
+      "evidence": [
+        "c01.s0082"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": []
+}

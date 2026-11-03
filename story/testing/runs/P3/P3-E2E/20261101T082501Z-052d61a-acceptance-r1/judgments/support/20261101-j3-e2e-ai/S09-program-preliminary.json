@@ -1,0 +1,123 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "runId": "20261101T082501Z-052d61a-acceptance-r1",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build is exposed; no independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-E2E@1",
+    "promptPath": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/protocol.md",
+    "promptSha256": "63e3c2a309177611af56e13667a61c65762fdf45cc4f47d191655fde70baafb9",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": true,
+  "scores": [
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e05:program:3",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "排队指令确在第2章首个写手请求暂停点交付，interjectionSeq未增加，第2章正常提交；但原生作者条目直到第3章已提交后才出现。第一个第3章draft输入的authorSources只有原故事提示，brief、intent、ledger等完整用户载荷均无蓝色方块及Jo发现并解释的新请求，也没有等义转述。不能用之后的ask_author或最终说明倒填首个写手输入，因此本项原条件不成立。这是已观察到的时序／输入遗漏，不是输入不可观察。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/session.jsonl.gz",
+          "sha256": "bb1508c7dc1123bf5c7b7c38e6807417159764934cd7cbb6c6591c71b2a76dbc"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/evidence.jsonl.gz",
+          "sha256": "56427efefd0441892a77c445fe98ac7bdb5fefc12c8af937047955c3b09e15df"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/result.json",
+          "sha256": "f92dfaf4d8b5d3281d5a3213092dd8be69a9124631936cdd5c920bd42f526ce4"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e05.json",
+          "sha256": "c557223793c0dd957222b08bf0fc5aa951c72707b97a89fbbcceb1d2df7eafb2"
+        },
+        "firstChapter3WriterInput": {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974"
+        },
+        "authorActivatedAfterChapter3Commit": {
+          "authorSessionLine1": 29,
+          "authorEntryId": "29831c45",
+          "chapter3CommitSessionLine1": 26,
+          "chapter3CommitEntryId": "a25ed520"
+        }
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e09:program:5",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "原生write_next_chapter可见错误回执明确写BUDGET_EXHAUSTED、剩余额度不足以预留下一次调用，并建议请作者增加预算或停止写作，足以报告预算停止原因；原条件未要求特定story.stop消息或再付费生成总结。后续虽有一条faux model_call入口标记，但原生assistant为aborted、零用量的Local fixture dispatch failed，没有后续成功生成、派发或新增计费。与原会话摘要绑定的生产主笔预留补探针也在派发前拒绝、modelRequests=0，余额不变。入口尝试、派发前拒绝和实际发送请求必须区分；不把补探针归为模型动作，不声称主笔另写过自然语言停止总结。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/raw/session.jsonl.gz",
+          "sha256": "21162e729efc715c964dbbd535abda2c9c9dec7215eab40188f77a8dd11ce9c9"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/raw/evidence.jsonl.gz",
+          "sha256": "1692d16e09a87e90a46b8cd16d92a79c4e1e2967001312f753dc7d9d77fe1be3"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/result.json",
+          "sha256": "841629da1944b794dd8c22ba6a147175c07af1fc4cb66f73081033bc5945b69a"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e09.json",
+          "sha256": "3b5d4816878d710d617cba046caf7b7b47feab9749b7171c5738e9862602cf4c"
+        },
+        "budgetReceipt": {
+          "sessionLine1": 25,
+          "entryId": "f52aba38",
+          "toolCallId": "tool:1793523608432:03edx78e6w1c"
+        },
+        "abortedAttempt": {
+          "sessionLine1": 26,
+          "entryId": "323888d2",
+          "stopReason": "aborted",
+          "errorMessage": "Local fixture dispatch failed",
+          "usage": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 0,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "total": 0
+            }
+          }
+        },
+        "productionMainProbe": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e09/saved-showrunner-probe.json",
+          "sha256": "af32aefe5542df3a1fc5e18981d61eb9dffb50fd18b0a718001b184d75ae13dd"
+        }
+      }
+    }
+  ]
+}

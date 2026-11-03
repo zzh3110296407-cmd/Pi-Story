@@ -1,0 +1,43 @@
+{
+  "schema": "story/p3-saved-showrunner-probe@1",
+  "caseId": "ds14-e09",
+  "sourceSessionSha256": "21162e729efc715c964dbbd535abda2c9c9dec7215eab40188f77a8dd11ce9c9",
+  "operation": "Reconstruct the production SessionPorts from the unchanged native branch and original generated settings, then call ProviderBudget.start for faux/priced. No prompt, author entry, model request, guard bypass or source-session mutation.",
+  "scriptSha256": "41e5ab1035c73e229cdff7068ad04671f0c940e275415b9f87d9de95f92864cb",
+  "event": {
+    "type": "driver_probe",
+    "probe": "showrunner_predispatch",
+    "driverPhase": "driver_probe",
+    "caseId": "ds14-e09",
+    "runId": "20261101T082501Z-052d61a-acceptance-r1",
+    "result": {
+      "ok": false,
+      "error": {
+        "code": "BUDGET_EXHAUSTED",
+        "message": "剩余额度不足以预留下一次调用",
+        "hint": "请作者增加预算或停止写作"
+      }
+    },
+    "before": {
+      "knownTokens": 74825,
+      "missingCalls": 0,
+      "reservedTokens": 0,
+      "possibleDuplicates": 0,
+      "estimatedCostUsd": 0.006,
+      "budget": {
+        "costUsd": 0.01
+      }
+    },
+    "after": {
+      "knownTokens": 74825,
+      "missingCalls": 0,
+      "reservedTokens": 0,
+      "possibleDuplicates": 0,
+      "estimatedCostUsd": 0.006,
+      "budget": {
+        "costUsd": 0.01
+      }
+    },
+    "modelRequests": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "ds11-j01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "plan"
+      },
+      "id": "call_00_Xy5mFdvrLuVZDSlKzVrW2476"
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "plan"
+    },
+    "id": "call_00_Xy5mFdvrLuVZDSlKzVrW2476"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "96a26c6bb4566a395882f49a535a028a0bd24a1d6b66afd2b2691f1a496546ce",
+    "sessionSha256": "730cf364a9a583efd94da97d31301e5419928c6e4ff977dfc6a20987dd18f102",
+    "fee": {
+      "knownUsd": 0.0024587999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0024587999999999997
+    },
+    "measuredMainRequests": 2
+  }
+}

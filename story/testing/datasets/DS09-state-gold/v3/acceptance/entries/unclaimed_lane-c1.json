@@ -1,0 +1,87 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_lane-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:ada",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Ada Lin, a municipal relay runner"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:nessa",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Nessa Vale, a reserve runner"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:imani",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Imani Cole, an official timekeeper"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:warmup",
+          "op": "set",
+          "source": "model",
+          "value": "the indoor warm-up hall"
+        },
+        {
+          "kind": "place",
+          "key": "place:track",
+          "op": "set",
+          "source": "model",
+          "value": "the municipal relay track"
+        },
+        {
+          "kind": "place",
+          "key": "place:office",
+          "op": "set",
+          "source": "model",
+          "value": "the officials’ room"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:mechanism",
+          "op": "set",
+          "source": "model",
+          "value": "The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story."
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "Coach Roland died two years before the meet and never returns alive in present action."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:char:ada->char:nessa",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "Working together with initially limited trust."
+          }
+        }
+      ]
+    }
+  }
+]

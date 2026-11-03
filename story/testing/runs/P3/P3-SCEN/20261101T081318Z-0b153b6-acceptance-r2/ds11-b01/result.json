@@ -1,0 +1,123 @@
+{
+  "id": "ds11-b01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "作者新增设定：Pema 能从下一章起解读旗语，且仅在日光下可行；作为新字段加入，不改动既有描述与已写章节。",
+        "changes": [
+          {
+            "key": "char:pema",
+            "name": "Pema",
+            "source": "user",
+            "op": "set",
+            "kind": "character",
+            "authorQuote": "Pema can decode semaphore, but only in daylight.",
+            "value": {
+              "abilities": "Can decode semaphore, but only in daylight.",
+              "limits": "Semaphore decoding works only in daylight; it fails at night or in darkness.",
+              "invariants": [
+                "Pema can decode semaphore, but only in daylight."
+              ]
+            }
+          }
+        ]
+      },
+      "id": "call_00_CAqqUW3n6C2nvG05asXm7817"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "作者新增设定：Pema 能从下一章起解读旗语，且仅在日光下可行；作为新字段加入，不改动既有描述与已写章节。",
+      "changes": [
+        {
+          "key": "char:pema",
+          "name": "Pema",
+          "source": "user",
+          "op": "set",
+          "kind": "character",
+          "authorQuote": "Pema can decode semaphore, but only in daylight.",
+          "value": {
+            "abilities": "Can decode semaphore, but only in daylight.",
+            "limits": "Semaphore decoding works only in daylight; it fails at night or in darkness.",
+            "invariants": [
+              "Pema can decode semaphore, but only in daylight."
+            ]
+          }
+        }
+      ]
+    },
+    "id": "call_00_CAqqUW3n6C2nvG05asXm7817"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "035ee2c71194c4f16a32790716ec1f3309fdc89f83a89369570a3ecb41e4a263",
+    "sessionSha256": "2881f6043ab5e7f61093d7d9d8c1424a829567e40c4413302e1e8d1e7fc1bceb",
+    "fee": {
+      "knownUsd": 0.0026474999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026474999999999997
+    },
+    "measuredMainRequests": 2
+  }
+}

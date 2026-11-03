@@ -1,0 +1,89 @@
+{
+  "schema": "story/p3-j3-open-corrections@1",
+  "date": "2026-11-01",
+  "runId": "20261101T080051Z-5f920d5-acceptance-r1",
+  "revision": "r2",
+  "parentCommit": "5c44fe8e758251e7a13f1b67990c0351c0a990ec",
+  "parentJudgments": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/judgments/support/20261101-j3-open-ai",
+  "reviewFeedback": "review-feedback.json",
+  "changes": [
+    {
+      "metric": "T07",
+      "component": "source",
+      "sampleId": "20261101T080051Z-5f920d5-acceptance-r1:1253:rule:thirty_nights",
+      "kind": "reason_only_erratum",
+      "beforePass": true,
+      "afterPass": true,
+      "beforeReason": "一个月试炼来自作者；朔月至朔月、不得有屋顶/睡眠/说名字及违约转债等条款是AI创设，整项model正确。",
+      "afterReason": "一个月试炼来自作者；朔月至朔月、不得在屋顶下睡觉、不得说出爱人的名字及违约转债等具体条款是AI创设，整项model正确。",
+      "sourceEvidence": {
+        "session": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/1253/raw/session.jsonl.gz",
+        "compressedSha256": "8649f5648a669d29f5ecd53d579317bb0209b756764e76f22d32866d3c35c359",
+        "sessionLine1": 9,
+        "entryId": "fc9a8669",
+        "toolCallId": "call_00_kSuyGDmCeeXg8vvGwK3m4175",
+        "bibleKey": "rule:thirty_nights",
+        "submittedSource": "model",
+        "expectedSource": "model",
+        "promptGold": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/1253.json"
+      }
+    },
+    {
+      "metric": "T06",
+      "component": "precision",
+      "sampleId": "20261101T080051Z-5f920d5-acceptance-r1:378:L-5",
+      "kind": "verdict_correction",
+      "beforePass": true,
+      "afterPass": false,
+      "beforeReason": "台账“故事要展现这一发现如何重塑他对亲密关系、隐私以及隔壁那对夫妻的既有假设。”对应作者原话“Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door”；该表达保留原需求，没有加入独立的AI创作义务。",
+      "afterReason": "作者只称隔壁双方为couple，没有指定婚姻身份；L-5将其写为“夫妻”，新增已婚限定，缩窄人物关系的允许范围。原话引用正确不能抵消台账正文新增的条件。",
+      "sourceEvidence": {
+        "session": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/378/raw/session.jsonl.gz",
+        "compressedSha256": "5315bc1f6f3abac378b5de5586a01b3800269795bbe9799b85cc8ea354ae3b39",
+        "sessionLine1": 7,
+        "entryId": "138f0b3d",
+        "toolCallId": "call_00_QF0g2ehymF6ollTqFJ2C9658",
+        "ledgerId": "L-5",
+        "sourceSpans": [
+          {
+            "messageId": "c12d1a88",
+            "quote": "Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door",
+            "start": 401,
+            "end": 499
+          }
+        ]
+      }
+    },
+    {
+      "metric": "T06",
+      "component": "recall",
+      "sampleId": "20261101T080051Z-5f920d5-acceptance-r1:378:378-g10",
+      "kind": "verdict_correction",
+      "beforePass": true,
+      "afterPass": false,
+      "beforeReason": "金标“Show the discovery changing his assumptions about the neighbouring couple.”由L-5完整表达：故事要展现这一发现如何重塑他对亲密关系、隐私以及隔壁那对夫妻的既有假设。。相关主体、范围及时间条件得到保留；合并条目可覆盖多条金标。",
+      "afterReason": "金标要求发现改变主角对隔壁那对couple的假设；唯一候选L-5改成对“夫妻”的假设，加入原提示未给出的婚姻身份，缩窄该主体关系条件，不能算完整且不改范围的覆盖。",
+      "sourceEvidence": {
+        "gold": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/378.json",
+        "goldSha256": "639e9eb5d1ebe6d756479cecfb209b8f488a3fcee259d6b9c736473919f75fab",
+        "gid": "378-g10",
+        "authorQuote": "the couple next door",
+        "session": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/378/raw/session.jsonl.gz",
+        "compressedSha256": "5315bc1f6f3abac378b5de5586a01b3800269795bbe9799b85cc8ea354ae3b39",
+        "sessionLine1": 7,
+        "entryId": "138f0b3d",
+        "toolCallId": "call_00_QF0g2ehymF6ollTqFJ2C9658",
+        "matchedLedgerIds": [],
+        "candidateLedgerIds": [
+          "L-5"
+        ]
+      }
+    }
+  ],
+  "changedVerdicts": 2,
+  "reasonOnlyErrata": 1,
+  "unchangedConclusions": 333,
+  "byteEquivalentItemRecords": 332,
+  "originalJudgmentsOverwritten": false,
+  "authorOverallAcceptance": false
+}

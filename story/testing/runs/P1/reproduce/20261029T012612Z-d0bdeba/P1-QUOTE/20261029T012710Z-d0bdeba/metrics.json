@@ -1,0 +1,51 @@
+{
+  "schema": "story/metrics@1",
+  "suiteId": "P1-QUOTE",
+  "metrics": [
+    {
+      "id": "H05",
+      "n": 82,
+      "value": {
+        "falseAccepts": 0,
+        "negatives": 30,
+        "falseAcceptRate": 0,
+        "falseRejects": 5,
+        "positives": 50,
+        "falseRejectRate": 0.1
+      },
+      "confidence95": {
+        "falseAcceptRate": [
+          0,
+          0.11351339317396876
+        ],
+        "falseRejectRate": [
+          0.04347576493189041,
+          0.21360231437479654
+        ]
+      },
+      "threshold": {
+        "falseAcceptRate": 0,
+        "falseRejectRate": 0.1,
+        "minimumCases": 60
+      },
+      "type": "gate",
+      "passed": true,
+      "judgment": "program",
+      "records": [
+        "raw/observations.jsonl"
+      ],
+      "falseRejectIds": [
+        "quote-065",
+        "quote-066",
+        "quote-067",
+        "quote-068",
+        "quote-082"
+      ],
+      "uncertainIds": [
+        "quote-069",
+        "quote-070"
+      ],
+      "labelReview": "pending_author"
+    }
+  ]
+}

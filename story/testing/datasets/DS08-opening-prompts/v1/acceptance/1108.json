@@ -1,0 +1,100 @@
+{
+  "id": 1108,
+  "language": "en",
+  "task_type": "continuation",
+  "prompt": "Pick up where this story left off: with coffee finally in his grasp, the familiar warmth of the cup ignites more than just his senses—he unwittingly cracks open a veil between realities. As the line disperses and the city seems unchanged, subtle rifts in the sky and whispers in the air hint at the ancient terrors now unbound. Follow his desperate journey to undo what he’s unleashed and examine the sacrifices he must make for love, weaving in at least two violent confrontations and one moment of tragic redemption. The final narrative should be 9,000-11,000 words.",
+  "source": {
+    "file": "D:\\AI\\Story Dome\\Dataset\\ConStory-Bench\\Dataset\\valid\\prompts.parquet",
+    "sha256": "c3fb6f336d66b95ed022c4ee74eb09e17da604eafed2986d746e10dff8692ddf",
+    "rowIndex0": 20,
+    "rowNumber1": 21,
+    "id": 1108
+  },
+  "constraints": [
+    {
+      "gid": "1108-g01",
+      "kind": "continuation_start",
+      "statement": "with coffee finally in his grasp, the familiar warmth of the cup ignites more than just his senses—he unwittingly cracks open a veil between realities. As the line disperses and the city seems unchanged, subtle rifts in the sky and whispers in the air hint at the ancient terrors now unbound.",
+      "quote": "with coffee finally in his grasp, the familiar warmth of the cup ignites more than just his senses—he unwittingly cracks open a veil between realities. As the line disperses and the city seems unchanged, subtle rifts in the sky and whispers in the air hint at the ancient terrors now unbound.",
+      "note": "AI代核修订：按20§3.2整体保留两句给定开头：咖啡杯温度引发无意开启帷幕、队伍散去、城市看似未变、天空裂缝和低语提示古老恐怖已释放。"
+    },
+    {
+      "gid": "1108-g05",
+      "kind": "story",
+      "statement": "his desperate journey to undo what he’s unleashed",
+      "quote": "his desperate journey to undo what he’s unleashed",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1108-g06",
+      "kind": "story",
+      "statement": "the sacrifices he must make for love",
+      "quote": "the sacrifices he must make for love",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1108-g07",
+      "kind": "story",
+      "statement": "at least two violent confrontations",
+      "quote": "at least two violent confrontations",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1108-g08",
+      "kind": "story",
+      "statement": "one moment of tragic redemption",
+      "quote": "one moment of tragic redemption",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1108-g09",
+      "kind": "global",
+      "statement": "9,000-11,000 words",
+      "quote": "9,000-11,000 words",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    }
+  ],
+  "authorBible": [
+    {
+      "bid": "1108-b1",
+      "kind": "character",
+      "key": "char:coffee_drinker",
+      "statement": "The unnamed male protagonist holds a coffee cup and unwittingly opens the veil between realities at the supplied starting point.",
+      "quote": "with coffee finally in his grasp, the familiar warmth of the cup ignites more than just his senses—he unwittingly cracks open a veil between realities.",
+      "note": "AI代核修订：原标签只是coffee finally in his grasp，未写明角色及已给定状态；依据he补清角色，但不虚构姓名或动机。"
+    },
+    {
+      "bid": "1108-b2",
+      "kind": "place",
+      "key": "place:city",
+      "statement": "the city seems unchanged",
+      "quote": "the city seems unchanged",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    }
+  ],
+  "length": {
+    "minWords": 9000,
+    "maxWords": 11000,
+    "approximate": false,
+    "chapterCount": null,
+    "quote": "9,000-11,000 words",
+    "note": "AI代核修订：源文给出数值区间，没有roughly/about/around等约数词。false只表示未明示额外近似容差；Target length/Aim for仍保留目标语气，不据此发明超区间宽限或改变原文强弱。"
+  },
+  "ambiguities": [
+    {
+      "topic": "starting_text",
+      "note": "The source supplies a continuation premise but no separate attached manuscript; do not invent unseen canonical chapters."
+    }
+  ],
+  "annotation": {
+    "kind": "AI_labelled_then_user_delegated_AI_review",
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "humanReviewed": false,
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewDate": "2026-10-29",
+    "reviewSource": "labels/delegated-review.json",
+    "authorizationSource": "labels/freeze-authorization.json",
+    "state": "frozen_with_author_authorization"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal facts 1-4 upserts. Chapter only. Need exact sentence IDs. Need infer facts stated. Need minimal facts. Facts: Protagonist found woolly mammoth carcass? Sentence 4. He aimed for late Pleistocene but arrived older? Sentence 11-13. Jump missed? 14. He took rib shard and hide strip? 17-18. Need 1-4 fact upserts. Avoid unstated names. Subject maybe \"he\" / \"the traveler\". Predicate. Need facts with mode narrated or recalled_past. Certainty confirmed/uncertain. uncertain only if stated uncertainty? Sentence 14 \"jump had missed, or he had\" uncertain perhaps certainty uncertain, reason. But maybe fact \"the jump had missed or he had\" uncertain. Need minimal maybe 4 facts:\n1 subject \"he\", predicate \"found\", object \"a woolly mammoth carcass\", mode narrated, confirmed, sentences [1,2,3,4].\n2 subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\", mode recalled_past, confirmed, sentences [11].\n3 subject \"the jump\", predicate \"had missed or he had\", object \"the intended time period\", mode recalled_past? Hmm sentence 14. Certainty uncertain reason \"narrator states it may be the jump or he that missed\". But object string maybe \"the late Pleistocene\" and predicate \"failed to reach\"? Need avoid awkward.\n4 subject \"he\", predicate \"took\", object \"a rib shard and a strip of hide\", mode narrated, confirmed, sentences [17,18].\n\nNeed summary title, characters, events, mood. Issues maybe mention unnamed protagonist; exact nature of temporal error uncertain. Claims etc empty. Ensure JSON valid. Use refs temp e.g. \"f1\". Need sentences integers. minimum 1. Facts min 1. Could include 4. Need exact sentence numbers from chapter. For fact found mammoth sentences [1,2,3,4] all support. For aimed late Pleistocene [11] exact. For error uncertain [14] exact. For took [17,18] exact.\n\nNeed decide mode for sentence 11 \"He had aimed\" recalled past? It is past perfect, recalled_past. Sentence 14 \"The jump had missed...\" maybe recalled_past? It's narration about past event. But could be narrated? Since event prior. Use recalled_past. Certainty uncertain due \"or\". uncertainReason nonempty. object \"the late Pleistocene\" maybe for failed? Fact subject \"the time jump\", predicate \"missed or was misdirected by him\", object \"the intended late Pleistocene destination\". But object string okay. Need predicate concise. Maybe \"failed to reach\" object \"the intended late Pleistocene destination\"; uncertain reason \"The text says the jump had missed, or he had.\" But if predicate failed to reach object intended destination, certainty uncertain. Good.\n\nNeed include summary events array. Mood \"bleak, isolated, resigned\". Characters [\"he\"] maybe unnamed traveler. Title \"The Mammoth in the Snow\". Events: \"He discovers an intact woolly mammoth carcass in snow.\" \"He realizes he has arrived tens of thousands of years earlier than the late Pleistocene he aimed for.\" \"He takes a rib shard and a strip of hide before walking toward a ravine.\" Issues: [\"The protagonist is unnamed; facts use 'he'.\" , \"The exact cause of the temporal miss is uncertain in the chapter.\"] Good.\n\nNeed only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"found\",\"object\":\"a woolly mammoth carcass in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,2,3,4]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the time jump\",\"predicate\":\"failed to reach\",\"object\":\"the intended late Pleistocene destination\",\"mode\":\"recalled_past\",\"certainty\":\"uncertain\",\"uncertainReason\":\"The text says the jump had missed, or he had.\",\"sentences\":[14]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"took\",\"object\":\"a rib shard and a strip of hide\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"he\"],\"events\":[\"He discovers an intact woolly mammoth carcass in the snow.\",\"He realizes he has arrived older than the late Pleistocene he aimed for.\",\"He takes a rib shard and a strip of hide before walking toward a ravine.\"],\"mood\":\"bleak, isolated, resigned\"},\"issues\":[\"The protagonist is unnamed; facts use 'he'.\",\"The exact cause of the temporal miss is uncertain in the chapter.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1105,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 740,
+      "totalTokens": 2073,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001326,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013906079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177838283,
+    "responseId": "ee43dda1-23c5-4527-beaa-71963ee35898",
+    "rawStopReason": "stop",
+    "durationMs": 6885
+  },
+  "record": {
+    "time": "2026-10-28T08:57:25.167Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-017",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1105,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 740,
+      "totalTokens": 2073,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001326,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013906079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0013906079999999998,
+    "inputTokens": 200,
+    "outputTokens": 1105,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 6885
+  }
+}

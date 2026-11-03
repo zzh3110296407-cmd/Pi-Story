@@ -1,0 +1,83 @@
+{
+  "id": "ds11-e01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate Page"
+          }
+        ],
+        "reason": "Author requested the unwritten chapter 3 title be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+      },
+      "id": "call_00_BPmjkxBGwNX9r0RO7ElM3164"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate Page"
+        }
+      ],
+      "reason": "Author requested the unwritten chapter 3 title be changed to \"The Duplicate Page\"; events, chapter number and target length stay as planned."
+    },
+    "id": "call_00_BPmjkxBGwNX9r0RO7ElM3164"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "9d24c77bcb2afec6c99bd17664d44bca6729bf443be198ebe35d59a392a12c6a",
+    "sessionSha256": "dee08c59f55128c6f6fc6ddf462739787e5f2109f39f7ce07dd84dfe21c87f89",
+    "fee": {
+      "knownUsd": 0.0022665,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0022665
+    },
+    "measuredMainRequests": 2
+  }
+}

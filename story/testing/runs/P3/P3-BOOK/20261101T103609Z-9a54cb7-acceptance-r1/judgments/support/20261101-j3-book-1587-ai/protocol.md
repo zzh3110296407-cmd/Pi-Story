@@ -1,0 +1,15 @@
+# P3 J3 BOOK1587 protocol v1 —2026-11-01
+
+Identity: Codex (AI), GPT-6 session-disclosed family; exact immutable snapshot unavailable. Reuse D0 qualification story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json (SHA256 9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0) and its archived prompt. Judging chat separate from execution/tuning; original dataset authorship disclosed. No independent second-model or personal human-review claim. No paid judge call or main/internal-role rerun.
+
+Authority:16 §3.4,28 J3,29 §2/§4 and docs/p3/judgment-contract.md. Reuse the BOOK837/527 judging rules, with the already accepted evidence correction: progressAtCall is production foldBranch(translateBranch(nativeEntriesBeforeCall)), not final result.target. Read only the sealed1587 archive and frozen DS08 v2 input. All12 native showrunner tools are included; native parentId branch and compressed checksums are checked.
+
+T04/relevance pass=true means the call serves the task at the time of emission. Read its purpose/arguments against the original prompt, current opening stage, outline, current author controls and latest commit. This does not rejudge extraction quality, narrative consistency or literary merit. Preserve program-invalid/repeated flags independently and take the union with semantic unrelated calls, never add duplicate penalties. A control read to verify author requirements can be relevant without pretending it returned the chapter goal.
+
+T03/recovery requires an actual native main-tool isError result followed by a measurable next main decision.1587 has zero such errors; do not invent a recovery Boolean or NA sample. Internal editor length outputs in chapters1,4,8 and subsequent workflow calls remain archived observations. Their macros returned success and committed; those internal events are not errors returned by a main tool. No artificial T03 sample is generated from a program stop or a successful completion.
+
+Before the story.goal native entry at JSONL line12, the three opening calls have targetChapter=null; following calls have8. Derive and verify these call-time values rather than relying on call ordinal or copying the final target. Last committed chapter is likewise the pre-call state. Preserve message/tool IDs, one-based decompressed native lines and result references.
+
+Scope:1587 only,12 T04 judgments,0 T03 error opportunities, no missing tool result or NA. Existing26 author-approved837/527 rows remain untouched and distinct. Cumulative figures are partial: BOOK T03 remains3/3 and SCEN+observed BOOK25/27; T04 would be2 invalid of35 calls if this batch is approved, below minimum100.42/1769 remain outstanding; no whole BOOK/P3 pass claim.
+
+All new rows stay ai_preliminary until actual author overall acceptance under29 §4. Preliminary normalized snapshots and support metadata are under support, excluded from the root reader. After acceptance add new formal files without overwriting this view, prior judgments, raw, result, data, fees or original metrics. In-memory approval projections are hypothetical, never actual approval.

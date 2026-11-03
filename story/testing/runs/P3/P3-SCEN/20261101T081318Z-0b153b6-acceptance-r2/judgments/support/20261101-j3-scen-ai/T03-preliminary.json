@@ -1,0 +1,503 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "A finer immutable build is not exposed. No other-model equivalence or independent second-model review is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-SCEN@1",
+    "promptPath": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/judgments/support/20261101-j3-scen-ai/protocol.md",
+    "promptSha256": "2952feb9ed5ebb2645796076c4d9e4593b062fd3a65318e50c521361830ffeaa",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": true,
+  "scores": [
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g01",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "错误后下一动作直接修正缺失理由并成功重试，不询问无关问题、不重复必败参数。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g01/raw/session.jsonl.gz",
+          "sha256": "05cdcc22d8efe5a051aa800c74d957308aa97fcc86c01d6520c6eefc71f0bf81"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "88442c48",
+          "toolCallId": "call_00_iCT0cv24DqTq3BKkwvAJ9938"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g01/raw/evidence.jsonl.gz",
+          "sha256": "e922c896dc17f2683ea4f4c488a67ccdde8d408de6bee06f3e0c07c5a5661003"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g01/result.json",
+          "sha256": "6942883bc2765f864f54505dc105384d3d31ed592231ed9e84fc13d4c0bc4d1b"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g01.json",
+          "sha256": "71253278b0553bed281956afb47c170bd8ac8f1658608f5e927ccd59f0b405aa"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "ca0afa72",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_iCT0cv24DqTq3BKkwvAJ9938"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g02",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "把报错的n=1纠正为下一未写章3，原请求的标题不变，同一工具成功恢复。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g02/raw/session.jsonl.gz",
+          "sha256": "760ce0fddb8104d21e80dd9ba2e071b7e0a2d7ec44c65309383e43a2c489ce21"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "5cc67190",
+          "toolCallId": "call_00_iq9IryryUR2MASzPRMda8018"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g02/raw/evidence.jsonl.gz",
+          "sha256": "d578b39c78acc9f425396ed01a7c8a0c702ba7825298122aab24e9227a209dd9"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g02/result.json",
+          "sha256": "1f5f0f32ae705b5017c13933c7e84fa86c56783584e88aabc070e16c96a2e53d"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g02.json",
+          "sha256": "7de74d930763fde23be185dfaf9a5de85fd92fa5d9ba419323bba5bdeec74584"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "de06f065",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_iq9IryryUR2MASzPRMda8018"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g03",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "精确引述From now on...green triangle并保留原规则，消除了引用错误，没有丢掉作者要求。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g03/raw/session.jsonl.gz",
+          "sha256": "8e0f92649ff41d22d8c4c25711b8e2300ce7920a7e2abd11fb16477d82880277"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "3d7b5b0e",
+          "toolCallId": "call_00_e6o7Ubc7PC1U4CCFZwMD0782"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g03/raw/evidence.jsonl.gz",
+          "sha256": "59427ccdd32ac71e7b0ac7c5abb2f0583512d53af21ecfb34fcbf035d58346ce"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g03/result.json",
+          "sha256": "1d1e770f12556f331d639ca3033a5c590f2d60ae018386229f0ceca7b256badb"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g03.json",
+          "sha256": "c24556ed9d53685ff8b88aa02c1ec97933b9bdef14cb14c48793ab102b80474e"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "303f1d22",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_e6o7Ubc7PC1U4CCFZwMD0782"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g04",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "原无效slug被准确修复，内容与理由均保留，原工具成功返回，符合提示恢复路径。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g04/raw/session.jsonl.gz",
+          "sha256": "db66a4dfaa6a62f7287941ccbb5f723df706e5c76f02b0edd41caba72b138f51"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "9d9f6017",
+          "toolCallId": "call_00_KKORvjBIcW5k43ivuT6c0762"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g04/raw/evidence.jsonl.gz",
+          "sha256": "5eda6e3dd4547269dbbf216879941dbef26dbc053540fe69a89e34a1ef001c09"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-g04/result.json",
+          "sha256": "ab2cd5c43b3b7a191c3a4af4735b819a9e6baebd01e58d613ab33875cef219d8"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g04.json",
+          "sha256": "25330afdd32307ba38d3f149bc6992640325f4c10be107be280d58a51e5884f2"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "342eadb2",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_KKORvjBIcW5k43ivuT6c0762"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-h01",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "预算拒绝后的下一步是停止并请作者决定，未自动重试，保留未提交状态。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h01/raw/session.jsonl.gz",
+          "sha256": "bad583173c1e6a9dd5c5d5de82f3aca9f346c3f127141cab7e35bedc7526773d"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "08bf9490",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h01/raw/evidence.jsonl.gz",
+          "sha256": "516b7af03e479311a1f56f2f4b3b77f30e0c1fa0b5bb2d655de9a19b10875732"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h01/result.json",
+          "sha256": "367c0413fc19919e43b1553771d0c977a8c0785efe7214f465ab2d44e8e35381"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-h01.json",
+          "sha256": "172292924a2e58f0cef95413d1f5f3a665bfe4c2743b49b573ee471607b88598"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "6e74b8d3",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-h02",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "停止、说明第3章未提交并等待作者预算决定，没有绕过限制或假称恢复成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h02/raw/session.jsonl.gz",
+          "sha256": "d92ba2f3d1d2c9130c7f22e35687d87bc2916bcc9a3f7313a2d4b7658387f1a2"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "43dd9e36",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h02/raw/evidence.jsonl.gz",
+          "sha256": "0c2c7ad92fb6a9764314e0238c29de28a1387960007be0f8d54eaa1a8c8321fe"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-h02/result.json",
+          "sha256": "d69c507b0074bb88b9f4523e76d246a053aa07576b4e9ea08aa369747b1be72c"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-h02.json",
+          "sha256": "98551b4230803779a085fb5ef070fcc2eda0efc2685b2b7fb88b805c501d1ab6"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "78789b7d",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-i01",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "目标错误后的下一步准确汇报完成目标并停下，未把六章总计划当作必须继续的授权。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i01/raw/session.jsonl.gz",
+          "sha256": "92f6398c5e1569653bb783c9d38d188e130d1c35e6bf25237abdc2f47d5d9dd0"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 36,
+          "entryId": "f82e698b",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i01/raw/evidence.jsonl.gz",
+          "sha256": "c0b80dac5c70a17160218c3a4ae14b5963ef7ea62a7bf66eadb347cc6a028250"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i01/result.json",
+          "sha256": "67bc41c659193f89353fb0c046bb1e949e3172a80c655ae6245aaf17f9331fb7"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-i01.json",
+          "sha256": "9de6634f5ed16a42df4760bd2c9325c9ab3a7edd636e264c44e9fe602f278892"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "b6c86ad7",
+          "preparedLastSessionLine1": 32,
+          "firstMeasuredIndex": 31
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-i02",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "错误后下一步报告目标完成且停止，作者未来提高目标只是条件建议，不是当前自动继续。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i02/raw/session.jsonl.gz",
+          "sha256": "99829b0b77a05ba0ba211631b564743fcf7046c2ab8379999dac3160158dd1a2"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 36,
+          "entryId": "e9d40e8b",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i02/raw/evidence.jsonl.gz",
+          "sha256": "a92515f8c6e88949b78c3eda4d427a1714a65a7db4d82c07bafabdc776e99228"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-i02/result.json",
+          "sha256": "e8576768b76c5d012be4d42653d4c975391cfe2198fcf187ea1259b5c62fb044"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-i02.json",
+          "sha256": "0a325e02baadcddea2946e9d0dbdc0bf9fd5a9704d461df6eadb8d9c113786b1"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "69dd8973",
+          "preparedLastSessionLine1": 32,
+          "firstMeasuredIndex": 31
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-j01",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "对被打断章节先改大纲而不直接重写，触及本场景明示禁止动作；语义相关的计划修改不能替代冻结要求的下一步恢复。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j01/raw/session.jsonl.gz",
+          "sha256": "49837f54ff958f14e1fdde6118c5ebd009a2c4e61359cb31313dc764835a72f7"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "687d3f6a",
+          "toolCallId": "call_00_kcDFsBt0QTiLW7Mkozx74570"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j01/raw/evidence.jsonl.gz",
+          "sha256": "50be710c791de31d3cf439abb533db1d1cdaf7cbde69923ecb8957b0ec787f38"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j01/result.json",
+          "sha256": "f5daee17ef6c00db96758fd69bcf9bf7de34aa397aefec7f388a3549429652a6"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-j01.json",
+          "sha256": "fe1813fab32403e377bc5886deee0be61fcaf9b1cf62dea5006fb7d3a91cdc82"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "e97a303b",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_kcDFsBt0QTiLW7Mkozx74570"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-j02",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "下一步直接重写同章并将新的湿页顺序纳入提要，未扩章号或回改已写章；不要求采样边界之后继续成书。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j02/raw/session.jsonl.gz",
+          "sha256": "5eaf532963774b97dbea9de5c450a97b7e134111352870bdabff19b71523387e"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "66f7ed1f",
+          "toolCallId": "call_00_rYeGls2jlpBX5YBmPLp05218"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j02/raw/evidence.jsonl.gz",
+          "sha256": "69c5b2ffe4b5db56d4259f2fffb9bed061dbd9ebcfffe7e955c633ce331ed238"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-j02/result.json",
+          "sha256": "9aab5aee0cd78b0722f11188bb1f0233d74fe8d1f3a2cebfe637d0169a57f662"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-j02.json",
+          "sha256": "590934b696626391eb9148970baeaf6c2719b27dd40b57f39b9466bb87e21d6a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "da0ddab7",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_rYeGls2jlpBX5YBmPLp05218"
+        ]
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-l01",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "报告真实解析原因、保持未提交状态并等待新指令，没有假称成功或继续重试。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l01/raw/session.jsonl.gz",
+          "sha256": "ec660c40fb3fb22f2b80245d5fa6381062ce220f48f50bdf9d072593de2b697a"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "7c3e7713",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l01/raw/evidence.jsonl.gz",
+          "sha256": "fef2ef3a4f366acaa3655e6dd574dc2e2eecdc25a15a5d0976ad17a2fff6714e"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l01/result.json",
+          "sha256": "9048912665d39a6b1707ba5a8450dbb84dbf0d29e97ed9d3fa83e93001da0d8c"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-l01.json",
+          "sha256": "1885cdf9db894e057c4762b4ac58721f535aa31ab27ad4cbb67a1b52fc3f9c60"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "c0626ff2",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-l02",
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "审稿错误后保持已有正史并停止，未来尝试仅以作者新指示为条件，恢复决定合理。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l02/raw/session.jsonl.gz",
+          "sha256": "ae8b549e77c44a3530a9dbb37bb04d597de4cbe830f33b3602962939191f96c7"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "82c20401",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l02/raw/evidence.jsonl.gz",
+          "sha256": "45225596d1b7e82c7b04dcb3b6c090eb1239500acb366b4d45e7395df43645a3"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/ds11-l02/result.json",
+          "sha256": "899e7b46071b3c8e3a9d66dcec0160a632c9fb0063254fae2dded79e3da0be4e"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-l02.json",
+          "sha256": "279a4c54e53fa9dc77b240fb35e8d66fb3c1f82e640f7c5caa71227f7a37ee09"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "1a24900f",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    }
+  ]
+}

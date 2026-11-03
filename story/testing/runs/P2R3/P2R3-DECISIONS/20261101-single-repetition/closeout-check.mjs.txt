@@ -1,0 +1,18 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import path from 'node:path';
+import {publicEvidence,sha256} from '../../../scripts/eval/p2/artifacts.ts';
+const freeze='102c3edb352914934da701a4f6fb717fc610f46a',repository=process.cwd();
+const documents=['docs/p2r3/report.md','docs/p2r3/design-deltas.md','docs/p2r3/judgment-contract.md','story/testing/runs/P2R3/P2R3-J2-handoff.md',
+'D:/AI/Story Dome/新版综合方案/阶段执行方案/25-P2第三轮执行方案.md','D:/AI/Story Dome/新版综合方案/阶段验收标准/26-P2第三轮验收标准.md','D:/AI/Story Dome/新版综合方案/测试结果/指标总表.md','D:/AI/Story Dome/新版综合方案/测试结果/P2/P2第三轮报告.md'];
+function git(...args){const r=spawnSync('git',['--no-optional-locks',...args],{encoding:'utf8',windowsHide:true});if(r.status!==0)throw new Error('Git closeout check failed');return r.stdout.trim();}
+const implementationDelta=git('diff','--name-only',freeze,'--','.',':(exclude)story/testing/runs',':(exclude)docs/p2r3');
+const untrackedSource=git('status','--porcelain=v1','--untracked-files=all','--','.',':(exclude)story/testing/runs',':(exclude)docs/p2r3');
+if(implementationDelta||untrackedSource)throw new Error('Unexpected implementation change outside closeout documentation');
+git('diff','--check','--',...documents.slice(0,4));
+const scopes=[...documents,'story/testing/exec/temp/p2r3-closeout-check.mjs'].map(x=>path.resolve(x));
+for(const file of scopes)publicEvidence(readFileSync(file,'utf8'));
+const scan={schema:'story/closeout-text-guard@1',method:'The existing publicEvidence text API rejects secret material and credential assignments in each plaintext source; whole-directory secret-scan@2 was already completed by P2-Z',files:scopes.length,hits:[],passed:true};
+const result={schema:'story/p2r3-closeout-text-check@1',date:'2026-11-01',productFreeze:freeze,implementationMatchesFreeze:true,documentationDelta:git('diff','--name-only',freeze,'--','docs/p2r3').split('\n').filter(Boolean),whitespacePassed:true,scopes:scopes.map(file=>({path:file,sha256:sha256(readFileSync(file))})),scan,fullScan:'P2-Z/20261101T020750Z-102c3ed: 80486 files, zero actual secrets; this check covers subsequently edited closeout text',pendingManual:['W03','W04','E06','K03','K04','K05','K06','K07','K08'],modelRequests:0};
+const text=JSON.stringify(result,null,2)+'\n';publicEvidence(text);writeFileSync('story/testing/runs/P2R3/P2R3-ACCEPTANCE/20261101T020727Z-single-quality/closeout-check.json',text,{flag:'wx'});
+console.log(JSON.stringify({implementationMatchesFreeze:true,documentationDelta:result.documentationDelta,whitespacePassed:true,scanned:scan.files,secretHits:scan.hits.length,modelRequests:0}));

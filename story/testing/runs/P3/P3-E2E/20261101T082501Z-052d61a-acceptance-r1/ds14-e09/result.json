@@ -1,0 +1,145 @@
+{
+  "id": "ds14-e09",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "tool:1793523608432:03edx78e6w1c"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "tool:1793523608432:03edx78e6w1c"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 1,
+  "stopReason": "budget_exhausted",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Use deterministic local prices, not live prices or real network calls.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    },
+    {
+      "index": 3,
+      "check": "After one charged 0.006 USD request, a further 0.006 USD reservation is rejected before dispatch because it would exceed 0.01 USD.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The rejected request may be a showrunner or internal-role request; verify the same guard by a separate showrunner pre-dispatch probe.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    },
+    {
+      "index": 5,
+      "check": "No request is sent after BUDGET_EXHAUSTED and the stop reason is reported.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "budget_exhausted",
+        "probeError": "BUDGET_EXHAUSTED"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "1692d16e09a87e90a46b8cd16d92a79c4e1e2967001312f753dc7d9d77fe1be3",
+    "sessionSha256": "21162e729efc715c964dbbd535abda2c9c9dec7215eab40188f77a8dd11ce9c9",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 2
+  }
+}

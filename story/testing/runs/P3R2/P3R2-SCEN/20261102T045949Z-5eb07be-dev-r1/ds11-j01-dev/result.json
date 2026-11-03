@@ -1,0 +1,124 @@
+{
+  "id": "ds11-j01-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author requested that Tobin bring the duplicate page in chapter 3 instead of Ruth.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Anwen reads the handling note and works out which records are missing; Tobin produces the duplicate page he had set aside.",
+            "turn": "The duplicate page lets the team keep checking the disputed delivery before the public demonstration, and Anwen accepts Tobin's disagreement as useful."
+          }
+        ]
+      },
+      "id": "call_00_8mtSN0D5vOdxn9gEyeLo9594"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author requested that Tobin bring the duplicate page in chapter 3 instead of Ruth.",
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Anwen reads the handling note and works out which records are missing; Tobin produces the duplicate page he had set aside.",
+          "turn": "The duplicate page lets the team keep checking the disputed delivery before the public demonstration, and Anwen accepts Tobin's disagreement as useful."
+        }
+      ]
+    },
+    "id": "call_00_8mtSN0D5vOdxn9gEyeLo9594"
+  },
+  "firstAcceptable": false,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author requested that Tobin bring the duplicate page in chapter 3 instead of Ruth.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Anwen reads the handling note and works out which records are missing; Tobin produces the duplicate page he had set aside.",
+            "turn": "The duplicate page lets the team keep checking the disputed delivery before the public demonstration, and Anwen accepts Tobin's disagreement as useful."
+          }
+        ]
+      },
+      "id": "call_00_8mtSN0D5vOdxn9gEyeLo9594"
+    }
+  ],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "7ca031cf0a52ca6f9fb79c1c75a86d0764f37d8098c5feb2a663a515b24f33f3",
+    "sessionSha256": "dd2d60080ee62e5a0fd42b324aa5206c17d0399952fc0f024f2de79ba64b6332",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0028833,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0028833
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "second_cairn-c1-injected-1",
+  "storyId": "second_cairn",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v3",
+    "path": "acceptance/chapters/second_cairn-c1.md",
+    "sha256": "7c9d0c604e09e614b1d1f019bfcc96f93f66c11682ead34d3b08549978331b12"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Rafi had been left-handed from birth and had never been right-handed.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Rafi had been left-handed from birth and had never been right-handed.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:rafi",
+          "quote": "Rafi is right-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifelong dominant-hand invariant; an injury or temporary use of the other hand cannot explain it.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c1-injected-1-defect-1",
+      "lines": [
+        41
+      ]
+    },
+    {
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "With no intervening gain or loss after that completed count, the very same balance was 25 litres, not 18 litres.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "With no intervening gain or loss after that completed count, the very same balance was 25 litres, not 18 litres.",
+          "lines": {
+            "start": 43,
+            "end": 43
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The team used two litres for supper, reducing its measured water from twenty litres to eighteen.",
+          "ref": "line:9"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The team used two litres for supper, reducing its measured water from twenty litres to eighteen."
+        }
+      ],
+      "reason": "The correct narrated count is retained in this actual variant; the added count contradicts that same completed balance with all intervening changes explicitly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c1-injected-1-defect-2",
+      "lines": [
+        43
+      ]
+    }
+  ]
+}

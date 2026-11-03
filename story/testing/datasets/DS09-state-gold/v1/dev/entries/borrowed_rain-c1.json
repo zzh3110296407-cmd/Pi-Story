@@ -1,0 +1,114 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "borrowed_rain-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:sera",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Sera, an orchard apprentice"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:orin",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Orin, the village bellsmith"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:mael",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Mael, the appointed reeve"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:fenn",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Fenn, an elderly herbalist"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:orchard",
+          "op": "set",
+          "source": "model",
+          "value": "The rain orchard"
+        },
+        {
+          "kind": "place",
+          "key": "place:library",
+          "op": "set",
+          "source": "model",
+          "value": "The seed library"
+        },
+        {
+          "kind": "place",
+          "key": "place:cistern",
+          "op": "set",
+          "source": "model",
+          "value": "The dry cistern"
+        },
+        {
+          "kind": "place",
+          "key": "place:square",
+          "op": "set",
+          "source": "model",
+          "value": "The village square"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:physical_limit",
+          "op": "set",
+          "source": "model",
+          "value": "A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        },
+        {
+          "kind": "character",
+          "key": "char:old_tree",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "The ancient living orchard tree"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:new_tree",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "A new sapling distinct from the old tree"
+          }
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:sera->orin",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "wary cooperation"
+          }
+        }
+      ]
+    }
+  }
+]

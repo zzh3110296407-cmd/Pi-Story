@@ -1,0 +1,845 @@
+{
+  "schema": "story/p2r3-single-aggregate@1",
+  "scoringVersion": "p2r3-26-single@1",
+  "policy": {
+    "path": "P2R3-DECISIONS/20261101-single-repetition/decision.json",
+    "sha256": "ec80aebd4d9d35870756525b401564a24bda0cb0525887dc4c4e47090090c6ff",
+    "standardSha256": "5e9ce411448dedebdbd535ae9e0ba592a39fb57f5099b3d8c6aff5f71db72224"
+  },
+  "executionComplete": true,
+  "runs": [
+    {
+      "suiteId": "P2-OPEN",
+      "runId": "20261031T153047Z-102c3ed-r1",
+      "repetition": 1
+    },
+    {
+      "suiteId": "P2-CHAP",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "repetition": 1
+    },
+    {
+      "suiteId": "P2-KEEP",
+      "runId": "20261101T015406Z-102c3ed-r1",
+      "repetition": 1
+    }
+  ],
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 90,
+      "value": 0.9222222222222223,
+      "counts": {
+        "n": 90,
+        "successes": 83
+      },
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": [
+        0.8480613981740798,
+        0.9618151846827111
+      ],
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-OPEN",
+          "runId": "20261031T153047Z-102c3ed-r1",
+          "n": 43,
+          "value": 0.8604651162790697
+        },
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 47,
+          "value": 0.9787234042553191
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "n": 12,
+      "value": 0.9166666666666666,
+      "counts": {
+        "n": 12,
+        "successes": 11
+      },
+      "threshold": 0.9,
+      "minimum": 12,
+      "confidence95": [
+        0.646120088858883,
+        0.9851349055950829
+      ],
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-OPEN",
+          "runId": "20261031T153047Z-102c3ed-r1",
+          "n": 12,
+          "value": 0.9166666666666666
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "n": 159,
+      "value": {
+        "precision": 0.9071428571428571,
+        "recall": 0.9371069182389937
+      },
+      "counts": {
+        "precision": {
+          "n": 140,
+          "successes": 127
+        },
+        "recall": {
+          "n": 159,
+          "successes": 149
+        }
+      },
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 30,
+      "confidence95": {
+        "precision": [
+          0.8476094094916335,
+          0.9449298273504159
+        ],
+        "recall": [
+          0.888108635369929,
+          0.9654823420546463
+        ]
+      },
+      "passed": true,
+      "status": "measured",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-OPEN",
+          "runId": "20261031T153047Z-102c3ed-r1",
+          "n": 159,
+          "value": {
+            "precision": 0.9071428571428571,
+            "recall": 0.9371069182389937
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "n": 50,
+      "value": 1,
+      "counts": {
+        "n": 50,
+        "successes": 50
+      },
+      "threshold": 0.9,
+      "minimum": 25,
+      "confidence95": [
+        0.9286524008666414,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-OPEN",
+          "runId": "20261031T153047Z-102c3ed-r1",
+          "n": 50,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "W01",
+      "n": 24,
+      "value": {
+        "first": 0.9583333333333334,
+        "final": 0.9583333333333334
+      },
+      "counts": {
+        "first": {
+          "n": 24,
+          "successes": 23
+        },
+        "final": {
+          "n": 24,
+          "successes": 23
+        }
+      },
+      "threshold": {
+        "first": 0.95,
+        "final": 0.99
+      },
+      "minimum": 15,
+      "confidence95": {
+        "first": [
+          0.7975819352134406,
+          0.9926065438344942
+        ],
+        "final": [
+          0.7975819352134406,
+          0.9926065438344942
+        ]
+      },
+      "passed": false,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 24,
+          "value": {
+            "first": 0.9583333333333334,
+            "final": 0.9583333333333334
+          }
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "n": 33,
+      "value": {
+        "first": 0.8787878787878788,
+        "final": 0.9393939393939394
+      },
+      "counts": {
+        "first": {
+          "n": 33,
+          "successes": 29
+        },
+        "final": {
+          "n": 33,
+          "successes": 31
+        }
+      },
+      "threshold": {
+        "first": 0.8,
+        "final": 0.95
+      },
+      "minimum": 15,
+      "confidence95": {
+        "first": [
+          0.7267449482892476,
+          0.9518383869058644
+        ],
+        "final": [
+          0.8039375519135219,
+          0.9832191169128082
+        ]
+      },
+      "passed": false,
+      "status": "measured",
+      "manual": false,
+      "unavailable": 0.06060606060606061,
+      "unavailableMaximum": 0.03,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 33,
+          "value": {
+            "first": 0.8787878787878788,
+            "final": 0.9393939393939394
+          }
+        }
+      ]
+    },
+    {
+      "id": "K01",
+      "n": 30,
+      "value": {
+        "first": 0.8333333333333334,
+        "final": 1
+      },
+      "counts": {
+        "first": {
+          "n": 30,
+          "successes": 25
+        },
+        "final": {
+          "n": 30,
+          "successes": 30
+        }
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.95
+      },
+      "minimum": 15,
+      "confidence95": {
+        "first": [
+          0.6643564949358398,
+          0.9266345762815145
+        ],
+        "final": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      },
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 21,
+          "value": {
+            "first": 0.8571428571428571,
+            "final": 1
+          }
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 9,
+          "value": {
+            "first": 0.7777777777777778,
+            "final": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "n": 20,
+      "value": 0.85,
+      "counts": {
+        "n": 20,
+        "successes": 17
+      },
+      "threshold": 0.8,
+      "minimum": 10,
+      "confidence95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 20,
+          "value": 0.85
+        }
+      ]
+    },
+    {
+      "id": "W05",
+      "n": 10,
+      "value": 1,
+      "counts": {
+        "n": 10,
+        "successes": 10
+      },
+      "threshold": 0.9,
+      "minimum": 10,
+      "confidence95": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 10,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "K02",
+      "n": 30,
+      "value": {
+        "first": 0.7666666666666667,
+        "final": 0.9666666666666667
+      },
+      "counts": {
+        "first": {
+          "n": 30,
+          "successes": 23
+        },
+        "final": {
+          "n": 30,
+          "successes": 29
+        }
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.9
+      },
+      "minimum": 15,
+      "confidence95": {
+        "first": [
+          0.5907167384187784,
+          0.8820761185551049
+        ],
+        "final": [
+          0.8332960900859082,
+          0.9940914096183874
+        ]
+      },
+      "passed": true,
+      "status": "measured",
+      "manual": false,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 21,
+          "value": {
+            "first": 0.8095238095238095,
+            "final": 0.9523809523809523
+          }
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 9,
+          "value": {
+            "first": 0.6666666666666666,
+            "final": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.9,
+      "minimum": 30,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "W04",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.8,
+      "minimum": 10,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.8,
+      "minimum": 10,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K03",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.85,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K05",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K06",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.85,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K07",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-CHAP",
+          "runId": "20261031T154922Z-102c3ed-r1-complete",
+          "n": 0,
+          "value": null
+        },
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K04",
+      "n": 0,
+      "value": null,
+      "counts": {
+        "n": 0,
+        "successes": 0
+      },
+      "threshold": 0.6,
+      "minimum": 30,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "K08",
+      "n": 0,
+      "value": {
+        "precision": null,
+        "recall": null
+      },
+      "counts": {
+        "precision": {
+          "n": 0,
+          "successes": 0
+        },
+        "recall": {
+          "n": 0,
+          "successes": 0
+        }
+      },
+      "threshold": {
+        "precision": 0.7,
+        "recall": 0.5
+      },
+      "minimum": 10,
+      "confidence95": {
+        "precision": null,
+        "recall": null
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "manual": true,
+      "perSuite": [
+        {
+          "suiteId": "P2-KEEP",
+          "runId": "20261101T015406Z-102c3ed-r1",
+          "n": 0,
+          "value": {
+            "precision": null,
+            "recall": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "H12",
+      "n": 113,
+      "value": 1,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 1,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "H09",
+      "n": 109,
+      "value": 0,
+      "counts": {
+        "n": 109,
+        "successes": 109
+      },
+      "confidence95": [
+        0.9659570262486751,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 4,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C02",
+      "n": 113,
+      "value": 0,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C04",
+      "n": 113,
+      "value": 1,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 1,
+      "unknownCalls": 0,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "C05",
+      "n": 113,
+      "value": 0,
+      "counts": {
+        "n": 113,
+        "successes": 113
+      },
+      "confidence95": [
+        0.967122467834048,
+        1
+      ],
+      "threshold": 0,
+      "unknownCalls": 4,
+      "unclassified": 0,
+      "passed": true,
+      "status": "measured"
+    }
+  ],
+  "repositoryCommit": "102c3edb352914934da701a4f6fb717fc610f46a",
+  "pendingManual": [
+    "W03",
+    "W04",
+    "E06",
+    "K03",
+    "K05",
+    "K06",
+    "K07",
+    "K04",
+    "K08"
+  ],
+  "knownUnmet": [
+    "E01",
+    "W01"
+  ],
+  "fees": {
+    "knownUsd": 2.609983439999997,
+    "reservedUsd": 1.5954414000000001,
+    "unknownCalls": 7,
+    "requests": 468,
+    "totalUsd": 4.205424839999997
+  },
+  "selectionSources": [
+    {
+      "folder": "P2-OPEN/20261031T153047Z-102c3ed-r1",
+      "runId": "20261031T153047Z-102c3ed-r1",
+      "manifestSha256": "dfc9379e35575b3d5942e2dd46fca8bf84e4bc608bcf2c9a324469ce5f3fac49",
+      "originalMetricsSha256": "6dc7ea0b8af448b90267543b2d3584364504513a345a97127f8bfdb0d26d4db6",
+      "rawEvidenceSha256": "3defa109f8c6998389350ca6a260dd688a509c56cf626c495a328b530e334132",
+      "approvedJudgments": 349
+    },
+    {
+      "folder": "P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "manifestSha256": "3c8e5eba3328c73b058c0bc66293c00f6e897b86da5cdf7321bf62a2627c2a8e",
+      "originalMetricsSha256": "c389922bea378943b0061b28014ceaf563a6ba93667f01a34efb669839c2e437",
+      "rawEvidenceSha256": "f926b7d93585747d5879d30515ee4e82f12c9b2d4059733d42bd8f3a108a7910",
+      "approvedJudgments": 0
+    },
+    {
+      "folder": "P2-KEEP/20261101T015406Z-102c3ed-r1",
+      "runId": "20261101T015406Z-102c3ed-r1",
+      "manifestSha256": "682e5ea0b71422d3ab88fae47431c5ff2072ae3a72db198bcb9124c99a11d3f9",
+      "originalMetricsSha256": "e78b1e22cf3d2729b3b566f717b36aed3f7d77794bbd7f8e93c9f19db1c77f42",
+      "rawEvidenceSha256": "9624257461fa2a203abcb37b086fb5ce4dc754d9a57bd0ef68824e7f67c181c4",
+      "approvedJudgments": 0
+    }
+  ],
+  "judgments": {
+    "approvalPath": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approval.json",
+    "approvalSha256": "41313bf3a5f5f42656f44f69d4fdde044436e12bf4d8173a842a5b1be99c519b",
+    "viewPath": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approved-open-judgments.json",
+    "viewSha256": "38e5355fcc17d50b9b710c3eba5c6260dd3f019fc8bff907352fb5a603f4f258",
+    "formalSelected": 349,
+    "supplementaryExcluded": 353,
+    "remaining": "CHAP/KEEP independent J2 and actual author acceptance pending; no executor judgments supplied"
+  },
+  "hardAudit": {
+    "path": "P2R3-ACCEPTANCE/20261101T020615Z-single-program/program-summary.json",
+    "sha256": "f695adf68cc51d98eb116edfeba1049254a1f3b1bd432c7df24adb8828f2acbd",
+    "physicalRuns": 7,
+    "internalDispatches": 113
+  },
+  "inherited": {
+    "source": "story/testing/runs/P2R/P2-ACCEPTANCE/20261031-d4-final",
+    "E02": {
+      "successes": 36,
+      "n": 36
+    },
+    "E03": {
+      "successes": 45,
+      "n": 50
+    },
+    "E04": {
+      "successes": 42,
+      "n": 50
+    },
+    "E05": {
+      "successes": 45,
+      "n": 50
+    },
+    "P2D": "Author terminal approval 2026-10-30; reused without new demonstration"
+  },
+  "status": "not_passed_pending_remaining_judgments",
+  "modelRequests": 0
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "story/p3-guard-coverage@1",
+  "freeze": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "source": {
+    "file": "story\\testing\\runs\\P3\\P3-GUARD\\20261101T075840Z-a44db87-acceptance\\raw\\vitest.json",
+    "sha256": "1bc21552e46bf3cb7f9fdfa5049e4f395376a6de1bd851f60e721f73808d1757"
+  },
+  "metric": "H10",
+  "groups": [
+    {
+      "label": "I4",
+      "n": 3,
+      "minimum": 3,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I4-fake-control' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I4-bible-control' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I4-outline-control' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "I7",
+      "n": 3,
+      "minimum": 3,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD I7 'tokens=0' blocks the next internal dispatch",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD I7 'perChapterCalls=1' blocks the next internal dispatch",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD I7 'perChapterCalls=2' blocks the next internal dispatch",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "I8",
+      "n": 4,
+      "minimum": 3,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-continuation.test.ts",
+          "name": "P3 automatically writes three chapters after one request, reports each chapter, then stops at target",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-continuation.test.ts",
+          "name": "P3 goal off during a chapter finishes that chapter and prevents automatic continuation",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-continuation.test.ts",
+          "name": "P3 unanswered question pauses automatic continuation",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-continuation.test.ts",
+          "name": "P3 stops after two consecutive failed chapters and refuses a third write",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "label": "I9",
+      "n": 4,
+      "minimum": 3,
+      "passed": true,
+      "evidence": [
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I9-bible-missing-reason' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I9-outline-missing-reason' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I9-bible-blank-reason' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        },
+        {
+          "file": "D:/AI/Story Dome/Story/pi-Story/story/packages/pi-story/test/p3-guard.test.ts",
+          "name": "P3-GUARD 'I9-outline-blank-reason' blocks the attempted write at the real Pi/core boundary",
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "indexCorrection": "coverage-index-first.json used a label filter that missed Vitest-quoted I4/I9 case IDs. This index uses the actual IDs; raw results are unchanged and no tests were rerun.",
+  "I8Scope": "00 I8 explicitly includes goal, consecutive failures and the continuation conditions for budget and unanswered author questions."
+}

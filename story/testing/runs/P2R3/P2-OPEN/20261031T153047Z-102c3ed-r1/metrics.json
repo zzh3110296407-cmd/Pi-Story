@@ -1,0 +1,214 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261031T153047Z-102c3ed-r1",
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 43,
+      "value": 0.8604651162790697,
+      "successes": 37,
+      "failures": 6,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.7273641203261714,
+        0.9344427657203511
+      ],
+      "passed": null,
+      "status": "insufficient_evidence",
+      "failureCategories": {
+        "json_syntax": 1,
+        "DOMAIN_INVALID": 5
+      },
+      "afterRepairUsability": {
+        "n": 43,
+        "successes": 37
+      }
+    },
+    {
+      "id": "T05",
+      "n": 12,
+      "value": 0.9166666666666666,
+      "successes": 11,
+      "failures": 1,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.646120088858883,
+        0.9851349055950829
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 0,
+      "successes": 0,
+      "failures": 0,
+      "value": null,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": null,
+      "passed": null,
+      "status": "insufficient_evidence",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 0,
+      "successes": 0,
+      "failures": 0,
+      "value": null,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": null,
+      "passed": null,
+      "status": "insufficient_evidence",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 55,
+        "knownUsd": 0.11987029199999996,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 43,
+        "mainLogicalRequests": 55,
+        "mainNetworkRequests": 43
+      },
+      "chapters": [],
+      "overhead": {
+        "knownUsd": 0.11987029199999996,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 43,
+        "mainLogicalRequests": 55,
+        "mainNetworkRequests": 43
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "c225c4d6bb603281913e88eadf18c41af428945d82f71c80fd46489eb4ff4eba",
+        "characters": 5055,
+        "estimatedTokens": 3615
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "3c596a09d7f767ec2008e1323f85af0874bdf126a045a4b1eae3ed90de62f128",
+        "characters": 17226,
+        "estimatedTokens": 7371
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "1129f9841124d530abd77c2d83655a91fb96bad4a155b5e8b09f963b05960477",
+        "characters": 8010,
+        "estimatedTokens": 4524
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 0,
+      "median": null,
+      "max": null
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": []
+  },
+  "scoringVersion": "p2r3-26@1",
+  "judgmentProtocol": {
+    "ledger": "coverage-rev20261031",
+    "facts": "predicate-and-entity-rev20261031",
+    "notApplicable": "excluded from scored denominator; retained in judgment source"
+  }
+}

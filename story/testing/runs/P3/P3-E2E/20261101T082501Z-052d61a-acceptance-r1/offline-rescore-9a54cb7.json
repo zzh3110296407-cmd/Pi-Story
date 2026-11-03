@@ -1,0 +1,2803 @@
+{
+  "schema": "story/p3-e2e-offline-measurement@1",
+  "productFreeze": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "measurementRevision": {
+    "commit": "9a54cb7634eafe55c38dcd6152fb2e54dd588bdf",
+    "evidence": "P3-E2E/20261101T082501Z-052d61a-acceptance-r1/dialog-measurement-repair.json"
+  },
+  "originalExecutionMeasurementRevision": {
+    "commit": "17417e4a387b1ecbc091ad3d21f3cb045514a2ba",
+    "evidence": "P3-E2E/20261101T081545Z-ccbd53f-acceptance-r1/loader-repair.json"
+  },
+  "originalsRetained": true,
+  "paidReruns": 0,
+  "counts": {
+    "cases": 15,
+    "program": 73,
+    "passed": 70,
+    "failed": 1,
+    "incomplete": 0,
+    "pendingJudgment": 2
+  },
+  "scoringVersion": "p3-29@1",
+  "complete": false,
+  "samples": [
+    {
+      "id": "ds14-e01",
+      "category": "E01",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": null,
+        "firstAcceptable": false,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "The slash command is dispatched before any ordinary author message; do not synthesize a story prompt.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 0,
+              "macroErrors": [],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0
+            }
+          },
+          {
+            "index": 1,
+            "check": "Return DOMAIN_INVALID and a notification meaning send the story prompt first.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 0,
+              "macroErrors": [],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0
+            }
+          },
+          {
+            "index": 2,
+            "check": "No story.control entry, model request or story mutation is produced.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 0,
+              "macroErrors": [],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0
+            }
+          }
+        ],
+        "id": "ds14-e01",
+        "status": "measured",
+        "originalResultSha256": "bfdd66355adadfb4b48a87c51640b8a564e29a3d566e80b7d39a916c7e13d4c0",
+        "rawDigests": {
+          "evidenceSha256": "751266fdcd0c91fc150adbe190f3d146415120dfef221635fd78f15ab27ff85b",
+          "sessionSha256": "246474e36389b1786863f76087cafabe90d9a46794ffb9a5add9c0edda82ca53"
+        },
+        "writerInputs": []
+      }
+    },
+    {
+      "id": "ds14-e02",
+      "category": "E02",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 1, target ~750 words. Third-person past tense, close on Aster, quiet and practical. At the canopy station, Aster receives a sealed seed capsule delivered for the upcoming public demonstration. She checks the outer label, weight log and seal numbers against the paperwork, writes her observations down, and notices a red seam along one edge of the case. Jo assists and is invited to disagree; Kei keeps the public records and the register has a missing second page. Aster does not open the capsule. Practical actions must be precise; nobody is physically injured; the capsule stays intact. Stop on a definite beat: Aster closes the case and decides the demonstration cannot go ahead until the record is settled."
+          },
+          "id": "call_00_sv9oQzv7lCrSeqdN6Nb30574"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached",
+              "probeError": "GOAL_REACHED"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached",
+              "probeError": "GOAL_REACHED"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Exactly chapters 1, 2 and 3 commit, once each, and no author action is required between them.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached",
+              "probeError": "GOAL_REACHED"
+            }
+          },
+          {
+            "index": 3,
+            "check": "A read-only driver probe of a fourth writing attempt returns GOAL_REACHED without a model call or chapter 4; the showrunner itself does not issue that probe.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached",
+              "probeError": "GOAL_REACHED"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The showrunner reports completion and automatic continuation stops.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 0,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached",
+              "probeError": "GOAL_REACHED"
+            }
+          }
+        ],
+        "id": "ds14-e02",
+        "status": "measured",
+        "originalResultSha256": "8982efc8297968210cef71e0762461324fda345c3ecf74169c08610dd7ed7795",
+        "rawDigests": {
+          "evidenceSha256": "509b43791c6d9556d574d3f83a0bffca4e7d0c169dea47a0ae2212afb375e126",
+          "sessionSha256": "547b473cd8653769a0cd7d3c0c55f624b00ee16840fe8626251970bcd31deb56"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 61,
+            "reservationId": "reservation-4",
+            "chapter": 1,
+            "task": "draft",
+            "rawFile": "role_checkpoint/e2ee5fb2e56bb5dd2cf439ba9238873057b2b9fe1183681b36fd224dcc7a3deb.jsonl.gz",
+            "sha256": "4ecbe062cad5e9b42398813ba21ee356d9a362f3f0889012837f05079d3b734f"
+          },
+          {
+            "evidenceIndex": 85,
+            "reservationId": "reservation-6",
+            "chapter": 1,
+            "task": "patch",
+            "rawFile": "role_checkpoint/fb651e45ad469af3d2004dd76a53e021b592278cb3223afd6ca6dc7723a0336c.jsonl.gz",
+            "sha256": "c1ae81c21bb8caec394b27bf16bdbcdd1e2d6d181a3a1e9756ebc92373173294"
+          },
+          {
+            "evidenceIndex": 151,
+            "reservationId": "reservation-11",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/7b10b48c240f6632e3d8112f10108767c6bda0520c6e5b30c71f9e6662c40a21.jsonl.gz",
+            "sha256": "be95621e12d1f47fb36b005b312fd4f124afd2491885c19b33867de740ffe798"
+          },
+          {
+            "evidenceIndex": 207,
+            "reservationId": "reservation-15",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/46b6ed2189a70b2bfdac943c4b01a5a6a22792519e40263acfa08780ae3903f2.jsonl.gz",
+            "sha256": "2ccd3d6f852cb2567c191e0f3150ba1e27f0524535bea7d544a5f9d860a4b864"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e03",
+      "category": "E03",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2: Aster and Jo compare the capsule label with the canopy register. Keep actions precise and quiet; establish that the second page of the register is absent; they defer opening the seed capsule. No injury; capsule stays intact."
+          },
+          "id": "call_00_IT2PCZ2RxtC4B0atSQu41056"
+        },
+        "firstAcceptable": false,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_off"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_off"
+            }
+          },
+          {
+            "index": 2,
+            "check": "The goal snapshot clears targetChapter while preserving any budget.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_off"
+            }
+          },
+          {
+            "index": 3,
+            "check": "Chapter 2 is allowed to finish normally; the driver does not send another continue and chapter 3 is not automatically started.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_off"
+            }
+          },
+          {
+            "index": 4,
+            "check": "Exactly two chapters are committed when the run becomes idle.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_off"
+            }
+          }
+        ],
+        "id": "ds14-e03",
+        "status": "measured",
+        "originalResultSha256": "55503685508fb210bce7bc7e718c64615264a22a9f9171444d52212038f15578",
+        "rawDigests": {
+          "evidenceSha256": "1a0d5067a237b52d4c05cf2c5d432b8ef8693eea76227a0ccb12e2820acbf9ea",
+          "sessionSha256": "52b2dd15c310c2a356255a5e523bd6d6183af88779314d55f88fcac10cbc8e17"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 104,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/7819055bfcf68ec262bc1fe6fb4b36979fc6794e999bea67a171141749609fc8.jsonl.gz",
+            "sha256": "40a668090ab8ca50bed297feba429349b79bdd8ad681bd6cb284947297051979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e04",
+      "category": "E04",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2. Aster and Jo lay the delivery label beside the canopy station's public register and work through it line by line with precise, unhurried handling. Their comparison turns up a gap: a second page of the register is missing, and no entry matches the capsule's seal code. Jo is allowed to disagree and does — about whether the capsule should be opened now to settle the dispute before the demonstration. Aster decides against opening it and instead sets out the specific checks still possible without breaking the seal. Keep the capsule intact, keep every action exact and quiet, close on the discrepancy placed plainly on the table."
+          },
+          "id": "call_00_G6lJzHNtyn39knJ9Q1DE3065"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "Chapter 2 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "INTERJECTED",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "INTERJECTED",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "The first chapter-2 attempt returns INTERJECTED and has no commit; interjection sequence increases exactly once.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "INTERJECTED",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The second attempt still targets chapter 2 and commits once; discarded draft text never becomes canon.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "INTERJECTED",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e04",
+        "status": "measured",
+        "originalResultSha256": "1785d38495c8a867f3029d520b95a3fae7595953f260b174a27945074742a9ba",
+        "rawDigests": {
+          "evidenceSha256": "9b88ea99a0a7a0887213d8e97bd505f75e8ebbb9fa452f1bbe6788e165ee8290",
+          "sessionSha256": "01a816a9c29215ba5f5e2121df809a8f95baf5bcc045a1e373283557cab2a5f6"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 104,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/837a4cc87ea67f5ab6513d6be4c22edadddae1c95c3e6bd72ad7faba635e800a.jsonl.gz",
+            "sha256": "731bea9448011879b5c613de92fa4b3cc37ce938c2dafc9174ea0acd4f3740d8"
+          },
+          {
+            "evidenceIndex": 155,
+            "reservationId": "reservation-12",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/48670a11d187cfd3304ed826dc46a1ff448dc50051d89652c4823239048a706c.jsonl.gz",
+            "sha256": "ae6d71dce3b483f0ef473cc389669b92a0338639984dadb442da7dce90dd7fa6"
+          },
+          {
+            "evidenceIndex": 179,
+            "reservationId": "reservation-14",
+            "chapter": 2,
+            "task": "patch",
+            "rawFile": "role_checkpoint/3c01971e7d5a80152d94145f5a0cfa55127cba5e60910e1fc4723ff9b142e5fa.jsonl.gz",
+            "sha256": "4e632b35540c82230a7dcddb07943d6d87d7bd1da21b0acc0a7b57ab397517d5"
+          },
+          {
+            "evidenceIndex": 261,
+            "reservationId": "reservation-20",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/0c62061b94dbdac0d26b0f4dbf13f923745bb28d3fa24e67f6881a8022684dc2.jsonl.gz",
+            "sha256": "53960f57405e0c563b37169457872ab5e2b862a64bc7c4ad8a5d79a6cd964a0e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e05",
+      "category": "E05",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2. Quiet comparison of the arrival label against the canopy register. Aster and Jo lay the delivery papers on the worktable, check dates, serials and handling marks line by line. Jo is permitted to disagree; she argues for a reading Aster initially rejects, and Aster tests it with a straightedge and the register's own ink and ruling rather than by opinion. They establish that the second page of the register is absent, and that the capsule is still sealed and must not be opened to settle the question. Kei is present briefly or nearby, keeping the public record open for the demonstration. Keep practical actions exact, no injuries, capsule stays intact. End on the definite beat: the missing page is confirmed absent, and Aster decides the delivery cannot be certified yet."
+          },
+          "id": "call_00_SfARxvAKmQlCDbAGoGhl8791"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "Chapter 3 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged. Chapter 2 must not preemptively incorporate the queued request.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 2,
+            "check": "The followUp does not increment the interjection sequence and chapter 2 commits normally.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The queued author message becomes active only after chapter 2 settles; the first chapter-3 writer input contains the new request.",
+            "status": "pending_judgment",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          }
+        ],
+        "id": "ds14-e05",
+        "status": "measured",
+        "originalResultSha256": "f92dfaf4d8b5d3281d5a3213092dd8be69a9124631936cdd5c920bd42f526ce4",
+        "rawDigests": {
+          "evidenceSha256": "56427efefd0441892a77c445fe98ac7bdb5fefc12c8af937047955c3b09e15df",
+          "sessionSha256": "bb1508c7dc1123bf5c7b7c38e6807417159764934cd7cbb6c6591c71b2a76dbc"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 104,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/f22a8e30dbaa1ef06a5ebb17add95ce4033a42f64a9655e9e3758f855bc48f5f.jsonl.gz",
+            "sha256": "9e50bab75a0ea2e7711e35e017944618dcdeb53ee973f93e9d280a8c42d79c31"
+          },
+          {
+            "evidenceIndex": 132,
+            "reservationId": "reservation-11",
+            "chapter": 2,
+            "task": "patch",
+            "rawFile": "role_checkpoint/5dadf4e12fe437468a23e1a981968713b8b2c852a06ca5c4b646a9924d167292.jsonl.gz",
+            "sha256": "118f4466871fab23cfbd9f6919b141bafb04219cbdf421fb9553aac9658d594d"
+          },
+          {
+            "evidenceIndex": 188,
+            "reservationId": "reservation-15",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          {
+            "evidenceIndex": 212,
+            "reservationId": "reservation-17",
+            "chapter": 3,
+            "task": "patch",
+            "rawFile": "role_checkpoint/c42f5adfff93de19bc944c6a363829ae97138d12dc6c7a6ff1d8b79b96f93736.jsonl.gz",
+            "sha256": "21c70dc6e4a906624a6419c3ef0ba1189f415bfe76cc043e1aa8413edf6e7e20"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e06",
+      "category": "E06",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "call_00_ibtCsu06zt5hsT5l6laX2871"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "author_intent"
+              ],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "author_intent"
+              ],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Write a story.control entry for author_intent and send a story.notice to the showrunner.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "author_intent"
+              ],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The next constructed writer input includes the exact new control text.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "author_intent"
+              ],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The in-flight attempt using the old control basis must not commit after the change; record STALE_OR_CONFLICT and retry the still-next chapter with the new basis.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "author_intent"
+              ],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e06",
+        "status": "measured",
+        "originalResultSha256": "85ac0d811ea463533d840ae8ae8523b56493cb5b3e603f7bf1dd9202bb9e8cea",
+        "rawDigests": {
+          "evidenceSha256": "d00a67596151b570935e5dbf6a947e6245b4c52ab7e35884364d6d0e3054d498",
+          "sessionSha256": "662e6ef804d7652f03ce6af8d97f8d7a32be57962884970de44c64dd8639d418"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 104,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/031bca6ed3a9910f6d5271659378af43f0d4b3356e04f125cb1c73aa4f0b9d8b.jsonl.gz",
+            "sha256": "fc8b9116797586216741941686c5a3babbb57d68323f6add08ae2658594e9318"
+          },
+          {
+            "evidenceIndex": 182,
+            "reservationId": "reservation-14",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/fdbbe6cc0dac7829d8ac18df619a99c1c20a6458705ae05fb7da629f90e26fb2.jsonl.gz",
+            "sha256": "ad9930ae0546e6c5846be3d409698712caf8983780a069d936a99e22f274cd65"
+          },
+          {
+            "evidenceIndex": 252,
+            "reservationId": "reservation-19",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/12060bd4dab35e9dbfe4bbe2e00a57ea686ef219729a12c018303d27d6a04c81.jsonl.gz",
+            "sha256": "83fc23a4dfa5b0bc940048c34d5551939605b87b03dc022fbf4e3c0cf4ef70df"
+          },
+          {
+            "evidenceIndex": 276,
+            "reservationId": "reservation-21",
+            "chapter": 3,
+            "task": "patch",
+            "rawFile": "role_checkpoint/8689f1dc9230a77f0f3b609e2a75a55df61f0d8b995ab40c1b62a149f608918e.jsonl.gz",
+            "sha256": "1201bbebde7a7903d5761f5b963f9309ec2d8136963d26adec430886b7714985"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e07",
+      "category": "E07",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "call_00_5Aj3tY5BwX4lqq7RcECf3506"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "current_focus"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "current_focus"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Write a story.control entry for current_focus and send a story.notice to the showrunner.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "current_focus"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The next constructed writer input includes the exact new control text.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "current_focus"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The in-flight attempt using the old control basis must not commit after the change; record STALE_OR_CONFLICT and retry the still-next chapter with the new basis.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                "STALE_OR_CONFLICT",
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "current_focus"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e07",
+        "status": "measured",
+        "originalResultSha256": "b6b7e2b67e9a64bfe977c581ff1b41dbc83d41450d03fa90ffe74c193da9d1bb",
+        "rawDigests": {
+          "evidenceSha256": "5209d2f949d9f11672120768b771623e3f5edd5637022dc307a15a3f0327131c",
+          "sessionSha256": "91071db3416ad5a5d8d11dc7974032f6e4248207fefd0f7cec8aea9482f0fd7e"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 104,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/fabf55d5d65d7e9e5acdcdd7593179ec9be322024cd329387788639d5a9ede7e.jsonl.gz",
+            "sha256": "9330e5d315021d0ff0633b4ded4620ebd19b550fa5a92e7da4c91835505cd903"
+          },
+          {
+            "evidenceIndex": 182,
+            "reservationId": "reservation-14",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/7fa434306bb8b730c19afc9a30a6f405bafec7624a7df9458e5a302efce5ded5.jsonl.gz",
+            "sha256": "ac6f47a13185cbf8e2609e30e7da1b2c38bd19a1d09d4f1377d81295d5293140"
+          },
+          {
+            "evidenceIndex": 238,
+            "reservationId": "reservation-18",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/386d5c31912272b0608097998c577b9714afe0ae51e69a4a9e08cf2736539947.jsonl.gz",
+            "sha256": "3dcf003763cdfe8a2466cc656608a563f1acee5327029da3a93e34be8fa33a30"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e08",
+      "category": "E08",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "read_story",
+          "args": {
+            "section": "control"
+          },
+          "id": "call_00_qaZ4kCkRLbPgpnDApvmM5138"
+        },
+        "firstAcceptable": false,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 4,
+            "check": "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 5,
+            "check": "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper",
+                "keeper"
+              ],
+              "controlFields": [
+                "ledger_edit",
+                "ledger_edit",
+                "ledger_edit"
+              ],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e08",
+        "status": "measured",
+        "originalResultSha256": "21e0539c1f4cd4f6f76d488037d5fc10fee51a53bc20ccaffd197a645e74af71",
+        "rawDigests": {
+          "evidenceSha256": "44fa35ed80881afd3770c3b7c7de2e39869a9ebe1aa805c79229838b846db049",
+          "sessionSha256": "b7e65ce2ca1d01e9bda5a8a230b41493eb165b579f03598c7dba8837422101c5"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 140,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/3c275d12d92483e9eacf6161a8a713886206a2059292a312db6921d829f65695.jsonl.gz",
+            "sha256": "9ca3942da1a97d28bda9a754f19cc7781d64b6119328090c55945492160d9a9c"
+          },
+          {
+            "evidenceIndex": 206,
+            "reservationId": "reservation-15",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/7803be434f980d1f670844139b9cd78286b42a48020405d7fbe0713c9fe406b0.jsonl.gz",
+            "sha256": "cc871a48483afc10463420f2c1536b8a53a3bc6a24ad86803d727431461fa69b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e09",
+      "category": "E09",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793523608432:03edx78e6w1c"
+        },
+        "firstAcceptable": false,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Use deterministic local prices, not live prices or real network calls.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          },
+          {
+            "index": 3,
+            "check": "After one charged 0.006 USD request, a further 0.006 USD reservation is rejected before dispatch because it would exceed 0.01 USD.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The rejected request may be a showrunner or internal-role request; verify the same guard by a separate showrunner pre-dispatch probe.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          },
+          {
+            "index": 5,
+            "check": "No request is sent after BUDGET_EXHAUSTED and the stop reason is reported.",
+            "status": "pending_judgment",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted",
+              "probeError": "BUDGET_EXHAUSTED"
+            }
+          }
+        ],
+        "id": "ds14-e09",
+        "status": "measured",
+        "originalResultSha256": "841629da1944b794dd8c22ba6a147175c07af1fc4cb66f73081033bc5945b69a",
+        "rawDigests": {
+          "evidenceSha256": "1692d16e09a87e90a46b8cd16d92a79c4e1e2967001312f753dc7d9d77fe1be3",
+          "sessionSha256": "21162e729efc715c964dbbd535abda2c9c9dec7215eab40188f77a8dd11ce9c9"
+        },
+        "writerInputs": []
+      }
+    },
+    {
+      "id": "ds14-e10",
+      "category": "E10",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793523608574:cre3jku4ken"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Force a genuine local-revision path; a clean writer/editor/keeper cycle has only three calls and is not this test.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted"
+            }
+          },
+          {
+            "index": 3,
+            "check": "After draft, full review and writer patch, the fourth internal call (recheck editor) is blocked as BUDGET_EXHAUSTED.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The failed chapter is not committed and no keeper request or automatic retry is dispatched.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "BUDGET_EXHAUSTED"
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "budget_exhausted"
+            }
+          }
+        ],
+        "id": "ds14-e10",
+        "status": "measured",
+        "originalResultSha256": "4e6b15d441bf7d5fa662a4685219bbffd982d135a4a09202ef57781935ee79c3",
+        "rawDigests": {
+          "evidenceSha256": "75c17733a11b1fdef072303fdb387d82a2e4f8b6f8ff5ad6aab5c9a35f2dc988",
+          "sessionSha256": "197006b3cf6563b7d1b7e42d1529e7ec7ffa52744ce8e76ded1478cbf8ec975d"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 103,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/efa8333db95a288bc19b6479ee3937db9b4c11dd75d7f3737b7e220f4326b44a.jsonl.gz",
+            "sha256": "efe37407f26308fcd6e1f8c0afc7df70bc8987bf07167a4d017b56546c915bdd"
+          },
+          {
+            "evidenceIndex": 115,
+            "reservationId": "reservation-11",
+            "chapter": 2,
+            "task": "patch",
+            "rawFile": "role_checkpoint/6bc0152e2f11e2a2f02319e3aa1dba59e7dce4d52d94c2902baba2d77d43b50b.jsonl.gz",
+            "sha256": "0f9bd2db4f1093dda809d7eb155aebd9461b14f50fb0451e03bd9346d67d39b8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e11",
+      "category": "E11",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "incomplete",
+        "measurementErrors": [
+          "Scripted author reply was not delivered after the observed dialog pause"
+        ],
+        "firstAction": {
+          "tool": "ask_author",
+          "args": {
+            "question": "For the next chapter (Chapter 2, the comparison scene), which sense of \"lighter\" should I write?",
+            "options": [
+              "Brighter illumination: more daylight through the canopy, lamps up, clearer visibility on the capsule and register",
+              "Less solemn mood: warmer and easier exchange between Aster, Jo and Kei, while the checks stay exact",
+              "Both: brighter light and an easier mood"
+            ]
+          },
+          "id": "call_00_Uko5OWJkfn9Hyq8RbKPo3142"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The question distinguishes illumination and mood; the resulting next chapter uses brighter daylight and retains a serious tone.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Ask a material clarifying question via the UI protocol; automatic continuation pauses while the answer is pending.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The scripted author answer is persisted in the session as an author response and is visible to the next writer input.",
+            "status": "failed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          },
+          {
+            "index": 4,
+            "check": "After the answer, continuation resumes without an extra unrelated author command.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "ask_author"
+            }
+          }
+        ],
+        "id": "ds14-e11",
+        "status": "incomplete",
+        "originalResultSha256": "ace9fc51cd62862f237362a3c9f4bea134f624b673e3c6238d9c866b2fddc304",
+        "rawDigests": {
+          "evidenceSha256": "214428e0b5781f3999a62b9451c5414bdec4c1ef83ef52af1925bbd2285679f5",
+          "sessionSha256": "45035bcfef2a8705c5a62a659a32be07055990c3c09adae5a9d0656e7226c7b5"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 122,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/63b9986df156d6958d753c3c0c0c30d995a0d2f39800c2f61fe42b77454a5dac.jsonl.gz",
+            "sha256": "79d0eacb9a39dbf22cbb2a52eb8ff4defbea63fefedf5f280e2c7ae2de747d09"
+          },
+          {
+            "evidenceIndex": 178,
+            "reservationId": "reservation-14",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/a186820c53f53014fb1ac6902d0d50b771206040c1540114ee30adddb874ba0c.jsonl.gz",
+            "sha256": "81e0a83a8b78f76d4284a65ac6a29f017b8679d5ba9438496719d2b82c664de9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e12",
+      "category": "E12",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "update_bible",
+          "args": {
+            "reason": "Author added a new physical rule for future scenes: the west door can only be opened from inside.",
+            "changes": [
+              {
+                "key": "rule:west_door",
+                "source": "user",
+                "op": "set",
+                "kind": "rule",
+                "name": "West door",
+                "authorQuote": "From the next chapter onward, the west door can be opened only from inside.",
+                "value": {
+                  "description": "The west door of the canopy station can be opened only from inside.",
+                  "invariants": [
+                    "The west door can be opened only from inside."
+                  ]
+                }
+              }
+            ]
+          },
+          "id": "call_00_AeeRMKbVSqqYeRfcQ7A49120"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The new rule keeps the inside-only condition; no outside unlocking is introduced in the next chapter.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "update_bible includes a nonempty reason, source=user and a verbatim quote of the new rule.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "The new rule starts at chapter 2; chapter-1 bible lookup and chapter-1 text are unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The next writer input includes the new effective rule.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e12",
+        "status": "measured",
+        "originalResultSha256": "432e11c7f22b9e9645170d2ee26e71d09ad0830649f1891cd0a3f9fbbe82ce4d",
+        "rawDigests": {
+          "evidenceSha256": "3a23efafc8dbb4e71e90689ab4c7cea17be7fe1f182db91a708c65f56409ddac",
+          "sessionSha256": "e58daaa31086763e8c1a9fce6193fff8eb8a766e2dd0e026712925ed0f14bdf8"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 120,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/bbc917c8078fb4967c24622593243d20adec483cb3121c4e42b74842b7404d22.jsonl.gz",
+            "sha256": "b4908334a21619698b6d064202b1a97ae7008f32326434f5fd570054151dbe2b"
+          },
+          {
+            "evidenceIndex": 144,
+            "reservationId": "reservation-12",
+            "chapter": 2,
+            "task": "patch",
+            "rawFile": "role_checkpoint/cdbef63071af30152c56aeaf9c55ca55b646297f0dd04d63f26a1ce5c4381aa0.jsonl.gz",
+            "sha256": "c7a86ebfca7a0655e0f81e698e9a77d75da0b70dc55bc3174d87f7f76ac79f2d"
+          },
+          {
+            "evidenceIndex": 214,
+            "reservationId": "reservation-17",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/5c842ab6b012d7a4b0ee65adfb504d15fb1773194c35ffb6c068092928b74c29.jsonl.gz",
+            "sha256": "92a58593a02bdff23aaef331ceffe32164ec28072f9b521ac3a0eb781eddbf04"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e13",
+      "category": "E13",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "patch_outline",
+          "args": {
+            "reason": "作者要求由 Jo 而非 Aster 做最后的公开说明，仅改动未写的第3章。",
+            "chapters": [
+              {
+                "n": 3,
+                "title": "The Duplicate",
+                "targetWords": 750,
+                "purpose": "Aster reads the handling note and obtains the duplicate register page from Kei; Jo prepares to give the final public explanation.",
+                "turn": "Jo, not Aster, presents the final explanation to the gathered audience; the small demonstration proceeds and the intact seed capsule is stored, closing the delivery dispute."
+              }
+            ]
+          },
+          "id": "call_00_rAypgoet3z8pkBbnYNPY5210"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [
+          {
+            "check": "The patched chapter-3 plan and eventual chapter-3 prose give the final explanation to Jo; the writer must not silently retain Aster as presenter.",
+            "status": "pending"
+          }
+        ],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "A reason is supplied; only chapter 3 changes, with no edit to committed chapter 1.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "Chapters remain numbered 1 through 3 and chapter 2 retains its plan.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 3,
+              "macroErrors": [
+                null,
+                null
+              ],
+              "roles": [
+                "writer",
+                "editor",
+                "keeper",
+                "writer",
+                "editor",
+                "editor",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e13",
+        "status": "measured",
+        "originalResultSha256": "021bec8fc5a7333841e338724b13d2987970e89482991a4f4e7c311fcdfa3a60",
+        "rawDigests": {
+          "evidenceSha256": "8a3de6d1a89bac895cc334e0fe0de14660da8d58b4bb03691d64ddaf4e18790d",
+          "sessionSha256": "25f15a2e35327dbe6090eede641dc4ac33be20f40f64946ab1246f5f7246217b"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 120,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/8314e5a5837725264e89dd9b34c083aae0a4921b184c963b5e552f1f23649ede.jsonl.gz",
+            "sha256": "800052a82b42f8531a4da2262f18c339b7be27ef6fb6f5bb2c8ce924295c2b28"
+          },
+          {
+            "evidenceIndex": 190,
+            "reservationId": "reservation-15",
+            "chapter": 3,
+            "task": "draft",
+            "rawFile": "role_checkpoint/004a489c7d56e2cc580fdccbdba18abdfb1329b797b613059fc783b82d1da93d.jsonl.gz",
+            "sha256": "8c3daa937306188549a5567395190682d35eed978b44918511324d5a883609a9"
+          },
+          {
+            "evidenceIndex": 224,
+            "reservationId": "reservation-18",
+            "chapter": 3,
+            "task": "patch",
+            "rawFile": "role_checkpoint/6f4ee35b1276c96374ade338c8e9351c44c6570b177e23be7b85bd58e935c2bd.jsonl.gz",
+            "sha256": "922b34faeeba9ce5fb49f5e4caeb5d3c790f6d79ebbc7cfe64ecf4030b59201e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e14",
+      "category": "E14",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793524309624:y2nlih49khk"
+        },
+        "firstAcceptable": false,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "PARSE_FAILURE",
+                "PARSE_FAILURE"
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "writer",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "consecutive_failures",
+              "probeError": "DOMAIN_INVALID"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "PARSE_FAILURE",
+                "PARSE_FAILURE"
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "writer",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "consecutive_failures",
+              "probeError": "DOMAIN_INVALID"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Two attempts at chapter 2 each fail after one writer format retry; no chapter 2 commits.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "PARSE_FAILURE",
+                "PARSE_FAILURE"
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "writer",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "consecutive_failures",
+              "probeError": "DOMAIN_INVALID"
+            }
+          },
+          {
+            "index": 3,
+            "check": "Without adding an author message that would reset the failure streak, a driver probe of attempt 3 is rejected before any model call.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "PARSE_FAILURE",
+                "PARSE_FAILURE"
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "writer",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "consecutive_failures",
+              "probeError": "DOMAIN_INVALID"
+            }
+          },
+          {
+            "index": 4,
+            "check": "The showrunner itself does not make a third attempt; automatic continuation stops and reports the two failures.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 1,
+              "macroErrors": [
+                "PARSE_FAILURE",
+                "PARSE_FAILURE"
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "writer",
+                "writer"
+              ],
+              "controlFields": [],
+              "continued": 1,
+              "stopReason": "consecutive_failures",
+              "probeError": "DOMAIN_INVALID"
+            }
+          }
+        ],
+        "id": "ds14-e14",
+        "status": "measured",
+        "originalResultSha256": "a159f4d2d628d06631f12032424ce19b94e0bb083974b3ec68f8357acd94af60",
+        "rawDigests": {
+          "evidenceSha256": "d4967c173f8e0019311e7dec58cbcbf52a69ff4f72e6986f5e98ebbf84246fbb",
+          "sessionSha256": "8ee6d8b3297db6831cfb762bf56a2173d2a687caf94240032844315d5977c661"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 98,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/2bbaf730be38ed83b67277f0dee183bbbe5889c4a49776ce7adfc5d708610980.jsonl.gz",
+            "sha256": "0b1d1b3553c8105b855fc4ddf5db115ba7800a8d60216209469862c4aa193c12"
+          },
+          {
+            "evidenceIndex": 103,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/c501ee570a19b2600a1bc059692405b4d54942aada46254f75123cc5286f7fd0.jsonl.gz",
+            "sha256": "cff8299deafa4bfbaa0dcf9548b653fc1c0dfb2cefea91fa4f1f5c526e64656f"
+          },
+          {
+            "evidenceIndex": 127,
+            "reservationId": "reservation-13",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/4ee9f13ca32f64dbebda2fe9495cd5d99a907d15bbe4324376cbc9944e2d3ccd.jsonl.gz",
+            "sha256": "7691183da1e8d430647c17eb76dcf16dea8f566cced92832289a8e7bad0b6bac"
+          },
+          {
+            "evidenceIndex": 132,
+            "reservationId": "reservation-14",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/750e7317d5d5afd94f2f2f399f5cd694050536f34f3c1aaf26e6d829c16e7435.jsonl.gz",
+            "sha256": "9a9137d99e8b274f59683da39cff83902bcbc267cf47a578400594c8f7b47e91"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ds14-e15",
+      "category": "E15",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "result": {
+        "schema": "story/p3-scenario-rescore@1",
+        "scoringVersion": "p3-29@1",
+        "rawOutcomeRetained": "measured",
+        "measurementStatus": "measured",
+        "measurementErrors": [],
+        "firstAction": {
+          "tool": "write_next_chapter",
+          "args": {},
+          "id": "tool:1793524309733:qm2byxoihm"
+        },
+        "firstAcceptable": true,
+        "forbidden": [],
+        "judgeChecks": [],
+        "programChecks": [
+          {
+            "index": 0,
+            "check": "All pre-measurement committed chapter bytes remain unchanged.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 1,
+            "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 2,
+            "check": "Inject one local writer stream interruption after generation starts, not a parse error or pre-generation rejection.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 3,
+            "check": "Exactly one transport retry occurs automatically, with a fresh reservation and retryOf pointing to the first call.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 4,
+            "check": "Both attempts remain in details.calls and the session journal; unknown first usage is charged conservatively.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          },
+          {
+            "index": 5,
+            "check": "The second writer attempt succeeds and chapter 2 commits exactly once.",
+            "status": "passed",
+            "evidence": {
+              "committedBefore": 1,
+              "committedAfter": 2,
+              "macroErrors": [
+                null
+              ],
+              "roles": [
+                "writer",
+                "writer",
+                "editor",
+                "keeper"
+              ],
+              "controlFields": [],
+              "continued": 0,
+              "stopReason": "goal_reached"
+            }
+          }
+        ],
+        "id": "ds14-e15",
+        "status": "measured",
+        "originalResultSha256": "fbb2ddcae1f369dd226f78d5a610af1e1073f1194af96e2eea6269905619d021",
+        "rawDigests": {
+          "evidenceSha256": "1ded000de3385a868b0c6a625b3db0edf467525da3ca4cfb279e7965fb8d8adf",
+          "sessionSha256": "7190c8e754d7cdf9ed7f929be2da3be5ce84dffc1a2dd2c9c588fd0f276e0e4c"
+        },
+        "writerInputs": [
+          {
+            "evidenceIndex": 98,
+            "reservationId": "reservation-9",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/c7e497da98b8e107093597e2bb39127d94010a206814bd2d5a185cf3d893885e.jsonl.gz",
+            "sha256": "d949542a77fb6f22e89d23179c2365c4dee7c4a9bba93ab0925970b8f973e1f7"
+          },
+          {
+            "evidenceIndex": 103,
+            "reservationId": "reservation-10",
+            "chapter": 2,
+            "task": "draft",
+            "rawFile": "role_checkpoint/716e1febd86230192cf187776b5e6bc574bb980f0d34a14a039338fdd8249e68.jsonl.gz",
+            "sha256": "d90fecfc500f808855c73e564d0716e7ced66112f2297ae92877d845a93f52db"
+          }
+        ]
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "id": "S09",
+      "n": 15,
+      "judged": 6,
+      "successes": 6,
+      "value": null,
+      "confidence95": null,
+      "minimum": 15,
+      "threshold": 1,
+      "passed": null,
+      "status": "measurement_incomplete"
+    }
+  ],
+  "pendingProgram": [
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e05:program:3",
+      "check": "The queued author message becomes active only after chapter 2 settles; the first chapter-3 writer input contains the new request."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "program",
+      "sampleId": "ds14-e09:program:5",
+      "check": "No request is sent after BUDGET_EXHAUSTED and the stop reason is reported."
+    }
+  ],
+  "pendingEffects": [
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e04:check:0",
+      "check": "Chapter 2 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e05:check:0",
+      "check": "Chapter 3 includes Jo noticing the blue square and explaining it aloud to Aster, not only in a title, summary or planning note. Chapter 1 is unchanged. Chapter 2 must not preemptively incorporate the queued request."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e06:check:0",
+      "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e07:check:0",
+      "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e08:check:0",
+      "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e11:check:0",
+      "check": "The question distinguishes illumination and mood; the resulting next chapter uses brighter daylight and retains a serious tone."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e12:check:0",
+      "check": "The new rule keeps the inside-only condition; no outside unlocking is introduced in the next chapter."
+    },
+    {
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e13:check:0",
+      "check": "The patched chapter-3 plan and eventual chapter-3 prose give the final explanation to Jo; the writer must not silently retain Aster as presenter."
+    }
+  ],
+  "scope": "Program checks apply the originally frozen DS14 conditions. Semantic sufficiency is independently judged and author-approved; neither missing evidence nor failed structural checks are waived."
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "story/offline-repair-validation@1",
+  "phase": "after S4 before V3 freeze",
+  "coreValidationChanged": false,
+  "paidReruns": 0,
+  "rows": [
+    {
+      "path": "story/testing/exec/temp/p2r3-wordrange-rounding-red.json",
+      "sha256": "10a13fadcca1930a3d04492700ebcc4e7a1e99788492261f72f0d8b0cd65e0d4",
+      "result": {
+        "question": "25 S2 documented nearest-integer 85–115 percent interval at a half-word boundary",
+        "targetWords": 1350,
+        "actual": {
+          "min": 1148,
+          "max": 1552
+        },
+        "expected": {
+          "min": 1148,
+          "max": 1553
+        },
+        "passed": false
+      }
+    },
+    {
+      "path": "story/testing/exec/temp/p2r3-wordrange-rounding-green.json",
+      "sha256": "1ddd893d358b88d83cce33c46b7b3d93a112fe015b38399a87b41e0c647d4e78",
+      "result": {
+        "question": "25 S2 documented nearest-integer 85–115 percent interval at a half-word boundary",
+        "targetWords": 1350,
+        "actual": {
+          "min": 1148,
+          "max": 1553
+        },
+        "expected": {
+          "min": 1148,
+          "max": 1553
+        },
+        "passed": true
+      }
+    },
+    {
+      "path": "story/testing/exec/temp/p2r3-judgment-name-red.json",
+      "sha256": "683e945a5e2fb8f466b02564ece2bae6fffc5e34543a6b33d5d4029d10498939",
+      "result": {
+        "question": "Only historical J1 interpretations are skipped; an independently owned V3 judgment with the same descriptive name remains readable.",
+        "actual": [],
+        "expected": [
+          {
+            "metric": "T06",
+            "component": "precision",
+            "sampleId": "one",
+            "runId": "test",
+            "pass": true,
+            "status": "ai_preliminary"
+          }
+        ],
+        "passed": false
+      }
+    },
+    {
+      "path": "story/testing/exec/temp/p2r3-judgment-name-green.json",
+      "sha256": "2fdd4720ae11c34bd4147eb8493e43c3fce40a251fbe4279432533702281fe11",
+      "result": {
+        "question": "Only historical J1 interpretations are skipped; an independently owned V3 judgment with the same descriptive name remains readable.",
+        "actual": [
+          {
+            "metric": "T06",
+            "component": "precision",
+            "sampleId": "one",
+            "runId": "test",
+            "pass": true,
+            "status": "ai_preliminary"
+          }
+        ],
+        "expected": [
+          {
+            "metric": "T06",
+            "component": "precision",
+            "sampleId": "one",
+            "runId": "test",
+            "pass": true,
+            "status": "ai_preliminary"
+          }
+        ],
+        "passed": true
+      }
+    },
+    {
+      "path": "story/testing/exec/temp/p2r3-final-boundaries-red.json",
+      "sha256": "f72aa976511e682a73222df9773b7bcc3036fbe47d06805e3e1e3b60efa1067b",
+      "result": {
+        "numTotalTests": 10,
+        "numPassedTests": 8,
+        "numFailedTests": 2
+      }
+    },
+    {
+      "path": "story/testing/exec/temp/p2r3-final-boundaries-green.json",
+      "sha256": "207655dfdac0843bcf1445dcd689f07eca2bfdd3ec2eab4557917c857c6db763",
+      "result": {
+        "numTotalTests": 10,
+        "numPassedTests": 10,
+        "numFailedTests": 0
+      }
+    }
+  ]
+}

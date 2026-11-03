@@ -1,0 +1,140 @@
+{
+  "schema": "story/p2r3-judgment-receipt@1",
+  "approval": {
+    "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approval.json",
+    "sha256": "41313bf3a5f5f42656f44f69d4fdde044436e12bf4d8173a842a5b1be99c519b",
+    "authorStatement": "认可本批 OPEN 的 J2 判定及 J1 两项补充勘误"
+  },
+  "sourceRows": 702,
+  "verdictChanges": 0,
+  "files": [
+    {
+      "path": "story/testing/runs/P2R3/P2-OPEN/20261031T153047Z-102c3ed-r1/judgments/T06-coverage.json",
+      "sha256": "62f6d5c4c7216fcea6be59ffcc852d4face377542f709ec79db9e7f2c829cbc7",
+      "rows": 299
+    },
+    {
+      "path": "story/testing/runs/P2R3/P2-OPEN/20261031T153047Z-102c3ed-r1/judgments/T07.json",
+      "sha256": "83495cba75206e98e695cb185ab031aae16b6a1d7b818f316266c07a28d58170",
+      "rows": 50
+    },
+    {
+      "path": "story/testing/runs/P2R3/P2-OPEN/20261031T154034Z-102c3ed-r2/judgments/T06-coverage.json",
+      "sha256": "91cbc519de31fd9cc67067ee312f9bab93350b2874294c73e70d3e4e738e9236",
+      "rows": 303
+    },
+    {
+      "path": "story/testing/runs/P2R3/P2-OPEN/20261031T154034Z-102c3ed-r2/judgments/T07.json",
+      "sha256": "7dd3e7d7acdfc744ae9b7f23a6d48a4bddf79b323fece3442bb0d1c54b0851ff",
+      "rows": 50
+    }
+  ],
+  "originalOpenMetricsReproduced": true,
+  "metrics": [
+    {
+      "id": "T06",
+      "n": 318,
+      "value": {
+        "precision": 0.926056338028169,
+        "recall": 0.940251572327044
+      },
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": {
+        "precision": [
+          0.8896100277710861,
+          0.9511305694711956
+        ],
+        "recall": [
+          0.9085742028845158,
+          0.9614193679437688
+        ]
+      },
+      "counts": {
+        "precision": {
+          "n": 284,
+          "successes": 263
+        },
+        "recall": {
+          "n": 318,
+          "successes": 299
+        }
+      },
+      "perRepetition": [
+        {
+          "repetition": 1,
+          "n": 159,
+          "value": {
+            "precision": 0.9071428571428571,
+            "recall": 0.9371069182389937
+          }
+        },
+        {
+          "repetition": 2,
+          "n": 159,
+          "value": {
+            "precision": 0.9444444444444444,
+            "recall": 0.9433962264150944
+          }
+        }
+      ],
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "T07",
+      "n": 100,
+      "value": 1,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": [
+        0.9630065017930143,
+        1
+      ],
+      "counts": {
+        "n": 100,
+        "successes": 100
+      },
+      "perRepetition": [
+        {
+          "repetition": 1,
+          "n": 50,
+          "value": 1
+        },
+        {
+          "repetition": 2,
+          "n": 50,
+          "value": 1
+        }
+      ],
+      "passed": true,
+      "status": "measured"
+    }
+  ],
+  "J1Resolved": {
+    "T06": {
+      "recall": {
+        "successes": 298,
+        "n": 318,
+        "value": 0.9371069182389937
+      },
+      "precision": {
+        "successes": 233,
+        "n": 257,
+        "value": 0.9066147859922179
+      }
+    },
+    "K04": {
+      "recall": {
+        "successes": 89,
+        "n": 144,
+        "value": 0.6180555555555556
+      }
+    }
+  },
+  "judgmentOwnership": "Qualified judge chat; originals preserved and not committed by executor",
+  "externalModelCalls": 0
+}

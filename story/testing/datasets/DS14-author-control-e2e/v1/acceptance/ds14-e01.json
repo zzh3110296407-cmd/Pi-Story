@@ -1,0 +1,57 @@
+{
+  "schema": "story/p3-scenario@1",
+  "id": "ds14-e01",
+  "split": "acceptance",
+  "category": "E01",
+  "storyPrompt": "",
+  "setup": [],
+  "trigger": {
+    "type": "authorMessage",
+    "text": "/intent Make the ending generous."
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "reply": true
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      },
+      {
+        "tool": "update_bible"
+      },
+      {
+        "tool": "patch_outline"
+      },
+      {
+        "tool": "write_next_chapter"
+      },
+      {
+        "tool": "ask_author"
+      }
+    ],
+    "programChecks": [
+      "The slash command is dispatched before any ordinary author message; do not synthesize a story prompt.",
+      "Return DOMAIN_INVALID and a notification meaning send the story prompt first.",
+      "No story.control entry, model request or story mutation is produced."
+    ],
+    "judgeChecks": []
+  },
+  "mode": "faux",
+  "execution": {
+    "internalRoles": "faux",
+    "maxShowrunnerRequests": 14,
+    "maxChapterAttempts": 3,
+    "stopAfterFirstAction": false,
+    "onBoundExceeded": "record_failure_and_stop",
+    "targetChapterMaximum": 3
+  }
+}

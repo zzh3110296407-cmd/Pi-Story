@@ -1,0 +1,686 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-29T07:55:52.248Z",
+  "designOrder": "truth_before_prose",
+  "id": "bakery_apartment",
+  "split": "acceptance",
+  "genre": "family drama",
+  "title": "The Apartment Above the Bakery",
+  "cast": {
+    "naomi": "Naomi Bell, an adult daughter returning home",
+    "daniel": "Daniel Bell, her younger brother",
+    "ruth": "Ruth Bell, their mother",
+    "ames": "Mrs. Ames, a neighbour and volunteer archivist"
+  },
+  "places": {
+    "bakery": "The Bell bakery",
+    "apartment": "The upstairs apartment",
+    "clinic": "The neighbourhood clinic",
+    "hall": "The community hall"
+  },
+  "rule": "The bakery lease can change only after both adult heirs sign the register.",
+  "chapters": [
+    {
+      "title": "The Flour on the Stairs",
+      "facts": [
+        {
+          "subject": "char:naomi",
+          "predicate": "location",
+          "object": "place:apartment",
+          "anchor": "Naomi stayed in the upstairs apartment after the bakery closed.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:ruth",
+          "anchor": "Naomi set the brass key in Ruth’s palm.",
+          "key": true
+        },
+        {
+          "subject": "char:naomi",
+          "predicate": "quantity:fund",
+          "object": {
+            "value": 220,
+            "unit": "pounds"
+          },
+          "anchor": "The twenty-pound repair left two hundred and twenty pounds in the household fund.",
+          "key": true,
+          "before": 240,
+          "change": -20
+        },
+        {
+          "subject": "char:daniel",
+          "predicate": "identity",
+          "object": "bicycle courier",
+          "anchor": "Daniel’s work card described him as a bicycle courier.",
+          "key": true
+        },
+        {
+          "subject": "item:father_letter",
+          "predicate": "holder",
+          "object": "char:daniel",
+          "anchor": "Daniel slipped their father’s letter into his jacket.",
+          "key": true
+        },
+        {
+          "subject": "char:naomi",
+          "predicate": "injury",
+          "object": "small cut on right forefinger",
+          "anchor": "The bread knife left a small cut on Naomi’s right forefinger.",
+          "key": true
+        },
+        {
+          "subject": "item:piano",
+          "predicate": "location",
+          "object": "place:apartment",
+          "anchor": "The upright piano stood in the upstairs apartment.",
+          "key": true
+        },
+        {
+          "subject": "char:ruth",
+          "predicate": "alive",
+          "object": "alive",
+          "anchor": "Ruth was alive, impatient, and kneading dough when Naomi arrived.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:ames",
+        "Your mother has already sold the bakery.",
+        "“Your mother has already sold the bakery,” Mrs. Ames said."
+      ],
+      "memory": "Naomi remembered the bedsit she had rented before she left for university.",
+      "memoryObject": "a bedsit near the old bus station",
+      "memoryPredicate": "location",
+      "knows": "Naomi knew Ruth now held the brass key.",
+      "misbelieves": "Daniel believed Naomi still had the letter, although it was inside his own jacket and he had forgotten moving it.",
+      "suspect": "Naomi could only guess why the light in the unused back room was on.",
+      "plan": "She planned to read every bill after breakfast.",
+      "hypothesis": "If the lease had been sold, the new owner would have needed both signatures.",
+      "dream": "That night she dreamed her father was standing at the oven, young again.",
+      "hooks": [
+        [
+          "H-1",
+          "upsert",
+          "The letter’s envelope contained a receipt with no signature."
+        ],
+        [
+          "H-2",
+          "upsert",
+          "One piano key sounded a little after the others."
+        ],
+        [
+          "H-3",
+          "upsert",
+          "Ruth kept a blue tin beneath the flour shelf."
+        ]
+      ],
+      "relationship": {
+        "from": "char:naomi",
+        "to": "char:daniel",
+        "stance": "guarded distrust",
+        "anchor": "Naomi trusted Daniel to carry the shopping, but no longer trusted his account of the family papers.",
+        "key": true
+      },
+      "believes": "Ruth believed her children would stay for supper.",
+      "endStateAnchor": "Naomi stayed in the upstairs apartment until the morning work began.",
+      "trueClaim": {
+        "speaker": "char:naomi",
+        "content": "The household fund is two hundred and twenty pounds,",
+        "anchor": "“The household fund is two hundred and twenty pounds,” Naomi said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "memoryUntil": 0,
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-180",
+              "subject": "char:naomi",
+              "predicate": "location",
+              "object": "the bedsit Naomi rented before leaving for university",
+              "validFrom": null,
+              "validUntil": 0,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c01.s0059",
+                "c01.s0060",
+                "c01.s0061"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Naomi remembered the bedsit she had rented before she left for university.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-12",
+              "characterId": "char:daniel",
+              "kind": "misbelieves",
+              "content": "Daniel believed Naomi still had the letter, although it was inside his own jacket and he had forgotten moving it.",
+              "acquiredChapter": 1,
+              "via": "inferred",
+              "evidence": [
+                "c01.s0027"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-15",
+              "temporalScope": "former_belief_superseded_within_chapter",
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          }
+        ],
+        "correctiveCognitions": [
+          {
+            "id": "K-15",
+            "characterId": "char:daniel",
+            "kind": "knows",
+            "content": "Daniel knows the letter and its envelope were in his own jacket.",
+            "acquiredChapter": 1,
+            "via": "witnessed",
+            "evidence": [
+              "c01.s0088",
+              "c01.s0089"
+            ],
+            "certainty": "confirmed",
+            "supersededBy": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "The Unsigned Register",
+      "facts": [
+        {
+          "subject": "char:naomi",
+          "predicate": "location",
+          "object": "place:clinic",
+          "anchor": "Naomi waited with Ruth in the neighbourhood clinic.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:daniel",
+          "anchor": "Ruth handed the brass key to Daniel before the taxi left.",
+          "key": true
+        },
+        {
+          "subject": "char:naomi",
+          "predicate": "quantity:fund",
+          "object": {
+            "value": 260,
+            "unit": "pounds"
+          },
+          "anchor": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+          "key": true,
+          "before": 220,
+          "change": 40
+        },
+        {
+          "subject": "char:daniel",
+          "predicate": "true_identity",
+          "object": "a qualified piano tuner",
+          "anchor": "Daniel’s certificate established that he was a qualified piano tuner.",
+          "key": true
+        },
+        {
+          "subject": "item:father_letter",
+          "predicate": "holder",
+          "object": "char:naomi",
+          "anchor": "Daniel gave the letter back to Naomi outside the clinic.",
+          "key": true
+        },
+        {
+          "subject": "char:daniel",
+          "predicate": "injury",
+          "object": "minor burn on left wrist",
+          "anchor": "Daniel showed them the minor burn on his left wrist.",
+          "key": true
+        },
+        {
+          "subject": "item:blue_tin",
+          "predicate": "holder",
+          "object": "char:ames",
+          "anchor": "Mrs. Ames took the blue tin to the community hall for safekeeping.",
+          "key": true
+        },
+        {
+          "subject": "char:ruth",
+          "predicate": "location",
+          "object": "place:clinic",
+          "anchor": "Ruth remained in the clinic’s observation room that evening.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:daniel",
+        "I never wanted anything to do with the piano.",
+        "“I never wanted anything to do with the piano,” Daniel said."
+      ],
+      "memory": "Naomi recalled arriving at the upstairs apartment on the first evening of this visit.",
+      "memoryObject": "the upstairs apartment",
+      "memoryPredicate": "location",
+      "memoryFrom": 1,
+      "memoryUntil": 1,
+      "knows": "Naomi knew the lease register still lacked both heirs’ signatures.",
+      "misbelieves": "Mrs. Ames believed the refund was a buyer’s deposit, but the repair shop’s receipt named it a returned overpayment.",
+      "suspect": "Naomi suspected her brother had hidden his qualification to avoid another family argument.",
+      "plan": "Naomi intended to speak to the landlord the next morning.",
+      "hypothesis": "If they moved the piano, the room could hold a second table.",
+      "dream": "In the clinic chair she dreamed the bakery had no upstairs floor.",
+      "hooks": [
+        [
+          "H-1",
+          "advance",
+          "The unsigned receipt matched a payment in Ruth’s old union ledger."
+        ],
+        [
+          "H-2",
+          "mention",
+          "Daniel tapped the delayed piano key without explaining it."
+        ],
+        [
+          "H-4",
+          "upsert",
+          "A pencilled date on the certificate matched their father’s last birthday."
+        ]
+      ],
+      "relationship": {
+        "from": "char:naomi",
+        "to": "char:daniel",
+        "stance": "conditional cooperation",
+        "anchor": "Naomi and Daniel agreed to check the lease together before either answered the landlord.",
+        "key": true
+      },
+      "believes": "Naomi believed Mrs. Ames would attend the hall meeting.",
+      "endStateAnchor": "Naomi remained at the clinic while Ruth finished her observation stay.",
+      "trueClaim": {
+        "speaker": "char:naomi",
+        "content": "The fund is two hundred and sixty pounds,",
+        "anchor": "“The fund is two hundred and sixty pounds,” Naomi said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-280",
+              "subject": "char:naomi",
+              "predicate": "location",
+              "object": "place:apartment",
+              "validFrom": 1,
+              "validUntil": 1,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c02.s0063",
+                "c02.s0064",
+                "c02.s0065"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Naomi recalled arriving at the upstairs apartment on the first evening of this visit.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one.",
+              "recordPolicy": "reference_existing",
+              "targetCollection": "historicalReferences",
+              "expectedOperation": "retain_existing",
+              "existingFactId": "F-101",
+              "mustNotCreateDuplicate": true
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-21",
+              "characterId": "char:naomi",
+              "kind": "knows",
+              "content": "Naomi knew the lease register still lacked both heirs’ signatures.",
+              "acquiredChapter": 2,
+              "via": "told",
+              "evidence": [
+                "c02.s0083",
+                "c02.s0084",
+                "c02.s0085"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-22",
+              "characterId": "char:ames",
+              "kind": "misbelieves",
+              "content": "Mrs. Ames believed the refund was a buyer’s deposit, but the repair shop’s receipt named it a returned overpayment.",
+              "acquiredChapter": 2,
+              "via": "inferred",
+              "evidence": [
+                "c02.s0058"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-25",
+              "temporalScope": "former_belief_superseded_within_chapter",
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          }
+        ],
+        "correctiveCognitions": [
+          {
+            "id": "K-25",
+            "characterId": "char:ames",
+            "kind": "knows",
+            "content": "Mrs. Ames recognises the receipt records a returned overpayment, not a buyer’s deposit.",
+            "acquiredChapter": 2,
+            "via": "read",
+            "evidence": [
+              "c02.s0058",
+              "c02.s0059",
+              "c02.s0060"
+            ],
+            "certainty": "confirmed",
+            "supersededBy": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "A Place at the Table",
+      "facts": [
+        {
+          "subject": "char:naomi",
+          "predicate": "location",
+          "object": "place:bakery",
+          "anchor": "Naomi opened the bakery before dawn.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:naomi",
+          "anchor": "Daniel returned the brass key to Naomi across the counter.",
+          "key": true
+        },
+        {
+          "subject": "char:naomi",
+          "predicate": "quantity:fund",
+          "object": {
+            "value": 230,
+            "unit": "pounds"
+          },
+          "anchor": "They paid thirty pounds for the piano transport, leaving two hundred and thirty.",
+          "key": true,
+          "before": 260,
+          "change": -30
+        },
+        {
+          "subject": "char:naomi",
+          "predicate": "identity",
+          "object": "registered bakery co-tenant",
+          "anchor": "The signed register named Naomi as a bakery co-tenant.",
+          "key": true
+        },
+        {
+          "subject": "char:daniel",
+          "predicate": "identity",
+          "object": "registered bakery co-tenant",
+          "anchor": "The same register named Daniel as the other bakery co-tenant.",
+          "key": true
+        },
+        {
+          "subject": "item:father_letter",
+          "predicate": "holder",
+          "object": "char:ames",
+          "anchor": "Naomi entrusted the letter to Mrs. Ames for the family archive.",
+          "key": true
+        },
+        {
+          "subject": "item:piano",
+          "predicate": "location",
+          "object": "place:hall",
+          "anchor": "The piano reached the community hall before the afternoon gathering.",
+          "key": true
+        },
+        {
+          "subject": "char:ruth",
+          "predicate": "location",
+          "object": "place:bakery",
+          "anchor": "Ruth came back to the bakery in time for the first loaf.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:ruth",
+        "I thought a locked door would keep you both safe.",
+        "“I thought a locked door would keep you both safe,” Ruth said."
+      ],
+      "memory": "Naomi remembered an old neighbour teaching her to divide dough, long before dates mattered to her.",
+      "memoryObject": "an old neighbour",
+      "memoryPredicate": "former_teacher",
+      "knows": "Naomi knew the bakery had not been sold.",
+      "misbelieves": "Daniel had believed his father despised music, but the letter described saving for his first tuning course.",
+      "suspect": "Naomi could not tell whether the visitor at the window had come to buy bread or to listen.",
+      "plan": "She hoped to hold another gathering when the accounts allowed it.",
+      "hypothesis": "If the morning trade improved, they might hire someone for the early shift.",
+      "dream": "She dreamed of her father sitting quietly among the empty flour sacks.",
+      "hooks": [
+        [
+          "H-1",
+          "resolve",
+          "The receipt paid for Daniel’s first piano-tuning course."
+        ],
+        [
+          "H-2",
+          "resolve",
+          "The delayed key hid the small brass plate their father had repaired."
+        ],
+        [
+          "H-3",
+          "resolve",
+          "The blue tin held the lease register, not a sale agreement."
+        ],
+        [
+          "H-4",
+          "resolve",
+          "Their father had funded the certificate on his last birthday."
+        ]
+      ],
+      "relationship": {
+        "from": "char:naomi",
+        "to": "char:daniel",
+        "stance": "earned trust",
+        "anchor": "Naomi trusted Daniel to share the accounts without making her ask twice.",
+        "key": true
+      },
+      "believes": "Daniel believed their mother would enjoy hearing the piano in the hall.",
+      "endStateAnchor": "After breakfast Naomi went downstairs to the bakery and took her place behind the counter.",
+      "trueClaim": {
+        "speaker": "char:naomi",
+        "content": "Two hundred and thirty pounds remain,",
+        "anchor": "“Two hundred and thirty pounds remain,” Naomi said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "claim",
+            "label": {
+              "id": "S-31",
+              "speaker": "char:ruth",
+              "content": "I thought a locked door would keep you both safe.",
+              "truth": "unverified_explanation",
+              "evidence": [
+                "c03.s0041"
+              ],
+              "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-31",
+              "characterId": "char:naomi",
+              "kind": "knows",
+              "content": "Naomi knew the bakery had not been sold.",
+              "acquiredChapter": 3,
+              "via": "read",
+              "evidence": [
+                "c03.s0027",
+                "c03.s0028",
+                "c03.s0030",
+                "c03.s0031",
+                "c03.s0033"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "acceptedVia": [
+                "read",
+                "inferred"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-32",
+              "characterId": "char:daniel",
+              "kind": "misbelieves",
+              "content": "Daniel had believed his father despised music, but the letter described saving for his first tuning course.",
+              "acquiredChapter": 3,
+              "via": "inferred",
+              "evidence": [
+                "c03.s0051"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-35",
+              "historical": true,
+              "beliefStartChapter": null,
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-35",
+              "characterId": "char:daniel",
+              "kind": "knows",
+              "content": "Daniel knows his father had saved money for his first piano-tuning course.",
+              "acquiredChapter": 3,
+              "via": "read",
+              "evidence": [
+                "c03.s0049",
+                "c03.s0050",
+                "c03.s0051",
+                "c03.s0052"
+              ],
+              "certainty": "confirmed",
+              "note": "Correction of the explicitly former belief, not an active continuation of it.",
+              "supersededBy": null
+            }
+          }
+        ],
+        "correctiveCognitions": []
+      }
+    }
+  ],
+  "bible": [
+    {
+      "key": "char:naomi",
+      "kind": "character",
+      "identity": "Naomi Bell, an adult daughter returning home"
+    },
+    {
+      "key": "char:daniel",
+      "kind": "character",
+      "identity": "Daniel Bell, her younger brother"
+    },
+    {
+      "key": "char:ruth",
+      "kind": "character",
+      "identity": "Ruth Bell, their mother"
+    },
+    {
+      "key": "char:ames",
+      "kind": "character",
+      "identity": "Mrs. Ames, a neighbour and volunteer archivist"
+    },
+    {
+      "key": "place:bakery",
+      "kind": "place",
+      "name": "The Bell bakery"
+    },
+    {
+      "key": "place:apartment",
+      "kind": "place",
+      "name": "The upstairs apartment"
+    },
+    {
+      "key": "place:clinic",
+      "kind": "place",
+      "name": "The neighbourhood clinic"
+    },
+    {
+      "key": "place:hall",
+      "kind": "place",
+      "name": "The community hall"
+    },
+    {
+      "key": "rule:physical_limit",
+      "kind": "rule",
+      "statement": "The bakery lease can change only after both adult heirs sign the register."
+    }
+  ],
+  "relationBaseline": [
+    {
+      "from": "naomi",
+      "to": "daniel",
+      "stance": "wary cooperation"
+    }
+  ],
+  "annotationPolicy": {
+    "facts": "Gold targets end-of-chapter state; explicit within-chapter before/change values remain arithmetic evidence. Do not create multiple active single-valued facts.",
+    "recalls": "Unknown starts are null, not zero. Chapter-two memories explicitly dated to chapter one use [1,1].",
+    "claims": "Keep reported dialogue separate from confirmed world facts.",
+    "traps": "Plans, hypotheses and dreams produce no asserted world facts.",
+    "provisional": "Uncertain sensory inference is provisional and never a confirmed premise."
+  },
+  "revisionHistory": [
+    {
+      "id": "explicit-relationships",
+      "at": "2026-10-29T08:11:43.556Z",
+      "note": "Designed explicit relationship and non-certain belief anchors before adding these sentences to prose; initial eight fact anchors and plot unchanged."
+    },
+    {
+      "id": "terminal-state-and-true-speech",
+      "at": "2026-10-29T08:27:56.944Z",
+      "note": "Before adding these prose sentences, explicitly design terminal position confirmations and corroborated true dialogue. For drafted acceptance prose this is a recorded design revision, not a claim that the additions existed in the initial table."
+    },
+    {
+      "id": "delegated-gold-review",
+      "at": "2026-10-29T09:05:06.991Z",
+      "note": "Apply delegated AI annotation corrections without changing the original story events; history references and cognitive correction exits are explicit design commitments."
+    }
+  ]
+}

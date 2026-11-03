@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal facts 1-4 upserts. Chapter only. Need facts stated. We need include issues. Need exact sentence IDs. Need no future plans/unstated. Need subject/predicate/object strings. Facts narrated or recalled_past. Certainty confirmed/uncertain. Need minimal likely 1-4 facts.\n\nWe need choose facts from chapter. Facts: protagonist woke cold, lying on back in white, sky colorless lid, teeth ached, pulse/nausea after jump, pushed up, snow settling into coat, knew arithmetic of exposure, got knees under him, wind across tundra stinging cheek, scanned, saw rise dark rock west and shadow ravine, had spent lifetime learning to arrive, no one taught surviving it, started walking counting steps. Need minimal maybe 4 fact upserts. Must only states stated. Could use unknown subject \"he\"? Need refs. Facts should be atomic. Need mode narrated for current. recalled_past for \"had spent lifetime learning to arrive\" maybe recalled_past. Certainty confirmed except \"shadow that might have been ravine\" uncertain. Need uncertainReason nonempty. We can include maybe one uncertain fact.\n\nNeed output schema with facts array minItems 1, claims/cognitions/relations/hooks maxItems 0. Summary with title, characters, events, mood. Issues array. Need ensure valid JSON object only. No markdown? They say reply JSON. Final only JSON. Desired oververbose 5 but strict schema. We can produce JSON.\n\nNeed decide facts. Minimal P0 subset tests 1-4 fact upserts. I'll include 4 facts:\n1 subject \"he\" predicate \"woke to\" object \"cold before memory\" sentences [1] mode narrated confirmed. Hmm object string \"cold before memory\" okay.\n2 subject \"he\" predicate \"lay on his back in\" object \"the white\" sentences [2] narrated confirmed.\n3 subject \"he\" predicate \"had spent a lifetime learning to\" object \"arrive\" sentences [13] mode recalled_past confirmed. But \"He had spent a lifetime learning to arrive.\" That's past perfect, recalled. Good.\n4 subject \"distant shadow beyond dark rock rise to the west\" predicate \"might have been\" object \"a ravine\" sentences [12] narrated uncertain reason \"described as a shadow that might have been a ravine\". Subject awkward. Better subject \"he\" predicate \"saw a shadow beyond a rise of dark rock to the west that\" object \"might have been a ravine\" sentences [12]. Certainty uncertain. Object string includes might have been? Need predicate maybe \"observed a shadow beyond dark rock to the west that\" object \"might have been a ravine\". But fact object shouldn't include uncertainty? certainty handles. object \"a possible ravine\"; uncertainReason \"narrator describes it as a shadow that might have been a ravine\". subject \"he\", predicate \"saw beyond a rise of dark rock to the west\", object \"a shadow that might have been a ravine\". Good.\n\nNeed facts sentences exact. Could include \"he started walking counting steps\" [15]. But max 4. Need minimal. Could include cold and exposure knowledge. Hmm.\n\nNeed summary:\ntitle: \"Cold Wake on the Tundra\" \ncharacters: [\"he\"] (no named)\nevents: [\"He wakes in snow, nauseated and cold after a jump.\", \"He pushes himself up and scans the tundra.\", \"He sees a dark rock rise to the west and a possible ravine beyond.\", \"He begins walking and counting steps.\"]\nmood: \"bleak, disoriented, survival-focused\"\nIssues: maybe [\"No character name is given; 'he' used as subject.\", \"Fact about possible ravine is uncertain per sentence 12.\"] Need include issues.\n\nNeed ensure claims etc empty arrays. JSON valid. Use only double quotes. No extra.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"woke to\",\"object\":\"cold before memory\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had spent a lifetime learning to\",\"object\":\"arrive\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[13]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw beyond a rise of dark rock to the west\",\"object\":\"a shadow that might have been a ravine\",\"mode\":\"narrated\",\"certainty\":\"uncertain\",\"uncertainReason\":\"The text describes it as a shadow that might have been a ravine.\",\"sentences\":[12]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Wake on the Tundra\",\"characters\":[\"he\"],\"events\":[\"He wakes in snow, cold and nauseated after a jump.\",\"He pushes himself up and scans the tundra.\",\"He sees a rise of dark rock to the west and a possible ravine beyond it.\",\"He starts walking and counting his steps.\"],\"mood\":\"bleak, disoriented, survival-focused\"},\"issues\":[\"The protagonist is not named; 'he' is used as the subject.\",\"The ravine sighting is uncertain because sentence 12 says it 'might have been a ravine.'\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1206,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 822,
+      "totalTokens": 2133,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0014471999999999998,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0014995079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177725423,
+    "responseId": "946f338d-b98e-450b-9c4f-7f3b3d413648",
+    "rawStopReason": "stop",
+    "durationMs": 7789
+  },
+  "record": {
+    "time": "2026-10-28T08:55:33.212Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-004",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1206,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 822,
+      "totalTokens": 2133,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0014471999999999998,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0014995079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0014995079999999997,
+    "inputTokens": 159,
+    "outputTokens": 1206,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 7789
+  }
+}

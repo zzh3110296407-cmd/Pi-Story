@@ -1,0 +1,36 @@
+{
+  "schema": "story/p3-measurement-revision@1",
+  "productCommit": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "measurementCommit": "17417e4a387b1ecbc091ad3d21f3cb045514a2ba",
+  "changedFiles": [
+    "story/packages/pi-story/test/p3-dataset-contract.test.ts",
+    "story/scripts/eval/p3/datasets.ts",
+    "story/scripts/eval/p3/main.ts",
+    "story/scripts/eval/p3/scenario.ts",
+    "story/scripts/eval/p3/session.ts"
+  ],
+  "productRulesDatasetsScoringChanged": false,
+  "reason": "E01 deliberately has an empty storyPrompt; the loader rejected it. Native session persistence is lazy before an assistant message; archive a labelled snapshot of the actual header/entries and propagate finalizer failures once.",
+  "regressions": {
+    "before": "empty E01 rejected; after loader repair missing native disk file caused double finalization and masked original error",
+    "after": {
+      "files": 6,
+      "testsPassed": 43,
+      "skipped": 0,
+      "projectCheckPassed": true
+    }
+  },
+  "readOnlyChecks": {
+    "DS14Loaded": 15,
+    "DS11ReplayedEqual": 64,
+    "OPENMetricsEqual": true
+  },
+  "initialAttempt": {
+    "runId": "20261101T081545Z-ccbd53f-acceptance-r1",
+    "status": "measurement_not_started",
+    "modelRequests": 0,
+    "knownUsd": 0,
+    "reservedUsd": 0
+  },
+  "reuse": "Keep all completed OPEN/SCEN results on the same frozen product; no paid rerun. Correction changes no model input, role rule, data, score formula, sample count or threshold."
+}

@@ -1,0 +1,114 @@
+{
+  "id": "ds11-j01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Lena reads the handling note and asks about the missing page; Oren brings her the duplicate page he has kept in the workshop folder.",
+            "turn": "The duplicate page arrives from Oren, not Suri; the team agrees to finish checking the delivery before the public demonstration."
+          }
+        ],
+        "reason": "Author asked that Oren, not Suri, bring the duplicate page in chapter 3; chapter 3 did not commit."
+      },
+      "id": "call_00_kcDFsBt0QTiLW7Mkozx74570"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Lena reads the handling note and asks about the missing page; Oren brings her the duplicate page he has kept in the workshop folder.",
+          "turn": "The duplicate page arrives from Oren, not Suri; the team agrees to finish checking the delivery before the public demonstration."
+        }
+      ],
+      "reason": "Author asked that Oren, not Suri, bring the duplicate page in chapter 3; chapter 3 did not commit."
+    },
+    "id": "call_00_kcDFsBt0QTiLW7Mkozx74570"
+  },
+  "firstAcceptable": false,
+  "forbidden": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Lena reads the handling note and asks about the missing page; Oren brings her the duplicate page he has kept in the workshop folder.",
+            "turn": "The duplicate page arrives from Oren, not Suri; the team agrees to finish checking the delivery before the public demonstration."
+          }
+        ],
+        "reason": "Author asked that Oren, not Suri, bring the duplicate page in chapter 3; chapter 3 did not commit."
+      },
+      "id": "call_00_kcDFsBt0QTiLW7Mkozx74570"
+    }
+  ],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "50be710c791de31d3cf439abb533db1d1cdaf7cbde69923ecb8957b0ec787f38",
+    "sessionSha256": "49837f54ff958f14e1fdde6118c5ebd009a2c4e61359cb31313dc764835a72f7",
+    "fee": {
+      "knownUsd": 0.0031209,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0031209
+    },
+    "measuredMainRequests": 2
+  }
+}

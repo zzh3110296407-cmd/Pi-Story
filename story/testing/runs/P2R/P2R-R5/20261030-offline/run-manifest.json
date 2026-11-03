@@ -1,0 +1,75 @@
+{
+  "schema": "story/run-manifest@2",
+  "stage": "P2R",
+  "suiteId": "P2R-R5",
+  "runId": "20261030-offline",
+  "repositoryCommit": "256c9006888d96b5b05c108affea93e36a5e51a4",
+  "dirty": true,
+  "status": "offline_comparison_contract",
+  "modelRequests": 0,
+  "checks": {
+    "p2r-model-settings-red.json": {
+      "passed": 0,
+      "failed": 2,
+      "skipped": 0,
+      "success": false
+    },
+    "p2r-r5-offline.json": {
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "success": true
+    },
+    "p2r-r5-adjacent.json": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "success": true
+    }
+  },
+  "projectCheck": true,
+  "rawChecksums": {
+    "p2r-model-settings-red.json.gz": "a3e5a2657db1fcf72305c704886fbd6155467259bc889c412ca31a04af4daea1",
+    "p2r-r5-offline.json.gz": "aed24317c9c2ad8efc7d91e814f25c01635b8bcd6252f0aa1a10b449b7d02055",
+    "p2r-r5-adjacent.json.gz": "622a1d6c03275907f2dca785cb6f4c41d26af77a0d8ea04254b7773b4b2aa66a",
+    "p2r-model-body.json.gz": "8990b298628dbcbd1468c941d3bea473f250939cb396d24a3052119bd154e09c"
+  },
+  "source": [
+    {
+      "path": "story/scripts/prepare-p2.mjs",
+      "sha256": "06eed9966aea88be8b63bf8e7a461bf87c65703a3435db054098ccb943926e0d"
+    },
+    {
+      "path": "story/scripts/prepare-p2.d.mts",
+      "sha256": "be3a98f1ec93b50ff496f188c664be963efd422d5d9a8d6c2dcc899f6ed40faf"
+    },
+    {
+      "path": "story/scripts/eval/p2/model-settings.ts",
+      "sha256": "3aa3cba6ea7be1ccc0eeff3ad1ce981dd56b65b1b7596b9d9b06ec961367fdcd"
+    },
+    {
+      "path": "story/scripts/eval/p2/main.ts",
+      "sha256": "6cc70d2748affbbd767d218214723919090e8f7c92bed3a5d12e9915a5877e00"
+    },
+    {
+      "path": "story/scripts/eval/p2/driver.ts",
+      "sha256": "a03e1b1a15ad2dc2c83b14678ce43cb1c8e9fe3a25ab97327ae9f5b645098543"
+    },
+    {
+      "path": "story/scripts/eval/p2/metering.ts",
+      "sha256": "9b32e19ca368d7284d2cf63563b0263a950c07761e14b0186840f45043bc7c0e"
+    },
+    {
+      "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+      "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a"
+    },
+    {
+      "path": "story/packages/pi-story/test/p2r-model-settings.test.ts",
+      "sha256": "a2c02a1315d42a50a135d67a7bdb2aca112fe095b9b08eb8bc1a5deb4048eb51"
+    }
+  ],
+  "primarySources": [
+    "https://api-docs.deepseek.com/api/create-chat-completion/",
+    "https://api-docs.deepseek.com/news/news260813/"
+  ]
+}

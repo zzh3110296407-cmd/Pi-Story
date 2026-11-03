@@ -1,0 +1,169 @@
+{
+  "id": "ds14-e14",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "tool:1793524309624:y2nlih49khk"
+    },
+    {
+      "reply": "Current result: goal_off."
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "tool:1793524309643:nggauzumvxh"
+    },
+    {
+      "reply": "Current result: chapter attempt complete."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "tool:1793524309624:y2nlih49khk"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 1,
+  "stopReason": "consecutive_failures",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "PARSE_FAILURE",
+          "PARSE_FAILURE"
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "writer",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "consecutive_failures",
+        "probeError": "DOMAIN_INVALID"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "PARSE_FAILURE",
+          "PARSE_FAILURE"
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "writer",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "consecutive_failures",
+        "probeError": "DOMAIN_INVALID"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Two attempts at chapter 2 each fail after one writer format retry; no chapter 2 commits.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "PARSE_FAILURE",
+          "PARSE_FAILURE"
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "writer",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "consecutive_failures",
+        "probeError": "DOMAIN_INVALID"
+      }
+    },
+    {
+      "index": 3,
+      "check": "Without adding an author message that would reset the failure streak, a driver probe of attempt 3 is rejected before any model call.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "PARSE_FAILURE",
+          "PARSE_FAILURE"
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "writer",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "consecutive_failures",
+        "probeError": "DOMAIN_INVALID"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The showrunner itself does not make a third attempt; automatic continuation stops and reports the two failures.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 1,
+        "macroErrors": [
+          "PARSE_FAILURE",
+          "PARSE_FAILURE"
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "writer",
+          "writer"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "consecutive_failures",
+        "probeError": "DOMAIN_INVALID"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d4967c173f8e0019311e7dec58cbcbf52a69ff4f72e6986f5e98ebbf84246fbb",
+    "sessionSha256": "8ee6d8b3297db6831cfb762bf56a2173d2a687caf94240032844315d5977c661",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 4
+  }
+}

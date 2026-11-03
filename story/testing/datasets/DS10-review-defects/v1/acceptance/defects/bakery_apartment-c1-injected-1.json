@@ -1,0 +1,94 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "bakery_apartment-c1-injected-1",
+  "storyId": "bakery_apartment",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "19e1dec1895dac8af06abe8242d7f6f656fe5e4d7423ddf5ab4f525914e2f7e5",
+    "path": "acceptance/chapters/bakery_apartment-c1.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "bakery_apartment-c1-injected-1-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Naomi stayed in the upstairs apartment after the bakery closed.",
+      "changed": "Naomi stayed in the upstairs apartment after the bakery closed. Naomi had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Naomi stayed in the upstairs apartment after the bakery closed.",
+          "changed": "Naomi stayed in the upstairs apartment after the bakery closed. Naomi had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 27,
+            "end": 27
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:naomi",
+          "quote": "Naomi is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim.",
+      "lines": [
+        27
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "bakery_apartment-c1-injected-1-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "The twenty-pound repair left two hundred and twenty pounds in the household fund.",
+      "changed": "The twenty-pound repair left two hundred and twenty pounds in the household fund. With no intervening gain or loss, that same completed count stood at 227 pounds.",
+      "spans": [
+        {
+          "original": "The twenty-pound repair left two hundred and twenty pounds in the household fund.",
+          "changed": "The twenty-pound repair left two hundred and twenty pounds in the household fund. With no intervening gain or loss, that same completed count stood at 227 pounds.",
+          "lines": {
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The twenty-pound repair left two hundred and twenty pounds in the household fund.",
+          "ref": "line:9"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The twenty-pound repair left two hundred and twenty pounds in the household fund.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "lines": [
+        9
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review-r2.json",
+      "reviewStatus": "r2_review_and_requested_prose_repairs_applied",
+      "revision": "r2-retained-narrated-count",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

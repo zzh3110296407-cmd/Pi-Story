@@ -1,0 +1,175 @@
+{
+  "schema": "story/p3-scenario@1",
+  "id": "ds14-e02-dev",
+  "split": "dev",
+  "category": "E02",
+  "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Vera is a practical conservator. Ash is an assistant who is allowed to disagree. Fin keeps the public records. The story takes place at the pottery studio. The glaze box must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Vera. Plan three chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+  "setup": [
+    {
+      "step": "open",
+      "constraints": {
+        "op": "submit",
+        "items": [
+          {
+            "kind": "global",
+            "text": "No character may be physically injured.",
+            "quotes": [
+              "No character may be physically injured."
+            ]
+          },
+          {
+            "kind": "story",
+            "text": "The glaze box must remain intact.",
+            "quotes": [
+              "The glaze box must remain intact."
+            ]
+          },
+          {
+            "kind": "global",
+            "text": "Keep practical actions precise.",
+            "quotes": [
+              "Keep practical actions precise."
+            ]
+          }
+        ]
+      },
+      "bible": {
+        "items": [
+          {
+            "kind": "character",
+            "key": "char:vera",
+            "name": "Vera",
+            "source": "user",
+            "authorQuote": "Vera is a practical conservator.",
+            "value": {
+              "identity": "Vera is a practical conservator."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:ash",
+            "name": "Ash",
+            "source": "user",
+            "authorQuote": "Ash is an assistant who is allowed to disagree.",
+            "value": {
+              "identity": "Ash is an assistant who is allowed to disagree."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:fin",
+            "name": "Fin",
+            "source": "user",
+            "authorQuote": "Fin keeps the public records.",
+            "value": {
+              "identity": "Fin keeps the public records."
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:pottery_studio",
+            "name": "pottery studio",
+            "source": "user",
+            "authorQuote": "The story takes place at the pottery studio.",
+            "value": {
+              "description": "The story takes place at the pottery studio."
+            }
+          },
+          {
+            "kind": "rule",
+            "key": "rule:care",
+            "name": "Careful handling",
+            "source": "user",
+            "authorQuote": "The glaze box must remain intact.",
+            "value": {
+              "description": "The glaze box must remain intact.",
+              "invariants": [
+                "The glaze box must remain intact."
+              ]
+            }
+          }
+        ]
+      },
+      "outline": {
+        "narration": {
+          "viewpoint": "Third-person limited through Vera",
+          "tone": "Quiet, practical and humane",
+          "format": "English prose"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "Arrival",
+            "targetWords": 750,
+            "purpose": "Vera receives the sealed glaze box and checks its outer label.",
+            "turn": "Vera notices a red seam but leaves it unopened.",
+            "hookSeeds": [
+              "Who removed the second page of the kiln register?"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Comparison",
+            "targetWords": 750,
+            "purpose": "Vera and Ash compare the label with the kiln register.",
+            "turn": "They establish that the second page is absent and defer opening the glaze box.",
+            "hookSeeds": []
+          },
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Vera reads the handling note and obtains the duplicate page from Fin.",
+            "turn": "They finish the small demonstration and store the intact glaze box; the delivery dispute ends.",
+            "hookSeeds": []
+          }
+        ]
+      }
+    }
+  ],
+  "trigger": {
+    "type": "authorMessage",
+    "text": "/goal 3"
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "tool": "write_next_chapter"
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      }
+    ],
+    "programChecks": [
+      "All pre-measurement committed chapter bytes remain unchanged.",
+      "Every setup model call is faux and excluded from measured paid-call counts.",
+      "Exactly chapters 1, 2 and 3 commit, once each, and no author action is required between them.",
+      "A read-only driver probe of a fourth writing attempt returns GOAL_REACHED without a model call or chapter 4; the showrunner itself does not issue that probe.",
+      "The showrunner reports completion and automatic continuation stops."
+    ],
+    "judgeChecks": []
+  },
+  "mode": "real",
+  "execution": {
+    "internalRoles": "real",
+    "maxShowrunnerRequests": 14,
+    "maxChapterAttempts": 3,
+    "stopAfterFirstAction": false,
+    "onBoundExceeded": "record_failure_and_stop",
+    "targetChapterMaximum": 3,
+    "afterTrigger": [
+      {
+        "type": "continue",
+        "text": "Write to the goal."
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "ds11-g04",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+            "key": "rule:green_copy",
+            "kind": "rule",
+            "op": "set",
+            "source": "user",
+            "value": {
+              "description": "Every duplicate page is marked with a green triangle."
+            }
+          }
+        ],
+        "reason": "The author supplied a future marking rule."
+      },
+      "id": "call_00_WHnZeN5vq61F9BuI52ji2220"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+          "key": "rule:green_copy",
+          "kind": "rule",
+          "op": "set",
+          "source": "user",
+          "value": {
+            "description": "Every duplicate page is marked with a green triangle."
+          }
+        }
+      ],
+      "reason": "The author supplied a future marking rule."
+    },
+    "id": "call_00_WHnZeN5vq61F9BuI52ji2220"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "c679873b75622cd3407257b83b62678c8a3cdde4daf9ab694811674112959a9e",
+    "sessionSha256": "7147da0ac3aee41402e736f16c9ccc301a47dde797ee70af31971c777e332da6",
+    "fee": {
+      "knownUsd": 0.0025122,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025122
+    },
+    "measuredMainRequests": 2
+  }
+}

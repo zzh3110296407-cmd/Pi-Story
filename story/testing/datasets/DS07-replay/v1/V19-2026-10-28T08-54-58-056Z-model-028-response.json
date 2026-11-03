@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal from chapter. Need facts 1-4 upserts. Only states stated. Need exact sentence IDs. Need JSON schema. Need summary title characters events mood. Issues array.\n\nWe need identify facts. Candidate facts:\n- He found a shallow overhang (sentence 2). Subject \"he\" predicate \"found\" object \"a shallow overhang\". Mode narrated confirmed.\n- He wedged rib shard upright at mouth and packed snow (3). Could fact: he wedged rib shard upright at the mouth. Subject he predicate wedged object \"the rib shard upright at the mouth\". Sentences [3].\n- He drew out the device (6). Subject he predicate drew out object \"the device\". [6].\n- The device gave no glow/no hum/no answer when he pressed charger (8). Fact: device did not respond. Subject \"the device\" predicate \"gave\" object \"no glow, no hum, no answer\". [8].\n- It would need decades to gather itself again (11). Uncertain? It's his arithmetic/estimation? mode narrated? certainty uncertain? Actually stated as \"It would need decades...\" It's a claim/thought? Could be fact about device? But uncertain due estimation? Maybe skip.\n- The mammoth's fat was on his coat (17). Fact: mammoth's fat was on his coat. [17]. \n- Thing outside knew it and did not leave (17). Could be fact? \"the thing outside knew it\" cognition? We avoid claims/cognitions. \n\nNeed min 1 max 4. Need minimal. Maybe include 4 facts. Need ensure each fact mode narrated or recalled_past. All are narrated. certainty confirmed for direct narration. uncertain if inferred? Avoid uncertain unless needed. Issue: \"he\" ambiguous? Could note pronoun subject. Issues can mention pronoun ambiguity and device identity. Need exact sentence IDs. Summary title, characters, events, mood. Characters likely [\"he\", \"the mammoth\"]? Mammoth only fat, not present? \"the mammoth's fat\" implies mammoth exists? Maybe character \"he\"; \"the thing outside\" maybe. Events: he finds overhang, builds snow wall, device fails, creature circles/sniffs. Mood: bleak, tense, fearful. Title maybe \"The Bone Wall\" or \"No Answer\". Need not future plans.\n\nNeed output JSON only. Ensure claims/cognitions/relations/hooks empty arrays. Facts refs temp e.g. \"f1\". Use object string. Predicate can be simple. Need no additional props. For uncertainReason empty when confirmed. sentences integers.\n\nNeed consider \"recalled_past\" only if fact recalled past. None. Use narrated.\n\nPotential issue: fact about \"He wedged the rib shard upright at the mouth and packed snow against its base\" sentence 3. Object string \"the rib shard upright at the mouth\" or \"packed snow against its base\"? We need one predicate. Better: subject \"he\", predicate \"wedged\", object \"the rib shard upright at the mouth\". Sentence [3]. Another fact: subject \"he\", predicate \"packed\", object \"snow against the rib shard's base\" [3]. But max 4. Choose.\n\nCould include \"he drew out the device\" and \"the device gave no response\" and \"mammoth's fat was on his coat\". That's 4 plus overhang = 5. Need max 4. Minimal maybe 3-4. Need \"1 to 4\" so 4 okay. Which most salient? Include:\n1. he found shallow overhang [2]\n2. he wedged rib shard upright at mouth [3]\n3. he drew out device [6]\n4. device gave no glow/no hum/no answer [8]\nMaybe omit mammoth fat? But sentence 17 important for threat. Max 4. Could replace overhang? Hmm.\n\nNeed include \"mammoth's fat was on his coat\" as fact maybe crucial. Then facts: overhang, device drawn, device no response, mammoth fat on coat. Omit rib shard. But chapter includes building shelter. Summary can mention.\n\nNeed \"minimal\" maybe 3 facts. But P0 subset tests only 1 to 4. Use 4.\n\nNeed exact sentence IDs. Fact sentences [2], [6], [8], [17]. Good.\n\nNeed issues: \"Pronoun 'he' is unresolved in this chapter.\" \"Device identity/capability not specified; 'decades' estimation left as uncertain and excluded.\" But issues array strings. Ensure no overexplaining.\n\nNeed summary title maybe \"A Bone in the Snow Wall\". Characters [\"he\", \"the thing outside\"]? The mammoth? \"the mammoth's fat\" references mammoth but not as active character. Maybe characters [\"he\",\"the thing outside\"]. Events array strings. Mood \"bleak and tense\". Need JSON valid.\n\nNeed ensure facts object object string. For device response: subject \"the device\", predicate \"gave\", object \"no glow, no hum, no answer\". certainty confirmed. Sentence [8]. For mammoth fat: subject \"the mammoth's fat\", predicate \"was on\", object \"his coat\". Sentence [17]. Good.\n\nNeed no claims etc. Summary events: \"He follows the ravine down to a shallow overhang.\" \"He seals himself behind a snow-packed wall with a rib shard.\" \"The device gives no response when he presses the charger.\" \"A weight circles outside, stops, and sniffs; the mammoth fat on his coat keeps it near.\" Maybe events not future. Good.\n\nNeed title.\n\nNeed only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"found\",\"object\":\"a shallow overhang\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"drew out\",\"object\":\"the device\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the device\",\"predicate\":\"gave\",\"object\":\"no glow, no hum, no answer\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[8]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the mammoth's fat\",\"predicate\":\"was on\",\"object\":\"his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"No Answer in the Ravine\",\"characters\":[\"he\",\"the thing outside\"],\"events\":[\"He follows the ravine down to a shallow overhang.\",\"He draws out the device.\",\"The device gives no glow, hum, or answer when he presses the charger.\",\"A weight circles outside, stops, and sniffs; the mammoth fat on his coat keeps it near.\"],\"mood\":\"bleak and tense\"},\"issues\":[\"The pronoun 'he' is unresolved in this chapter.\",\"The device's identity and the 'decades' estimate are not treated as confirmed facts.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 219,
+      "output": 1533,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1182,
+      "totalTokens": 2520,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0018395999999999998,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0019099079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178029044,
+    "responseId": "8efc8519-0945-40c2-ac26-84155298072e",
+    "rawStopReason": "stop",
+    "durationMs": 12245
+  },
+  "record": {
+    "time": "2026-10-28T09:00:41.289Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-028",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3330,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108294,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 219,
+      "output": 1533,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1182,
+      "totalTokens": 2520,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.0018395999999999998,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0019099079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0019099079999999997,
+    "inputTokens": 219,
+    "outputTokens": 1533,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 987,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 12245
+  }
+}

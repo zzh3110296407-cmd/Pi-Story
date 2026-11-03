@@ -1,0 +1,51 @@
+{
+  "ledgerEdit": {
+    "commandAccepted": true,
+    "ledger": [
+      {
+        "id": "L-1",
+        "kind": "story",
+        "text": "主角必须死亡。",
+        "sourceSpans": [
+          {
+            "messageId": "a",
+            "quote": "主角不能死亡。",
+            "start": 0,
+            "end": 7
+          }
+        ]
+      }
+    ],
+    "writerLedger": [
+      {
+        "id": "L-1",
+        "kind": "story",
+        "text": "主角必须死亡。",
+        "authorQuotes": [
+          {
+            "messageId": "a",
+            "quote": "主角不能死亡。"
+          }
+        ]
+      }
+    ]
+  },
+  "abortAtKeeperCompletion": {
+    "sourceScenario": "flow-happy",
+    "cancellationTrace": [
+      {
+        "event": "keeper completed normally",
+        "signalAborted": false
+      },
+      {
+        "event": "cancellation delivered before core resumes",
+        "signalAborted": true
+      }
+    ],
+    "signalAborted": true,
+    "ok": true,
+    "committed": true,
+    "error": null,
+    "calls": 3
+  }
+}

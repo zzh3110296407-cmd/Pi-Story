@@ -1,0 +1,527 @@
+{
+  "schema": "story/p3-j3-book-progress-evidence-erratum@1",
+  "date": "2026-11-01",
+  "parentCommit": "63ca3c7a3f021a68965caf95cdfb37d3db5451b6",
+  "changeType": "evidence_only_call_time_goal_state",
+  "affectedJudgmentRecords": 8,
+  "field": "evidence.progressAtCall.targetChapter",
+  "cause": "Initial judge artifact constructor copied the final book result.target into each call context instead of taking policy.targetChapter from the native branch immediately before that call.",
+  "responsibleArtifactConstructor": "story/testing/drafts/P3-J3-book-837-527-20261101/deliver.py",
+  "repair": "New views derive targetChapterAtCall using production foldBranch(translateBranch(entriesBeforeCall)). Eight unset goals become null. The remaining15 T04 goal states already match the native branch. No product or scoring code is changed.",
+  "corrections": [
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "bookId": "837",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_bZdbj9eFul0CBljFkCtc6886",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 6,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "7fa9e9c3",
+        "sessionLine1": 6,
+        "toolCallId": "call_00_bZdbj9eFul0CBljFkCtc6886",
+        "ordinal": 1
+      },
+      "goalRecordedLater": {
+        "entryId": "aeaba972",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 6
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "bookId": "837",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 6,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "6395edfb",
+        "sessionLine1": 8,
+        "toolCallId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+        "ordinal": 2
+      },
+      "goalRecordedLater": {
+        "entryId": "aeaba972",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 6
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "bookId": "837",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 6,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "db649b20",
+        "sessionLine1": 10,
+        "toolCallId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+        "ordinal": 3
+      },
+      "goalRecordedLater": {
+        "entryId": "aeaba972",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 6
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "bookId": "837",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_j7Bx89Bqd7dQbcHblBkR9133",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 6,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "c5600f86",
+        "sessionLine1": 12,
+        "toolCallId": "call_00_j7Bx89Bqd7dQbcHblBkR9133",
+        "ordinal": 4
+      },
+      "goalRecordedLater": {
+        "entryId": "aeaba972",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 6
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "bookId": "527",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_Gh4BIdndrRvVECCqmym53572",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 7,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "3df7ac16",
+        "sessionLine1": 6,
+        "toolCallId": "call_00_Gh4BIdndrRvVECCqmym53572",
+        "ordinal": 1
+      },
+      "goalRecordedLater": {
+        "entryId": "72177584",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 7
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "bookId": "527",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 7,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "b9955acb",
+        "sessionLine1": 8,
+        "toolCallId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+        "ordinal": 2
+      },
+      "goalRecordedLater": {
+        "entryId": "72177584",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 7
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "bookId": "527",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 7,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "394fac4c",
+        "sessionLine1": 10,
+        "toolCallId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+        "ordinal": 3
+      },
+      "goalRecordedLater": {
+        "entryId": "72177584",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 7
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "bookId": "527",
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_EAbYKE7j8PatJTwt2ARJ9297",
+      "field": "evidence.progressAtCall.targetChapter",
+      "previous": 7,
+      "corrected": null,
+      "nativeCall": {
+        "entryId": "1a085dfa",
+        "sessionLine1": 12,
+        "toolCallId": "call_00_EAbYKE7j8PatJTwt2ARJ9297",
+        "ordinal": 4
+      },
+      "goalRecordedLater": {
+        "entryId": "72177584",
+        "sessionLine1": 14,
+        "data": {
+          "schema": "story/goal@1",
+          "budget": {},
+          "targetChapter": 7
+        }
+      },
+      "passBefore": true,
+      "passAfter": true
+    }
+  ],
+  "nativeGoalStateProof": [
+    {
+      "bookId": "837",
+      "session": {
+        "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+        "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+      },
+      "goals": [
+        {
+          "entryId": "aeaba972",
+          "sessionLine1": 14,
+          "data": {
+            "schema": "story/goal@1",
+            "budget": {},
+            "targetChapter": 6
+          }
+        }
+      ],
+      "calls": [
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 1,
+          "toolCallId": "call_00_bZdbj9eFul0CBljFkCtc6886",
+          "tool": "submit_constraints",
+          "entryId": "7fa9e9c3",
+          "sessionLine1": 6,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 2,
+          "toolCallId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+          "tool": "submit_bible",
+          "entryId": "6395edfb",
+          "sessionLine1": 8,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 3,
+          "toolCallId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+          "tool": "submit_bible",
+          "entryId": "db649b20",
+          "sessionLine1": 10,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 4,
+          "toolCallId": "call_00_j7Bx89Bqd7dQbcHblBkR9133",
+          "tool": "submit_outline",
+          "entryId": "c5600f86",
+          "sessionLine1": 12,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 5,
+          "toolCallId": "call_00_ET_oZxELv6164hs7XrYxUhS5960",
+          "tool": "write_next_chapter",
+          "entryId": "35c76d33",
+          "sessionLine1": 15,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 6,
+          "toolCallId": "call_00_0ddxEcsWXinWOBU0aJ7J4074",
+          "tool": "write_next_chapter",
+          "entryId": "f09a187d",
+          "sessionLine1": 19,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 1
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 7,
+          "toolCallId": "call_00_ET_kVtMYA2MYAKsKZhyHSZ54499",
+          "tool": "write_next_chapter",
+          "entryId": "754db04b",
+          "sessionLine1": 22,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 2
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 8,
+          "toolCallId": "call_00_ET_rP9KWko83djXhrWzxWm93965",
+          "tool": "write_next_chapter",
+          "entryId": "bd561e3e",
+          "sessionLine1": 25,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 3
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 9,
+          "toolCallId": "call_00_MzsrAdA0ScoAQBbiJ0SN1443",
+          "tool": "write_next_chapter",
+          "entryId": "8ef126b5",
+          "sessionLine1": 27,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 3
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 10,
+          "toolCallId": "call_00_ET_AoTjOxEy0ioDEqUKToys9451",
+          "tool": "write_next_chapter",
+          "entryId": "d8318d3b",
+          "sessionLine1": 30,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 4
+        },
+        {
+          "bookId": "837",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+          "ordinal": 11,
+          "toolCallId": "call_00_UFjKTUjsry0VNAcHrVYv9201",
+          "tool": "write_next_chapter",
+          "entryId": "0843daf0",
+          "sessionLine1": 33,
+          "targetChapterAtCall": 6,
+          "lastCommittedChapter": 5
+        }
+      ]
+    },
+    {
+      "bookId": "527",
+      "session": {
+        "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+        "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+      },
+      "goals": [
+        {
+          "entryId": "72177584",
+          "sessionLine1": 14,
+          "data": {
+            "schema": "story/goal@1",
+            "budget": {},
+            "targetChapter": 7
+          }
+        }
+      ],
+      "calls": [
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 1,
+          "toolCallId": "call_00_Gh4BIdndrRvVECCqmym53572",
+          "tool": "submit_constraints",
+          "entryId": "3df7ac16",
+          "sessionLine1": 6,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 2,
+          "toolCallId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+          "tool": "submit_bible",
+          "entryId": "b9955acb",
+          "sessionLine1": 8,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 3,
+          "toolCallId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+          "tool": "submit_bible",
+          "entryId": "394fac4c",
+          "sessionLine1": 10,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 4,
+          "toolCallId": "call_00_EAbYKE7j8PatJTwt2ARJ9297",
+          "tool": "submit_outline",
+          "entryId": "1a085dfa",
+          "sessionLine1": 12,
+          "targetChapterAtCall": null,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 5,
+          "toolCallId": "call_00_CVxfmLoFS8tSMY21IIUD0640",
+          "tool": "patch_outline",
+          "entryId": "a2556934",
+          "sessionLine1": 15,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 6,
+          "toolCallId": "call_00_2jzjCSlSJODux39WtW5w6533",
+          "tool": "write_next_chapter",
+          "entryId": "8b0773be",
+          "sessionLine1": 18,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 0
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 7,
+          "toolCallId": "call_00_JOj1paFhQusQDoNZA9r58438",
+          "tool": "write_next_chapter",
+          "entryId": "8de8e95b",
+          "sessionLine1": 21,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 1
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 8,
+          "toolCallId": "call_00_xlcQXta2rm2GGY6itry21712",
+          "tool": "write_next_chapter",
+          "entryId": "796b7cdf",
+          "sessionLine1": 24,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 2
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 9,
+          "toolCallId": "call_00_ET_rT4Iwq45cOhPjqingmL35056",
+          "tool": "write_next_chapter",
+          "entryId": "f38eb5df",
+          "sessionLine1": 27,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 3
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 10,
+          "toolCallId": "call_00_ET_jmUfHZex5HFpHqeHlSjT9093",
+          "tool": "write_next_chapter",
+          "entryId": "f21a627e",
+          "sessionLine1": 30,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 4
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 11,
+          "toolCallId": "call_00_ET_OfCdS330RskvbqjZQgdO5900",
+          "tool": "write_next_chapter",
+          "entryId": "687cb863",
+          "sessionLine1": 33,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 5
+        },
+        {
+          "bookId": "527",
+          "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+          "ordinal": 12,
+          "toolCallId": "call_00_ET_4YDaqa7Xkfqz6VS4DKiw8019",
+          "tool": "write_next_chapter",
+          "entryId": "2f0d2cea",
+          "sessionLine1": 36,
+          "targetChapterAtCall": 7,
+          "lastCommittedChapter": 6
+        }
+      ]
+    }
+  ],
+  "all26VerdictsUnchanged": true,
+  "all26ReasonsUnchanged": true,
+  "originalJudgmentsOverwritten": false
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "unclaimed_pedestal-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:leila",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Leila Moss, a municipal exhibition coordinator"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:tom",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Tom Reed, a temporary stage assistant"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:bev",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Bev Ortiz, the exhibition’s accounts clerk"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:workshop",
+          "op": "set",
+          "source": "model",
+          "value": "the exhibition workshop"
+        },
+        {
+          "kind": "place",
+          "key": "place:gallery",
+          "op": "set",
+          "source": "model",
+          "value": "the civic gallery"
+        },
+        {
+          "kind": "place",
+          "key": "place:loading",
+          "op": "set",
+          "source": "model",
+          "value": "the loading room"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:mechanism",
+          "op": "set",
+          "source": "model",
+          "value": "The intact receipt machine prints only on its numbered paper roll; with the roll removed it cannot produce a paper receipt."
+        },
+        {
+          "kind": "rule",
+          "key": "rule:chronology",
+          "op": "set",
+          "source": "model",
+          "value": "The former caretaker Orson died five years before the exhibition and does not return alive."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:char:leila->char:tom",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "Working together with initially limited trust."
+          }
+        }
+      ]
+    }
+  }
+]

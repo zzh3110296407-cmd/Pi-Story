@@ -1,0 +1,2068 @@
+{
+  "schema": "story/p2r-final-scan@1",
+  "sourceRun": "story/testing/runs/P2R/P2-Z/20261031T130647Z-ae86109-dirty",
+  "sourceFiles": [
+    {
+      "path": "story/testing/runs/P2R/P2-Z/20261031T130647Z-ae86109-dirty/raw/program.json",
+      "sha256": "41c828f22e5dc4697bd6bdb8bd20212df6a7aa374455b364a35f50307c1d158a"
+    },
+    {
+      "path": "story/testing/runs/P2R/P2-Z/20261031T130647Z-ae86109-dirty/run-manifest.json",
+      "sha256": "15d94357f285c73266e496394a556238ccc871c22c91ec9d5cbc10a2f1cf5958"
+    },
+    {
+      "path": "story/testing/runs/P2R/P2-Z/20261031T130647Z-ae86109-dirty/metrics.json",
+      "sha256": "e60a40226b9a632bd14dd0ca6b5c95efcd3a9ac6ee4339904dcabe46084500e2"
+    }
+  ],
+  "raw": {
+    "suiteId": "P2-Z",
+    "runId": "20261031T130647Z-ae86109-dirty",
+    "payload": {
+      "scan": {
+        "schema": "story/secret-scan@2",
+        "scopes": [
+          "D:\\AI\\Story Dome\\Story\\pi-Story",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing"
+        ],
+        "method": "repository/workspace text including decompressed gzip; environment files and .git internals are not read; binary files and links are not followed",
+        "files": 69800,
+        "bytes": 7659328117,
+        "hits": [],
+        "syntheticFixtures": [
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 109,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 136,
+            "category": "bearer",
+            "candidateDigest": "00ced498fd1d9965339f856dd7b1837f29adfccaed7a13053273460f8c341007",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 143,
+            "category": "bearer",
+            "candidateDigest": "00ced498fd1d9965339f856dd7b1837f29adfccaed7a13053273460f8c341007",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 162,
+            "category": "bearer",
+            "candidateDigest": "756f6386946dce6abb11e8523118d20695da94fa44d23490647f0c9be896f942",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 193,
+            "category": "bearer",
+            "candidateDigest": "4d1f781fb9d64d4ae05cd2a686aa751aee3ab7bbdd7d02ff769039bd763fb110",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 197,
+            "category": "bearer",
+            "candidateDigest": "4d1f781fb9d64d4ae05cd2a686aa751aee3ab7bbdd7d02ff769039bd763fb110",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 103,
+            "category": "bearer",
+            "candidateDigest": "10208c65ceb71ca71074e66ebf350c065b4f726fdba0a2bfd92e95c0ac0baa8a",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 112,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 117,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\anthropic-federation.test.ts",
+            "line": 143,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\kimi-coding-oauth.test.ts",
+            "line": 227,
+            "category": "bearer",
+            "candidateDigest": "5384264eccf13b99a926feab28c3677f404cb55f0a0a124eb53840bb871426d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\meta-oauth.test.ts",
+            "line": 77,
+            "category": "bearer",
+            "candidateDigest": "ab6c89cb2f11ae121c052ed5703941b631db45c9684590ed04a883d79b410bf0",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\meta-oauth.test.ts",
+            "line": 113,
+            "category": "bearer",
+            "candidateDigest": "ab6c89cb2f11ae121c052ed5703941b631db45c9684590ed04a883d79b410bf0",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\mistral-http-transport.test.ts",
+            "line": 424,
+            "category": "bearer",
+            "candidateDigest": "32916dc5281defad423d8f0b6d08feed55b803602d5e36071d5e2653a360dcc9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\models-runtime.test.ts",
+            "line": 1138,
+            "category": "bearer",
+            "candidateDigest": "307ec2c39f2f417aa53a7ca2495849c7b2c7cce5a02a1cdf36ffcd4d96dd0ba4",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 197,
+            "category": "bearer",
+            "candidateDigest": "74022b572c2a22956b3a46f0ceff89458c9f3933f8403f8db880ec0102c90355",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 225,
+            "category": "bearer",
+            "candidateDigest": "d4c1b2299354bcfc81ef2c0ff8302923d265345bd8b3b5a0e16f133b290e4c5f",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 229,
+            "category": "bearer",
+            "candidateDigest": "d4c1b2299354bcfc81ef2c0ff8302923d265345bd8b3b5a0e16f133b290e4c5f",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 230,
+            "category": "bearer",
+            "candidateDigest": "74022b572c2a22956b3a46f0ceff89458c9f3933f8403f8db880ec0102c90355",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\pi-messages.test.ts",
+            "line": 159,
+            "category": "bearer",
+            "candidateDigest": "f43fe304fe8f4c3402dca1905d86a446abcfc361e889ef4c737a09fd28655c25",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\providers.test.ts",
+            "line": 298,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\providers.test.ts",
+            "line": 643,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\providers.test.ts",
+            "line": 680,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\providers.test.ts",
+            "line": 690,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\ai\\test\\xai-responses.test.ts",
+            "line": 180,
+            "category": "bearer",
+            "candidateDigest": "994972277e59dc22e87d8691ca3ca888769c2297fb5cf63079339158e5dfd0d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\llama-extension.test.ts",
+            "line": 618,
+            "category": "bearer",
+            "candidateDigest": "3470ebf57edfafe962a2230c021e412b5d449ff252cbb21e4c2dce3e21c7d2d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-registry.test.ts",
+            "line": 1259,
+            "category": "bearer",
+            "candidateDigest": "c54502d0992bfbba3aa1466160652dc8d07f125c08e0ff048459dbfab44b5647",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-auth-options.test.ts",
+            "line": 246,
+            "category": "bearer",
+            "candidateDigest": "5e5a5b2c4a4cd150e6e436ae0e85d55289cd1aa68c3f549b8d4c96a88a96ede9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-auth-options.test.ts",
+            "line": 258,
+            "category": "bearer",
+            "candidateDigest": "5e5a5b2c4a4cd150e6e436ae0e85d55289cd1aa68c3f549b8d4c96a88a96ede9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-classifiers.test.ts",
+            "line": 36,
+            "category": "bearer",
+            "candidateDigest": "762871e995f72f149e18a21bcee7c89141b9b6b1676d30897d9aed7fdc62ce35",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 62,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 75,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 86,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\radius.test.ts",
+            "line": 97,
+            "category": "bearer",
+            "candidateDigest": "fbc3960d4443f3e0896e7a9d766999f6c5a143b70426bf159bebbe36ab744c06",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\suite\\agent-session-compaction.test.ts",
+            "line": 314,
+            "category": "bearer",
+            "candidateDigest": "bb84a243bc46bbb91e9c4535e21b69336ca325990c2cf2563ed3421d928141a1",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\suite\\agent-session-compaction.test.ts",
+            "line": 326,
+            "category": "bearer",
+            "candidateDigest": "bb84a243bc46bbb91e9c4535e21b69336ca325990c2cf2563ed3421d928141a1",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\coding-agent\\test\\suite\\mcp-oauth-server.ts",
+            "line": 58,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\evals\\evals\\acme-server.ts",
+            "line": 101,
+            "category": "bearer",
+            "candidateDigest": "760800fed5d9211c4cc188bde664a76aae97d9993bf3a9e9a69bf7db50b97908",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\evals\\test\\acme-server.test.ts",
+            "line": 30,
+            "category": "bearer",
+            "candidateDigest": "760800fed5d9211c4cc188bde664a76aae97d9993bf3a9e9a69bf7db50b97908",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\evals\\test\\acme-server.test.ts",
+            "line": 31,
+            "category": "bearer",
+            "candidateDigest": "f5f7b9b330b3fc44ae19fb547b713091c6c309073368c1ffcc5f42a601f8a408",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 192,
+            "category": "bearer",
+            "candidateDigest": "9c26cb5c03d372dd7a2470bc1e484165817863ff99fccc211377809c65177131",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 192,
+            "category": "bearer",
+            "candidateDigest": "0f20f17916caef25934af3135703b9755facf213049eabff56a264225ad0b06b",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 196,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 226,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 251,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 264,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\streamable-http.test.ts",
+            "line": 146,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\packages\\mcp\\test\\streamable-http.test.ts",
+            "line": 154,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-7MQiOn\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-d3nZ3C\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-DQiWgj\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-Drr3gK\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-G3DRxJ\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-H6ERBm\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-h7OjzA\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-hrjkRo\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-HSX9mZ\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-hT0w8j\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-iTU21K\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-nEpFem\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-owQxrZ\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-RNkYfd\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-tjSdN1\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-Tqxv0s\\response.txt",
+            "line": 1,
+            "category": "key_like",
+            "candidateDigest": "c4d708b6e5fe001eb2e86501c3da9c1eb7f9a6b0437eb39712f5d2db76f0f537",
+            "reason": "exact deterministic dataset-guard negative fixture"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\environments\\worker.d.ts",
+            "line": 228,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\environments\\worker.js",
+            "line": 196,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\environments\\worker.js",
+            "line": 237,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\environments\\worker.mjs",
+            "line": 231,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\environments\\worker.mjs",
+            "line": 272,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.js",
+            "line": 9,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.mjs",
+            "line": 6,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\resources\\beta\\environments\\work.d.ts",
+            "line": 378,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\src\\lib\\environments\\worker.ts",
+            "line": 353,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\src\\lib\\environments\\worker.ts",
+            "line": 400,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\src\\lib\\helper-client.ts",
+            "line": 30,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@anthropic-ai\\sdk\\src\\resources\\beta\\environments\\work.ts",
+            "line": 549,
+            "category": "bearer",
+            "candidateDigest": "ec2ab162209ad22647a98b91d8150272dc7a98ebf2faf650a93a4fa921f57074",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@aws-sdk\\nested-clients\\dist-types\\submodules\\sts\\commands\\AssumeRoleCommand.d.ts",
+            "line": 243,
+            "category": "key_like",
+            "candidateDigest": "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@aws-sdk\\nested-clients\\dist-types\\submodules\\sts\\commands\\AssumeRoleWithWebIdentityCommand.d.ts",
+            "line": 261,
+            "category": "key_like",
+            "candidateDigest": "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\ssh2\\lib\\keygen.js",
+            "line": 435,
+            "category": "private_key",
+            "candidateDigest": "03d104c669e3c7b6be7f989db8b12c8b910d3be8c1e2a73c9369d3cc0ba803b5",
+            "reason": "Key encoder/parser marker in original package source; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\ssh2\\lib\\protocol\\constants.js",
+            "line": 16,
+            "category": "private_key",
+            "candidateDigest": "3021d90eb9437b2d8f30e8363695c4418b5e5f1870801b5c317e9398ee0f572d",
+            "reason": "Key encoder/parser marker in original package source; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\ssh2\\lib\\protocol\\keyParser.js",
+            "line": 467,
+            "category": "private_key",
+            "candidateDigest": "03d104c669e3c7b6be7f989db8b12c8b910d3be8c1e2a73c9369d3cc0ba803b5",
+            "reason": "Key encoder/parser marker in original package source; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\ssh2\\test\\fixtures\\https_key.pem",
+            "line": 1,
+            "category": "private_key",
+            "candidateDigest": "3021d90eb9437b2d8f30e8363695c4418b5e5f1870801b5c317e9398ee0f572d",
+            "reason": "Public package TLS test fixture; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 109,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 136,
+            "category": "bearer",
+            "candidateDigest": "00ced498fd1d9965339f856dd7b1837f29adfccaed7a13053273460f8c341007",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 143,
+            "category": "bearer",
+            "candidateDigest": "00ced498fd1d9965339f856dd7b1837f29adfccaed7a13053273460f8c341007",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 162,
+            "category": "bearer",
+            "candidateDigest": "756f6386946dce6abb11e8523118d20695da94fa44d23490647f0c9be896f942",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 193,
+            "category": "bearer",
+            "candidateDigest": "4d1f781fb9d64d4ae05cd2a686aa751aee3ab7bbdd7d02ff769039bd763fb110",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-auth-token.test.ts",
+            "line": 197,
+            "category": "bearer",
+            "candidateDigest": "4d1f781fb9d64d4ae05cd2a686aa751aee3ab7bbdd7d02ff769039bd763fb110",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 103,
+            "category": "bearer",
+            "candidateDigest": "10208c65ceb71ca71074e66ebf350c065b4f726fdba0a2bfd92e95c0ac0baa8a",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 112,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-federation-sdk.test.ts",
+            "line": 117,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\anthropic-federation.test.ts",
+            "line": 143,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\kimi-coding-oauth.test.ts",
+            "line": 227,
+            "category": "bearer",
+            "candidateDigest": "5384264eccf13b99a926feab28c3677f404cb55f0a0a124eb53840bb871426d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\meta-oauth.test.ts",
+            "line": 77,
+            "category": "bearer",
+            "candidateDigest": "ab6c89cb2f11ae121c052ed5703941b631db45c9684590ed04a883d79b410bf0",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\meta-oauth.test.ts",
+            "line": 113,
+            "category": "bearer",
+            "candidateDigest": "ab6c89cb2f11ae121c052ed5703941b631db45c9684590ed04a883d79b410bf0",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\mistral-http-transport.test.ts",
+            "line": 424,
+            "category": "bearer",
+            "candidateDigest": "32916dc5281defad423d8f0b6d08feed55b803602d5e36071d5e2653a360dcc9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\models-runtime.test.ts",
+            "line": 1138,
+            "category": "bearer",
+            "candidateDigest": "307ec2c39f2f417aa53a7ca2495849c7b2c7cce5a02a1cdf36ffcd4d96dd0ba4",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 197,
+            "category": "bearer",
+            "candidateDigest": "74022b572c2a22956b3a46f0ceff89458c9f3933f8403f8db880ec0102c90355",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 225,
+            "category": "bearer",
+            "candidateDigest": "d4c1b2299354bcfc81ef2c0ff8302923d265345bd8b3b5a0e16f133b290e4c5f",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 229,
+            "category": "bearer",
+            "candidateDigest": "d4c1b2299354bcfc81ef2c0ff8302923d265345bd8b3b5a0e16f133b290e4c5f",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\openai-completions-empty-tools.test.ts",
+            "line": 230,
+            "category": "bearer",
+            "candidateDigest": "74022b572c2a22956b3a46f0ceff89458c9f3933f8403f8db880ec0102c90355",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\pi-messages.test.ts",
+            "line": 159,
+            "category": "bearer",
+            "candidateDigest": "f43fe304fe8f4c3402dca1905d86a446abcfc361e889ef4c737a09fd28655c25",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\providers.test.ts",
+            "line": 298,
+            "category": "bearer",
+            "candidateDigest": "bf6f2bddc57825cbf55f0fc6eb65a2f5308bbf8ac49e76e78fdcac3a46651dba",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\providers.test.ts",
+            "line": 643,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\providers.test.ts",
+            "line": 680,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\providers.test.ts",
+            "line": 690,
+            "category": "bearer",
+            "candidateDigest": "d38d556236777b208237fd7ac364d921be65bee08989345ab93b9a2c7ff49aeb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\ai\\test\\xai-responses.test.ts",
+            "line": 180,
+            "category": "bearer",
+            "candidateDigest": "994972277e59dc22e87d8691ca3ca888769c2297fb5cf63079339158e5dfd0d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\llama-extension.test.ts",
+            "line": 618,
+            "category": "bearer",
+            "candidateDigest": "3470ebf57edfafe962a2230c021e412b5d449ff252cbb21e4c2dce3e21c7d2d2",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-registry.test.ts",
+            "line": 1259,
+            "category": "bearer",
+            "candidateDigest": "c54502d0992bfbba3aa1466160652dc8d07f125c08e0ff048459dbfab44b5647",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-auth-options.test.ts",
+            "line": 246,
+            "category": "bearer",
+            "candidateDigest": "5e5a5b2c4a4cd150e6e436ae0e85d55289cd1aa68c3f549b8d4c96a88a96ede9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-auth-options.test.ts",
+            "line": 258,
+            "category": "bearer",
+            "candidateDigest": "5e5a5b2c4a4cd150e6e436ae0e85d55289cd1aa68c3f549b8d4c96a88a96ede9",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-classifiers.test.ts",
+            "line": 36,
+            "category": "bearer",
+            "candidateDigest": "762871e995f72f149e18a21bcee7c89141b9b6b1676d30897d9aed7fdc62ce35",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 62,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 75,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\model-runtime-cloudflare-compat.test.ts",
+            "line": 86,
+            "category": "bearer",
+            "candidateDigest": "6746be65bf537124082be886f0aa970071df4af3a43977b640b02b00e73d5e42",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\radius.test.ts",
+            "line": 97,
+            "category": "bearer",
+            "candidateDigest": "fbc3960d4443f3e0896e7a9d766999f6c5a143b70426bf159bebbe36ab744c06",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\suite\\agent-session-compaction.test.ts",
+            "line": 314,
+            "category": "bearer",
+            "candidateDigest": "bb84a243bc46bbb91e9c4535e21b69336ca325990c2cf2563ed3421d928141a1",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\suite\\agent-session-compaction.test.ts",
+            "line": 326,
+            "category": "bearer",
+            "candidateDigest": "bb84a243bc46bbb91e9c4535e21b69336ca325990c2cf2563ed3421d928141a1",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\coding-agent\\test\\suite\\mcp-oauth-server.ts",
+            "line": 58,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\evals\\evals\\acme-server.ts",
+            "line": 101,
+            "category": "bearer",
+            "candidateDigest": "760800fed5d9211c4cc188bde664a76aae97d9993bf3a9e9a69bf7db50b97908",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\evals\\test\\acme-server.test.ts",
+            "line": 30,
+            "category": "bearer",
+            "candidateDigest": "760800fed5d9211c4cc188bde664a76aae97d9993bf3a9e9a69bf7db50b97908",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\evals\\test\\acme-server.test.ts",
+            "line": 31,
+            "category": "bearer",
+            "candidateDigest": "f5f7b9b330b3fc44ae19fb547b713091c6c309073368c1ffcc5f42a601f8a408",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 192,
+            "category": "bearer",
+            "candidateDigest": "9c26cb5c03d372dd7a2470bc1e484165817863ff99fccc211377809c65177131",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 192,
+            "category": "bearer",
+            "candidateDigest": "0f20f17916caef25934af3135703b9755facf213049eabff56a264225ad0b06b",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 196,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 226,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 251,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\oauth.test.ts",
+            "line": 264,
+            "category": "bearer",
+            "candidateDigest": "f6afb5e0c26726d6dfb552911199a5d8f34f598f864c47cef4dfc3d25fb9b2cb",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\streamable-http.test.ts",
+            "line": 146,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\packages\\mcp\\test\\streamable-http.test.ts",
+            "line": 154,
+            "category": "bearer",
+            "candidateDigest": "f6ffdda865e6ea230805e4cdb96439f1f92d43d25ff22cae1afacdeb4d8bc7ef",
+            "reason": "word-only public fixture; entire source file equals the pinned Pi baseline"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-2GPUaJ\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-2YL5zA\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-3Kb8Ad\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-Afwatm\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-ataOsE\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-AW6SKU\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-FOqVsB\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-FymIAU\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-gTaawf\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-Idq26O\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-KaU8JQ\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-lQ3iet\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-OGm3rS\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-OvBQcR\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-PVjSTK\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-rKCWzv\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-t6tkcO\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-vLCcFY\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-X3ZNjE\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-yh5701\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-ZPoQ50\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\temp\\dependency-secret-fixture-zqUmnP\\node_modules\\@anthropic-ai\\sdk\\lib\\helper-client.d.ts",
+            "line": 5,
+            "category": "bearer",
+            "candidateDigest": "f121ec18dc47a6c6951139dd3ead6f90dcbd80741cf3566b9c3e0e410676bac8",
+            "reason": "Public SDK documentation/type declaration example; entire file equals the integrity-verified pinned package archive"
+          }
+        ],
+        "environmentFiles": [
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-2LPzWh\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-2vPvNC\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-3BY57h\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-3qrxnN\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-3RhcvM\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-5gq0Ce\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-5gq0Ce\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-6r4DlI\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-6r4DlI\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-6tdYt8\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-6tdYt8\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-9n79YD\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-A4jVzZ\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-APGiku\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-b39yzy\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-csLHXG\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-cvqObE\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-E2Li3x\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-E2Li3x\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-f9oJtS\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-Ho9VRL\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-i2dX5K\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-i2dX5K\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-JfKKrd\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-JYYtFp\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-kcAcEv\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-KNrwJQ\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-knsxlu\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-knsxlu\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-KvYDyC\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-KvYDyC\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-LoAwZ6\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-m5t40i\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-m5t40i\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-MaYdDm\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-nKKWyJ\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-nKKWyJ\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-NwsM6d\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-NwsM6d\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-OCJuiF\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-OCJuiF\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-OeRDmS\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ONa8oJ\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-pA4SbX\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-pbsG0U\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-PDte8L\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ph6p3l\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-RfODPH\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-THB5ft\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-THB5ft\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-tzHA7L\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-tzHA7L\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-u1LmUj\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-vCZqAf\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-wpEcqY\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-wUB9Nw\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-wxVhi2\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-XmZUBm\\.env.local",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ypBFKW\\private\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ZMGJlR\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ZMGJlR\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ZtGfjv\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          },
+          {
+            "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\dataset-guard\\case-ZtGfjv\\runs\\P2\\exec\\.env",
+            "read": false,
+            "knownSynthetic": true
+          }
+        ],
+        "skippedLinks": [
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\node_modules",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\chord",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-agent-core",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-ai",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-codemode",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-coding-agent",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-durable",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-env",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-evals",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-mcp",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-telemetry",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\@earendil-works\\pi-tui",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\pi-extension-custom-provider-anthropic",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\pi-extension-custom-provider-gitlab-duo",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\pi-extension-gondolin",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\pi-extension-sandbox",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\pi\\node_modules\\pi-extension-with-deps",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\node_modules\\@earendil-works\\pi-ai",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\node_modules\\@earendil-works\\pi-coding-agent",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\node_modules\\@pi-story\\core",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\node_modules\\@pi-story\\pi-story",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\packages\\core\\src",
+          "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\runtime\\packages\\pi-story\\src"
+        ],
+        "passed": true
+      },
+      "fees": {
+        "knownUsd": 6.640271444000003,
+        "reservedUsd": 4.35672114,
+        "unknownCalls": 10,
+        "requests": 1047,
+        "totalUsd": 10.996992584000004
+      }
+    }
+  },
+  "manifest": {
+    "schema": "story/run-manifest@2",
+    "stage": "P2R",
+    "suiteId": "P2-Z",
+    "runId": "20261031T130647Z-ae86109-dirty",
+    "repositoryCommit": "ae861099425abb04d0abcf6f57002fc0ce7eb647",
+    "evidenceHead": "ae861099425abb04d0abcf6f57002fc0ce7eb647",
+    "dirty": true,
+    "rules": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "templates": [
+      {
+        "path": "story/packages/core/src/flow/inputs.ts",
+        "sha256": "f3f5e3ab03a3506baf01c3dad431296fdf44aa1c31556db9dabf189870f8efdf"
+      },
+      {
+        "path": "story/packages/core/src/flow/calls.ts",
+        "sha256": "cf0f7c0ee0898c134b6126bf0aa906288b860c3309b447ab86d77707abbef083"
+      },
+      {
+        "path": "story/scripts/prepare-p2.mjs",
+        "sha256": "cd8072dda42b81dad2dc7b77d7a6ae7a97843252c412d9751c4872ea8cab534e"
+      },
+      {
+        "path": "story/scripts/eval/p2/model-settings.ts",
+        "sha256": "3aa3cba6ea7be1ccc0eeff3ad1ce981dd56b65b1b7596b9d9b06ec961367fdcd"
+      }
+    ],
+    "piBuild": {
+      "schema": "story/pi-build@1",
+      "commit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+      "sourceKind": "git_archive",
+      "archiveSha256": "596363e6d3f047dca2d52d9ff272a382d3eb03a82b887c97a03ded937819f4d2",
+      "modelSnapshot": {
+        "manifestSha256": "6d94a53c421b4872507885c97cd898528c65bf8671ba4646b4398f46ee55b708",
+        "files": {
+          "amazon-bedrock.json": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+          "ant-ling.json": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+          "anthropic.json": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+          "azure.json": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+          "baseten.json": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+          "cerebras.json": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+          "cloudflare-ai-gateway.json": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+          "cloudflare-workers-ai.json": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+          "deepseek.json": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+          "fireworks.json": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+          "github-copilot.json": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+          "google-vertex.json": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+          "google.json": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+          "groq.json": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+          "huggingface.json": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+          "kimi-coding.json": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+          "meta.json": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+          "minimax-cn.json": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+          "minimax.json": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+          "mistral.json": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+          "moonshotai-cn.json": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+          "moonshotai.json": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+          "nvidia.json": "98b47c4da26c8e649f48a874602fd7e9dc8a54ee0bdb40e3d07fe49189a842d2",
+          "openai-codex.json": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+          "openai.json": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+          "opencode-go.json": "39408ee6da7302e3202d7f7b27d31d4d50a05c340bebd7da25ee23755d506475",
+          "opencode.json": "ecf8c62258249de738efee09932f1068c3feaf555779d0196aa129ea8339dd28",
+          "openrouter.json": "d303cf8e4ad2cfd322ea5fc8c9e617d46b21d36d9ebe0454be26ae92d91440aa",
+          "qwen-token-plan-cn.json": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+          "qwen-token-plan-individual.json": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+          "qwen-token-plan.json": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+          "radius.json": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+          "together.json": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+          "typesafe.json": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+          "vercel-ai-gateway.json": "154de982552dff9874764e724980aad167e2ff58be06d8477f2456494ef1e458",
+          "xai.json": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+          "xiaomi-token-plan-ams.json": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+          "xiaomi-token-plan-cn.json": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+          "xiaomi-token-plan-sgp.json": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+          "xiaomi.json": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+          "zai-coding-cn.json": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+          "zai.json": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f"
+        }
+      },
+      "node": "v24.11.0",
+      "install": "npm ci --ignore-scripts",
+      "build": "npm run build:offline",
+      "built": true,
+      "expectedModelSnapshot": {
+        "manifestSha256": "9506560e3130e3bbab01027d629cd60034249e39450912adbff44bcff1e8a974",
+        "files": {
+          "amazon-bedrock.json": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+          "ant-ling.json": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+          "anthropic.json": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+          "azure.json": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+          "baseten.json": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+          "cerebras.json": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+          "cloudflare-ai-gateway.json": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+          "cloudflare-workers-ai.json": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+          "deepseek.json": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+          "fireworks.json": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+          "github-copilot.json": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+          "google-vertex.json": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+          "google.json": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+          "groq.json": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+          "huggingface.json": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+          "kimi-coding.json": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+          "meta.json": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+          "minimax-cn.json": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+          "minimax.json": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+          "mistral.json": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+          "moonshotai-cn.json": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+          "moonshotai.json": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+          "nvidia.json": "cc7b418f706178f0aac2384324cd63f7641ff03656ef25551a1859e2c69381bc",
+          "openai-codex.json": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+          "openai.json": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+          "opencode-go.json": "04584e57d8f8a76d9f00a853c4772bcb1a826826c03a54d371b7f78e5f38e277",
+          "opencode.json": "756c40dc7f471feadd4f0f5b8b8ba055186f2ee61b3dae7926f4b6916304a6ec",
+          "openrouter.json": "18123b2fda4e970d4b2a9f50b375a90badae1c93ef5d47f3cd93b099ccba1039",
+          "qwen-token-plan-cn.json": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+          "qwen-token-plan-individual.json": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+          "qwen-token-plan.json": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+          "radius.json": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+          "together.json": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+          "typesafe.json": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+          "vercel-ai-gateway.json": "bb62e8a267e0e94be31cdad7ea95dbdb1608adc1ab910341e8761144982940f0",
+          "xai.json": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+          "xiaomi-token-plan-ams.json": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+          "xiaomi-token-plan-cn.json": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+          "xiaomi-token-plan-sgp.json": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+          "xiaomi.json": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+          "zai-coding-cn.json": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+          "zai.json": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f"
+        }
+      },
+      "recovery": "Source code and dependencies remain pinned. Paid Deepseek catalog and Kimi protocol restored to exact frozen hashes; five unused provider catalogs from published 1.3.0 differ. Manifest accurately records actual bytes.",
+      "modelSnapshotComparison": {
+        "usedProvider": "deepseek",
+        "usedProviderUnchanged": true,
+        "protocolBoundaryKimiUnchanged": true,
+        "entireSnapshotUnchanged": false,
+        "priorManifestSha256": "9506560e3130e3bbab01027d629cd60034249e39450912adbff44bcff1e8a974",
+        "currentManifestSha256": "6d94a53c421b4872507885c97cd898528c65bf8671ba4646b4398f46ee55b708",
+        "exactFiles": 37,
+        "unusedProviderDifferences": [
+          "nvidia.json",
+          "opencode-go.json",
+          "opencode.json",
+          "openrouter.json",
+          "vercel-ai-gateway.json"
+        ],
+        "files": [
+          {
+            "name": "amazon-bedrock.json",
+            "sha256": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+            "expectedSha256": "df227d426b678e44cd82deae1cf433855d6b27f36fedcff3ef4fb812fe882868",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "ant-ling.json",
+            "sha256": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+            "expectedSha256": "628feab3ef6c7d80ce96f75999804e1d9f05fec3851e5302e30fff3b69db90f6",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "anthropic.json",
+            "sha256": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+            "expectedSha256": "327ea610aca64889902458243e9b6a440eb678671f5993b88ad32ac6e827b587",
+            "expectedMatch": true,
+            "sourceVersion": "1.2.0",
+            "sourceIntegrity": "sha512-U5/1zXqfV1on7/9sbez03tT4Ru49Lvfb4+zXSDK3DBKF5cRk6KxvAOTOY3HJ4jimlZth+rs7vbJqN6iBQAoNuQ=="
+          },
+          {
+            "name": "azure.json",
+            "sha256": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+            "expectedSha256": "46c4e25b84463c6475e706c581196d2735c35feb9612d2efca0ab932c917d727",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "baseten.json",
+            "sha256": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+            "expectedSha256": "1fcdab8daf2881bd099eb08f9416f7df5bf39975937d2a63b841542bd032f2e6",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "cerebras.json",
+            "sha256": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+            "expectedSha256": "3eccb58c5de3d0dc7ba49dc6e477ba29f00cb3150ce0a35cc90d59e6b5ab368e",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "cloudflare-ai-gateway.json",
+            "sha256": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+            "expectedSha256": "388aefd2f1e5c5b0783673de1acda4a7ea8de853ebb5beeeede9646a90159a2a",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "cloudflare-workers-ai.json",
+            "sha256": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+            "expectedSha256": "98b9c8cb412139ae3f5d2f5e49134f8412ed4e139a12bf6cb3aeba38aacc6bb3",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "deepseek.json",
+            "sha256": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+            "expectedSha256": "10a296fb3e898f7715c80890c8af0af4f5fd58f22dbcd6612fdc5d762157ccdc",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "fireworks.json",
+            "sha256": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+            "expectedSha256": "8db3c11f65a5d76260d5040a5dc5a9ef0f35b92de8505a30907c2355c2837b36",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "github-copilot.json",
+            "sha256": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+            "expectedSha256": "1c7d77a4c320081bb0a80b2c8e185b34f07b73d38e67d20f3dcabcf72f2f8fcd",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "google-vertex.json",
+            "sha256": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+            "expectedSha256": "564d692a4292ef12e98c8ec056a39948ea64e10851f5ddaaebcc37b585545231",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "google.json",
+            "sha256": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+            "expectedSha256": "e13d3c51b13028d8253153165f7438ea2f3c3eaa8f209be952d3e9ded4494b5a",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "groq.json",
+            "sha256": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+            "expectedSha256": "910952ad9dad07856983459d63fce0148dba1203edd7b10d801a77c5824f3405",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "huggingface.json",
+            "sha256": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+            "expectedSha256": "6399e958790a9d90c21fb55d1cbef8569427a1ceb28de86dadeb3b4454ecfade",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "kimi-coding.json",
+            "sha256": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+            "expectedSha256": "728d5ddb63ef52130552022d5ae2fd138fdc131ff854ac8c3b10ccaad355ab39",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "meta.json",
+            "sha256": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+            "expectedSha256": "563f5ec07973f52ab8c3eb26ef91a36ad8a79e950b37174935666cdcb624bf35",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "minimax-cn.json",
+            "sha256": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+            "expectedSha256": "1bbfbd11c3edbd141841d3cef027e12157218f1aec92477e15772116c1fabe7a",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "minimax.json",
+            "sha256": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+            "expectedSha256": "a4b6864bd97eddf5749b2e117f643e751ec237408e8e24bec9e2f947782fa244",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "mistral.json",
+            "sha256": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+            "expectedSha256": "27aa66c71a0504b53dc87ec194286fa7e70b99747fc8df9b709b23b3548afe50",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "moonshotai-cn.json",
+            "sha256": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+            "expectedSha256": "79c9585dc84ee525ebaebbc78b3c55f3d369ec884d4f943488f1e0b14e3587f5",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "moonshotai.json",
+            "sha256": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+            "expectedSha256": "1da2c4e34f22aef17a07c974d85bdee8e1b68b6dc712e3769c935b3f1e7dadca",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "nvidia.json",
+            "sha256": "98b47c4da26c8e649f48a874602fd7e9dc8a54ee0bdb40e3d07fe49189a842d2",
+            "expectedSha256": "cc7b418f706178f0aac2384324cd63f7641ff03656ef25551a1859e2c69381bc",
+            "expectedMatch": false,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "openai-codex.json",
+            "sha256": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+            "expectedSha256": "75dfc2f9e4b1e039978e069d94c983595ef8ff02eb64481901bedae5883b1d3f",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "openai.json",
+            "sha256": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+            "expectedSha256": "3598d87bd39e40fe6ae44b07ecf3f9d27cb2e745e114c8b0c0fb0a3a84dd8d3e",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "opencode-go.json",
+            "sha256": "39408ee6da7302e3202d7f7b27d31d4d50a05c340bebd7da25ee23755d506475",
+            "expectedSha256": "04584e57d8f8a76d9f00a853c4772bcb1a826826c03a54d371b7f78e5f38e277",
+            "expectedMatch": false,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "opencode.json",
+            "sha256": "ecf8c62258249de738efee09932f1068c3feaf555779d0196aa129ea8339dd28",
+            "expectedSha256": "756c40dc7f471feadd4f0f5b8b8ba055186f2ee61b3dae7926f4b6916304a6ec",
+            "expectedMatch": false,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "openrouter.json",
+            "sha256": "d303cf8e4ad2cfd322ea5fc8c9e617d46b21d36d9ebe0454be26ae92d91440aa",
+            "expectedSha256": "18123b2fda4e970d4b2a9f50b375a90badae1c93ef5d47f3cd93b099ccba1039",
+            "expectedMatch": false,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "qwen-token-plan-cn.json",
+            "sha256": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+            "expectedSha256": "2469a4091c474ec3db0a49a9962d8d2726c074ad9065b96bc4e0c87861c4c6c5",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "qwen-token-plan-individual.json",
+            "sha256": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+            "expectedSha256": "0fb7cf64faf39d1a3b0a884210a86c87084b805eda15644f5f39293287b959dd",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "qwen-token-plan.json",
+            "sha256": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+            "expectedSha256": "eff10620cb577142de4ec02698d5961a71fda2fe4f6ae7ea9432bad9d6844176",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "radius.json",
+            "sha256": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+            "expectedSha256": "47c49f1ffaf2900c8e1e23ee61cb4cbe8c066ae59a4e2d01393c5c9772a1da04",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "together.json",
+            "sha256": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+            "expectedSha256": "52293df62191c8e799ae3632f8ab1b3f52ee626aee0280677086627b32864bf7",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "typesafe.json",
+            "sha256": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+            "expectedSha256": "a4429a2f696d5cc5273969af61a7310bda07d6bdcd27bf9ac9c76c534cc43716",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "vercel-ai-gateway.json",
+            "sha256": "154de982552dff9874764e724980aad167e2ff58be06d8477f2456494ef1e458",
+            "expectedSha256": "bb62e8a267e0e94be31cdad7ea95dbdb1608adc1ab910341e8761144982940f0",
+            "expectedMatch": false,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "xai.json",
+            "sha256": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+            "expectedSha256": "879c49b78b663a52a220ac4ee013e726b10c4f50aaa03bc58ee53a4b54c76928",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "xiaomi-token-plan-ams.json",
+            "sha256": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+            "expectedSha256": "8266dc55ef720234373d4ff5434f0b8d40f614300d9e501f7d52935017534c82",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "xiaomi-token-plan-cn.json",
+            "sha256": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+            "expectedSha256": "07ade989c0bd1ecf6ed9edc32e561c0dd28c317955b82f51e7a1875083906307",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "xiaomi-token-plan-sgp.json",
+            "sha256": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+            "expectedSha256": "6afab55c8a37bc4018354ad657c774f0e664ae44cf79befb743bc5ae3fc3e9ba",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "xiaomi.json",
+            "sha256": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+            "expectedSha256": "93f81b40e4d01f0193dd0b191f6ada2b851a71d351113067999ab0f9dc3f737e",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "zai-coding-cn.json",
+            "sha256": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+            "expectedSha256": "ee5ee705fb6e413a6088db5e3616c27fce802a8ece6c355f1db35490d787f610",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          },
+          {
+            "name": "zai.json",
+            "sha256": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f",
+            "expectedSha256": "58e6642fdfb736f0b9a4a277c760c536a3cea66a030abbfb2615f7b2851d5c6f",
+            "expectedMatch": true,
+            "sourceVersion": "1.3.0",
+            "sourceIntegrity": "sha512-KaBI8x7q7sPoFUXICNGD9efHzDG+oRNwVvkA9jdIsSQWH1RjFssOlEGsbLtewUPPgCrvmz0l2KTgSLXTyj3acw=="
+          }
+        ]
+      }
+    },
+    "settings": {
+      "schema": "story/global-settings@1",
+      "storiesDir": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\exec\\stories",
+      "defaultLevel": "L1",
+      "localRevision": true,
+      "roles": {
+        "writer": {
+          "model": "deepseek/deepseek-flash",
+          "thinking": "low",
+          "maxTokens": 32768,
+          "temperature": 0.9
+        },
+        "editor": {
+          "model": "deepseek/deepseek-flash",
+          "thinking": "low",
+          "maxTokens": 32768,
+          "temperature": 0.2
+        },
+        "keeper": {
+          "model": "deepseek/deepseek-flash",
+          "thinking": "low",
+          "maxTokens": 32768,
+          "temperature": 0
+        },
+        "verifier": {
+          "model": "deepseek/deepseek-flash",
+          "thinking": "low",
+          "maxTokens": 8192,
+          "temperature": 0
+        }
+      },
+      "defaultBudget": {
+        "tokens": null,
+        "costUsd": null
+      },
+      "bridge": {
+        "port": 0
+      }
+    },
+    "modelOverrides": {
+      "providers": {
+        "deepseek": {
+          "modelOverrides": {
+            "deepseek-v4-pro": {
+              "thinkingLevelMap": {
+                "low": "low"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nodeVersion": "v24.11.0",
+    "modelRequests": 0,
+    "status": "passed",
+    "programSha256": "41c828f22e5dc4697bd6bdb8bd20212df6a7aa374455b364a35f50307c1d158a"
+  },
+  "metrics": {
+    "schema": "story/metrics@2",
+    "suiteId": "P2-Z",
+    "runId": "20261031T130647Z-ae86109-dirty",
+    "metrics": [
+      {
+        "id": "P2-Z",
+        "n": 69800,
+        "value": {
+          "hits": 0,
+          "knownUsd": 6.640271444000003,
+          "reservedUsd": 4.35672114,
+          "unknownCalls": 10,
+          "requests": 1047,
+          "totalUsd": 10.996992584000004
+        },
+        "threshold": {
+          "hits": 0,
+          "maximumUsd": 25
+        },
+        "confidence95": null,
+        "passed": true,
+        "status": "measured"
+      }
+    ]
+  },
+  "repairBudgetGate": {
+    "standard": "22/24",
+    "maximumUsd": 20,
+    "stopUsd": 16,
+    "knownUsd": 6.640271444000003,
+    "reservedUsd": 4.35672114,
+    "totalUsd": 10.996992584000004,
+    "passed": true,
+    "belowStop": true
+  },
+  "notes": [
+    "Source CLI manifest retains its actual HEAD and dirty flag; the CLI process snapshot is not rewritten as the V2 freeze.",
+    "Frozen shared P2-Z metric still displays the old 25 USD threshold. This independent repairBudgetGate applies the required 20 USD; no threshold is relaxed.",
+    "Source dirty directory remains local. This derivative artifact archives its exact public output with hashes; source judging files are unchanged."
+  ],
+  "modelRequests": 0
+}

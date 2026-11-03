@@ -1,0 +1,97 @@
+{
+  "id": "ds11-d03",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "You've settled that the missing page is a copy, but not whether it's a harmless duplicate or a forged replacement — the two lead to very different chapters. Which should it be?",
+        "options": [
+          "A harmless duplicate: an honest clerical copy, no deception",
+          "A forged replacement: a copy made to displace the original record"
+        ]
+      },
+      "id": "call_00_SNLRHMZWOyi6rU7owAL99508"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "You've settled that the missing page is a copy, but not whether it's a harmless duplicate or a forged replacement — the two lead to very different chapters. Which should it be?",
+      "options": [
+        "A harmless duplicate: an honest clerical copy, no deception",
+        "A forged replacement: a copy made to displace the original record"
+      ]
+    },
+    "id": "call_00_SNLRHMZWOyi6rU7owAL99508"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "40ff1f096c8a99d48746a908150ca5d139bda303ffd0afe00302cdda906c81b2",
+    "sessionSha256": "a8410aeb8e565b551abd1096e1d24a73426618c6a5ffbcdb3ea553d7a0df2088",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026082,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026082
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

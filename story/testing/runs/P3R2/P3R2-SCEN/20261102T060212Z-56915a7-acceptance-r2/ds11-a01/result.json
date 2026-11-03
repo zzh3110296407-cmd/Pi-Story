@@ -1,0 +1,125 @@
+{
+  "id": "ds11-a01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author requested that Oren lead the document check in unwritten chapter 3 while Lena assists, keeping the chapter number and total chapter count.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Oren leads the document check into the handling note and the missing register page, with Lena assisting rather than directing.",
+            "turn": "Suri supplies a duplicate page; Oren sets the order of verification and the team agrees to continue checking before the public demonstration.",
+            "hookSeeds": [
+              "Oren's verification order reveals a discrepancy nobody has explained."
+            ]
+          }
+        ]
+      },
+      "id": "call_00_SqtldOFKj1Q1EG301sTP9826"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author requested that Oren lead the document check in unwritten chapter 3 while Lena assists, keeping the chapter number and total chapter count.",
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Oren leads the document check into the handling note and the missing register page, with Lena assisting rather than directing.",
+          "turn": "Suri supplies a duplicate page; Oren sets the order of verification and the team agrees to continue checking before the public demonstration.",
+          "hookSeeds": [
+            "Oren's verification order reveals a discrepancy nobody has explained."
+          ]
+        }
+      ]
+    },
+    "id": "call_00_SqtldOFKj1Q1EG301sTP9826"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Oren leads the document check while Lena assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "0684e71049e2e0e5ca0ec2d3d9e43450ccd681a726157821890d19c8e158e42d",
+    "sessionSha256": "39692348b2c732ca06d38e21489b6004a78c43a7a3465cd92adfb7e1030a6f16",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.002667,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.002667
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

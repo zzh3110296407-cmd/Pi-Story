@@ -1,0 +1,74 @@
+{
+	"P1-S0": { "files": ["test/s0.test.ts"], "datasets": [], "metrics": ["H13"] },
+	"P1-UNIT": {
+		"files": ["packages/core/test", "test"],
+		"datasets": [
+			{ "directory": "DS01-sentences", "version": "v3" },
+			{ "directory": "DS02-author-quotes", "version": "v3" },
+			{ "directory": "DS03-state-deltas", "version": "v2" },
+			{ "directory": "DS04-eligibility-flow", "version": "v2" },
+			{ "directory": "DS05-program-check", "version": "v2" },
+			{ "directory": "DS06-input-estimate", "version": "v2" },
+			{ "directory": "DS07-replay", "version": "v3" }
+		],
+		"metrics": ["H02"]
+	},
+	"P1-SEG": {
+		"files": ["packages/core/test/segmentation.dataset.test.ts"],
+		"datasets": [{ "directory": "DS01-sentences", "version": "v3" }],
+		"metrics": ["H04", "P1-O3"]
+	},
+	"P1-QUOTE": {
+		"files": ["packages/core/test/quotes.dataset.test.ts"],
+		"datasets": [{ "directory": "DS02-author-quotes", "version": "v3" }],
+		"metrics": ["H05"]
+	},
+	"P1-CHECK": {
+		"files": ["packages/core/test/check.dataset.test.ts"],
+		"datasets": [{ "directory": "DS05-program-check", "version": "v2" }],
+		"metrics": ["H08", "P1-O2"]
+	},
+	"P1-DELTA": {
+		"files": ["packages/core/test/delta.dataset.test.ts", "packages/core/test/dataset-evidence.test.ts"],
+		"datasets": [{ "directory": "DS03-state-deltas", "version": "v2" }],
+		"metrics": ["H06"]
+	},
+	"P1-EST": {
+		"files": ["packages/core/test/estimate.dataset.test.ts"],
+		"datasets": [{ "directory": "DS06-input-estimate", "version": "v2" }],
+		"metrics": ["H09", "H09-O"]
+	},
+	"P1-FOLD": {
+		"files": [
+			"packages/core/test/fold.test.ts",
+			"packages/core/test/snapshots.dataset.test.ts",
+			"packages/core/test/flow.dataset.test.ts",
+			"packages/core/test/authority.test.ts"
+		],
+		"datasets": [
+			{ "directory": "DS03-state-deltas", "version": "v2" },
+			{ "directory": "DS04-eligibility-flow", "version": "v2" }
+		],
+		"metrics": ["H03", "H14", "H14-O"]
+	},
+	"P1-FLOW": {
+		"files": [
+			"packages/core/test/production.test.ts",
+			"packages/core/test/canon.test.ts",
+			"packages/core/test/flow.dataset.test.ts",
+			"packages/core/test/authority.test.ts",
+			"packages/core/test/cancellation.test.ts"
+		],
+		"datasets": [
+			{ "directory": "DS03-state-deltas", "version": "v2" },
+			{ "directory": "DS04-eligibility-flow", "version": "v2" }
+		],
+		"metrics": ["H07"]
+	},
+	"P1-REPLAY": {
+		"files": ["packages/core/test/replay.dataset.test.ts"],
+		"datasets": [{ "directory": "DS07-replay", "version": "v3" }],
+		"metrics": ["P1-O1"]
+	},
+	"P1-COV": { "files": ["test/coverage.test.ts"], "datasets": [], "metrics": ["H01"] }
+}

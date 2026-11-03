@@ -1,0 +1,226 @@
+{
+  "schema_version": "writing-2",
+  "current_data": {
+    "world": {
+      "origin": "current_state",
+      "overview": {
+        "items": [
+          {
+            "id": "loc_frozen_tundra",
+            "brief": "A harsh, frozen tundra where the story opens."
+          },
+          {
+            "id": "loc_dark_rock_rise",
+            "brief": "A low, broken rise of dark rock to the west on the frozen tundra."
+          },
+          {
+            "id": "loc_ravine_beyond_rise",
+            "brief": "A ravine beyond the dark rock rise, toward which the Time Traveler walks."
+          },
+          {
+            "id": "ent_the_jump",
+            "brief": "The time jump whose afterimage and nausea the Time Traveler experienced on waking."
+          },
+          {
+            "id": "ent_time_traveler_coat",
+            "brief": "A coat worn by the Time Traveler on the frozen tundra."
+          },
+          {
+            "id": "ent_woolly_mammoth_carcass",
+            "brief": "A whole, unmarked woolly mammoth carcass lying in the snow beyond the dark rock rise."
+          },
+          {
+            "id": "ent_rib_shard",
+            "brief": "A shard of rib worked free from the mammoth carcass."
+          },
+          {
+            "id": "ent_hide_strip",
+            "brief": "A stiff strip of hide torn from the mammoth carcass and wrapped around the Time Traveler's wrist."
+          }
+        ]
+      },
+      "locations": [
+        {
+          "id": "loc_frozen_tundra",
+          "name": "Frozen Tundra",
+          "brief": "A harsh, frozen tundra where the story opens.",
+          "parent_id": null,
+          "description": "A snow-covered, windswept tundra under a flat, colorless sky; the wind carries stinging grains of ice.",
+          "current_state": "Cold and windswept; snow is settling into exposed clothing."
+        },
+        {
+          "id": "loc_dark_rock_rise",
+          "name": "Dark Rock Rise",
+          "brief": "A low, broken rise of dark rock to the west on the frozen tundra.",
+          "parent_id": "loc_frozen_tundra",
+          "description": "A low, broken rise of dark rock to the west of the Time Traveler's position.",
+          "current_state": "Crossed by the Time Traveler; from its crest a woolly mammoth carcass was visible in the snow, and a ravine lies beyond."
+        },
+        {
+          "id": "loc_ravine_beyond_rise",
+          "name": "The Ravine Beyond the Rise",
+          "brief": "A ravine beyond the dark rock rise, toward which the Time Traveler walks.",
+          "parent_id": "loc_frozen_tundra",
+          "description": "A ravine beyond the rise, visible after the Time Traveler crossed the dark rock rise.",
+          "current_state": null
+        }
+      ],
+      "rules": [],
+      "connections": [],
+      "entities": [
+        {
+          "id": "ent_the_jump",
+          "kind": "phenomenon",
+          "name": "The Jump",
+          "brief": "The time jump whose afterimage and nausea the Time Traveler experienced on waking.",
+          "description": "The time-travel jump that left an afterimage behind the Time Traveler's eyes and nausea rolling through him in thin waves.",
+          "location_ids": [],
+          "current_state": null,
+          "holder_character_id": null
+        },
+        {
+          "id": "ent_time_traveler_coat",
+          "kind": "object",
+          "name": "The Time Traveler's Coat",
+          "brief": "A coat worn by the Time Traveler on the frozen tundra.",
+          "description": "A coat whose folds and seams are filling with settling snow.",
+          "location_ids": [
+            "loc_frozen_tundra"
+          ],
+          "current_state": "Snow is settling into its folds and seams; a shard of mammoth rib is carried in it.",
+          "holder_character_id": "char_time_traveler"
+        },
+        {
+          "id": "ent_woolly_mammoth_carcass",
+          "kind": "animal remains",
+          "name": "Woolly Mammoth Carcass",
+          "brief": "A whole, unmarked woolly mammoth carcass lying in the snow beyond the dark rock rise.",
+          "description": "A dark mound in the white, too regular to be rock, with snow drifted against one flank. The matted coat holds the animal's shape like a cast. Its trunk lies curled against the snow, and one tusk is sheared near the root.",
+          "location_ids": [
+            "loc_frozen_tundra"
+          ],
+          "current_state": "Lying in drifted snow; one tusk sheared near the root; a strip of hide has been removed from its flank and a rib shard worked free; no cuts, spear marks, trampled hunter ring, or scavenging are present.",
+          "holder_character_id": null
+        },
+        {
+          "id": "ent_rib_shard",
+          "kind": "object",
+          "name": "Rib Shard",
+          "brief": "A shard of rib worked free from the mammoth carcass.",
+          "description": "A shard of bone worked free from the mammoth carcass by the Time Traveler's clumsy hands.",
+          "location_ids": [],
+          "current_state": "Carried in the Time Traveler's coat.",
+          "holder_character_id": "char_time_traveler"
+        },
+        {
+          "id": "ent_hide_strip",
+          "kind": "object",
+          "name": "Strip of Mammoth Hide",
+          "brief": "A stiff strip of hide torn from the mammoth carcass and wrapped around the Time Traveler's wrist.",
+          "description": "A strip of mammoth hide torn from the carcass flank, stiff as board.",
+          "location_ids": [],
+          "current_state": "Wrapped around the Time Traveler's wrist.",
+          "holder_character_id": "char_time_traveler"
+        }
+      ]
+    },
+    "characters": {
+      "origin": "current_state",
+      "overview": {
+        "items": [
+          {
+            "id": "char_time_traveler",
+            "brief": "A male time traveler who has just woken alone on the frozen tundra, cold and at risk of freezing."
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "char_time_traveler",
+          "name": "The Time Traveler",
+          "brief": "A male time traveler who has just woken alone on the frozen tundra, cold and at risk of freezing.",
+          "details": null,
+          "state": {
+            "location_id": "loc_frozen_tundra",
+            "condition": "Cold and at risk of freezing; hands clumsy; has crossed the dark rock rise and is walking toward the ravine beyond it; carrying a rib shard in his coat and a strip of mammoth hide wrapped around his wrist.",
+            "current_goal": "To reach the ravine beyond the rise."
+          },
+          "knowledge": [
+            {
+              "content": "The cold can progress from shivering to numbness to a sleep that does not end, and he has hours or perhaps fewer.",
+              "acquired_via": null,
+              "source_ids": []
+            },
+            {
+              "content": "A low, broken rise of dark rock lies to the west, with a shadow beyond it that might be a ravine.",
+              "acquired_via": "Scanning the tundra.",
+              "source_ids": []
+            },
+            {
+              "content": "A woolly mammoth carcass lies beyond the rise: its trunk curled against the snow, one tusk sheared near the root, the body whole with no cuts, spear marks, trampled hunter ring, or signs of scavenging.",
+              "acquired_via": "Observing and examining the mammoth carcass.",
+              "source_ids": []
+            },
+            {
+              "content": "He aimed for the late Pleistocene—the caves, the fires, and the people he spent his life studying—but this time is older by tens of thousands of years. The jump missed, or he did, and the error is not one he can walk back from.",
+              "acquired_via": "Recognizing the mammoth and comparing this time with his intended destination.",
+              "source_ids": []
+            },
+            {
+              "content": "He worked a shard of rib free from the mammoth carcass, tore off a strip of hide stiff as board, wrapped the hide around his wrist, and put the bone in his coat.",
+              "acquired_via": "Working at the carcass with his hands.",
+              "source_ids": []
+            }
+          ],
+          "beliefs": [
+            "He wonders whether dedicating everything in his life to his goal was worth it.",
+            "He believes the jump missed the late Pleistocene—through the jump's error or his own—and that the error is not one he can walk back from.",
+            "He believes there is no one here to meet him."
+          ],
+          "relationships": []
+        }
+      ]
+    },
+    "given_facts": [
+      {
+        "origin": "prompt",
+        "quote": "Write a science fiction story about someone who is a time traveler and has dedicated everything in their life towards a goal, and now wonders if it was worth it.",
+        "kind": "character",
+        "content": "The main character is a time traveler.",
+        "id": "fact_0001"
+      },
+      {
+        "origin": "prompt",
+        "quote": "Write a science fiction story about someone who is a time traveler and has dedicated everything in their life towards a goal, and now wonders if it was worth it.",
+        "kind": "character",
+        "content": "The main character has dedicated everything in their life toward a goal.",
+        "id": "fact_0002"
+      },
+      {
+        "origin": "prompt",
+        "quote": "Write a science fiction story about someone who is a time traveler and has dedicated everything in their life towards a goal, and now wonders if it was worth it.",
+        "kind": "character",
+        "content": "The main character now wonders whether that dedication was worth it.",
+        "id": "fact_0003"
+      },
+      {
+        "origin": "prompt",
+        "quote": "He looks for shelter from the cold.",
+        "kind": "character",
+        "content": "The main character is male.",
+        "id": "fact_0004"
+      }
+    ],
+    "supplements": []
+  },
+  "chapters": [
+    {
+      "chapter_no": 1,
+      "text": "Cold woke him first, before memory did — a cold so total it seemed less a temperature than a subtraction, as though something essential had been drawn out of him and replaced with glass. He lay on his back in the white, and the sky above was a flat, colorless lid. His teeth ached. Behind his eyes a slow pulse beat, the afterimage of the jump, nausea rolling through him in thin waves.\n\nHe pushed himself up on one elbow. The snow had begun to settle into the folds of his coat, into the seams, patient as a thief. He knew the arithmetic of this: skin to shivering, shivering to numbness, numbness to a sleep that did not end. Hours. Perhaps fewer.\n\nHe got his knees under him. The wind came across the tundra without hurry, carrying grains of ice that stung his cheek, and he turned from it, scanning. A rise of dark rock to the west, low and broken, and beyond it a shadow that might have been a ravine.\n\nHe had spent a lifetime learning to arrive. No one had taught him the first thing about surviving it. He started walking, counting his steps, because counting was something to do."
+    },
+    {
+      "chapter_no": 2,
+      "text": "He crossed the rise at a stumble and from the crest saw it: a dark mound in the white, too regular to be rock. He went down. Snow had drifted against one flank; the matted coat held the animal’s shape like a cast. A woolly mammoth. Its trunk lay curled against the snow, one tusk sheared near the root. The body was whole—no cuts, no spear marks, no trampled ring where hunters had stood. Nothing had fed on it. It had lain down, or been caught, and the cold had kept it.\n\nHe stood a long time. The wind worked at his coat. He had aimed for the late Pleistocene—the caves, the fires, the people he had spent his life studying. This was older. Tens of thousands of years older. The jump had missed, or he had, and the error was not one he could walk back from. He had given everything to arrive, and here it was: a dead thing in the snow and no one to meet him.\n\nHe crouched. His hands were clumsy, but he worked a shard of rib free and tore a strip of hide from the flank, stiff as board. He wrapped the hide around his wrist and put the bone in his coat. Then he looked at the ravine beyond the rise and started walking."
+    }
+  ]
+}

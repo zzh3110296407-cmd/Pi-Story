@@ -1,0 +1,123 @@
+{
+  "id": "ds11-b02-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "作者要求补充未来场景中手推车进出渡轮办公室的通行限制；不改动已有设定与已写章节。",
+        "changes": [
+          {
+            "kind": "rule",
+            "key": "rule:cart_access",
+            "name": "Cart access",
+            "source": "user",
+            "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+            "op": "set",
+            "value": {
+              "description": "Carts may enter the ferry office only through the west door.",
+              "scope": "future scenes",
+              "invariants": [
+                "Carts enter the ferry office only through the west door."
+              ]
+            }
+          }
+        ]
+      },
+      "id": "call_00_rQdST72e4QiuYSL2iUxi2836"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "作者要求补充未来场景中手推车进出渡轮办公室的通行限制；不改动已有设定与已写章节。",
+      "changes": [
+        {
+          "kind": "rule",
+          "key": "rule:cart_access",
+          "name": "Cart access",
+          "source": "user",
+          "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+          "op": "set",
+          "value": {
+            "description": "Carts may enter the ferry office only through the west door.",
+            "scope": "future scenes",
+            "invariants": [
+              "Carts enter the ferry office only through the west door."
+            ]
+          }
+        }
+      ]
+    },
+    "id": "call_00_rQdST72e4QiuYSL2iUxi2836"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "02cd7fbea5f40e65bff066b6175dbde90760fec52465305348accdad1970b5e2",
+    "sessionSha256": "9fbb74c773249feeb092e080afa4582bb401a64cebebe7fbb71d54ed9141e633",
+    "fee": {
+      "knownUsd": 0.0025374,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025374
+    },
+    "measuredMainRequests": 2
+  }
+}

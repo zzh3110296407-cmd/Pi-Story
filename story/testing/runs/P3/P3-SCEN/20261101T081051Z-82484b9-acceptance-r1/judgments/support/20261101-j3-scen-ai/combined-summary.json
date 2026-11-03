@@ -1,0 +1,62 @@
+{
+  "schema": "story/p3-j3-scen-combined-summary@1",
+  "date": "2026-11-01",
+  "status": "ai_preliminary_awaiting_author_overall_acceptance",
+  "formalThresholdAdmission": false,
+  "runs": [
+    {
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "repetition": 1,
+      "counts": {
+        "T02": {
+          "correct": 25,
+          "n": 32,
+          "value": 0.78125
+        },
+        "T03": {
+          "correct": 11,
+          "n": 12,
+          "value": 0.9166666666666666
+        }
+      }
+    },
+    {
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "repetition": 2,
+      "counts": {
+        "T02": {
+          "correct": 22,
+          "n": 32,
+          "value": 0.6875
+        },
+        "T03": {
+          "correct": 11,
+          "n": 12,
+          "value": 0.9166666666666666
+        }
+      }
+    }
+  ],
+  "T02": {
+    "correct": 47,
+    "n": 64,
+    "value": 0.734375,
+    "threshold": 0.8,
+    "numericallyMeetsThreshold": false
+  },
+  "T03_SCEN": {
+    "correct": 22,
+    "n": 24,
+    "value": 0.9166666666666666,
+    "threshold": 0.8,
+    "numericallyMeetsThreshold": true,
+    "scope": "SCEN subset only; BOOK recoveries pending"
+  },
+  "rows": 88,
+  "notApplicable": 0,
+  "observationGaps": 0,
+  "programFirstAcceptable": 48,
+  "independentDifference": "Run2 C01 reply was observed but omits the required branch-before-chapter explanation; program reply=true alone was insufficient.",
+  "strictSetLimitation": "B02/B03 exact key slugs and F03 allowed first tools are enforced as frozen. Some requests are semantically relevant and domain-valid yet fail these constraints; author review is explicitly requested, not silently relaxed.",
+  "paidJudgeModelCalls": 0
+}

@@ -1,0 +1,1878 @@
+{
+  "schema": "story/judge-sampling@1",
+  "date": "2026-11-01",
+  "stage": "P2R3-J2-SINGLE-REMAINING",
+  "seed": "P2R3-J2-SINGLE-CHAP-KEEP-20261101-v1",
+  "selection": "First complete CHAP composition and first KEEP only; SHA256(seed NUL tag NUL stableId), ascending. K03/K05 base: 8 per type then top up without replacement to50. K06/K07 retain base inapplicable rows explicitly and top up applicable strata to50. W03 manual applicability before seeded30; W04 seeded10 chapters; E06 all rechecks, K04 all72, K08 all operations and27 gold.",
+  "runs": {
+    "chap": {
+      "folder": "story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete",
+      "runId": "20261031T154922Z-102c3ed-r1-complete",
+      "archiveCommit": "af33b153af7feda44e6fbf85f2f6457dec0f64af"
+    },
+    "keep": {
+      "folder": "story/testing/runs/P2R3/P2-KEEP/20261101T015406Z-102c3ed-r1",
+      "runId": "20261101T015406Z-102c3ed-r1",
+      "archiveCommit": "c4cadc19c6177e924ab4a3c83a7d3e73fa3b9737"
+    }
+  },
+  "stateSelections": {
+    "K03": [
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-186",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-181",
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:expire:F-101",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:claim:add:S-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c1:c1:cognition:add:K-4",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:cognition:supersede:K-12",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:cognition:add:K-19",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-13",
+      "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11"
+    ],
+    "K05": [
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-186",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-181",
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:expire:F-101",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:claim:add:S-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c1:c1:cognition:add:K-4",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:cognition:supersede:K-12",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:cognition:add:K-19",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-13",
+      "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11"
+    ],
+    "K06": [
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-186",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-181",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:claim:add:S-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-13",
+      "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:42:c1:fact:upsert:F-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-46",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:fact:upsert:F-6",
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:upsert:F-21",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:claim:add:S-33",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:claim:add:S-1",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:fact:upsert:F-40",
+      "20261031T154922Z-102c3ed-r1-complete:42:c2:fact:upsert:F-11",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:fact:upsert:F-295",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:fact:upsert:F-12",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:fact:upsert:F-303",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:claim:add:S-14",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:fact:upsert:F-301",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c4:fact:upsert:F-18",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:fact:upsert:F-36",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:claim:add:S-19",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:fact:upsert:F-12",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:fact:upsert:F-21",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:fact:upsert:F-303",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-17",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-11",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:fact:upsert:F-35",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:fact:upsert:F-35",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-49",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-16",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:fact:upsert:F-292"
+    ],
+    "K06-NA": [
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:expire:F-101",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c1:c1:cognition:add:K-4",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:cognition:supersede:K-12",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:cognition:add:K-19",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14"
+    ],
+    "K07": [
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-186",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-6",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:fact:upsert:F-15",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:upsert:F-181",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c1:c1:cognition:add:K-4",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:cognition:add:K-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:cognition:add:K-19",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:cognition:add:K-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:marlow_vance->cass_rourke",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:relation:upsert:rel:mara->lio",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:relation:upsert:rel:jonah->mara",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c4:relation:upsert:rel:jonah->lio",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:relation:confirm:rel:op->rules_committee",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c2:relation:upsert:rel:cass_rourke->pip",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "20261031T154922Z-102c3ed-r1-complete:837:c2:fact:upsert:F-13",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:fact:upsert:F-13",
+      "20261031T154922Z-102c3ed-r1-complete:527:c1:fact:upsert:F-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:cognition:add:K-8",
+      "20261031T154922Z-102c3ed-r1-complete:42:c4:fact:upsert:F-32",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c2:fact:upsert:F-20",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:fact:upsert:F-3",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:fact:upsert:F-25",
+      "20261031T154922Z-102c3ed-r1-complete:42:c4:fact:upsert:F-31",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:fact:upsert:F-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:upsert:F-29",
+      "20261031T154922Z-102c3ed-r1-complete:42:c3:fact:upsert:F-19",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:upsert:F-31",
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:upsert:F-27",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c2:c2:fact:upsert:F-186",
+      "20261031T154922Z-102c3ed-r1-complete:42:c1:cognition:add:K-1",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:cognition:add:K-29",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c1:c1:fact:upsert:F-2",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c2:c2:fact:upsert:F-184",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:cognition:add:K-11",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c1:fact:upsert:F-8",
+      "20261031T154922Z-102c3ed-r1-complete:527:c1:relation:upsert:rel:dave->mira",
+      "20261031T154922Z-102c3ed-r1-complete:42:c1:fact:upsert:F-2",
+      "20261031T154922Z-102c3ed-r1-complete:837:c3:fact:upsert:F-23",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c2:c2:fact:upsert:F-183",
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:cognition:add:K-11",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:fact:upsert:F-3",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:fact:upsert:F-1"
+    ],
+    "K07-NA": [
+      "20261031T154922Z-102c3ed-r1-complete:527:c3:fact:expire:F-18",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:fact:expire:F-101",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:claim:add:S-5",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:claim:add:S-12",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-8",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c3:c3:claim:add:S-26",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c1:c1:claim:add:S-2",
+      "20261031T154922Z-102c3ed-r1-complete:527:c2:claim:add:S-8",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-25",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c2:c2:cognition:supersede:K-12",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-5",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "20261031T154922Z-102c3ed-r1-complete:527:c4:hook:upsert:H-4",
+      "20261031T154922Z-102c3ed-r1-complete:1587:c3:hook:advance:H-2",
+      "20261101T015406Z-102c3ed-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "20261101T015406Z-102c3ed-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:837:c1:hook:upsert:H-2",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c4:hook:upsert:H-5",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:fact:expire:F-14",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-43",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c1:claim:add:S-5",
+      "20261101T015406Z-102c3ed-r1:unclaimed_lane-c3:c3:claim:add:S-23",
+      "20261031T154922Z-102c3ed-r1-complete:1769:c3:claim:add:S-26",
+      "20261031T154922Z-102c3ed-r1-complete:837:c4:claim:add:S-41"
+    ]
+  },
+  "statePopulation": {
+    "fact": 333,
+    "claim": 181,
+    "cognition": 121,
+    "relation": 29,
+    "hook": 96
+  },
+  "W03Applicability": [
+    {
+      "id": "1587-c1:L-1",
+      "context": "1587-c1",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c1:L-2",
+      "context": "1587-c1",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c1:L-3",
+      "context": "1587-c1",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1587-c1:L-4",
+      "context": "1587-c1",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c1:L-5",
+      "context": "1587-c1",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c1:L-6",
+      "context": "1587-c1",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c1:L-7",
+      "context": "1587-c1",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c1:L-8",
+      "context": "1587-c1",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c1:L-9",
+      "context": "1587-c1",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c2:L-1",
+      "context": "1587-c2",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c2:L-2",
+      "context": "1587-c2",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1587-c2:L-3",
+      "context": "1587-c2",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1587-c2:L-4",
+      "context": "1587-c2",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c2:L-5",
+      "context": "1587-c2",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "该主题不是本章意图的履行项，不强制每个局部章节重复表现所有全书主题。"
+    },
+    {
+      "id": "1587-c2:L-6",
+      "context": "1587-c2",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c2:L-7",
+      "context": "1587-c2",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c2:L-8",
+      "context": "1587-c2",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c2:L-9",
+      "context": "1587-c2",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c3:L-1",
+      "context": "1587-c3",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c3:L-2",
+      "context": "1587-c3",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1587-c3:L-3",
+      "context": "1587-c3",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1587-c3:L-4",
+      "context": "1587-c3",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c3:L-5",
+      "context": "1587-c3",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c3:L-6",
+      "context": "1587-c3",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c3:L-7",
+      "context": "1587-c3",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c3:L-8",
+      "context": "1587-c3",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c3:L-9",
+      "context": "1587-c3",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c4:L-1",
+      "context": "1587-c4",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c4:L-2",
+      "context": "1587-c4",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1587-c4:L-3",
+      "context": "1587-c4",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1587-c4:L-4",
+      "context": "1587-c4",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "该主题不是本章意图的履行项，不强制每个局部章节重复表现所有全书主题。"
+    },
+    {
+      "id": "1587-c4:L-5",
+      "context": "1587-c4",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "该主题不是本章意图的履行项，不强制每个局部章节重复表现所有全书主题。"
+    },
+    {
+      "id": "1587-c4:L-6",
+      "context": "1587-c4",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1587-c4:L-7",
+      "context": "1587-c4",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c4:L-8",
+      "context": "1587-c4",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1587-c4:L-9",
+      "context": "1587-c4",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-1",
+      "context": "1769-c1",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-2",
+      "context": "1769-c1",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-3",
+      "context": "1769-c1",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-4",
+      "context": "1769-c1",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c1:L-5",
+      "context": "1769-c1",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c1:L-6",
+      "context": "1769-c1",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1769-c1:L-7",
+      "context": "1769-c1",
+      "ledgerId": "L-7",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-8",
+      "context": "1769-c1",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-9",
+      "context": "1769-c1",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-10",
+      "context": "1769-c1",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-11",
+      "context": "1769-c1",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-12",
+      "context": "1769-c1",
+      "ledgerId": "L-12",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c1:L-13",
+      "context": "1769-c1",
+      "ledgerId": "L-13",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1769-c2:L-1",
+      "context": "1769-c2",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-2",
+      "context": "1769-c2",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-3",
+      "context": "1769-c2",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-4",
+      "context": "1769-c2",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-5",
+      "context": "1769-c2",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c2:L-6",
+      "context": "1769-c2",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1769-c2:L-7",
+      "context": "1769-c2",
+      "ledgerId": "L-7",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-8",
+      "context": "1769-c2",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-9",
+      "context": "1769-c2",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-10",
+      "context": "1769-c2",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-11",
+      "context": "1769-c2",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c2:L-12",
+      "context": "1769-c2",
+      "ledgerId": "L-12",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1769-c2:L-13",
+      "context": "1769-c2",
+      "ledgerId": "L-13",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1769-c3:L-1",
+      "context": "1769-c3",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-2",
+      "context": "1769-c3",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-3",
+      "context": "1769-c3",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-4",
+      "context": "1769-c3",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c3:L-5",
+      "context": "1769-c3",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c3:L-6",
+      "context": "1769-c3",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1769-c3:L-7",
+      "context": "1769-c3",
+      "ledgerId": "L-7",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-8",
+      "context": "1769-c3",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-9",
+      "context": "1769-c3",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-10",
+      "context": "1769-c3",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-11",
+      "context": "1769-c3",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c3:L-12",
+      "context": "1769-c3",
+      "ledgerId": "L-12",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1769-c3:L-13",
+      "context": "1769-c3",
+      "ledgerId": "L-13",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "1769-c4:L-1",
+      "context": "1769-c4",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-2",
+      "context": "1769-c4",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-3",
+      "context": "1769-c4",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-4",
+      "context": "1769-c4",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "招募与救酒分别安排在第2、4章，本章不承担相同事件配额。"
+    },
+    {
+      "id": "1769-c4:L-5",
+      "context": "1769-c4",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-6",
+      "context": "1769-c4",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "1769-c4:L-7",
+      "context": "1769-c4",
+      "ledgerId": "L-7",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-8",
+      "context": "1769-c4",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-9",
+      "context": "1769-c4",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-10",
+      "context": "1769-c4",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-11",
+      "context": "1769-c4",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "1769-c4:L-12",
+      "context": "1769-c4",
+      "ledgerId": "L-12",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "1769-c4:L-13",
+      "context": "1769-c4",
+      "ledgerId": "L-13",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "42-c1:L-1",
+      "context": "42-c1",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c1:L-2",
+      "context": "42-c1",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c1:L-3",
+      "context": "42-c1",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c1:L-4",
+      "context": "42-c1",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c1:L-5",
+      "context": "42-c1",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "本章是开场，主体规则中段从后续章展开；不提前要求中段完整规模。"
+    },
+    {
+      "id": "42-c1:L-6",
+      "context": "42-c1",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c1:L-7",
+      "context": "42-c1",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c1:L-8",
+      "context": "42-c1",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "两项机制的具体展开安排在第4章；前章不用提前完成这项累计数量要求。"
+    },
+    {
+      "id": "42-c1:L-9",
+      "context": "42-c1",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c1:L-10",
+      "context": "42-c1",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "42-c2:L-1",
+      "context": "42-c2",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c2:L-2",
+      "context": "42-c2",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c2:L-3",
+      "context": "42-c2",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c2:L-4",
+      "context": "42-c2",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "42-c2:L-5",
+      "context": "42-c2",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c2:L-6",
+      "context": "42-c2",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c2:L-7",
+      "context": "42-c2",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c2:L-8",
+      "context": "42-c2",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "两项机制的具体展开安排在第4章；前章不用提前完成这项累计数量要求。"
+    },
+    {
+      "id": "42-c2:L-9",
+      "context": "42-c2",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c2:L-10",
+      "context": "42-c2",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "42-c3:L-1",
+      "context": "42-c3",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c3:L-2",
+      "context": "42-c3",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c3:L-3",
+      "context": "42-c3",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c3:L-4",
+      "context": "42-c3",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "42-c3:L-5",
+      "context": "42-c3",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c3:L-6",
+      "context": "42-c3",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c3:L-7",
+      "context": "42-c3",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c3:L-8",
+      "context": "42-c3",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "两项机制的具体展开安排在第4章；前章不用提前完成这项累计数量要求。"
+    },
+    {
+      "id": "42-c3:L-9",
+      "context": "42-c3",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c3:L-10",
+      "context": "42-c3",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "42-c4:L-1",
+      "context": "42-c4",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-2",
+      "context": "42-c4",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-3",
+      "context": "42-c4",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-4",
+      "context": "42-c4",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "42-c4:L-5",
+      "context": "42-c4",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-6",
+      "context": "42-c4",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c4:L-7",
+      "context": "42-c4",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "42-c4:L-8",
+      "context": "42-c4",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-9",
+      "context": "42-c4",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "42-c4:L-10",
+      "context": "42-c4",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "527-c1:L-1",
+      "context": "527-c1",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-2",
+      "context": "527-c1",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "527-c1:L-3",
+      "context": "527-c1",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-4",
+      "context": "527-c1",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-5",
+      "context": "527-c1",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c1:L-6",
+      "context": "527-c1",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c1:L-7",
+      "context": "527-c1",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c1:L-8",
+      "context": "527-c1",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-9",
+      "context": "527-c1",
+      "ledgerId": "L-9",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c1:L-10",
+      "context": "527-c1",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-11",
+      "context": "527-c1",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c1:L-12",
+      "context": "527-c1",
+      "ledgerId": "L-12",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-1",
+      "context": "527-c2",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-2",
+      "context": "527-c2",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "527-c2:L-3",
+      "context": "527-c2",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-4",
+      "context": "527-c2",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-5",
+      "context": "527-c2",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-6",
+      "context": "527-c2",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c2:L-7",
+      "context": "527-c2",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c2:L-8",
+      "context": "527-c2",
+      "ledgerId": "L-8",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c2:L-9",
+      "context": "527-c2",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-10",
+      "context": "527-c2",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c2:L-11",
+      "context": "527-c2",
+      "ledgerId": "L-11",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c2:L-12",
+      "context": "527-c2",
+      "ledgerId": "L-12",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-1",
+      "context": "527-c3",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-2",
+      "context": "527-c3",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "527-c3:L-3",
+      "context": "527-c3",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-4",
+      "context": "527-c3",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-5",
+      "context": "527-c3",
+      "ledgerId": "L-5",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c3:L-6",
+      "context": "527-c3",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c3:L-7",
+      "context": "527-c3",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c3:L-8",
+      "context": "527-c3",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-9",
+      "context": "527-c3",
+      "ledgerId": "L-9",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c3:L-10",
+      "context": "527-c3",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c3:L-11",
+      "context": "527-c3",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c3:L-12",
+      "context": "527-c3",
+      "ledgerId": "L-12",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-1",
+      "context": "527-c4",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-2",
+      "context": "527-c4",
+      "ledgerId": "L-2",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "527-c4:L-3",
+      "context": "527-c4",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-4",
+      "context": "527-c4",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-5",
+      "context": "527-c4",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-6",
+      "context": "527-c4",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c4:L-7",
+      "context": "527-c4",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "527-c4:L-8",
+      "context": "527-c4",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-9",
+      "context": "527-c4",
+      "ledgerId": "L-9",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c4:L-10",
+      "context": "527-c4",
+      "ledgerId": "L-10",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "527-c4:L-11",
+      "context": "527-c4",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "该设定／事件在其他章节的意图中触发，本章未承担对应场景或重复出现配额。"
+    },
+    {
+      "id": "527-c4:L-12",
+      "context": "527-c4",
+      "ledgerId": "L-12",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-1",
+      "context": "837-c1",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-2",
+      "context": "837-c1",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-3",
+      "context": "837-c1",
+      "ledgerId": "L-3",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-4",
+      "context": "837-c1",
+      "ledgerId": "L-4",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-5",
+      "context": "837-c1",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-6",
+      "context": "837-c1",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-7",
+      "context": "837-c1",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c1:L-8",
+      "context": "837-c1",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c1:L-9",
+      "context": "837-c1",
+      "ledgerId": "L-9",
+      "applicable": false,
+      "reason": "该主题不是本章意图的履行项，不强制每个局部章节重复表现所有全书主题。"
+    },
+    {
+      "id": "837-c1:L-10",
+      "context": "837-c1",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c1:L-11",
+      "context": "837-c1",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "837-c2:L-1",
+      "context": "837-c2",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-2",
+      "context": "837-c2",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-3",
+      "context": "837-c2",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c2:L-4",
+      "context": "837-c2",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c2:L-5",
+      "context": "837-c2",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-6",
+      "context": "837-c2",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-7",
+      "context": "837-c2",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c2:L-8",
+      "context": "837-c2",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-9",
+      "context": "837-c2",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c2:L-10",
+      "context": "837-c2",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c2:L-11",
+      "context": "837-c2",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "837-c3:L-1",
+      "context": "837-c3",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-2",
+      "context": "837-c3",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-3",
+      "context": "837-c3",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c3:L-4",
+      "context": "837-c3",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c3:L-5",
+      "context": "837-c3",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-6",
+      "context": "837-c3",
+      "ledgerId": "L-6",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-7",
+      "context": "837-c3",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c3:L-8",
+      "context": "837-c3",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-9",
+      "context": "837-c3",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c3:L-10",
+      "context": "837-c3",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c3:L-11",
+      "context": "837-c3",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    },
+    {
+      "id": "837-c4:L-1",
+      "context": "837-c4",
+      "ledgerId": "L-1",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c4:L-2",
+      "context": "837-c4",
+      "ledgerId": "L-2",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c4:L-3",
+      "context": "837-c4",
+      "ledgerId": "L-3",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c4:L-4",
+      "context": "837-c4",
+      "ledgerId": "L-4",
+      "applicable": false,
+      "reason": "开头或初始阶段条件，不要求后续每章再次从开头开始。"
+    },
+    {
+      "id": "837-c4:L-5",
+      "context": "837-c4",
+      "ledgerId": "L-5",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c4:L-6",
+      "context": "837-c4",
+      "ledgerId": "L-6",
+      "applicable": false,
+      "reason": "三波防守安排在第1至3章，后续章不另要求重演三波。"
+    },
+    {
+      "id": "837-c4:L-7",
+      "context": "837-c4",
+      "ledgerId": "L-7",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c4:L-8",
+      "context": "837-c4",
+      "ledgerId": "L-8",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c4:L-9",
+      "context": "837-c4",
+      "ledgerId": "L-9",
+      "applicable": true,
+      "reason": "当前已提交章的给定事实、全程文体／主题或本章大纲明确涉及的事件约束；按当前阶段及既有正文检查，不要求重演已发生事件。"
+    },
+    {
+      "id": "837-c4:L-10",
+      "context": "837-c4",
+      "ledgerId": "L-10",
+      "applicable": false,
+      "reason": "完整大纲的后续发展或结尾条件，本章尚未到履行阶段；不把未发生的后续要求当本章错误。"
+    },
+    {
+      "id": "837-c4:L-11",
+      "context": "837-c4",
+      "ledgerId": "L-11",
+      "applicable": false,
+      "reason": "整部作品篇幅／视角累计要求；本轮只有完整大纲的前4章，不把未到全书结尾的累计条件判错。"
+    }
+  ],
+  "W03": [
+    "837-c1:L-4",
+    "1587-c4:L-6",
+    "42-c3:L-1",
+    "1587-c4:L-1",
+    "527-c3:L-3",
+    "837-c1:L-6",
+    "42-c4:L-2",
+    "1769-c1:L-9",
+    "837-c4:L-8",
+    "1769-c4:L-10",
+    "1769-c2:L-4",
+    "837-c4:L-5",
+    "1587-c3:L-6",
+    "1769-c3:L-11",
+    "1587-c3:L-1",
+    "1769-c2:L-3",
+    "1769-c1:L-3",
+    "42-c4:L-8",
+    "1587-c1:L-1",
+    "1769-c1:L-2",
+    "527-c4:L-5",
+    "42-c3:L-5",
+    "42-c2:L-1",
+    "527-c3:L-12",
+    "837-c4:L-9",
+    "1769-c3:L-7",
+    "42-c4:L-1",
+    "42-c2:L-5",
+    "42-c3:L-2",
+    "1769-c1:L-7"
+  ],
+  "W04": [
+    "1587-c3",
+    "837-c3",
+    "1769-c2",
+    "527-c2",
+    "42-c2",
+    "837-c2",
+    "1587-c2",
+    "837-c1",
+    "837-c4",
+    "1587-c4"
+  ]
+}

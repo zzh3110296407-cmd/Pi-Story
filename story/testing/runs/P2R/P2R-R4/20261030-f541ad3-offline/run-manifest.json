@@ -1,0 +1,77 @@
+{
+  "schema": "story/run-manifest@2",
+  "stage": "P2R",
+  "suiteId": "P2R-R4",
+  "runId": "20261030-f541ad3-offline",
+  "repositoryCommit": "f541ad305",
+  "dirty": true,
+  "status": "offline_contract_verification",
+  "modelRequests": 0,
+  "costs": {
+    "knownUsd": 0,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 0,
+    "totalUsd": 0
+  },
+  "rawChecksums": {
+    "p2r-r4-red.json.gz": "576c405329a6c063cfe5fa90a206922199b712acc4b92c9fc40b66581fa8c2ed",
+    "p2r-r4-contract-red.json.gz": "509e4ba1b8278249ed059916dc1de30e14be8133ecbe90dc83df1a6ccc453dc3",
+    "p2r-r4-green.json.gz": "83944c592f6f9a32c6f3cf762cdf618a45962bf0cb595f4564188ebffab74a40",
+    "p2r-r4-package.json.gz": "a89f5850ede252dd74657a17f4b104ea3d5a769793634c9df55b106f62043ab3",
+    "p2r-hook-coverage.json.gz": "e7b72d4cc22a4e5b7e67cf9571fd48159a1dd1b211b1898af512a66cd2e336d5"
+  },
+  "checks": {
+    "p2r-r4-red.json": {
+      "passed": 0,
+      "failed": 5,
+      "skipped": 0,
+      "success": false
+    },
+    "p2r-r4-contract-red.json": {
+      "passed": 9,
+      "failed": 1,
+      "skipped": 0,
+      "success": false
+    },
+    "p2r-r4-green.json": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "success": true
+    },
+    "p2r-r4-package.json": {
+      "passed": 98,
+      "failed": 0,
+      "skipped": 0,
+      "success": true
+    }
+  },
+  "source": [
+    {
+      "path": "story/packages/core/src/flow/inputs.ts",
+      "sha256": "f3f5e3ab03a3506baf01c3dad431296fdf44aa1c31556db9dabf189870f8efdf"
+    },
+    {
+      "path": "story/scripts/eval/p2/datasets.ts",
+      "sha256": "345544c3ae743311142b08664531c7bd0c6560a4f0b86ce67632d7840345db80"
+    },
+    {
+      "path": "story/scripts/eval/p2/main.ts",
+      "sha256": "c8b78cad32a3ca97763681c36f0d38552125e890df2fa3af205ea9b84e33bdc9"
+    },
+    {
+      "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+      "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32"
+    }
+  ],
+  "p1Regression": "P2-REG/20261030T151125Z-f541ad3-dirty",
+  "p1SuitesPassed": 11,
+  "projectCheck": true,
+  "acceptanceSeedExposure": {
+    "count": 9,
+    "source": "external dataset handoff",
+    "authorAcceptedLimitation": true,
+    "acceptanceVersion": "v3"
+  }
+}

@@ -1,0 +1,973 @@
+[
+  {
+    "caseId": "eligible-clean",
+    "rule": "E1-E7",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E1-not-current",
+    "rule": "E1",
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E2-no-check",
+    "rule": "E2",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E3-no-full-review",
+    "rule": "E3",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E4-unresolved",
+    "rule": "E4",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E5-objective-declined",
+    "rule": "E5",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E5-refuted-no-evidence",
+    "rule": "E5",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E5-refuted-with-evidence",
+    "rule": "E5",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E6-fixed-success",
+    "rule": "E6",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E6-line-unchanged",
+    "rule": "E6",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E6-no-resolved-recheck",
+    "rule": "E6",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E6-structural-not-fixed",
+    "rule": "E6",
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "risk-unresolved",
+    "rule": "E4-E6",
+    "expected": {
+      "ok": true,
+      "quality": "with_risk"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "minor-risk-is-clean",
+    "rule": "E5",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "subjective-declined-clean",
+    "rule": "E5",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E7-control-stale",
+    "rule": "E7",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E7-control-rereview-recovers",
+    "rule": "E7",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "full-rereview-supersedes",
+    "rule": "W6",
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E7-canon-head-requires-rewrite",
+    "rule": "E7",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-happy",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-minor-no-patch",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-subjective-no-patch",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-revision-off",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "with_risk",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-patch-fixed",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 5,
+      "totalTokens": 100,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-patch-risk",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "with_risk",
+      "calls": 5,
+      "totalTokens": 100,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-review-unavailable",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED",
+      "calls": 5,
+      "totalTokens": 100,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor",
+        "editor",
+        "editor",
+        "editor"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-recorder-format-repair",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 4,
+      "totalTokens": 80,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-recorder-format-fails",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "PARSE_FAILURE",
+      "calls": 4,
+      "totalTokens": 80,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-delta-feedback-retry",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 4,
+      "totalTokens": 80,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-delta-feedback-fails",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID",
+      "calls": 4,
+      "totalTokens": 80,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-budget-before-writer",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 0,
+      "totalTokens": 0,
+      "committed": false,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-budget-before-editor",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 1,
+      "totalTokens": 20,
+      "committed": false,
+      "roles": [
+        "writer"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-budget-before-keeper",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 2,
+      "totalTokens": 40,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-interjection-during-writer",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "INTERJECTED",
+      "calls": 2,
+      "totalTokens": 40,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-author-change-during-keeper",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-goal-reached",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "GOAL_REACHED",
+      "calls": 0,
+      "totalTokens": 0,
+      "committed": false,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-two-failures-stop",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID",
+      "calls": 0,
+      "totalTokens": 0,
+      "committed": false,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-author-resumes",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-batch-committed",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "committed": false,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E3-changed-line-not-covered",
+    "rule": "E3",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E2-check-wrong-digest",
+    "rule": "E2",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E3-review-unavailable",
+    "rule": "E3",
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "E7-intent-stale",
+    "rule": "E7",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT"
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-writer-empty-retry-succeeds",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 4,
+      "totalTokens": 80,
+      "committed": true,
+      "roles": [
+        "writer",
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-writer-empty-twice",
+    "rule": "FLOW",
+    "expected": {
+      "ok": false,
+      "code": "PARSE_FAILURE",
+      "calls": 2,
+      "totalTokens": 40,
+      "committed": false,
+      "roles": [
+        "writer",
+        "writer"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-review-retry-succeeds",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 5,
+      "totalTokens": 100,
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "editor",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-patch-new-major-observation",
+    "rule": "FLOW",
+    "expected": {
+      "ok": true,
+      "quality": "with_risk",
+      "calls": 5,
+      "totalTokens": 100,
+      "dispositions": {
+        "c01-r01-o01": "fixed",
+        "c01-r02-o01": "accepted_risk"
+      },
+      "committed": true,
+      "roles": [
+        "writer",
+        "editor",
+        "writer",
+        "editor",
+        "keeper"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "flow-per-chapter-call-limit",
+    "rule": "A.5",
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 2,
+      "totalTokens": 40,
+      "committed": false,
+      "roles": [
+        "writer",
+        "editor"
+      ]
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-submitConstraints",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-submitBible",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-updateBible",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-submitOutline",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-patchOutline",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-setChapterIntent",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-writeDraft",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-patchDraft",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-checkDraft",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-reviewDraft",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-respondObservations",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "batch-commit",
+    "rule": "A.6",
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0,
+      "roles": []
+    },
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  }
+]

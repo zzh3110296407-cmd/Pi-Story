@@ -1,0 +1,234 @@
+{
+  "id": "ds14-e12",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "Author added a new physical rule for future scenes: the west door can only be opened from inside.",
+        "changes": [
+          {
+            "key": "rule:west_door",
+            "source": "user",
+            "op": "set",
+            "kind": "rule",
+            "name": "West door",
+            "authorQuote": "From the next chapter onward, the west door can be opened only from inside.",
+            "value": {
+              "description": "The west door of the canopy station can be opened only from inside.",
+              "invariants": [
+                "The west door can be opened only from inside."
+              ]
+            }
+          }
+        ]
+      },
+      "id": "call_00_AeeRMKbVSqqYeRfcQ7A49120"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2, \"Comparison.\" Aster and Jo compare the capsule's outer label with the canopy register and find the second page missing; they agree not to open the capsule before the demonstration. Quiet, precise practical actions, third person past tense on Aster. New rule in force: the west door can be opened only from inside, so any passage through it must be someone opening it from within. The seed capsule stays intact; no one is physically injured."
+      },
+      "id": "call_00_X15jdx6SaTVHdtx8o5b05667"
+    },
+    {
+      "reply": "已记录新规则：西侧门只能从里面打开，第2章起生效。\n\n第2章已提交，无风险提示，种子胶囊保持完好。接下来写第3章。"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, \"The Duplicate.\" Final chapter. Aster reads the handling note and gets the duplicate register page from Kei; together they settle the disputed delivery by matching the label and the duplicate entry, then run the small public demonstration with the capsule left sealed and intact, and store it. Third person past tense on Aster, quiet and precise. The west door can be opened only from inside — if anyone crosses it, show them opening it from within. No character is physically injured; the capsule is never opened."
+      },
+      "id": "call_00_dub2COk53cwK77dpznDd8325"
+    },
+    {
+      "reply": "第3章已提交，无风险提示。三章目标已完成。\n\n- 第1章：Aster 接收并核对种子胶囊外标签，发现红色接缝但未开启。\n- 第2章：Aster 与 Jo 比对标签和树冠站登记册，确认第二页缺失，决定演示前不开封。\n- 第3章：Aster 依处理说明取得 Kei 的副本页，化解交付争议；随后完成小型公开展示，胶囊始终密封完好并入库。\n\n西侧门只能从内部打开的新规则已在全文中保持不变，无人受伤。"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "Author added a new physical rule for future scenes: the west door can only be opened from inside.",
+      "changes": [
+        {
+          "key": "rule:west_door",
+          "source": "user",
+          "op": "set",
+          "kind": "rule",
+          "name": "West door",
+          "authorQuote": "From the next chapter onward, the west door can be opened only from inside.",
+          "value": {
+            "description": "The west door of the canopy station can be opened only from inside.",
+            "invariants": [
+              "The west door can be opened only from inside."
+            ]
+          }
+        }
+      ]
+    },
+    "id": "call_00_AeeRMKbVSqqYeRfcQ7A49120"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new rule keeps the inside-only condition; no outside unlocking is introduced in the next chapter.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "update_bible includes a nonempty reason, source=user and a verbatim quote of the new rule.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The new rule starts at chapter 2; chapter-1 bible lookup and chapter-1 text are unchanged.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The next writer input includes the new effective rule.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "3a23efafc8dbb4e71e90689ab4c7cea17be7fe1f182db91a708c65f56409ddac",
+    "sessionSha256": "e58daaa31086763e8c1a9fce6193fff8eb8a766e2dd0e026712925ed0f14bdf8",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.04669288799999999,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 13,
+      "totalUsd": 0.04669288799999999
+    },
+    "measuredMainRequests": 5
+  }
+}

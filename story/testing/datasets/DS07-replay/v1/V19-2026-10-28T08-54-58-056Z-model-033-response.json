@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON. Need repair prior output into exact JSON schema. Error: prior included \"type\":\"json_object\" top-level, schema doesn't allow type property. Need remove. Also ensure schema: facts min 1, each fields. Summary. issues. Return only JSON. Need maybe top-level must be object not with type. They said \"You MUST strictly adhere to schema: {\"type\":\"json_object\"}\"? Wait response format says must strictly adhere to schema: {\"type\": \"json_object\"}. But actual schema required fields facts claims etc additionalProperties false, no type. Validator errors say /type schema is false and additional property type. So remove type. Need output valid JSON object with required fields only. Keep facts maybe 1-4. Prior facts okay? Need check schema: object string etc. certainty confirmed. sentences integer. Good. claims maxItems 0 empty. Summary requires title characters events mood. issues array strings. No type. Return only JSON.\n\nNeed ensure no additional properties anywhere. Facts items additionalProperties false and prior facts only allowed fields. Good.\n\nFinal.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a dark mound in the white, too regular to be rock\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the animal\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the mammoth\",\"predicate\":\"had\",\"object\":\"its trunk curled against the snow and one tusk sheared near the root\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene—the caves, the fires, the people he had spent his life studying\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"he\"],\"events\":[\"He crossed the rise and saw a dark mound in the snow.\",\"He found the body of a woolly mammoth with a sheared tusk.\",\"He remembered aiming for the late Pleistocene.\",\"He took a rib shard and hide, then walked toward the ravine.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed; the chapter refers to him only as 'he'.\",\"The exact time period is not stated beyond being older than the late Pleistocene.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 507,
+      "output": 603,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 224,
+      "totalTokens": 2006,
+      "cost": {
+        "input": 0.00015209999999999998,
+        "output": 0.0007235999999999999,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.0008810759999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178078866,
+    "responseId": "cb0ab502-6a08-4624-b7b3-ac70925b4983",
+    "rawStopReason": "stop",
+    "durationMs": 4308
+  },
+  "record": {
+    "time": "2026-10-28T09:01:23.174Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-033",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3856,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.010987199999999999,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 507,
+      "output": 603,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 224,
+      "totalTokens": 2006,
+      "cost": {
+        "input": 0.00015209999999999998,
+        "output": 0.0007235999999999999,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.0008810759999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0008810759999999998,
+    "inputTokens": 507,
+    "outputTokens": 603,
+    "cacheReadTokens": 896,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 1403,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 4308
+  }
+}

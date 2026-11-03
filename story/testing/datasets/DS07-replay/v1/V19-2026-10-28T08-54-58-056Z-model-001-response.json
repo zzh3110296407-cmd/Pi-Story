@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal. Need only facts 1-4. Must cite sentence IDs exact. Need subject/predicate/object strings. Modes narrated or recalled_past. Facts stated in chapter. Need not future plans. Need include issues. Need summary title, characters, events, mood. Empty claims cognitions relations hooks.\n\nNeed identify facts. Chapter is first-person? \"He\" protagonist unnamed. Facts: He woke cold before memory (sentence 1). He lay on his back in white, sky flat colorless lid (2). His teeth ached (3). Behind his eyes pulse, afterimage of jump, nausea (4). He pushed up on one elbow (5). Snow settling into coat (6). He knew arithmetic of hypothermia (7-9). He got knees under him (10). Wind across tundra, ice stung cheek, turned scanning (11). Dark rock west, shadow ravine (12). He had spent lifetime learning to arrive (13). No one taught survival (14). He started walking counting steps (15).\n\nNeed minimal maybe 3-4 facts. Each op upsert, ref temp e.g. f1. subject \"he\" predicate \"woke\" object \"cold before memory\" mode narrated certainty confirmed. Or subject \"protagonist\". Need exact sentence. Need no pronouns? Fact extraction likely okay \"he\". Predicate \"woke before memory\" object \"cold\"? Hmm.\n\nWe need ensure facts \"stated\" not inferred. Could do:\n1 ref f1 subject \"he\" predicate \"woke to\" object \"cold before memory\" mode narrated certainty confirmed sentences [1]\n2 f2 subject \"he\" predicate \"lay on back in\" object \"white snow under a flat colorless sky\" sentences [2]\n3 f3 subject \"his teeth\" predicate \"ached\" object \"true\"? object string required; predicate \"ached\" object maybe \"yes\" weird. Better subject \"he\" predicate \"had aching teeth\" object \"aching teeth\"? Hmm object should be value. For property facts object can be \"aching\". subject \"his teeth\" predicate \"were\" object \"aching\" sentences [3]. \n4 f4 subject \"he\" predicate \"experienced\" object \"afterimage of the jump and nausea\" sentences [4].\n\nCould include \"jump\" as past event. Need mode narrated. \"afterimage of the jump\" is recalled? It is current afterimage; mode narrated. Certainty confirmed.\n\nNeed summary title maybe \"Cold Arrival\" characters [\"he\"] events [\"He wakes in snow...\",\"He begins walking...\"], mood \"cold, disoriented, bleak\". Issues maybe [\"Protagonist is unnamed.\"]? Need include issues array maybe [\"Protagonist is unnamed; facts use 'he'.\"]. Good.\n\nNeed adhere schema exact. JSON only. Ensure no additional props. Facts array min 1. claims max 0 etc. Summary characters array strings. Events array. Issues strings.\n\nNeed perhaps use \"sentences\": [1] etc. For f1 sentence 1 contains \"Cold woke him first, before memory did\". Subject \"cold\" predicate \"woke\" object \"him before memory\" maybe. But fact subject can be \"cold\". Hmm better extracted fact: subject \"cold\" predicate \"woke\" object \"him before memory did\" mode narrated. But facts should be entities? Interface design 12 section 6 unknown, but simple subject-predicate-object. Could use subject \"he\" predicate \"was woken by\" object \"cold before memory\". This is passive but stated. Good.\n\nNeed minimal maybe 4 facts. Let's craft:\n{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"was woken by\",\"object\":\"cold before memory\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]}\nf2 subject \"he\" predicate \"lay on his back in\" object \"white snow beneath a flat, colorless sky\" sentences [2]. Certainty confirmed.\nf3 subject \"his teeth\" predicate \"ached\" object \"with pain\" sentences [3]? Object \"with pain\" okay.\nf4 subject \"he\" predicate \"felt\" object \"a slow pulse behind his eyes, the afterimage of the jump, and nausea\" sentences [4]. Predicate \"felt\" object string. Good.\n\nNeed maybe \"the jump\" unstated? It is stated. Fine.\n\nNeed no future plans? Summary event \"He starts walking\" is in chapter. Fine.\n\nNeed \"issues\": maybe [\"The protagonist is unnamed; facts refer to him as 'he'.\"] Good.\n\nNeed final only JSON. Ensure proper escaping.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"was woken by\",\"object\":\"cold before memory\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"white snow beneath a flat, colorless sky\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"his teeth\",\"predicate\":\"ached\",\"object\":\"with pain\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"felt\",\"object\":\"a slow pulse behind his eyes, the afterimage of the jump, and nausea\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Arrival\",\"characters\":[\"he\"],\"events\":[\"He wakes in extreme cold before memory returns.\",\"He lies in snow under a colorless sky.\",\"His teeth ache and he feels the afterimage of the jump and nausea.\",\"He begins to move and walk, counting steps.\"],\"mood\":\"cold, disoriented, bleak\"},\"issues\":[\"The protagonist is unnamed; facts refer to him as 'he'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1301,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 970,
+      "totalTokens": 2228,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0015612,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016135079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177698151,
+    "responseId": "571d37de-31e4-4787-a229-3a2e79d78f01",
+    "rawStopReason": "stop",
+    "durationMs": 11315
+  },
+  "record": {
+    "time": "2026-10-28T08:55:09.466Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-001",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1301,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 970,
+      "totalTokens": 2228,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0015612,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016135079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0016135079999999998,
+    "inputTokens": 159,
+    "outputTokens": 1301,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 11392
+  }
+}

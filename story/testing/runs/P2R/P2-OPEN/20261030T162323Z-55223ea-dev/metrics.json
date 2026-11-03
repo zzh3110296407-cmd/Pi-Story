@@ -1,0 +1,208 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-OPEN",
+  "runId": "20261030T162323Z-55223ea-dev",
+  "metrics": [
+    {
+      "id": "T01",
+      "n": 4,
+      "value": 0.75,
+      "successes": 3,
+      "failures": 1,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "passed": null,
+      "status": "insufficient_evidence",
+      "failureCategories": {
+        "DOMAIN_INVALID": 1
+      },
+      "afterRepairUsability": {
+        "n": 4,
+        "successes": 3
+      }
+    },
+    {
+      "id": "T05",
+      "n": 1,
+      "value": 1,
+      "successes": 1,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 0,
+      "successes": 0,
+      "failures": 0,
+      "value": null,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": null,
+      "passed": null,
+      "status": "insufficient_evidence",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 0,
+      "successes": 0,
+      "failures": 0,
+      "value": null,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": null,
+      "passed": null,
+      "status": "insufficient_evidence",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": null,
+      "status": "not_applicable",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 5,
+        "knownUsd": 0.026380992,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 4,
+        "mainLogicalRequests": 5,
+        "mainNetworkRequests": 4
+      },
+      "chapters": [],
+      "overhead": {
+        "knownUsd": 0.026380992,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 4,
+        "mainLogicalRequests": 5,
+        "mainNetworkRequests": 4
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 0,
+      "median": null,
+      "max": null
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": []
+  },
+  "scoringVersion": "p2r-24@1"
+}

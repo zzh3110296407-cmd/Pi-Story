@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal facts 1-4 upserts. Chapter only. Need identify states stated. Facts: protagonist cold woke him, lying white, sky; teeth ache; afterimage jump nausea; pushed elbow; snow settling coat; knows hypothermia arithmetic; got knees under him; wind tundra; rise dark rock west beyond shadow ravine; spent lifetime learning arrive; no one taught surviving; started walking counting steps. Need minimal P0 subset tests only 1 to 4 fact upserts. Need each temp ref, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty when uncertain else empty, sentences array ints from chapter. Need leave claims etc empty. Summary title characters events mood. Issues.\n\nNeed choose 1-4 facts. Must be minimal. Maybe facts about protagonist and environment. Need subject naming? No explicit name. Use \"he\" or \"the man\"? Exact sentences use \"he\". Subject can be \"he\". Predicate object strings. Need mode narrated for current chapter events; recalled_past for \"He had spent a lifetime learning to arrive\" maybe recalled past. But only 1-4 facts. Minimal maybe 3 facts:\n1 ref f1, subject \"he\", predicate \"woke to\", object \"cold before memory\", mode narrated, certainty confirmed, sentences [1].\n2 subject \"he\", predicate \"lay on back in\", object \"the white\", sentences [2] maybe.\n3 subject \"he\", predicate \"started walking\", object \"counting his steps\", sentences [15].\nNeed maybe include \"he got his knees under him\" [10] and \"pushed himself up on one elbow\" [5]. But max 4. Need include states stated not future. Summary events.\n\nNeed ensure JSON schema exact. Include issues maybe [] or note ambiguity. \"Include issues\" can be empty array. Need use integer sentences.\n\nNeed decide minimal. The instruction: \"Extract a minimal DeltaProposal from this chapter only, following interface design 12 section 6. Do not add future plans or unstated facts. This P0 subset tests only 1 to 4 fact upserts...\" So facts array minItems 1; could be 3. Need not include all. \"minimal\" probably 1 fact? But summary includes events. Maybe one fact enough? Need likely extract minimal set, not exhaustive. But to be useful, 3 facts. Need avoid unstated facts. \"He woke to cold\" is stated? Sentence 1: Cold woke him first, before memory did. Yes. Subject \"him\" object \"cold\" predicate \"was woken by\"? Better subject \"cold\", predicate \"woke\", object \"him before memory\". But subject should be entity? Could use \"cold\" as subject. Fact: cold woke him first before memory. Predicate \"woke\". Object \"him before memory did\". Mode narrated. sentences [1]. That is exact.\n\nFact 2: \"he lay on his back in the white\" subject he predicate \"lay on his back in\" object \"the white\" [2]. Confirmed.\n\nFact 3: \"he started walking, counting his steps\" subject he predicate \"started walking while\" object \"counting his steps\" [15]. Confirmed.\n\nFact 4 maybe \"he got his knees under him\" [10]. But only 1-4; choose 3. Summary title: \"Cold Awakening\" characters [\"he\"] events [\"Cold wakes him before memory\", \"He lies in white snow beneath colorless sky\", \"He gets his knees under him and starts walking, counting steps\"] mood \"cold, disoriented, survivalist\". But events can mention [10] even if not fact. Summary can include chapter events. Need include characters. Good.\n\nNeed issues: maybe \"Protagonist is unnamed; subject represented as 'he'.\" This is issue? Include issues array with that? The prompt include issues. Could say [\"Protagonist is unnamed; facts use 'he' as subject.\"] But issue maybe not necessary. It says Include issues. Empty okay? It requires field. Could include no issues [].\n\nNeed ensure no additional properties. JSON object only. Use exact refs temp like \"t1\". Need uncertainReason empty. certainty confirmed. mode narrated. For sentence [1], if subject cold, predicate woke, object \"him before memory did\" mode narrated. But \"before memory did\" okay.\n\nCould include fact about \"He knew arithmetic...\" This is cognition not fact? Better not.\n\nNeed answer with valid JSON. No markdown. Ensure strings. Final only JSON.\n\nNeed maybe \"facts\" minItems 1. Claims etc maxItems 0 so empty arrays. Summary required fields. Issues array strings.\n\nLet's craft.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"t1\",\"op\":\"upsert\",\"subject\":\"cold\",\"predicate\":\"woke\",\"object\":\"him before memory did\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"t2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"t3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started walking while\",\"object\":\"counting his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Awakening\",\"characters\":[\"he\"],\"events\":[\"Cold wakes him before memory does\",\"He lies on his back in the white beneath a colorless sky\",\"He gets his knees under him and starts walking, counting his steps\"],\"mood\":\"cold, disoriented, survival-focused\"},\"issues\":[\"Protagonist is unnamed; facts use 'he' as the subject.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1252,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 996,
+      "totalTokens": 2179,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0015023999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0015547079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177766737,
+    "responseId": "f57ebe2b-3336-41b2-a4b1-d2c3ba775ee8",
+    "rawStopReason": "stop",
+    "durationMs": 8127
+  },
+  "record": {
+    "time": "2026-10-28T08:56:14.864Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-009",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1252,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 996,
+      "totalTokens": 2179,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0015023999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0015547079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0015547079999999997,
+    "inputTokens": 159,
+    "outputTokens": 1252,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 8127
+  }
+}

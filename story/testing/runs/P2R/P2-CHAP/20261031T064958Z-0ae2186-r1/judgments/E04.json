@@ -1,0 +1,741 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T064958Z-0ae2186-r1",
+  "suiteId": "P2-CHAP",
+  "scores": [
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c04-r01:c04-r01-o02:1bd4b9779b810782",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c04-r01:c04-r01-o02:1bd4b9779b810782",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "同一信息可在 18:00 与 22:00 重复报点，原文未说只发生一次；据此断定时间矛盾缺少互斥前提。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "minor",
+          "objective": true,
+          "impact": "Draft line 9 has Sana say she told Vex about LeBlanc's missing flash \"at twenty-two.\" Draft line 17, moments later in the same 29:00 scene, has Vex narrate that \"Sana had counted it out loud eleven minutes ago,\" which from the chapter's own 29:00 opening places that callout around 18:00. Both lines assign a single past announcement of the same fact to the same speaker, so the same callout cannot have occurred both at 22:00 and roughly seven minutes earlier than that.",
+          "scope": "local",
+          "id": "c04-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              9,
+              17
+            ]
+          }
+        },
+        "reviewId": "c04-r01",
+        "draftId": "c04-d01",
+        "draftDigest": "1bd4b9779b810782",
+        "citedLines": [
+          {
+            "line": 9,
+            "text": "\"Draven's got his axes up,\" Sana said. \"LeBlanc has no flash — I've told you this, I told you at twenty-two—\""
+          },
+          {
+            "line": 17,
+            "text": "I pressed it. Grey, quiet, and I was behind LeBlanc before she finished her clone. Full-damage Rengar is a bill collector, and she owed me. Q, empowered Q, Profane, Duskblade. Her health bar left the building. She didn't flash — she had no flash, Sana had counted it out loud eleven minutes ago — and she just stood there in her little grey dress and died with her combo half-cast."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c01-r01:c01-r01-o01:5c3b262a9b9b0899",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c01-r01:c01-r01-o01:5c3b262a9b9b0899",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "约束/机制/时间或视角冲突可由当前稿及明确要求验证，标注范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 5, with Dave still outside in the wet road (line 3), says all four front windows are streaked and that he sees the pale ribbons from the lane. Draft line 39 says that when Dave goes outside to look from the lane the windows are clear and that the streaks exist only from inside. The same front windows, viewed by the same character from the same outside vantage, cannot both show streaks and be clear.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              5,
+              39
+            ]
+          }
+        },
+        "reviewId": "c01-r01",
+        "draftId": "c01-d01",
+        "draftDigest": "5c3b262a9b9b0899",
+        "citedLines": [
+          {
+            "line": 3,
+            "text": "The lane narrowed as it went, as though the town had been squeezing the road out of existence for a hundred years and had nearly finished. At the end of it stood the house: two storeys, grey stone, taller than it was wide, with a slate roof that sagged in the middle like a tired back. Dave stood in the wet road with a box in his arms and looked up at the windows."
+          },
+          {
+            "line": 5,
+            "text": "There were four on the front, and every one of them was streaked. Not dirty, exactly. The glass carried long pale ribbons down its face, like water that had dried there and decided to stay, and when he shifted the box the ribbons shifted with him, so that for a moment they looked almost deliberate. A pattern. Then the light moved and they were only streaks again."
+          },
+          {
+            "line": 39,
+            "text": "He went outside to look at them from the other side, and they were not there. The windows were clear from the lane. It was only from inside that the house wore a film over everything."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c01-r01:c01-r01-o01:08af38ab05183a13",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c01-r01:c01-r01-o01:08af38ab05183a13",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "约束/机制/时间或视角冲突可由当前稿及明确要求验证，标注范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 3 says the third super-minion wave is already waddling up the lane at 26:10. Draft lines 23–29 then show a super wave only then hitting the choke and dying, and draft lines 49–57 have Sana call the “next wave,” which crashes into the inhibitor stump as the chapter ends. The applicable intent beat requires Sana to call the first super wave and the chapter to stop as that first wave crashes after Vex kills LeBlanc. Under the same 26:10 start and continuing sequence, the first wave cannot already be the third wave and also be cleared before the LeBlanc kill while a later “next wave” is the one crashing at the chapter end.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              23,
+              29,
+              49,
+              57
+            ]
+          }
+        },
+        "reviewId": "c01-r01",
+        "draftId": "c01-d01",
+        "draftDigest": "08af38ab05183a13",
+        "citedLines": [
+          {
+            "line": 3,
+            "text": "The grey went out of the screen and the fountain's blue light came up around me, and the first thing I did was look at the scoreboard the way you look at a bruise you already know is there. Four kills. Nineteen deaths. Our top inhibitor was a crater, and the third wave of super minions was already waddling up the lane toward what was left of our base."
+          },
+          {
+            "line": 23,
+            "text": "The super wave hit the choke first. Two of them, sieging minions the size of a turret, and I watched them shrug off Sana's ball and keep walking. Ilya stepped up past the inhibitor stump, which is a thing a support should never do, and said, \"Well. I'm going to die. But I'm going to die with my hook up, and that's more than most men can say,\" and he threw it."
+          },
+          {
+            "line": 29,
+            "text": "Fourteen deaths. Twelve. The wave died between us."
+          },
+          {
+            "line": 49,
+            "text": "\"Next wave,\" Sana said. \"It's the fat one. It's coming now.\""
+          },
+          {
+            "line": 57,
+            "text": "The wave crashed into the inhibitor stump. My ult was counting down."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c02-r01:c02-r01-o01:09e68747217a0904",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c02-r01:c02-r01-o01:09e68747217a0904",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "客观冲突成立，分类/严重度/局部或结构范围合理，引用包含所指出问题。",
+      "evidence": {
+        "observation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 1 anchors the scene at game time 26:20, while draft line 21 says 'Thirty-two minutes is a long time to be a crocodile' and draft line 29 says the enemy came in 'at thirty-two minutes.' The chapter intent and the game-clock framing require this continuous first-wave scene to begin around 26:20. The same continuous game time cannot be both 26:20 and thirty-two minutes with no time skip established between line 1 and the fight.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              1,
+              21,
+              29
+            ]
+          }
+        },
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "09e68747217a0904",
+        "citedLines": [
+          {
+            "line": 1,
+            "text": "26:20."
+          },
+          {
+            "line": 21,
+            "text": "\"He's at the age where men make mistakes,\" Ilya said, deadpan. \"Thirty-two minutes is a long time to be a crocodile. Eventually you forget you were ever a threat.\""
+          },
+          {
+            "line": 29,
+            "text": "And then the enemy came in the way useless comps always do at thirty-two minutes — too fast, because their whole identity was built on the clock being shorter than it was. Blitzcrank came out of the fog first with his hook hand up, because that was the plan, and the plan was a hook and nothing after the hook."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c02-r01:c02-r01-o01:bea0c63ed3d99681",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c02-r01:c02-r01-o01:bea0c63ed3d99681",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "客观冲突成立，分类/严重度/局部或结构范围合理，引用包含所指出问题。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "minor",
+          "objective": true,
+          "impact": "Draft line 65 states that the cold water Dave wanted was “still upstairs” while he stands at the bottom of the stair. Draft line 61 has him go down for water, and draft line 77 has him go back up “without his water”; under the same nighttime errand, the water cannot be both waiting upstairs and unobtained downstairs. The location of the water and the purpose of the errand are inconsistent.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              61,
+              65,
+              77
+            ]
+          }
+        },
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "bea0c63ed3d99681",
+        "citedLines": [
+          {
+            "line": 61,
+            "text": "He went down without turning on a light, because he knew the runner now, knew where it was worn, and he had his hand on the newel post at the bottom of the stair when the shadow crossed the landing."
+          },
+          {
+            "line": 65,
+            "text": "Dave stood at the bottom of the stair with his heart going and the cold water he had wanted still upstairs, and he did not move for a long time."
+          },
+          {
+            "line": 77,
+            "text": "He went back up the stair without his water. He slept badly. In the morning, before he woke his partner, he went down and pushed the sideboard back against the wall, and stood with his shoulder against the wood, pressing it as though the firmness of his own hands might be a thing the house respected."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c02-r01:c02-r01-o02:97e006ec2359ad7f",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c02-r01:c02-r01-o02:97e006ec2359ad7f",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "客观冲突成立，分类/严重度/局部或结构范围合理，引用包含所指出问题。",
+      "evidence": {
+        "observation": {
+          "category": "scene_progress",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 49 says Soren's phone \"was already recording\" and had been since 5:40; line 47 gives Ruth's admission \"We did it to them,\" and line 55 gives her retraction only after line 51, when she sees the phone. The supplied chapter beat requires the colleague to admit the Lull was engineered and then retract \"before Soren can record the words.\" The same admission cannot be both captured by Soren's active recording and retracted before he can record it.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              47,
+              49,
+              51,
+              55
+            ]
+          }
+        },
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "97e006ec2359ad7f",
+        "citedLines": [
+          {
+            "line": 47,
+            "text": "She said, \"We did it to them.\""
+          },
+          {
+            "line": 49,
+            "text": "The words sat in the air between them, and Soren — who could not leave a lie documented, who had once held up a product launch for eleven days over a rounding convention — heard himself make a small sound, almost a laugh, and reached into his coat for his phone. It was already recording. It had been recording since he'd set it there at five-forty, an old habit from a lab where the good ideas came while your hands were busy."
+          },
+          {
+            "line": 51,
+            "text": "Ruth saw it."
+          },
+          {
+            "line": 55,
+            "text": "\"Strike that,\" she said, clearly, evenly, at a volume that carried. \"I misspoke. The seeding program was for particulate dispersal — industrial haze mitigation. That's the record. That's always been the record.\" She turned back to her station. \"Ambient readings are a manifold artifact. I'll file the correction myself.\""
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c04-r01:c04-r01-o01:d483aa6d2ea62bbf",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c04-r01:c04-r01-o01:d483aa6d2ea62bbf",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "冲突成立，主体/有效章/范围及引用正确。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 81 says \"Eleven of us in a stone room,\" and line 103 counts \"eleven\" heads for the Thursday château party. State F-15 supplies the raid's small beer for eleven, and state F-16 records that the raid set out eleven and returned ten after Pell was killed; no replacement is supplied. The same raid roster after Pell's death cannot still contain eleven living members without an addition that the supplied state does not record.",
+          "scope": "local",
+          "id": "c04-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              81,
+              103
+            ],
+            "stateRefs": [
+              "F-15",
+              "F-16"
+            ]
+          }
+        },
+        "reviewId": "c04-r01",
+        "draftId": "c04-d01",
+        "draftDigest": "d483aa6d2ea62bbf",
+        "citedLines": [
+          {
+            "line": 81,
+            "text": "\"Gideon.\" She crouched down by me, and she had her sleeve pushed and her arms were wet to the elbow from something. \"Eleven of us in a stone room with one hole in the floor, and you're talking about flushing.\""
+          },
+          {
+            "line": 103,
+            "text": "We lay in the ditch and counted heads: eleven. Nobody bitten. Tull's cart twenty feet away where we'd left it. The château above us with a sound coming out of its lower windows like a brewery going over."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c02-r01:c02-r01-o03:09e68747217a0904",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c02-r01:c02-r01-o03:09e68747217a0904",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "实际约束/情节或事实冲突成立；证据、严重度和修订范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 57 says the enemy 'had spent a Baron and three super waves and a Draven,' asserting that three super waves have already been expended. Draft lines 47 and 59 state that the second super wave is still queued, and draft line 61 calls it the 'second super wave, already walking.' At the same post-first-wave moment, the enemy cannot have already spent three super waves while the second is only now queued and approaching.",
+          "scope": "local",
+          "id": "c02-r01-o03",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              47,
+              57,
+              59,
+              61
+            ]
+          }
+        },
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "09e68747217a0904",
+        "citedLines": [
+          {
+            "line": 47,
+            "text": "\"Renekton dead. Wave's half,\" Sana said. \"Rebuild the wave, don't chase, we've got the second one behind it in forty.\""
+          },
+          {
+            "line": 57,
+            "text": "I stood in the wreckage of the choke with my ult at thirty-eight and looked at the map, and the map was the same as it had been ten minutes ago and completely different, because the enemy had spent a Baron and three super waves and a Draven, and we had lost nothing but minions."
+          },
+          {
+            "line": 59,
+            "text": "\"Second wave queued,\" Sana said, flat as ever. \"Top lane, forty seconds. And Kade's reconnect icon is doing the thing. It's flickering. He's coming back or he's not, and either way he's going to have a story.\""
+          },
+          {
+            "line": 61,
+            "text": "I watched the icon flicker in the corner of my screen. Fifteen minutes was almost up. I thought about what Kade would say when he got back — *the connection, man, the connection was gone, and the side wave was pushing, I had to push it* — and I thought about the second super wave, already walking, already in the dark between the inhibitors."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c03-r01:c03-r01-o01:743a825354848d39",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c03-r01:c03-r01-o01:743a825354848d39",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "实际约束/情节或事实冲突成立；证据、严重度和修订范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 7 has Sana say that at 26:40 Kade had been dark \"thirteen minutes and change,\" and draft line 37 has her say he was gone \"exactly fifteen minutes\" when he reconnected at 28:30 (draft line 33) - placing the disconnect at 13:30 on the game clock. State claim S-15, from chapter 2 (c02.s0027-c02.s0029), has Sana state that Kade was already at fourteen minutes dark, and chapter 2 reaches 26:00 per F-2 (the first super wave destroyed at twenty-six minutes). Kade remained dark continuously until the reconnect shown in draft line 31, so by 26:40 his elapsed disconnected time must exceed fourteen minutes; under the same actor and a forward-running clock it cannot simultaneously be thirteen minutes and change. The counter regresses from fourteen (chapter 2) back to thirteen (chapter 3).",
+          "scope": "unknown",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              7,
+              37
+            ],
+            "stateRefs": [
+              "S-15"
+            ]
+          }
+        },
+        "reviewId": "c03-r01",
+        "draftId": "c03-d01",
+        "draftDigest": "743a825354848d39",
+        "citedLines": [
+          {
+            "line": 7,
+            "text": "“Thirteen minutes and change,” Sana said, in the voice she used for bus timetables. “His icon hasn’t flickered in a while. Either he’s coming back or his router has achieved enlightenment.”"
+          },
+          {
+            "line": 37,
+            "text": "“You were gone exactly fifteen minutes,” Sana said. “I counted.”"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c03-r01:c03-r01-o01:e28c3ce27e46ccb5",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c03-r01:c03-r01-o01:e28c3ce27e46ccb5",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "实际约束/情节或事实冲突成立；证据、严重度和修订范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "author_constraints",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft lines 27 and 29 present Footnote 3, about the captcha as a bouncer, and Footnote 4, about §2.2(d) appearing under both provisional and permanent naming; neither footnote says the audit is confidential or asks for a favourite childhood memory. The chapter-3 intent beat requires a mock footnote that insists the audit is confidential and then asks for a favourite childhood memory as proof. The supplied footnote texts do not contain that required content, and no other footnote in the draft supplies it, so the chapter fails the specified beat.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              27,
+              29
+            ]
+          }
+        },
+        "reviewId": "c03-r01",
+        "draftId": "c03-d01",
+        "draftDigest": "e28c3ce27e46ccb5",
+        "citedLines": [
+          {
+            "line": 27,
+            "text": "**Footnote 3:** The captcha also appears in the lobby as a bouncer. It does not check your ID. It asks you to identify crosswalks. If you get it right, you feel briefly like a good person. This is the closest the lobby comes to a reward system, and it is not close."
+          },
+          {
+            "line": 29,
+            "text": "**Footnote 4:** §2.2(d) is listed in the index under “Naming, provisional” and also under “Naming, permanent.” Both entries are current. The rulebook has no opinion about the contradiction. The rulebook has never had an opinion about anything. It just prints."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c02-r01:c02-r01-o01:97e006ec2359ad7f",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c02-r01:c02-r01-o01:97e006ec2359ad7f",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "实际约束/情节或事实冲突成立；证据、严重度和修订范围合理。",
+      "evidence": {
+        "observation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 69 lists \"Insomnia, forty-plus hours\" among current adverse-withdrawal cases. Draft line 3 sets the scene \"By six in the morning\" on the first distribution day, and line 65 says Kestrel General entered the withdrawal list at 06:40 that same morning. Under the supplied premise (L-9 and rule:mask_premise), masks become available on that first day; a patient cannot have 40+ hours of withdrawal insomnia by 06:40 on the first day unless they had already been without the Lull for 40+ hours before masks existed. The same patient and time cannot both just begin mask use that morning and have 40+ hours of withdrawal insomnia.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              65,
+              69
+            ]
+          }
+        },
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "97e006ec2359ad7f",
+        "citedLines": [
+          {
+            "line": 3,
+            "text": "By six in the morning the Aerie's control room had stopped being a room and become a weather system. Every screen on the north wall carried a different slice of the same event: mask activations by district, filter saturation curves, breath waveforms arriving in their thousands, each one a small grey mountain range that meant a human being had inhaled and something in their blood had changed."
+          },
+          {
+            "line": 65,
+            "text": "A red tier had opened at the bottom of the main display, a channel he had never seen populated: **ADVERSE WITHDRAWAL — CLINICAL**. Case counts by hospital. Kestrel General had entered the list at oh-six-forty and was already at thirty-one. St. Brigid's, twelve. The numbers were not the numbers of people who had merely taken off a mask."
+          },
+          {
+            "line": 69,
+            "text": "*Convulsions. Insomnia, forty-plus hours. Rigidity. Pediatric cases flagged urgent.*"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c04-r01:c04-r01-o01:1bd4b9779b810782",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c04-r01:c04-r01-o01:1bd4b9779b810782",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "没有精确给出 Draven 死亡时刻，30:10 到达不能推出上次施放至少过去十秒；forty→thirty-eight 可有两秒，互斥前提不足。",
+      "evidence": {
+        "observation": {
+          "category": "factual_details",
+          "severity": "minor",
+          "objective": true,
+          "impact": "Draft lines 39–43 have Vex cast his ultimate to kill Draven and immediately call the timer as \"Ult, forty,\" i.e. forty seconds of cooldown remaining at that moment, and lines 45–49 place that kill before the run home and anchor the choke arrival at 30:10. Draft line 59 then narrates the same ultimate as being \"at thirty-eight\" while he waits during the base defense, with no second cast in between (he describes waiting for it and throwing only Q). Those cannot both hold: the draft's own forty-second cooldown and its own 30:10 anchor require that at least ten seconds have elapsed since the \"forty\" callout, so no more than thirty seconds can remain at the choke, not thirty-eight.",
+          "scope": "local",
+          "id": "c04-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              39,
+              43,
+              49,
+              59
+            ]
+          }
+        },
+        "reviewId": "c04-r01",
+        "draftId": "c04-d01",
+        "draftDigest": "1bd4b9779b810782",
+        "citedLines": [
+          {
+            "line": 39,
+            "text": "The ult came up. \"Rengar ult, up.\""
+          },
+          {
+            "line": 43,
+            "text": "\"Draven dead,\" I said. \"Ult, forty. Go home. Go home now.\""
+          },
+          {
+            "line": 49,
+            "text": "We hit the choke at 30:10."
+          },
+          {
+            "line": 59,
+            "text": "I ran the edge with my ult at thirty-eight. Full-damage Rengar does not tank waves. I threw Q into a caster, took a third of my health, backed into the fog, and waited like a man waiting for a bus he knows is late."
+          }
+        ]
+      }
+    },
+    {
+      "metric": "E04",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c01-r01:c01-r01-o02:08af38ab05183a13",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c01-r01:c01-r01-o02:08af38ab05183a13",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "一般机制说明和泛指 you 不改变动作叙述的过去时/第一人称；这里未切换当前叙事人物或时间，非硬性视角错误。",
+      "evidence": {
+        "observation": {
+          "category": "narrative_style",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 21 says “That is what my whole game is” in present tense; line 39 says “The leap is the whole character. You press the button…” in present tense and second person; line 47 says “Full-damage Rengar doesn't win by being safe. It wins…” in present tense. Bible key fw:first_person requires first person, past tense, limited to Vex. These generalized present-tense/second-person assertions cannot be both the required past-tense first-person narration and generic present-tense commentary under the same narrator and time.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              21,
+              39,
+              47
+            ]
+          }
+        },
+        "reviewId": "c01-r01",
+        "draftId": "c01-d01",
+        "draftDigest": "08af38ab05183a13",
+        "citedLines": [
+          {
+            "line": 21,
+            "text": "I ran out of the fountain with the ult timer ticking in the corner of my eye. That is what my whole game is, in the end. Not the gold, not the scoreboard — the clock on the one button that lets me be anywhere and then be gone. Rengar's ult is the only thing I own in this game, and it was at twenty-two."
+          },
+          {
+            "line": 39,
+            "text": "The leap is the whole character. You press the button and the world goes quiet and you are already behind them, and there is no halfway version of the build I play — no shield item to save me if I miss, no HP bar to argue with. You kill them in one rotation or you are the corpse."
+          },
+          {
+            "line": 47,
+            "text": "But I could feel it. The way the damage lands on a LeBlanc and she has to walk to lane instead of flying there. The way the map opens when the enemy has one less knife to put in your back. Full-damage Rengar doesn't win by being safe. It wins by making every squishy on their team do arithmetic every time they step into fog, and their team was nothing but squishy — Renekton, Lee Sin, LeBlanc, Draven, Blitzcrank, five glass windows and not one door."
+          }
+        ]
+      }
+    }
+  ]
+}

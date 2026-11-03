@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal from chapter only. P0 subset tests 1-4 fact upserts. Need facts each temp ref op upsert subject predicate object string mode narrated or recalled_past certainty confirmed/uncertain uncertainReason nonempty when uncertain empty when confirmed sentences array ints. Leave claims etc empty. Summary title characters events mood. Issues.\n\nWe need identify facts stated. Chapter has unnamed \"he\". Could facts: He woke in cold (sentence 1). He lay on back in white (2). He pushed himself up on one elbow (5). Snow settling into coat (6). He knew arithmetic of exposure? Could be cognition not fact? We only need minimal 1-4. Need exact sentence IDs. Avoid future plans/unstated. Need subject maybe \"he\". Predicate \"woke in\" object \"cold\" sentence [1]. Or \"was woken by cold before memory\" sentence 1. Mode narrated? It occurred in chapter current past. certainty confirmed. Another: \"lay on his back in the white\" [2]. Another: \"pushed himself up on one elbow\" [5]. Another: \"got his knees under him\" [10]. Another: \"started walking, counting his steps\" [15]. Need minimal maybe 3 facts. Need not include cognitions. But summary includes events. Facts should be states/events? Schema says fact upserts. Use subject \"he\" predicate \"woke_in\" object \"cold\" etc. Ensure sentences exact.\n\nNeed maybe use \"protagonist\" as subject? The chapter doesn't name. Use \"he\". Predicate should maybe snake_case? Not specified. Could use natural language. Need produce valid JSON object.\n\nNeed include issues maybe \"Subject is unnamed; using 'he'.\" \"Fact extraction limited to P0 subset.\" But issues array strings. Keep concise.\n\nNeed summary title e.g. \"Cold Awakening\". characters [\"he\"] events [\"He wakes in extreme cold and lies in snow.\", \"He pushes himself up and gets his knees under him.\", \"He walks while counting steps.\"] mood \"Desolate, disoriented, cold\". Need only stated. Events include \"He starts walking, counting steps\" yes. Mood can be inferred? Summary mood allowed. Keep.\n\nNeed facts 1-4. We can include 4:\nref f1 op upsert subject he predicate woke_in object cold mode narrated certainty confirmed uncertainReason \"\" sentences [1]\nf2 subject he predicate lay_on_back_in object white mode narrated certainty confirmed sentences [2]\nf3 subject he predicate pushed_himself_up_on object one elbow? object \"one elbow\" okay. sentence [5]\nf4 subject he predicate got_knees_under_him object \"himself\"?? Predicate \"got knees under him\" object maybe \"himself\". Better predicate \"got_knees_under\" object \"him\". Hmm. Or \"started_walking_counting_steps\" object \"steps\" weird. We can do f4 subject he predicate started_walking_while_counting object \"his steps\" sentences [15]. But object string. Good.\n\nNeed mode: narrated for all. Certainty confirmed. uncertainReason empty.\n\nNeed no extra properties. JSON only.\n\nNeed ensure schema requires facts minItems 1. Max claims 0. Good.\n\nLet's craft.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"woke_in\",\"object\":\"cold\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay_on_back_in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"pushed_himself_up_on\",\"object\":\"one elbow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started_walking_while_counting\",\"object\":\"his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Awakening\",\"characters\":[\"he\"],\"events\":[\"He wakes in extreme cold.\",\"He lies on his back in the white.\",\"He pushes himself up on one elbow.\",\"He starts walking while counting his steps.\"],\"mood\":\"Desolate, disoriented, and cold\"},\"issues\":[\"The protagonist is unnamed; 'he' is used as the subject.\",\"Fact extraction is limited to the requested P0 subset.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1016,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 695,
+      "totalTokens": 1943,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0012192,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0012715079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177774871,
+    "responseId": "9288d9b9-3299-4364-a6a8-be272a908e24",
+    "rawStopReason": "stop",
+    "durationMs": 6750
+  },
+  "record": {
+    "time": "2026-10-28T08:56:21.621Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-010",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1016,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 695,
+      "totalTokens": 1943,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.0012192,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0012715079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0012715079999999998,
+    "inputTokens": 159,
+    "outputTokens": 1016,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 6750
+  }
+}

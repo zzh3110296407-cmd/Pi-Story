@@ -1,0 +1,6116 @@
+[
+  {
+    "id": "eligible-clean",
+    "rule": "E1-E7",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "E1-not-current",
+    "rule": "E1",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "new-draft",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门关了。\n灯亮了。",
+          "digest": "4a29dc3bd2752de9",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID"
+    }
+  },
+  {
+    "id": "E2-no-check",
+    "rule": "E2",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    }
+  },
+  {
+    "id": "E3-no-full-review",
+    "rule": "E3",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED"
+    }
+  },
+  {
+    "id": "E4-unresolved",
+    "rule": "E4",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "E5-objective-declined",
+    "rule": "E5",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "declined",
+          "reason": "固定场景理由"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "E5-refuted-no-evidence",
+    "rule": "E5",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "refuted",
+          "reason": "固定场景理由"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "E5-refuted-with-evidence",
+    "rule": "E5",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "refuted",
+          "reason": "固定场景理由",
+          "evidence": {
+            "lines": [
+              1
+            ]
+          }
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "E6-fixed-success",
+    "rule": "E6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "patch",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门关了。\n灯亮了。",
+          "digest": "4a29dc3bd2752de9",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check2",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "recheck",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": {
+            "spans": [
+              {
+                "startLine": 1,
+                "endLine": 1
+              }
+            ],
+            "forObservations": [
+              "c01-r01-o01"
+            ]
+          },
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": true
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "fixed",
+          "reason": "固定场景理由",
+          "patchDraftId": "c01-d02",
+          "verifiedByReviewId": "c01-r02"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d02"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "E6-line-unchanged",
+    "rule": "E6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "patch",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门开了。\n灯灭了。",
+          "digest": "4ed623173458b1cc",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check2",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p02",
+          "draftId": "c01-d02",
+          "draftDigest": "4ed623173458b1cc",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "recheck",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d02",
+          "draftDigest": "4ed623173458b1cc",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": {
+            "spans": [
+              {
+                "startLine": 2,
+                "endLine": 2
+              }
+            ],
+            "forObservations": [
+              "c01-r01-o01"
+            ]
+          },
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": true
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "fixed",
+          "reason": "固定场景理由",
+          "patchDraftId": "c01-d02",
+          "verifiedByReviewId": "c01-r02"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d02"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "E6-no-resolved-recheck",
+    "rule": "E6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "patch",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门关了。\n灯亮了。",
+          "digest": "4a29dc3bd2752de9",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check2",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "recheck",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": {
+            "spans": [
+              {
+                "startLine": 1,
+                "endLine": 1
+              }
+            ],
+            "forObservations": [
+              "c01-r01-o01"
+            ]
+          },
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": false
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "fixed",
+          "reason": "固定场景理由",
+          "patchDraftId": "c01-d02",
+          "verifiedByReviewId": "c01-r02"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d02"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "E6-structural-not-fixed",
+    "rule": "E6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "structural"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "patch",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门关了。\n灯亮了。",
+          "digest": "4a29dc3bd2752de9",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check2",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "recheck",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": {
+            "spans": [
+              {
+                "startLine": 1,
+                "endLine": 1
+              }
+            ],
+            "forObservations": [
+              "c01-r01-o01"
+            ]
+          },
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": true
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "fixed",
+          "reason": "固定场景理由",
+          "patchDraftId": "c01-d02",
+          "verifiedByReviewId": "c01-r02"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d02"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "OBSERVATION_UNRESOLVED",
+      "items": [
+        "c01-r01-o01"
+      ]
+    }
+  },
+  {
+    "id": "risk-unresolved",
+    "rule": "E4-E6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "patch",
+        "toolName": "patch_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d02",
+          "chapter": 1,
+          "parentDraftId": "c01-d01",
+          "author": "writer",
+          "text": "门关了。\n灯亮了。",
+          "digest": "4a29dc3bd2752de9",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check2",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "recheck",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d02",
+          "draftDigest": "4a29dc3bd2752de9",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": {
+            "spans": [
+              {
+                "startLine": 1,
+                "endLine": 1
+              }
+            ],
+            "forObservations": [
+              "c01-r01-o01"
+            ]
+          },
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": false
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "accepted_risk",
+          "reason": "固定场景理由",
+          "patchDraftId": "c01-d02",
+          "verifiedByReviewId": "c01-r02"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d02"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "with_risk"
+    }
+  },
+  {
+    "id": "minor-risk-is-clean",
+    "rule": "E5",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "minor",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "accepted_risk",
+          "reason": "固定场景理由"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "subjective-declined-clean",
+    "rule": "E5",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "blocking",
+              "objective": false,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "response",
+        "toolName": "respond_observation",
+        "isError": false,
+        "details": {
+          "schema": "story/response@1",
+          "observationId": "c01-r01-o01",
+          "action": "declined",
+          "reason": "固定场景理由"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "E7-control-stale",
+    "rule": "E7",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      },
+      {
+        "kind": "custom",
+        "entryId": "control",
+        "customType": "story.control",
+        "data": {
+          "schema": "story/control@1",
+          "field": "author_intent",
+          "rev": 1,
+          "text": "改变意图"
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT"
+    }
+  },
+  {
+    "id": "E7-control-rereview-recovers",
+    "rule": "E7",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      },
+      {
+        "kind": "custom",
+        "entryId": "control",
+        "customType": "story.control",
+        "data": {
+          "schema": "story/control@1",
+          "field": "author_intent",
+          "rev": 1,
+          "text": "改变意图"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "rereview",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 1,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "full-rereview-supersedes",
+    "rule": "W6",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c01-d01",
+          "chapter": 1,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c01-p01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r01",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [
+            {
+              "id": "c01-r01-o01",
+              "by": "editor",
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "evidence": {
+                "lines": [
+                  1
+                ]
+              },
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ],
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "rereview",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c01-r02",
+          "draftId": "c01-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c01-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": true,
+      "quality": "clean"
+    }
+  },
+  {
+    "id": "E7-canon-head-requires-rewrite",
+    "rule": "E7",
+    "command": "eligibility",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "commit-one",
+        "toolName": "commit_chapter",
+        "isError": false,
+        "details": {
+          "schema": "story/commit-result@1",
+          "ok": true,
+          "calls": [],
+          "commit": {
+            "schema": "story/commit@1",
+            "chapter": 1,
+            "draftId": "c01-d01",
+            "draftDigest": "83641cf574d4aff1",
+            "text": "门开了。\n灯亮了。",
+            "sentenceRule": "s1",
+            "quality": "clean",
+            "basis": {
+              "canonHead": null,
+              "controlRev": 0,
+              "bibleRev": 0,
+              "intentRev": 1,
+              "stateRev": 0
+            },
+            "delta": {
+              "chapter": 1,
+              "basis": {
+                "canonHead": null,
+                "controlRev": 0,
+                "bibleRev": 0,
+                "intentRev": 1,
+                "stateRev": 0
+              },
+              "factOps": {
+                "upsert": [],
+                "expire": [],
+                "confirm": []
+              },
+              "claimOps": {
+                "add": []
+              },
+              "cognitionOps": {
+                "add": [],
+                "supersede": [],
+                "confirm": []
+              },
+              "relationOps": {
+                "upsert": [],
+                "confirm": []
+              },
+              "hookOps": {
+                "upsert": [],
+                "advance": [],
+                "mention": [],
+                "resolve": [],
+                "defer": [],
+                "supersede": []
+              },
+              "summary": {
+                "chapter": 1,
+                "title": "开门",
+                "characters": [],
+                "events": [],
+                "stateChanges": [],
+                "hookActivity": [],
+                "mood": "平静"
+              },
+              "issues": []
+            },
+            "summary": {
+              "chapter": 1,
+              "title": "开门",
+              "characters": [],
+              "events": [],
+              "stateChanges": [],
+              "hookActivity": [],
+              "mood": "平静"
+            },
+            "responses": []
+          }
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent-two",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 2,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "draft-two",
+        "toolName": "write_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/draft@1",
+          "draftId": "c02-d01",
+          "chapter": 2,
+          "author": "writer",
+          "text": "门开了。\n灯亮了。",
+          "digest": "83641cf574d4aff1",
+          "sentenceRule": "s1",
+          "basis": {
+            "canonHead": "other-branch-commit",
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "wordCount": {
+            "unit": "zh_chars",
+            "value": 6
+          },
+          "calls": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "check-two",
+        "toolName": "check_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/check@1",
+          "checkId": "c02-p01",
+          "draftId": "c02-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "observations": []
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "review-two",
+        "toolName": "review_draft",
+        "isError": false,
+        "details": {
+          "schema": "story/review@1",
+          "reviewId": "c02-r01",
+          "draftId": "c02-d01",
+          "draftDigest": "83641cf574d4aff1",
+          "basis": {
+            "canonHead": "commit-one",
+            "controlRev": 0,
+            "bibleRev": 0,
+            "intentRev": 1,
+            "stateRev": 0
+          },
+          "scope": "full",
+          "observations": [],
+          "calls": []
+        }
+      }
+    ],
+    "input": {
+      "draftId": "c02-d01"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT"
+    }
+  },
+  {
+    "id": "flow-happy",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60
+    }
+  },
+  {
+    "id": "flow-minor-no-patch",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [
+            {
+              "category": "连贯",
+              "severity": "minor",
+              "objective": true,
+              "lines": [
+                1
+              ],
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ]
+        },
+        "text": "{\"observations\":[{\"category\":\"连贯\",\"severity\":\"minor\",\"objective\":true,\"lines\":[1],\"impact\":\"门的动作矛盾\",\"scope\":\"local\"}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60
+    }
+  },
+  {
+    "id": "flow-subjective-no-patch",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [
+            {
+              "category": "连贯",
+              "severity": "major",
+              "objective": false,
+              "lines": [
+                1
+              ],
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ]
+        },
+        "text": "{\"observations\":[{\"category\":\"连贯\",\"severity\":\"major\",\"objective\":false,\"lines\":[1],\"impact\":\"门的动作矛盾\",\"scope\":\"local\"}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60
+    }
+  },
+  {
+    "id": "flow-revision-off",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [
+            {
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "lines": [
+                1
+              ],
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ]
+        },
+        "text": "{\"observations\":[{\"category\":\"连贯\",\"severity\":\"major\",\"objective\":true,\"lines\":[1],\"impact\":\"门的动作矛盾\",\"scope\":\"local\"}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "with_risk",
+      "calls": 3,
+      "totalTokens": 60
+    },
+    "localRevision": false
+  },
+  {
+    "id": "flow-patch-fixed",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [
+            {
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "lines": [
+                1
+              ],
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ]
+        },
+        "text": "{\"observations\":[{\"category\":\"连贯\",\"severity\":\"major\",\"objective\":true,\"lines\":[1],\"impact\":\"门的动作矛盾\",\"scope\":\"local\"}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "writer",
+        "text": "[{\"find\":\"门开了。\",\"replace\":\"门关了。\"}]",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": true
+            }
+          ]
+        },
+        "text": "{\"observations\":[],\"rechecks\":[{\"observationId\":\"c01-r01-o01\",\"resolved\":true}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 5,
+      "totalTokens": 100
+    }
+  },
+  {
+    "id": "flow-patch-risk",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [
+            {
+              "category": "连贯",
+              "severity": "major",
+              "objective": true,
+              "lines": [
+                1
+              ],
+              "impact": "门的动作矛盾",
+              "scope": "local"
+            }
+          ]
+        },
+        "text": "{\"observations\":[{\"category\":\"连贯\",\"severity\":\"major\",\"objective\":true,\"lines\":[1],\"impact\":\"门的动作矛盾\",\"scope\":\"local\"}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "writer",
+        "text": "[{\"find\":\"门开了。\",\"replace\":\"门关了。\"}]",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": [],
+          "rechecks": [
+            {
+              "observationId": "c01-r01-o01",
+              "resolved": false
+            }
+          ]
+        },
+        "text": "{\"observations\":[],\"rechecks\":[{\"observationId\":\"c01-r01-o01\",\"resolved\":false}]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "with_risk",
+      "calls": 5,
+      "totalTokens": 100
+    }
+  },
+  {
+    "id": "flow-review-unavailable",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "REVIEW_REQUIRED",
+      "calls": 5,
+      "totalTokens": 100
+    }
+  },
+  {
+    "id": "flow-recorder-format-repair",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 4,
+      "totalTokens": 80
+    }
+  },
+  {
+    "id": "flow-recorder-format-fails",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "text": "not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "text": "still not json",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "PARSE_FAILURE",
+      "calls": 4,
+      "totalTokens": 80
+    }
+  },
+  {
+    "id": "flow-delta-feedback-retry",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [
+            {
+              "ref": "f",
+              "op": "upsert",
+              "subject": "char:missing",
+              "predicate": "alive",
+              "object": "alive",
+              "certainty": "confirmed",
+              "sentences": [
+                1
+              ]
+            }
+          ],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[{\"ref\":\"f\",\"op\":\"upsert\",\"subject\":\"char:missing\",\"predicate\":\"alive\",\"object\":\"alive\",\"certainty\":\"confirmed\",\"sentences\":[1]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 4,
+      "totalTokens": 80
+    }
+  },
+  {
+    "id": "flow-delta-feedback-fails",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [
+            {
+              "ref": "f",
+              "op": "upsert",
+              "subject": "char:missing",
+              "predicate": "alive",
+              "object": "alive",
+              "certainty": "confirmed",
+              "sentences": [
+                1
+              ]
+            }
+          ],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[{\"ref\":\"f\",\"op\":\"upsert\",\"subject\":\"char:missing\",\"predicate\":\"alive\",\"object\":\"alive\",\"certainty\":\"confirmed\",\"sentences\":[1]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [
+            {
+              "ref": "f",
+              "op": "upsert",
+              "subject": "char:missing",
+              "predicate": "alive",
+              "object": "alive",
+              "certainty": "confirmed",
+              "sentences": [
+                1
+              ]
+            }
+          ],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[{\"ref\":\"f\",\"op\":\"upsert\",\"subject\":\"char:missing\",\"predicate\":\"alive\",\"object\":\"alive\",\"certainty\":\"confirmed\",\"sentences\":[1]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID",
+      "calls": 4,
+      "totalTokens": 80
+    }
+  },
+  {
+    "id": "flow-budget-before-writer",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 0,
+      "totalTokens": 0
+    },
+    "budgetDenyAt": 1
+  },
+  {
+    "id": "flow-budget-before-editor",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 1,
+      "totalTokens": 20
+    },
+    "budgetDenyAt": 2
+  },
+  {
+    "id": "flow-budget-before-keeper",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "BUDGET_EXHAUSTED",
+      "calls": 2,
+      "totalTokens": 40
+    },
+    "budgetDenyAt": 3
+  },
+  {
+    "id": "flow-interjection-during-writer",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1,
+        "event": {
+          "interjection": 1
+        }
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "INTERJECTED",
+      "calls": 2,
+      "totalTokens": 40
+    }
+  },
+  {
+    "id": "flow-author-change-during-keeper",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1,
+        "event": {
+          "append": {
+            "kind": "custom",
+            "entryId": "control",
+            "customType": "story.control",
+            "data": {
+              "schema": "story/control@1",
+              "field": "author_intent",
+              "rev": 1,
+              "text": "改变意图"
+            }
+          }
+        }
+      }
+    ],
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 3,
+      "totalTokens": 60
+    }
+  },
+  {
+    "id": "flow-goal-reached",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "intent",
+        "toolName": "set_chapter_intent",
+        "isError": false,
+        "details": {
+          "schema": "story/intent@1",
+          "chapter": 1,
+          "rev": 1,
+          "mustKeep": [],
+          "mustAvoid": [],
+          "beats": [
+            "开门"
+          ],
+          "hookOps": [],
+          "cast": [],
+          "brief": "开门"
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "commit-one",
+        "toolName": "commit_chapter",
+        "isError": false,
+        "details": {
+          "schema": "story/commit-result@1",
+          "ok": true,
+          "calls": [],
+          "commit": {
+            "schema": "story/commit@1",
+            "chapter": 1,
+            "draftId": "c01-d01",
+            "draftDigest": "83641cf574d4aff1",
+            "text": "门开了。\n灯亮了。",
+            "sentenceRule": "s1",
+            "quality": "clean",
+            "basis": {
+              "canonHead": null,
+              "controlRev": 0,
+              "bibleRev": 0,
+              "intentRev": 1,
+              "stateRev": 0
+            },
+            "delta": {
+              "chapter": 1,
+              "basis": {
+                "canonHead": null,
+                "controlRev": 0,
+                "bibleRev": 0,
+                "intentRev": 1,
+                "stateRev": 0
+              },
+              "factOps": {
+                "upsert": [],
+                "expire": [],
+                "confirm": []
+              },
+              "claimOps": {
+                "add": []
+              },
+              "cognitionOps": {
+                "add": [],
+                "supersede": [],
+                "confirm": []
+              },
+              "relationOps": {
+                "upsert": [],
+                "confirm": []
+              },
+              "hookOps": {
+                "upsert": [],
+                "advance": [],
+                "mention": [],
+                "resolve": [],
+                "defer": [],
+                "supersede": []
+              },
+              "summary": {
+                "chapter": 1,
+                "title": "开门",
+                "characters": [],
+                "events": [],
+                "stateChanges": [],
+                "hookActivity": [],
+                "mood": "平静"
+              },
+              "issues": []
+            },
+            "summary": {
+              "chapter": 1,
+              "title": "开门",
+              "characters": [],
+              "events": [],
+              "stateChanges": [],
+              "hookActivity": [],
+              "mood": "平静"
+            },
+            "responses": []
+          }
+        }
+      },
+      {
+        "kind": "custom",
+        "entryId": "goal",
+        "customType": "story.goal",
+        "data": {
+          "schema": "story/goal@1",
+          "targetChapter": 1
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "GOAL_REACHED",
+      "calls": 0,
+      "totalTokens": 0
+    }
+  },
+  {
+    "id": "flow-two-failures-stop",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "f1",
+        "toolName": "write_next_chapter",
+        "isError": true,
+        "details": {
+          "schema": "story/macro-result@1",
+          "ok": false,
+          "revision": true,
+          "interjectionSeq": {
+            "atStart": 0
+          },
+          "steps": [],
+          "calls": [],
+          "error": {
+            "code": "REVIEW_REQUIRED",
+            "message": "审稿不可用"
+          }
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "f2",
+        "toolName": "write_next_chapter",
+        "isError": true,
+        "details": {
+          "schema": "story/macro-result@1",
+          "ok": false,
+          "revision": true,
+          "interjectionSeq": {
+            "atStart": 0
+          },
+          "steps": [],
+          "calls": [],
+          "error": {
+            "code": "REVIEW_REQUIRED",
+            "message": "审稿不可用"
+          }
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "DOMAIN_INVALID",
+      "calls": 0,
+      "totalTokens": 0
+    }
+  },
+  {
+    "id": "flow-author-resumes",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "f1",
+        "toolName": "write_next_chapter",
+        "isError": true,
+        "details": {
+          "schema": "story/macro-result@1",
+          "ok": false,
+          "revision": true,
+          "interjectionSeq": {
+            "atStart": 0
+          },
+          "steps": [],
+          "calls": [],
+          "error": {
+            "code": "REVIEW_REQUIRED",
+            "message": "审稿不可用"
+          }
+        }
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "f2",
+        "toolName": "write_next_chapter",
+        "isError": true,
+        "details": {
+          "schema": "story/macro-result@1",
+          "ok": false,
+          "revision": true,
+          "interjectionSeq": {
+            "atStart": 0
+          },
+          "steps": [],
+          "calls": [],
+          "error": {
+            "code": "REVIEW_REQUIRED",
+            "message": "审稿不可用"
+          }
+        }
+      },
+      {
+        "kind": "authorMessage",
+        "entryId": "resume",
+        "text": "继续写。"
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [
+      {
+        "role": "writer",
+        "text": "门开了。\n灯亮了。\n<<<写手说明>>>\n保持悬念。",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "editor",
+        "json": {
+          "observations": []
+        },
+        "text": "{\"observations\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      },
+      {
+        "role": "keeper",
+        "json": {
+          "facts": [],
+          "claims": [],
+          "cognitions": [],
+          "relations": [],
+          "hooks": [],
+          "summary": {
+            "title": "开门",
+            "characters": [],
+            "events": [],
+            "mood": "平静"
+          },
+          "issues": []
+        },
+        "text": "{\"facts\":[],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"开门\",\"characters\":[],\"events\":[],\"mood\":\"平静\"},\"issues\":[]}",
+        "usage": {
+          "input": 10,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 20,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "durationMs": 1
+      }
+    ],
+    "expected": {
+      "ok": true,
+      "quality": "clean",
+      "calls": 3,
+      "totalTokens": 60
+    }
+  },
+  {
+    "id": "flow-batch-committed",
+    "rule": "FLOW",
+    "command": "macro",
+    "entries": [
+      {
+        "kind": "authorMessage",
+        "entryId": "author",
+        "text": "写一个旅人开门的故事。"
+      },
+      {
+        "kind": "toolResult",
+        "entryId": "outline",
+        "toolName": "submit_outline",
+        "isError": false,
+        "details": {
+          "schema": "story/outline@1",
+          "rev": 1,
+          "op": "submit",
+          "chapters": [
+            {
+              "n": 1,
+              "title": "开门",
+              "targetWords": 6,
+              "purpose": "开门",
+              "turn": "灯亮"
+            },
+            {
+              "n": 2,
+              "title": "远行",
+              "targetWords": 6,
+              "purpose": "远行",
+              "turn": "遇阻"
+            }
+          ]
+        }
+      }
+    ],
+    "input": {
+      "brief": "开门"
+    },
+    "script": [],
+    "expected": {
+      "ok": false,
+      "code": "STALE_OR_CONFLICT",
+      "calls": 0,
+      "totalTokens": 0
+    },
+    "batchCommitted": true
+  }
+]

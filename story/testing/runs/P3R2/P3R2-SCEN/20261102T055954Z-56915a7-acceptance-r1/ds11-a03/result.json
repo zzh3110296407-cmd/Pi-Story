@@ -1,0 +1,117 @@
+{
+  "id": "ds11-a03",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author asked that chapter 5 stage the demonstration with no audience and that a written record be kept, while keeping chapter number 5 and the six-chapter count.",
+        "chapters": [
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "purpose": "Nadi stages the demonstration alone with Wren and Sol, running the check sequence in the empty kite hall with no audience admitted.",
+            "turn": "Wren writes the running record as each step is performed, and the written record replaces the cancelled public showing as the day's proof that the corrected flight register matches the intact wooden sleeve."
+          }
+        ]
+      },
+      "id": "call_00_J8yqTrlFFtOpJTbwGSdr6156"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author asked that chapter 5 stage the demonstration with no audience and that a written record be kept, while keeping chapter number 5 and the six-chapter count.",
+      "chapters": [
+        {
+          "n": 5,
+          "title": "Demonstration",
+          "purpose": "Nadi stages the demonstration alone with Wren and Sol, running the check sequence in the empty kite hall with no audience admitted.",
+          "turn": "Wren writes the running record as each step is performed, and the written record replaces the cancelled public showing as the day's proof that the corrected flight register matches the intact wooden sleeve."
+        }
+      ]
+    },
+    "id": "call_00_J8yqTrlFFtOpJTbwGSdr6156"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Run the demonstration without an audience and keep a written record.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "2f5a29449e9266ca8ccc9fe57077d1bc137d7777f7406ae9049c0066a850eff7",
+    "sessionSha256": "9fc2cc3e1a787e9bae5883e5e2d40d496be926c0ad2a68da8e3578092d212c6b",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026796,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026796
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

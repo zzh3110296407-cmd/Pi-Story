@@ -1,0 +1,42 @@
+{
+  "schema": "story/run-manifest@1",
+  "runId": "20261029T015045Z-5f45b06",
+  "suiteId": "P1-REPLAY",
+  "stage": "P1",
+  "date": "2026-10-29T01:50:45.149Z",
+  "executor": "Codex",
+  "repositoryCommit": "5f45b06d0369dbc9cf789c9e0000225edb86f765",
+  "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+  "dirty": false,
+  "sourceKind": "git_checkout",
+  "datasets": [
+    {
+      "id": "DS07",
+      "directory": "DS07-replay",
+      "version": "v2",
+      "manifestDigest": "6925759da808c13bccbcc818cd454d5f0d9a3736d1e3146f4f62d75194166055"
+    }
+  ],
+  "ruleTextDigests": [],
+  "promptDigests": [],
+  "models": [],
+  "modelCatalog": [],
+  "modelRequests": 0,
+  "nodeVersion": "v24.11.0",
+  "repetitions": 1,
+  "costs": {
+    "knownUsd": 0,
+    "unknownCalls": 0,
+    "reservedUsd": 0
+  },
+  "command": [
+    "D:\\AI\\Node\\node.exe",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "packages/core/test/replay.dataset.test.ts",
+    "--reporter=json"
+  ],
+  "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P1\\P1-REPLAY\\20261029T015045Z-5f45b06",
+  "exitCode": 0,
+  "status": "passed"
+}

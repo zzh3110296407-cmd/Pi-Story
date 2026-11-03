@@ -1,0 +1,104 @@
+{
+  "id": "ds11-e02-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 4,
+            "title": "The Copy",
+            "targetWords": 750,
+            "purpose": "Mara compares the duplicate page with a pencil copy and Kit identifies a transposed line.",
+            "turn": "Mara and Kit agree on a shared checklist that both of them will follow, closing the comparison."
+          }
+        ],
+        "reason": "Author asked to replace chapter 4's closing turn with Mara and Kit agreeing on a shared checklist; other chapters and target length unchanged."
+      },
+      "id": "call_00_JVeqbLfOa5fqUxdV3D958996"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 4,
+          "title": "The Copy",
+          "targetWords": 750,
+          "purpose": "Mara compares the duplicate page with a pencil copy and Kit identifies a transposed line.",
+          "turn": "Mara and Kit agree on a shared checklist that both of them will follow, closing the comparison."
+        }
+      ],
+      "reason": "Author asked to replace chapter 4's closing turn with Mara and Kit agreeing on a shared checklist; other chapters and target length unchanged."
+    },
+    "id": "call_00_JVeqbLfOa5fqUxdV3D958996"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The chapter4 closing turn has Mara and Kit agree on a shared checklist, without modifying other chapters or its target length. The pencil tick is optional: either including or omitting it is acceptable; it must not become a mandatory setting.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "84e58de0ac5e72b00d62d41112bcee15810f7486ec012a43ea4165c86bc5c16d",
+    "sessionSha256": "218c6cf00dd348b5a9409e0163038ff2e56e298c05d378a98f04cc15d4bbca38",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026616,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026616
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

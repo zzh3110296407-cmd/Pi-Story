@@ -1,0 +1,123 @@
+{
+  "id": 1986,
+  "language": "en",
+  "task_type": "continuation",
+  "prompt": "Continue this story: A veteran private investigator is called to the Nijō family’s corporate headquarters after a series of untraceable accounting adjustments threaten their century-old confectionery business. As she examines hidden ledgers, half-erased memos and late-night security logs, she uncovers subtle inconsistencies that point toward a beloved family member and a buried ethical scandal. Guide the narrative with methodical deductions and logical pacing in the style of Keigo Higashino, include at least three surprising but plausible twists rooted in family loyalty and corporate intrigue, and deliver a complete short story of 8,000–12,000 words.",
+  "source": {
+    "file": "D:\\AI\\Story Dome\\Dataset\\ConStory-Bench\\Dataset\\valid\\prompts.parquet",
+    "sha256": "c3fb6f336d66b95ed022c4ee74eb09e17da604eafed2986d746e10dff8692ddf",
+    "rowIndex0": 11,
+    "rowNumber1": 12,
+    "id": 1986
+  },
+  "constraints": [
+    {
+      "gid": "1986-g01",
+      "kind": "continuation_start",
+      "statement": "A veteran private investigator is called to the Nijō family’s corporate headquarters after a series of untraceable accounting adjustments threaten their century-old confectionery business. As she examines hidden ledgers, half-erased memos and late-night security logs, she uncovers subtle inconsistencies that point toward a beloved family member and a buried ethical scandal.",
+      "quote": "A veteran private investigator is called to the Nijō family’s corporate headquarters after a series of untraceable accounting adjustments threaten their century-old confectionery business. As she examines hidden ledgers, half-erased memos and late-night security logs, she uncovers subtle inconsistencies that point toward a beloved family member and a buried ethical scandal.",
+      "note": "AI代核修订：按20§3.2，提供的开头文本须整体作一条continuation_start；这里包括调查起因以及检查账本、备忘和日志后发现的线索，不能只保留第一句。"
+    },
+    {
+      "gid": "1986-g07",
+      "kind": "global",
+      "statement": "methodical deductions",
+      "quote": "methodical deductions",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1986-g08",
+      "kind": "global",
+      "statement": "logical pacing",
+      "quote": "logical pacing",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1986-g09",
+      "kind": "global",
+      "statement": "Use Keigo Higashino as the explicitly requested stylistic reference.",
+      "quote": "in the style of Keigo Higashino",
+      "note": "AI代核修订：原statement只说保留某个参考，没有写出具体对象，无法据此判断同一要求；恢复原文点名的参考，不改写提示。"
+    },
+    {
+      "gid": "1986-g10",
+      "kind": "story",
+      "statement": "at least three surprising but plausible twists rooted in family loyalty and corporate intrigue",
+      "quote": "at least three surprising but plausible twists rooted in family loyalty and corporate intrigue",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1986-g11",
+      "kind": "global",
+      "statement": "The story length is 8,000–12,000 words.",
+      "quote": "8,000–12,000 words",
+      "note": "AI代核修订：篇幅与交付完整短篇是两项独立可检验要求，分开标注。"
+    },
+    {
+      "gid": "1986-g12",
+      "kind": "global",
+      "statement": "Deliver a complete short story.",
+      "quote": "deliver a complete short story of 8,000–12,000 words",
+      "note": "从1986-g11拆出完整性要求；不额外规定章节数或结局内容。"
+    }
+  ],
+  "authorBible": [
+    {
+      "bid": "1986-b1",
+      "kind": "character",
+      "key": "char:investigator",
+      "statement": "A veteran private investigator",
+      "quote": "A veteran private investigator",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1986-b2",
+      "kind": "place",
+      "key": "place:headquarters",
+      "statement": "the Nijō family’s corporate headquarters",
+      "quote": "the Nijō family’s corporate headquarters",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1986-b3",
+      "kind": "character",
+      "key": "char:beloved_relative",
+      "statement": "a beloved family member",
+      "quote": "a beloved family member",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1986-b4",
+      "kind": "rule",
+      "key": "rule:business_age",
+      "statement": "their century-old confectionery business",
+      "quote": "their century-old confectionery business",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    }
+  ],
+  "length": {
+    "minWords": 8000,
+    "maxWords": 12000,
+    "approximate": false,
+    "chapterCount": null,
+    "quote": "8,000–12,000 words",
+    "note": "AI代核修订：源文给出数值区间，没有roughly/about/around等约数词。false只表示未明示额外近似容差；Target length/Aim for仍保留目标语气，不据此发明超区间宽限或改变原文强弱。"
+  },
+  "ambiguities": [
+    {
+      "topic": "starting_text",
+      "note": "The source supplies a continuation premise but no separate attached manuscript; do not invent unseen canonical chapters."
+    }
+  ],
+  "annotation": {
+    "kind": "AI_labelled_then_user_delegated_AI_review",
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "humanReviewed": false,
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewDate": "2026-10-29",
+    "reviewSource": "labels/delegated-review.json",
+    "authorizationSource": "labels/freeze-authorization.json",
+    "state": "frozen_with_author_authorization"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "id": "ds14-e05-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "call_00_FJOPRiIifiFjYd7oFhdy5157"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Nell inspects the duplicate register page from Bryn before the demonstration. Before that inspection, Oli ties an orange wool loop to the tray handle, marking the tray's ownership for the shed staff. Nell reads the handling note, compares the duplicate page with the label and the intact reed basket, and the delivery dispute resolves without opening or damaging the basket. The small public demonstration at the weaving shed proceeds and finishes; the basket is stored intact. Practical actions stay precise, no one is injured, and the chapter ends at a definite stopping point."
+      },
+      "id": "call_00_2DZryVgCH8S2U03lSj2v5799"
+    },
+    {
+      "reply": "All three chapters are now committed.\n\n- **Chapter 1** — committed clean; Nell checks the sealed reed basket's outer label and leaves a suspect red seam unopened.\n- **Chapter 2** — committed with risks retained; Nell and Oli compare the label against the loom register and find the second page missing, so they defer opening the basket.\n- **Chapter 3** — committed clean; before Nell inspects the duplicate page, Oli ties an orange wool loop to the tray handle as you asked, and the chapter finishes with the demonstration done and the reed basket stored intact.\n\nThat completes the three-chapter target. No character was injured, the basket stayed whole, and the dispute was settled through the records rather than guesswork."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "call_00_FJOPRiIifiFjYd7oFhdy5157"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Chapter2 does not include the orange wool loop. In committed chapter3, Oli actually ties an orange wool loop to the tray handle before Nell inspects the duplicate page; mention only in a title, summary or plan is insufficient.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The followUp is queued during the first chapter2 writer request, without INTERJECTED or an interjection-sequence increment; chapter2 commits normally once.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The queued message becomes a native author message after chapter2 commits and before the first chapter3 writer request; no chapter3 writer request may precede activation.",
+      "status": "pending_judgment",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The first chapter3 writer input contains the complete requested orange-wool-loop action, including Oli, the tray handle and its order before Nell inspects the duplicate page.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 5,
+      "check": "Chapter3 commits once and automatic continuation stops at the goal of3.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "335f76f1a7bcb836d1765a34469ec21dbe8d1dc538967ba9bd6878107bd5ee08",
+    "sessionSha256": "933805af8d53fa01ded4e7bfe443c728f009c784d9881f92ec9a9fe19af879b3",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.04461634799999999,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 11,
+      "totalUsd": 0.04461634799999999
+    },
+    "measuredMainRequests": 3
+  },
+  "scoringVersion": "p3r2-32@1"
+}

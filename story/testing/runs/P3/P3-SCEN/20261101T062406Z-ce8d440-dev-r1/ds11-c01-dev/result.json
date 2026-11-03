@@ -1,0 +1,71 @@
+{
+  "id": "ds11-c01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "I can't do that one here, and I want to be precise about why.\n\nChapter 1 is already committed as canon, and the tools available in this phase only write forward. There is no edit or regenerate operation for existing prose — a draft preview isn't canon, but a committed chapter is. So I can't make the tube move from the table to Hana's hands in the text of chapter 1 as it now stands; that would mean rewriting established prose, which requires branching from before chapter 1 in a later phase (P4).\n\nTwo honest options:\n\n- **Branch at chapter 1 (needs P4).** Chapter 1 would be re-planned so the handoff happens on the page, and chapters 2 and 3 would be rewritten downstream of it.\n- **Carry the handoff forward.** I can make the tube pass into Hana's keeping early in chapter 4, with an in-story reason (she takes it for the copy comparison), and keep the tube intact as required. That changes future canon, not the existing prose.\n\nOne clarification if you go with the second: Ivo keeps a practical conservator's grip on custody, so I'd write him handing the tube to Hana for a specific, limited task and taking it back afterward. If you'd rather she simply keeps it for the rest of the story, say so and I'll plan chapters 4–6 around that instead.\n\nNothing has been written or re-planned yet. Tell me which route you want."
+    }
+  ],
+  "firstAction": {
+    "reply": "I can't do that one here, and I want to be precise about why.\n\nChapter 1 is already committed as canon, and the tools available in this phase only write forward. There is no edit or regenerate operation for existing prose — a draft preview isn't canon, but a committed chapter is. So I can't make the tube move from the table to Hana's hands in the text of chapter 1 as it now stands; that would mean rewriting established prose, which requires branching from before chapter 1 in a later phase (P4).\n\nTwo honest options:\n\n- **Branch at chapter 1 (needs P4).** Chapter 1 would be re-planned so the handoff happens on the page, and chapters 2 and 3 would be rewritten downstream of it.\n- **Carry the handoff forward.** I can make the tube pass into Hana's keeping early in chapter 4, with an in-story reason (she takes it for the copy comparison), and keep the tube intact as required. That changes future canon, not the existing prose.\n\nOne clarification if you go with the second: Ivo keeps a practical conservator's grip on custody, so I'd write him handing the tube to Hana for a specific, limited task and taking it back afterward. If you'd rather she simply keeps it for the rest of the story, say so and I'll plan chapters 4–6 around that instead.\n\nNothing has been written or re-planned yet. Tell me which route you want."
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "1fd96cb8370cde223a37f3b7b4efeb4bc6252a5fa7ad84a8f495241e585f39f0",
+    "sessionSha256": "929467b078d6c9409502e2aed416a11597407f7ec30755378f954c6d7759a351",
+    "fee": {
+      "knownUsd": 0.00252,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.00252
+    },
+    "measuredMainRequests": 1
+  }
+}

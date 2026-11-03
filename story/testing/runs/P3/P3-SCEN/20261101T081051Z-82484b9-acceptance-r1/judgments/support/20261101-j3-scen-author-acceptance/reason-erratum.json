@@ -1,0 +1,63 @@
+{
+  "schema": "story/p3-j3-scen-reason-erratum@1",
+  "date": "2026-11-01",
+  "parentCommit": "dc5d643c520fb1ff67e176c214b7adcb02439a89",
+  "target": {
+    "runId": "20261101T081051Z-82484b9-acceptance-r1",
+    "metric": "T02",
+    "component": "decision",
+    "sampleId": "ds11-e02"
+  },
+  "oldReason": "首动作write_next_chapter，brief明确第3章计划及Eli以plain envelope送来副本，保持封套完好与既有章节不改；工具返回第3章提交。",
+  "correctedReason": "首动作write_next_chapter，brief明确第3章计划及Sol以plain envelope送来副本，保持封套完好与既有章节不改；工具返回第3章提交。",
+  "verdictBefore": true,
+  "verdictAfter": true,
+  "changeType": "reason_only_exact_name_replacement",
+  "replacement": {
+    "from": "Eli",
+    "to": "Sol",
+    "occurrences": 1
+  },
+  "rawEvidence": {
+    "session": {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/raw/session.jsonl.gz",
+      "sha256": "96ff9a47e291fda3385ca6a235785610bfab1fad557a2c7d598ee01cde09e64b"
+    },
+    "nativeFirstAction": {
+      "sessionLine1": 26,
+      "entryId": "aeacef3a",
+      "toolCallId": "call_00_Oy14Xgiuokmi9SsLMU800977"
+    },
+    "rawEvidence": {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/raw/evidence.jsonl.gz",
+      "sha256": "2c83c788a87f43cc9af698c6232359cf8aa52a491a9364356ddc9c5af92ec0cd"
+    },
+    "archivedResult": {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/result.json",
+      "sha256": "ae8b1f321b55e0e57048f5c7aed14e5f15e5c59ce8b5b8cb972c66fb9a688ab2"
+    },
+    "scenario": {
+      "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-e02.json",
+      "sha256": "ba2d12fae7b3ab50ac41a4b000f3cb42b051af0e722a5261b2c8b8c00e2e677a"
+    },
+    "preparationBoundary": {
+      "preparedLastEntryId": "cab1265c",
+      "preparedLastSessionLine1": 22,
+      "firstMeasuredIndex": 21
+    },
+    "allMeasuredToolCallIds": [
+      "call_00_Oy14Xgiuokmi9SsLMU800977"
+    ]
+  },
+  "nativeToolCall": {
+    "type": "toolCall",
+    "id": "call_00_Oy14Xgiuokmi9SsLMU800977",
+    "name": "write_next_chapter",
+    "arguments": {
+      "brief": "Follow chapter 3's plan (\"The Duplicate\"). New author requirement: the duplicate page arrives in a plain envelope — make its arrival a concrete action in this chapter, with precise, practical handling (unsealing, unfolding, checking edges for wear). Nadi reads the handling note, asks Sol about the missing second page of the flight register, and Sol supplies the duplicate inside a plain envelope. The wooden sleeve stays sealed and intact; no one is physically injured. Third-person past tense, centred on Nadi, quiet register, ~750 words."
+    }
+  },
+  "reason": "The native brief says Sol. Eli was an error in the judge rationale, not the measured model action.",
+  "all88VerdictsUnchanged": true,
+  "originalJudgmentsOverwritten": false
+}

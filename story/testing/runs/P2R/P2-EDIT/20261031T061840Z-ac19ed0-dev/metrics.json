@@ -1,0 +1,288 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-EDIT",
+  "runId": "20261031T061840Z-ac19ed0-dev",
+  "metrics": [
+    {
+      "id": "E01",
+      "n": 1,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 1,
+        "final": 1
+      },
+      "threshold": {
+        "first": 0.8,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.20654931437723745,
+          1
+        ],
+        "final": [
+          0.20654931437723745,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "unavailable": 0
+    },
+    {
+      "id": "W05",
+      "n": 0,
+      "value": null,
+      "successes": 0,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 20,
+      "confidence95": null,
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "E02",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 30,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E03",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E04",
+      "n": 0,
+      "value": null,
+      "threshold": 0.7,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E05",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E06",
+      "n": 0,
+      "value": null,
+      "threshold": 0.8,
+      "minimum": 20,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 1,
+      "successes": 1,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 1,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 1,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 1,
+      "successes": 1,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 1,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.20654931437723745,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 1,
+        "knownUsd": 0.043954944,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 1,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [
+        {
+          "caseId": "tide_register-c2-control",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 104355,
+          "knownUsd": 0.043954944,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 1,
+      "median": 1.753182686187142,
+      "max": 1.753182686187142
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "4ad9d5ea-0274-4556-9414-1b294cc03ec3",
+        "caseId": "tide_register-c2-control",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.14430372
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

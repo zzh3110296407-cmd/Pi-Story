@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON object. Need extract minimal DeltaProposal from chapter. Need facts 1-4 upserts. Must cite exact sentence IDs. Need no future. Need claims/cognitions/relations/hooks empty. Summary title, characters, events, mood. Issues.\n\nWe need identify facts stated. Facts with temp refs, op upsert, subject predicate object mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty if uncertain. Minimal 1-4. Need avoid over. Chapter: he followed ravine down, found shallow overhang, built snow wall with rib shard, drew device, pressed charger no response, tried again/third, arithmetic decades needed, put away, dark, sound outside weight over snow circling stopped sniffed, mammoth fat on coat, thing outside knew and did not leave. Need facts. Could choose 3-4.\n\nNeed ensure sentences exact integer numbers. Fact: \"he found a shallow overhang\" sentence 2. Subject \"he\" predicate \"found\" object \"a shallow overhang\". mode narrated confirmed. Sentence [2].\n\nFact: \"He wedged the rib shard upright at the mouth and packed snow against its base\" sentence 3. Could object \"wedged the rib shard upright at the mouth and packed snow against its base\" or subject he predicate \"built a low wall...\" Maybe simpler. Need minimal. Fact: device gave no glow/hum/answer when charger pressed sentences 8 maybe 9. Certainty confirmed? He observed no response. Subject \"the device\" predicate \"gave no response when the charger was pressed\" object \"no glow, no hum, no answer\" mode narrated. Sentences [8]. But object string can be \"no glow, no hum, no answer\". \n\nFact: \"It would need decades to gather itself again\" sentence 11. This is his inference/arithmetic, uncertain? It says he did arithmetic, \"It would need decades...\" Could be conclusion uncertain? In narrative maybe confirmed? Need certainty maybe uncertain with reason \"his estimate/arithmetic, not directly observed\" But schema certainty uncertain requires reason. Could include as uncertain. But minimal facts maybe avoid uncertain.\n\nFact: \"The mammoth's fat was on his coat\" sentence 17. Subject \"The mammoth's fat\" predicate \"was on\" object \"his coat\". mode narrated confirmed. Sentence [17]. Fact: \"the thing outside knew it and did not leave\" sentence 17. Could be uncertain because \"the thing outside knew it\" anthropomorphic? But stated. Maybe include simple \"a weight moved over snow, circling, stopped, sniffed\" sentence 14-16. Fact subject \"a weight\" predicate \"moved over snow, circling, stopped, and sniffed\" object? Hmm.\n\nNeed minimal P0 subset tests only 1 to 4 fact upserts. Need summary characters: \"he\" maybe unnamed. Events list. Mood: tense/ominous/cold. Issues: maybe \"Unnamed protagonist; device nature unspecified; external creature unidentified.\" Need include issues array. Could be empty? Include issues because required and we can note ambiguity. Need title. Title \"The Snow Wall\" maybe.\n\nNeed JSON valid. Must include facts at least 1. Let's decide 4 facts:\n\n1 ref f1 subject \"he\" predicate \"found\" object \"a shallow overhang\" mode narrated certainty confirmed uncertainReason \"\" sentences [2].\n2 f2 subject \"he\" predicate \"wedged upright and packed snow against\" object \"the rib shard at the mouth of the overhang\" mode narrated confirmed sentences [3]. But predicate maybe \"wedged upright\" object \"the rib shard at the mouth\"; and packed snow not captured. Better object \"the rib shard upright at the mouth and packed snow against its base\" predicate \"wedged and packed\" awkward. Use subject \"he\" predicate \"built\" object \"a low snow wall with a rib shard at the mouth of the overhang\" sentences [3,4]. But sentence 4 says sealing behind low white wall with bone. It is inferred from 3-4. Is \"built low snow wall\" stated? Sentence 3 wedged rib shard and packed snow; sentence 4 \"sealing himself behind a low white wall with a bone in it\". So yes. Fact object \"a low snow wall with a bone in it\" predicate \"sealed himself behind\" subject \"he\". Sentence [4]. Hmm.\n\n3 f3 subject \"the device\" predicate \"gave\" object \"no glow, no hum, no answer when the charger was pressed\" mode narrated confirmed sentences [8]. Predicate gave object no glow... okay.\n\n4 f4 subject \"the mammoth's fat\" predicate \"was on\" object \"his coat\" mode narrated confirmed sentences [17]. This is clear.\n\nCould include device needed decades as uncertain. But 4 max. Maybe facts should capture key plot. We can include device no response and fat. Maybe no need wall. Need \"minimal\". 4 facts okay. Could use 3. Need 1-4. Let's include 4? Since P0 subset tests 1 to 4. 4 acceptable. Need avoid issues with object strings. Could use subject \"he\" predicate \"put away\" object \"the device\" sentence 12 confirmed. But less important.\n\nNeed summary events: \"He follows a narrowing ravine and finds a shallow overhang; he builds a snow wall with a rib shard; the device fails to respond; he calculates it would need decades; dark falls and a sniffing weight circles outside, drawn by mammoth fat on his coat.\" This includes future? no. Mood ominous/cold/isolated. Characters [\"he\"]. Title \"The Snow Wall\". Issues [\"The protagonist and the outside creature are unnamed.\", \"The device's nature and the exact duration are not specified.\"] But \"exact duration\" maybe not. Ensure issues not facts? okay.\n\nNeed claims etc empty arrays exactly. JSON only. Need ensure uncertainReason empty for confirmed. Good.\n\nPotential problem: Fact 2 object \"a low snow wall with a bone in it\" and predicate \"sealed himself behind\" sentence [4] states \"sealing himself behind a low white wall with a bone in it\". Good. Subject \"he\". That fact is narrated confirmed. It doesn't mention rib shard? Bone in it. Good.\n\nFact 3 sentence [8] \"cold glass gave nothing — no glow, no hum, no answer.\" Subject \"the device\" but sentence 6 \"he drew out the device\"; sentence 8 \"the cold glass gave nothing\". Could object \"no glow, no hum, no answer\" predicate \"gave\" subject \"the device's cold glass\" or \"the device\". Use subject \"the device\" predicate \"gave\" object \"no glow, no hum, no answer\" sentences [8]. Good.\n\nFact 4 \"The mammoth's fat was on his coat\" exact.\n\nNeed summary title maybe \"A Snow Wall and a Circling Weight\". Characters [\"he\"]. Events as strings. Mood \"cold, isolated, ominous\". Good.\n\nNeed include issues maybe [\"Protagonist is unnamed.\", \"The device and the creature outside are unidentified.\"] Good.\n\nFinal only JSON. Ensure no markdown. Use double quotes. ",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"found\",\"object\":\"a shallow overhang\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"sealed himself behind\",\"object\":\"a low snow wall with a bone in it\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the device\",\"predicate\":\"gave\",\"object\":\"no glow, no hum, no answer\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[8]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the mammoth's fat\",\"predicate\":\"was on\",\"object\":\"his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Snow Wall\",\"characters\":[\"he\"],\"events\":[\"He follows a narrowing ravine and finds a shallow overhang.\",\"He seals himself behind a low snow wall with a bone in it.\",\"The device gives no glow, hum, or answer when he presses the charger.\",\"Dark falls, and a weight moves over snow, circles, stops, and sniffs outside; the mammoth fat on his coat is known to it.\"],\"mood\":\"cold, isolated, ominous\"},\"issues\":[\"The protagonist is unnamed.\",\"The device and the creature outside are unidentified.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 219,
+      "output": 1875,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1519,
+      "totalTokens": 2862,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.00225,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002320308
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178057766,
+    "responseId": "e5083b09-fb87-4d39-af20-7af432c90951",
+    "rawStopReason": "stop",
+    "durationMs": 12330
+  },
+  "record": {
+    "time": "2026-10-28T09:01:10.096Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-030",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3330,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108294,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 219,
+      "output": 1875,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1519,
+      "totalTokens": 2862,
+      "cost": {
+        "input": 0.0000657,
+        "output": 0.00225,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.002320308
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.002320308,
+    "inputTokens": 219,
+    "outputTokens": 1875,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 987,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 12330
+  }
+}

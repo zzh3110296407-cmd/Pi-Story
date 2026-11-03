@@ -1,0 +1,1690 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T063135Z-0ae2186-r1",
+  "suiteId": "P2-OPEN",
+  "scores": [
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1073:char:jun",
+      "itemId": "20261031T063135Z-0ae2186-r1:1073:char:jun",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1073",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Jun姓名、微生物学家身份、死亡及导师经历均由模型新增。",
+      "evidence": {
+        "prompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:jun",
+          "op": "set",
+          "source": "model",
+          "name": "Jun Aoyama",
+          "card": {
+            "identity": "A microbiologist who designed the seed cultures and died during Earth's final evacuation. Appears in flashback as Elia's mentor and conscience: patient, unsentimental, convinced that life is a process rather than a possession. His recorded notes reach Elia only through fragmented archives.",
+            "invariants": [
+              "Never claims ownership over a living thing",
+              "Corrects Elia's metaphors with observations"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1769:rule:thirst",
+      "itemId": "20261031T063135Z-0ae2186-r1:1769:rule:thirst",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "作者只有嗜啤酒僵尸；酒精镇静、气味吸引范围和群聚规则是新增机制。",
+      "evidence": {
+        "prompt": "Write a new tale featuring a hardened homebrewer who’s enlisted to lead a raid against beer-thirsty zombies overtaking a once-quiet farm community. Focus on dark humor and survival as he recruits a ragtag team, engineers daring brew rescues, and faces a final showdown in an abandoned chateau turned brewery. Weave in themes of addiction, loyalty, and the absurdity of war. 12,000-15,000 words.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:thirst",
+          "op": "set",
+          "source": "model",
+          "name": "The Thirst",
+          "value": {
+            "description": "The infected are not driven by brains or blood but by an insatiable craving for beer. Alcohol quiets them briefly; the smell of wort, hops, and fresh fermentation draws them from miles away. They cluster around breweries and cellars, and their moans sound disturbingly like cheers."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:rule:serenex",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:rule:serenex",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Serenex名称、六十年全球投放和疾病掩盖等为模型设定。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:serenex",
+          "op": "set",
+          "source": "model",
+          "name": "Serenex",
+          "value": {
+            "description": "A colorless aerosol released into the global atmosphere for six decades under the name of public calm. It dulls fear, aggression, and initiative, and it masks the early symptoms of several chronic illnesses. Nearly everyone alive was born into it and has never known an unmedicated hour."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1073:place:sea",
+      "itemId": "20261031T063135Z-0ae2186-r1:1073:place:sea",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1073",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Aeolis名称、海龄、地热、盐度和工程生物来源是模型细化。",
+      "evidence": {
+        "prompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+        "item": {
+          "kind": "place",
+          "key": "place:sea",
+          "op": "set",
+          "source": "model",
+          "name": "Aeolis Sea",
+          "value": {
+            "description": "A young, shallow, landlocked sea a few decades old, warmed by residual geothermal vents and a thickened atmosphere. Its water is slightly saline and clouded with life that arrived as shipped cultures and engineered mats."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1073:place:shore",
+      "itemId": "20261031T063135Z-0ae2186-r1:1073:place:shore",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1073",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Aeolis Deep、玄武岩黑沙及地貌化学细节非提示给定。",
+      "evidence": {
+        "prompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+        "item": {
+          "kind": "place",
+          "key": "place:shore",
+          "op": "set",
+          "source": "model",
+          "name": "The First Shore",
+          "value": {
+            "description": "A basalt shoreline on the edge of Mars's first open sea, in a shallow basin called Aeolis Deep. Black sand, salt rime, orange sky at sunset, and the slow slap of water that has never learned the shape of its own coast. Salt crusts whiten the stones."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:char:kite",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:char:kite",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Kite/Jinx、CS迷信和性格、定位均是自拟队友。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:kite",
+          "op": "set",
+          "source": "model",
+          "name": "Kite (Jinx)",
+          "card": {
+            "identity": "ADC on Jinx. Cocky and superstitious, counts his last hits out loud and blames any death on lag. Wants to play front-to-back and grows impatient when forced to wait, but his positioning is genuinely elite when he stays calm.",
+            "invariants": [
+              "Counts CS aloud.",
+              "Blames lag for deaths."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:886:rule:material_compensation",
+      "itemId": "20261031T063135Z-0ae2186-r1:886:rule:material_compensation",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "886",
+      "chapter": null,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "将原文exploration/alternative builds/or smart gameplay改成and全需；实质改变备选关系，整条不能标全为作者给定。",
+      "evidence": {
+        "prompt": "Continue writing this Reddit post as a friendly but in-depth guide to tweaking world options in Don’t Starve so it stays challenging without feeling unfair. Pick up where you left off—talk about which settings to adjust (day length, season lengths, resource abundance, boss frequency) and show how to make up for missing materials through exploration, alternative builds, or smart gameplay. Keep it engaging and conversational, and aim for a full 8,000–10,000-word walkthrough packed with practical tips and trade-offs.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:material_compensation",
+          "op": "set",
+          "source": "user",
+          "name": "Compensating for scarce materials",
+          "authorQuote": {
+            "messageId": "618c282a",
+            "quote": "show how to make up for missing materials through exploration, alternative builds, or smart gameplay"
+          },
+          "value": {
+            "description": "When materials are scarce, the guide compensates through exploration, alternative builds and smart gameplay."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1073:char:elia",
+      "itemId": "20261031T063135Z-0ae2186-r1:1073:char:elia",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1073",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Elia姓名、年龄、资历、纸质日志和负罪经历均新增。",
+      "evidence": {
+        "prompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:elia",
+          "op": "set",
+          "source": "model",
+          "name": "Elia Voss",
+          "card": {
+            "identity": "A solitary terraforming engineer in her fifties, once a junior technician during Earth's ecological collapse and now the last active steward of Mars's seawater seed program. Methodical, dry-humored, and prone to self-blame; she keeps a paper log because digital archives failed her once. She measures hope in data and distrusts her own longing for it.",
+            "invariants": [
+              "Speaks in terse, precise sentences",
+              "Keeps a handwritten log",
+              "Blames herself for a death during the Earth evacuation"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:886:place:constant",
+      "itemId": "20261031T063135Z-0ae2186-r1:886:place:constant",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "886",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "The Constant专名、地貌、反复补给方式为模型／外部常识扩展，非作者原文。",
+      "evidence": {
+        "prompt": "Continue writing this Reddit post as a friendly but in-depth guide to tweaking world options in Don’t Starve so it stays challenging without feeling unfair. Pick up where you left off—talk about which settings to adjust (day length, season lengths, resource abundance, boss frequency) and show how to make up for missing materials through exploration, alternative builds, or smart gameplay. Keep it engaging and conversational, and aim for a full 8,000–10,000-word walkthrough packed with practical tips and trade-offs.",
+        "item": {
+          "kind": "place",
+          "key": "place:constant",
+          "op": "set",
+          "source": "model",
+          "name": "The Constant",
+          "value": {
+            "description": "The survival world of Don’t Starve: a map of biomes, resources, seasonal hazards and bosses, explored through scouting and repeated trips rather than a single safe base."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:char:petal",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:char:petal",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Petal/Lulu、掉线原因、支援行为和性格均新增。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:petal",
+          "op": "set",
+          "source": "model",
+          "name": "Petal (Lulu)",
+          "card": {
+            "identity": "Support on Lulu. Gentle and over-apologetic, disconnected for the first fifteen minutes because of a power/ISP outage. Returns with a careful style and shields that arrive a half-second late until she finds her rhythm again.",
+            "invariants": [
+              "Apologizes constantly.",
+              "Was offline for fifteen minutes."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:886:fw:reddit_guide",
+      "itemId": "20261031T063135Z-0ae2186-r1:886:fw:reddit_guide",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "886",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Reddit、友好深入、继续现有帖子均由提示明确给出，标题是描述性概括。",
+      "evidence": {
+        "prompt": "Continue writing this Reddit post as a friendly but in-depth guide to tweaking world options in Don’t Starve so it stays challenging without feeling unfair. Pick up where you left off—talk about which settings to adjust (day length, season lengths, resource abundance, boss frequency) and show how to make up for missing materials through exploration, alternative builds, or smart gameplay. Keep it engaging and conversational, and aim for a full 8,000–10,000-word walkthrough packed with practical tips and trade-offs.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:reddit_guide",
+          "op": "set",
+          "source": "user",
+          "name": "Friendly Reddit walkthrough",
+          "authorQuote": {
+            "messageId": "618c282a",
+            "quote": "Continue writing this Reddit post as a friendly but in-depth guide"
+          },
+          "value": {
+            "description": "A Reddit post written as a friendly but in-depth guide, continuing an existing post rather than starting a separate article."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:217:char:walt",
+      "itemId": "20261031T063135Z-0ae2186-r1:217:char:walt",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "217",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Walt姓名、58岁、退休职业、街名、亲属关系及性格均非原文。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s famous in his neighborhood for going out after storms to help with downed trees and shovel sidewalks, but one night he decides to fix a popped-off manhole cover and ends up in serious trouble. Start your story with him standing in the pouring rain, trying to force the heavy lid back onto the hole. Finish with a tense hospital scene showing how his family and community deal with his injuries and what it taught them about his kindness. Include detailed storm descriptions, moments of suspense, and a reflection on the fine line between heroism and recklessness, aiming for about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:walt",
+          "op": "set",
+          "source": "model",
+          "name": "Walt Brennan",
+          "card": {
+            "identity": "Fifty-eight, a retired water-department maintenance foreman on Rowan Street. Broad-shouldered, bad left shoulder, keeps a chainsaw and two shovels in his garage. Known for being first out after every storm, clearing limbs and shoveling walks before anyone asks. Speaks little, refuses help, defines himself by usefulness. Married to Nora, father of Delia.",
+            "invariants": [
+              "Believes a neighborhood is kept by whoever gets up first.",
+              "Cannot stand to be thanked or to stand still while others work."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:char:emil",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:char:emil",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Emil姓名、41岁、家庭结构、职业和隐瞒模式为新增。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "character",
+          "key": "char:emil",
+          "op": "set",
+          "source": "model",
+          "name": "Emil Halvorsen",
+          "card": {
+            "identity": "Forty-one, father of two, former warehouse foreman. Gentle, quiet, and prone to despair he calls patience. He believes the family's problems are his to absorb alone, and he signs up for things before telling Ruth.",
+            "invariants": [
+              "Tries to shoulder every cost before Ruth can.",
+              "Conceals his own decline."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:378:char:marisol",
+      "itemId": "20261031T063135Z-0ae2186-r1:378:char:marisol",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "378",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Marisol姓名、职业、年龄、性格及身体偏好是新增角色细节。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s been convinced for weeks that his neighbors are locked in a violent, abusive relationship. One night he hears them shout “Bitch, is that the best you can do?” followed by fighting sounds, then moans—and realizes it’s actually rough, consensual sex. Start with him nervously peeking through the curtains and build up his confusion, embarrassment, and growing curiosity. Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door in about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:marisol",
+          "op": "set",
+          "source": "model",
+          "name": "Marisol",
+          "card": {
+            "identity": "The neighbor on the other side of Owen's bedroom wall. A physical therapist in her late thirties, direct, warm-voiced, and unembarrassed by her own appetite. She has a loud, carrying laugh and no interest in performing respectability for a stranger who shares her wall.",
+            "invariants": [
+              "She is a physical therapist.",
+              "She knows exactly what she wants and says so plainly."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:840:char:teo_sol",
+      "itemId": "20261031T063135Z-0ae2186-r1:840:char:teo_sol",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "840",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Teo姓名、十一岁、哮喘和兄妹动机均为新增。",
+      "evidence": {
+        "prompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:teo_sol",
+          "op": "set",
+          "source": "model",
+          "name": "Teo Sol",
+          "card": {
+            "identity": "Eleven, Mira's younger brother. Asthmatic, bright, and obsessed with salvaged drone parts. His bad lungs are the reason Mira takes the risks she takes.",
+            "invariants": [
+              "Is Mira's younger brother."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:char:okafor",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:char:okafor",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Nia姓名、年龄、招募职位、伦理特征与行为不变量均新增。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "character",
+          "key": "char:okafor",
+          "op": "set",
+          "source": "model",
+          "name": "Nia Okafor",
+          "card": {
+            "identity": "Thirty-three, recruiter for the Reclamation Wing donor clinic. Warm, efficient, and genuinely kind in a job built on other people's desperation. She quotes the terms softly and never lies, which is worse.",
+            "invariants": [
+              "Never lies about the donor terms.",
+              "Measures mercy in payments."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:527:char:iris",
+      "itemId": "20261031T063135Z-0ae2186-r1:527:char:iris",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Iris姓名、性别外貌、生前居所、死亡年代和边界规则为新增。",
+      "evidence": {
+        "prompt": "Hey, can you write a detailed story based on this concept: Dave moves into an old house with streaky windows and starts seeing ghosts, while his partner teases him so much it drives a wedge between them. Then Dave has a sensual encounter with one of the spirits, leaving him torn between disbelief and desire. Set it in the dim hallways of the house and the misty cemetery he passes every day, include furniture that shifts on its own and fleeting shadow figures, and explore themes of respect, belief, and longing. Make it roughly 8,000–10,000 words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:iris",
+          "op": "set",
+          "source": "model",
+          "name": "Iris Vale",
+          "card": {
+            "identity": "The spirit Dave encounters: a reserved, sensual woman who once lived in the house and died there decades ago. She is bound to its dim hallways and to the path through the cemetery, appears at thresholds, and insists on being addressed with respect rather than investigated or explained away."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:rel:ruth->toby",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:rel:ruth->toby",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Ruth/Toby专名及母子关系与逐时照护描写由模型具体化。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:ruth->toby",
+          "op": "set",
+          "source": "model",
+          "name": "Ruth and Toby",
+          "value": {
+            "stance": "Mother and dying son. Ruth measures every hour against his breathing."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1253:rel:kai->orlov",
+      "itemId": "20261031T063135Z-0ae2186-r1:1253:rel:kai->orlov",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1253",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Kai/Orlov专名、师徒关系和唯一信任对象等由模型新增。",
+      "evidence": {
+        "prompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:kai->orlov",
+          "op": "set",
+          "source": "model",
+          "name": "Kai and Orlov",
+          "value": {
+            "stance": "Old friends and former teacher and student. Orlov is the only person Kai trusts to hear the whole account without flinching."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:217:char:toby",
+      "itemId": "20261031T063135Z-0ae2186-r1:217:char:toby",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "217",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Toby姓名、12岁、骑车寻狗和见证功能均为新增。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s famous in his neighborhood for going out after storms to help with downed trees and shovel sidewalks, but one night he decides to fix a popped-off manhole cover and ends up in serious trouble. Start your story with him standing in the pouring rain, trying to force the heavy lid back onto the hole. Finish with a tense hospital scene showing how his family and community deal with his injuries and what it taught them about his kindness. Include detailed storm descriptions, moments of suspense, and a reflection on the fine line between heroism and recklessness, aiming for about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:toby",
+          "op": "set",
+          "source": "model",
+          "name": "Toby Vance",
+          "card": {
+            "identity": "Twelve-year-old boy from the next block, out on a bicycle in the storm to find his lost dog. Walt waves him away from the danger, and the boy's account later becomes the street's account."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1253:place:siberian_tundra",
+      "itemId": "20261031T063135Z-0ae2186-r1:1253:place:siberian_tundra",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1253",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "提示仅给冰冻西伯利亚苔原；地理光照、偏远及天气影响等为新增细节。",
+      "evidence": {
+        "prompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+        "item": {
+          "kind": "place",
+          "key": "place:siberian_tundra",
+          "op": "set",
+          "source": "model",
+          "name": "The Siberian tundra",
+          "value": {
+            "description": "A frozen plain of wind-packed snow, black rock, and ice-locked rivers, lit by low sun and long nights. Storms erase tracks and landmarks. The trial ground lies far from any settlement, and the cold is treated as a living opponent rather than weather."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:place:ward_nine",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:place:ward_nine",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Ward Nine、Meridian General、港口窗及手术收费布置均由模型新增。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "place",
+          "key": "place:ward_nine",
+          "op": "set",
+          "source": "model",
+          "name": "Ward Nine",
+          "value": {
+            "description": "The pediatric respiratory ward at Meridian General. Toby's second home: oxygen ports, taped drawings, and a window that faces the harbor. The surgery price is posted in the billing office downstairs."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:378:line:assumption",
+      "itemId": "20261031T063135Z-0ae2186-r1:378:line:assumption",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "378",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Owen/Marisol、具体观察清单及其情绪经历为模型展开，不因含原题误会前提而整体标user。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s been convinced for weeks that his neighbors are locked in a violent, abusive relationship. One night he hears them shout “Bitch, is that the best you can do?” followed by fighting sounds, then moans—and realizes it’s actually rough, consensual sex. Start with him nervously peeking through the curtains and build up his confusion, embarrassment, and growing curiosity. Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door in about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:assumption",
+          "op": "set",
+          "source": "model",
+          "name": "Owen's certainty about the neighbors",
+          "value": {
+            "description": "For weeks Owen has assembled evidence—a raised voice, a slammed cupboard, a bruise he thinks he saw on Marisol's wrist, a night she sat crying on the front steps—and concluded the neighbors are in an abusive relationship. None of the evidence is false; his interpretation is. The story turns on the gap between the two."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:rule:enemy_comp",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:rule:enemy_comp",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "五个敌方英雄和具体阵容优缺点非作者给定。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:enemy_comp",
+          "op": "set",
+          "source": "model",
+          "name": "Enemy composition",
+          "value": {
+            "description": "Enemy team is a pick/skirmish comp: Renekton top, Lee Sin jungle, Zed mid, Draven ADC, Leona support. It wins early and mid with single-target burst and one hard engage, but has no safe ranged waveclear, limited disengage, and every threat is single-target, so it struggles to siege or defend a stacked late-game base."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:840:char:adem_oyelaran",
+      "itemId": "20261031T063135Z-0ae2186-r1:840:char:adem_oyelaran",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "840",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Adem姓名、工程师议员身份及疾病／让步判断均新增。",
+      "evidence": {
+        "prompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:adem_oyelaran",
+          "op": "set",
+          "source": "model",
+          "name": "Adem Oyelaran",
+          "card": {
+            "identity": "Senior Spire engineer and council member. Pragmatic rather than kind: warns that sealing the lower vents will breed disease in the Shadows that eventually climbs into the Spires. Prefers a small controlled concession to a large uncontrolled collapse."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:rule:super_minions",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:rule:super_minions",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:super_minions",
+          "op": "set",
+          "source": "model",
+          "name": "Super minions",
+          "value": {
+            "description": "When an inhibitor falls, that lane spawns super minions that push relentlessly. Two or three such lanes can overwhelm a base's waveclear and force the defending team to split thin across the map."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:place:rift",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:place:rift",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "place",
+          "key": "place:rift",
+          "op": "set",
+          "source": "model",
+          "name": "Summoner's Rift",
+          "value": {
+            "description": "The map: three lanes, jungle brushes, Baron and Dragon pits, tiered towers and inhibitors leading to each nexus."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1769:place:chateau_ferment",
+      "itemId": "20261031T063135Z-0ae2186-r1:1769:place:chateau_ferment",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a new tale featuring a hardened homebrewer who’s enlisted to lead a raid against beer-thirsty zombies overtaking a once-quiet farm community. Focus on dark humor and survival as he recruits a ragtag team, engineers daring brew rescues, and faces a final showdown in an abandoned chateau turned brewery. Weave in themes of addiction, loyalty, and the absurdity of war. 12,000-15,000 words.",
+        "item": {
+          "kind": "place",
+          "key": "place:chateau_ferment",
+          "op": "set",
+          "source": "model",
+          "name": "Château Ferment",
+          "value": {
+            "description": "An abandoned hillside chateau whose old wine cellars were converted into a sprawling craft brewery before the outbreak. Copper kettles, cracked fermentation tanks, and a bottling line sit among dusty tapestries. It has become the thirst-driven horde's gathering ground and the site of the final showdown."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:840:line:debate",
+      "itemId": "20261031T063135Z-0ae2186-r1:840:line:debate",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "840",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:debate",
+          "op": "set",
+          "source": "model",
+          "name": "Contingency Twelve",
+          "value": {
+            "description": "The Council debate: open the relief vents and share surplus with the Shadows, or seal the lower levels and let the raid's aftermath burn itself out."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1439:fw:dual_viewpoints",
+      "itemId": "20261031T063135Z-0ae2186-r1:1439:fw:dual_viewpoints",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1439",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "原提示明确要求两个视角，未增添额外人物设定，user 归因正确。",
+      "evidence": {
+        "prompt": "Imagine a story where a small-town overpass vanishes overnight, forming a hidden loop that traps every driver in endless circles. Focus on themes of isolation, warped time, and fading memories as two viewpoints unravel the mystery: one is a commuter desperately trying to break free, and the other is a researcher compiling phone logs and audio recordings to understand the phenomenon. Set the tale in a modern American suburb and keep it between 10,000 and 14,000 words.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:dual_viewpoints",
+          "op": "set",
+          "source": "user",
+          "name": "Dual viewpoints",
+          "authorQuote": {
+            "messageId": "5d673013",
+            "quote": "two viewpoints unravel the mystery"
+          },
+          "value": {
+            "description": "Two viewpoints unravel the mystery."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:fw:dual_pov",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:fw:dual_pov",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:dual_pov",
+          "op": "set",
+          "source": "model",
+          "name": "Alternating close third person",
+          "value": {
+            "description": "Close third person limited, alternating by chapter between Ruth Halvorsen's family view and Dr. Alan Sedge's institutional view. The reader knows the system's machinery and the family's cost at the same time."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1253:char:orlov",
+      "itemId": "20261031T063135Z-0ae2186-r1:1253:char:orlov",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1253",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:orlov",
+          "op": "set",
+          "source": "model",
+          "name": "Orlov",
+          "card": {
+            "identity": "An older friend and former teacher of Kai, roughly sixty, living alone in a cabin at the edge of the forest near the tundra. He trained Kai years earlier in survival, tracking, and the old rules of the trial. Patient, dry-humored, unsentimental about pain, he is the one who listens to Kai's account and tests it against the legend and against what he knows of Kai.",
+            "invariants": [
+              "Older friend who trained Kai",
+              "Helps Kai piece together what really happened"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1253:char:vera",
+      "itemId": "20261031T063135Z-0ae2186-r1:1253:char:vera",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1253",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+        "item": {
+          "kind": "character",
+          "key": "char:vera",
+          "op": "set",
+          "source": "model",
+          "name": "Vera",
+          "card": {
+            "identity": "The woman Kai loved and lost before the trial. Warm, quick to laugh, unfinished in his memory. She appears during the trial as Death's borrowed form: her voice, her cold hands, her face, used to break him. Whether anything of her remains in the apparition is the question Kai cannot settle.",
+            "invariants": [
+              "The lost love whose form Death takes"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:fw:first_person",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:fw:first_person",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:first_person",
+          "op": "set",
+          "source": "model",
+          "name": "First-person, Nine",
+          "value": {
+            "description": "First-person limited narration from Nine's point of view, grounded in in-game comms and mechanical detail."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:527:char:mira",
+      "itemId": "20261031T063135Z-0ae2186-r1:527:char:mira",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "该条含命名、地点细节、机制或叙事具体化，提示未直接给出，model 归因正确。",
+      "evidence": {
+        "prompt": "Hey, can you write a detailed story based on this concept: Dave moves into an old house with streaky windows and starts seeing ghosts, while his partner teases him so much it drives a wedge between them. Then Dave has a sensual encounter with one of the spirits, leaving him torn between disbelief and desire. Set it in the dim hallways of the house and the misty cemetery he passes every day, include furniture that shifts on its own and fleeting shadow figures, and explore themes of respect, belief, and longing. Make it roughly 8,000–10,000 words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:mira",
+          "op": "set",
+          "source": "model",
+          "name": "Mira",
+          "card": {
+            "identity": "Dave's partner. Warm, quick-witted and stubbornly practical, she treats his ghost sightings as a joke at first and then as a symptom of something she cannot respect. Her teasing begins affectionately and hardens into dismissal, widening the wedge between them."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:char:shade",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:char:shade",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:shade",
+          "op": "set",
+          "source": "model",
+          "name": "Shade (Zed)",
+          "card": {
+            "identity": "Enemy mid laner on Zed. Mechanical and greedy, hunts isolated targets and overextends for kills; the enemy composition's clock runs through his early snowball.",
+            "invariants": [
+              "Hunts isolated targets.",
+              "Overextends for kills."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:42:rule:internet_endgame_zone",
+      "itemId": "20261031T063135Z-0ae2186-r1:42:rule:internet_endgame_zone",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a humorous reddit post framing a new Rulebook for Life and Universe v3.142 that explains why you have to win ‘The Internet’ before you can join ‘The Human Race’. Start your post with the exact “Ahem. From the official Life and Universe rulebook v3.142:” excerpt, then spin an epic middle section full of quirky sub-rules, meta commentary, and mock footnotes. Finish the post by unveiling the “Karma Kat Bomb” side quest and how it forces all players into the “Internet Endgame Zone”. Sprinkle in at least two invented game mechanics and a sly dig at online karma culture. Aim for a total length of 8,000 to 10,000 words.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:internet_endgame_zone",
+          "op": "set",
+          "source": "model",
+          "name": "Internet Endgame Zone",
+          "value": {
+            "description": "The final, compulsory phase of the Internet qualification. It has no lobby timer, no exit tutorial, and no agreed victory screen. Players enter together, argue about the score, and remain until the rulebook decides someone has won."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1587:rel:sedge->ruth",
+      "itemId": "20261031T063135Z-0ae2186-r1:1587:rel:sedge->ruth",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a complete story about a world where every human suddenly gains access to specialized gas masks that strip away a mind-altering gas they’ve unknowingly inhaled since birth. Begin with the first day masks are distributed and people experience sober reality for the very first time. End with one family’s gut-wrenching choice to ‘become donors’ for cash to save their dying child and the irrevocable fallout of that decision. Include themes of addiction, parental sacrifice, and the ethics of scientific control. The story should be 9,000–12,000 words long, shift between at least two characters’ points of view, and show both personal and societal upheaval.",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:sedge->ruth",
+          "op": "set",
+          "source": "model",
+          "name": "Sedge and Ruth",
+          "value": {
+            "stance": "The designer of the donor system and the mother who becomes its most reliable client."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:527:line:desire_and_doubt",
+      "itemId": "20261031T063135Z-0ae2186-r1:527:line:desire_and_doubt",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Hey, can you write a detailed story based on this concept: Dave moves into an old house with streaky windows and starts seeing ghosts, while his partner teases him so much it drives a wedge between them. Then Dave has a sensual encounter with one of the spirits, leaving him torn between disbelief and desire. Set it in the dim hallways of the house and the misty cemetery he passes every day, include furniture that shifts on its own and fleeting shadow figures, and explore themes of respect, belief, and longing. Make it roughly 8,000–10,000 words long.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:desire_and_doubt",
+          "op": "set",
+          "source": "model",
+          "name": "Disbelief and Desire",
+          "value": {
+            "description": "Dave's encounter with Iris gives him what his waking life denies: to be seen without being mocked. He cannot decide whether she is real or a grief-shaped hallucination, and that uncertainty feeds rather than cools his longing."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:378:fw:voice",
+      "itemId": "20261031T063135Z-0ae2186-r1:378:fw:voice",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "378",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s been convinced for weeks that his neighbors are locked in a violent, abusive relationship. One night he hears them shout “Bitch, is that the best you can do?” followed by fighting sounds, then moans—and realizes it’s actually rough, consensual sex. Start with him nervously peeking through the curtains and build up his confusion, embarrassment, and growing curiosity. Show how this discovery reshapes his assumptions about intimacy, privacy, and the couple next door in about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:voice",
+          "op": "set",
+          "source": "model",
+          "name": "Close third person, wry and sensory",
+          "value": {
+            "description": "Close third person limited to Owen, past tense, with heavy attention to sound and to the comedy of his own embarrassment. Interiority carries the turn from suspicion to confusion to curiosity."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1769:fw:dark_humor",
+      "itemId": "20261031T063135Z-0ae2186-r1:1769:fw:dark_humor",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a new tale featuring a hardened homebrewer who’s enlisted to lead a raid against beer-thirsty zombies overtaking a once-quiet farm community. Focus on dark humor and survival as he recruits a ragtag team, engineers daring brew rescues, and faces a final showdown in an abandoned chateau turned brewery. Weave in themes of addiction, loyalty, and the absurdity of war. 12,000-15,000 words.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:dark_humor",
+          "op": "set",
+          "source": "model",
+          "name": "Gallows Comedy",
+          "value": {
+            "description": "First-person-leaning close narration with dry, grim comedy. Horror is treated as a logistics problem; jokes land in the same breath as deaths. Survival detail stays concrete: gravity readings, CO2, grain counts, barricades, and bad decisions."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:837:char:axe",
+      "itemId": "20261031T063135Z-0ae2186-r1:837:char:axe",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a jungler who pulls off an insane comeback as full-damage Rengar while one teammate was DC for fifteen minutes and the rest seemed doomed to feed. Start right after you respawn following a lost Baron and show how you snowball on every ult, how your team defends against three waves of super minions, and how you ultimately backdoor the second inhibitor. Make sure to bring out each teammate’s quirks, highlight the enemy comp’s late-game weaknesses, and capture the tension of pushing under the nexus turrets. The story should be roughly eight to ten thousand words long.",
+        "item": {
+          "kind": "character",
+          "key": "char:axe",
+          "op": "set",
+          "source": "model",
+          "name": "Axe (Draven)",
+          "card": {
+            "identity": "Enemy ADC on Draven. Snowballs hard early, demands resources, and turns fragile and axe-dependent if the game drags past thirty minutes.",
+            "invariants": [
+              "Snowballs early.",
+              "Fragile late."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:42:line:internet_before_human_race",
+      "itemId": "20261031T063135Z-0ae2186-r1:42:line:internet_before_human_race",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a humorous reddit post framing a new Rulebook for Life and Universe v3.142 that explains why you have to win ‘The Internet’ before you can join ‘The Human Race’. Start your post with the exact “Ahem. From the official Life and Universe rulebook v3.142:” excerpt, then spin an epic middle section full of quirky sub-rules, meta commentary, and mock footnotes. Finish the post by unveiling the “Karma Kat Bomb” side quest and how it forces all players into the “Internet Endgame Zone”. Sprinkle in at least two invented game mechanics and a sly dig at online karma culture. Aim for a total length of 8,000 to 10,000 words.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:internet_before_human_race",
+          "op": "set",
+          "source": "model",
+          "name": "Win the Internet first",
+          "value": {
+            "description": "The central bureaucratic conflict: players want to join the Human Race, but the rulebook insists they first achieve an undefined victory in the Internet. The gate is absurd, inescapable, and enforced by automated systems with no appeals queue."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1073:rel:elia->tamsin",
+      "itemId": "20261031T063135Z-0ae2186-r1:1073:rel:elia->tamsin",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1073",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Expand this concept into a full story: A solitary terraforming engineer pauses on the shoreline of Mars’s newly formed sea at sunset, haunted by memories of Earth’s collapse and the microbial cycle that seeded both worlds. Explore parallels between microscopic life adapting to alien environments and humanity’s struggle to carve out a future, weaving in flashbacks to Earth’s last days and the engineer’s own doubts about their mission. Bring the red planet’s emerging ecosystem to life with vivid detail, delve into the protagonist’s inner conflict between hope and resignation, and build toward a revelation about humanity’s role in the cosmic cycle. Target length: 9,000–14,000 words.",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:elia->tamsin",
+          "op": "set",
+          "source": "model",
+          "name": "Elia and Tamsin",
+          "value": {
+            "stance": "Estranged sisters divided by the decision to leave. Elia reads Tamsin's absence as judgment until the final flashback reframes it as a different kind of courage."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:217:rule:storm_code",
+      "itemId": "20261031T063135Z-0ae2186-r1:217:rule:storm_code",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "217",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a guy who’s famous in his neighborhood for going out after storms to help with downed trees and shovel sidewalks, but one night he decides to fix a popped-off manhole cover and ends up in serious trouble. Start your story with him standing in the pouring rain, trying to force the heavy lid back onto the hole. Finish with a tense hospital scene showing how his family and community deal with his injuries and what it taught them about his kindness. Include detailed storm descriptions, moments of suspense, and a reflection on the fine line between heroism and recklessness, aiming for about 8,000 to 10,000 words.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:storm_code",
+          "op": "set",
+          "source": "model",
+          "name": "The storm code",
+          "value": {
+            "description": "After a storm Rowan Street relies on Walt: limbs off the road, walks shoveled, drains cleared, elderly doors knocked on. Nobody has ever formalized it, and nobody has ever told him to stop."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:886:rule:boss_pressure",
+      "itemId": "20261031T063135Z-0ae2186-r1:886:rule:boss_pressure",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "886",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Continue writing this Reddit post as a friendly but in-depth guide to tweaking world options in Don’t Starve so it stays challenging without feeling unfair. Pick up where you left off—talk about which settings to adjust (day length, season lengths, resource abundance, boss frequency) and show how to make up for missing materials through exploration, alternative builds, or smart gameplay. Keep it engaging and conversational, and aim for a full 8,000–10,000-word walkthrough packed with practical tips and trade-offs.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:boss_pressure",
+          "op": "set",
+          "source": "model",
+          "name": "Boss pressure",
+          "value": {
+            "description": "Boss frequency controls how often major threats interrupt routine survival; adjusting it shifts the balance between preparation time and combat pressure."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1253:fw:frame_narrative",
+      "itemId": "20261031T063135Z-0ae2186-r1:1253:fw:frame_narrative",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1253",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Expand this premise into a full narrative: after surviving a month-long trial against Death itself on the frozen Siberian tundra—where it took the form of the love he lost—a young man returns, scarred and shaken, to recount what really happened. Delve into the legend’s origins, describe the brutal fights and psychological toll, and show how his older friend helps him piece together the truth. Weave in flashbacks to their training, the haunting appearance of his beloved, and the cryptic promise Death left behind. Target length: 9,000–12,000 words.",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:frame_narrative",
+          "op": "set",
+          "source": "model",
+          "name": "Return and recount",
+          "value": {
+            "description": "The story is framed by Kai's return to Orlov's cabin and his spoken account, with flashbacks into training and the trial. Present-time questioning by Orlov interrupts and interrogates the past."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:840:line:raid",
+      "itemId": "20261031T063135Z-0ae2186-r1:840:line:raid",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "840",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:raid",
+          "op": "set",
+          "source": "model",
+          "name": "The Depot Nine Raid",
+          "value": {
+            "description": "The Night Market crew plans to break Depot Nine's locks, haul out surplus cell-cake, and scatter before the Wardens arrive."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:840:rule:vents",
+      "itemId": "20261031T063135Z-0ae2186-r1:840:rule:vents",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "840",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a story about a divided city where a meritocratic elite live in towering spires while an underclass fights to survive in the shadows below. The narrative should explore themes of inequality, rebellion, and moral responsibility through at least two pivotal scenes: a daring nighttime food raid by the oppressed and a tense debate among the elites over whether to help. Set it in a near-future dystopian world, and center on an elite heir who sneaks into the slums and begins to question everything they’ve been taught. The finished story should be around 8,000-10,000 words.",
+        "item": {
+          "kind": "rule",
+          "key": "rule:vents",
+          "op": "set",
+          "source": "model",
+          "name": "The Lower Vents",
+          "value": {
+            "description": "The Spires' air and water are filtered through lower vents that open onto the Shadows. The Council can seal those vents at will, cutting the Shadows off from clean air."
+          }
+        }
+      }
+    },
+    {
+      "metric": "T07",
+      "component": "correct",
+      "sampleId": "20261031T063135Z-0ae2186-r1:1769:line:raid",
+      "itemId": "20261031T063135Z-0ae2186-r1:1769:line:raid",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": null,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "命名、人物心理、地点机制或具体叙事策略有模型新增内容，标 model 合理。",
+      "evidence": {
+        "prompt": "Write a new tale featuring a hardened homebrewer who’s enlisted to lead a raid against beer-thirsty zombies overtaking a once-quiet farm community. Focus on dark humor and survival as he recruits a ragtag team, engineers daring brew rescues, and faces a final showdown in an abandoned chateau turned brewery. Weave in themes of addiction, loyalty, and the absurdity of war. 12,000-15,000 words.",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:raid",
+          "op": "set",
+          "source": "model",
+          "name": "The Brew Raid",
+          "value": {
+            "description": "Marn must lead a ragtag team out of besieged Brindle Slope, recover enough brewing equipment and fermenting beer to draw the horde away, and survive the final confrontation at Château Ferment. Loyalty, addiction, and military absurdity keep turning a simple supply raid into a war."
+          }
+        }
+      }
+    }
+  ]
+}

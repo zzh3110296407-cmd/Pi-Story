@@ -1,0 +1,105 @@
+{
+  "id": "ds11-g02-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author asked to title the next unwritten chapter (chapter 3) \"A Shared Check\", keeping all other plan fields unchanged.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "A Shared Check"
+          }
+        ]
+      },
+      "id": "call_00_oFnTtCxetzMiicRvKcfv3534"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author asked to title the next unwritten chapter (chapter 3) \"A Shared Check\", keeping all other plan fields unchanged.",
+      "chapters": [
+        {
+          "n": 3,
+          "title": "A Shared Check"
+        }
+      ]
+    },
+    "id": "call_00_oFnTtCxetzMiicRvKcfv3534"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "8f1f387243e11a58d4d75029795062d2e097b58b20f2a3cbe3369412132414db",
+    "sessionSha256": "90bdcbc26f4263f018c3a40f657ced369353715d75f077e7f14b1324af73af03",
+    "fee": {
+      "knownUsd": 0.0024453,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0024453
+    },
+    "measuredMainRequests": 2
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "story/p3-book-approved-offline-score@1",
+  "date": "2026-11-01",
+  "scoringVersion": "p3-29@1",
+  "approval": {
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/approval.json",
+    "sha256": "ba62615b0d2a199785ee968c5afc03f3100105d4056a2bf3fccf9da7b1155690"
+  },
+  "scope": "837 observed prefix and527 only. Other3 selected books outstanding. No full BOOK/P3 completion claim.",
+  "T04": {
+    "id": "T04",
+    "n": 23,
+    "programInvalid": 2,
+    "programRate": 0.08695652173913043,
+    "judged": 23,
+    "invalid": 2,
+    "value": 0.08695652173913043,
+    "confidence95": [
+      0.024180004484220363,
+      0.26795981075743663
+    ],
+    "minimum": 100,
+    "threshold": 0.1,
+    "passed": null,
+    "status": "measured"
+  },
+  "T03_SCEN_plus_this_BOOK": {
+    "id": "T03",
+    "n": 27,
+    "judged": 27,
+    "successes": 25,
+    "value": 0.9259259259259259,
+    "confidence95": [
+      0.7663040731697686,
+      0.9794453459390113
+    ],
+    "minimum": 20,
+    "threshold": 0.8,
+    "passed": true,
+    "status": "measured"
+  },
+  "recoveries": [
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "sampleId": "call_00_1D4EO8tmA5T47viXgIUV3472"
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "sampleId": "call_00_ET_rP9KWko83djXhrWzxWm93965"
+    },
+    {
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "sampleId": "call_00_ZkkNRMZrg4cTwXTZOzS50943"
+    }
+  ],
+  "sourceDigests": [
+    {
+      "path": "story/scripts/eval/p3/metrics.ts",
+      "sha256": "215b4c8a20009669a2adfd416e56f38e0a97c37491e836c9b9f70e610159e47e"
+    },
+    {
+      "path": "story/scripts/eval/p3/score.ts",
+      "sha256": "48dbeb973c4567f9831e6a4840d6db9b90799d30e041f18fcd1a950d87303560"
+    },
+    {
+      "path": "story/scripts/eval/p3/scenario-score.ts",
+      "sha256": "969315eb79d26aff47383ebea3fbdd60469aa8e4c79df34e74196750f6bebcfe"
+    }
+  ]
+}

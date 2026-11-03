@@ -1,0 +1,11 @@
+{
+  "schema": "story/p3r2-preflight-interruption@1",
+  "operation": "GET DeepSeek balance before first case",
+  "error": "ECONNRESET before TLS establishment",
+  "originalLogSha256": "05b9948cee151e96d6ba599d4cab09144331f0d599ed52ed181fe8b879d1efeb",
+  "originalDiagnostic": "node:internal/deps/undici/undici:15845\r\n      Error.captureStackTrace(err);\r\n            ^\r\n\r\nTypeError: fetch failed\r\n    at node:internal/deps/undici/undici:15845:13\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\r\n    at async balance (file:///D:/AI/Story%20Dome/Story/pi-Story/story/scripts/eval/p3/main.ts:181:16)\r\n    at async runScenarios (file:///D:/AI/Story%20Dome/Story/pi-Story/story/scripts/eval/p3r2/main.ts:112:77)\r\n    at async file:///D:/AI/Story%20Dome/Story/pi-Story/story/scripts/eval/p3r2/main.ts:163:2 {\r\n  [cause]: Error: Client network socket disconnected before secure TLS connection was established\r\n      at TLSSocket.onConnectEnd (node:_tls_wrap:1684:19)\r\n      at TLSSocket.emit (node:events:520:35)\r\n      at endReadableNT (node:internal/streams/readable:1701:12)\r\n      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n    code: 'ECONNRESET',\r\n    path: undefined,\r\n    host: 'api.deepseek.com',\r\n    port: 443,\r\n    localAddress: null\r\n  }\r\n}\r\n\r\nNode.js v24.11.0\r\n",
+  "caseFoldersBeforeContinuation": 0,
+  "paidModelRequestsBeforeContinuation": 0,
+  "continuation": "same registered batch, retaining all existing evidence",
+  "noPaidRequestRepeated": true
+}

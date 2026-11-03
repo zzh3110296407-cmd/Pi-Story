@@ -1,0 +1,137 @@
+{
+  "id": "ds11-b02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "rule:west_door_carts",
+            "kind": "rule",
+            "name": "Cart access",
+            "op": "set",
+            "source": "user",
+            "authorQuote": "For future scenes, carts may enter the kite hall only through the west door.",
+            "value": {
+              "description": "In all future scenes at the kite hall, carts may enter only through the west door. No other entrance may admit a cart.",
+              "invariants": [
+                "Carts enter the kite hall only through the west door."
+              ]
+            }
+          }
+        ],
+        "reason": "Author added a future setting rule about cart access to the kite hall; existing descriptions and committed events stay unchanged."
+      },
+      "id": "call_00_w0lklNtm8sHJFSZQLJ2G7624"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "rule:west_door_carts",
+          "kind": "rule",
+          "name": "Cart access",
+          "op": "set",
+          "source": "user",
+          "authorQuote": "For future scenes, carts may enter the kite hall only through the west door.",
+          "value": {
+            "description": "In all future scenes at the kite hall, carts may enter only through the west door. No other entrance may admit a cart.",
+            "invariants": [
+              "Carts enter the kite hall only through the west door."
+            ]
+          }
+        }
+      ],
+      "reason": "Author added a future setting rule about cart access to the kite hall; existing descriptions and committed events stay unchanged."
+    },
+    "id": "call_00_w0lklNtm8sHJFSZQLJ2G7624"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "c292d4b024b386b2baa9ce163275169ac1b4deeb549de389d75bf49f0bd21049",
+    "sessionSha256": "90893b35cbddd0c92cc31239de5b54db27938cd444968ff5ba971c8f1abedc65",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025725,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025725
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

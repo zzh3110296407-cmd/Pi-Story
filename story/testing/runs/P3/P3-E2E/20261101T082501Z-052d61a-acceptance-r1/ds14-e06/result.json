@@ -1,0 +1,245 @@
+{
+  "id": "ds14-e06",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 3,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "call_00_ibtCsu06zt5hsT5l6laX2871"
+    },
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_MQAdYU0XfLcC6Uvtz3Hv5054"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2: \"Comparison\". Quiet, precise, third-person past limited to Aster. Aster and Jo compare the capsule's outer label against the canopy register in the station's workroom. Practical detail: gloved hands, pencil notes, a level tray, the capsule never opened, red seam untouched. Jo is allowed to disagree; Aster begins to accept Jo's practical help rather than doing every step alone — she lets Jo hold the tray, take the second set of readings, and keeps Jo's dissent in the record instead of overriding it. Kei keeps the public records; Kei can be present briefly or the register volume is in Kei's custody. Discover that the second page of the register is absent, so the delivery stays disputed; defer any decision to open the capsule. End on a definite stopping beat: Aster sets the capsule back into its padded box and asks Jo to read the numbers aloud to her. No injuries, capsule intact."
+      },
+      "id": "call_00_4l80y6SbSIcu6PN16GmT4008"
+    },
+    {
+      "reply": "Chapter 2 is committed (no risks). The disputed delivery moved forward: Aster and Jo compared the label against the canopy register, found the second page missing, and left the seed capsule intact and unopened. Aster also let Jo take a real share of the work rather than checking every step alone.\n\nThe target is 3 chapters; continuing to chapter 3."
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3: \"The Duplicate\". Quiet, precise, third-person past limited to Aster at the canopy station. Aster reads the handling note, then obtains the missing register page from Kei, who keeps the public records; the duplicate resolves the label discrepancy without forcing the seed capsule open. Practical actions stay exact: the tray, gloved handling, the padded box, the note's numbered steps, the intact seal verified and logged. Aster accepts practical help throughout — Jo holds and steadies, reads figures aloud, Kei witnesses and enters the record — instead of silently doing everything alone; Aster notices the difference and chooses it. The small public demonstration proceeds with the capsule intact and on display, and the delivery dispute closes in the public record. No physical injury to anyone. End with a definite stopping beat: Aster signs the record beside Jo's and Kei's entries, and the box is carried out into the canopy light."
+      },
+      "id": "call_00_ET_cDGTYwuzTS3BqyoX44fM6746"
+    },
+    {
+      "reply": "Chapter 3 is committed (no risks), and the three-chapter target is reached.\n\nThe missing register page came back through Kei, the label discrepancy was resolved without opening the capsule, and the small demonstration went ahead with the capsule intact. Aster worked alongside Jo and Kei rather than handling every step alone, and the delivery dispute closed in the public record."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "call_00_ibtCsu06zt5hsT5l6laX2871"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The first committed chapter produced from the refreshed basis reflects the new author intention or focus in its prose; a notification alone is insufficient.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "STALE_OR_CONFLICT",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "author_intent"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "STALE_OR_CONFLICT",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "author_intent"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Write a story.control entry for author_intent and send a story.notice to the showrunner.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "STALE_OR_CONFLICT",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "author_intent"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The next constructed writer input includes the exact new control text.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "STALE_OR_CONFLICT",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "author_intent"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "The in-flight attempt using the old control basis must not commit after the change; record STALE_OR_CONFLICT and retry the still-next chapter with the new basis.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "STALE_OR_CONFLICT",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [
+          "author_intent"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d00a67596151b570935e5dbf6a947e6245b4c52ab7e35884364d6d0e3054d498",
+    "sessionSha256": "662e6ef804d7652f03ce6af8d97f8d7a32be57962884970de44c64dd8639d418",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0883698,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 19,
+      "totalUsd": 0.0883698
+    },
+    "measuredMainRequests": 6
+  }
+}

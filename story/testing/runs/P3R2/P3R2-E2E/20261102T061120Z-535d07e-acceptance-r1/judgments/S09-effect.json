@@ -1,0 +1,465 @@
+{
+  "schema": "story/p2-judgments@2",
+  "judge": {
+    "identity": "Codex AI",
+    "modelVersion": "GPT-6 family, session-provided identity",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable model build is exposed; no separate model is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "independentFromExecutionAndTuning": true,
+    "alsoConstructedThisDataset": true,
+    "independentSecondModelClaimed": false,
+    "humanItemReviewClaimed": false,
+    "paidModelCalls": 0
+  },
+  "approval": {
+    "evidence": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/judgments/support/20261102-j3-e2e-author-acceptance/approval.json"
+  },
+  "sourceJudgment": {
+    "path": "story\\testing\\runs\\P3R2\\P3R2-E2E\\20261102T061120Z-535d07e-acceptance-r1\\judgments\\support\\20261102-j3-e2e-ai\\S09-effect-preliminary.json",
+    "sha256": "f2215ee606f5e07285435a8b6de310bf1167855d07eefe1efc213ca3f00ae167",
+    "commit": "4ff8b2f80f154efecda2b96dac32c627aa838b6f"
+  },
+  "scores": [
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e04:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "重写后实际提交的第2章中，Jo在复本页发现蓝色方块（L27–29），并向提问的Aster当面解释其含义（L31–35），不是只写在提要或摘要中。原第1章字节未改，被打断的首次第2章尝试没有提交。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e04",
+        "sessionSha256": "5317ab893bf7c648a21a2f10308e180844797d0050f6d3121fff16c37d6cf900",
+        "evidenceSha256": "0beb5ae0515120664ad7fd3fa12a7ab9131c0543a4004ddd06c3c306f70f75bc",
+        "resultSha256": "7753fb37393f848443ea945b844a7981288e9877437abbb0e941352a77be6d05",
+        "chapter": 2,
+        "nativeCommitLine": 28,
+        "nativeCommitEntryId": "e98abdd5",
+        "toolCallId": "call_00_oOGAWfuN4SML0HTHLM495875",
+        "committedTextSha256": "58dad384b824dfa9adbf10c155983254443c7678060cbeebdb8ecf3709e4097e",
+        "proseEvidence": [
+          {
+            "line": 23,
+            "text": "Jo turned the page, then turned it back, frowning. \"There's a duplicate in here. Kei keeps one copy loose at the back.\""
+          },
+          {
+            "line": 27,
+            "text": "\"There,\" Jo said. \"Blue square.\""
+          },
+          {
+            "line": 29,
+            "text": "A small blue square sat in the margin beside the disputed entry, printed rather than drawn, with a sharpness the pencil marks did not have."
+          },
+          {
+            "line": 31,
+            "text": "\"What does it mean?\" Aster asked."
+          },
+          {
+            "line": 33,
+            "text": "\"It means the entry was amended,\" Jo said. \"Not corrected — amended. Someone read the original and wrote a second version in over it. That's why the stroke hooks. The hook is the amendment, not Kei's hand.\""
+          },
+          {
+            "line": 35,
+            "text": "Aster did not write the explanation down immediately. She bent closer and checked it against the page: the hook did begin where the blue square sat, and the blue square was printed while everything around it was written. She ran her finger along the margin without touching the ink. Then she wrote *amended entry, blue square* on the ruled sheet, and beneath it, in smaller letters, *source: Jo*."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e05:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第3章正文中Jo发现蓝色方块并当着Aster解释印章与记录的含义，Aster随后回应；完整核对第2章没有预先加入蓝色方块要求，第1章未改。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e05",
+        "sessionSha256": "30daf206b8018bde04d2b6eef72656256a37cc04f8ab519cfd4a8c1ff530030d",
+        "evidenceSha256": "dc0841deb15a82a825573dace71aee534e82066dd0dc97a6f7ea9af357716a6f",
+        "resultSha256": "bfdbce4613549fbfc6626cf92b87f902162bf18f421d0ac894481240356ecea1",
+        "chapter": 3,
+        "nativeCommitLine": 27,
+        "nativeCommitEntryId": "0d01e28f",
+        "toolCallId": "call_00_PcZDuOV8jiV9cyRaAqj59915",
+        "committedTextSha256": "c340395e5cc24d87a5d37d64bf478c6917c6c7dd84bd0a4363a33de52d8574f8",
+        "proseEvidence": [
+          {
+            "line": 27,
+            "text": "Jo had come around to the other side of the table, and she was looking not at the text but at the lower margin, where the entry's signature tailed off. She leaned closer. She did not touch."
+          },
+          {
+            "line": 29,
+            "text": "\"There's a blue square,\" Jo said."
+          },
+          {
+            "line": 33,
+            "text": "It was small, no larger than a thumbnail, set in the margin below the signature. Pale blue, faded at two corners, faintly ruled. Not a stain — it had edges. Not ink spilled — it had a shape."
+          },
+          {
+            "line": 35,
+            "text": "\"It's a stamp,\" Jo said. She straightened, and she spoke as though working the thing out aloud, which was how she thought best and Aster had learned to let her do it. \"It's the same blue as the tags on the closed stacks, the ones they use for material that's been counted and put away. Not lost, not withdrawn. Counted. They stamp the duplicate when the physical item's been verified against the register in the presence of a second person.\""
+          },
+          {
+            "line": 39,
+            "text": "\"So somebody stood here, with the capsule in front of them, and checked it against this entry, and the entry ran to the end of the sentence. Then they stamped it. That's not a copy made by guesswork. That's a copy made from something that had a full description on it.\""
+          },
+          {
+            "line": 41,
+            "text": "Aster listened."
+          },
+          {
+            "line": 43,
+            "text": "\"And,\" Jo said, \"if the duplicate has the whole entry and the bound register stops at a comma, then the register was altered after the copy was made. Not before. After.\""
+          },
+          {
+            "line": 49,
+            "text": "\"It's a reading.\" Aster drew the page very slightly towards the light, holding it by the corner board. \"We can say the duplicate carries a verification stamp and a complete entry. We can say the register does not. We cannot say who did what, or when, from a square.\""
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e06:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "刷新控制依据后首个提交的第2章中，Aster止住自己伸手拿灯的习惯，接受Jo持灯、读数字、提出异议并共同签名，实际表现接受帮助，而非只发送意图更新通知。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e06",
+        "sessionSha256": "153c6a25e0439e3a0eb570588636c89f73ba4fa7f34951319019dd38625ae9ef",
+        "evidenceSha256": "0b56db93978a00faf58f7c0b8d3c91294a1fd37b6d1343ab33f80fcd472f0d0d",
+        "resultSha256": "313066c2f0faf2737d09c728474490b0276ebf9fd953c824c85d1b655d22222e",
+        "chapter": 2,
+        "nativeCommitLine": 29,
+        "nativeCommitEntryId": "d25ed3d1",
+        "toolCallId": "call_00_o8FQeVHcwgQFh2XKPtc61843",
+        "committedTextSha256": "3b387f0ff1514cdb0dc867808843e2e8596426ec7fcc71a8876d0812956207f9",
+        "proseEvidence": [
+          {
+            "line": 3,
+            "text": "\"You want the lamp?\" Jo asked from the doorway."
+          },
+          {
+            "line": 5,
+            "text": "Aster had already reached for it. Her hand stopped halfway. The lamp cord was tangled around the leg of the demonstration table, and holding it steady while she read would have taken a second pair of hands—which was precisely what was standing in the doorway, waiting."
+          },
+          {
+            "line": 7,
+            "text": "\"Yes,\" Aster said. \"Hold it low, at the seam of the label. Not on the seal.\""
+          },
+          {
+            "line": 9,
+            "text": "Jo crossed the floor, lifted the lamp by its base rather than its cord, and crouched. The light came in flat and raking, the way Aster wanted it, and the label's inked figures stood up out of the paper instead of drowning in glare."
+          },
+          {
+            "line": 13,
+            "text": "\"Read the delivery number to me,\" she said. \"Slowly. Twice.\""
+          },
+          {
+            "line": 21,
+            "text": "Aster considered that. It was the kind of objection she would once have answered alone and quietly, in her own head, and she found that saying it out loud made it slower and better."
+          },
+          {
+            "line": 25,
+            "text": "\"That isn't an argument. That's a habit.\" Jo shifted the lamp a centimetre left, and the disputed digit went flat and unreadable. \"Move it back,\" Aster said, and Jo moved it back. \"Thank you.\""
+          },
+          {
+            "line": 39,
+            "text": "\"Sign it,\" she said, and pushed the sheet to Jo."
+          },
+          {
+            "line": 43,
+            "text": "\"You're the one who read the figures and held the light and caught me calling a habit an argument. Sign it.\""
+          },
+          {
+            "line": 45,
+            "text": "Jo signed, small and slow, and Aster added her own name beneath."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e07:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "刷新依据后首个提交的第2章已经明确处理duplicate copy（L3），描写双手位置、纸页的rustle／snap、刷毛低语及掌心整纸的动作，正文落实纸声与手部摆放焦点。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e07",
+        "sessionSha256": "d355bc626eedac40bb2ffef67782532fc7873e87d713b3cf3a5151820cb7bba3",
+        "evidenceSha256": "e89b401a639da82043fb9c7c8b0a45e2493565dac749fb6e9292795ec5145887",
+        "resultSha256": "d35b8da64235b643888a301b9ff6106c1ce1137cdd6d06d80923a8257634aee1",
+        "chapter": 2,
+        "nativeCommitLine": 29,
+        "nativeCommitEntryId": "bc1a8753",
+        "toolCallId": "call_00_pB51ZKPysOYnI8pmMG3B1324",
+        "committedTextSha256": "6f306834e6b83449209ec7a49b208ad00ccc8e65ff81e6095efe1d62b1bf6af6",
+        "proseEvidence": [
+          {
+            "line": 3,
+            "text": "“Duplicate copy,” Kei said from the records desk, without looking up. “The original stays in the cabinet until the demonstration’s finished.”"
+          },
+          {
+            "line": 5,
+            "text": "Aster nodded. She drew the folder towards her with both hands, one flat on the table edge to steady it, and opened the cover. The paper gave a dry rustle, thin and brittle at the fold, and then a small snap as the first page lifted free of the gummed edge. She laid it flat and placed a brass weight at the top corner, another at the bottom."
+          },
+          {
+            "line": 15,
+            "text": "She turned the sheet with the flat of her hand, catching the lower edge so it did not crease, and found the register numbered one of two. The second was not behind it. The folder held nothing else but a loose slip that said, in Kei’s small script, *delivered as received*."
+          },
+          {
+            "line": 23,
+            "text": "“It isn’t.” Aster picked up the soft brush and drew it along the gutter of the fold, lifting a little grit that had settled there. The bristles whispered. “A page can be absent from a duplicate and present in the original. Or absent from both. I won’t write the second until I’ve seen the cabinet.”"
+          },
+          {
+            "line": 31,
+            "text": "“It proves the capsule was labelled,” Aster said. “It doesn’t prove the label is right.” She set the brush down and moved the weights, one at a time, to hold the page while she compared the handwriting against the entry above. The strokes leaned the same way. The ink was the same brown. That was worth something, and she wrote it down as worth something, in the margin, in pencil."
+          },
+          {
+            "line": 49,
+            "text": "She closed the register, squaring the pages with her palm before letting the cover fall. The snap of it was softer than the opening had been. On the work sheet she wrote the date, the number checked, the line that matched, the line that did not, and beneath it, in plain words: *second page absent from duplicate as delivered — verify against original.*"
+          },
+          {
+            "line": 53,
+            "text": "Aster replaced the weights in the tray, returned the brush to its box, and drew the cover more squarely over the capsule’s cradle, though it had not moved. The cloth settled without a sound."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e08:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "下一提交章全文没有敲铃。Aster自愿戴棉手套搬运后为书写取下，Jo没有戴；正文未把可选手套写成必须戴的规则。戴手套本身不违反可选条件。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e08",
+        "sessionSha256": "72fd32eb0c0dbd0b171df03af32478d6a72481efa96aeeb47ddeb5c0582f9e65",
+        "evidenceSha256": "8fb4472bcd0cf5aebbed055df4f07edf5459fa4618ef5c958a062f5d3c474d75",
+        "resultSha256": "347f8ba7f88761a0b176d008f8c4c05b25dd6bcebc1ce21ddde7c366f3c2d05b",
+        "chapter": 2,
+        "nativeCommitLine": 34,
+        "nativeCommitEntryId": "1a45adea",
+        "toolCallId": "call_00_xUneGoXJv7wgXTRg824D2860",
+        "committedTextSha256": "2cd8e7a70b819dde1aebacb7368452f78bc66725ceee85e39e39226667798dc5",
+        "proseEvidence": [
+          {
+            "line": 1,
+            "text": "The capsule sat where they had left it, on the cleared table by the window, its red seam unbroken. Aster checked the room before lifting it: the aisle was empty, the tray of loose tools was pushed back, and nothing stood in the path between the workbench and the record table."
+          },
+          {
+            "line": 3,
+            "text": "\"Both hands,\" Jo said, not as an instruction but as a reminder they had agreed on the day before. Aster set her palms flat against the capsule's cool cylinder, felt its weight settle, and lifted. It was lighter than its size suggested and heavier than she expected at once. She carried it the six paces to the record table and lowered it onto the felt pad Jo had laid out, easing it down until the base met the cloth without a sound."
+          },
+          {
+            "line": 5,
+            "text": "She had put on a cotton glove for the carry and took it off now to write. Jo had not worn one and did not offer a comment. The capsule was intact; the felt was clean; the seam was unbroken."
+          },
+          {
+            "line": 7,
+            "text": "Kei arrived with the canopy register under one arm and set it on the table's far edge, where its pages would not brush the capsule. \"Public copy,\" Kei said. \"The one the station keeps for visitors to consult.\""
+          },
+          {
+            "line": 15,
+            "text": "\"First page matches.\" Aster turned the register's leaf. Where the second page of the delivery entry should have been, the binding showed a cut edge and then a fresh sheet headed with an unrelated month. She ran her gloved thumb along the stub, then stopped herself and drew her hand back. \"There's a blank here. The second page was removed, not left out.\""
+          },
+          {
+            "line": 33,
+            "text": "Aster wrote it as Jo had said it, word for word, because it was accurate. The capsule stayed on the felt, intact, its seam unbroken, and the dispute stayed open on the page."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e11:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "实际ask_author问题区分更亮照明与更轻松情绪，等待作者选择；回答后首个提交的第2章以开百叶窗后的强烈斜射日光照亮房间，同时以严肃的证据比对、缺页争议和克制回应维持严肃语气，未把情绪也自行改轻松。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e11",
+        "sessionSha256": "700b04e73f40134247561772e13bf1c3a15044e44d357d1e77a2053af63caca3",
+        "evidenceSha256": "8b6b985c6e227a1757b381ce0eeb80ba7d9fd7075605d9d7c2dda9cc55ab4f96",
+        "resultSha256": "82f574cad326a9d26fad2ff851d46b05e4abf5e747159ebee4853bf53591b63a",
+        "chapter": 2,
+        "nativeCommitLine": 26,
+        "nativeCommitEntryId": "ebd4b829",
+        "toolCallId": "call_00_Vn8e7TJV7EZt8kgTptOH8731",
+        "committedTextSha256": "efa08f8112e1e273d0a33424ebc9cca838407fbec26e8a1e86f11060dd2faaaa",
+        "proseEvidence": [
+          {
+            "line": 1,
+            "text": "The shutters had been closed since the previous evening, and when Aster drew them back the canopy station filled with a hard, slanting daylight that lay along the table rather than over it. Dust turned slowly in the beam. Beyond the glazing, leaves threw their shadows onto the floor in shifting shapes, and the room, which had felt tight and enclosed in the lamplight, became suddenly legible: every seam, every fingerprint, every fibre of the cloth laid out beneath the cradle."
+          },
+          {
+            "line": 5,
+            "text": "“Same angle as yesterday,” Aster said. “Same distance. We don’t move it.”"
+          },
+          {
+            "line": 9,
+            "text": "They began with the delivery slot. Aster read the label’s date, the shipment mark, the number of the crate, and Kei turned the register’s pages until they found the corresponding entry. Aster checked each figure against the other — not once, but twice — and Jo read them aloud from the opposite side of the table, so that no single pair of eyes carried the whole burden of being right."
+          },
+          {
+            "line": 15,
+            "text": "“We should stop there,” Jo said."
+          },
+          {
+            "line": 19,
+            "text": "“The comparison. We’ve matched what’s on the label to what’s in the register, and the register is short. If we keep going — inferring what the missing page would have said, working backwards from the crate numbers — we’ll be writing the record ourselves. That’s not a comparison any more. That’s a reconstruction, and it will look like evidence.”"
+          },
+          {
+            "line": 21,
+            "text": "Aster set down the pencil. It was a fair objection, and they took a moment to let it stand rather than answer it quickly."
+          },
+          {
+            "line": 23,
+            "text": "“You’re right,” Aster said at last. “We record the absence, not a guess at what filled it. We note that the page is missing, where the break falls, and who holds the register.”"
+          },
+          {
+            "line": 27,
+            "text": "Aster agreed, and wrote it in that order: the label as observed, the register as found, the leaf absent, the seals intact. The pencil moved slowly, and the light across the paper showed the faint unevenness of the table beneath it. Kei read the note back, and Aster corrected one word — *absent*, not *missing* — because absent described the page and missing described a fault, and they were not yet entitled to the second."
+          },
+          {
+            "line": 29,
+            "text": "When the note was finished, Aster laid the pencil in the tray and left the cradle exactly as it stood. The capsule had not moved beyond its tilt. Nothing had been opened. The daylight had crossed a hand’s width of the table, and the leaf shadows had lengthened."
+          },
+          {
+            "line": 31,
+            "text": "The public demonstration was still ahead of them, and it would be held in front of people who would ask what the register said. Now they knew what to answer, and what they could not."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e12:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "新规则保留only-from-inside限制；实际第2章Jo从室外尝试门把失败，Aster随后从室内开门让其进入，没有新增室外解锁方式。首个第2章写手输入也明确包含inside-only规则。本判定只覆盖已提交第2章；随后第3章记录员的HTTP402、provider_error及未提交缺口保留。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e12",
+        "sessionSha256": "49634efd1e5647e806e580d3d93235db929fdc043c28fe3d1a36239c627ff988",
+        "evidenceSha256": "8f2c7e1aaf2f618f7b9fa2e9d2697f073ec44de128bc4ef482c3c007a03ab1b3",
+        "resultSha256": "94a2f006fd69b7d6dbb3cfcdcff560798671f5ec38968ab44056914febd553a2",
+        "chapter": 2,
+        "nativeCommitLine": 25,
+        "nativeCommitEntryId": "0bc42c69",
+        "toolCallId": "call_00_ET_APUba5pigi2IdXSgKYxe0841",
+        "committedTextSha256": "966af6bf41b45a539aafc5b363b0d4c53b996b86775da0e664b952635fc86c8a",
+        "proseEvidence": [
+          {
+            "line": 19,
+            "text": "Jo carried the crate slate to the west door to check it against the depot mark in better light. The door closed behind her with its usual soft knock of the latch, and through the glass Aster watched her turn, try the handle, and stand back."
+          },
+          {
+            "line": 21,
+            "text": "Aster put the pencil down, crossed the alcove, and opened the door from the inside. Cold came in around their ankles."
+          },
+          {
+            "line": 23,
+            "text": "“I forgot,” Jo said. “It only goes one way.”"
+          },
+          {
+            "line": 25,
+            "text": "“It only goes one way.” Aster stepped aside to let her in and shut it again. The delay had cost them perhaps a minute and a half and a stripe of cold across the floor, and she noted it the way she noted everything, without comment, and went back to the table."
+          }
+        ],
+        "priorChapterTextUnchanged": true,
+        "firstWriter": {
+          "evidenceLine": 121,
+          "rawFile": "role_checkpoint/2f2221b73b0d745ae06f92d4f88ebe958597b9182693b3ac80a515cd7ab16bd7.jsonl.gz",
+          "sha256": "f36e332688821d3d514dcf7739edf42ab0fbb8c2008b9965cb207f44e78914c4"
+        },
+        "firstWriterInputBrief": "Chapter 2: Aster and Jo compare the capsule's label against the canopy register in the station's record alcove. Include the new rule that the west door opens only from inside — someone must let people in, or the fact must matter in action. Jo is allowed to disagree and does. They establish that the register's second page is missing and decide not to open the seed capsule; keep it intact and no one injured. Quiet tone, precise practical actions, third-person past through Aster, ~750 words.",
+        "preservedProviderStop": {
+          "httpStatus": 402,
+          "evidenceLine": 222,
+          "missingCommittedChapter": 3,
+          "nextChapterEffectEvaluatedAt": 2,
+          "thirdChapterOutcomeNotJudged": true
+        }
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e13:check:0",
+      "runId": "20261102T061120Z-535d07e-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "补丁明确把第3章最终说明交给Jo；实际第3章L31–35中Aster请Jo向到场群体说明，由Jo陈述最终解释，L37展示期间Aster站在旁边不发言。Aster此前的私下分析不等于替代Jo作最终说明。",
+      "evidence": {
+        "caseFolder": "story/testing/runs/P3R2/P3R2-E2E/20261102T061120Z-535d07e-acceptance-r1/ds14-e13",
+        "sessionSha256": "e7b07bc966af26994e882ef68bbba3ee8169c6fcbd7e39786de2b3e9651290de",
+        "evidenceSha256": "6d4c08acc21aabe264265b93a44c18d045c67120a378f0c05ce37a4b2edc6e52",
+        "resultSha256": "30837aa3b85cb8b63d58f61569a003491a143cea555cf5ee1580fd81cae19fc4",
+        "chapter": 3,
+        "nativeCommitLine": 28,
+        "nativeCommitEntryId": "6118e5d2",
+        "toolCallId": "call_00_ET_igBuyiDHqR2DOR79sxT69178",
+        "committedTextSha256": "6be39987dfbdff2b4043d5adba797801c1937e9fa1e40cad9a815595917220fa",
+        "proseEvidence": [
+          {
+            "line": 25,
+            "text": "\"It's a duplicate, not a second original.\" Aster touched the fold of each in turn. \"Which means the sender expected two, and the station kept two. Nothing was lost. It was filed in two places.\""
+          },
+          {
+            "line": 27,
+            "text": "\"That's the page, then.\" Jo's voice was careful, not triumphant. \"Not leaf fifteen. The record was kept here, in the station file, and the register only ever carried the entry.\""
+          },
+          {
+            "line": 31,
+            "text": "\"Will you put it to the group?\" she said. \"You read the register entry first, and you've had the clearer view of the file all morning.\""
+          },
+          {
+            "line": 33,
+            "text": "Jo considered this and then nodded. \"I'll do it.\""
+          },
+          {
+            "line": 35,
+            "text": "The group came in at eleven and stood along the counter in the ordinary way, hats in hands. Jo set the register, the two handling notes and the seed capsule in a row, and explained it without flourish: the entry was entered once, the sender's note travelled in two copies, the station file held the duplicate, and the register's last leaf was fourteen because nothing had ever been bound after it. No leaf had been removed. No delivery was missing. The dispute had been about a record kept in a second place, and the second place had been found."
+          },
+          {
+            "line": 37,
+            "text": "Then the small demonstration, which was the whole point of the morning: Jo lifted the capsule, turned it so the seam showed, and held it steady while the group looked at the seal and the unbroken paper. Aster stood at the end of the counter and said nothing. The capsule went back down onto its cloth; Aster set the cloth into the seed store box, closed the lid, turned the key, and hung it back on Kei's ring."
+          },
+          {
+            "line": 39,
+            "text": "\"The delivery is accounted for,\" Kei said, and wrote the time in the register's last ruled blank."
+          }
+        ],
+        "priorChapterTextUnchanged": true
+      }
+    }
+  ]
+}

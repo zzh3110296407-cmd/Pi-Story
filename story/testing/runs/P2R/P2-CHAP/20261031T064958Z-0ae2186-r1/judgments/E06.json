@@ -1,0 +1,521 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T064958Z-0ae2186-r1",
+  "suiteId": "P2-CHAP",
+  "scores": [
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c02-r02:c02-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c02-r02:c02-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 69 lists \"Insomnia, forty-plus hours\" among current adverse-withdrawal cases. Draft line 3 sets the scene \"By six in the morning\" on the first distribution day, and line 65 says Kestrel General entered the withdrawal list at 06:40 that same morning. Under the supplied premise (L-9 and rule:mask_premise), masks become available on that first day; a patient cannot have 40+ hours of withdrawal insomnia by 06:40 on the first day unless they had already been without the Lull for 40+ hours before masks existed. The same patient and time cannot both just begin mask use that morning and have 40+ hours of withdrawal insomnia.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              65,
+              69
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "Line 69 now reads only \"Convulsions. Rigidity. Tremor. Insomnia.\" with no forty-plus-hour duration, so the impossible withdrawal timeline on the first distribution morning is gone."
+        },
+        "beforeDigest": "97e006ec2359ad7f5870fdab1d5a409fc1e958e1585e6943673c804d6bf82270",
+        "afterDigest": "a3ebeb43e1fcbcab18a651e78c45c06a9c1e05374a7585462ff8ad7ccb2d3525"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c02-r02:c02-r01-o02",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c02-r02:c02-r01-o02",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "scene_progress",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 49 says Soren's phone \"was already recording\" and had been since 5:40; line 47 gives Ruth's admission \"We did it to them,\" and line 55 gives her retraction only after line 51, when she sees the phone. The supplied chapter beat requires the colleague to admit the Lull was engineered and then retract \"before Soren can record the words.\" The same admission cannot be both captured by Soren's active recording and retracted before he can record it.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              47,
+              49,
+              51,
+              55
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Line 49 now establishes the phone was dead and that the room's security field killed live audio near the north wall; Soren is only powering it on when Ruth sees it, so her admission at line 47 precedes the retraction at line 55 without any active recording capturing the words."
+        },
+        "beforeDigest": "97e006ec2359ad7f5870fdab1d5a409fc1e958e1585e6943673c804d6bf82270",
+        "afterDigest": "a3ebeb43e1fcbcab18a651e78c45c06a9c1e05374a7585462ff8ad7ccb2d3525"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c03-r02:c03-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c03-r02:c03-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "改成诱饵瓶解决了同一配给瓶被砸又保存的问题，但仍称 only thing we had left that would pour，而同稿下一段 Gideon 腰侧仍有可饮用暗藏酒瓶；原观察含此持有数量冲突，未完全解决。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 109 says Gideon picks from Tull's cart \"the last of my ration, the one I'd saved instead of drinking\" and calls it the only pourable bottle he has left; line 99 similarly says Gideon poured the distraction beer. But lines 45-47 have Gideon give his issued ration bottle to Tull, and line 53 has Tull crack that bottle against the wheel hub and spill it, so Gideon's ration is already gone and cannot also be saved in the cart. Lines 9 and 111 place his remaining hidden bottle against his hip, not in Tull's cart. Under the same departure and return, the same bottle cannot be both given away and smashed and still be in the cart, nor can the hip bottle be simultaneously absent from his possession.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              9,
+              45,
+              47,
+              53,
+              99,
+              109,
+              111
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 109 now identifies the bottle as a bait bottle from Tull's cart, not Gideon's saved ration; Tull spills Gideon's issued bottle at line 53, and line 99 attributes the distraction spill to Tull. The prior conflict between the given-away ration and a saved ration bottle is gone."
+        },
+        "beforeDigest": "105023b37600ab473d1bd7b0bcc9dbc1fafbbe09f3befd26a939cf66577ece16",
+        "afterDigest": "837d5e8ad98dcc4982f3706c3b2ed3202df9e4f70179b22d61e7813c743ae5ea"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c04-r02:c04-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c04-r02:c04-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 81 says \"Eleven of us in a stone room,\" and line 103 counts \"eleven\" heads for the Thursday château party. State F-15 supplies the raid's small beer for eleven, and state F-16 records that the raid set out eleven and returned ten after Pell was killed; no replacement is supplied. The same raid roster after Pell's death cannot still contain eleven living members without an addition that the supplied state does not record.",
+          "scope": "local",
+          "id": "c04-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              81,
+              103
+            ],
+            "stateRefs": [
+              "F-15",
+              "F-16"
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c04-r01-o01",
+          "resolved": true,
+          "note": "The revised lines now consistently give ten team members in the château and count ten heads after the retreat, matching the roster after Pell's death in the supplied state."
+        },
+        "beforeDigest": "d483aa6d2ea62bbffaf0dbc2df1a4a08b4fab36a8869378d0e5465d5fdd10c06",
+        "afterDigest": "e1c918a52b03016ba14696f8de4ac5542c036b008eeab112e0eba0f64a2aea1b"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c03-r02:c03-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c03-r02:c03-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "author_constraints",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft lines 27 and 29 present Footnote 3, about the captcha as a bouncer, and Footnote 4, about §2.2(d) appearing under both provisional and permanent naming; neither footnote says the audit is confidential or asks for a favourite childhood memory. The chapter-3 intent beat requires a mock footnote that insists the audit is confidential and then asks for a favourite childhood memory as proof. The supplied footnote texts do not contain that required content, and no other footnote in the draft supplies it, so the chapter fails the specified beat.",
+          "scope": "local",
+          "id": "c03-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              27,
+              29
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c03-r01-o01",
+          "resolved": true,
+          "note": "Line 27's footnote now explicitly states that the audit is confidential and asks for a favourite childhood memory as proof of understanding confidentiality, satisfying the chapter-3 beat."
+        },
+        "beforeDigest": "e28c3ce27e46ccb539ed83e4119a7113578e4a2b1d7639b950c3c1c0e86ad9de",
+        "afterDigest": "bc877911efbc8dc342c055973f4566f6766eec48fcc7d85ba007326795240261"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c01-r02:c01-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c01-r02:c01-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 5, with Dave still outside in the wet road (line 3), says all four front windows are streaked and that he sees the pale ribbons from the lane. Draft line 39 says that when Dave goes outside to look from the lane the windows are clear and that the streaks exist only from inside. The same front windows, viewed by the same character from the same outside vantage, cannot both show streaks and be clear.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              5,
+              39
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 5 no longer asserts that the persistent streaks or pale ribbons are visible from the lane; it now describes an ordinary dullness and a transient impression that resolves to 'only windows again,' leaving line 39's inside-only streaks intact."
+        },
+        "beforeDigest": "5c3b262a9b9b0899f8da3bbbd369bb5a31c0c73436c3475824a6929e5590130b",
+        "afterDigest": "c4241533af282452630f4572d60c48631d8da188d753c08764089c5286415ae9"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c01-r02:c01-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c01-r02:c01-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 3 says the third super-minion wave is already waddling up the lane at 26:10. Draft lines 23–29 then show a super wave only then hitting the choke and dying, and draft lines 49–57 have Sana call the “next wave,” which crashes into the inhibitor stump as the chapter ends. The applicable intent beat requires Sana to call the first super wave and the chapter to stop as that first wave crashes after Vex kills LeBlanc. Under the same 26:10 start and continuing sequence, the first wave cannot already be the third wave and also be cleared before the LeBlanc kill while a later “next wave” is the one crashing at the chapter end.",
+          "scope": "local",
+          "id": "c01-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              3,
+              23,
+              29,
+              49,
+              57
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o01",
+          "resolved": true,
+          "note": "Line 3 now says the lane is black with minions \"queued for the first super wave,\" not a third wave. The wave that hits the choke and dies at lines 23–29 is described as ordinary minions (two casters and a cannon), and Sana's line 49 call of the \"First super wave\" leads into the chapter-ending crash at line 57, matching the beat sequence."
+        },
+        "beforeDigest": "08af38ab05183a13860899899defce7060b0c2e16f1d8fe5e956eb9f47310400",
+        "afterDigest": "0d36c7928879ab5b7aa8170085f28d766639ec28c6e2d147c3ae017cf4ce8898"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c01-r02:c01-r01-o02",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c01-r02:c01-r01-o02",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "原观察把一般机制评论当视角错误属误报；修订稿确已将相关表达改成第一人称过去时，被指形式现已不存在，按当前稿复查结论成立，误报计入 E03。",
+      "evidence": {
+        "originalObservation": {
+          "category": "narrative_style",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 21 says “That is what my whole game is” in present tense; line 39 says “The leap is the whole character. You press the button…” in present tense and second person; line 47 says “Full-damage Rengar doesn't win by being safe. It wins…” in present tense. Bible key fw:first_person requires first person, past tense, limited to Vex. These generalized present-tense/second-person assertions cannot be both the required past-tense first-person narration and generic present-tense commentary under the same narrator and time.",
+          "scope": "local",
+          "id": "c01-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              21,
+              39,
+              47
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c01-r01-o02",
+          "resolved": true,
+          "note": "The cited passages are now past-tense first-person narration: line 21 reads \"That was what my whole game had become\" and \"it was at twenty-two\"; line 39 reads \"The leap was the whole character. I pressed the button…\"; line 47 reads \"Full-damage Rengar didn't win by being safe. It won…\". The second-person present-tense commentary is gone."
+        },
+        "beforeDigest": "08af38ab05183a13860899899defce7060b0c2e16f1d8fe5e956eb9f47310400",
+        "afterDigest": "0d36c7928879ab5b7aa8170085f28d766639ec28c6e2d147c3ae017cf4ce8898"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o01",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o01",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "timeline_plot",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 1 anchors the scene at game time 26:20, while draft line 21 says 'Thirty-two minutes is a long time to be a crocodile' and draft line 29 says the enemy came in 'at thirty-two minutes.' The chapter intent and the game-clock framing require this continuous first-wave scene to begin around 26:20. The same continuous game time cannot be both 26:20 and thirty-two minutes with no time skip established between line 1 and the fight.",
+          "scope": "local",
+          "id": "c02-r01-o01",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              1,
+              21,
+              29
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o01",
+          "resolved": true,
+          "note": "The revised lines now consistently anchor the scene at twenty-six minutes: line 21 says twenty-six minutes and line 29 says the enemy came in at twenty-six minutes, matching line 1's 26:20."
+        },
+        "beforeDigest": "09e68747217a090411b5776ebf893c97b5029e9e99d7369432a4f607b2f5dce0",
+        "afterDigest": "76ffedb52acb8a4e1401d4d52d7019d3cb9cf1a2f3a3329c888f9f83620f4d4f"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o02",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o02",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "修订正文已消除原观察的具体冲突，复查结论成立。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 9 gives Bo's CS as 'One-fifty-three' and draft line 33 raises it to 'One-fifty-eight' during the same fight. Draft line 53 then gives Bo's own completed CS as 'Sixteen hundred CS. Sixteen-hundred' and 'Sixteen-forty,' with a plan to reach 'seventeen hundred.' These are the same character's same running count within seconds; it cannot jump from 158 to 1600/1640/1700 without a large number of new minion kills that the draft does not narrate.",
+          "scope": "local",
+          "id": "c02-r01-o02",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              9,
+              33,
+              53
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o02",
+          "resolved": true,
+          "note": "Bo's count now progresses from 153 at line 9 to 158 at line 33 and then 160/162 at line 53 after the wave dies; the impossible 1600/1640/1700 figures are gone."
+        },
+        "beforeDigest": "09e68747217a090411b5776ebf893c97b5029e9e99d7369432a4f607b2f5dce0",
+        "afterDigest": "76ffedb52acb8a4e1401d4d52d7019d3cb9cf1a2f3a3329c888f9f83620f4d4f"
+      }
+    },
+    {
+      "metric": "E06",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o03",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c02-r02:c02-r01-o03",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "逐条读取实际改动后，原客观冲突已消除，resolved:true 正确。",
+      "evidence": {
+        "originalObservation": {
+          "category": "factual_details",
+          "severity": "major",
+          "objective": true,
+          "impact": "Draft line 57 says the enemy 'had spent a Baron and three super waves and a Draven,' asserting that three super waves have already been expended. Draft lines 47 and 59 state that the second super wave is still queued, and draft line 61 calls it the 'second super wave, already walking.' At the same post-first-wave moment, the enemy cannot have already spent three super waves while the second is only now queued and approaching.",
+          "scope": "local",
+          "id": "c02-r01-o03",
+          "by": "editor",
+          "evidence": {
+            "lines": [
+              47,
+              57,
+              59,
+              61
+            ]
+          }
+        },
+        "recheck": {
+          "observationId": "c02-r01-o03",
+          "resolved": true,
+          "note": "Line 57 now says the enemy spent one super wave, while lines 47, 59 and 61 consistently establish that the second wave is still queued or approaching."
+        },
+        "beforeDigest": "09e68747217a090411b5776ebf893c97b5029e9e99d7369432a4f607b2f5dce0",
+        "afterDigest": "76ffedb52acb8a4e1401d4d52d7019d3cb9cf1a2f3a3329c888f9f83620f4d4f"
+      }
+    }
+  ]
+}

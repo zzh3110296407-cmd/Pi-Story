@@ -1,0 +1,161 @@
+{
+  "id": 284,
+  "language": "en",
+  "task_type": "completion",
+  "prompt": "Write a roughly 8,000–10,000 word story about a young guy who grew up in Detroit and learned never to judge a book by its cover but always stay ready to defend himself. Start your story the moment he steps off a bus in New York, recalling the night his dad showed him how to turn household items into weapons. End with him facing a would-be mugger on a city street and deciding between violence and understanding. Include at least two flashbacks to Detroit’s struggling neighborhoods, show his internal conflict over first impressions, and weave in the theme that everyone has a backstory you don’t see at first glance.",
+  "source": {
+    "file": "D:\\AI\\Story Dome\\Dataset\\ConStory-Bench\\Dataset\\valid\\prompts.parquet",
+    "sha256": "c3fb6f336d66b95ed022c4ee74eb09e17da604eafed2986d746e10dff8692ddf",
+    "rowIndex0": 9,
+    "rowNumber1": 10,
+    "id": 284
+  },
+  "constraints": [
+    {
+      "gid": "284-g01",
+      "kind": "global",
+      "statement": "roughly 8,000–10,000 word story",
+      "quote": "roughly 8,000–10,000 word story",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g02",
+      "kind": "given_fact",
+      "statement": "a young guy who grew up in Detroit",
+      "quote": "a young guy who grew up in Detroit",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g03",
+      "kind": "given_fact",
+      "statement": "He has learned not to judge people by first appearances.",
+      "quote": "learned never to judge a book by its cover",
+      "note": "Atomic interpretation retains all explicit qualifications in the source span."
+    },
+    {
+      "gid": "284-g04",
+      "kind": "given_fact",
+      "statement": "always stay ready to defend himself",
+      "quote": "always stay ready to defend himself",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g05",
+      "kind": "story",
+      "statement": "Start your story the moment he steps off a bus in New York",
+      "quote": "Start your story the moment he steps off a bus in New York",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g06",
+      "kind": "story",
+      "statement": "At the opening moment when he steps off the bus in New York, he recalls the night his dad taught him to turn household items into weapons.",
+      "quote": "Start your story the moment he steps off a bus in New York, recalling the night his dad showed him how to turn household items into weapons.",
+      "note": "AI代核修订：回忆须与开场下车时刻相连；不能仅在故事任意位置补一次父亲回忆。"
+    },
+    {
+      "gid": "284-g07",
+      "kind": "story",
+      "statement": "End with him facing a would-be mugger on a city street",
+      "quote": "End with him facing a would-be mugger on a city street",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g08",
+      "kind": "story",
+      "statement": "During the final street encounter with the would-be mugger, he decides between violence and understanding.",
+      "quote": "End with him facing a would-be mugger on a city street and deciding between violence and understanding.",
+      "note": "AI代核修订：补回结尾时点和抢劫者情境；原文没有指定最终选暴力还是理解。"
+    },
+    {
+      "gid": "284-g09",
+      "kind": "story",
+      "statement": "at least two flashbacks to Detroit’s struggling neighborhoods",
+      "quote": "at least two flashbacks to Detroit’s struggling neighborhoods",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g10",
+      "kind": "story",
+      "statement": "show his internal conflict over first impressions",
+      "quote": "show his internal conflict over first impressions",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "284-g11",
+      "kind": "story",
+      "statement": "Weave in the theme that everyone has a backstory that is not visible at first glance.",
+      "quote": "everyone has a backstory you don’t see at first glance",
+      "note": "AI代核修订：标明这是需要贯穿的主题，不把主题命题当成必须由叙述者逐字宣告的事实。"
+    }
+  ],
+  "authorBible": [
+    {
+      "bid": "284-b1",
+      "kind": "character",
+      "key": "char:young_man",
+      "statement": "a young guy who grew up in Detroit",
+      "quote": "a young guy who grew up in Detroit",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "284-b2",
+      "kind": "character",
+      "key": "char:father",
+      "statement": "his dad",
+      "quote": "his dad",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "284-b3",
+      "kind": "place",
+      "key": "place:detroit",
+      "statement": "Detroit",
+      "quote": "Detroit",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "284-b4",
+      "kind": "place",
+      "key": "place:new_york",
+      "statement": "New York",
+      "quote": "New York",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "284-b5",
+      "kind": "character",
+      "key": "char:would_be_mugger",
+      "statement": "a would-be mugger",
+      "quote": "a would-be mugger",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "284-b6",
+      "kind": "relationBaseline",
+      "key": "rel:father->young_man",
+      "statement": "The father is the young protagonist’s dad.",
+      "quote": "his dad",
+      "note": "明确给出的父子关系；不补写父亲姓名、现状或动机。"
+    }
+  ],
+  "length": {
+    "minWords": 8000,
+    "maxWords": 10000,
+    "approximate": true,
+    "chapterCount": null,
+    "quote": "roughly 8,000–10,000 word story"
+  },
+  "ambiguities": [],
+  "annotation": {
+    "kind": "AI_labelled_then_user_delegated_AI_review",
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "humanReviewed": false,
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewDate": "2026-10-29",
+    "reviewSource": "labels/delegated-review.json",
+    "authorizationSource": "labels/freeze-authorization.json",
+    "state": "frozen_with_author_authorization"
+  }
+}

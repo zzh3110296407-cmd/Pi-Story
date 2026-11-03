@@ -1,0 +1,173 @@
+{
+  "id": "ds14-e15-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {},
+      "id": "tool:1793597274153:kkgutwnzjod"
+    },
+    {
+      "reply": "Current result: goal_off."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {},
+    "id": "tool:1793597274153:kkgutwnzjod"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 2,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Inject one local writer stream interruption after generation starts, not a parse error or pre-generation rejection.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "Exactly one transport retry occurs automatically, with a fresh reservation and retryOf pointing to the first call.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "Both attempts remain in details.calls and the session journal; unknown first usage is charged conservatively.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 5,
+      "check": "The second writer attempt succeeds and chapter 2 commits exactly once.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 2,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "fce735b141ff1b3e6227e88c814aebe720ed1c30f3389e19da11838ab0f888e4",
+    "sessionSha256": "641e61fef21e4b659b35f6c7c9b0ea39361ee7d0f705d779d1b510812640cca6",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

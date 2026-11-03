@@ -1,0 +1,1096 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "batchRunId": "20261101T103609Z-9a54cb7-acceptance-r1",
+  "runIds": [
+    "20261101T103609Z-9a54cb7-acceptance-r1-837",
+    "20261101T103609Z-9a54cb7-acceptance-r1-527"
+  ],
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build exposed. No independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-BOOK-837-527@1",
+    "promptPath": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-ai/protocol.md",
+    "promptSha256": "60cc5f624b01770613cbe0590466045f13060d8c1e6566993f3e02ba17f5e338",
+    "independence": "Separate judging chat from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": false,
+  "scores": [
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_bZdbj9eFul0CBljFkCtc6886",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "开书后按作者的Rengar翻盘提示整理台账，服务后续圣经与大纲准备，任务相关。此项只判调用相关性，不重判T06条目覆盖或限定是否准确。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "7fa9e9c3",
+          "sessionLine1": 6,
+          "toolCallId": "call_00_bZdbj9eFul0CBljFkCtc6886",
+          "ordinal": 1
+        },
+        "nativeResult": {
+          "entryId": "c43cba1b",
+          "sessionLine1": 7
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "在台账提交后建立该场Rengar比赛的人物、场地和规则，目标与当前开书阶段相关；两项kind=line导致DOMAIN_INVALID，仍保留程序无效标记，不能因相关性为真而免扣。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "6395edfb",
+          "sessionLine1": 8,
+          "toolCallId": "call_00_1D4EO8tmA5T47viXgIUV3472",
+          "ordinal": 2
+        },
+        "nativeResult": {
+          "entryId": "0be74366",
+          "sessionLine1": 9
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "收到字段校验错误后重交圣经，两处kind从line修为conflictLine，其余设定保持，继续完成当前开书任务，相关且有明确修正。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "db649b20",
+          "sessionLine1": 10,
+          "toolCallId": "call_00_vPAvVYCHbNLA4FJ5bYUR5730",
+          "ordinal": 3
+        },
+        "nativeResult": {
+          "entryId": "eeded119",
+          "sessionLine1": 11
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_j7Bx89Bqd7dQbcHblBkR9133",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "把既有比赛构思组织为6章大纲，覆盖复活、逐次大招扩大优势、三波超级兵、防守转攻与第二座抑制器等当前写作任务，调用相关。此处不把情节安排的质量混作工具相关性。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "c5600f86",
+          "sessionLine1": 12,
+          "toolCallId": "call_00_j7Bx89Bqd7dQbcHblBkR9133",
+          "ordinal": 4
+        },
+        "nativeResult": {
+          "entryId": "d33f67af",
+          "sessionLine1": 13
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_oZxELv6164hs7XrYxUhS5960",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "当前尚未提交正文，调用write_next_chapter写第1章，brief从丢失Baron后的复活与队伍困境展开，属于已定目标的下一章。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "35c76d33",
+          "sessionLine1": 15,
+          "toolCallId": "call_00_ET_oZxELv6164hs7XrYxUhS5960",
+          "ordinal": 5
+        },
+        "nativeResult": {
+          "entryId": "310187dd",
+          "sessionLine1": 16
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_0ddxEcsWXinWOBU0aJ7J4074",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第1章已提交后续写第2章，brief推进大招击杀滚雪球及掉线队友回归，承接现有比赛大纲。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "f09a187d",
+          "sessionLine1": 19,
+          "toolCallId": "call_00_0ddxEcsWXinWOBU0aJ7J4074",
+          "ordinal": 6
+        },
+        "nativeResult": {
+          "entryId": "8a9ad253",
+          "sessionLine1": 20
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 1,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_kVtMYA2MYAKsKZhyHSZ54499",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第2章已提交后写第3章的三波超级兵防守，与原提示和当前章节计划直接相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "754db04b",
+          "sessionLine1": 22,
+          "toolCallId": "call_00_ET_kVtMYA2MYAKsKZhyHSZ54499",
+          "ordinal": 7
+        },
+        "nativeResult": {
+          "entryId": "1603bf55",
+          "sessionLine1": 23
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 2,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_rP9KWko83djXhrWzxWm93965",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第3章已提交后尝试第4章，brief推进大后期团战与第一座敌方抑制器；后续记录员TRANSPORT_FAILURE不使原写作目标变成无关调用，也不按参数无效处理这次流程内失败。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "bd561e3e",
+          "sessionLine1": 25,
+          "toolCallId": "call_00_ET_rP9KWko83djXhrWzxWm93965",
+          "ordinal": 8
+        },
+        "nativeResult": {
+          "entryId": "910e934a",
+          "sessionLine1": 26
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 3,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_MzsrAdA0ScoAQBbiJ0SN1443",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第4章前次未提交，收到记录员TRANSPORT_FAILURE后仍针对第4章作一次重试，未跳到第5章或覆盖已提交正文；实际随后提交第4章。属于有依据的恢复，相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "8ef126b5",
+          "sessionLine1": 27,
+          "toolCallId": "call_00_MzsrAdA0ScoAQBbiJ0SN1443",
+          "ordinal": 9
+        },
+        "nativeResult": {
+          "entryId": "770d1142",
+          "sessionLine1": 28
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 3,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_AoTjOxEy0ioDEqUKToys9451",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第4章已提交后写第5章，brief落实侧线偷第二座抑制器及回城计时，推进当前成书目标，相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "d8318d3b",
+          "sessionLine1": 30,
+          "toolCallId": "call_00_ET_AoTjOxEy0ioDEqUKToys9451",
+          "ordinal": 10
+        },
+        "nativeResult": {
+          "entryId": "2a988d5f",
+          "sessionLine1": 31
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 4,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_UFjKTUjsry0VNAcHrVYv9201",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-837",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "已提交5章、目标6章时请求第6章收束双塔与胜局，工具名、brief和进度均相关。调用已经真实发出，虽封存时尚无最终工具结果，仍可判相关；不据此推断第6章成功、失败或后续恢复。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/session.jsonl.gz",
+          "sha256": "c0f599ae621621cd12578249a7b316239ff234840abb3c761fe267d1a363df80"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/raw/evidence.jsonl.gz",
+          "sha256": "9a745a171688b745b430fccb19ac5c67a6ac2c5efd4dd3486b89fb5afa49e5d7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/result.json",
+          "sha256": "115b2c551040bc6ed03e234a8d628596290af48c3c579b26bd8bd717a34ffad2"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/837/finalization.json",
+          "sha256": "d6eb7529447dffecc4de5c9f57644a99348bd09b1ec79762f41b9b1a706370c2"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/837.json",
+          "sha256": "5acf65021e831b49e3613f040fb60a7f74f3d023c2bc2538e438ec1fb1ac9674"
+        },
+        "nativeCall": {
+          "entryId": "0843daf0",
+          "sessionLine1": 33,
+          "toolCallId": "call_00_UFjKTUjsry0VNAcHrVYv9201",
+          "ordinal": 11
+        },
+        "nativeResult": null,
+        "progressAtCall": {
+          "lastCommittedChapter": 5,
+          "targetChapter": 6
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_Gh4BIdndrRvVECCqmym53572",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "开书时按Dave搬入旧宅、鬼影、伴侣嘲弄和欲望／怀疑等提示建立台账，服务当前故事任务，相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "3df7ac16",
+          "sessionLine1": 6,
+          "toolCallId": "call_00_Gh4BIdndrRvVECCqmym53572",
+          "ordinal": 1
+        },
+        "nativeResult": {
+          "entryId": "f6c9b613",
+          "sessionLine1": 7
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "台账后尝试提交Dave、Mira及旧宅幽灵的初始圣经，原生argumentsError仍保存具体故事内容，因此可判其目的相关。参数JSON损坏导致DOMAIN_INVALID，程序无效仍计入T04并集；不是把空args视为有效。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "b9955acb",
+          "sessionLine1": 8,
+          "toolCallId": "call_00_ZkkNRMZrg4cTwXTZOzS50943",
+          "ordinal": 2
+        },
+        "nativeResult": {
+          "entryId": "453b0ef1",
+          "sessionLine1": 9
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "按JSON错误提示重交一个可解析的完整圣经并成功。失败的原圣经没有落库，原提示也未指定幽灵姓名；自选Eleanor改为Elspeth不构成改写既有正史，调用仍服务当前开书。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "394fac4c",
+          "sessionLine1": 10,
+          "toolCallId": "call_00_8iM6cMQlR7S1y0YKgyn93983",
+          "ordinal": 3
+        },
+        "nativeResult": {
+          "entryId": "8a74baff",
+          "sessionLine1": 11
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_EAbYKE7j8PatJTwt2ARJ9297",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "提交7章鬼故事大纲，组织旧宅异常、伴侣关系裂痕、幽灵接触、怀疑与渴望以及收束，属于当前写作规划，相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "1a085dfa",
+          "sessionLine1": 12,
+          "toolCallId": "call_00_EAbYKE7j8PatJTwt2ARJ9297",
+          "ordinal": 4
+        },
+        "nativeResult": {
+          "entryId": "d60ebc5a",
+          "sessionLine1": 13
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": null
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_CVxfmLoFS8tSMY21IIUD0640",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第1章仍未写时patch_outline修正大纲中的中英文草稿残留，给出理由并只改未写第1章的purpose／turn。是与当前任务相关的规划清理，不是重复或无关修改。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "a2556934",
+          "sessionLine1": 15,
+          "toolCallId": "call_00_CVxfmLoFS8tSMY21IIUD0640",
+          "ordinal": 5
+        },
+        "nativeResult": {
+          "entryId": "4762906f",
+          "sessionLine1": 16
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_2jzjCSlSJODux39WtW5w6533",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "未有正文提交时写第1章：搬家、擦不净的窗痕、移动扶手椅与最初鬼影，匹配当前大纲和提示。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "8b0773be",
+          "sessionLine1": 18,
+          "toolCallId": "call_00_2jzjCSlSJODux39WtW5w6533",
+          "ordinal": 6
+        },
+        "nativeResult": {
+          "entryId": "51d374bf",
+          "sessionLine1": 19
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 0,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_JOj1paFhQusQDoNZA9r58438",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第1章已提交后写第2章，brief推进墓地日常、物件位移与Mira嘲弄，承接既有故事。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "8de8e95b",
+          "sessionLine1": 21,
+          "toolCallId": "call_00_JOj1paFhQusQDoNZA9r58438",
+          "ordinal": 7
+        },
+        "nativeResult": {
+          "entryId": "57cc2c3f",
+          "sessionLine1": 22
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 1,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_xlcQXta2rm2GGY6itry21712",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第2章后写第3章，brief推进幽灵命名、尊重与回应，以及伴侣关系裂痕，服务当前章节计划。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "796b7cdf",
+          "sessionLine1": 24,
+          "toolCallId": "call_00_xlcQXta2rm2GGY6itry21712",
+          "ordinal": 8
+        },
+        "nativeResult": {
+          "entryId": "2550c28e",
+          "sessionLine1": 25
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 2,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_rT4Iwq45cOhPjqingmL35056",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第3章后写第4章，brief推进墓地探访与幽灵完整显现，仍为当前大纲的下一章。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "f38eb5df",
+          "sessionLine1": 27,
+          "toolCallId": "call_00_ET_rT4Iwq45cOhPjqingmL35056",
+          "ordinal": 9
+        },
+        "nativeResult": {
+          "entryId": "80670631",
+          "sessionLine1": 28
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 3,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_jmUfHZex5HFpHqeHlSjT9093",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第4章后写第5章，brief要求克制的感官接触和怀疑、欲望并存，与作者所要的幽灵亲密相遇直接相关。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "f21a627e",
+          "sessionLine1": 30,
+          "toolCallId": "call_00_ET_jmUfHZex5HFpHqeHlSjT9093",
+          "ordinal": 10
+        },
+        "nativeResult": {
+          "entryId": "bb7fbc5a",
+          "sessionLine1": 31
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 4,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_OfCdS330RskvbqjZQgdO5900",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第5章后写第6章，brief处理接触后的怀疑与欲望、伴侣的最后通牒，继续当前故事主线。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "687cb863",
+          "sessionLine1": 33,
+          "toolCallId": "call_00_ET_OfCdS330RskvbqjZQgdO5900",
+          "ordinal": 11
+        },
+        "nativeResult": {
+          "entryId": "de1dfdb3",
+          "sessionLine1": 34
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 5,
+          "targetChapter": 7
+        }
+      }
+    },
+    {
+      "metric": "T04",
+      "component": "relevance",
+      "sampleId": "call_00_ET_4YDaqa7Xkfqz6VS4DKiw8019",
+      "runId": "20261101T103609Z-9a54cb7-acceptance-r1-527",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "已提交6章、目标7章时写最后第7章，brief收束尊重、分离和未决的信与疑，没有超过目标或另启故事；实际完成第7章并goal_reached停止。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/session.jsonl.gz",
+          "sha256": "105d42a2b3b941b05457a7d151dedb8c702fca6ca7a8d8f76d04ea93499c5404"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/raw/evidence.jsonl.gz",
+          "sha256": "15f4f55a1db64c14d966710868f4c48c8db484d683ad61def63518ebe714fe51"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/result.json",
+          "sha256": "042fad5b6a771324ed2dff45a0f1538abfa756f977c5f52efaa474c6b522d395"
+        },
+        "finalization": {
+          "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/527/finalization.json",
+          "sha256": "e64dcb5c0a467a710b84e5e13e77a4cac48c532eacfbfe2bbd1a91d45ac2e955"
+        },
+        "sourcePrompt": {
+          "path": "story/testing/datasets/DS08-opening-prompts/v2/acceptance/527.json",
+          "sha256": "8da344230e2c76fddbc7f278ac23a7144c9fc618b34ff06a75981dec1f4c8979"
+        },
+        "nativeCall": {
+          "entryId": "2f0d2cea",
+          "sessionLine1": 36,
+          "toolCallId": "call_00_ET_4YDaqa7Xkfqz6VS4DKiw8019",
+          "ordinal": 12
+        },
+        "nativeResult": {
+          "entryId": "4778fe32",
+          "sessionLine1": 37
+        },
+        "progressAtCall": {
+          "lastCommittedChapter": 6,
+          "targetChapter": 7
+        }
+      }
+    }
+  ],
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/approval.json",
+    "sha256": "ba62615b0d2a199785ee968c5afc03f3100105d4056a2bf3fccf9da7b1155690",
+    "conditionSatisfied": true
+  },
+  "sourcePreliminary": {
+    "commit": "63ca3c7a3f021a68965caf95cdfb37d3db5451b6",
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-ai/T04-preliminary.json",
+    "sha256": "4092293f6337889f7003315795c26eeffce2c964dc314575209f5e2b91e21055"
+  },
+  "evidenceErratum": {
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/evidence-erratum.json",
+    "sha256": "f7209c193c82b468d19635ccd393c3f4642401a3875390d91f3e1e024df53d08"
+  }
+}

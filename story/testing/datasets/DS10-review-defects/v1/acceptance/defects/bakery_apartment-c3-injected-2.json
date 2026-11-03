@@ -1,0 +1,92 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "bakery_apartment-c3-injected-2",
+  "storyId": "bakery_apartment",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "43080dd9cc0d05ba49e98b0d5dee50370b346111e21671253130d13b99fd4557",
+    "path": "acceptance/chapters/bakery_apartment-c3.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "bakery_apartment-c3-injected-2-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Naomi opened the bakery before dawn.",
+      "changed": "Naomi opened the bakery before dawn. The unsigned lease transferred to a new tenant automatically on the landlord’s spoken instruction, without either adult heir signing.",
+      "spans": [
+        {
+          "original": "Naomi opened the bakery before dawn.",
+          "changed": "Naomi opened the bakery before dawn. The unsigned lease transferred to a new tenant automatically on the landlord’s spoken instruction, without either adult heir signing.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "The bakery lease can change only after both adult heirs sign the register."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: The bakery lease can change only after both adult heirs sign the register."
+        }
+      ],
+      "reason": "Unquoted actual-world narration contradicts the explicit supplied physical rule, with no hypothetical or reported-speech wrapper.",
+      "lines": [
+        1
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "bakery_apartment-c3-injected-2-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Naomi knew the bakery had not been sold.",
+      "changed": "Naomi knew the bakery had not been sold. Ruth died at that moment, and the family confirmed that she would never wake again.",
+      "spans": [
+        {
+          "original": "Naomi knew the bakery had not been sold.",
+          "changed": "Naomi knew the bakery had not been sold. Ruth died at that moment, and the family confirmed that she would never wake again.",
+          "lines": {
+            "start": 7,
+            "end": 7
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Ruth alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death directly violates the author’s explicit keep-alive requirement for this named person.",
+      "lines": [
+        7
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

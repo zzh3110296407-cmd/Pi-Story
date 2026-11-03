@@ -1,0 +1,24 @@
+{
+	"modifiedBaseline": [
+		{ "path": "AGENTS.md", "reason": "本项目规则优先于保留的Pi规则" },
+		{ "path": "CONTRIBUTING.md", "reason": "独立仓库移除上游贡献记录" },
+		{ "path": "SECURITY.md", "reason": "独立仓库不继承上游安全报告流程" },
+		{ "path": ".pi/*", "reason": "独立仓库移除上游开发辅助记录" },
+		{ "path": ".husky/*", "reason": "独立仓库移除上游提交与发布钩子" },
+		{ "path": ".github/*", "reason": "独立仓库移除上游贡献及发布流程" },
+		{ "path": "README.md", "reason": "本项目入口与上游说明共存" },
+		{ "path": "package.json", "reason": "根只读上游检查入口" },
+		{ "path": ".gitignore", "reason": "忽略项目的隔离依赖和生成物" },
+		{ "path": "LICENSE", "reason": "本项目AGPL许可，Pi原MIT另存" },
+		{ "path": ".github/workflows/*", "reason": "P1停用继承的上游工作流" },
+		{ "path": ".github/workflows-disabled/*", "reason": "上游工作流原样归档" }
+	],
+	"newPaths": [
+		{ "path": "story/*", "reason": "故事项目代码与工具链" },
+		{ "path": "p0/*", "reason": "P0验证探针" },
+		{ "path": "docs/*", "reason": "项目ADR和阶段结果" },
+		{ "path": ".github/workflows-disabled/*", "reason": "停用工作流及来源说明" },
+		{ "path": "LICENSE.pi", "reason": "保留Pi原MIT全文" },
+		{ "path": "THIRD_PARTY_NOTICES.md", "reason": "第三方来源与许可" }
+	]
+}

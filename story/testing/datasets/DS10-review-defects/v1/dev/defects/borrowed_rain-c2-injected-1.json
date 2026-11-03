@@ -1,0 +1,84 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "borrowed_rain-c2-injected-1",
+  "storyId": "borrowed_rain",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "534b0e3a5f79d8d7ecb3fcca4c560db68691bc64658350372d93c42c6e3ffc93",
+    "path": "dev/chapters/borrowed_rain-c2.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "borrowed_rain-c2-injected-1-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera descended into the dry cistern.",
+      "changed": "Sera descended into the dry cistern. The glass seed released rain although nobody had offered it any memory.",
+      "spans": [
+        {
+          "original": "Sera descended into the dry cistern.",
+          "changed": "Sera descended into the dry cistern. The glass seed released rain although nobody had offered it any memory.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        }
+      ],
+      "reason": "Actual-world narration violates the supplied physical rule.",
+      "lines": [
+        1
+      ]
+    },
+    {
+      "id": "borrowed_rain-c2-injected-1-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera knew a freely offered memory was required before the seed would open.",
+      "changed": "Sera knew a freely offered memory was required before the seed would open. Mael died beside the open book before anyone could help him.",
+      "spans": [
+        {
+          "original": "Sera knew a freely offered memory was required before the seed would open.",
+          "changed": "Sera knew a freely offered memory was required before the seed would open. Mael died beside the open book before anyone could help him.",
+          "lines": {
+            "start": 7,
+            "end": 7
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Mael alive through the end of chapter three."
+        }
+      ],
+      "reason": "A permanent death contradicts the named author keep-alive requirement.",
+      "lines": [
+        7
+      ]
+    }
+  ]
+}

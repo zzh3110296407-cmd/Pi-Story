@@ -1,0 +1,367 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "unclaimed_lane-c2",
+  "storyId": "unclaimed_lane",
+  "chapter": 2,
+  "title": "The Exchange Zone",
+  "cast": [
+    "char:ada",
+    "char:nessa",
+    "char:imani"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1656
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:ada",
+      "predicate": "location",
+      "object": "place:track",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0121"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Ada stayed at the municipal relay track after the afternoon exchange trials."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:relay_card",
+      "predicate": "holder",
+      "object": "char:imani",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0071"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Nessa passed the relay card to Imani for the official handover trial."
+    },
+    {
+      "id": "F-203",
+      "subject": "org:relay_team",
+      "predicate": "quantity:travel_fund",
+      "object": {
+        "value": 90,
+        "unit": "pounds"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0016"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "A six-pound entry rebate increased the travel fund from eighty-four pounds to ninety.",
+      "arithmetic": {
+        "before": 84,
+        "change": 6,
+        "after": 90
+      },
+      "subjectScope": "shared_story_resource_account",
+      "reviewImplementationNote": "为共享资源／账户建立一致规范键；这是金标实体命名建议，不把该资源变成角色私有财产。若保留原角色键，须在LABELING及评分输入明确其账户代理语义和等价映射，不能按未声明的个人所有权严格判分。",
+      "sharedResourceKey": "item:team_travel_fund",
+      "subjectNamespaceNote": "The reviewed item name identifies the shared resource. P1 quantity subjects require char/org, so the actual subject is the shared organization, never the individual custodian."
+    },
+    {
+      "id": "F-204",
+      "subject": "char:nessa",
+      "predicate": "identity",
+      "object": "confirmed relay starter",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0047"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The registrar changed Nessa’s status from reserve to confirmed relay starter."
+    },
+    {
+      "id": "F-205",
+      "subject": "char:ada",
+      "predicate": "injury",
+      "object": "dry scab on left palm",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0030"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "By the afternoon, the scrape on Ada’s left palm had formed a dry scab without fresh bleeding."
+    },
+    {
+      "id": "F-206",
+      "subject": "item:timing_clock",
+      "predicate": "location",
+      "object": "place:track",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0036"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Imani carried the timing clock to the table inside the municipal relay track."
+    },
+    {
+      "id": "F-207",
+      "subject": "item:brass_key",
+      "predicate": "holder",
+      "object": "char:ada",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0094"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Imani placed the cabinet’s single brass key in Ada’s hand."
+    },
+    {
+      "id": "F-208",
+      "subject": "item:relay_card",
+      "predicate": "entry_status",
+      "object": "confirmed",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0069"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Both check-in signatures changed their relay entry from provisional to confirmed."
+    },
+    {
+      "id": "F-290",
+      "subject": "item:relay_card",
+      "predicate": "future_series",
+      "object": "later meets",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0090"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "Explicitly a character’s suspicion without independent confirmation.",
+      "statement": "Imani suspected the blank boxes concerned later meets, but the unused forms gave no answer.",
+      "recordPolicy": "Optional uncertain world proposition; recording only the suspects cognition is also acceptable."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:nessa",
+      "content": "Roland invented that notch.",
+      "truth": "speech_act_only_not_independently_confirmed_world_fact",
+      "evidence": [
+        "c02.s0075"
+      ],
+      "note": "Rumour, conjecture, preference, joke or promise stays a claim, never an automatic fact."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:imani",
+      "content": "We have ninety pounds now.",
+      "truth": "current_balance_independently_corroborated",
+      "corroboratedBy": "F-203",
+      "evidence": [
+        "c02.s0020"
+      ],
+      "note": "Only the current numerical balance is corroborated; any future ability or intention remains prospective."
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:nessa",
+      "kind": "knows",
+      "content": "She is now a confirmed starter.",
+      "acquiredChapter": 2,
+      "via": "told",
+      "evidence": [
+        "c02.s0049"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:ada",
+      "kind": "believes",
+      "content": "Nessa will hold the exchange position.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0066"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:imani",
+      "kind": "suspects",
+      "content": "The blank boxes concern later meets.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0090"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:nessa",
+      "kind": "misbelieves",
+      "content": "Ada asked the registrar to promote her.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0050"
+      ],
+      "certainty": "confirmed",
+      "note": "误信由本章刚发生的晋升变化引起，形成章可确定为2；同章已纠正，仍是历史态度，不要求作为当前错误认知新增。",
+      "supersededBy": "K-25",
+      "recordPolicy": "historical_attitude_not_required_as_active_add"
+    },
+    {
+      "id": "K-25",
+      "characterId": "char:nessa",
+      "kind": "knows",
+      "content": "The registrar promoted her from her trial time, without Ada making the request.",
+      "acquiredChapter": 2,
+      "via": "told",
+      "evidence": [
+        "c02.s0053"
+      ],
+      "certainty": "confirmed",
+      "note": "The explicitly evidenced correction is active; the former mistake is historical."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:ada->nessa",
+      "from": "char:ada",
+      "to": "char:nessa",
+      "stance": "active trust",
+      "keyFact": true,
+      "statement": "Ada gave Nessa the difficult outside exchange and accepted her suggested mark.",
+      "evidence": [
+        "c02.s0064"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "designId": "H-notch",
+      "operation": "advance",
+      "statement": "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker.",
+      "evidence": [
+        "c02.s0081"
+      ]
+    },
+    {
+      "id": "H-2",
+      "designId": "H-empty",
+      "operation": "advance",
+      "statement": "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed.",
+      "evidence": [
+        "c02.s0088"
+      ]
+    },
+    {
+      "id": "H-3",
+      "designId": "H-cord",
+      "operation": "mention",
+      "statement": "The unexplained blue cord still hung from the clock handle while they practised.",
+      "evidence": [
+        "c02.s0038"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "unclaimed_lane-c2-trap-1",
+      "kind": "plan",
+      "statement": "After the trial, Nessa planned to call the absent captain, but her phone remained in her bag.",
+      "evidence": [
+        "c02.s0106"
+      ],
+      "reason": "An intention is not a completed event. Only this source sentence is restricted; a separately evidenced later completion remains valid.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "unclaimed_lane-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the last exchange were late, their trial would fail; the next exchange had not happened yet.",
+      "evidence": [
+        "c02.s0108"
+      ],
+      "reason": "The conditional/counterfactual antecedent is not an actual event.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "unclaimed_lane-c2-trap-3",
+      "kind": "dream",
+      "statement": "Ada recalled last night’s dream of floating lanes and recognised it as a dream, not a memory of this track.",
+      "evidence": [
+        "c02.s0112"
+      ],
+      "reason": "A dream, imagination or grief image is not present-world canon.",
+      "scope": "source_sentence_only"
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "A distant spectator might have been the former captain, but the runners could not recognise the face.",
+      "evidence": [
+        "c02.s0113"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Omit the speculative world proposition or retain it only as uncertain; no invented identity, date or mechanism."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "unclaimed_lane-c2-history-reference",
+      "existingFactId": "F-180",
+      "subject": "char:ada",
+      "predicate": "location",
+      "object": "place:track",
+      "evidence": [
+        "c02.s0100"
+      ],
+      "recordPolicy": "reference_existing",
+      "note": "This is the same previously recorded historical location. Do not create a second world fact or change current location."
+    }
+  ]
+}

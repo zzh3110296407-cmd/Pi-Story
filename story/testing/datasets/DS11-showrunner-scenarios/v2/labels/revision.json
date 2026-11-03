@@ -1,0 +1,47 @@
+{
+  "schema": "story/ds11-revision@1",
+  "date": "2026-11-01",
+  "from": {
+    "version": "v1",
+    "freezeCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+    "manifest": {
+      "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\datasets\\DS11-showrunner-scenarios\\v1\\manifest.json",
+      "sha256": "f4469b25ac5ea29818122e57b9b6b46c7633e45f9220d9771697f173afffd7f5"
+    },
+    "authorAcceptance": {
+      "path": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\datasets\\DS11-showrunner-scenarios\\v1\\labels\\author-acceptance.json",
+      "sha256": "7da87319621b8a0d19684f898b4513711ad5328efeda12b2e43e2187f1f9c80c"
+    }
+  },
+  "to": "v2",
+  "reason": "The tiny global USD cap blocked the main-agent reservation before the next-action measurement.",
+  "changedCases": [
+    {
+      "id": "ds11-h01-dev",
+      "path": "dev/ds11-h01-dev.json",
+      "beforeSha256": "8e047acc9ebe60be8c850104619bd8285f8f898e3474ec614003c9873b514aec",
+      "afterSha256": "c78b125de63c3cd8894c3108af6a6f7e46800da7c5be48946c17117914c0202c"
+    },
+    {
+      "id": "ds11-h01",
+      "path": "acceptance/ds11-h01.json",
+      "beforeSha256": "ba0136fb3bbf4a0824b205b0e5972134001b8877e23d14401f9fa20a8ce087df",
+      "afterSha256": "172292924a2e58f0cef95413d1f5f3a665bfe4c2743b49b573ee471607b88598"
+    }
+  ],
+  "changedFieldsPerCase": [
+    "setup.command.text",
+    "setup.toolCall.result.error.message",
+    "setup.toolCall.result.error.hint"
+  ],
+  "unchangedCaseFiles": 45,
+  "storyAndGoldUnchanged": true,
+  "countsUnchanged": {
+    "dev": 15,
+    "acceptance": 32,
+    "T03PerRepetition": 12
+  },
+  "productCodeChanged": false,
+  "historicalRunsModifiedByThisTask": false,
+  "paidModelCalls": 0
+}

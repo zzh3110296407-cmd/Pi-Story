@@ -1,0 +1,36 @@
+{
+  "suiteId": "P2R-R5-OFFLINE",
+  "date": "2026-10-31",
+  "stage": "development",
+  "purpose": "Opening goal recognizes the same validated Pi envelope as the branch translator",
+  "paidRequests": 0,
+  "red": {
+    "passed": 1,
+    "failed": 1,
+    "repairedOutlineCommittedChapters": 1
+  },
+  "green": {
+    "passed": 110,
+    "failed": 0
+  },
+  "projectCheck": {
+    "passed": true,
+    "command": "npm --prefix story run check"
+  },
+  "files": [
+    {
+      "path": "story/packages/pi-story/src/entries.ts",
+      "sha256": "82bf0e60d91521e52566b15e45dc956c2b2f1a1fb435f814dca390b894ad044c"
+    },
+    {
+      "path": "story/scripts/eval/p2/driver.ts",
+      "sha256": "25eba46ee2835ecead1f8438e5c7e156cbbfcb10f8f644a99420abd0deb6ae1d"
+    },
+    {
+      "path": "story/packages/pi-story/test/p2r-opening-goal.test.ts",
+      "sha256": "46a42d06ff97fa7871c17593b0c4a4d2f0fc3bc0b981588291c5fd39ebe1c6f1"
+    }
+  ],
+  "affectedPaidRun": "P2-OPEN/20261030T163044Z-55223ea-dev",
+  "compatibility": "Rules, model settings, tools and inputs unchanged; only the measurement goal after a successful repaired outline is fixed. Original dispatched outputs and costs remain retained."
+}

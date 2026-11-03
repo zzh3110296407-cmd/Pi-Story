@@ -1,0 +1,94 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "last_impression-c2-injected-2",
+  "storyId": "last_impression",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "e5dbc81c1bd42cb81ace65e24b9017fa36b5ded7490591caf495b9cf3f923aec",
+    "path": "acceptance/chapters/last_impression-c2.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "last_impression-c2-injected-2-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Elise reached the county records office before noon.",
+      "changed": "Elise reached the county records office before noon. Elise had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Elise reached the county records office before noon.",
+          "changed": "Elise reached the county records office before noon. Elise had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:elise",
+          "quote": "Elise is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim.",
+      "lines": [
+        1
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "last_impression-c2-injected-2-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "The supplier repaid five coins, bringing her purse to thirty-two.",
+      "changed": "The supplier repaid five coins, bringing her purse to thirty-two. With no intervening gain or loss, that same completed count stood at 39 coins.",
+      "spans": [
+        {
+          "original": "The supplier repaid five coins, bringing her purse to thirty-two.",
+          "changed": "The supplier repaid five coins, bringing her purse to thirty-two. With no intervening gain or loss, that same completed count stood at 39 coins.",
+          "lines": {
+            "start": 3,
+            "end": 3
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The supplier repaid five coins, bringing her purse to thirty-two.",
+          "ref": "line:3"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The supplier repaid five coins, bringing her purse to thirty-two.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "lines": [
+        3
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review-r2.json",
+      "reviewStatus": "r2_review_and_requested_prose_repairs_applied",
+      "revision": "r2-retained-narrated-count",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

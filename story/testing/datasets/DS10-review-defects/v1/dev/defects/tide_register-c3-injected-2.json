@@ -1,0 +1,84 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "tide_register-c3-injected-2",
+  "storyId": "tide_register",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "399862dc1e2ccb49a766ce2f734627ae7d5ddf59fc7ade3ec3fbd2ab8c3d948f",
+    "path": "dev/chapters/tide_register-c3.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "tide_register-c3-injected-2-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Lena entered the town hall before the hearing began.",
+      "changed": "Lena entered the town hall before the hearing began. Without anyone moving the lever, the motionless tide itself rang the bell.",
+      "spans": [
+        {
+          "original": "Lena entered the town hall before the hearing began.",
+          "changed": "Lena entered the town hall before the hearing began. Without anyone moving the lever, the motionless tide itself rang the bell.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "The tide bell is operated by a manual lever; it cannot ring without someone moving the lever."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: The tide bell is operated by a manual lever; it cannot ring without someone moving the lever."
+        }
+      ],
+      "reason": "Actual-world narration violates the supplied physical rule.",
+      "lines": [
+        1
+      ]
+    },
+    {
+      "id": "tide_register-c3-injected-2-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee.",
+      "changed": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee. Ivo died beside the desk before anyone could help him.",
+      "spans": [
+        {
+          "original": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee.",
+          "changed": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee. Ivo died beside the desk before anyone could help him.",
+          "lines": {
+            "start": 7,
+            "end": 7
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Ivo alive through the end of chapter three."
+        }
+      ],
+      "reason": "A permanent death contradicts the named author keep-alive requirement.",
+      "lines": [
+        7
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "ds11-f01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 4,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "get_character",
+      "args": {
+        "key": "char:wren"
+      },
+      "id": "call_00_xiLb0m6l3GzU9oPj4TY63062"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 2
+      },
+      "id": "call_00_VNpwNiIsHNerdyYQlR1A0590"
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 1
+      },
+      "id": "call_00_IqwipOUREPWY1kin2OrC4007"
+    },
+    {
+      "reply": "Wren is the assistant at the kite hall, working alongside Nadi on the disputed delivery. The bible records Wren only with the author's line: \"Wren is an assistant who is allowed to disagree.\"\n\nIn the two committed chapters, that role shows up concretely: Wren clears the loose tools to a tray, waits for instructions, reads the faded number aloud so Nadi can compare readings, and asks whether the uncertainty means the demonstration should be abandoned. Wren's disagreement is permitted but has not yet been used as an outright challenge — the chapters so far show a careful, questioning assistant rather than a rival authority. Sol, the keeper of public records, has not appeared on the page yet."
+    }
+  ],
+  "firstAction": {
+    "reply": "Wren is the assistant at the kite hall, working alongside Nadi on the disputed delivery. The bible records Wren only with the author's line: \"Wren is an assistant who is allowed to disagree.\"\n\nIn the two committed chapters, that role shows up concretely: Wren clears the loose tools to a tray, waits for instructions, reads the faded number aloud so Nadi can compare readings, and asks whether the uncertainty means the demonstration should be abandoned. Wren's disagreement is permitted but has not yet been used as an outright challenge — the chapters so far show a careful, questioning assistant rather than a rival authority. Sol, the keeper of public records, has not appeared on the page yet."
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 3,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Answer the actual character question: Wren is an assistant who is allowed to disagree. The committed chapters show this assistant helping the protagonist check and compare the record. Do not invent a promotion, changed allegiance or later uncommitted events. Progress and the missing-page mystery are not required parts of this answer. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 3,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "039c61b558ac6840dc62acf4e1c81959ac593bea89b83719d1bf6ccd0a37afb9",
+    "sessionSha256": "9ccf369c35c82871ca6cacb7e66b67174afcad2bc598f339b3af0b8b77406713",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0031708199999999995,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 4,
+      "totalUsd": 0.0031708199999999995
+    },
+    "measuredMainRequests": 4
+  },
+  "scoringVersion": "p3r2-32@1"
+}

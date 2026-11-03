@@ -1,0 +1,69 @@
+{
+  "schema": "story/p3-j3-book-reason-erratum@1",
+  "date": "2026-11-01",
+  "parentCommit": "6cbb33ef8ad7a41d1856295bb33fcca0d0bde684",
+  "target": {
+    "bookId": "42",
+    "runId": "20261101T103609Z-9a54cb7-acceptance-r1-42",
+    "metric": "T04",
+    "component": "relevance",
+    "sampleId": "call_00_ET_WPhpj1bSSoxVGpdlLKU69880",
+    "ordinal": 9
+  },
+  "changeType": "reason_only_receipt_visibility_clarification",
+  "oldReason": "第2章提交后读取其正文，核对已写子规则、脚注和章节收束，再安排第3部分，属于当前稿件的连续性核对；不因写作回执已有正文就自动判为无关。",
+  "correctedReason": "主笔此前收到提交状态，本次读取返回带行号正文，用于后续写作的连续性核对。",
+  "verdictBefore": true,
+  "verdictAfter": true,
+  "evidenceChanged": false,
+  "nativeVisibilityProof": {
+    "targetToolCallId": "call_00_ET_WPhpj1bSSoxVGpdlLKU69880",
+    "priorWriteToolCallId": "call_00_TqVKt50d3sREsxucYUyz7833",
+    "requestId": "878ddeb9-086d-4c0b-9529-45aef56eea76",
+    "requestBody": {
+      "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/42/raw/request_body/878ddeb9-086d-4c0b-9529-45aef56eea76.jsonl.gz",
+      "sha256": "25fef064dbbe51499beeeafb001a6d448b4aeac111b8cff4e4dbb93ccdb6c249",
+      "evidencePointerLine1": 256
+    },
+    "visiblePriorToolMessage": {
+      "role": "tool",
+      "content": "第2章已提交（带风险）",
+      "tool_call_id": "call_00_TqVKt50d3sREsxucYUyz7833"
+    },
+    "nativePriorToolResult": {
+      "sessionLine1": 24,
+      "entryId": "3c4e82a6",
+      "toolCallId": "call_00_TqVKt50d3sREsxucYUyz7833",
+      "content": [
+        {
+          "type": "text",
+          "text": "第2章已提交（带风险）"
+        }
+      ]
+    },
+    "archivedCommit": {
+      "chapter": 2,
+      "draftId": "c02-d02",
+      "textCharacters": 10794,
+      "textSha256": "e421f00038c4fa1b034e29783cd4d5eb0cd3c20370e267f482c897c4dad86152"
+    },
+    "nativeReadResult": {
+      "sessionLine1": 27,
+      "entryId": "65e2828c",
+      "toolCallId": "call_00_ET_WPhpj1bSSoxVGpdlLKU69880",
+      "textPrefix": "L1 That is the whole problem, and the rulebook knows it. Which is why starting at 12.4(g) the patch stops explaining itself and starts issuing sub-rules. There ",
+      "textCharacters": 11049
+    },
+    "distinction": "The model-visible prior receipt is status only; full prose is separately archived in details.commit.text."
+  },
+  "cause": "Judge rationale conflated the archive details.commit.text with the tool receipt actually sent to the showrunner. The actual provider request contains only the commit-status receipt.",
+  "protocolClarification": {
+    "historicalPromptPreserved": true,
+    "source": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-42-ai/protocol.md",
+    "phrase": "even when the macro receipt already contains prose",
+    "clarification": "For this actual run the showrunner received commit status, not the archived full prose. Reading a committed chapter supplies line-numbered prose for continuity checks. Archive details and model-visible tool content must be distinguished. The task-relevance criterion and all15 verdicts are unchanged."
+  },
+  "all15VerdictsUnchanged": true,
+  "other14ReasonsUnchanged": true,
+  "originalJudgmentsOverwritten": false
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "P1 semantic validation only; no P2/model/evaluation calls",
+  "regressions": [
+    {
+      "chapterId": "bakery_apartment-c2",
+      "before": "DOMAIN_INVALID",
+      "after": "pass_omit_duplicate_and_retain_historical_reference"
+    },
+    {
+      "chapterId": "last_impression-c2",
+      "before": "DOMAIN_INVALID",
+      "after": "pass_omit_duplicate_and_retain_historical_reference"
+    },
+    {
+      "chapterId": "quiet_europa-c2",
+      "before": "DOMAIN_INVALID",
+      "after": "pass_omit_duplicate_and_retain_historical_reference"
+    }
+  ],
+  "correctedBeliefs": [
+    {
+      "chapterId": "bakery_apartment-c1",
+      "oldId": "K-12",
+      "correctedId": "K-15"
+    },
+    {
+      "chapterId": "last_impression-c1",
+      "oldId": "K-12",
+      "correctedId": "K-15"
+    },
+    {
+      "chapterId": "quiet_europa-c1",
+      "oldId": "K-12",
+      "correctedId": "K-15"
+    },
+    {
+      "chapterId": "bakery_apartment-c2",
+      "oldId": "K-22",
+      "correctedId": "K-25"
+    },
+    {
+      "chapterId": "quiet_europa-c2",
+      "oldId": "K-22",
+      "correctedId": "K-25"
+    }
+  ],
+  "unknownBeliefStartsNotFabricated": true,
+  "trapAllowsIndependentLaterCompletion": true,
+  "miriamAcceptanceNotInvented": true
+}

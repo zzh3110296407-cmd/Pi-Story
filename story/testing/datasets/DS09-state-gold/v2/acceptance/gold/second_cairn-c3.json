@@ -1,0 +1,356 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "second_cairn-c3",
+  "storyId": "second_cairn",
+  "chapter": 3,
+  "title": "A Place to Put the Book",
+  "cast": [
+    "char:rafi",
+    "char:jun",
+    "char:eamon"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1655
+  },
+  "facts": [
+    {
+      "id": "F-301",
+      "subject": "char:rafi",
+      "predicate": "location",
+      "object": "place:relief_boat",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0109",
+        "c03.s0110"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "At the chapter end, Rafi boarded the relief boat after Jun, leaving the north landing behind.",
+      "reviewImplementationNote": "补充救援船地点定义或使用等价的稳定地点键；不得把救援船与仍系在码头的独木舟合并。原码头停留可保留为章内中间事件，但不能作章末唯一位置。"
+    },
+    {
+      "id": "F-302",
+      "subject": "item:route_book",
+      "predicate": "holder",
+      "object": "char:jun",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0086"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Rafi entrusted the intact route book to Jun at the north landing."
+    },
+    {
+      "id": "F-303",
+      "subject": "org:expedition",
+      "predicate": "quantity:water",
+      "object": {
+        "value": 17,
+        "unit": "litres"
+      },
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0016"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Four litres used during the descent reduced their supply from twenty-one litres to seventeen.",
+      "arithmetic": {
+        "before": 21,
+        "change": -4,
+        "after": 17
+      },
+      "subjectScope": "shared_story_resource_account",
+      "reviewImplementationNote": "为共享资源／账户建立一致规范键；这是金标实体命名建议，不把该资源变成角色私有财产。若保留原角色键，须在LABELING及评分输入明确其账户代理语义和等价映射，不能按未声明的个人所有权严格判分。",
+      "sharedResourceKey": "item:expedition_water_supply",
+      "subjectNamespaceNote": "The reviewed item name identifies the shared resource. P1 quantity subjects require char/org, so the actual subject is the shared organization, never the individual custodian."
+    },
+    {
+      "id": "F-304",
+      "subject": "char:jun",
+      "predicate": "identity",
+      "object": "appointed expedition navigator",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0052"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The expedition office appointed Jun expedition navigator over the radio."
+    },
+    {
+      "id": "F-305",
+      "subject": "char:rafi",
+      "predicate": "injury",
+      "object": "fading bruise on right shin",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0009"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The bruise on Rafi’s right shin had faded at its edges, although the leg still ached."
+    },
+    {
+      "id": "F-306",
+      "subject": "item:canoe",
+      "predicate": "location",
+      "object": "place:landing",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0039"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Jun tied the canoe at the north landing after the descent."
+    },
+    {
+      "id": "F-307",
+      "subject": "char:eamon",
+      "predicate": "location",
+      "object": "place:ledge",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0046"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Eamon’s covered body remained on the high granite ledge for the recovery team; it was not aboard the relief boat."
+    },
+    {
+      "id": "F-308",
+      "subject": "place:landing",
+      "predicate": "condition",
+      "object": "intact",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0030"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The intact north landing under Rafi’s boots disproved the report that it had washed away."
+    },
+    {
+      "id": "F-380",
+      "subject": "char:jun",
+      "predicate": "former_role",
+      "object": "depot trainee",
+      "validFrom": null,
+      "validUntil": 0,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c03.s0059"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Before joining this expedition, Jun had been a depot trainee.",
+      "note": "Unknown historical start stays null; before-story single value ends at chapter 0 and does not replace current state."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-31",
+      "speaker": "char:jun",
+      "content": "I will bring the next team through.",
+      "truth": "speech_act_only_not_independently_confirmed_world_fact",
+      "evidence": [
+        "c03.s0088"
+      ],
+      "note": "Rumour, conjecture, preference, joke or promise stays a claim, never an automatic fact."
+    },
+    {
+      "id": "S-32",
+      "speaker": "char:rafi",
+      "content": "Seventeen litres is the measured remainder.",
+      "truth": "current_balance_independently_corroborated",
+      "corroboratedBy": "F-303",
+      "evidence": [
+        "c03.s0019"
+      ],
+      "note": "Only the current numerical balance is corroborated; any future ability or intention remains prospective."
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-31",
+      "characterId": "char:rafi",
+      "kind": "knows",
+      "content": "The north landing is intact.",
+      "acquiredChapter": 3,
+      "via": "witnessed",
+      "evidence": [
+        "c03.s0031"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-32",
+      "characterId": "char:jun",
+      "kind": "believes",
+      "content": "She can teach another apprentice the high route.",
+      "acquiredChapter": 3,
+      "via": "inferred",
+      "evidence": [
+        "c03.s0081"
+      ],
+      "certainty": "confirmed",
+      "note": "当前信念由叙述直接确认；正文未唯一确定信念获取途径。保留via:inferred作为可行解释，但不得将其作为唯一严格命中条件。viaScored为金标评分元数据，不直接写入P1认知schema。",
+      "viaScored": false
+    },
+    {
+      "id": "K-33",
+      "characterId": "char:rafi",
+      "kind": "suspects",
+      "content": "The whistle might be associated with an old ferry stop.",
+      "acquiredChapter": 3,
+      "via": "inferred",
+      "evidence": [
+        "c03.s0078"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-34",
+      "characterId": "char:jun",
+      "kind": "misbelieves",
+      "content": "The north landing had washed away.",
+      "acquiredChapter": null,
+      "via": "told",
+      "evidence": [
+        "c03.s0033"
+      ],
+      "certainty": "confirmed",
+      "note": "Explicitly former and already corrected within this chapter. Original formation time is unknown; no active erroneous belief is required.",
+      "supersededBy": "K-35",
+      "recordPolicy": "historical_attitude_not_required_as_active_add"
+    },
+    {
+      "id": "K-35",
+      "characterId": "char:jun",
+      "kind": "knows",
+      "content": "The north landing remains intact.",
+      "acquiredChapter": 3,
+      "via": "witnessed",
+      "evidence": [
+        "c03.s0034"
+      ],
+      "certainty": "confirmed",
+      "note": "The explicitly evidenced correction is active; the former mistake is historical."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:rafi->jun",
+      "from": "char:rafi",
+      "to": "char:jun",
+      "stance": "professional equality",
+      "keyFact": true,
+      "statement": "Rafi introduced Jun to the relief crew as the navigator who had brought them through.",
+      "evidence": [
+        "c03.s0082"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "designId": "H-cairn",
+      "operation": "resolve",
+      "statement": "An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse.",
+      "evidence": [
+        "c03.s0062"
+      ]
+    },
+    {
+      "id": "H-2",
+      "designId": "H-thread",
+      "operation": "mention",
+      "statement": "The red-thread repairer was still unnamed when Jun put the route book away.",
+      "evidence": [
+        "c03.s0070"
+      ]
+    },
+    {
+      "id": "H-3",
+      "designId": "H-whistle",
+      "operation": "advance",
+      "statement": "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now.",
+      "evidence": [
+        "c03.s0075"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "second_cairn-c3-trap-1",
+      "kind": "plan",
+      "statement": "Rafi intended to join the recovery team tomorrow; the recovery had not begun that evening.",
+      "evidence": [
+        "c03.s0093"
+      ],
+      "reason": "An intention is not a completed event. Only this source sentence is restricted; a separately evidenced later completion remains valid.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "second_cairn-c3-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the gate had opened itself, the water might have fallen sooner, but its hand capstan had remained still.",
+      "evidence": [
+        "c03.s0095"
+      ],
+      "reason": "The conditional/counterfactual antecedent is not an actual event.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "second_cairn-c3-trap-3",
+      "kind": "dream",
+      "statement": "Jun imagined telling Eamon they had arrived, then faced the fact that he was dead and could not hear her.",
+      "evidence": [
+        "c03.s0099"
+      ],
+      "reason": "A dream, imagination or grief image is not present-world canon.",
+      "scope": "source_sentence_only"
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Recognition of the old signal did not identify the current whistler or establish that a ferry still operated.",
+      "evidence": [
+        "c03.s0079"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Omit the speculative world proposition or retain it only as uncertain; no invented identity, date or mechanism."
+    }
+  ],
+  "historicalReferences": []
+}

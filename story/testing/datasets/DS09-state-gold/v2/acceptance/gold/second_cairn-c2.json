@@ -1,0 +1,368 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "second_cairn-c2",
+  "storyId": "second_cairn",
+  "chapter": 2,
+  "title": "Above the Flood Line",
+  "cast": [
+    "char:rafi",
+    "char:jun",
+    "char:eamon"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1673
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:rafi",
+      "predicate": "location",
+      "object": "place:ledge",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0106"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Rafi remained on the high granite ledge after the rescue attempt."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:route_book",
+      "predicate": "holder",
+      "object": "char:rafi",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0038"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Jun put the route book into Rafi’s dry bag before climbing the last step."
+    },
+    {
+      "id": "F-203",
+      "subject": "org:expedition",
+      "predicate": "quantity:water",
+      "object": {
+        "value": 21,
+        "unit": "litres"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0050"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "They collected five litres of rainwater and then used two, taking the measured supply from eighteen litres to twenty-one.",
+      "arithmetic": {
+        "before": 18,
+        "change": 3,
+        "after": 21
+      },
+      "subjectScope": "shared_story_resource_account",
+      "reviewImplementationNote": "为共享资源／账户建立一致规范键；这是金标实体命名建议，不把该资源变成角色私有财产。若保留原角色键，须在LABELING及评分输入明确其账户代理语义和等价映射，不能按未声明的个人所有权严格判分。",
+      "sharedResourceKey": "item:expedition_water_supply",
+      "subjectNamespaceNote": "The reviewed item name identifies the shared resource. P1 quantity subjects require char/org, so the actual subject is the shared organization, never the individual custodian."
+    },
+    {
+      "id": "F-204",
+      "subject": "char:jun",
+      "predicate": "identity",
+      "object": "acting route leader",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0032"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Rafi appointed Jun acting route leader for the exposed traverse."
+    },
+    {
+      "id": "F-205",
+      "subject": "char:rafi",
+      "predicate": "injury",
+      "object": "stiff but weight-bearing right shin",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0047"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Rafi’s bruised right shin was stiff, but he could put his weight on that leg."
+    },
+    {
+      "id": "F-206",
+      "subject": "item:canoe",
+      "predicate": "location",
+      "object": "place:ledge",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0044"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "They hauled the canoe onto the high granite ledge with the hand line."
+    },
+    {
+      "id": "F-207",
+      "subject": "char:eamon",
+      "predicate": "alive",
+      "object": "dead",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0075"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Eamon died on the ledge after the rock strike; Rafi and Jun witnessed his final breath and could not revive him."
+    },
+    {
+      "id": "F-208",
+      "subject": "place:high_traverse",
+      "predicate": "passability",
+      "object": "passable that day",
+      "validFrom": 2,
+      "validUntil": 2,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0030"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Jun’s completed traverse established that the high route was passable that day.",
+      "temporalScope": "仅确认Jun完成穿越时的当日可通行性；非官方开放，非未来通行保证。"
+    },
+    {
+      "id": "F-290",
+      "subject": "item:route_book",
+      "predicate": "repair_history",
+      "object": "a removed leaf",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0059"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "Explicitly a character’s suspicion without independent confirmation.",
+      "statement": "Jun suspected the repaired stitch marked a removed leaf, but no torn edge proved it.",
+      "recordPolicy": "Optional uncertain world proposition; recording only the suspects cognition is also acceptable."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:jun",
+      "content": "The whistle must be the relief boat.",
+      "truth": "speech_act_only_not_independently_confirmed_world_fact",
+      "evidence": [
+        "c02.s0063"
+      ],
+      "note": "Rumour, conjecture, preference, joke or promise stays a claim, never an automatic fact."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:rafi",
+      "content": "Twenty-one litres, including what we collected.",
+      "truth": "current_balance_independently_corroborated",
+      "corroboratedBy": "F-203",
+      "evidence": [
+        "c02.s0053"
+      ],
+      "note": "Only the current numerical balance is corroborated; any future ability or intention remains prospective."
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:jun",
+      "kind": "knows",
+      "content": "Eamon died after the rock strike.",
+      "acquiredChapter": 2,
+      "via": "witnessed",
+      "evidence": [
+        "c02.s0076"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:rafi",
+      "kind": "believes",
+      "content": "Jun can lead the remaining traverse.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0100"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:jun",
+      "kind": "suspects",
+      "content": "The repaired stitch corresponds to a missing route-book leaf.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0059"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed epistemic attitude, not objective truth of its content."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:rafi",
+      "kind": "misbelieves",
+      "content": "The second cairn leads to a dead end.",
+      "acquiredChapter": null,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0027"
+      ],
+      "certainty": "confirmed",
+      "note": "Explicitly former and already corrected within this chapter. Original formation time is unknown; no active erroneous belief is required.",
+      "supersededBy": "K-25",
+      "recordPolicy": "historical_attitude_not_required_as_active_add"
+    },
+    {
+      "id": "K-25",
+      "characterId": "char:rafi",
+      "kind": "knows",
+      "content": "The gap beside the second cairn leads to the passable high traverse.",
+      "acquiredChapter": 2,
+      "via": "witnessed",
+      "evidence": [
+        "c02.s0028"
+      ],
+      "certainty": "confirmed",
+      "note": "The explicitly evidenced correction is active; the former mistake is historical."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:rafi->jun",
+      "from": "char:rafi",
+      "to": "char:jun",
+      "stance": "trusted leadership",
+      "keyFact": true,
+      "statement": "Rafi followed Jun’s chosen bearing without taking the route book back to overrule her.",
+      "evidence": [
+        "c02.s0034"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "designId": "H-cairn",
+      "operation": "advance",
+      "statement": "Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse.",
+      "evidence": [
+        "c02.s0020"
+      ]
+    },
+    {
+      "id": "H-2",
+      "designId": "H-thread",
+      "operation": "advance",
+      "statement": "A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer.",
+      "evidence": [
+        "c02.s0056"
+      ]
+    },
+    {
+      "id": "H-3",
+      "designId": "H-whistle",
+      "operation": "mention",
+      "statement": "The same unexplained two-note whistle sounded beyond the flooded bend while they secured the canoe.",
+      "evidence": [
+        "c02.s0062"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "second_cairn-c2-trap-1",
+      "kind": "plan",
+      "statement": "Jun planned to contact the relief boat from the landing; she sent no message from the ledge.",
+      "evidence": [
+        "c02.s0097"
+      ],
+      "reason": "An intention is not a completed event. Only this source sentence is restricted; a separately evidenced later completion remains valid.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "second_cairn-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If Eamon had reached cover sooner he might have lived, but this possibility did not undo his death.",
+      "evidence": [
+        "c02.s0088"
+      ],
+      "reason": "The conditional/counterfactual antecedent is not an actual event.",
+      "scope": "source_sentence_only"
+    },
+    {
+      "id": "second_cairn-c2-trap-3",
+      "kind": "dream",
+      "statement": "Rafi briefly imagined Eamon adjusting the load behind him, then recognised the image as grief, not a living companion.",
+      "evidence": [
+        "c02.s0090"
+      ],
+      "reason": "A dream, imagination or grief image is not present-world canon.",
+      "scope": "source_sentence_only"
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "The old cut arrow suggested an intended route, but did not reveal who had cut it or when.",
+      "evidence": [
+        "c02.s0022"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Omit the speculative world proposition or retain it only as uncertain; no invented identity, date or mechanism."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "second_cairn-c2-history-reference",
+      "existingFactId": "F-180",
+      "subject": "char:rafi",
+      "predicate": "location",
+      "object": "place:landing",
+      "evidence": [
+        "c02.s0094"
+      ],
+      "recordPolicy": "reference_existing",
+      "note": "This is the same previously recorded historical location. Do not create a second world fact or change current location."
+    }
+  ]
+}

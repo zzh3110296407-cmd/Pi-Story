@@ -1,0 +1,91 @@
+{
+  "id": "ds11-j02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, \"The Duplicate\": Pema reads the handling note, then asks Eli for the missing second page. Eli brings a duplicate sheet that has arrived damp/wet at its edges. Pema dries it flat—blotter, gentle weight, no heat—before reading a word of it; Cal assists and may disagree. The wax packet stays sealed and untouched. Practical, precise actions; no one is hurt. Stop on the moment the dried page can finally be read and the team agrees to keep checking before the public demonstration."
+      },
+      "id": "call_00_rYeGls2jlpBX5YBmPLp05218"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 3, \"The Duplicate\": Pema reads the handling note, then asks Eli for the missing second page. Eli brings a duplicate sheet that has arrived damp/wet at its edges. Pema dries it flat—blotter, gentle weight, no heat—before reading a word of it; Cal assists and may disagree. The wax packet stays sealed and untouched. Practical, precise actions; no one is hurt. Stop on the moment the dried page can finally be read and the team agrees to keep checking before the public demonstration."
+    },
+    "id": "call_00_rYeGls2jlpBX5YBmPLp05218"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 3,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "69c5b2ffe4b5db56d4259f2fffb9bed061dbd9ebcfffe7e955c633ce331ed238",
+    "sessionSha256": "5eaf532963774b97dbea9de5c450a97b7e134111352870bdabff19b71523387e",
+    "fee": {
+      "knownUsd": 0.0025800000000000003,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025800000000000003
+    },
+    "measuredMainRequests": 2
+  }
+}

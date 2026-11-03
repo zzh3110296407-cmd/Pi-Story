@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal facts 1-4 upserts. Need follow schema. Need identify facts stated in chapter. Subject likely protagonist unnamed \"he\"; object etc. Need no future plans. Need facts with sentences. Minimal 1-4. Need choose confirmed facts. Chapter states woolly mammoth carcass found, no cuts/spear marks, he aimed late Pleistocene but this older, jump missed, he took rib shard and hide. Need temporary refs. Facts should be upserts subject predicate object strings. Avoid unstated names. Could use \"he\" subject? Need facts like he discovered mammoth carcass at crest. But schema object string. We can make e.g subject \"protagonist\", predicate \"found\", object \"a woolly mammoth carcass in snow\" sentences [1,4]. Confirmed narrated. Another fact: mammoth carcass \"had no cuts or spear marks\" sentences [6]. Another: protagonist \"had aimed for late Pleistocene\" recalled_past? Sentence 11 \"He had aimed...\" past perfect recalled. certainty confirmed. Another: protagonist \"took a rib shard and hide strip\" sentences [17,18]. That's 4. Need uncertain? None. Issues maybe mention protagonist unnamed. Summary title chars events mood. Need JSON valid. Need include issues array. Use exact sentence IDs. Facts min 1. All fields. uncertainReason empty. Claims etc empty arrays. Summary title. Characters [\"the man\"] maybe. Events concise. Mood. Need no future plans; sentence 19 walking maybe future-ish but not include. Ensure no additionalProperties. Final only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"the man\",\"predicate\":\"found\",\"object\":\"a woolly mammoth carcass in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,4]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the mammoth carcass\",\"predicate\":\"had\",\"object\":\"no cuts, no spear marks, and no trampled hunter ring\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the man\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the man\",\"predicate\":\"took\",\"object\":\"a shard of rib and a strip of hide\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"the man\"],\"events\":[\"The man crosses a rise and sees a dark mound in the snow.\",\"He finds a whole woolly mammoth carcass with no cuts or spear marks.\",\"He recalls aiming for the late Pleistocene but realizes this is older.\",\"He takes a rib shard and a strip of hide.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed in the chapter.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 692,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 339,
+      "totalTokens": 1660,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0008303999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.000895008
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177807748,
+    "responseId": "a6d4b18e-17d4-4ad0-8aa2-31bbd1d464a7",
+    "rawStopReason": "stop",
+    "durationMs": 6400
+  },
+  "record": {
+    "time": "2026-10-28T08:56:54.147Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-014",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 692,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 339,
+      "totalTokens": 1660,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0008303999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.000895008
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.000895008,
+    "inputTokens": 200,
+    "outputTokens": 692,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 6400
+  }
+}

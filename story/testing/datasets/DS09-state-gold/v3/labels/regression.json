@@ -1,0 +1,99 @@
+{
+  "before": {
+    "dataset": "DS09 v2",
+    "actualRole": "keeper",
+    "existingHookOccurrences": 18,
+    "describedHookOccurrences": 0,
+    "test": "build/check-hooks.mjs against frozen v2 fails on all 18 existing references"
+  },
+  "after": {
+    "passed": true,
+    "actualRole": "keeper",
+    "chapters": 9,
+    "existingHookOccurrences": 18,
+    "describedHookOccurrences": 18,
+    "sourcePolicy": "Every expectedPayoff equals that same story/id’s already-reviewed chapter-one seed, not a later answer.",
+    "cases": [
+      {
+        "chapterId": "second_cairn-c1",
+        "existingHooks": 0,
+        "describedHooks": 0,
+        "hookIds": []
+      },
+      {
+        "chapterId": "second_cairn-c2",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      },
+      {
+        "chapterId": "second_cairn-c3",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      },
+      {
+        "chapterId": "unclaimed_lane-c1",
+        "existingHooks": 0,
+        "describedHooks": 0,
+        "hookIds": []
+      },
+      {
+        "chapterId": "unclaimed_lane-c2",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      },
+      {
+        "chapterId": "unclaimed_lane-c3",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      },
+      {
+        "chapterId": "unclaimed_pedestal-c1",
+        "existingHooks": 0,
+        "describedHooks": 0,
+        "hookIds": []
+      },
+      {
+        "chapterId": "unclaimed_pedestal-c2",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      },
+      {
+        "chapterId": "unclaimed_pedestal-c3",
+        "existingHooks": 3,
+        "describedHooks": 3,
+        "hookIds": [
+          "H-1",
+          "H-2",
+          "H-3"
+        ]
+      }
+    ]
+  },
+  "rootCause": "The dataset constructor omitted expectedPayoff in initial hook upserts.",
+  "repair": "Initial upsert now passes its already reviewed current seed statement as expectedPayoff. Native P1 persistence and keeper projection retain it; no input wrapper or core/schema change."
+}

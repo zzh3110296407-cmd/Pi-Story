@@ -1,0 +1,87 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "tide_register-c2-injected-2",
+  "storyId": "tide_register",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "570236832eca56946790c1d66038ea4eb7a4af15035c2920b3af9609a5011b77",
+    "path": "dev/chapters/tide_register-c2.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "tide_register-c2-injected-2-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "By midnight Lena was standing on the survey bridge.",
+      "changed": "By midnight Lena was standing on the survey bridge. Lena had been left-handed from birth and had never been right-handed.",
+      "spans": [
+        {
+          "original": "By midnight Lena was standing on the survey bridge.",
+          "changed": "By midnight Lena was standing on the survey bridge. Lena had been left-handed from birth and had never been right-handed.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:lena",
+          "quote": "Lena is right-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute.",
+      "lines": [
+        1
+      ]
+    },
+    {
+      "id": "tide_register-c2-injected-2-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+      "changed": "The clerk returned two coins, bringing Lena’s purse to seventeen. With no intervening gain or loss, that same completed count stood at 24 coins.",
+      "spans": [
+        {
+          "original": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+          "changed": "The clerk returned two coins, bringing Lena’s purse to seventeen. With no intervening gain or loss, that same completed count stood at 24 coins.",
+          "lines": {
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+          "ref": "line:9"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "revision": "r2-retained-narrated-count",
+      "reviewStatus": "AI_development_only",
+      "lines": [
+        9
+      ]
+    }
+  ]
+}

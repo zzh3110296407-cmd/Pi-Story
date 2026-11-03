@@ -1,0 +1,84 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "borrowed_rain-c3-injected-2",
+  "storyId": "borrowed_rain",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "0d8c44fd1643f345b6601524c10005d7313ba865e9715830cdc8e80abd5546f4",
+    "path": "dev/chapters/borrowed_rain-c3.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "borrowed_rain-c3-injected-2-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera stood in the village square when the first new rain fell.",
+      "changed": "Sera stood in the village square when the first new rain fell. The glass seed released rain although nobody had offered it any memory.",
+      "spans": [
+        {
+          "original": "Sera stood in the village square when the first new rain fell.",
+          "changed": "Sera stood in the village square when the first new rain fell. The glass seed released rain although nobody had offered it any memory.",
+          "lines": {
+            "start": 15,
+            "end": 15
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: A glass seed releases rain only after a freely offered true memory; rain cannot revive a dead tree."
+        }
+      ],
+      "reason": "Actual-world narration violates the supplied physical rule.",
+      "lines": [
+        15
+      ]
+    },
+    {
+      "id": "borrowed_rain-c3-injected-2-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera knew the new sapling was not the old tree restored.",
+      "changed": "Sera knew the new sapling was not the old tree restored. Mael died beside the open book before anyone could help him.",
+      "spans": [
+        {
+          "original": "Sera knew the new sapling was not the old tree restored.",
+          "changed": "Sera knew the new sapling was not the old tree restored. Mael died beside the open book before anyone could help him.",
+          "lines": {
+            "start": 11,
+            "end": 11
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Mael alive through the end of chapter three."
+        }
+      ],
+      "reason": "A permanent death contradicts the named author keep-alive requirement.",
+      "lines": [
+        11
+      ]
+    }
+  ]
+}

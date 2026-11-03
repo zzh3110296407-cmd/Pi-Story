@@ -1,0 +1,457 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-29T07:55:52.247Z",
+  "designOrder": "truth_before_prose",
+  "id": "tide_register",
+  "split": "dev",
+  "genre": "mystery",
+  "title": "The Tide Register",
+  "cast": {
+    "lena": "Lena Vale, a harbour surveyor",
+    "tomas": "Tomas Bell, keeper of the tide archive",
+    "ivo": "Ivo Marr, a dock clerk",
+    "rook": "Inspector Rook, a municipal inspector"
+  },
+  "places": {
+    "quay": "Merrow Quay",
+    "archive": "The tide archive",
+    "bridge": "The survey bridge",
+    "hall": "The town hall"
+  },
+  "rule": "The tide bell is operated by a manual lever; it cannot ring without someone moving the lever.",
+  "chapters": [
+    {
+      "title": "The Duplicate Tide",
+      "facts": [
+        {
+          "subject": "char:lena",
+          "predicate": "location",
+          "object": "place:archive",
+          "anchor": "Lena remained in the archive when the public doors were locked.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:tomas",
+          "anchor": "She placed the brass key in Tomas’s open hand.",
+          "key": true
+        },
+        {
+          "subject": "char:lena",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 15,
+            "unit": "coins"
+          },
+          "anchor": "After paying three coins for the copied chart, Lena had fifteen left.",
+          "key": true,
+          "before": 18,
+          "change": -3
+        },
+        {
+          "subject": "char:ivo",
+          "predicate": "identity",
+          "object": "dock clerk",
+          "anchor": "The pay register named Ivo Marr as a dock clerk.",
+          "key": true
+        },
+        {
+          "subject": "item:tide_register",
+          "predicate": "holder",
+          "object": "char:ivo",
+          "anchor": "Ivo carried the missing tide register under his coat.",
+          "key": true
+        },
+        {
+          "subject": "char:lena",
+          "predicate": "injury",
+          "object": "bruised right wrist",
+          "anchor": "The falling shutter bruised Lena’s right wrist.",
+          "key": true
+        },
+        {
+          "subject": "item:red_marker",
+          "predicate": "location",
+          "object": "place:archive",
+          "anchor": "Tomas fixed the red survey marker to the archive wall.",
+          "key": true
+        },
+        {
+          "subject": "char:rook",
+          "predicate": "location",
+          "object": "place:bridge",
+          "anchor": "Rook crossed to the survey bridge and stayed beside its lever.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:tomas",
+        "The bridge is closed.",
+        "“The bridge is closed,” Tomas said."
+      ],
+      "memory": "Lena remembered the winter when she had lived above the rope shop.",
+      "memoryObject": "the rope shop",
+      "memoryPredicate": "location",
+      "knows": "Lena knew Tomas now held the brass key.",
+      "misbelieves": "Ivo still believed Lena had the brass key, although he had watched the handover through the wrong window.",
+      "suspect": "Lena could not tell whether the wet footprints belonged to Rook.",
+      "plan": "Tomorrow, Lena intended to search every boat in the harbour.",
+      "hypothesis": "If the fog lifted, the northern buoy might become visible.",
+      "dream": "That night she dreamed the tide bell was ringing beneath the sea.",
+      "hooks": [
+        [
+          "H-1",
+          "upsert",
+          "The register contained two entries for the same tide."
+        ],
+        [
+          "H-2",
+          "upsert",
+          "A blue thread protruded from the register’s stitched spine."
+        ],
+        [
+          "H-3",
+          "upsert",
+          "Rook wore a square impression of clean skin where his ring should have been."
+        ]
+      ],
+      "relationship": {
+        "from": "char:lena",
+        "to": "char:tomas",
+        "stance": "guarded distrust",
+        "anchor": "Lena no longer trusted Tomas to interpret the archive without a witness.",
+        "key": true
+      },
+      "believes": "Tomas believed a public hearing would be safer than a private bargain.",
+      "endStateAnchor": "Lena settled at the archive desk to wait for morning.",
+      "trueClaim": {
+        "speaker": "char:lena",
+        "content": "There are fifteen coins left,",
+        "anchor": "“There are fifteen coins left,” Lena said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "memoryUntil": 0,
+      "cognitionVia": {
+        "knows": "witnessed"
+      }
+    },
+    {
+      "title": "The Lever in the Rain",
+      "facts": [
+        {
+          "subject": "char:lena",
+          "predicate": "location",
+          "object": "place:bridge",
+          "anchor": "By midnight Lena was standing on the survey bridge.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:ivo",
+          "anchor": "Tomas handed the brass key to Ivo before entering the rain.",
+          "key": true
+        },
+        {
+          "subject": "char:lena",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 17,
+            "unit": "coins"
+          },
+          "anchor": "The clerk returned two coins, bringing Lena’s purse to seventeen.",
+          "key": true,
+          "before": 15,
+          "change": 2
+        },
+        {
+          "subject": "char:rook",
+          "predicate": "alive",
+          "object": "dead",
+          "anchor": "Lena found Rook beneath the broken rail; he was dead.",
+          "key": true
+        },
+        {
+          "subject": "char:ivo",
+          "predicate": "true_identity",
+          "object": "the former municipal cartographer",
+          "anchor": "The sealed appointment proved that Ivo was the former municipal cartographer.",
+          "key": true
+        },
+        {
+          "subject": "item:tide_register",
+          "predicate": "holder",
+          "object": "char:lena",
+          "anchor": "Lena took the tide register from Ivo and tucked it beneath her jacket.",
+          "key": true
+        },
+        {
+          "subject": "char:tomas",
+          "predicate": "location",
+          "object": "place:hall",
+          "anchor": "Tomas waited inside the town hall with the watch officer.",
+          "key": true
+        },
+        {
+          "subject": "item:red_marker",
+          "predicate": "location",
+          "object": "place:bridge",
+          "anchor": "The watch officer brought the red marker to the survey bridge.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:ivo",
+        "I never drew that map.",
+        "“I never drew that map,” Ivo said."
+      ],
+      "memory": "Lena recalled stepping onto Merrow Quay during her first visit, one chapter of the inquiry earlier.",
+      "memoryObject": "Merrow Quay",
+      "memoryPredicate": "location",
+      "memoryFrom": 1,
+      "memoryUntil": 1,
+      "knows": "Lena knew the bridge lever had been moved by a human hand.",
+      "misbelieves": "Tomas believed Rook was still waiting in the hall, but the chair he remembered was empty.",
+      "suspect": "Lena suspected the second tide entry concealed a meeting rather than a measurement.",
+      "plan": "Lena planned to question the watch officer after sunrise.",
+      "hypothesis": "If the second mark meant a meeting, someone else might have attended.",
+      "dream": "She dreamed of Rook sitting dry and unhurt at the municipal desk.",
+      "hooks": [
+        [
+          "H-1",
+          "advance",
+          "The second tide entry matched the hour on the watch log."
+        ],
+        [
+          "H-2",
+          "mention",
+          "The blue thread remained visible along the wet spine."
+        ],
+        [
+          "H-4",
+          "upsert",
+          "A crescent of green wax clung to the bridge lever."
+        ]
+      ],
+      "relationship": {
+        "from": "char:lena",
+        "to": "char:tomas",
+        "stance": "conditional cooperation",
+        "anchor": "Lena agreed to work with Tomas only while their notes remained open to the watch officer.",
+        "key": true
+      },
+      "believes": "Lena believed the watch officer would attend the hearing.",
+      "endStateAnchor": "Lena stayed on the survey bridge beside the covered lever.",
+      "trueClaim": {
+        "speaker": "char:lena",
+        "content": "I have seventeen coins now,",
+        "anchor": "“I have seventeen coins now,” Lena said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "cognitionVia": {
+        "knows": "inferred"
+      }
+    },
+    {
+      "title": "The Open Register",
+      "facts": [
+        {
+          "subject": "char:lena",
+          "predicate": "location",
+          "object": "place:hall",
+          "anchor": "Lena entered the town hall before the hearing began.",
+          "key": true
+        },
+        {
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:lena",
+          "anchor": "Ivo returned the brass key to Lena in front of the watch officer.",
+          "key": true
+        },
+        {
+          "subject": "char:lena",
+          "predicate": "quantity:coins",
+          "object": {
+            "value": 12,
+            "unit": "coins"
+          },
+          "anchor": "She paid five coins for the sworn copy and kept twelve.",
+          "key": true,
+          "before": 17,
+          "change": -5
+        },
+        {
+          "subject": "char:ivo",
+          "predicate": "identity",
+          "object": "municipal witness",
+          "anchor": "The hearing clerk entered Ivo in the record as a municipal witness.",
+          "key": true
+        },
+        {
+          "subject": "item:tide_register",
+          "predicate": "holder",
+          "object": "org:harbour_council",
+          "anchor": "The council accepted custody of the tide register.",
+          "key": true
+        },
+        {
+          "subject": "char:tomas",
+          "predicate": "location",
+          "object": "place:archive",
+          "anchor": "Tomas returned to the archive to open it for the public.",
+          "key": true
+        },
+        {
+          "subject": "item:red_marker",
+          "predicate": "location",
+          "object": "place:quay",
+          "anchor": "The red marker was installed at Merrow Quay for the new survey.",
+          "key": true
+        },
+        {
+          "subject": "char:lena",
+          "predicate": "injury",
+          "object": "right wrist bandaged",
+          "anchor": "The nurse wrapped Lena’s bruised wrist in a clean bandage.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:ivo",
+        "Rook asked me to duplicate the entry.",
+        "“Rook asked me to duplicate the entry,” Ivo said."
+      ],
+      "memory": "Lena remembered a summer apprenticeship whose starting date she could no longer place.",
+      "memoryObject": "the coastal survey office",
+      "memoryPredicate": "former_training",
+      "knows": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee.",
+      "misbelieves": "Tomas had believed the blue thread was a repair, but the recovered note showed it was a page marker.",
+      "suspect": "Lena could only guess who had left a boat moving beyond the fog.",
+      "plan": "She intended to apply for a permanent survey post in the spring.",
+      "hypothesis": "If the council published the fees, another hidden account might surface.",
+      "dream": "In her last dream the two tides separated into ordinary lines of ink.",
+      "hooks": [
+        [
+          "H-1",
+          "resolve",
+          "The duplicate entry concealed a second docking fee."
+        ],
+        [
+          "H-2",
+          "resolve",
+          "The blue thread marked the pocket holding the fee receipt."
+        ],
+        [
+          "H-3",
+          "resolve",
+          "Rook had pledged his ring to cover the missing fee."
+        ],
+        [
+          "H-4",
+          "resolve",
+          "The green wax came from the council’s receipt seal."
+        ]
+      ],
+      "relationship": {
+        "from": "char:lena",
+        "to": "char:tomas",
+        "stance": "qualified trust",
+        "anchor": "Lena trusted Tomas to keep the archive open under the new public rules.",
+        "key": true
+      },
+      "believes": "Tomas believed the published register would outlast their quarrel.",
+      "endStateAnchor": "Lena remained in the town hall until the hearing record was sealed.",
+      "trueClaim": {
+        "speaker": "char:lena",
+        "content": "Twelve coins remain,",
+        "anchor": "“Twelve coins remain,” Lena said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "correctedCognition": {
+        "content": "Tomas knows the blue thread marked a pocket containing the fee receipt.",
+        "via": "read"
+      },
+      "cognitionVia": {
+        "knows": "read"
+      }
+    }
+  ],
+  "bible": [
+    {
+      "key": "char:lena",
+      "kind": "character",
+      "identity": "Lena Vale, a harbour surveyor"
+    },
+    {
+      "key": "char:tomas",
+      "kind": "character",
+      "identity": "Tomas Bell, keeper of the tide archive"
+    },
+    {
+      "key": "char:ivo",
+      "kind": "character",
+      "identity": "Ivo Marr, a dock clerk"
+    },
+    {
+      "key": "char:rook",
+      "kind": "character",
+      "identity": "Inspector Rook, a municipal inspector"
+    },
+    {
+      "key": "place:quay",
+      "kind": "place",
+      "name": "Merrow Quay"
+    },
+    {
+      "key": "place:archive",
+      "kind": "place",
+      "name": "The tide archive"
+    },
+    {
+      "key": "place:bridge",
+      "kind": "place",
+      "name": "The survey bridge"
+    },
+    {
+      "key": "place:hall",
+      "kind": "place",
+      "name": "The town hall"
+    },
+    {
+      "key": "rule:physical_limit",
+      "kind": "rule",
+      "statement": "The tide bell is operated by a manual lever; it cannot ring without someone moving the lever."
+    }
+  ],
+  "relationBaseline": [
+    {
+      "from": "lena",
+      "to": "tomas",
+      "stance": "wary cooperation"
+    }
+  ],
+  "annotationPolicy": {
+    "facts": "Gold targets end-of-chapter state; explicit within-chapter before/change values remain arithmetic evidence. Do not create multiple active single-valued facts.",
+    "recalls": "Unknown starts are null, not zero. Chapter-two memories explicitly dated to chapter one use [1,1].",
+    "claims": "Keep reported dialogue separate from confirmed world facts.",
+    "traps": "Plans, hypotheses and dreams produce no asserted world facts.",
+    "provisional": "Uncertain sensory inference is provisional and never a confirmed premise."
+  },
+  "revisionHistory": [
+    {
+      "id": "explicit-relationships",
+      "at": "2026-10-29T08:11:43.554Z",
+      "note": "Designed explicit relationship and non-certain belief anchors before adding these sentences to prose; initial eight fact anchors and plot unchanged."
+    },
+    {
+      "id": "terminal-state-and-true-speech",
+      "at": "2026-10-29T08:27:56.943Z",
+      "note": "Before adding these prose sentences, explicitly design terminal position confirmations and corroborated true dialogue. For drafted acceptance prose this is a recorded design revision, not a claim that the additions existed in the initial table."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "story/p3-j3-scen-combined-summary@1",
+  "date": "2026-11-01",
+  "status": "author_approved_after_specified_reason_erratum",
+  "formalThresholdAdmission": true,
+  "runs": [
+    {
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "repetition": 1,
+      "counts": {
+        "T02": {
+          "correct": 25,
+          "n": 32,
+          "value": 0.78125
+        },
+        "T03": {
+          "correct": 11,
+          "n": 12,
+          "value": 0.9166666666666666
+        }
+      }
+    },
+    {
+      "runId": "20261101T081318Z-0b153b6-acceptance-r2",
+      "repetition": 2,
+      "counts": {
+        "T02": {
+          "correct": 22,
+          "n": 32,
+          "value": 0.6875
+        },
+        "T03": {
+          "correct": 11,
+          "n": 12,
+          "value": 0.9166666666666666
+        }
+      }
+    }
+  ],
+  "T02": {
+    "correct": 47,
+    "n": 64,
+    "value": 0.734375,
+    "threshold": 0.8,
+    "numericallyMeetsThreshold": false
+  },
+  "T03_SCEN": {
+    "correct": 22,
+    "n": 24,
+    "value": 0.9166666666666666,
+    "threshold": 0.8,
+    "numericallyMeetsThreshold": true,
+    "scope": "SCEN subset only; BOOK recoveries pending"
+  },
+  "rows": 88,
+  "notApplicable": 0,
+  "observationGaps": 0,
+  "programFirstAcceptable": 48,
+  "independentDifference": "Run2 C01 reply was observed but omits the required branch-before-chapter explanation; program reply=true alone was insufficient.",
+  "strictSetLimitation": "B02/B03 exact key slugs and F03 allowed first tools are enforced as frozen. Some requests are semantically relevant and domain-valid yet fail these constraints; author review is explicitly requested, not silently relaxed.",
+  "paidJudgeModelCalls": 0,
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/judgments/support/20261101-j3-scen-author-acceptance/approval.json",
+    "sha256": "0552581231b40bcb6f2ea46b756fb1b2f76ebd94a76bde1602b7f0a4ba47b110",
+    "date": "2026-11-01",
+    "conditionSatisfied": true
+  },
+  "reasonErratum": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/judgments/support/20261101-j3-scen-author-acceptance/reason-erratum.json",
+  "normalizedRootFiles": [
+    {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/judgments/T02.json",
+      "sha256": "cdfc3d8f810882fb56857249384b84274061fb8a1329b57a7ea2b886fa83253a",
+      "rows": 32
+    },
+    {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/judgments/T03.json",
+      "sha256": "b2d4677d20aa350b52ab8d9e642afc4bde2cf1df84df70e46a25b31372f56f19",
+      "rows": 12
+    },
+    {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/judgments/T02.json",
+      "sha256": "2473158b70b9f22bd5107987cd389a7e662124d06b44fb491f01e135a35bd136",
+      "rows": 32
+    },
+    {
+      "path": "story/testing/runs/P3/P3-SCEN/20261101T081318Z-0b153b6-acceptance-r2/judgments/T03.json",
+      "sha256": "60abf61e13fa0ede3c762124f9e9d54d52c9dc611f51230f827e760a41841db8",
+      "rows": 12
+    }
+  ],
+  "all88VerdictsUnchanged": true,
+  "reasonOnlyChanges": 1,
+  "preliminaryViewsPreserved": true,
+  "scope": "SCEN only; T03 must later aggregate BOOK errors. Approval of these judgments does not mean T02 or all P3 passed.",
+  "contractInterpretationAcknowledged": "B02/B03 exact keys and F03 first-action restrictions have a frozen-contract basis, but those deductions do not all imply operationally unreasonable actions."
+}

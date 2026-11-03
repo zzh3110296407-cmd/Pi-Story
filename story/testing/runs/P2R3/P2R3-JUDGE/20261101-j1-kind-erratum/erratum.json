@@ -1,0 +1,79 @@
+{
+  "schema": "story/judgment-erratum@1",
+  "date": "2026-11-01",
+  "judge": "Codex / GPT-6（AI）",
+  "stage": "P2R3-J1",
+  "status": "pending_author_acceptance",
+  "source": {
+    "path": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2/judgments/T06-coverage.json",
+    "sha256": "c120d9f2c9031dfc2a7677c22c6d2531c027637d4f90068d1947cd72b1ac87e1"
+  },
+  "priorAuthorAcceptance": {
+    "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261031-j1-author-acceptance/approval.json",
+    "sha256": "109783ac4f4a877a63d23be8489dae99e4f2e053f3d3e7725d156a99b1237e3e"
+  },
+  "reason": "本轮J2独立读取完整结构化条目时发现J1遗漏kind字段。保留已认可记录，另立两项补充勘误，未改原文件或自动重算历史结果。",
+  "basis": {
+    "path": "D:\\AI\\Story Dome\\新版综合方案\\阶段执行方案\\20-P2测试集方案.md",
+    "section": "§3.1 标注规则",
+    "excerpt": "提示里的开头文本整体作为一条 continuation_start"
+  },
+  "corrections": [
+    {
+      "sourceSampleId": "20261031T064115Z-0ae2186-r2:42:gold:42-g04:P2R3-J1-rev20261031",
+      "metric": "T06",
+      "component": "recall",
+      "originalVerdict": false,
+      "proposedVerdict": true,
+      "evidence": {
+        "id": "L-3",
+        "kind": "continuation_start",
+        "text": "Ahem. From the official Life and Universe rulebook v3.142:",
+        "sourceSpans": [
+          {
+            "messageId": "5ee9537f",
+            "quote": "Ahem. From the official Life and Universe rulebook v3.142:",
+            "start": 200,
+            "end": 258
+          }
+        ]
+      },
+      "reason": "原J1仅看text中没有begin而漏读kind=continuation_start。20 §3.1明示提示里的开头文本整体作为此类；kind与准确文本联合已保留开头限定。"
+    },
+    {
+      "sourceSampleId": "20261031T064115Z-0ae2186-r2:42:prediction:L-3:P2R3-J1-rev20261031",
+      "metric": "T06",
+      "component": "precision",
+      "originalVerdict": false,
+      "proposedVerdict": true,
+      "evidence": {
+        "id": "L-3",
+        "kind": "continuation_start",
+        "text": "Ahem. From the official Life and Universe rulebook v3.142:",
+        "sourceSpans": [
+          {
+            "messageId": "5ee9537f",
+            "quote": "Ahem. From the official Life and Universe rulebook v3.142:",
+            "start": 200,
+            "end": 258
+          }
+        ]
+      },
+      "reason": "原J1仅看text中没有begin而漏读kind=continuation_start。20 §3.1明示提示里的开头文本整体作为此类；kind与准确文本联合已保留开头限定。"
+    }
+  ],
+  "proposedCombinedT06": {
+    "precision": {
+      "successes": 233,
+      "n": 257,
+      "value": 0.9066147859922179
+    },
+    "recall": {
+      "successes": 298,
+      "n": 318,
+      "value": 0.9371069182389937
+    }
+  },
+  "separateFrom": "V3 J2; no J2 sample or denominator is affected.",
+  "authorOverallAcceptance": null
+}

@@ -1,0 +1,937 @@
+[
+  {
+    "caseId": "valid-fact",
+    "rule": "D1",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "圣经人物存在，本章叙述直接支持生存状态。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-item-first-seen",
+    "rule": "D1",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "item首次出现可直接使用，持有者人物已存在。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-evidence-last",
+    "rule": "D2",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "最后一句仍是有效的本章证据。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-claim",
+    "rule": "D3",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "第8句未标明说话人；仅记录转述内容，speaker保留unknown，不猜为店主。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-recalled-new",
+    "rule": "D4",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "没有父亲现有生死状态，回忆揭示至今仍成立的死亡事实。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-recalled-past-only",
+    "rule": "D4",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "只描述第0章之前，既不覆盖第1章起的旧位置，也不使其失效。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-cognition",
+    "rule": "D7",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "本章新增认知获得章由本章回填。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-believes",
+    "rule": "D7",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "信念与事实分开保存。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-suspects",
+    "rule": "D7",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "第13句明确依据前后矛盾的说法推断身份可疑；via=inferred，不是told。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-relation",
+    "rule": "D11",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "关系逐项明确确定性。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-uncertain-fact",
+    "rule": "D11",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "uncertain有逐项原因，写入时必须成为provisional。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-uncertain-cognition",
+    "rule": "D11",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "uncertain有逐项原因，写入时必须成为provisional。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-uncertain-relation",
+    "rule": "D11",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "uncertain有逐项原因，写入时必须成为provisional。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-confirm-fact",
+    "rule": "D9",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "以新证据确认旧provisional条目，不改变其内容。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-confirm-cognition",
+    "rule": "D9",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "以新证据确认旧provisional条目，不改变其内容。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-confirm-relation",
+    "rule": "D9",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "以新证据确认旧provisional条目，不改变其内容。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-hook-mention-H-2",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "提及不改状态或lastAdvancedChapter。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-hook-advance-H-1",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "合法的未终结伏笔迁移。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-hook-resolve-H-1",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "合法的未终结伏笔迁移。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-hook-defer-H-2",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "合法的未终结伏笔迁移。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-hook-advance-H-3",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "合法的未终结伏笔迁移。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-new-hook",
+    "rule": "D8",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "正文出现新线索，创建新伏笔。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-quantity-change",
+    "rule": "D6",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "整章净变化为收到2枚再付出3枚：旧10+(2-3)=新9；同增量使旧数量失效。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "valid-holder-transfer",
+    "rule": "D6",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "referenceReason": "易主时同增量结束旧持有者。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D1-missing-character",
+    "rule": "D1",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].subject"
+      ]
+    },
+    "referenceReason": "char引用不在圣经。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D1-missing-place",
+    "rule": "D1",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].object"
+      ]
+    },
+    "referenceReason": "place引用不在圣经。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D1-missing-expire",
+    "rule": "D1",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].id"
+      ]
+    },
+    "referenceReason": "失效目标不存在。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D2-no-evidence",
+    "rule": "D2",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].sentences"
+      ]
+    },
+    "referenceReason": "证据数组不能为空；属于格式层先拒绝。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D2-out-of-range",
+    "rule": "D2",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].sentences"
+      ]
+    },
+    "referenceReason": "本章只有36句。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D2-foreign-ref",
+    "rule": "D2",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].sentences[0]"
+      ]
+    },
+    "referenceReason": "提议只收本章整数句号，不能传其他章节引用。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D3-curly",
+    "rule": "D3",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          8
+        ]
+      }
+    },
+    "referenceReason": "证据完全在对白引号内，必须降为转述。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D3-corner",
+    "rule": "D3",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          9
+        ]
+      }
+    },
+    "referenceReason": "证据完全在对白引号内，必须降为转述。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D3-double-corner",
+    "rule": "D3",
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          10
+        ]
+      }
+    },
+    "referenceReason": "证据完全在对白引号内，必须降为转述。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D4-recall-expires-current",
+    "rule": "D4",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]"
+      ]
+    },
+    "referenceReason": "回忆不得使现有事实失效。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D4-recall-no-end",
+    "rule": "D4",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].validUntil"
+      ]
+    },
+    "referenceReason": "已有当前位置，回忆中不同位置必须只描述过去。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D4-recall-current-end",
+    "rule": "D4",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].validUntil"
+      ]
+    },
+    "referenceReason": "回忆冲突值有效期不能延至当前第2章。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D5-nonfactual-mode-1",
+    "rule": "D5",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "referenceReason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D5-nonfactual-mode-2",
+    "rule": "D5",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "referenceReason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D5-nonfactual-mode-3",
+    "rule": "D5",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "referenceReason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D6-no-expiration",
+    "rule": "D6",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]"
+      ]
+    },
+    "referenceReason": "单值旧持有者未失效。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D6-unbalanced-quantity",
+    "rule": "D6",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[1].change"
+      ]
+    },
+    "referenceReason": "单变量算术反例：旧10+错误变化3不等于新9；证据仍覆盖真实净变化-1。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D6-two-new-values",
+    "rule": "D6",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]",
+        "facts[1]"
+      ]
+    },
+    "referenceReason": "同一新物品同时有两个持有者。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D7-cross-character-1",
+    "rule": "D7",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "referenceReason": "不能用一个角色的新认知取代另一个角色的旧认知。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D7-cross-character-2",
+    "rule": "D7",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "referenceReason": "不能用一个角色的新认知取代另一个角色的旧认知。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D7-cross-character-3",
+    "rule": "D7",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "referenceReason": "不能用一个角色的新认知取代另一个角色的旧认知。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D8-terminal-1",
+    "rule": "D8",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "referenceReason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D8-terminal-2",
+    "rule": "D8",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "referenceReason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D8-terminal-3",
+    "rule": "D8",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "referenceReason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D9-confirm-changes-fact",
+    "rule": "D9",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].object"
+      ]
+    },
+    "referenceReason": "confirm不能把铜改成铁。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D9-confirm-changes-cognition",
+    "rule": "D9",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[0].content"
+      ]
+    },
+    "referenceReason": "confirm不得改认知内容。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D9-confirm-changes-relation",
+    "rule": "D9",
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "relations[0].stance"
+      ]
+    },
+    "referenceReason": "confirm不得改关系立场。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D10-leak-1",
+    "rule": "D10",
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "outline"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "referenceReason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D10-leak-2",
+    "rule": "D10",
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "chapterIntent"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "referenceReason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D10-leak-3",
+    "rule": "D10",
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "outline",
+        "chapterIntent"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "referenceReason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-fact-certainty",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].certainty"
+      ]
+    },
+    "referenceReason": "逐项certainty必填，不从issues推断。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-cognition-certainty",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "cognitions[0].certainty"
+      ]
+    },
+    "referenceReason": "逐项certainty必填，不从issues推断。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-relation-certainty",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "relations[0].certainty"
+      ]
+    },
+    "referenceReason": "逐项certainty必填，不从issues推断。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-fact-reason",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].uncertainReason"
+      ]
+    },
+    "referenceReason": "uncertain必须有逐项原因。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-cognition-reason",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "cognitions[0].uncertainReason"
+      ]
+    },
+    "referenceReason": "uncertain必须有逐项原因。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  },
+  {
+    "caseId": "D11-relation-reason",
+    "rule": "D11",
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "relations[0].uncertainReason"
+      ]
+    },
+    "referenceReason": "uncertain必须有逐项原因。",
+    "decision": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "reason": null
+  }
+]

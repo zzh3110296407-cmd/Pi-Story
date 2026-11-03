@@ -1,0 +1,73 @@
+{
+  "schema": "story/p3-j3-book-approved-summary@1",
+  "date": "2026-11-01",
+  "status": "author_approved_after_specified_evidence_erratum",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build exposed. No independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-BOOK-837-527@1",
+    "promptPath": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-ai/protocol.md",
+    "promptSha256": "60cc5f624b01770613cbe0590466045f13060d8c1e6566993f3e02ba17f5e338",
+    "independence": "Separate judging chat from execution/tuning; original dataset authorship disclosed."
+  },
+  "batchRunId": "20261101T103609Z-9a54cb7-acceptance-r1",
+  "books": [
+    "837",
+    "527"
+  ],
+  "judgmentRows": 26,
+  "T03_BOOK": {
+    "correct": 3,
+    "n": 3
+  },
+  "T04": {
+    "related": 23,
+    "unrelated": 0,
+    "n": 23,
+    "programInvalid": 2,
+    "programRepeated": 0,
+    "invalidUnion": 2,
+    "observedPrefixInvalidRate": 0.08695652173913043,
+    "minimum": 100,
+    "passed": null,
+    "minimumSatisfied": false,
+    "scope": "Relevance is distinct from parameter validity. No full BOOK threshold claim."
+  },
+  "notApplicable": 0,
+  "observationGapsInJudgedDimensions": 0,
+  "unobservedFinalToolResults": [
+    {
+      "toolCallId": "call_00_UFjKTUjsry0VNAcHrVYv9201",
+      "tool": "write_next_chapter",
+      "scope": "No native tool result; do not manufacture a tool error/recovery decision."
+    }
+  ],
+  "bookMeasurementIncomplete": [
+    "837"
+  ],
+  "formalRootJudgmentRows": 26,
+  "originalsModified": false,
+  "paidJudgeModelCalls": 0,
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/approval.json",
+    "sha256": "ba62615b0d2a199785ee968c5afc03f3100105d4056a2bf3fccf9da7b1155690",
+    "conditionSatisfied": true
+  },
+  "evidenceErratum": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-837-527-author-acceptance/evidence-erratum.json",
+  "evidenceOnlyRecordChanges": 8,
+  "verdictChanges": 0,
+  "reasonChanges": 0,
+  "preliminaryViewsPreserved": true,
+  "T03_SCEN_plus_observed_BOOK": {
+    "correct": 25,
+    "n": 27,
+    "value": 0.9259259259259259,
+    "scope": "Existing approved SCEN22/24 plus these3/3 BOOK recoveries only. Other3 selected books remain outstanding."
+  }
+}

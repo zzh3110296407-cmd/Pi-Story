@@ -1,0 +1,84 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "tide_register-c2-injected-1",
+  "storyId": "tide_register",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "570236832eca56946790c1d66038ea4eb7a4af15035c2920b3af9609a5011b77",
+    "path": "dev/chapters/tide_register-c2.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "tide_register-c2-injected-1-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "By midnight Lena was standing on the survey bridge.",
+      "changed": "By midnight Lena was standing on the survey bridge. Without anyone moving the lever, the motionless tide itself rang the bell.",
+      "spans": [
+        {
+          "original": "By midnight Lena was standing on the survey bridge.",
+          "changed": "By midnight Lena was standing on the survey bridge. Without anyone moving the lever, the motionless tide itself rang the bell.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "The tide bell is operated by a manual lever; it cannot ring without someone moving the lever."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: The tide bell is operated by a manual lever; it cannot ring without someone moving the lever."
+        }
+      ],
+      "reason": "Actual-world narration violates the supplied physical rule.",
+      "lines": [
+        1
+      ]
+    },
+    {
+      "id": "tide_register-c2-injected-1-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Lena knew the bridge lever had been moved by a human hand.",
+      "changed": "Lena knew the bridge lever had been moved by a human hand. Ivo died beside the desk before anyone could help him.",
+      "spans": [
+        {
+          "original": "Lena knew the bridge lever had been moved by a human hand.",
+          "changed": "Lena knew the bridge lever had been moved by a human hand. Ivo died beside the desk before anyone could help him.",
+          "lines": {
+            "start": 15,
+            "end": 15
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Ivo alive through the end of chapter three."
+        }
+      ],
+      "reason": "A permanent death contradicts the named author keep-alive requirement.",
+      "lines": [
+        15
+      ]
+    }
+  ]
+}

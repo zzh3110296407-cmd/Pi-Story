@@ -1,0 +1,111 @@
+{
+  "schema": "story/p2-j4-remaining@1",
+  "date": "2026-10-30",
+  "identity": {
+    "reviewer": "Codex（AI，受用户委托）",
+    "humanReviewed": false,
+    "calibratedJudge": false,
+    "reviewMode": "user_delegated_AI_review_completed",
+    "formalUseAllowed": false,
+    "formalUseReason": "16§3.4：未校准模型裁判只能作参考，不计入门槛。用户授权本次AI代核，不伪称真人亲审或既有30条真人校准。",
+    "authorizationEvidence": "先替我完成 J4 的15项输出复核，注明 AI 代核身份，完成后重新检查 P2 还剩哪些未完成项，然后把未完成的内容发给Pi-Story会话，让它来执行完成"
+  },
+  "overall": "P2暂不能通过，不进入P3",
+  "review": "D:/AI/Story Dome/新版综合方案/测试结果/P2/人工复核/J4-20261030-AI代核.json",
+  "remaining": [
+    {
+      "id": "R1",
+      "items": [
+        "T01"
+      ],
+      "kind": "measurement_gap_and_historical_failure",
+      "owner": "Pi-Story",
+      "status": "unresolved",
+      "evidence": "历史124/160=77.5% <90%；e3a5c7e/af51a42离线修复通过，当前版本真实模型未测。",
+      "action": "核对已完成T01修复；保留历史结果，按最小差量重新测量计划补当前版本证据，不能以68项离线测试替代模型首次参数合格率。遵守既有不重跑已完成付费测试和费用限制，冲突先列明具体待决项。"
+    },
+    {
+      "id": "R2",
+      "items": [
+        "H12",
+        "C04",
+        "H09",
+        "C02",
+        "C05"
+      ],
+      "kind": "historical_integrity",
+      "owner": "Pi-Story preparation; author decision if unrecoverable",
+      "status": "unresolved",
+      "evidence": "H12 612/640，缺28；C04 618/640，缺22；H09/C05未知104，C02未知22；全部39真实运行必须保留。",
+      "action": "只从真实残留产物恢复有据字段；修复今后的记录/来源落盘边界并做离线故障回归。不可恢复的逐项标明并依据21§3形成作者待决处理，不补造用量/来源，不用新增成功覆盖旧分母。"
+    },
+    {
+      "id": "R3",
+      "items": [
+        "W01"
+      ],
+      "kind": "sample_gap",
+      "owner": "Pi-Story",
+      "status": "unresolved",
+      "evidence": "22次起草样本，最低30，尚差8次。",
+      "action": "先确认现有正式样本没有遗漏；只规划或执行授权范围内真正缺失的起草样本，不把局部补丁、开发轮和取消输出转作正式样本。"
+    },
+    {
+      "id": "R4",
+      "items": [
+        "T06",
+        "T07",
+        "E05",
+        "K08"
+      ],
+      "kind": "AI_reference_quality_failure",
+      "owner": "Pi-Story",
+      "status": "unresolved",
+      "evidence": "T06 R147/276=53.26%<80%；T07 36/50=72%<90%；E05 39/50=78%<85%；K08 P13/41=31.71%<70%，R13/60=21.67%<50%。",
+      "action": "定位主笔台账粒度与来源归属、编辑客观证据边界、记录员伏笔生命周期的负责层；先在开发集与离线合同中修复，不能围绕本次验收样例调参。21§3要求后续验收改进轮由作者决定；用户本轮要求继续完成不等于可擅自放宽阈值或无限轮重跑。"
+    },
+    {
+      "id": "R5",
+      "items": [
+        "J4 qualification"
+      ],
+      "kind": "acceptance_qualification",
+      "owner": "author or calibrated independent judge",
+      "status": "AI_review_completed_formal_qualification_pending",
+      "evidence": "本次15项/1480条均已实际AI复核；humanReviewed=false，calibratedJudge=false。",
+      "action": "保留AI代核身份和结论；16§3.4要求真人核对，或>=30条真人金标一致率>=80%校准并每次>=10%真人抽查。不能由执行AI自行把status改成author_approved冒充此资格；如作者改变验收规则须原文记录并说明影响。"
+    },
+    {
+      "id": "R6",
+      "items": [
+        "P2-O6",
+        "P2-O7/C03",
+        "report closeout"
+      ],
+      "kind": "observation_and_documentation",
+      "owner": "Pi-Story preparation",
+      "status": "unresolved_non_threshold_observations",
+      "evidence": "O6完整净效果、O7相关性人工数值仍缺；本次E06一致率不等于局部修订净效果。",
+      "action": "完成可执行的观察统计与证据入口；O6新增问题至少含本次信件带离后仍阅读原信的修订副作用，不冒称全量净效果。明确无法自动得出的相关性/新增缺陷判定，完成后更新报告、指标总表与离线重评分。"
+    }
+  ],
+  "constraints": {
+    "preserveHistoricalPaidResults": true,
+    "rewriteOldMetrics": false,
+    "upstreamReadOnly": true,
+    "autoCreateBranches": false,
+    "autoCommit": false,
+    "paidCallsThisReview": 0,
+    "spentIncludingUnknownReserveUsd": 16.34312478,
+    "stopNewCallsAtUsd": 20,
+    "totalLimitUsd": 25
+  },
+  "handoff": {
+    "title": "Pi-Story",
+    "threadId": "01a1817a-e046-7142-8111-3b42dc2567a9",
+    "hostId": "local",
+    "status": "message_dispatched",
+    "sentAt": "2026-10-30T07:20:26.131Z",
+    "scope": "用户明确授权发送剩余工作并要求执行完成"
+  }
+}

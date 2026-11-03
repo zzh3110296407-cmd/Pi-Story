@@ -1,0 +1,1502 @@
+{
+  "purpose": "24 diagnostic only; historical runs did not implement the new protocol, not V2 acceptance",
+  "schema": "story/metrics@2",
+  "suiteId": "P2-EDIT",
+  "runId": "20261030T052339Z-34ea13b-r1",
+  "metrics": [
+    {
+      "id": "E01",
+      "n": 48,
+      "value": {
+        "first": 0.9791666666666666,
+        "final": 0.9791666666666666
+      },
+      "successes": {
+        "first": 47,
+        "final": 47
+      },
+      "threshold": {
+        "first": 0.8,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.8910078200474814,
+          0.9963128890224893
+        ],
+        "final": [
+          0.8910078200474814,
+          0.9963128890224893
+        ]
+      },
+      "passed": true,
+      "status": "measured",
+      "unavailable": 0.020833333333333332
+    },
+    {
+      "id": "W05",
+      "n": 21,
+      "value": 1,
+      "successes": 21,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 20,
+      "confidence95": [
+        0.8453609810751531,
+        1
+      ],
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "E02",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 30,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E03",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E04",
+      "n": 0,
+      "value": null,
+      "threshold": 0.7,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E05",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "E06",
+      "n": 0,
+      "value": null,
+      "threshold": 0.8,
+      "minimum": 20,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "H12",
+      "n": 69,
+      "successes": 0,
+      "value": 0,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        3.469446951953614e-18,
+        0.05273725818905173
+      ],
+      "passed": false,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 0,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": null,
+      "passed": false,
+      "status": "unclassified_usage",
+      "unknownCalls": 69,
+      "unclassified": 69
+    },
+    {
+      "id": "C02",
+      "n": 69,
+      "failures": 69,
+      "value": 69,
+      "threshold": 0,
+      "confidence95": [
+        3.469446951953614e-18,
+        0.05273725818905173
+      ],
+      "passed": false,
+      "status": "measured",
+      "missingInputs": 69
+    },
+    {
+      "id": "C04",
+      "n": 69,
+      "successes": 0,
+      "value": 0,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        3.469446951953614e-18,
+        0.05273725818905173
+      ],
+      "passed": false,
+      "status": "measured",
+      "missingProductRecords": 69
+    },
+    {
+      "id": "C05",
+      "n": 69,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.9472627418109483,
+        1
+      ],
+      "passed": false,
+      "status": "unclassified_usage",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 69,
+      "unclassified": 69
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 69,
+        "knownUsd": 0.450200376,
+        "reservedUsd": 0.042881699999999995,
+        "unknownCalls": 1,
+        "networkRequests": 69,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [
+        {
+          "caseId": "bakery_apartment-c1-control",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 59362,
+          "knownUsd": 0.012625811999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c1-injected-1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 29697,
+          "knownUsd": 0.009152615999999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c1-injected-2",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 50048,
+          "knownUsd": 0.011974548,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c2-control",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 94561,
+          "knownUsd": 0.023991,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c2-injected-1",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 56509,
+          "knownUsd": 0.013531716000000001,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c2-injected-2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 67634,
+          "knownUsd": 0.016193316,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c3-control",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 63864,
+          "knownUsd": 0.014668511999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c3-injected-1",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 40142,
+          "knownUsd": 0.011868336,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c3-injected-2",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 34071,
+          "knownUsd": 0.009313308,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c1-control",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 63256,
+          "knownUsd": 0.016454399999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c1-injected-1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 38815,
+          "knownUsd": 0.010466052,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c1-injected-2",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 58566,
+          "knownUsd": 0.014569848,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c2-control",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 170022,
+          "knownUsd": 0.0440184,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c2-injected-1",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 119754,
+          "knownUsd": 0.030252947999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c2-injected-2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 51544,
+          "knownUsd": 0.013669248,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c3-control",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 141392,
+          "knownUsd": 0,
+          "reservedUsd": 0.042881699999999995,
+          "unknownCalls": 1,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c3-injected-1",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 60277,
+          "knownUsd": 0.016560468,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c3-injected-2",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 50707,
+          "knownUsd": 0.012558804,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c1-control",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 127409,
+          "knownUsd": 0.028563912,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c1-injected-1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 22636,
+          "knownUsd": 0.008026415999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c1-injected-2",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 29417,
+          "knownUsd": 0.00785118,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c2-control",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 118168,
+          "knownUsd": 0.026731812,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c2-injected-1",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 66622,
+          "knownUsd": 0.017850659999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c2-injected-2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 54541,
+          "knownUsd": 0.013635179999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c3-control",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 118672,
+          "knownUsd": 0.025899012,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c3-injected-1",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 55535,
+          "knownUsd": 0.015435468,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c3-injected-2",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 3,
+          "elapsedMs": 108691,
+          "knownUsd": 0.024337404,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 3,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": [
+        {
+          "caseId": "bakery_apartment-c1-injected-1",
+          "reviewId": "c01-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c1-injected-2",
+          "reviewId": "c01-r02",
+          "resolved": 1,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 1,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c2-control",
+          "reviewId": "c02-r02",
+          "resolved": 0,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 0,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c2-injected-1",
+          "reviewId": "c02-r02",
+          "resolved": 3,
+          "newlyReportedObjective": 1,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c2-injected-2",
+          "reviewId": "c02-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c3-injected-1",
+          "reviewId": "c03-r02",
+          "resolved": 1,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 1,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "bakery_apartment-c3-injected-2",
+          "reviewId": "c03-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c1-control",
+          "reviewId": "c01-r02",
+          "resolved": 1,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 1,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c1-injected-1",
+          "reviewId": "c01-r02",
+          "resolved": 3,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 3,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c1-injected-2",
+          "reviewId": "c01-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c2-control",
+          "reviewId": "c02-r02",
+          "resolved": 1,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 1,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c2-injected-1",
+          "reviewId": "c02-r02",
+          "resolved": 3,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 3,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c2-injected-2",
+          "reviewId": "c02-r02",
+          "resolved": 3,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 3,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c3-injected-1",
+          "reviewId": "c03-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "last_impression-c3-injected-2",
+          "reviewId": "c03-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c1-injected-1",
+          "reviewId": "c01-r02",
+          "resolved": 3,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 3,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c1-injected-2",
+          "reviewId": "c01-r02",
+          "resolved": 1,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 1,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c2-injected-1",
+          "reviewId": "c02-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c2-injected-2",
+          "reviewId": "c02-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c3-injected-1",
+          "reviewId": "c03-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        },
+        {
+          "caseId": "quiet_europa-c3-injected-2",
+          "reviewId": "c03-r02",
+          "resolved": 2,
+          "newlyReportedObjective": 0,
+          "programProxyNet": 2,
+          "actualNet": null,
+          "status": "pending_human"
+        }
+      ]
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "25521dc8d95e4f6e1e3a6ece21cb4f8cc7892d42b78fe68cadc571ef060b148f",
+        "characters": 6505,
+        "estimatedTokens": 4059
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "a064c45fca7be9a7dd054ef12225093ed46478ffa8b01a0a8f0f0fe98cff54eb",
+        "characters": 10361,
+        "estimatedTokens": 5250
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "bbb5bd162b1e51d94359eeffe1b0fff27c0f5ca48c17b95cc53ce86109c7559b",
+        "characters": 6003,
+        "estimatedTokens": 3903
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 68,
+      "median": 1.7293133627457875,
+      "max": 1.921025428984908
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 1,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "e4cc5cbd-c9b3-4559-bf3f-244f61c46673",
+        "caseId": "bakery_apartment-c1-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f0763649-03fe-4c52-9835-2beea998f41c",
+        "caseId": "bakery_apartment-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "be356cec-3d64-4a2d-8f40-507d5e514ea4",
+        "caseId": "bakery_apartment-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5f15bad8-5e53-4eef-b6f1-9ab6447ce3c7",
+        "caseId": "bakery_apartment-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "9ef683ad-342a-4bd6-ab20-a5a50aaf1f70",
+        "caseId": "bakery_apartment-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a55b4d71-1436-40b9-b74b-00037e96e902",
+        "caseId": "bakery_apartment-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a3564eb6-0184-4916-9f74-d92e47215548",
+        "caseId": "bakery_apartment-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "414eb91e-38fe-486f-9d98-7d6fd5ae65dd",
+        "caseId": "bakery_apartment-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "74a34040-95ec-47b6-8817-bd13281e064f",
+        "caseId": "bakery_apartment-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "6061aebe-6136-4844-9658-a645e32ffacd",
+        "caseId": "bakery_apartment-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ea2cac7d-23b5-41e6-8452-87f028cde277",
+        "caseId": "bakery_apartment-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "6144fdca-5eb9-4bb9-a98e-1793cf48badc",
+        "caseId": "bakery_apartment-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "38ec9f3a-1bec-4e74-9f2a-1102c589bbdf",
+        "caseId": "bakery_apartment-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "6d2ca706-89d0-41ea-8c0b-601176e7f35c",
+        "caseId": "bakery_apartment-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f1e54585-dff1-4958-824b-e76f5b8248f9",
+        "caseId": "bakery_apartment-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "70b4ca7a-6e32-435a-936b-2c793ded4329",
+        "caseId": "bakery_apartment-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "e75d61f7-0a3c-43fe-ba6f-533bc17579c9",
+        "caseId": "bakery_apartment-c3-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "4648d587-f0b1-4c12-88f4-d58f4a8d7a21",
+        "caseId": "bakery_apartment-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "e7cb6a29-98f1-43ee-9fb5-5a7c91a8a8c5",
+        "caseId": "bakery_apartment-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0206d52d-927d-4fc9-8db4-bd1d988ea153",
+        "caseId": "bakery_apartment-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "542ff069-fe47-467f-ab81-49364347c20f",
+        "caseId": "bakery_apartment-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b16019a9-a56f-49dc-86c5-b2cfdaa80674",
+        "caseId": "bakery_apartment-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "fb5b2378-7f84-4901-96da-228774fa5243",
+        "caseId": "bakery_apartment-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ef6d81a1-65c8-49cf-ad1a-94d33f0663ad",
+        "caseId": "last_impression-c1-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2a5f5e88-3c94-4f6a-906a-808bb15b0547",
+        "caseId": "last_impression-c1-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "75e29a1c-849f-42fe-bc95-067e68affbdb",
+        "caseId": "last_impression-c1-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "87531d78-2604-47fb-8122-16b75e7ecbae",
+        "caseId": "last_impression-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "956e763e-d528-4671-bc89-991f660a969c",
+        "caseId": "last_impression-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "1d5f1638-23e6-4374-8e50-4cb21a52f2af",
+        "caseId": "last_impression-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ff18a524-44dc-4924-9fba-9d8f313e666b",
+        "caseId": "last_impression-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b9ac098c-fb78-4fbf-a363-8a73776c86bc",
+        "caseId": "last_impression-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "62bc28db-43f5-410b-8428-1ad187824551",
+        "caseId": "last_impression-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "476d8f9c-9f93-4c63-8a81-6fc4211d9464",
+        "caseId": "last_impression-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "aff4f806-eaa0-42cd-b08e-dd93da8c7755",
+        "caseId": "last_impression-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "1306eb08-d296-4ac1-b41c-2f98a7003067",
+        "caseId": "last_impression-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b412ed7e-5eba-4f63-accf-4e333bb405f2",
+        "caseId": "last_impression-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "cb30372c-63a6-4884-a9a3-510fb3a46b74",
+        "caseId": "last_impression-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "4eb99a9c-140b-49c4-a09a-e36e3b99c848",
+        "caseId": "last_impression-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f78f0e98-781e-4b7b-9984-0901334d8372",
+        "caseId": "last_impression-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "9cae241a-69bb-45ba-9202-db924c4b9e81",
+        "caseId": "last_impression-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "81f0e6b4-9fde-49ad-a085-bfddaf9a2e1c",
+        "caseId": "last_impression-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "87c820af-f190-473b-9dea-6f4d6b846cc2",
+        "caseId": "last_impression-c3-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2d360790-c5b2-4107-be3b-18cf7bee3d3c",
+        "caseId": "last_impression-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b3a864de-5439-4f80-bbd5-7f81ee075440",
+        "caseId": "last_impression-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a286d12a-8381-4edd-ae91-b788f1b5f901",
+        "caseId": "last_impression-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "9fdaea52-df1b-4426-b709-f2f1e488ad35",
+        "caseId": "last_impression-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a0b9cb2c-d243-42c7-ae42-ecdf155aa070",
+        "caseId": "last_impression-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "cc3dec38-872d-4036-95d8-ef4c8f0a2d8d",
+        "caseId": "last_impression-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0b30970c-7f8a-41ae-aefc-562a8a3c11ef",
+        "caseId": "quiet_europa-c1-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "77f9265c-3076-4ce5-b6f3-7b71c0172fd0",
+        "caseId": "quiet_europa-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ed8f3b18-6c33-4604-8f03-169c51abfd5a",
+        "caseId": "quiet_europa-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f58520e9-8568-4228-8fe7-baeac2d56254",
+        "caseId": "quiet_europa-c1-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "9e469059-cefa-4bab-b203-81ba90d6560f",
+        "caseId": "quiet_europa-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "d8cad665-ebc3-4b74-8b74-86dcaef69cb8",
+        "caseId": "quiet_europa-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0031bb76-c5c4-44f1-9ff1-8023424453bf",
+        "caseId": "quiet_europa-c1-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f4cbac73-09e3-46e5-b589-505b4fb17773",
+        "caseId": "quiet_europa-c2-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5ee47879-f94d-4e4c-bf04-036f0e1b99e6",
+        "caseId": "quiet_europa-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "0d041fce-1c6b-4118-83c2-8ed76d0b4e16",
+        "caseId": "quiet_europa-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "cb466970-ce24-4558-911c-1ce566d94a26",
+        "caseId": "quiet_europa-c2-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2ff408ba-f5d9-4829-ba29-cbd017aa5b47",
+        "caseId": "quiet_europa-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "99de818e-7900-4086-8763-e7ca5d1176d7",
+        "caseId": "quiet_europa-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a16abe1a-0229-48cd-b29a-7821cd20f4e7",
+        "caseId": "quiet_europa-c2-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c0db56e2-e6a1-45e4-919d-da84c0940303",
+        "caseId": "quiet_europa-c3-control",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2d408de5-2784-4339-883c-7fd5dbb74ce9",
+        "caseId": "quiet_europa-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "6edf8199-f533-4e02-8d5a-1bb9d040307e",
+        "caseId": "quiet_europa-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b5bee5f5-affd-4d25-bd59-bcdac54a3fb4",
+        "caseId": "quiet_europa-c3-injected-1",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "15cdaf3d-d3cb-44b8-b704-ff0a8a72a407",
+        "caseId": "quiet_europa-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "a92ecc89-3cfa-46c9-8f2f-f99e3ecf0f22",
+        "caseId": "quiet_europa-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      },
+      {
+        "type": "call_audit",
+        "requestId": "db025180-cb6f-41f1-9e2e-6085124134da",
+        "caseId": "quiet_europa-c3-injected-2",
+        "started": false,
+        "completed": false,
+        "interrupted": false,
+        "productSources": false
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

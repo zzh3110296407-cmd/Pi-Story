@@ -1,0 +1,624 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-KEEP",
+  "runId": "20261101T015406Z-102c3ed-r1",
+  "metrics": [
+    {
+      "id": "K01",
+      "n": 9,
+      "value": {
+        "first": 0.7777777777777778,
+        "final": 1
+      },
+      "successes": {
+        "first": 7,
+        "final": 9
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.45258896910698887,
+          0.9367748928821533
+        ],
+        "final": [
+          0.7008549515804559,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K02",
+      "n": 9,
+      "value": {
+        "first": 0.6666666666666666,
+        "final": 1
+      },
+      "successes": {
+        "first": 6,
+        "final": 9
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.9
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.3542021355803963,
+          0.879416181613089
+        ],
+        "final": [
+          0.7008549515804559,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K03",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K04",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K05",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K06",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K08",
+      "n": 0,
+      "value": {
+        "precision": null,
+        "recall": null
+      },
+      "threshold": {
+        "precision": 0.7,
+        "recall": 0.5
+      },
+      "minimum": 20,
+      "confidence95": {
+        "precision": null,
+        "recall": null
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "manual": true,
+      "components": {
+        "precision": {
+          "n": 0,
+          "successes": 0
+        },
+        "recall": {
+          "n": 0,
+          "successes": 0
+        }
+      },
+      "precisionBasis": "qualified judgment of each output operation; recall remains one-to-one gold matching"
+    },
+    {
+      "id": "H12",
+      "n": 14,
+      "successes": 14,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.7846891972623643,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 14,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7846891972623643,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 14,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7846891972623643,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 14,
+      "successes": 14,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.7846891972623643,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 14,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7846891972623643,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 14,
+        "knownUsd": 0.17156096399999998,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 14,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [
+        {
+          "caseId": "second_cairn-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 78670,
+          "knownUsd": 0.017804975999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "second_cairn-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 71970,
+          "knownUsd": 0.018881652,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "second_cairn-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 103969,
+          "knownUsd": 0.026351351999999995,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 76882,
+          "knownUsd": 0.019222152,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 76664,
+          "knownUsd": 0.021515652,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_lane-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 57719,
+          "knownUsd": 0.013366175999999999,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 30389,
+          "knownUsd": 0.007816476,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 2,
+          "elapsedMs": 120264,
+          "knownUsd": 0.028595951999999994,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 2,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "unclaimed_pedestal-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 80780,
+          "knownUsd": 0.018006575999999996,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 155,
+        "provisional": 9,
+        "provisionalRate": 0.05806451612903226,
+        "issues": 14,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "c225c4d6bb603281913e88eadf18c41af428945d82f71c80fd46489eb4ff4eba",
+        "characters": 5055,
+        "estimatedTokens": 3615
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "670d4bc6e275bcfa823209754cba1490ec03e63ebbb5dd0f0abaf5e3fc7f4b2a",
+        "characters": 7780,
+        "estimatedTokens": 4453
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "3c596a09d7f767ec2008e1323f85af0874bdf126a045a4b1eae3ed90de62f128",
+        "characters": 17226,
+        "estimatedTokens": 7371
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "1129f9841124d530abd77c2d83655a91fb96bad4a155b5e8b09f963b05960477",
+        "characters": 8010,
+        "estimatedTokens": 4524
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 14,
+      "median": 1.6116388062849147,
+      "max": 1.7222844344904815
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 2,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "04fc4e87-ef61-42f7-be88-ebc45ff142bd",
+        "caseId": "second_cairn-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043446900000000004
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c7d2a8e4-3a26-4891-93c4-9e9ef58c2deb",
+        "caseId": "second_cairn-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043905299999999994
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5906a92f-6c6e-4c30-a191-7383067b5842",
+        "caseId": "second_cairn-c2",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0444522
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ecf77c97-1fc8-483f-879d-64709872ae25",
+        "caseId": "second_cairn-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0440409
+      },
+      {
+        "type": "call_audit",
+        "requestId": "2fc2ee33-5e1f-4f6f-87fe-cb642f8d5b77",
+        "caseId": "second_cairn-c3",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0445959
+      },
+      {
+        "type": "call_audit",
+        "requestId": "11a9c674-04b2-4a32-ab27-292ce823d796",
+        "caseId": "unclaimed_lane-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0434814
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5336ae8c-06f7-412b-96ba-582f2ca9f378",
+        "caseId": "unclaimed_lane-c1",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439494
+      },
+      {
+        "type": "call_audit",
+        "requestId": "1512120d-ccff-40f1-a07d-e399fae0bb0a",
+        "caseId": "unclaimed_lane-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439392
+      },
+      {
+        "type": "call_audit",
+        "requestId": "537a0ab8-a8c3-4850-a64b-618f6a82a523",
+        "caseId": "unclaimed_lane-c2",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0448707
+      },
+      {
+        "type": "call_audit",
+        "requestId": "3fd38b24-7e8f-47d1-acbc-b018cbf1287d",
+        "caseId": "unclaimed_lane-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0440007
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c672e5fe-1186-42f0-a3c3-0b3631785e83",
+        "caseId": "unclaimed_pedestal-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0434742
+      },
+      {
+        "type": "call_audit",
+        "requestId": "dc3d9093-8a4c-428a-95cb-69621c7d460c",
+        "caseId": "unclaimed_pedestal-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439221
+      },
+      {
+        "type": "call_audit",
+        "requestId": "f10f244d-3abc-4fa5-a96c-820febca9bc1",
+        "caseId": "unclaimed_pedestal-c2",
+        "reservationId": "reservation-2",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0444576
+      },
+      {
+        "type": "call_audit",
+        "requestId": "3feb1885-d2bf-4411-b556-266f903bef74",
+        "caseId": "unclaimed_pedestal-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0440592
+      }
+    ]
+  },
+  "scoringVersion": "p2r3-26@1",
+  "judgmentProtocol": {
+    "ledger": "coverage-rev20261031",
+    "facts": "predicate-and-entity-rev20261031",
+    "notApplicable": "excluded from scored denominator; retained in judgment source"
+  }
+}

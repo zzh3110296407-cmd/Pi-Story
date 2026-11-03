@@ -1,0 +1,99 @@
+{
+  "id": "ds11-d01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "Before I write chapter 3 — when you say \"lighter,\" which do you mean? The two readings would change the prose differently.",
+        "options": [
+          "Emotional tone: warmer, more wry and easygoing between Lena, Oren and Suri",
+          "Lighting: set the scene in brighter daylight, with the museum lit more openly",
+          "Both: brighter light and a warmer emotional register"
+        ]
+      },
+      "id": "call_00_ud7M3otuC3A43binhbcM5367"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "Before I write chapter 3 — when you say \"lighter,\" which do you mean? The two readings would change the prose differently.",
+      "options": [
+        "Emotional tone: warmer, more wry and easygoing between Lena, Oren and Suri",
+        "Lighting: set the scene in brighter daylight, with the museum lit more openly",
+        "Both: brighter light and a warmer emotional register"
+      ]
+    },
+    "id": "call_00_ud7M3otuC3A43binhbcM5367"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "dd8e8accf0a7eb389ca70803e5e56036206d112c51abd0b96f4ca0b5fd053f92",
+    "sessionSha256": "aa4fd69bf31e0cf91f58ed0515976cb7bb8e3ae2b74cc8a6c859209698981141",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025455,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025455
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

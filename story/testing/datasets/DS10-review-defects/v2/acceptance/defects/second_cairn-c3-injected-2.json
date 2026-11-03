@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "second_cairn-c3-injected-2",
+  "storyId": "second_cairn",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/second_cairn-c3.md",
+    "sha256": "c1bfc4b8eeb16cfd004d8c679f2030cb6db713e5d22355860d554b4b5567bbac"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "The intact river gate moved fully open by itself while the hand capstan stayed motionless and no one operated it.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "The intact river gate moved fully open by itself while the hand capstan stayed motionless and no one operated it.",
+          "lines": {
+            "start": 39,
+            "end": 39
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:mechanism",
+          "quote": "The river gate moves only when its hand capstan is turned; the intact gate has no motor, remote control or automatic release."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this mechanism rule: The river gate moves only when its hand capstan is turned; the intact gate has no motor, remote control or automatic release."
+        }
+      ],
+      "reason": "A narrated actual event violates the supplied mechanism rule under the exact conditions the rule excludes.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c3-injected-2-defect-1",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Jun died permanently at that moment, and the death was confirmed before the chapter ended.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Jun died permanently at that moment, and the death was confirmed before the chapter ended.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Jun alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death violates the explicit author requirement to keep this named person alive through chapter three.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c3-injected-2-defect-2",
+      "lines": [
+        41
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "quiet_europa-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:nia",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Nia Ortiz, a station engineer"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:anton",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Anton Voss, the shuttle pilot"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:mira",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Mira Sato, the station physician"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:kes",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Kes, a station maintenance intelligence"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:habitat",
+          "op": "set",
+          "source": "model",
+          "value": "The surface habitat"
+        },
+        {
+          "kind": "place",
+          "key": "place:pump",
+          "op": "set",
+          "source": "model",
+          "value": "The brine pump chamber"
+        },
+        {
+          "kind": "place",
+          "key": "place:antenna",
+          "op": "set",
+          "source": "model",
+          "value": "The antenna gallery"
+        },
+        {
+          "kind": "place",
+          "key": "place:shuttle",
+          "op": "set",
+          "source": "model",
+          "value": "The rescue shuttle"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:physical_limit",
+          "op": "set",
+          "source": "model",
+          "value": "Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:nia->anton",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "wary cooperation"
+          }
+        }
+      ]
+    }
+  }
+]

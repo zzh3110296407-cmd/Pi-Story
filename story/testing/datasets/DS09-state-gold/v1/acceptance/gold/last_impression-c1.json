@@ -1,0 +1,376 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "last_impression-c1",
+  "storyId": "last_impression",
+  "chapter": 1,
+  "title": "The Wrong Watermark",
+  "cast": [
+    "char:elise",
+    "char:jonas",
+    "char:miriam",
+    "char:pike"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1717
+  },
+  "facts": [
+    {
+      "id": "F-101",
+      "subject": "char:elise",
+      "predicate": "location",
+      "object": "place:shop",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0109",
+        "c01.s0119"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Elise remained in the Holt print shop after the shutters were drawn."
+    },
+    {
+      "id": "F-102",
+      "subject": "item:typecase_key",
+      "predicate": "holder",
+      "object": "char:miriam",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0067"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Elise gave the typecase key to Miriam."
+    },
+    {
+      "id": "F-103",
+      "subject": "char:elise",
+      "predicate": "quantity:coins",
+      "object": {
+        "value": 27,
+        "unit": "coins"
+      },
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:elise",
+      "evidence": [
+        "c01.s0022",
+        "c01.s0023"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The three-coin delivery left Elise with twenty-seven coins.",
+      "arithmetic": {
+        "before": 30,
+        "change": -3,
+        "after": 27
+      }
+    },
+    {
+      "id": "F-104",
+      "subject": "char:jonas",
+      "predicate": "identity",
+      "object": "Jonas Reed, an apprentice",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0011"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The workshop roll listed Jonas as Jonas Reed, apprentice."
+    },
+    {
+      "id": "F-105",
+      "subject": "item:leaflet",
+      "predicate": "holder",
+      "object": "char:jonas",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0016"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Miriam entrusted the disputed leaflet to Jonas."
+    },
+    {
+      "id": "F-106",
+      "subject": "char:elise",
+      "predicate": "injury",
+      "object": "burn on right thumb",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0040"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The hot type burned Elise’s right thumb."
+    },
+    {
+      "id": "F-107",
+      "subject": "char:elise",
+      "predicate": "quantity:paper",
+      "object": {
+        "value": 7,
+        "unit": "reams"
+      },
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0049"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "One ream was spoiled, leaving seven usable reams.",
+      "arithmetic": {
+        "before": 8,
+        "change": -1,
+        "after": 7
+      }
+    },
+    {
+      "id": "F-108",
+      "subject": "char:pike",
+      "predicate": "location",
+      "object": "place:bridge",
+      "validFrom": 1,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c01.s0103"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Pike took his post at the stone toll bridge."
+    },
+    {
+      "id": "F-180",
+      "subject": "char:elise",
+      "predicate": "location",
+      "object": "the attic room Elise rented during her first apprenticeship",
+      "validFrom": null,
+      "validUntil": 0,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c01.s0080",
+        "c01.s0081",
+        "c01.s0082"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Elise remembered the attic room she had rented during her first apprenticeship.",
+      "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-11",
+      "speaker": "char:pike",
+      "content": "The council has cancelled your licence.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c01.s0034"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-12",
+      "speaker": "char:elise",
+      "content": "There are twenty-seven coins left,",
+      "truth": "true",
+      "evidence": [
+        "c01.s0023"
+      ],
+      "corroboratedBy": "F-103"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-11",
+      "characterId": "char:elise",
+      "kind": "knows",
+      "content": "Elise knew Miriam held the typecase key.",
+      "acquiredChapter": 1,
+      "via": "witnessed",
+      "evidence": [
+        "c01.s0069"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-12",
+      "characterId": "char:jonas",
+      "kind": "misbelieves",
+      "content": "Jonas believed the leaflet was still on Miriam’s desk, although he had folded it into his own coat.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0018"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+      "supersededBy": "K-15",
+      "temporalScope": "former_belief_superseded_within_chapter",
+      "viaScored": false,
+      "recordPolicy": "historical_attitude_not_required_as_active_add",
+      "requireHistoricalAdd": false
+    },
+    {
+      "id": "K-13",
+      "characterId": "char:elise",
+      "kind": "suspects",
+      "content": "Elise could not decide whether the cart outside belonged to the constable.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0086"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-14",
+      "characterId": "char:miriam",
+      "kind": "believes",
+      "content": "Miriam believed the county clerk would let them examine the register.",
+      "acquiredChapter": 1,
+      "via": "inferred",
+      "evidence": [
+        "c01.s0071"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-15",
+      "characterId": "char:jonas",
+      "kind": "knows",
+      "content": "Jonas knows the disputed leaflet was in his own coat.",
+      "acquiredChapter": 1,
+      "via": "witnessed",
+      "evidence": [
+        "c01.s0062",
+        "c01.s0063"
+      ],
+      "certainty": "confirmed",
+      "supersededBy": null
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:elise->jonas",
+      "from": "char:elise",
+      "to": "char:jonas",
+      "stance": "guarded trust",
+      "keyFact": true,
+      "evidence": [
+        "c01.s0061"
+      ],
+      "statement": "Elise trusted Jonas with the leaflet but not yet with the account of how it had arrived."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "upsert",
+      "statement": "The disputed leaflet carried a watermark shaped like a broken wheel.",
+      "evidence": [
+        "c01.s0006"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "upsert",
+      "statement": "One line of type contained a letter from a different font.",
+      "evidence": [
+        "c01.s0057"
+      ]
+    },
+    {
+      "id": "H-3",
+      "operation": "upsert",
+      "statement": "Miriam kept a sealed packet addressed to a man called Dunn.",
+      "evidence": [
+        "c01.s0075"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "last_impression-c1-trap-1",
+      "kind": "plan",
+      "statement": "She planned to compare the watermarks after the morning delivery.",
+      "evidence": [
+        "c01.s0098"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "last_impression-c1-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the paper came from the county mill, its ledger might name the buyer.",
+      "evidence": [
+        "c01.s0097"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "last_impression-c1-trap-3",
+      "kind": "dream",
+      "statement": "She dreamed that every letter in the shop had turned itself backwards.",
+      "evidence": [
+        "c01.s0113"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Elise could not decide whether the cart outside belonged to the constable.",
+      "evidence": [
+        "c01.s0086"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": [],
+  "annotation": {
+    "kind": "AI_designed_then_user_delegated_AI_review",
+    "humanReviewed": false,
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewSource": "labels/delegated-review.json",
+    "authorFreezeSource": "labels/freeze-authorization.json",
+    "reviewPolicies": {
+      "factModes": "数量世界事实有独立叙述；reported记录原话来源，不作为唯一世界事实模式。允许持久层narrated并另记claim，不要求重复世界事实。recalled映射到recalled_past。",
+      "cognitionTiming": "新增acquiredChapter与P1结算章一致；实际旧信念形成时间未知另记null，不伪造0。明确被纠正的旧信念须supersede，不作为章末活跃态度。 同章已结束的历史态度不强制新加为活跃认知；输入中已有旧条目才要求supersede，不要求P1不支持的同批新增后再替换操作。",
+      "cognitionVia": "明确电话转告、读文件/日志或推断时按上下文判；泛泛的believed/不知道/猜测并未交代途径时，默认inferred不能作为唯一严格命中条件。viaScored=false及acceptedVia是金标评分元数据，不直接写入P1 schema。",
+      "traps": "mustNotRecord只禁止把给定计划/假设/梦境证据直接实化，不排斥后续独立证据已证实的事实。",
+      "uncertainty": "confirmed认知确认的是态度；被怀疑的世界命题仍只能未确认或不抽取。未提出具体命题时不强制编出一项事实。",
+      "identifiers": "F/K/H编号是本故事的参考标识。实际运行按语义与来源映射；新增纠正和supersede引用必须使用一致的实际分配ID，不逐字强制与金标编号一致。"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": 724,
+  "language": "en",
+  "task_type": "continuation",
+  "prompt": "Continue the story about someone with crippling stage fright who vows to face their fears after a chat with their game dev tutor. Start at the moment they walk on stage for that department presentation, laying out their racing thoughts and sweaty palms, then show how they draw on the tutor’s advice to turn things around. Weave in details about challenges—maybe a sudden tech glitch or an unexpected question from the audience—and flashbacks to past embarrassments. Build it into a roughly 8,000-10,000 word narrative about growth, performance, and the power of pushing past fear.",
+  "source": {
+    "file": "D:\\AI\\Story Dome\\Dataset\\ConStory-Bench\\Dataset\\valid\\prompts.parquet",
+    "sha256": "c3fb6f336d66b95ed022c4ee74eb09e17da604eafed2986d746e10dff8692ddf",
+    "rowIndex0": 4,
+    "rowNumber1": 5,
+    "id": 724
+  },
+  "constraints": [
+    {
+      "gid": "724-g01",
+      "kind": "given_fact",
+      "statement": "someone with crippling stage fright",
+      "quote": "someone with crippling stage fright",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g02",
+      "kind": "given_fact",
+      "statement": "vows to face their fears after a chat with their game dev tutor",
+      "quote": "vows to face their fears after a chat with their game dev tutor",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g03",
+      "kind": "continuation_start",
+      "statement": "Begin at the exact moment the protagonist walks on stage for the department presentation, showing their racing thoughts and sweaty palms.",
+      "quote": "Start at the moment they walk on stage for that department presentation, laying out their racing thoughts and sweaty palms",
+      "note": "AI代核修订：原Begin on stage可能允许已在台上很久才开场；恢复walk on stage的动作边界。开场文字按规则整体保留。"
+    },
+    {
+      "gid": "724-g04",
+      "kind": "story",
+      "statement": "show how they draw on the tutor’s advice to turn things around",
+      "quote": "show how they draw on the tutor’s advice to turn things around",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g05",
+      "kind": "story",
+      "statement": "Include a challenge; a technical glitch and an audience question are examples, not both mandatory.",
+      "quote": "details about challenges—maybe a sudden tech glitch or an unexpected question from the audience",
+      "note": "Atomic interpretation retains all explicit qualifications in the source span."
+    },
+    {
+      "gid": "724-g06",
+      "kind": "story",
+      "statement": "flashbacks to past embarrassments",
+      "quote": "flashbacks to past embarrassments",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g07",
+      "kind": "story",
+      "statement": "growth",
+      "quote": "growth",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g08",
+      "kind": "story",
+      "statement": "performance",
+      "quote": "performance",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g09",
+      "kind": "story",
+      "statement": "the power of pushing past fear",
+      "quote": "the power of pushing past fear",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "724-g10",
+      "kind": "global",
+      "statement": "roughly 8,000-10,000 word narrative",
+      "quote": "roughly 8,000-10,000 word narrative",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    }
+  ],
+  "authorBible": [
+    {
+      "bid": "724-b1",
+      "kind": "character",
+      "key": "char:presenter",
+      "statement": "someone with crippling stage fright",
+      "quote": "someone with crippling stage fright",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "724-b2",
+      "kind": "character",
+      "key": "char:tutor",
+      "statement": "their game dev tutor",
+      "quote": "their game dev tutor",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "724-b3",
+      "kind": "place",
+      "key": "place:presentation_stage",
+      "statement": "The stage used for the department presentation.",
+      "quote": "on stage for that department presentation",
+      "note": "AI代核修订：department presentation是活动，不是地点；原文实际给出stage，可据此标地点，不发明教室或礼堂。"
+    },
+    {
+      "bid": "724-b4",
+      "kind": "relationBaseline",
+      "key": "rel:presenter->tutor",
+      "statement": "The stage-fright protagonist has a game development tutor.",
+      "quote": "their game dev tutor",
+      "note": "导师关系直接来自原文；不擅自规定专业、学校或职务。"
+    }
+  ],
+  "length": {
+    "minWords": 8000,
+    "maxWords": 10000,
+    "approximate": true,
+    "chapterCount": null,
+    "quote": "roughly 8,000-10,000 word narrative"
+  },
+  "ambiguities": [
+    {
+      "topic": "starting_text",
+      "note": "The source supplies a continuation premise but no separate attached manuscript; do not invent unseen canonical chapters."
+    },
+    {
+      "topic": "example_not_mandatory",
+      "quote": "maybe a sudden tech glitch or an unexpected question from the audience",
+      "note": "At least a challenge is requested; neither example is individually mandatory."
+    }
+  ],
+  "annotation": {
+    "kind": "AI_labelled_then_user_delegated_AI_review",
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "humanReviewed": false,
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewDate": "2026-10-29",
+    "reviewSource": "labels/delegated-review.json",
+    "authorizationSource": "labels/freeze-authorization.json",
+    "state": "frozen_with_author_authorization"
+  }
+}

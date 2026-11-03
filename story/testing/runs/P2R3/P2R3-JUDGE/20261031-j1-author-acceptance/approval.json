@@ -1,0 +1,105 @@
+{
+  "schema": "story/author-judgment-acceptance@1",
+  "date": "2026-10-31",
+  "stage": "P2R3-J1",
+  "status": "author_accepted",
+  "description": "AI 判定、作者认可",
+  "authorStatement": "认可",
+  "statementContext": "作者对本会话刚交付的 J1 全量719项离线重判及摘要作出的整体认可。",
+  "basis": [
+    "16 §3.4（2026-10-31修订）：已校准AI判定可由作者整体认可",
+    "25 §4 J1"
+  ],
+  "reviewIdentity": {
+    "judge": "Codex / GPT-6（D0已校准AI裁判）",
+    "authorOverallAcceptance": true,
+    "personalHumanItemReviewClaimed": false
+  },
+  "scope": {
+    "judgmentCount": 719,
+    "metrics": [
+      "T06 precision",
+      "T06 recall",
+      "K04 recall"
+    ],
+    "versions": "V2 outputs, revised matching rules",
+    "J2": "pending_V3_acceptance_run_submission"
+  },
+  "judgments": [
+    {
+      "path": "story/testing/runs/P2R/P2-OPEN/20261031T063135Z-0ae2186-r1/judgments/T06-coverage.json",
+      "sha256": "911b706adc4a7cf2bc9fcbb341fca33b1cb0c1d3ff63c491bbb9aef60397306d",
+      "runId": "20261031T063135Z-0ae2186-r1",
+      "scoreCount": 295,
+      "summary": {
+        "recall": {
+          "successes": 151,
+          "n": 159,
+          "notApplicable": 0,
+          "value": 0.949685534591195
+        },
+        "precision": {
+          "successes": 126,
+          "n": 136,
+          "notApplicable": 0,
+          "value": 0.9264705882352942
+        }
+      }
+    },
+    {
+      "path": "story/testing/runs/P2R/P2-OPEN/20261031T064115Z-0ae2186-r2/judgments/T06-coverage.json",
+      "sha256": "c120d9f2c9031dfc2a7677c22c6d2531c027637d4f90068d1947cd72b1ac87e1",
+      "runId": "20261031T064115Z-0ae2186-r2",
+      "scoreCount": 280,
+      "summary": {
+        "recall": {
+          "successes": 146,
+          "n": 159,
+          "notApplicable": 0,
+          "value": 0.9182389937106918
+        },
+        "precision": {
+          "successes": 106,
+          "n": 121,
+          "notApplicable": 0,
+          "value": 0.8760330578512396
+        }
+      }
+    },
+    {
+      "path": "story/testing/runs/P2R/P2-KEEP/20261031T075152Z-0ae2186-r1/judgments/K04-rev20261031.json",
+      "sha256": "35a9519a42bbc058217ad524256d9555536a0c4f74077ed5ad4da2e1fbbca398",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "scoreCount": 72,
+      "summary": {
+        "recall": {
+          "successes": 50,
+          "n": 72,
+          "notApplicable": 0,
+          "value": 0.6944444444444444
+        }
+      }
+    },
+    {
+      "path": "story/testing/runs/P2R/P2-KEEP/20261031T080054Z-0ae2186-r2/judgments/K04-rev20261031.json",
+      "sha256": "61703ce76195d7d5a1c5b883496c68ffc1c397d0973c81c0dccc6a5dfc9dca6b",
+      "runId": "20261031T080054Z-0ae2186-r2",
+      "scoreCount": 72,
+      "summary": {
+        "recall": {
+          "successes": 39,
+          "n": 72,
+          "notApplicable": 0,
+          "value": 0.5416666666666666
+        }
+      }
+    }
+  ],
+  "deliverySummary": {
+    "path": "D:\\AI\\Story Dome\\新版综合方案\\测试结果\\P2\\人工复核\\P2R3-J1-V2重判.md",
+    "sha256": "6325feb5d98a93e65b4ef197435a2ed0da9b40d4fa8f7eac01f32ce915f5aa5a"
+  },
+  "application": "本记录以SHA-256关联四份J1判定，确认其已获作者整体认可；原文件中待认可字段保留为交付时快照。报告选取J1新版判定及本记录，不与旧口径判定拼接双计数。",
+  "modelCalls": 0,
+  "modelCostUsd": 0
+}

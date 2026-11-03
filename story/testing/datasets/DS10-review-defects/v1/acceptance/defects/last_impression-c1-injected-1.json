@@ -1,0 +1,94 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "last_impression-c1-injected-1",
+  "storyId": "last_impression",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "12200d896b26338419d63f9c67ba2eb8e2ca886c0ce6aeb824f59642461fd5a0",
+    "path": "acceptance/chapters/last_impression-c1.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "last_impression-c1-injected-1-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Elise remained in the Holt print shop after the shutters were drawn.",
+      "changed": "Elise remained in the Holt print shop after the shutters were drawn. Elise had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Elise remained in the Holt print shop after the shutters were drawn.",
+          "changed": "Elise remained in the Holt print shop after the shutters were drawn. Elise had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 21,
+            "end": 21
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:elise",
+          "quote": "Elise is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim.",
+      "lines": [
+        21
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "last_impression-c1-injected-1-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "The three-coin delivery left Elise with twenty-seven coins.",
+      "changed": "The three-coin delivery left Elise with twenty-seven coins. With no intervening gain or loss, that same completed count stood at 34 coins.",
+      "spans": [
+        {
+          "original": "The three-coin delivery left Elise with twenty-seven coins.",
+          "changed": "The three-coin delivery left Elise with twenty-seven coins. With no intervening gain or loss, that same completed count stood at 34 coins.",
+          "lines": {
+            "start": 5,
+            "end": 5
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The three-coin delivery left Elise with twenty-seven coins.",
+          "ref": "line:5"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The three-coin delivery left Elise with twenty-seven coins.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "lines": [
+        5
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review-r2.json",
+      "reviewStatus": "r2_review_and_requested_prose_repairs_applied",
+      "revision": "r2-retained-narrated-count",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

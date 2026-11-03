@@ -1,0 +1,137 @@
+{
+  "id": "ds11-b02-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "作者规定未来场景中推车只能经西门进入渡口办公室，作为后续章节的场地限制。",
+        "changes": [
+          {
+            "key": "rule:west_door_carts",
+            "source": "user",
+            "op": "set",
+            "kind": "rule",
+            "name": "推车入口限制",
+            "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+            "value": {
+              "property": "Unwritten scenes at the ferry office: any cart entering the building must come through the west door.",
+              "invariants": [
+                "Carts may enter the ferry office only through the west door."
+              ]
+            }
+          }
+        ]
+      },
+      "id": "call_00_qLb0voTh1lsIqQyLElBd1677"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "作者规定未来场景中推车只能经西门进入渡口办公室，作为后续章节的场地限制。",
+      "changes": [
+        {
+          "key": "rule:west_door_carts",
+          "source": "user",
+          "op": "set",
+          "kind": "rule",
+          "name": "推车入口限制",
+          "authorQuote": "For future scenes, carts may enter the ferry office only through the west door.",
+          "value": {
+            "property": "Unwritten scenes at the ferry office: any cart entering the building must come through the west door.",
+            "invariants": [
+              "Carts may enter the ferry office only through the west door."
+            ]
+          }
+        }
+      ]
+    },
+    "id": "call_00_qLb0voTh1lsIqQyLElBd1677"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the ferry office only through the west door.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "eabf746ecb6297e1bc2e90c622330cbb2baa724853a19283ce47e4f52d94c247",
+    "sessionSha256": "2f277c052ca66ef70cd16e55ae512ec666850ba4bc5c8ddd21b8e150126cb36c",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0027203999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0027203999999999996
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

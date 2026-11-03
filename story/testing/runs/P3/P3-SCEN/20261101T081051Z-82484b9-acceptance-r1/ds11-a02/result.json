@@ -1,0 +1,113 @@
+{
+  "id": "ds11-a02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 4,
+            "title": "The Copy",
+            "targetWords": 750,
+            "purpose": "Pema and Cal carry the duplicate page and an older pencil copy outdoors to the same archive site to compare them in daylight, checking paper, ink and the line that records the tide reading.",
+            "turn": "Comparing the two documents on site, Cal identifies a transposed line; they agree on a corrected reading and a label, while Pema notes what daylight confirms and what it cannot. The chapter stops with the wax packet still sealed and the corrected comparison set aside for the demonstration.",
+            "hookSeeds": [
+              "Does the outdoor comparison hold up under scrutiny at the demonstration?"
+            ]
+          }
+        ],
+        "reason": "Author asked to change only unwritten chapter 4 so the pencil copy comparison happens outdoors at the same site, keeping chapter number and chapter count."
+      },
+      "id": "call_00_tEe66oXRT2D5xSLIuErx9221"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 4,
+          "title": "The Copy",
+          "targetWords": 750,
+          "purpose": "Pema and Cal carry the duplicate page and an older pencil copy outdoors to the same archive site to compare them in daylight, checking paper, ink and the line that records the tide reading.",
+          "turn": "Comparing the two documents on site, Cal identifies a transposed line; they agree on a corrected reading and a label, while Pema notes what daylight confirms and what it cannot. The chapter stops with the wax packet still sealed and the corrected comparison set aside for the demonstration.",
+          "hookSeeds": [
+            "Does the outdoor comparison hold up under scrutiny at the demonstration?"
+          ]
+        }
+      ],
+      "reason": "Author asked to change only unwritten chapter 4 so the pencil copy comparison happens outdoors at the same site, keeping chapter number and chapter count."
+    },
+    "id": "call_00_tEe66oXRT2D5xSLIuErx9221"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Compare the pencil copy outdoors at the same site.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "2ddba9c862310026fd022d38f42b413d8722bba7d7a3a00905fccb439ace59ab",
+    "sessionSha256": "e41ee3f1435fbaf33adb201af1b1ffc7850a361f52cb95e97a9a447dbe5f67aa",
+    "fee": {
+      "knownUsd": 0.0026699999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026699999999999996
+    },
+    "measuredMainRequests": 2
+  }
+}

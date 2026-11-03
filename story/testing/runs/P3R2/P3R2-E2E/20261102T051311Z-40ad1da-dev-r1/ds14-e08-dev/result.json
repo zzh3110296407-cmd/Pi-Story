@@ -1,0 +1,254 @@
+{
+  "id": "ds14-e08-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 2,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "control"
+      },
+      "id": "call_00_MgYE1yrivv6op4xlMS9L3214"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2 \"Comparison\": Vera and Ash in the pottery studio compare the glaze box's outer label against the kiln register without opening the box; Vera chooses not to wear the protective glove, since it is optional. No bells are rung anywhere in the chapter. They discover the second page of the register is missing and defer opening the glaze box; end on that definite stopping beat. Third-person past tense, Vera viewpoint, precise practical actions."
+      },
+      "id": "call_00_rwXPCrHaAfFAVa1K9d598278"
+    },
+    {
+      "reply": "Chapter 2 is committed with no risks retained. Vera chose not to wear the protective glove, no bells appeared anywhere, and the glaze box was never opened; they found the missing second page of the kiln register and stopped there."
+    },
+    {
+      "tool": "read_chapter",
+      "args": {
+        "n": 2
+      },
+      "id": "call_00_BGAU6XTb6zCBw8k0YzNw2378"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3 \"The Duplicate\": Vera still works bare-handed, having chosen against the optional glove earlier. Fin arrives in the pottery studio and produces the duplicate of the missing register page from the public records; Vera and Ash read it and establish which batch the glaze box's label refers to, so the delivery dispute is settled without opening the box. They then complete the small public demonstration with the box sealed and intact, store it on the shelf, and close the work note. No bells are rung or mentioned as sounding. End on a definite quiet stopping beat. Third-person past tense, Vera viewpoint, precise practical action."
+      },
+      "id": "call_00_Px9MxvhSUOYuPc7MkdhH8918"
+    },
+    {
+      "reply": "Chapter 3 is committed, no risks retained, and the three-chapter target is reached. Vera stayed bare-handed by her earlier choice, Fin supplied the duplicate register page, the delivery question was settled with the glaze box still sealed, and no bells sounded anywhere. The box is stored intact and the work note closed.\n\nThe book now stands at three chapters; tell me if you want it extended, revised forward from here, or branch-point changes."
+    }
+  ],
+  "firstAction": {
+    "tool": "read_story",
+    "args": {
+      "section": "control"
+    },
+    "id": "call_00_MgYE1yrivv6op4xlMS9L3214"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The next committed prose does not ring bells or turn the optional glove into a compulsory action.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "Three story.control ledger_edit entries appear in order: add, set L-1, remove L-3.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The added entry receives L-4; L-2 remains untouched; L-3 is absent.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 4,
+      "check": "L-1 has author-command authority after set; its old quote does not override the new instruction (DD04).",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 5,
+      "check": "The next writer input has the added no-bells rule, the optional glove instruction and no removed practical-precision entry.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [
+          "ledger_edit",
+          "ledger_edit",
+          "ledger_edit"
+        ],
+        "continued": 1,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "1898a26f0e9e9d6f09fc7953454fecd6ef3cb62e06d3e8a2de78e86c2f2e8e78",
+    "sessionSha256": "d0eca56c0cda034c3a942a4af7762b7d56055d617b4ee73408c24e8defe253fe",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.07102480799999998,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 13,
+      "totalUsd": 0.07102480799999998
+    },
+    "measuredMainRequests": 6
+  },
+  "scoringVersion": "p3r2-32@1"
+}

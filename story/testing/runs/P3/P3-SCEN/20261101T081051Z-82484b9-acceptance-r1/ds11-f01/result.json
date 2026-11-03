@@ -1,0 +1,63 @@
+{
+  "id": "ds11-f01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "get_character",
+      "args": {
+        "key": "char:wren"
+      },
+      "id": "call_00_M6BpMNXsLFQPlrOYLtvb0864"
+    }
+  ],
+  "firstAction": {
+    "tool": "get_character",
+    "args": {
+      "key": "char:wren"
+    },
+    "id": "call_00_M6BpMNXsLFQPlrOYLtvb0864"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "If answering directly, use only the setup: Wren is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "262ccf0f578324ed1410523656b89237ec7bb997781829de4268b57cf2f59740",
+    "sessionSha256": "da729736a877ade30c355f5042c55cd0b135093f1549b3b1d99b6d37546969e2",
+    "fee": {
+      "knownUsd": 0.0023577,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023577
+    },
+    "measuredMainRequests": 2
+  }
+}

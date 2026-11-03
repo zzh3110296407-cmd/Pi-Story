@@ -1,0 +1,43 @@
+{
+  "schema": "story/gold-scoring-policy@1",
+  "scope": "DS09 v2 dataset matching metadata, not P1 persisted fields",
+  "sharedResources": [
+    {
+      "storyId": "second_cairn",
+      "key": "org:expedition",
+      "predicate": "quantity:water",
+      "scope": "shared_story_resource_account",
+      "description": "The expedition’s jointly used water account.",
+      "steward": "char:rafi",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:expedition_water_supply"
+    },
+    {
+      "storyId": "unclaimed_lane",
+      "key": "org:relay_team",
+      "predicate": "quantity:travel_fund",
+      "scope": "shared_story_resource_account",
+      "description": "The relay team’s jointly used travel account.",
+      "steward": "char:ada",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:team_travel_fund"
+    },
+    {
+      "storyId": "unclaimed_pedestal",
+      "key": "org:exhibition",
+      "predicate": "quantity:petty_cash",
+      "scope": "shared_story_resource_account",
+      "description": "The exhibition’s petty-cash account.",
+      "steward": "char:leila",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:exhibition_petty_cash"
+    }
+  ],
+  "subjects": "Use the stable shared-account key in gold. Semantically identical shared-resource identifiers may match one-to-one; a custodian character is not the account’s personal owner. Do not combine unrelated accounts.",
+  "cognitionVia": "If viaScored is false, content/attitude/time remain scored but the formation route is not uniquely determined. If acceptedVia exists, accept any listed value. These two fields stay gold metadata and are never passed as extra P1 cognition fields.",
+  "historicalAttitudes": "A known formation chapter stays explicit even when the attitude has since been corrected; corrected historical misbeliefs must not be reactivated.",
+  "routeStates": "Lower-path closure, high-traverse passability and landing condition are independent properties of distinct places. A stated validity end does not establish that its opposite later became true."
+}

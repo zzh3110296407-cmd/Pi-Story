@@ -1,0 +1,968 @@
+{
+  "schema": "story/judge-qualification@1",
+  "date": "2026-10-30",
+  "seed": "P2R-D0-v1",
+  "judge": {
+    "identity": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "A finer immutable model build is not exposed; no exact snapshot or equivalence to another session is claimed.",
+    "protocolPath": "protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c",
+    "procedures": [
+      {
+        "path": "16-第一版验收标准.md",
+        "sha256": "6690a1f51098299cdfb1d4adfe113d695cf204f4c53e89fc50183ffebbe1b8a5"
+      },
+      {
+        "path": "阶段验收标准/21-P2验收标准.md",
+        "sha256": "9d1869d0756d7cf1eaa7b42bf08a55b688b985e5b9dbb52bf0b31cdeaba93134"
+      },
+      {
+        "path": "阶段验收标准/24-P2复验标准.md",
+        "sha256": "4c175e6ab4332bdab7f670e1c9323df94937849e2cff9c8ee6b246efb39bf22e"
+      },
+      {
+        "path": "阶段执行方案/20-P2测试集方案.md",
+        "sha256": "4ad8e8f6d115dc650ec89fea8febf9a2f53a669508bdb9a1461285ff59f8c6bb"
+      },
+      {
+        "path": "阶段执行方案/23-P2修复测试集方案.md",
+        "sha256": "6c8aa066eada15ef204fe4a153a37da5743e6398ffdb55d8a7eb4a026272bcf2"
+      }
+    ]
+  },
+  "referenceReview": {
+    "delegatedReviewer": "Codex（AI，受用户明确委托）",
+    "delegatedHumanReviewed": false,
+    "authorReviewCompleted": true,
+    "authorReviewMode": "AI-assisted: author personally checked the AI conclusions for all 60 samples and accepted them",
+    "authorStatement": "AI辅助我进行核对，60条我以核对AI的结论，我认同AI对60条内容的评定",
+    "sourceSheet": {
+      "path": "P2R-D0-裁判校准.json",
+      "sha256": "810deb95ed905f4515b78c2cef12a6c4db6293feb57f6215842064047490da97"
+    },
+    "sourceReadingCopySha256": "568f143621101722bb3fa341af8839da5f56442d89ecf61303c6e57a47e10bd1",
+    "originalJ4": {
+      "path": "J4-20261030-AI代核.json",
+      "sha256": "4be0a452c53976f9c71d5e0c80579ad8e239cf3c832ffc1bbe33bc8558336cee"
+    }
+  },
+  "thresholds": {
+    "overall": 0.8,
+    "everyFamily": 0.7,
+    "unsureExcluded": true,
+    "supplementAtUnsure": 3
+  },
+  "sheetResult": {
+    "agree": 55,
+    "disagree": 5,
+    "unsure": 0,
+    "denominator": 60,
+    "agreement": 0.9166666666666666
+  },
+  "sourceResult": {
+    "agree": 59,
+    "disagree": 1,
+    "unsure": 0,
+    "denominator": 60,
+    "agreement": 0.9833333333333333
+  },
+  "byFamily": [
+    {
+      "family": "1 台账遵循（W03）",
+      "sampleIds": [
+        "D0-1-01",
+        "D0-1-02",
+        "D0-1-03",
+        "D0-1-04",
+        "D0-1-05",
+        "D0-1-06",
+        "D0-1-07",
+        "D0-1-08",
+        "D0-1-09",
+        "D0-1-10"
+      ],
+      "sheetResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "sourceResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "qualified": true
+    },
+    {
+      "family": "2 意图覆盖（W04）",
+      "sampleIds": [
+        "D0-2-01",
+        "D0-2-02",
+        "D0-2-03",
+        "D0-2-04",
+        "D0-2-05",
+        "D0-2-06",
+        "D0-2-07",
+        "D0-2-08",
+        "D0-2-09",
+        "D0-2-10"
+      ],
+      "sheetResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "sourceResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "qualified": true
+    },
+    {
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "sampleIds": [
+        "D0-3-01",
+        "D0-3-02",
+        "D0-3-03",
+        "D0-3-04",
+        "D0-3-05",
+        "D0-3-06",
+        "D0-3-07",
+        "D0-3-08",
+        "D0-3-09",
+        "D0-3-10"
+      ],
+      "sheetResult": {
+        "agree": 6,
+        "disagree": 4,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 0.6
+      },
+      "sourceResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "qualified": true
+    },
+    {
+      "family": "4 审稿观察（E03/E04/E05）",
+      "sampleIds": [
+        "D0-4-01",
+        "D0-4-02",
+        "D0-4-03",
+        "D0-4-04",
+        "D0-4-05",
+        "D0-4-06",
+        "D0-4-07",
+        "D0-4-08",
+        "D0-4-09",
+        "D0-4-10"
+      ],
+      "sheetResult": {
+        "agree": 9,
+        "disagree": 1,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 0.9
+      },
+      "sourceResult": {
+        "agree": 9,
+        "disagree": 1,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 0.9
+      },
+      "qualified": true
+    },
+    {
+      "family": "5 金标匹配（E02/K04/K08）",
+      "sampleIds": [
+        "D0-5-01",
+        "D0-5-02",
+        "D0-5-03",
+        "D0-5-04",
+        "D0-5-05",
+        "D0-5-06",
+        "D0-5-07",
+        "D0-5-08",
+        "D0-5-09",
+        "D0-5-10"
+      ],
+      "sheetResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "sourceResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "qualified": true
+    },
+    {
+      "family": "6 台账与来源（T06/T07）",
+      "sampleIds": [
+        "D0-6-01",
+        "D0-6-02",
+        "D0-6-03",
+        "D0-6-04",
+        "D0-6-05",
+        "D0-6-06",
+        "D0-6-07",
+        "D0-6-08",
+        "D0-6-09",
+        "D0-6-10"
+      ],
+      "sheetResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "sourceResult": {
+        "agree": 10,
+        "disagree": 0,
+        "unsure": 0,
+        "denominator": 10,
+        "agreement": 1
+      },
+      "qualified": true
+    }
+  ],
+  "presentationCorrections": [
+    "D0-3-07",
+    "D0-3-08",
+    "D0-3-09",
+    "D0-3-10"
+  ],
+  "substantiveDisagreements": [
+    "D0-4-03"
+  ],
+  "qualified": true,
+  "unqualifiedFamilies": [],
+  "conclusion": "qualified_on_author_checked_source_judgments",
+  "scope": "Calibrates this judge/protocol against all 60 original J4 sources; does not overwrite the first acceptance records, judgments or its failed outcome. Original sheet results remain separately visible. Future P2R judgments require the specified author spot checks.",
+  "samples": [
+    {
+      "sampleId": "D0-1-01",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:4:L-3",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第4章第15–37行交代失控事件及塌方责任，第59–67行发现静默可抵御低语。主线仍围绕其释放的灾难与保护Ilse展开；全书最终修复尚未到期，不构成本章违反。"
+    },
+    {
+      "sampleId": "D0-1-02",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:284:2:L-4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "284第2章第3–7行持续检查路线、手部和出口，第43–51行选择更安全的绕行路线。反省以貌取人没有使Marcus放弃防身准备。"
+    },
+    {
+      "sampleId": "D0-1-03",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:580:3:L-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "580第3章第5–17行写邻田播种、饲料需求萎缩，第39–57行继续呈现Voss对农户的经济控制；与第1章既有养殖背景一致。本章未重新描写全部牛棚规模，不等于推翻背景。"
+    },
+    {
+      "sampleId": "D0-1-04",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:3:L-3",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第3章第17–37行是释放灾难后遭遇袭击、用钟锤和音叉应对，第41–53行继续揭示1979及Choir线索。阶段性的自救没有否定全书设法挽回灾难的主线。"
+    },
+    {
+      "sampleId": "D0-1-05",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:284:1:L-4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "284第1章第5行观察出口并腾出手，第9–13行回忆父亲的防身教导，第23行准备应对靠近者；确认对方善意后放松，与“保持防身准备”不冲突。"
+    },
+    {
+      "sampleId": "D0-1-06",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:2:L-4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第2章第19–65行拒绝交出叶片并逃离Thale，第117–133行发现对方已掌握Mira住址。Wren没有主动出卖Mira，保护所爱之人的冲突仍在推进。"
+    },
+    {
+      "sampleId": "D0-1-07",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1773:3:L-3",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1773第3章第41–49行以Ilse Renn及九名学生呈现失落，第63–75行写对机器的不信任、Lull自报名号及原始档案线索。三条主线均有承接，不要求本章完成全部调查。"
+    },
+    {
+      "sampleId": "D0-1-08",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1773:3:L-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1773第3章第9行的Directorate封锁、第41–49行被抹去的学生记录、第71行被隐藏的原档案均与设定相容。Mara保留记忆是作者原文明确允许的例外，不能因台账概括未重述例外而判本章违反。"
+    },
+    {
+      "sampleId": "D0-1-09",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:284:1:L-9",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "284第1章第21–23行先把外貌当成威胁，第27–41行发现对方只是归还地址并指路，随后感到羞愧；第45、49行明确反思第一印象，满足本条主题要求。"
+    },
+    {
+      "sampleId": "D0-1-10",
+      "family": "1 台账遵循（W03）",
+      "metric": "W03",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:580:1:L-4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "580第1章第43–59行写节省饲料、虚假标签及以奖金要求沉默，第67–69行写Eli明知钱的来路仍收下。贪婪、社区压力与成长困境都已展开，无本章违反。"
+    },
+    {
+      "sampleId": "D0-2-01",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:4:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第4章第33–45行向Ilse坦白塌方及自身责任，第59–67行通过摘助听器发现低语无法附着于她。章末镜面出现姓名是新的威胁，不抹去本场景已发生的发现。"
+    },
+    {
+      "sampleId": "D0-2-02",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:284:2:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "284第2章第3行核对表亲地址并继续走，第5行观察路人双手与面孔，第7行数出口；行动方向与习惯性警戒均有直接呈现。"
+    },
+    {
+      "sampleId": "D0-2-03",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:3:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第3章第25–37行Wren主动到鱼市找到Mira，第43–79行重逢后围绕失联、烧笔记及追踪者争执；场景、重逢动作及双方未准备好的张力均实现。"
+    },
+    {
+      "sampleId": "D0-2-04",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:2:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第2章第79–95行Wren与Maren共同清理并解读叶片，明确读出House Sol及终止Verdance王朝的标记。由Maren协助译读没有改变Wren获得该信息的情节功能。"
+    },
+    {
+      "sampleId": "D0-2-05",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:2:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第2章第1–19行带来停钟并报告牙齿中的嗡鸣，第21–29行Marn用音叉辨音，第35行脸色变白；要点中的道具、诊断及反应均出现。"
+    },
+    {
+      "sampleId": "D0-2-06",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:4:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第4章第47–61行Pell供出Sela被扣、照片胁迫及leash-book，第77–89行进一步展示逼迫伴侣念出死语。审问受伤枪手并揭示控制手法的要点成立。"
+    },
+    {
+      "sampleId": "D0-2-07",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:1:beat2",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第1章第35–49行出现细天缝、人群散去且城市照常运转，第53–61行逐一确认店内钟表及腕表停于8:14。要点各部分均有正文依据。"
+    },
+    {
+      "sampleId": "D0-2-08",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:3:beat2",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第3章第95行先脱外套并解开衬衫，第97–99行才见伤口正在闭合。中枪、愈合及必须使用死语的功能已实现，但“外套脱下前已经闭合”的明确时序未实现；同意按整条要点评为未实现。"
+    },
+    {
+      "sampleId": "D0-2-09",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:580:3:beat1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "580第3章第5–9行在Oscar田里播种，第13–17行听到饲料滞销，第25行出现1084美元医院账单；邻田劳作、商家损失与家庭医疗压力三部分均实现。"
+    },
+    {
+      "sampleId": "D0-2-10",
+      "family": "2 意图覆盖（W04）",
+      "metric": "W04",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:1:beat2",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1084第1章第37行已在水下收好叶片，第71行只是检查包裹，第73行小艇才靠岸，故未实现“靠岸时收叶”。原理由关于tender的先后表述不够准：第49行说它在Wren读叶时驶入；未实现结论只需依据收叶与launch靠岸的时序。"
+    },
+    {
+      "sampleId": "D0-3-01",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:bakery_apartment-c2:c2:fact:upsert:F-192",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "c02.s0049直接陈述无签名收据与Ruth旧工会账本中的付款吻合，s0050补充此前拍摄账本。F-192的内容、证据、narrated及confirmed均成立；validFrom=2记录的是本章确认的对应关系。"
+    },
+    {
+      "sampleId": "D0-3-02",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:bakery_apartment-c2:c2:fact:upsert:F-195",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "c02.s0083–0088先核实登记册仍缺两名继承人签名，再明确叙述面包店未被秘密转手。F-195不是仅依据Ames的传闻作出的确认，四个适用维度均正确。"
+    },
+    {
+      "sampleId": "D0-3-03",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:bakery_apartment-c2:c2:fact:upsert:F-184",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "c02.s0030明确Daniel把信交回Naomi，s0105及s0118继续确认信在她包里。holder=char:naomi、起始章2、narrated及confirmed都有证据。"
+    },
+    {
+      "sampleId": "D0-3-04",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T051321Z-34ea13b-r2:last_impression-c2:c2:fact:upsert:F-183",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "c02.s0016明确退款五枚后钱袋总数为32枚。条目记录的是退款后的总量32，不是变动量5；数量、单位、本章起效及叙述方式均正确。"
+    },
+    {
+      "sampleId": "D0-3-05",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T051321Z-34ea13b-r2:bakery_apartment-c1:c1:fact:upsert:F-9",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "c01.s0079–0080在面包店场景中叙述Ruth从面粉架下取出蓝铁盒。拿出盒子没有改变其仍位于面包店的粗粒度地点，location与确认状态成立。"
+    },
+    {
+      "sampleId": "D0-3-06",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:284:c2:fact:upsert:F-8",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "284第2章的十六岁底特律回忆对应c02.s0016–0028，明确写出误读伸手动作及十美元钞票。mode=recalled_past正确；未知的有效起点保留null，没有误填为本章新发生的事件。"
+    },
+    {
+      "sampleId": "D0-3-07",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:bakery_apartment-c3:c3:cognition:add:K-27",
+      "sheetAgreement": "disagree",
+      "sourceAgreement": "agree",
+      "normalization": {
+        "reason": "The planning sheet rendered original J4 null (not applicable) as false. Author accepted the correction; all 60 sample IDs remain in the denominator.",
+        "originalJ4Dimensions": {
+          "truth": true,
+          "support": true,
+          "mode": null,
+          "certainty": true
+        },
+        "sheetAIVerdict": "内容正确：对；证据支持：对；陈述方式：错；确定性：对",
+        "acceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：对。"
+      },
+      "authorAcceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：对。",
+      "reviewNote": "c03.s0020–0033呈现Naomi和Daniel共同阅读、签署登记，支持该认知。认知条目没有事实mode字段；J4 details.state中此项mode原值为null，校准单把它显示为“错”。这是展示错误，不是原裁判把认知方式判错。"
+    },
+    {
+      "sampleId": "D0-3-08",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T051321Z-34ea13b-r2:bakery_apartment-c1:c1:relation:upsert:rel:naomi->ruth",
+      "sheetAgreement": "disagree",
+      "sourceAgreement": "agree",
+      "normalization": {
+        "reason": "The planning sheet rendered original J4 null (not applicable) as false. Author accepted the correction; all 60 sample IDs remain in the denominator.",
+        "originalJ4Dimensions": {
+          "truth": true,
+          "support": true,
+          "mode": null,
+          "certainty": true
+        },
+        "sheetAIVerdict": "内容正确：对；证据支持：对；陈述方式：错；确定性：对",
+        "acceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：对。"
+      },
+      "authorAcceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：对。",
+      "reviewNote": "c01.s0009、s0012、s0014支持母女关系、回家及未回复消息造成的谨慎。relation不参与事实mode分类；J4 details.state中mode=null，校准单误显示为“错”。其余适用判断成立。"
+    },
+    {
+      "sampleId": "D0-3-09",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:last_impression-c1:c1:claim:add:S-4",
+      "sheetAgreement": "disagree",
+      "sourceAgreement": "agree",
+      "normalization": {
+        "reason": "The planning sheet rendered original J4 null (not applicable) as false. Author accepted the correction; all 60 sample IDs remain in the denominator.",
+        "originalJ4Dimensions": {
+          "truth": true,
+          "support": true,
+          "mode": null,
+          "certainty": null
+        },
+        "sheetAIVerdict": "内容正确：对；证据支持：对；陈述方式：错；确定性：错",
+        "acceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：不适用。"
+      },
+      "authorAcceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：不适用。",
+      "reviewNote": "c01.s0026明确是Miriam说事情早上会解决；保留为claim正确，没有将承诺升级为客观事实。该claim无mode和confirmed字段；J4原记录mode、certainty均为null，校准单两处“错”均为展示错误。"
+    },
+    {
+      "sampleId": "D0-3-10",
+      "family": "3 状态条目（K03/K05/K06/K07）",
+      "metric": "K03/K05/K06/K07",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:bakery_apartment-c1:c1:claim:add:S-3",
+      "sheetAgreement": "disagree",
+      "sourceAgreement": "agree",
+      "normalization": {
+        "reason": "The planning sheet rendered original J4 null (not applicable) as false. Author accepted the correction; all 60 sample IDs remain in the denominator.",
+        "originalJ4Dimensions": {
+          "truth": true,
+          "support": true,
+          "mode": null,
+          "certainty": null
+        },
+        "sheetAIVerdict": "内容正确：对；证据支持：对；陈述方式：错；确定性：错",
+        "acceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：不适用。"
+      },
+      "authorAcceptedCorrection": "内容正确：对；证据支持：对；陈述方式：不适用；确定性：不适用。",
+      "reviewNote": "c01.s0047–0053把所见Ruth与房东职员交谈纳入Ames的转述，speaker=char:ames有上下文支持。记录“她这样说”不等于确认传闻为真；J4中mode、certainty均为null，应显示不适用。"
+    },
+    {
+      "sampleId": "D0-4-01",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:c03-r01:c03-r01-o01:b1bcbc10db323502",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "原审稿版本第33行的袖口与皮带没有排除其下还有绳，第111行Wren自己也有绳不推出Mira绝不可能有绳。第81行可建议澄清，但所列证据不足以证明物品串到错误人物。"
+    },
+    {
+      "sampleId": "D0-4-02",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:c03-r01:c03-r01-o02:9eb45599354ea9b6",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108原审稿版本第1行明确已上门闩，第17行仅以门舌自行滑开、仿佛未扣紧解释开门，未交代门闩如何解除。按现有文本属于局部动作连续性缺口；minor/local及所引两行合理。"
+    },
+    {
+      "sampleId": "D0-4-03",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1084:c01-r01:c01-r01-o01:5ee9b0e3f0c22fad",
+      "sheetAgreement": "disagree",
+      "sourceAgreement": "disagree",
+      "normalization": null,
+      "authorAcceptedCorrection": "成立：否（可作为辨认过程的表达澄清建议）；严重度与范围：错；证据行：不足以支持所称客观矛盾。",
+      "reviewNote": "已回查原草稿digest=5ee9b0e3f0c22fad，而非修订后的正文。第49行明确说初读是眼睛保护她的误认，第53行“Not those”纠正联想到Mira腕文的判断，第55–57行转而对照自己的腕文。存在认知修正的文本依据，不能将这些先后认知一律当成同时成立的客观设定；原AI的major/local硬矛盾结论过强。"
+    },
+    {
+      "sampleId": "D0-4-04",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:c03-r01:c03-r01-o03:9eb45599354ea9b6",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108原审稿版本第37行把同一持续流出的灰直接写成grey wet ash和dry as snuff，没有区分外观、内部或前后转变。具体感官属性互相抵触，局部改写即可处理，minor/local成立。"
+    },
+    {
+      "sampleId": "D0-4-05",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T052339Z-34ea13b-r1:last_impression-c1-injected-2:c01-r01:c01-r01-o02:fc367bdbfd9f4e53",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "已核对DS10该变体：chronology明确Pike开篇活着，而注入句称此次到访前十年已死，且本章第7、19行仍有当前行动。问题与证据成立；按该生命时间线硬约束及已存金标应为blocking/local，原编辑major低估。"
+    },
+    {
+      "sampleId": "D0-4-06",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:c04-r01:c04-r01-o02:82c1bd7c815b1de4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "第1行的开门和把钥匙放入锁孔并非物理互斥，by the time也不要求两动作同时发生。句子可更自然，但所引文本没有证明一项客观状态冲突，不能据此确认minor事实错误。"
+    },
+    {
+      "sampleId": "D0-4-07",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:1108:c03-r01:c03-r01-o01:9eb45599354ea9b6",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "1108第2章第47行明确要求Go home；第3章第1行同时说做了everything和He had not gone home。后面虽解释保护Ilse的动机，却没有把“全部照做”的范围改窄，局部措辞矛盾成立。"
+    },
+    {
+      "sampleId": "D0-4-08",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T052339Z-34ea13b-r1:last_impression-c1-injected-2:c01-r01:c01-r01-o01:fc367bdbfd9f4e53",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "四处新增第一人称现在时引言位于普通叙事而非引语或梦境，违反L-2/L-3；原第三人称正文仍完整，删改这四段即可恢复。与整章视角改写型缺陷不同，major/local成立。"
+    },
+    {
+      "sampleId": "D0-4-09",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T023237Z-34ea13b-r1:580:c03-r01:c03-r01-o01:dc45ecab25430dd7",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "回查的是原草稿dc45ecab25430dd7。它没有说200美元消失或Eli分文没有，也没有规定他必须支付June的40美元；200不足以解决1084账单。未充分展开用钱动机可提建议，但不足以证明major客观资源矛盾。未用修订稿新增的心理段落倒推原稿。"
+    },
+    {
+      "sampleId": "D0-4-10",
+      "family": "4 审稿观察（E03/E04/E05）",
+      "metric": "E03/E04/E05",
+      "sourceItemId": "20261030T052339Z-34ea13b-r1:bakery_apartment-c2-injected-1:c02-r01:c02-r01-o03:c5909fb15aafbc48",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "已核对输入L-6原文：要求信在第3章交接前保持完整，没有明令第2章不能临时转手。第9、27行一致记录Naomi接信并保留；与前章Daniel持有构成正常状态更新，不是客观矛盾。"
+    },
+    {
+      "sampleId": "D0-5-01",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "E02",
+      "sourceItemId": "quiet_europa-c2-injected-1-defect-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "注入行1把完好的联锁写成允许内外门同时开启，观察也指向行1并明确指出同一双门规则被反转。满足16§3.3的行号重叠与缺陷语义匹配。"
+    },
+    {
+      "sampleId": "D0-5-02",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "E02",
+      "sourceItemId": "quiet_europa-c1-injected-2-defect-2",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "修改后正文贯穿使用I叙述，观察引用第1–23行的各叙事段并指出须全章改回第三人称，准确命中L-2视角违例；不只是对某个梦境或引语的误报。"
+    },
+    {
+      "sampleId": "D0-5-03",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "E02",
+      "sourceItemId": "bakery_apartment-c1-injected-2-defect-2",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "修改后15段以I/my等维持Naomi第一人称，包括开篇、母亲、收信、铁盒及醒后场景。观察覆盖第1–29行并识别整章重述需求，行号及缺陷语义吻合。"
+    },
+    {
+      "sampleId": "D0-5-04",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "E02",
+      "sourceItemId": "last_impression-c3-injected-1-defect-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "注入句在第21行让Pike于当前场景活着出现；观察引用同一行，并对照第2章已死亡的F-206与chronology。人物、时间状态及缺陷位置均匹配。"
+    },
+    {
+      "sampleId": "D0-5-05",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K04",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:quiet_europa-c3:F-302",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "F-293与金标同为item:access_wafer、holder、char:mira、validFrom=3、validUntil=null、narrated；c03.s0010明确交给Mira。满足主体、谓词、语义值及有效章匹配。"
+    },
+    {
+      "sampleId": "D0-5-06",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K04",
+      "sourceItemId": "20261030T051321Z-34ea13b-r2:bakery_apartment-c3:F-304",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "已检查指定r2原始keeper_result：F-298虽写Naomi为共同承租人，但predicate=free_predicate；没有char:naomi的identity条目。依16§3.3同谓词要求，不能算本条结构化金标已记录。"
+    },
+    {
+      "sampleId": "D0-5-07",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K04",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:last_impression-c2:F-204",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "已检查指定r1原始keeper_result：F-184写Jonas Dunn并用predicate=identity，金标要求true_identity。信息确实被提及，但同谓词条件不成立，按既定口径未命中。"
+    },
+    {
+      "sampleId": "D0-5-08",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K08",
+      "sourceItemId": "20261030T051321Z-34ea13b-r2:last_impression-c3:gold:H-4",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "本章只有新建h_correction_public的upsert，问题是公开更正能否改变舆论；没有对H-4“威胁到来前已准备更正”的resolve。新后续问题不能抵充既有伏笔的解决操作。"
+    },
+    {
+      "sampleId": "D0-5-09",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K08",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:last_impression-c3:gold:H-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "本章仅upsert公开更正的后续问题，没有resolve水印与许可年代的H-1。相关事实即使已写入正文或状态，也不等于记录了该伏笔的生命周期结束。"
+    },
+    {
+      "sampleId": "D0-5-10",
+      "family": "5 金标匹配（E02/K04/K08）",
+      "metric": "K08",
+      "sourceItemId": "20261030T050215Z-34ea13b-r1:quiet_europa-c1:gold:H-1",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "hook_log_gap在第1章以upsert提出解释泵日志11分钟空白，证据含c01.s0084，与金标H-1的语义、章节及新建操作相同。新增伏笔的ref不必与金标编号逐字相同。"
+    },
+    {
+      "sampleId": "D0-6-01",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T06 召回",
+      "sourceItemId": "20261029T162346Z-175a120-r1:906:906-g03",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "L-4完整保留两名前任、各自新伴侣、愉快双重约会及结尾位置，与906-g03一一对应，无扩大或缩小条件。"
+    },
+    {
+      "sampleId": "D0-6-02",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T06 召回",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1713:1713-g01",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "已核对J4的整组分配：L-1匹配1713-g13（死后在白屋醒来），不能再次命中g01；剩余L-8只写终生无神论者，缺少死亡事件。因此“一对一未覆盖”成立，并不表示台账全文没有表达死亡。"
+    },
+    {
+      "sampleId": "D0-6-03",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T06 召回",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1713:1713-g17",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "J4整组匹配将L-3分配给1713-g04（三次关键回忆），不能再重复用于g17道德困境主题；其余条目没有独立承接该主题。按既定一对一分配未覆盖，语义提及与计分命中须区分。"
+    },
+    {
+      "sampleId": "D0-6-04",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T06 精确率",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1773:L-9",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "L-9的成品篇幅10,000–14,000词与1773-g10完全相同，包含上下界且没有改变作品范围；是一条有效作者约束并匹配。"
+    },
+    {
+      "sampleId": "D0-6-05",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T06 精确率",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1986:L-5",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "L-5确有作者原文依据，但只取1986-g01的发现结果，未覆盖该完整金标中的调查者、家族企业前提及调查材料。此处同意的是“不匹配”，不能据此解释成“这一内容不是作者提出的”。"
+    },
+    {
+      "sampleId": "D0-6-06",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T07",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1264:rel:nila->phoenix",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "作者提供祈祷、神鸟及无私愿望的设定，但没有给出Nila的名字或敬畏、恐惧、谨慎信任的具体关系基线；整条作为模型创设标model合理。"
+    },
+    {
+      "sampleId": "D0-6-07",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T07",
+      "sourceItemId": "20261029T163755Z-175a120-r2:284:char:the_stranger",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "作者指定潜在劫匪角色，但其年轻、紧张、羞愧、需迅速筹钱、有人依赖他等身份动机和秘密均为新增塑造。整张人物卡标model正确，不因角色种子来自作者就整张归user。"
+    },
+    {
+      "sampleId": "D0-6-08",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T07",
+      "sourceItemId": "20261029T162346Z-175a120-r1:284:rule:ready_rule",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "authorQuote只直接支持随时准备自卫；观察出口、保持距离、具体纪律及不主动施暴是条目加入的规则化阐释。整条source=user扩大了作者依据，应拆分来源或将扩写部分归model。"
+    },
+    {
+      "sampleId": "D0-6-09",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T07",
+      "sourceItemId": "20261029T163755Z-175a120-r2:1084:char:doran_serrat",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "作者只给寻求死语的敌人，没有给出Doran Serrat、51岁、副馆长职务、秘密买卖及人物弧。该角色卡的具体设定归model正确。"
+    },
+    {
+      "sampleId": "D0-6-10",
+      "family": "6 台账与来源（T06/T07）",
+      "metric": "T07",
+      "sourceItemId": "20261029T162346Z-175a120-r1:320:char:cornell",
+      "sheetAgreement": "agree",
+      "sourceAgreement": "agree",
+      "normalization": null,
+      "authorAcceptedCorrection": null,
+      "reviewNote": "“your boss”只支持老板这一角色关系，不能支持Cornell Voss姓名、52岁、洗钱网络、两个月前知情及控制测试等详情。整卡source=user错误，需将新增设定归model或拆分来源。"
+    }
+  ]
+}

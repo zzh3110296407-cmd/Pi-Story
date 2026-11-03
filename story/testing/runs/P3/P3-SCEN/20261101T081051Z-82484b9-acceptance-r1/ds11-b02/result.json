@@ -1,0 +1,123 @@
+{
+  "id": "ds11-b02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "Author sets a house rule about cart access to the kite hall for future scenes; added as a new rule without altering existing entries.",
+        "changes": [
+          {
+            "key": "rule:west_door",
+            "source": "user",
+            "op": "set",
+            "kind": "rule",
+            "name": "Cart access through the west door",
+            "authorQuote": "carts may enter the kite hall only through the west door",
+            "value": {
+              "rule": "Carts may enter the kite hall only through the west door.",
+              "scope": "Future scenes only; existing descriptions and committed events are unchanged.",
+              "invariants": [
+                "Carts may enter the kite hall only through the west door."
+              ]
+            }
+          }
+        ]
+      },
+      "id": "call_00_FtdVSiGh9Spf1R0hp6hb2680"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "Author sets a house rule about cart access to the kite hall for future scenes; added as a new rule without altering existing entries.",
+      "changes": [
+        {
+          "key": "rule:west_door",
+          "source": "user",
+          "op": "set",
+          "kind": "rule",
+          "name": "Cart access through the west door",
+          "authorQuote": "carts may enter the kite hall only through the west door",
+          "value": {
+            "rule": "Carts may enter the kite hall only through the west door.",
+            "scope": "Future scenes only; existing descriptions and committed events are unchanged.",
+            "invariants": [
+              "Carts may enter the kite hall only through the west door."
+            ]
+          }
+        }
+      ]
+    },
+    "id": "call_00_FtdVSiGh9Spf1R0hp6hb2680"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "c70cf82d4e64941d8c4381ffe00cd2e6e2e92c7e7eefb816fd7b7f28819fbb49",
+    "sessionSha256": "6c816ab29ad5895b4c9c1fc0658bb65b1d6281029c7ccd213f72b2f7f00829cf",
+    "fee": {
+      "knownUsd": 0.0025692,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025692
+    },
+    "measuredMainRequests": 2
+  }
+}

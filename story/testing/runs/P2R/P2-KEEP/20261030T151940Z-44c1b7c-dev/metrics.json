@@ -1,0 +1,727 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P2-KEEP",
+  "runId": "20261030T151940Z-44c1b7c-dev",
+  "metrics": [
+    {
+      "id": "K01",
+      "n": 15,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 15,
+        "final": 15
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.7961166989641515,
+          1
+        ],
+        "final": [
+          0.7961166989641515,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K02",
+      "n": 15,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 15,
+        "final": 15
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.9
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.7961166989641515,
+          1
+        ],
+        "final": [
+          0.7961166989641515,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K03",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K04",
+      "n": 0,
+      "value": null,
+      "threshold": 0.6,
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K05",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K06",
+      "n": 0,
+      "value": null,
+      "threshold": 0.85,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "K08",
+      "n": 0,
+      "value": {
+        "precision": null,
+        "recall": null
+      },
+      "threshold": {
+        "precision": 0.7,
+        "recall": 0.5
+      },
+      "minimum": 20,
+      "confidence95": {
+        "precision": null,
+        "recall": null
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "manual": true,
+      "components": {
+        "precision": {
+          "n": 0,
+          "successes": 0
+        },
+        "recall": {
+          "n": 0,
+          "successes": 0
+        }
+      },
+      "precisionBasis": "qualified judgment of each output operation; recall remains one-to-one gold matching"
+    },
+    {
+      "id": "H12",
+      "n": 15,
+      "successes": 15,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.7961166989641515,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 15,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7961166989641515,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 15,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7961166989641515,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 15,
+      "successes": 15,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.7961166989641515,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 15,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.7961166989641515,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 15,
+        "knownUsd": 0.24536961599999998,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 15,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [
+        {
+          "caseId": "bakery_apartment-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 78682,
+          "knownUsd": 0.0199116,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 41785,
+          "knownUsd": 0.0113238,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "bakery_apartment-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 41655,
+          "knownUsd": 0.0116967,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 41351,
+          "knownUsd": 0.011082768,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 67556,
+          "knownUsd": 0.015930467999999996,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "last_impression-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 68748,
+          "knownUsd": 0.018355068,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 52495,
+          "knownUsd": 0.012926868,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 77859,
+          "knownUsd": 0.019075668,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "quiet_europa-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 105726,
+          "knownUsd": 0.025738367999999994,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "borrowed_rain-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 31679,
+          "knownUsd": 0.008895168,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "borrowed_rain-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 96699,
+          "knownUsd": 0.024380867999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "borrowed_rain-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 79261,
+          "knownUsd": 0.019699967999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "tide_register-c1",
+          "toolCallId": "direct",
+          "chapter": 1,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 59552,
+          "knownUsd": 0.014008668,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "tide_register-c2",
+          "toolCallId": "direct",
+          "chapter": 2,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 67070,
+          "knownUsd": 0.016300667999999997,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        {
+          "caseId": "tide_register-c3",
+          "toolCallId": "direct",
+          "chapter": 3,
+          "mode": "direct",
+          "committed": false,
+          "quality": null,
+          "internalCalls": 1,
+          "elapsedMs": 58098,
+          "knownUsd": 0.016042967999999998,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 1,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        }
+      ],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 263,
+        "provisional": 8,
+        "provisionalRate": 0.030418250950570342,
+        "issues": 7,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": [
+      {
+        "path": "story/packages/pi-story/rules/story-long-writing/SKILL.md",
+        "sha256": "e90dbd4b5f3f3c35e76fc5204ef9c1cf263506302e7aa04f62632b742f2309ce",
+        "characters": 4897,
+        "estimatedTokens": 3566
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-review-matrix/SKILL.md",
+        "sha256": "eada5038717ec4c604e07201eae6f18977e1ca54daf5403ecc8fce66ca6b87e6",
+        "characters": 7484,
+        "estimatedTokens": 4361
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-state-projection/SKILL.md",
+        "sha256": "2475b06efdd57e4a7c32f25e961be5abe5d661cad8fabf3477df45bd96562d32",
+        "characters": 13964,
+        "estimatedTokens": 6363
+      },
+      {
+        "path": "story/packages/pi-story/rules/story-showrunner/SKILL.md",
+        "sha256": "a26a44ad80daddcb506064de43d888aff9334d81b46565457ce3dd53cede15f6",
+        "characters": 7787,
+        "estimatedTokens": 4455
+      }
+    ],
+    "inputEstimateMultiples": {
+      "n": 15,
+      "median": 1.6554172000465495,
+      "max": 1.7435064935064934
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": [
+      {
+        "type": "call_audit",
+        "requestId": "84419728-c279-4ad5-9e2e-34d474a37033",
+        "caseId": "bakery_apartment-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043254299999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c231b5a2-a412-44de-bddc-cbade4906312",
+        "caseId": "bakery_apartment-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0436122
+      },
+      {
+        "type": "call_audit",
+        "requestId": "3db0e96b-94be-4005-a335-3ed4c9fc6b86",
+        "caseId": "bakery_apartment-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0439074
+      },
+      {
+        "type": "call_audit",
+        "requestId": "24a90784-6e56-4460-b41e-44afc93afb49",
+        "caseId": "last_impression-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043188
+      },
+      {
+        "type": "call_audit",
+        "requestId": "b25fd97b-288f-4820-82ef-add6df71f029",
+        "caseId": "last_impression-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0436185
+      },
+      {
+        "type": "call_audit",
+        "requestId": "8b55f2d6-d8d8-445f-99f5-5e88855045f0",
+        "caseId": "last_impression-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0438702
+      },
+      {
+        "type": "call_audit",
+        "requestId": "c8b28582-3981-4bdb-ba59-67142a6b7315",
+        "caseId": "quiet_europa-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0432921
+      },
+      {
+        "type": "call_audit",
+        "requestId": "73ddb6c4-0128-481d-97ba-480de6432b9f",
+        "caseId": "quiet_europa-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043676099999999995
+      },
+      {
+        "type": "call_audit",
+        "requestId": "4f6348fc-bf62-4be3-acf4-c22ff1fcd5bf",
+        "caseId": "quiet_europa-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043930199999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "feef5e26-c28d-473a-8f2c-a6201dabcf7d",
+        "caseId": "borrowed_rain-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043199699999999994
+      },
+      {
+        "type": "call_audit",
+        "requestId": "39eca036-c953-473d-bce5-1d2689441bc5",
+        "caseId": "borrowed_rain-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043578
+      },
+      {
+        "type": "call_audit",
+        "requestId": "32703490-61a2-4486-bd97-326c8cb14d49",
+        "caseId": "borrowed_rain-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0437952
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5ff7a4d4-d6cd-447c-b374-185379a5b72d",
+        "caseId": "tide_register-c1",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.043181699999999996
+      },
+      {
+        "type": "call_audit",
+        "requestId": "ee21314e-c905-4558-ae78-4731522a1050",
+        "caseId": "tide_register-c2",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.0435891
+      },
+      {
+        "type": "call_audit",
+        "requestId": "5b9781c7-3efd-47a2-9153-274f8a70fdfa",
+        "caseId": "tide_register-c3",
+        "reservationId": "reservation-1",
+        "started": true,
+        "completed": true,
+        "interrupted": false,
+        "classification": "reported",
+        "productSources": true,
+        "reservedCostUsd": 0.04386
+      }
+    ]
+  },
+  "scoringVersion": "p2r-24@1"
+}

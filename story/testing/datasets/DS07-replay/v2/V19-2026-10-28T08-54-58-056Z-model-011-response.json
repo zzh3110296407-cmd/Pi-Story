@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal 1-4 facts. Chapter sentences. Need facts each ref temp, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty if uncertain else empty, sentences array ints.\n\nNeed decide facts. Minimal 1-4. Facts stated in chapter. We can include:\n- \"He\" (protagonist unnamed) found/encountered woolly mammoth carcass. Subject maybe \"he\", predicate \"found\", object \"a woolly mammoth carcass\" sentences [1,4]? Sentence 1 says dark mound too regular rock, sentence 4 \"A woolly mammoth.\" That's narration recognition. Mode narrated confirmed.\n- Mammoth body whole/no cuts/spear marks/nothing fed on it. Could fact subject \"the mammoth carcass\", predicate \"was\", object \"whole and unmarked by hunters or scavengers\" sentences [6,7]. Confirmed narrated.\n- He had aimed for late Pleistocene but arrived older. This is recalled past? Sentence 11 \"He had aimed...\" is past perfect recollection. Sentence 12-14 says older and jump missed. Fact subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\", mode recalled_past certainty confirmed? Actually he aimed, confirmed. Or fact \"the jump missed / arrival was tens of thousands years older than intended\" uncertain? Sentence 14 \"The jump had missed, or he had, and error...\" uncertainty. But minimal can skip uncertain to avoid.\n- He took rib shard and hide, wrapped hide around wrist, put bone in coat. Fact subject \"he\", predicate \"took\", object \"a rib shard and strip of hide\", mode narrated confirmed sentences [17,18]. \n- Then looked at ravine beyond rise and started walking. Fact subject \"he\", predicate \"started walking toward\", object \"the ravine beyond the rise\", sentences [19]. Good.\n\nNeed include issues maybe empty or mention protagonist unnamed? Issues array can include \"Protagonist is unnamed.\" But asked include issues. Could be empty? Schema requires issues. \"Include issues\" maybe list. We can include issue \"The protagonist is not named in this chapter.\" Does that count? Fine. Maybe also \"No explicit location/date.\" But minimal.\n\nNeed ensure JSON valid, no markdown. Summary title, characters, events, mood. Characters array [\"He (unnamed protagonist)\"] maybe. Events list. Mood.\n\nNeed exact sentence IDs. Need no future plans. Use only chapter.\n\nNeed maybe facts count 3. Need each fact object exact fields. AdditionalProperties false. No extra. Claims/cognitions/relations/hooks empty. Facts min 1. Good.\n\nLet's craft:\nfacts:\n1 ref \"f1\", op upsert, subject \"He\", predicate \"discovered\", object \"a dead woolly mammoth in the snow\", mode narrated, certainty confirmed, uncertainReason \"\", sentences [1,4]\n2 ref \"f2\", subject \"The mammoth carcass\", predicate \"was\", object \"whole with no cuts, spear marks, or signs of scavenging\", mode narrated, certainty confirmed, sentences [6,7]\n3 ref \"f3\", subject \"He\", predicate \"took\", object \"a rib shard and a strip of hide from the mammoth\", mode narrated, certainty confirmed, sentences [17,18]\n4 ref \"f4\", subject \"He\", predicate \"started walking toward\", object \"the ravine beyond the rise\", mode narrated, certainty confirmed, sentences [19]\n\nNeed ensure sentence 17 says worked a shard of rib free and tore strip hide; sentence 18 wrapped hide and put bone. Good.\n\nCould include fact about intended late Pleistocene? It's recalled past. Maybe 4 facts enough. But \"P0 subset tests only 1 to 4 fact upserts\" okay. Do not add unstated future. Good.\n\nSummary:\ntitle \"A Dead Mammoth in the Snow\"\ncharacters [\"He\"]\nevents [\"The protagonist crosses a rise and finds a woolly mammoth carcass in the snow.\", \"He observes the body is whole and unmarked, with nothing having fed on it.\", \"He takes a rib shard and hide, then walks toward a ravine beyond the rise.\"]\nmood \"bleak and isolated\"\n\nIssues: [\"The protagonist is unnamed in this chapter.\"] Maybe \"The exact time period is not specified beyond being older than the late Pleistocene.\" But that might be inference. Include first.\n\nNeed answer JSON only.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"discovered\",\"object\":\"a dead woolly mammoth in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,4]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"The mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole with no cuts, spear marks, or signs of scavenging\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"took\",\"object\":\"a rib shard and a strip of hide from the mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"started walking toward\",\"object\":\"the ravine beyond the rise\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[19]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"A Dead Mammoth in the Snow\",\"characters\":[\"He\"],\"events\":[\"The protagonist crosses a rise and finds a woolly mammoth carcass in the snow.\",\"He observes the body is whole and unmarked, with nothing having fed on it.\",\"He takes a rib shard and hide, then walks toward a ravine beyond the rise.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed in this chapter.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1309,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 954,
+      "totalTokens": 2277,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0015708,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016354079999999999
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177781631,
+    "responseId": "28d94996-770b-4c4a-abaa-b685aac648ac",
+    "rawStopReason": "stop",
+    "durationMs": 7648
+  },
+  "record": {
+    "time": "2026-10-28T08:56:29.279Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-011",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1309,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 954,
+      "totalTokens": 2277,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0015708,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0016354079999999999
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0016354079999999999,
+    "inputTokens": 200,
+    "outputTokens": 1309,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 7648
+  }
+}

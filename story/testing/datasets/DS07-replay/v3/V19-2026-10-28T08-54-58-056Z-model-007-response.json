@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal chapter only. Facts 1-4 upserts. Need no future plans/unstated. Need exact sentence IDs. Need decide facts. Chapter: protagonist woke cold, lying in white/snow, sky flat; teeth ache; afterimage of jump, nausea; pushed up; snow settling coat; knew hypothermia arithmetic; got knees; wind across tundra, scanned; saw dark rock west and shadow ravine; had spent lifetime learning to arrive; no one taught surviving; started walking counting steps. Need facts with subject predicate object string, mode narrated or recalled_past, certainty. Minimal maybe 3-4 facts. Need ensure stated. Subject? \"he\" maybe protagonist unnamed. Use \"he\". Predicate \"lay_on_back_in\" object \"white snow\"? Sentence 2 says lay on back in white, sky flat colorless lid. Fact: he lay on his back in the white. mode narrated confirmed sentences [2]. Fact: he felt cold before memory? Sentence1 \"Cold woke him first, before memory did\" narrated confirmed. subject he predicate was_woken_by object cold? Maybe \"Cold woke him first, before memory did\" fact subject \"he\" predicate \"was_woken_by\" object \"cold\". sentences [1]. Fact: he experienced afterimage of jump and nausea [4], recalled_past? \"afterimage of the jump\" implies past jump. But statement narrated current afterimage. Could be fact \"he had jumped\" recalled_past confirmed sentence [4]? It says afterimage of the jump—unstated details. Could include \"he had recently jumped\" uncertain? Better avoid.\n\nNeed include issues. Summary title characters events mood. Characters maybe [\"he\"] unnamed. Events: wakes in cold snow, pushes up, scans tundra, sees rock/ravine, starts walking. Mood bleak/desperate. Issues: protagonist unnamed; \"the jump\" unspecified; exact location/time unknown. Need JSON only. Ensure facts minItems 1. Claims etc empty arrays. We need adhere schema. \"ref\" temporary. Use refs f1 etc. Could include 4 facts:\n\n1. ref f1 op upsert subject \"he\" predicate \"was_woken_by\" object \"cold\" mode narrated certainty confirmed uncertainReason \"\" sentences [1]\n2. f2 subject \"he\" predicate \"lay_on_back_in\" object \"the white\" mode narrated confirmed sentences [2]\n3. f3 subject \"he\" predicate \"saw\" object \"a rise of dark rock to the west and a shadow beyond it that might have been a ravine\" mode narrated certainty uncertain? Because \"might have been a ravine\" uncertain. But fact about seeing rock and shadow is confirmed; shadow might be ravine uncertain. To avoid complex, use object \"a rise of dark rock to the west\" confirmed sentences [12]. predicate \"saw\". mode narrated.\n4. f4 subject \"he\" predicate \"started_walking\" object \"counting his steps\" mode narrated confirmed sentences [15]. Is \"counting his steps\" object phrase okay string. Good. Could include \"he knew arithmetic of exposure\" but not needed.\n\nNeed each uncertainReason nonempty when uncertain; all confirmed empty. Good.\n\nNeed summary. Title maybe \"Cold Arrival\". characters [\"he\"]. events list concise. mood \"bleak, disoriented, grim\". Issues array.\n\nNeed only JSON. Ensure no markdown.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"was_woken_by\",\"object\":\"cold\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay_on_back_in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a rise of dark rock to the west\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[12]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"started_walking\",\"object\":\"counting his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Arrival\",\"characters\":[\"he\"],\"events\":[\"He is woken by cold and lies on his back in the white.\",\"He pushes himself up and scans the tundra.\",\"He sees a rise of dark rock to the west.\",\"He starts walking and counting his steps.\"],\"mood\":\"bleak, disoriented, grim\"},\"issues\":[\"The protagonist is unnamed.\",\"The nature and circumstances of 'the jump' are not specified.\",\"The location and time are not specified.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 1045,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 711,
+      "totalTokens": 1972,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001254,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013063079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177750025,
+    "responseId": "37fba00a-5170-4dd2-9752-aca835c11b1d",
+    "rawStopReason": "stop",
+    "durationMs": 8474
+  },
+  "record": {
+    "time": "2026-10-28T08:55:58.499Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-007",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 1045,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 711,
+      "totalTokens": 1972,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001254,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0013063079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0013063079999999997,
+    "inputTokens": 159,
+    "outputTokens": 1045,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 8475
+  }
+}

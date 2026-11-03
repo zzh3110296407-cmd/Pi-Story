@@ -1,0 +1,352 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "borrowed_rain-c2",
+  "storyId": "borrowed_rain",
+  "chapter": 2,
+  "title": "The Dry Cistern",
+  "cast": [
+    "char:sera",
+    "char:orin",
+    "char:mael",
+    "char:fenn"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1696
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:sera",
+      "predicate": "location",
+      "object": "place:cistern",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0003",
+        "c02.s0123"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Sera descended into the dry cistern."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:seed_case",
+      "predicate": "holder",
+      "object": "char:fenn",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0013"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Orin gave the seed case to Fenn beside the cistern steps."
+    },
+    {
+      "id": "F-203",
+      "subject": "char:sera",
+      "predicate": "quantity:seeds",
+      "object": {
+        "value": 11,
+        "unit": "seeds"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:sera",
+      "evidence": [
+        "c02.s0017",
+        "c02.s0018"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Fenn restored one unspent seed to the allotment, making eleven.",
+      "arithmetic": {
+        "before": 10,
+        "change": 1,
+        "after": 11
+      }
+    },
+    {
+      "id": "F-204",
+      "subject": "char:old_tree",
+      "predicate": "alive",
+      "object": "dead",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0073"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The last living branch snapped; the old tree was dead."
+    },
+    {
+      "id": "F-205",
+      "subject": "char:mael",
+      "predicate": "true_identity",
+      "object": "a former keeper of the memory orchard",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0084"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Mael’s signed confession identified him as a former keeper of the memory orchard."
+    },
+    {
+      "id": "F-206",
+      "subject": "item:memory_book",
+      "predicate": "holder",
+      "object": "char:sera",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0024"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Fenn put the memory book into Sera’s hands."
+    },
+    {
+      "id": "F-207",
+      "subject": "char:orin",
+      "predicate": "location",
+      "object": "place:square",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0093"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Orin waited in the village square with his tools."
+    },
+    {
+      "id": "F-208",
+      "subject": "item:bronze_bell",
+      "predicate": "location",
+      "object": "place:cistern",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0038"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "They lowered the bronze bell into the cistern."
+    },
+    {
+      "id": "F-290",
+      "subject": "item:blank_page",
+      "predicate": "origin",
+      "object": "a memory taken by Mael",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0034"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "The text presents a suspicion, not independently established evidence.",
+      "statement": "Sera suspected the blank page belonged to a memory Mael had taken."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:fenn",
+      "content": "I never gave the orchard a memory.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c02.s0049"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:sera",
+      "content": "There are eleven now,",
+      "truth": "true",
+      "evidence": [
+        "c02.s0018"
+      ],
+      "corroboratedBy": "F-203"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:sera",
+      "kind": "knows",
+      "content": "Sera knew a freely offered memory was required before the seed would open.",
+      "acquiredChapter": 2,
+      "via": "told",
+      "evidence": [
+        "c02.s0045"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:orin",
+      "kind": "misbelieves",
+      "content": "Orin believed the old tree could still be revived, although every root had gone cold.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0076"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:sera",
+      "kind": "suspects",
+      "content": "Sera suspected the blank page belonged to a memory Mael had taken.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0034"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:fenn",
+      "kind": "believes",
+      "content": "Fenn believed the council would hear Sera before sunset.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0098"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:sera->orin",
+      "from": "char:sera",
+      "to": "char:orin",
+      "stance": "shared responsibility",
+      "keyFact": true,
+      "evidence": [
+        "c02.s0096"
+      ],
+      "statement": "Sera and Orin agreed to share responsibility for every voluntary gift."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "advance",
+      "statement": "The ringing seed answered the bell inside the cistern.",
+      "evidence": [
+        "c02.s0040"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "mention",
+      "statement": "The blank page was warm even in the cold cistern air.",
+      "evidence": [
+        "c02.s0026"
+      ]
+    },
+    {
+      "id": "H-4",
+      "operation": "upsert",
+      "statement": "A child’s name appeared beneath the cistern’s mineral crust.",
+      "evidence": [
+        "c02.s0059"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "borrowed_rain-c2-trap-1",
+      "kind": "plan",
+      "statement": "She meant to ask every household for a voluntary memory the next morning.",
+      "evidence": [
+        "c02.s0100"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "borrowed_rain-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the glove concealed a keeper’s scar, Mael might have opened the first seed.",
+      "evidence": [
+        "c02.s0089"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "borrowed_rain-c2-trap-3",
+      "kind": "dream",
+      "statement": "She dreamed the cistern filled with voices instead of water.",
+      "evidence": [
+        "c02.s0115"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Sera suspected the blank page belonged to a memory Mael had taken.",
+      "evidence": [
+        "c02.s0034"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "F-280",
+      "subject": "char:sera",
+      "predicate": "location",
+      "object": "the seed library",
+      "validFrom": 1,
+      "validUntil": 1,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c02.s0104",
+        "c02.s0105",
+        "c02.s0106"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Sera recalled the first chapter’s visit to the seed library, before the cistern gates opened.",
+      "note": "A within-chapter remembered location does not create a second single-valued fact at that chapter granularity.",
+      "recordPolicy": "narrative_history_only",
+      "expectedOperation": "no_new_state_fact"
+    }
+  ]
+}

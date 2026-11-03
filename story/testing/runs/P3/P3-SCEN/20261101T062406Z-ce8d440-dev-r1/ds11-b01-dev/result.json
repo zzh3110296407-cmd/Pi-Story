@@ -1,0 +1,123 @@
+{
+  "id": "ds11-b01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "reason": "作者要求自下一章起启用新设定：奥拉能读懂旗语，但只限白天；作为向前追加的规则，不改动已有条目与已写正文。",
+        "changes": [
+          {
+            "kind": "rule",
+            "key": "rule:semaphore_daylight",
+            "name": "Semaphore in daylight",
+            "source": "user",
+            "authorQuote": "Orla can decode semaphore, but only in daylight.",
+            "op": "set",
+            "value": {
+              "description": "Orla can decode semaphore, but only in daylight."
+            },
+            "invariants": [
+              "Orla can decode semaphore.",
+              "She can do so only in daylight."
+            ]
+          }
+        ]
+      },
+      "id": "call_00_mXx1D8B69pqUolJJeXMd5004"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "reason": "作者要求自下一章起启用新设定：奥拉能读懂旗语，但只限白天；作为向前追加的规则，不改动已有条目与已写正文。",
+      "changes": [
+        {
+          "kind": "rule",
+          "key": "rule:semaphore_daylight",
+          "name": "Semaphore in daylight",
+          "source": "user",
+          "authorQuote": "Orla can decode semaphore, but only in daylight.",
+          "op": "set",
+          "value": {
+            "description": "Orla can decode semaphore, but only in daylight."
+          },
+          "invariants": [
+            "Orla can decode semaphore.",
+            "She can do so only in daylight."
+          ]
+        }
+      ]
+    },
+    "id": "call_00_mXx1D8B69pqUolJJeXMd5004"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "79f4e1e7db11b2a572ff830b5adc4f9fcfa272e9dd3e02e083c6aabb7a0d5907",
+    "sessionSha256": "a5726e3d3ac0c0a00a81c9c19249c4e6891e08b1ee7cfbd3b1fa085ee05a6470",
+    "fee": {
+      "knownUsd": 0.00279,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.00279
+    },
+    "measuredMainRequests": 2
+  }
+}

@@ -1,0 +1,1370 @@
+{
+  "stage": "P3",
+  "step": "S6",
+  "developmentCheck": true,
+  "modelRequests": 0,
+  "passed": true,
+  "results": [
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053709Z-c51c735-dirty",
+        "suiteId": "P1-S0",
+        "stage": "P1",
+        "date": "2026-11-01T05:37:09.073Z",
+        "executor": "Codex",
+        "repositoryCommit": "c51c7350af4b9eace78bec46fc5f294e93fc87d0",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "test/s0.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-S0",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-S0",
+        "metrics": [
+          {
+            "id": "H13",
+            "n": 38,
+            "value": 1,
+            "confidence95": [
+              0.908190131774416,
+              0.9999999999999999
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053731Z-c4fa1d5-dirty",
+        "suiteId": "P1-UNIT",
+        "stage": "P1",
+        "date": "2026-11-01T05:37:31.201Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS01",
+            "directory": "DS01-sentences",
+            "version": "v3",
+            "manifestDigest": "b6bbd0f4021d5f96751a9fc783928a4dc4d57dbcaac9b75815ed0cb0519c628d"
+          },
+          {
+            "id": "DS02",
+            "directory": "DS02-author-quotes",
+            "version": "v3",
+            "manifestDigest": "095f6687215fd443e38e1e54d305eefcfd08c1e641dd69a950ba52c6d1190843"
+          },
+          {
+            "id": "DS03",
+            "directory": "DS03-state-deltas",
+            "version": "v2",
+            "manifestDigest": "0ecb11b153b7af39150beb92e7dcf142e0a26c736d5d3ec353add04bd31bfd56"
+          },
+          {
+            "id": "DS04",
+            "directory": "DS04-eligibility-flow",
+            "version": "v2",
+            "manifestDigest": "16ee7a61239e1d408a6fc451c90b926c50780d6c6ccb3faa429078b65a5b034e"
+          },
+          {
+            "id": "DS05",
+            "directory": "DS05-program-check",
+            "version": "v2",
+            "manifestDigest": "daee048fa94e8c86d3b5353ad78aee22b93324bb8cc247923ab0fe43030aa3b7"
+          },
+          {
+            "id": "DS06",
+            "directory": "DS06-input-estimate",
+            "version": "v2",
+            "manifestDigest": "51e7448c0c661cc4059dbca61b10060827646448666ea3857160154639fde2b9"
+          },
+          {
+            "id": "DS07",
+            "directory": "DS07-replay",
+            "version": "v3",
+            "manifestDigest": "ce6b03cd64bd66073254699f11ec51491181a958ad33bec7de5230ca2a7c73bc"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test",
+          "test",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-UNIT",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-UNIT",
+        "metrics": [
+          {
+            "id": "H02",
+            "n": 448,
+            "value": 1,
+            "confidence95": [
+              0.9914982152573595,
+              0.9999999999999998
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053902Z-c4fa1d5-dirty",
+        "suiteId": "P1-SEG",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:02.746Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS01",
+            "directory": "DS01-sentences",
+            "version": "v3",
+            "manifestDigest": "b6bbd0f4021d5f96751a9fc783928a4dc4d57dbcaac9b75815ed0cb0519c628d"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/segmentation.dataset.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-SEG",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-SEG",
+        "metrics": [
+          {
+            "id": "H04",
+            "n": 27,
+            "value": {
+              "zh": {
+                "n": 870,
+                "tp": 870,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9956039407584546,
+                  0.9999999999999999
+                ],
+                "recallInterval": [
+                  0.9956039407584546,
+                  0.9999999999999999
+                ]
+              },
+              "en": {
+                "n": 679,
+                "tp": 679,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9943743034769322,
+                  1
+                ],
+                "recallInterval": [
+                  0.9943743034769322,
+                  1
+                ]
+              }
+            },
+            "confidence95": null,
+            "threshold": {
+              "f1": 0.98,
+              "minimumSentencesPerLanguage": 300,
+              "minimumNaturalChineseSentences": 300
+            },
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ],
+            "strata": {
+              "zh/constructed": {
+                "n": 400,
+                "tp": 400,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9904877056657034,
+                  0.9999999999999999
+                ],
+                "recallInterval": [
+                  0.9904877056657034,
+                  0.9999999999999999
+                ]
+              },
+              "zh/constructed_narrative": {
+                "n": 40,
+                "tp": 40,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9123783988027135,
+                  1
+                ],
+                "recallInterval": [
+                  0.9123783988027135,
+                  1
+                ]
+              },
+              "zh/natural_prose": {
+                "n": 430,
+                "tp": 430,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9911454778177808,
+                  1
+                ],
+                "recallInterval": [
+                  0.9911454778177808,
+                  1
+                ]
+              },
+              "en/real_prose": {
+                "n": 667,
+                "tp": 667,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.9942736711182889,
+                  1
+                ],
+                "recallInterval": [
+                  0.9942736711182889,
+                  1
+                ]
+              },
+              "en/constructed_boundary": {
+                "n": 12,
+                "tp": 12,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.7575059933447592,
+                  1
+                ],
+                "recallInterval": [
+                  0.7575059933447592,
+                  1
+                ]
+              }
+            },
+            "naturalChinese": {
+              "n": 430,
+              "tp": 430,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1,
+              "recall": 1,
+              "f1": 1,
+              "precisionInterval": [
+                0.9911454778177808,
+                1
+              ],
+              "recallInterval": [
+                0.9911454778177808,
+                1
+              ]
+            }
+          },
+          {
+            "id": "P1-O3",
+            "n": 27,
+            "value": [],
+            "confidence95": null,
+            "threshold": null,
+            "type": "observation",
+            "passed": null,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053903Z-c4fa1d5-dirty",
+        "suiteId": "P1-QUOTE",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:03.396Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS02",
+            "directory": "DS02-author-quotes",
+            "version": "v3",
+            "manifestDigest": "095f6687215fd443e38e1e54d305eefcfd08c1e641dd69a950ba52c6d1190843"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/quotes.dataset.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-QUOTE",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-QUOTE",
+        "metrics": [
+          {
+            "id": "H05",
+            "n": 87,
+            "value": {
+              "falseAccepts": 0,
+              "negatives": 31,
+              "falseAcceptRate": 0,
+              "falseRejects": 0,
+              "positives": 56,
+              "falseRejectRate": 0
+            },
+            "confidence95": {
+              "falseAcceptRate": [
+                0,
+                0.11025539546043596
+              ],
+              "falseRejectRate": [
+                6.938893903907228e-18,
+                0.06419393671876342
+              ]
+            },
+            "threshold": {
+              "falseAcceptRate": 0,
+              "falseRejectRate": 0.1,
+              "minimumCases": 60
+            },
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ],
+            "falseRejectIds": [],
+            "uncertainIds": [],
+            "labelReview": "pending_author"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053903Z-c4fa1d5-dirty",
+        "suiteId": "P1-CHECK",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:03.980Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS05",
+            "directory": "DS05-program-check",
+            "version": "v2",
+            "manifestDigest": "daee048fa94e8c86d3b5353ad78aee22b93324bb8cc247923ab0fe43030aa3b7"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/check.dataset.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-CHECK",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-CHECK",
+        "metrics": [
+          {
+            "id": "H08",
+            "n": 75,
+            "value": {
+              "too_short": {
+                "positive": 10,
+                "negative": 10,
+                "tp": 10,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.7224672001371107,
+                  0.9999999999999999
+                ],
+                "recallInterval": [
+                  0.7224672001371107,
+                  0.9999999999999999
+                ]
+              },
+              "length": {
+                "positive": 10,
+                "negative": 10,
+                "tp": 10,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.7224672001371107,
+                  0.9999999999999999
+                ],
+                "recallInterval": [
+                  0.7224672001371107,
+                  0.9999999999999999
+                ]
+              },
+              "marker": {
+                "positive": 7,
+                "negative": 7,
+                "tp": 7,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.6456695649333126,
+                  1
+                ],
+                "recallInterval": [
+                  0.6456695649333126,
+                  1
+                ]
+              },
+              "duplicate": {
+                "positive": 11,
+                "negative": 10,
+                "tp": 11,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "precisionInterval": [
+                  0.7411670330319684,
+                  1
+                ],
+                "recallInterval": [
+                  0.7411670330319684,
+                  1
+                ]
+              }
+            },
+            "confidence95": null,
+            "threshold": {
+              "precision": 1,
+              "recall": 1,
+              "eachPositive": 5,
+              "eachNegative": 5
+            },
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ]
+          },
+          {
+            "id": "P1-O2",
+            "n": 3,
+            "value": [
+              {
+                "chapter": 1,
+                "targetWords": 3000,
+                "scope": "P0 excerpt at an explicit synthetic length target; length flags are not semantic false positives",
+                "observations": [
+                  {
+                    "id": "c01-p01-o01",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "blocking",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文过短，低于大纲目标20%",
+                    "scope": "structural"
+                  },
+                  {
+                    "id": "c01-p01-o02",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "minor",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文篇幅不在大纲目标50%至200%之间",
+                    "scope": "structural"
+                  }
+                ],
+                "judgment": "pending_author"
+              },
+              {
+                "chapter": 2,
+                "targetWords": 3000,
+                "scope": "P0 excerpt at an explicit synthetic length target; length flags are not semantic false positives",
+                "observations": [
+                  {
+                    "id": "c01-p01-o01",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "blocking",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文过短，低于大纲目标20%",
+                    "scope": "structural"
+                  },
+                  {
+                    "id": "c01-p01-o02",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "minor",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文篇幅不在大纲目标50%至200%之间",
+                    "scope": "structural"
+                  }
+                ],
+                "judgment": "pending_author"
+              },
+              {
+                "chapter": 3,
+                "targetWords": 3000,
+                "scope": "P0 excerpt at an explicit synthetic length target; length flags are not semantic false positives",
+                "observations": [
+                  {
+                    "id": "c01-p01-o01",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "blocking",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文过短，低于大纲目标20%",
+                    "scope": "structural"
+                  },
+                  {
+                    "id": "c01-p01-o02",
+                    "by": "check",
+                    "category": "格式与篇幅",
+                    "severity": "minor",
+                    "objective": true,
+                    "evidence": {
+                      "lines": [
+                        1
+                      ]
+                    },
+                    "impact": "正文篇幅不在大纲目标50%至200%之间",
+                    "scope": "structural"
+                  }
+                ],
+                "judgment": "pending_author"
+              }
+            ],
+            "confidence95": null,
+            "threshold": null,
+            "type": "observation",
+            "passed": null,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053904Z-c4fa1d5-dirty",
+        "suiteId": "P1-DELTA",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:04.897Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS03",
+            "directory": "DS03-state-deltas",
+            "version": "v2",
+            "manifestDigest": "0ecb11b153b7af39150beb92e7dcf142e0a26c736d5d3ec353add04bd31bfd56"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/delta.dataset.test.ts",
+          "packages/core/test/dataset-evidence.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-DELTA",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-DELTA",
+        "metrics": [
+          {
+            "id": "H06",
+            "n": 60,
+            "value": {
+              "valid": {
+                "n": 24,
+                "falseRejects": 0
+              },
+              "violations": {
+                "n": 36,
+                "detected": 36
+              },
+              "rules": {
+                "D1": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D2": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D3": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D4": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D5": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D6": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D7": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D8": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D9": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D10": {
+                  "n": 3,
+                  "matched": 3
+                },
+                "D11": {
+                  "n": 6,
+                  "matched": 6
+                }
+              }
+            },
+            "confidence95": [
+              0.93982814785791,
+              0.9999999999999998
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053906Z-c4fa1d5-dirty",
+        "suiteId": "P1-EST",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:06.318Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS06",
+            "directory": "DS06-input-estimate",
+            "version": "v2",
+            "manifestDigest": "51e7448c0c661cc4059dbca61b10060827646448666ea3857160154639fde2b9"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/estimate.dataset.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-EST",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-EST",
+        "metrics": [
+          {
+            "id": "H09",
+            "n": 20,
+            "value": 0,
+            "confidence95": null,
+            "threshold": 0,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ]
+          },
+          {
+            "id": "H09-O",
+            "n": 20,
+            "value": {
+              "median": 3.7662964275867505,
+              "max": 15.735714285714286
+            },
+            "confidence95": null,
+            "threshold": null,
+            "type": "observation",
+            "passed": null,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053906Z-c4fa1d5-dirty",
+        "suiteId": "P1-FOLD",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:06.934Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS03",
+            "directory": "DS03-state-deltas",
+            "version": "v2",
+            "manifestDigest": "0ecb11b153b7af39150beb92e7dcf142e0a26c736d5d3ec353add04bd31bfd56"
+          },
+          {
+            "id": "DS04",
+            "directory": "DS04-eligibility-flow",
+            "version": "v2",
+            "manifestDigest": "16ee7a61239e1d408a6fc451c90b926c50780d6c6ccb3faa429078b65a5b034e"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/fold.test.ts",
+          "packages/core/test/snapshots.dataset.test.ts",
+          "packages/core/test/flow.dataset.test.ts",
+          "packages/core/test/authority.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-FOLD",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-FOLD",
+        "metrics": [
+          {
+            "id": "H03",
+            "n": 63,
+            "value": 1,
+            "confidence95": [
+              0.9425288004111484,
+              1
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ]
+          },
+          {
+            "id": "H14",
+            "n": 5,
+            "value": 0.05633969999999999,
+            "confidence95": null,
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ],
+            "displayValue": 0.1,
+            "comparison": "threshold"
+          },
+          {
+            "id": "H14-O",
+            "n": 5,
+            "value": 0.009082700000000159,
+            "confidence95": null,
+            "threshold": null,
+            "type": "observation",
+            "passed": null,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ],
+            "displayValue": 0.1,
+            "comparison": "observation_only"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053910Z-c4fa1d5-dirty",
+        "suiteId": "P1-FLOW",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:10.818Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS03",
+            "directory": "DS03-state-deltas",
+            "version": "v2",
+            "manifestDigest": "0ecb11b153b7af39150beb92e7dcf142e0a26c736d5d3ec353add04bd31bfd56"
+          },
+          {
+            "id": "DS04",
+            "directory": "DS04-eligibility-flow",
+            "version": "v2",
+            "manifestDigest": "16ee7a61239e1d408a6fc451c90b926c50780d6c6ccb3faa429078b65a5b034e"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/production.test.ts",
+          "packages/core/test/canon.test.ts",
+          "packages/core/test/flow.dataset.test.ts",
+          "packages/core/test/authority.test.ts",
+          "packages/core/test/cancellation.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-FLOW",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-FLOW",
+        "metrics": [
+          {
+            "id": "H07",
+            "n": 60,
+            "value": 1,
+            "confidence95": [
+              0.93982814785791,
+              0.9999999999999998
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ],
+            "scenarioIds": [
+              "eligible-clean",
+              "E1-not-current",
+              "E2-no-check",
+              "E3-no-full-review",
+              "E4-unresolved",
+              "E5-objective-declined",
+              "E5-refuted-no-evidence",
+              "E5-refuted-with-evidence",
+              "E6-fixed-success",
+              "E6-line-unchanged",
+              "E6-no-resolved-recheck",
+              "E6-structural-not-fixed",
+              "risk-unresolved",
+              "minor-risk-is-clean",
+              "subjective-declined-clean",
+              "E7-control-stale",
+              "E7-control-rereview-recovers",
+              "full-rereview-supersedes",
+              "E7-canon-head-requires-rewrite",
+              "flow-happy",
+              "flow-minor-no-patch",
+              "flow-subjective-no-patch",
+              "flow-revision-off",
+              "flow-patch-fixed",
+              "flow-patch-risk",
+              "flow-review-unavailable",
+              "flow-recorder-format-repair",
+              "flow-recorder-format-fails",
+              "flow-delta-feedback-retry",
+              "flow-delta-feedback-fails",
+              "flow-budget-before-writer",
+              "flow-budget-before-editor",
+              "flow-budget-before-keeper",
+              "flow-interjection-during-writer",
+              "flow-author-change-during-keeper",
+              "flow-goal-reached",
+              "flow-two-failures-stop",
+              "flow-author-resumes",
+              "flow-batch-committed",
+              "E3-changed-line-not-covered",
+              "E2-check-wrong-digest",
+              "E3-review-unavailable",
+              "E7-intent-stale",
+              "flow-writer-empty-retry-succeeds",
+              "flow-writer-empty-twice",
+              "flow-review-retry-succeeds",
+              "flow-patch-new-major-observation",
+              "flow-per-chapter-call-limit",
+              "batch-submitConstraints",
+              "batch-submitBible",
+              "batch-updateBible",
+              "batch-submitOutline",
+              "batch-patchOutline",
+              "batch-setChapterIntent",
+              "batch-writeDraft",
+              "batch-patchDraft",
+              "batch-checkDraft",
+              "batch-reviewDraft",
+              "batch-respondObservations",
+              "batch-commit"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053913Z-c4fa1d5-dirty",
+        "suiteId": "P1-REPLAY",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:13.626Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [
+          {
+            "id": "DS07",
+            "directory": "DS07-replay",
+            "version": "v3",
+            "manifestDigest": "ce6b03cd64bd66073254699f11ec51491181a958ad33bec7de5230ca2a7c73bc"
+          }
+        ],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "packages/core/test/replay.dataset.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-REPLAY",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-REPLAY",
+        "metrics": [
+          {
+            "id": "P1-O1",
+            "n": 37,
+            "value": {
+              "schemaPassed": 30,
+              "domainPassed": 0,
+              "judgmentMatches": 37,
+              "semanticFindingIds": [
+                "V19-2026-10-28T08-54-58-056Z-model-021",
+                "V19-2026-10-28T08-54-58-056Z-model-035"
+              ],
+              "correctionReferenceCount": 2,
+              "rejected": 37,
+              "classifications": {
+                "subsetDifference": 30,
+                "ruleFinding": 7
+              },
+              "unclassified": 0
+            },
+            "confidence95": null,
+            "threshold": null,
+            "type": "observation",
+            "passed": null,
+            "judgment": "program",
+            "records": [
+              "raw/observations.jsonl"
+            ],
+            "classificationGatePassed": true
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "schema": "story/run-manifest@1",
+        "runId": "20261101T053914Z-c4fa1d5-dirty",
+        "suiteId": "P1-COV",
+        "stage": "P1",
+        "date": "2026-11-01T05:39:14.731Z",
+        "executor": "Codex",
+        "repositoryCommit": "c4fa1d5e0f409cb18e0cb6ac66836873c87d6069",
+        "piCommit": "b06c1f2cf1dea6af8748ddeee18c23587d2cb7c6",
+        "dirty": true,
+        "sourceKind": "git_checkout",
+        "datasets": [],
+        "ruleTextDigests": [],
+        "promptDigests": [],
+        "models": [],
+        "modelCatalog": [],
+        "modelRequests": 0,
+        "nodeVersion": "v24.11.0",
+        "repetitions": 1,
+        "costs": {
+          "knownUsd": 0,
+          "unknownCalls": 0,
+          "reservedUsd": 0
+        },
+        "command": [
+          "D:\\AI\\Node\\node.exe",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "test/coverage.test.ts",
+          "--reporter=json"
+        ],
+        "outputDirectory": "D:\\AI\\Story Dome\\Story\\pi-Story\\story\\testing\\runs\\P3\\P3-S6\\20261101T053708Z-regression\\raw\\P1-COV",
+        "exitCode": 0,
+        "status": "passed"
+      },
+      "metrics": {
+        "schema": "story/metrics@1",
+        "suiteId": "P1-COV",
+        "metrics": [
+          {
+            "id": "H01",
+            "n": 63,
+            "value": 1,
+            "confidence95": [
+              0.9425288004111484,
+              1
+            ],
+            "threshold": 1,
+            "type": "gate",
+            "passed": true,
+            "judgment": "program",
+            "records": [
+              "raw/vitest.json",
+              "raw/observations.jsonl"
+            ],
+            "exemptions": [
+              {
+                "rule": "C5",
+                "reason": "作者修改后的插话通知由Pi适配层实现",
+                "phase": "P3"
+              },
+              {
+                "rule": "R2",
+                "reason": "模型/预算/档位的适配层生效时机",
+                "phase": "P3"
+              },
+              {
+                "rule": "X1",
+                "reason": "状态更正属于v1.1",
+                "phase": "P10"
+              },
+              {
+                "rule": "X2",
+                "reason": "状态更正属于v1.1",
+                "phase": "P10"
+              },
+              {
+                "rule": "X3",
+                "reason": "状态更正属于v1.1",
+                "phase": "P10"
+              },
+              {
+                "rule": "X4",
+                "reason": "状态更正属于v1.1",
+                "phase": "P10"
+              },
+              {
+                "rule": "U5",
+                "reason": "主笔请求预算由Pi适配层实现",
+                "phase": "P3"
+              },
+              {
+                "rule": "U6",
+                "reason": "自动压缩预算由Pi适配层实现",
+                "phase": "P3"
+              }
+            ],
+            "missing": []
+          }
+        ]
+      }
+    }
+  ]
+}

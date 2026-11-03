@@ -1,0 +1,356 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "tide_register-c3",
+  "storyId": "tide_register",
+  "chapter": 3,
+  "title": "The Open Register",
+  "cast": [
+    "char:lena",
+    "char:tomas",
+    "char:ivo",
+    "char:rook"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1730
+  },
+  "facts": [
+    {
+      "id": "F-301",
+      "subject": "char:lena",
+      "predicate": "location",
+      "object": "place:hall",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0004",
+        "c03.s0120"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Lena entered the town hall before the hearing began."
+    },
+    {
+      "id": "F-302",
+      "subject": "item:brass_key",
+      "predicate": "holder",
+      "object": "char:lena",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0022"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Ivo returned the brass key to Lena in front of the watch officer."
+    },
+    {
+      "id": "F-303",
+      "subject": "char:lena",
+      "predicate": "quantity:coins",
+      "object": {
+        "value": 12,
+        "unit": "coins"
+      },
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:lena",
+      "evidence": [
+        "c03.s0066",
+        "c03.s0067"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "She paid five coins for the sworn copy and kept twelve.",
+      "arithmetic": {
+        "before": 17,
+        "change": -5,
+        "after": 12
+      }
+    },
+    {
+      "id": "F-304",
+      "subject": "char:ivo",
+      "predicate": "identity",
+      "object": "municipal witness",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0027"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The hearing clerk entered Ivo in the record as a municipal witness."
+    },
+    {
+      "id": "F-305",
+      "subject": "item:tide_register",
+      "predicate": "holder",
+      "object": "org:harbour_council",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0069"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The council accepted custody of the tide register."
+    },
+    {
+      "id": "F-306",
+      "subject": "char:tomas",
+      "predicate": "location",
+      "object": "place:archive",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0082"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Tomas returned to the archive to open it for the public."
+    },
+    {
+      "id": "F-307",
+      "subject": "item:red_marker",
+      "predicate": "location",
+      "object": "place:quay",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0084"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The red marker was installed at Merrow Quay for the new survey."
+    },
+    {
+      "id": "F-308",
+      "subject": "char:lena",
+      "predicate": "injury",
+      "object": "right wrist bandaged",
+      "validFrom": 3,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c03.s0006"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The nurse wrapped Lena’s bruised wrist in a clean bandage."
+    },
+    {
+      "id": "F-380",
+      "subject": "char:lena",
+      "predicate": "former_training",
+      "object": "the coastal survey office",
+      "validFrom": null,
+      "validUntil": null,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c03.s0093",
+        "c03.s0094",
+        "c03.s0095"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Lena remembered a summer apprenticeship whose starting date she could no longer place.",
+      "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-31",
+      "speaker": "char:ivo",
+      "content": "Rook asked me to duplicate the entry.",
+      "truth": "corroborated_or_explanation",
+      "evidence": [
+        "c03.s0033"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-32",
+      "speaker": "char:lena",
+      "content": "Twelve coins remain,",
+      "truth": "true",
+      "evidence": [
+        "c03.s0067"
+      ],
+      "corroboratedBy": "F-303"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-31",
+      "characterId": "char:lena",
+      "kind": "knows",
+      "content": "Lena knew the duplicate entry had been made to conceal an unlawful docking fee.",
+      "acquiredChapter": 3,
+      "via": "read",
+      "evidence": [
+        "c03.s0040"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-32",
+      "characterId": "char:tomas",
+      "kind": "misbelieves",
+      "content": "Tomas had believed the blue thread was a repair, but the recovered note showed it was a page marker.",
+      "acquiredChapter": 3,
+      "via": "inferred",
+      "evidence": [
+        "c03.s0049"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+      "supersededBy": "K-35",
+      "recordPolicy": "historical_attitude_not_required_as_active_add"
+    },
+    {
+      "id": "K-33",
+      "characterId": "char:lena",
+      "kind": "suspects",
+      "content": "Lena could only guess who had left a boat moving beyond the fog.",
+      "acquiredChapter": 3,
+      "via": "inferred",
+      "evidence": [
+        "c03.s0088"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-34",
+      "characterId": "char:tomas",
+      "kind": "believes",
+      "content": "Tomas believed the published register would outlast their quarrel.",
+      "acquiredChapter": 3,
+      "via": "inferred",
+      "evidence": [
+        "c03.s0075"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-35",
+      "characterId": "char:tomas",
+      "kind": "knows",
+      "content": "Tomas knows the blue thread marked a pocket containing the fee receipt.",
+      "acquiredChapter": 3,
+      "via": "read",
+      "evidence": [
+        "c03.s0049"
+      ],
+      "certainty": "confirmed",
+      "note": "Correction of the explicitly former belief, not an active continuation of it.",
+      "supersededBy": null
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:lena->tomas",
+      "from": "char:lena",
+      "to": "char:tomas",
+      "stance": "qualified trust",
+      "keyFact": true,
+      "evidence": [
+        "c03.s0073"
+      ],
+      "statement": "Lena trusted Tomas to keep the archive open under the new public rules."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "resolve",
+      "statement": "The duplicate entry concealed a second docking fee.",
+      "evidence": [
+        "c03.s0038"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "resolve",
+      "statement": "The blue thread marked the pocket holding the fee receipt.",
+      "evidence": [
+        "c03.s0046"
+      ]
+    },
+    {
+      "id": "H-3",
+      "operation": "resolve",
+      "statement": "Rook had pledged his ring to cover the missing fee.",
+      "evidence": [
+        "c03.s0013"
+      ]
+    },
+    {
+      "id": "H-4",
+      "operation": "resolve",
+      "statement": "The green wax came from the council’s receipt seal.",
+      "evidence": [
+        "c03.s0057"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "tide_register-c3-trap-1",
+      "kind": "plan",
+      "statement": "She intended to apply for a permanent survey post in the spring.",
+      "evidence": [
+        "c03.s0097"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "tide_register-c3-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the council published the fees, another hidden account might surface.",
+      "evidence": [
+        "c03.s0099"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "tide_register-c3-trap-3",
+      "kind": "dream",
+      "statement": "In her last dream the two tides separated into ordinary lines of ink.",
+      "evidence": [
+        "c03.s0113"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Lena could only guess who had left a boat moving beyond the fog.",
+      "evidence": [
+        "c03.s0088"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": []
+}

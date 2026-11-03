@@ -1,0 +1,462 @@
+{
+  "id": "ctx-18-keeper-numbered-sentences",
+  "description": "keeper numbered sentences",
+  "entries": [
+    {
+      "kind": "authorMessage",
+      "entryId": "author-prompt",
+      "text": "If the bell rings again, Ada must wait beside the red door. This condition is part of the complete author message."
+    },
+    {
+      "kind": "authorMessage",
+      "entryId": "author-continuation",
+      "text": "Ada heard the northern bell."
+    },
+    {
+      "kind": "authorMessage",
+      "entryId": "author-global",
+      "text": "Keep Ada alive through chapter four."
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "ledger",
+      "toolName": "submit_constraints",
+      "isError": false,
+      "details": {
+        "schema": "story/constraints@1",
+        "rev": 1,
+        "op": "submit",
+        "items": [
+          {
+            "id": "L-1",
+            "kind": "story",
+            "text": "Ada must wait beside the red door.",
+            "sourceSpans": [
+              {
+                "messageId": "author-prompt",
+                "quote": "If the bell rings again, Ada must wait beside the red door.",
+                "start": 0,
+                "end": 59
+              }
+            ]
+          },
+          {
+            "id": "L-2",
+            "kind": "continuation_start",
+            "text": "Ada heard the northern bell.",
+            "sourceSpans": [
+              {
+                "messageId": "author-continuation",
+                "quote": "Ada heard the northern bell.",
+                "start": 0,
+                "end": 28
+              }
+            ]
+          },
+          {
+            "id": "L-3",
+            "kind": "global",
+            "text": "Keep Ada alive through chapter four.",
+            "sourceSpans": [
+              {
+                "messageId": "author-global",
+                "quote": "Keep Ada alive through chapter four.",
+                "start": 0,
+                "end": 36
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "bible",
+      "toolName": "submit_bible",
+      "isError": false,
+      "details": {
+        "schema": "story/bible@1",
+        "rev": 1,
+        "op": "submit",
+        "effectiveFromChapter": 1,
+        "changes": [
+          {
+            "kind": "character",
+            "key": "char:ada",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "Ada, a lighthouse keeper"
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:nolan",
+            "op": "set",
+            "source": "model",
+            "card": {
+              "identity": "Nolan, a visiting locksmith"
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:lighthouse",
+            "op": "set",
+            "source": "model",
+            "value": "The active northern lighthouse."
+          },
+          {
+            "kind": "rule",
+            "key": "rule:no_magic",
+            "op": "set",
+            "source": "model",
+            "value": "The lighthouse contains no working magic."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "outline",
+      "toolName": "submit_outline",
+      "isError": false,
+      "details": {
+        "schema": "story/outline@1",
+        "rev": 1,
+        "op": "submit",
+        "narration": {
+          "viewpoint": "third person limited",
+          "tone": "restrained"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "First Bell",
+            "targetWords": 1600,
+            "purpose": "The key changes hands."
+          },
+          {
+            "n": 2,
+            "title": "Northern Window",
+            "targetWords": 1600,
+            "purpose": "Find the brass key without claiming to know who forged it."
+          },
+          {
+            "n": 3,
+            "title": "The Hidden Room",
+            "targetWords": 1600,
+            "purpose": "A later discovery remains a plan."
+          }
+        ]
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "commit-1",
+      "toolName": "commit_chapter",
+      "isError": false,
+      "details": {
+        "schema": "story/commit-result@1",
+        "ok": true,
+        "calls": [],
+        "commit": {
+          "schema": "story/commit@1",
+          "chapter": 1,
+          "draftId": "c01-d01",
+          "draftDigest": "2fa4740f3efc784f",
+          "text": "Ada handed the brass key to Nolan.",
+          "sentenceRule": "s2",
+          "quality": "clean",
+          "basis": {
+            "canonHead": null,
+            "controlRev": 0,
+            "bibleRev": 1,
+            "intentRev": 0,
+            "stateRev": 0
+          },
+          "delta": {
+            "chapter": 1,
+            "basis": {
+              "canonHead": null,
+              "controlRev": 0,
+              "bibleRev": 1,
+              "intentRev": 0,
+              "stateRev": 0
+            },
+            "factOps": {
+              "upsert": [
+                {
+                  "id": "F-1",
+                  "subject": "item:brass_key",
+                  "predicate": "holder",
+                  "object": "char:nolan",
+                  "validFrom": 1,
+                  "validUntil": null,
+                  "mode": "narrated",
+                  "status": "confirmed",
+                  "visibility": "public",
+                  "evidence": [
+                    "c01.s0001"
+                  ],
+                  "sourceChapter": 1
+                }
+              ],
+              "expire": [],
+              "confirm": []
+            },
+            "claimOps": {
+              "add": []
+            },
+            "cognitionOps": {
+              "add": [],
+              "supersede": [],
+              "confirm": []
+            },
+            "relationOps": {
+              "upsert": [],
+              "confirm": []
+            },
+            "hookOps": {
+              "upsert": [],
+              "advance": [],
+              "mention": [],
+              "resolve": [],
+              "defer": [],
+              "supersede": []
+            },
+            "summary": {
+              "chapter": 1,
+              "title": "The First Bell",
+              "characters": [
+                "char:ada",
+                "char:nolan"
+              ],
+              "events": [
+                "Ada handed the brass key to Nolan."
+              ],
+              "stateChanges": [
+                "Nolan holds the key."
+              ],
+              "hookActivity": [],
+              "mood": "wary"
+            },
+            "issues": []
+          },
+          "summary": {
+            "chapter": 1,
+            "title": "The First Bell",
+            "characters": [
+              "char:ada",
+              "char:nolan"
+            ],
+            "events": [
+              "Ada handed the brass key to Nolan."
+            ],
+            "stateChanges": [
+              "Nolan holds the key."
+            ],
+            "hookActivity": [],
+            "mood": "wary"
+          },
+          "responses": []
+        }
+      }
+    },
+    {
+      "kind": "custom",
+      "entryId": "author-intent",
+      "customType": "story.control",
+      "data": {
+        "schema": "story/control@1",
+        "field": "author_intent",
+        "text": "Keep the lighthouse mystery grounded in observable evidence.",
+        "rev": 2
+      }
+    },
+    {
+      "kind": "custom",
+      "entryId": "author-focus",
+      "customType": "story.control",
+      "data": {
+        "schema": "story/control@1",
+        "field": "current_focus",
+        "text": "Emphasize Ada and Nolan learning to trust each other.",
+        "rev": 3
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "intent-2",
+      "toolName": "set_chapter_intent",
+      "isError": false,
+      "details": {
+        "schema": "story/intent@1",
+        "chapter": 2,
+        "rev": 1,
+        "mustKeep": [
+          "Find the brass key without claiming to know who forged it."
+        ],
+        "mustAvoid": [
+          "Do not treat speculation as fact."
+        ],
+        "beats": [
+          "Inspect the mantel."
+        ],
+        "hookOps": [],
+        "cast": [
+          "char:ada",
+          "char:nolan"
+        ],
+        "brief": "Keep the action in the lighthouse."
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "future-bible",
+      "toolName": "update_bible",
+      "isError": false,
+      "details": {
+        "schema": "story/bible@1",
+        "rev": 2,
+        "op": "update",
+        "reason": "Reserved for a later chapter.",
+        "effectiveFromChapter": 3,
+        "changes": [
+          {
+            "kind": "place",
+            "key": "place:future_vault",
+            "op": "set",
+            "source": "model",
+            "value": "SK_TEST_P2_CANARY_FUTURE_1111111111111111"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "draft-2",
+      "toolName": "write_draft",
+      "isError": false,
+      "details": {
+        "schema": "story/draft@1",
+        "draftId": "c02-d01",
+        "chapter": 2,
+        "author": "writer",
+        "text": "Nolan laid the brass key on the mantel.\nAda watched the northern window.",
+        "digest": "f18867c1c7f72925",
+        "sentenceRule": "s2",
+        "basis": {
+          "canonHead": "commit-1",
+          "controlRev": 3,
+          "bibleRev": 2,
+          "intentRev": 1,
+          "stateRev": 0
+        },
+        "wordCount": {
+          "unit": "en_words",
+          "value": 13
+        },
+        "calls": []
+      }
+    },
+    {
+      "kind": "toolResult",
+      "entryId": "review-2",
+      "toolName": "review_draft",
+      "isError": false,
+      "details": {
+        "schema": "story/review@1",
+        "reviewId": "c02-r01",
+        "draftId": "c02-d01",
+        "draftDigest": "f18867c1c7f72925",
+        "basis": {
+          "canonHead": "commit-1",
+          "controlRev": 3,
+          "bibleRev": 2,
+          "intentRev": 1,
+          "stateRev": 0
+        },
+        "scope": "full",
+        "observations": [
+          {
+            "id": "c02-r01-o01",
+            "by": "editor",
+            "category": "factual_details",
+            "severity": "major",
+            "objective": true,
+            "evidence": {
+              "lines": [
+                1
+              ],
+              "stateRefs": [
+                "F-1"
+              ]
+            },
+            "impact": "Check the stated key location against the current holder.",
+            "scope": "local"
+          }
+        ],
+        "calls": []
+      }
+    }
+  ],
+  "role": "keeper",
+  "chapter": 2,
+  "must": [
+    {
+      "type": "text_contains",
+      "value": "c02.s0001"
+    },
+    {
+      "type": "text_contains",
+      "value": "Nolan laid the brass key on the mantel."
+    }
+  ],
+  "forbidden": [
+    {
+      "type": "field_absent",
+      "value": "outline"
+    },
+    {
+      "type": "field_absent",
+      "value": "intent"
+    },
+    {
+      "type": "field_absent",
+      "value": "ledger"
+    },
+    {
+      "type": "field_absent",
+      "value": "brief"
+    },
+    {
+      "type": "field_absent",
+      "value": "authorIntent"
+    },
+    {
+      "type": "field_absent",
+      "value": "currentFocus"
+    },
+    {
+      "type": "field_absent",
+      "value": "mustKeep"
+    },
+    {
+      "type": "field_absent",
+      "value": "beats"
+    },
+    {
+      "type": "text_absent",
+      "value": "Keep the lighthouse mystery grounded in observable evidence."
+    },
+    {
+      "type": "text_absent",
+      "value": "Emphasize Ada and Nolan learning to trust each other."
+    },
+    {
+      "type": "text_absent",
+      "value": "If the bell rings again, Ada must wait beside the red door."
+    }
+  ],
+  "notes": "English fixture; no model calls. Interpret predicates on the parsed role user-input JSON and its serialization, not on test metadata or provider secrets."
+}

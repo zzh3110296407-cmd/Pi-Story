@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "unclaimed_pedestal-c2-injected-2",
+  "storyId": "unclaimed_pedestal",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/unclaimed_pedestal-c2.md",
+    "sha256": "146d61072040f30df72a2269c631b8a796d04f38eb2f6a1e92044bd70d9c7d3c"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Leila had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Leila had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 39,
+            "end": 39
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:leila",
+          "quote": "Leila is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifelong dominant-hand invariant; an injury or temporary use of the other hand cannot explain it.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c2-injected-2-defect-1",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "With no intervening gain or loss after that completed count, the very same balance was 81 pounds, not 74 pounds.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "With no intervening gain or loss after that completed count, the very same balance was 81 pounds, not 74 pounds.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "A ten-pound deposit refund increased petty cash from sixty-four pounds to seventy-four.",
+          "ref": "line:7"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "A ten-pound deposit refund increased petty cash from sixty-four pounds to seventy-four."
+        }
+      ],
+      "reason": "The correct narrated count is retained in this actual variant; the added count contradicts that same completed balance with all intervening changes explicitly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c2-injected-2-defect-2",
+      "lines": [
+        41
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "borrowed_rain-c2-injected-2",
+  "storyId": "borrowed_rain",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "534b0e3a5f79d8d7ecb3fcca4c560db68691bc64658350372d93c42c6e3ffc93",
+    "path": "dev/chapters/borrowed_rain-c2.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "borrowed_rain-c2-injected-2-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera descended into the dry cistern.",
+      "changed": "Sera descended into the dry cistern. Sera had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Sera descended into the dry cistern.",
+          "changed": "Sera descended into the dry cistern. Sera had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:sera",
+          "quote": "Sera is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute.",
+      "lines": [
+        1
+      ]
+    },
+    {
+      "id": "borrowed_rain-c2-injected-2-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Fenn restored one unspent seed to the allotment, making eleven.",
+      "changed": "Fenn restored one unspent seed to the allotment, making eleven. With no intervening gain or loss, that same completed count stood at 18 seeds.",
+      "spans": [
+        {
+          "original": "Fenn restored one unspent seed to the allotment, making eleven.",
+          "changed": "Fenn restored one unspent seed to the allotment, making eleven. With no intervening gain or loss, that same completed count stood at 18 seeds.",
+          "lines": {
+            "start": 3,
+            "end": 3
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "Fenn restored one unspent seed to the allotment, making eleven.",
+          "ref": "line:3"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "Fenn restored one unspent seed to the allotment, making eleven.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "revision": "r2-retained-narrated-count",
+      "reviewStatus": "AI_development_only",
+      "lines": [
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "ds11-f03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "read_state",
+      "args": {},
+      "id": "call_00_HYy5yteGtg3X5wQOfDef4090"
+    },
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "hooks"
+      },
+      "id": "call_01_Rk0lLsG3YcQS2iWxlk7P2670"
+    }
+  ],
+  "firstAction": {
+    "tool": "read_state",
+    "args": {},
+    "id": "call_00_HYy5yteGtg3X5wQOfDef4090"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "If answering directly, use only the setup: Cal is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "2026df07e358b721021f3b8513ca00f911add7e590488ff89b1da2cdf9bb8bb8",
+    "sessionSha256": "1067a838ee907a7f992d49aa3ec1212616abe284dabd981b70dc69ae0cb9e6f7",
+    "fee": {
+      "knownUsd": 0.0023837999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023837999999999997
+    },
+    "measuredMainRequests": 2
+  }
+}

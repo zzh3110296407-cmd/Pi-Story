@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "unclaimed_lane-c3-injected-2",
+  "storyId": "unclaimed_lane",
+  "chapter": 3,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v3",
+    "path": "acceptance/chapters/unclaimed_lane-c3.md",
+    "sha256": "c711e9eb90e3a2125a17142556d604dda833e3aad90cf30eafe15d8214d13fb7"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Without any key turning, the still-intact locked calibration cabinet opened through its built-in electronic release.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Without any key turning, the still-intact locked calibration cabinet opened through its built-in electronic release.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:mechanism",
+          "quote": "The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this mechanism rule: The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story."
+        }
+      ],
+      "reason": "A narrated actual event violates the supplied mechanism rule under the exact conditions the rule excludes.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_lane-c3-injected-2-defect-1",
+      "lines": [
+        41
+      ]
+    },
+    {
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Nessa died permanently at that moment, and the death was confirmed before the chapter ended.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Nessa died permanently at that moment, and the death was confirmed before the chapter ended.",
+          "lines": {
+            "start": 43,
+            "end": 43
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Nessa alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death violates the explicit author requirement to keep this named person alive through chapter three.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_lane-c3-injected-2-defect-2",
+      "lines": [
+        43
+      ]
+    }
+  ]
+}

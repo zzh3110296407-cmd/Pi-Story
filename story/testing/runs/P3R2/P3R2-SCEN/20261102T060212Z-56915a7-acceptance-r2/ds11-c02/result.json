@@ -1,0 +1,78 @@
+{
+  "id": "ds11-c02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "That change is to prose already committed as canon, so I can't make it here. The room's rewrite path is branching the story before chapter 2 and rewriting that chapter in the new branch — this phase has no branch tool available to me, and I won't call the write tools to replace committed text, since that would silently diverge from what's already recorded.\n\nTwo options from here:\n\n1. If you can start a branch at chapter 2, do that, and I'll write the revised chapter 2 with Lena handing the sample case to Oren rather than leaving it on the table, then carry that handling forward into chapters 3–6 (including who holds the case during the demonstration and where it is stored at the end).\n2. Otherwise I can keep the existing chapter 2 as canon and handle the handover in the next unwritten chapter, adjusting the remaining outline so the case passes to Oren there. That is a new action in chapter 3, not a revision of the earlier scene.\n\nChapters 1–2 remain committed and unedited; the sample case is intact and no character is injured so far. Tell me which path you want."
+    }
+  ],
+  "firstAction": {
+    "reply": "That change is to prose already committed as canon, so I can't make it here. The room's rewrite path is branching the story before chapter 2 and rewriting that chapter in the new branch — this phase has no branch tool available to me, and I won't call the write tools to replace committed text, since that would silently diverge from what's already recorded.\n\nTwo options from here:\n\n1. If you can start a branch at chapter 2, do that, and I'll write the revised chapter 2 with Lena handing the sample case to Oren rather than leaving it on the table, then carry that handling forward into chapters 3–6 (including who holds the case during the demonstration and where it is stored at the end).\n2. Otherwise I can keep the existing chapter 2 as canon and handle the handover in the next unwritten chapter, adjusting the remaining outline so the case passes to Oren there. That is a new action in chapter 3, not a revision of the earlier scene.\n\nChapters 1–2 remain committed and unedited; the sample case is intact and no character is injured so far. Tell me which path you want."
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 2 cannot be edited in place in P3. A rewrite requires a branch before chapter 2; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "3deccabde5463bf4bd91fbbddf1c171fa4b3d208dbe1767ae65dc95d5df696de",
+    "sessionSha256": "83f5301e0c80ab8d70ecce0bf0caad2c9bbcedc104e0a5059ad429b65c9500f6",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026964,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0026964
+    },
+    "measuredMainRequests": 1
+  },
+  "scoringVersion": "p3r2-32@1"
+}

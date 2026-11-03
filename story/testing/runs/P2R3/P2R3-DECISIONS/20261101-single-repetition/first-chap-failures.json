@@ -1,0 +1,96 @@
+{
+  "schema": "story/p2r3-first-chap-failure-diagnostics@1",
+  "logicalRunId": "20261031T154922Z-102c3ed-r1-complete",
+  "scorerSource": "story/scripts/eval/p2/score.ts: role_call groups keyed by case, tool call, role, task and draft; failed groups remain in first/final format denominators",
+  "failures": [
+    {
+      "group": "[\"1587\",\"call_00_BX4FuA72ZEBauap10B7A5515\",\"editor\",\"full_review\",\"c02-d01\"]",
+      "role": "editor",
+      "caseId": "1587",
+      "toolCallId": "call_00_BX4FuA72ZEBauap10B7A5515",
+      "attempts": 1,
+      "parseFlags": [
+        false
+      ],
+      "macroError": {
+        "code": "TRANSPORT_FAILURE",
+        "message": "内部调用未完成或返回结构无效",
+        "items": [
+          "editor"
+        ],
+        "hint": "请核对输入后重试"
+      },
+      "terminals": [
+        {
+          "requestId": "87d23eac-833f-430b-a2b3-fb93e5d44392",
+          "physicalRunId": "20261031T154922Z-102c3ed-r1",
+          "classification": "interrupted",
+          "stopReason": "error",
+          "error": "terminated",
+          "outputTokens": 0,
+          "networkAttempts": 1
+        }
+      ]
+    },
+    {
+      "group": "[\"1587\",\"call_00_5CftEbOp1VscZVySgCYj1435\",\"writer\",\"draft\",\"\"]",
+      "role": "writer",
+      "caseId": "1587",
+      "toolCallId": "call_00_5CftEbOp1VscZVySgCYj1435",
+      "attempts": 1,
+      "parseFlags": [
+        false
+      ],
+      "macroError": {
+        "code": "TRANSPORT_FAILURE",
+        "message": "内部调用未完成或返回结构无效",
+        "items": [
+          "writer"
+        ],
+        "hint": "请核对输入后重试"
+      },
+      "terminals": [
+        {
+          "requestId": "262ff0b0-bb11-4830-8db2-c899d6e20203",
+          "physicalRunId": "20261031T154922Z-102c3ed-r1",
+          "classification": "interrupted",
+          "stopReason": "error",
+          "error": "terminated",
+          "outputTokens": 0,
+          "networkAttempts": 1
+        }
+      ]
+    },
+    {
+      "group": "[\"527\",\"call_00_ET_OO1WKuV9xkhEKrsFLh8P6934\",\"editor\",\"full_review\",\"c04-d01\"]",
+      "role": "editor",
+      "caseId": "527",
+      "toolCallId": "call_00_ET_OO1WKuV9xkhEKrsFLh8P6934",
+      "attempts": 1,
+      "parseFlags": [
+        false
+      ],
+      "macroError": {
+        "code": "TRANSPORT_FAILURE",
+        "message": "内部角色调用已停止",
+        "items": [
+          "editor"
+        ],
+        "hint": "请核对输入后重试"
+      },
+      "terminals": [
+        {
+          "requestId": "58d1b5f1-2b26-4045-85f4-c855870a8cae",
+          "physicalRunId": "20261031T154922Z-102c3ed-r1",
+          "classification": "cancelled",
+          "stopReason": "aborted",
+          "error": "Request was aborted",
+          "outputTokens": 0,
+          "networkAttempts": 1
+        }
+      ]
+    }
+  ],
+  "rootCausePolicy": "Read-only diagnostics; no raw record removed, product or scoring fix attempted after V3 freeze",
+  "modelRequests": 0
+}

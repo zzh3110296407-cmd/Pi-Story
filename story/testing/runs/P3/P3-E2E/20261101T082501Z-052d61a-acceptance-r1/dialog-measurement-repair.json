@@ -1,0 +1,73 @@
+{
+  "schema": "story/p3-measurement-revision@4",
+  "productCommit": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "measurementCommit": "9a54cb7634eafe55c38dcd6152fb2e54dd588bdf",
+  "priorRevision": {
+    "commit": "f2920aa32673a29bed95935178f3365e29444289",
+    "evidence": "P3-E2E/20261101T082501Z-052d61a-acceptance-r1/measurement-stop-receipt-review.json"
+  },
+  "cause": "The delivered execution contract uses dialogResponses.reply; the driver read optional value. A driver exception became a normal error tool result, and the old summary incorrectly labelled the unanswered run measured. The driver also invented a requirement that a scripted reply equal a model-generated option label.",
+  "repair": [
+    "Validate on/reply/delayUntilAssertion before starting",
+    "Return the exact authored reply through the public RPC UI value contract, matching pinned RpcMode select/input behavior",
+    "Abort and label scenario_driver_error if delivery fails",
+    "Replay a paused but undelivered scripted dialog as measurement incomplete; never model failure, success or NA"
+  ],
+  "validation": {
+    "testsPassed": 22,
+    "files": 2,
+    "projectCheckPassed": true,
+    "realSdkPaths": [
+      "input",
+      "select with free-text RPC response",
+      "missing response abort"
+    ],
+    "nativeAuthorEntry": true,
+    "nextMainAndWriterObserveAnswer": true,
+    "legacyMeasuredLabelOverridden": true
+  },
+  "unchanged": [
+    "product and core validation",
+    "role rules/settings",
+    "dataset",
+    "numeric formulas, samples/repetitions/thresholds",
+    "original raw, result and metrics",
+    "paid completed tests"
+  ],
+  "changedFiles": [
+    "story/packages/pi-story/test/p3-dataset-contract.test.ts",
+    "story/packages/pi-story/test/p3-scenario-score.test.ts",
+    "story/packages/pi-story/test/p3-scenario.test.ts",
+    "story/scripts/eval/p3/checks.ts",
+    "story/scripts/eval/p3/datasets.ts",
+    "story/scripts/eval/p3/main.ts",
+    "story/scripts/eval/p3/metrics.ts",
+    "story/scripts/eval/p3/scenario-score.ts",
+    "story/scripts/eval/p3/scenario.ts",
+    "story/scripts/eval/p3/session.ts"
+  ],
+  "originalCase": {
+    "runId": "20261101T082501Z-052d61a-acceptance-r1",
+    "caseId": "ds14-e11",
+    "originalStatus": "measured",
+    "derivedStatus": "incomplete",
+    "originalResultSha256": "ace9fc51cd62862f237362a3c9f4bea134f624b673e3c6238d9c866b2fddc304",
+    "rawDigests": {
+      "evidenceSha256": "214428e0b5781f3999a62b9451c5414bdec4c1ef83ef52af1925bbd2285679f5",
+      "sessionSha256": "45035bcfef2a8705c5a62a659a32be07055990c3c09adae5a9d0656e7226c7b5"
+    },
+    "dialogPauses": 1,
+    "dialogResponses": 0,
+    "fees": {
+      "knownUsd": 0.03940639199999999,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 10,
+      "totalUsd": 0.03940639199999999
+    }
+  },
+  "completion": {
+    "status": "awaiting_author_decision",
+    "scope": "Only the technically incomplete E11 case on the identical V4 product and frozen DS14 input. Keep all original evidence and expense. No other completed case is rerun; retain one valid case per sample and disclose the technical failure."
+  }
+}

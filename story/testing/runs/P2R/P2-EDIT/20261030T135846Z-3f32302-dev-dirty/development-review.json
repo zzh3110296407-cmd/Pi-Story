@@ -1,0 +1,2004 @@
+{
+  "mode": "development_self_review",
+  "reviewer": "Codex AI",
+  "humanReviewed": false,
+  "formalUseAllowed": false,
+  "runId": "20261030T135846Z-3f32302-dev-dirty",
+  "sampling": {
+    "seed": "P2R-R3-20261030",
+    "method": "For E03/E04/E05, hash rank all objective observations from full reviews and recheck new observations by JSON([seed,caseId,observationId]), take first 50; E06 independently hash rank all rechecks, take first 20. Preserve all judgments made during development; sampling never depends on pass/fail."
+  },
+  "cases": {
+    "bakery_apartment-c1-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "subjectives": {
+        "c01-r01-o01": "The duplicate tin sentence is a limited prose redundancy; subjective/minor/local is appropriate, and it is excluded from the objective-observation pool."
+      }
+    },
+    "bakery_apartment-c1-injected-1": {
+      "matches": {
+        "bakery_apartment-c1-injected-1-defect-1": "c01-r01-o02",
+        "bakery_apartment-c1-injected-1-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Line 9 explicitly retains 240 minus 20 = 220 and contradicts that unchanged count with 227; major/local matches the effective label."
+        },
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Line 27 explicitly reverses the supplied lifetime handedness invariant; evidence and major/local are correct."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 9 removes 227 and retains the consistent 220 final count."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 27 restores lifelong left-handedness."
+        }
+      }
+    },
+    "bakery_apartment-c1-injected-2": {
+      "matches": {
+        "bakery_apartment-c1-injected-2-defect-1": "c01-r01-o02",
+        "bakery_apartment-c1-injected-2-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "structural",
+          "reason": "The real full-chapter first-person rewrite is correctly detected and structurally scoped, but blocking overstates the approved major narrative-mode defect."
+        },
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "The final waking return contradicts the explicitly deceased father; blocking/local matches the approved label."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 29 confines the father to the dream and explicitly excludes a waking return."
+        }
+      }
+    },
+    "bakery_apartment-c2-control": {
+      "matches": {},
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 requires preservation of the letter until the chapter-three transfer. It does not forbid earlier temporary handling or return; the letter remains intact. The observation equates a temporary custody change with the designated later transfer, strengthening the instruction, exactly the excluded class in 22 R3. F-105 is prior chapter state, not a prohibition on an evidenced transfer."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "The revised chapter explicitly retains the letter with Daniel throughout and removes the complained-of transfer. The original complaint was unsupported, but the returned resolved result accurately describes its absence in the revision."
+        }
+      }
+    },
+    "bakery_apartment-c2-injected-1": {
+      "matches": {
+        "bakery_apartment-c2-injected-1-defect-1": "c02-r01-o01",
+        "bakery_apartment-c2-injected-1-defect-2": "c02-r01-o03"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Line 5 explicitly transfers the unsigned lease without both signatures, contrary to the supplied physical rule and the later same-chapter lack of signatures; blocking/local is correct."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "Repeats the unsupported equation of preservation/intactness with exclusive unchanged custody. L-6 does not forbid temporary return to Naomi before the designated chapter-three transfer."
+        },
+        "c02-r01-o03": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Line 21 explicitly kills Ruth permanently despite L-7 and her later living actions; blocking/local is correct."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 5 explicitly requires both signatures and no longer transfers the unsigned lease."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised lines 9, 27 and 29 retain the letter with Daniel; the complained-of transfer is absent."
+        },
+        "c02-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 21 keeps Ruth awake for observation, consistent with the later living scenes."
+        }
+      }
+    },
+    "bakery_apartment-c2-injected-2": {
+      "matches": {
+        "bakery_apartment-c2-injected-2-defect-1": "c02-r01-o01",
+        "bakery_apartment-c2-injected-2-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 5 reverses the lifelong handedness invariant; major/local matches the approved label."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 15 contradicts the same unchanged 260-pound final count with 267; major/local matches the approved label."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 5 restores lifelong left-handedness."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 15 consistently retains 260 and removes 267."
+        }
+      }
+    },
+    "bakery_apartment-c3-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks were returned; no injected defects in this control."
+    },
+    "bakery_apartment-c3-injected-1": {
+      "matches": {
+        "bakery_apartment-c3-injected-1-defect-1": "c03-r01-o02",
+        "bakery_apartment-c3-injected-1-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "structural",
+          "reason": "Correctly detects the approved full-chapter first-person rewrite and its structural scope, but overstates its major narrative-mode severity as blocking."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "The waking final father return contradicts the fixed death chronology; blocking/local is correct."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 29 confines the father to the dream and the waking ending contains no return."
+        }
+      }
+    },
+    "bakery_apartment-c3-injected-2": {
+      "matches": {
+        "bakery_apartment-c3-injected-2-defect-1": "c03-r01-o01",
+        "bakery_apartment-c3-injected-2-defect-2": "c03-r01-o02"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 transfers the unsigned lease before line 7 supplies signatures; violates the physical rule, blocking/local."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 7 permanently kills Ruth, contrary to L-7 and line 9 living actions; blocking/local."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 1 requires signatures and does not transfer the lease prematurely."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Revised line 7 keeps Ruth at the clinic awaiting discharge, consistent with the living return."
+        }
+      }
+    },
+    "last_impression-c1-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    },
+    "last_impression-c1-injected-1": {
+      "matches": {
+        "last_impression-c1-injected-1-defect-1": "c01-r01-o02",
+        "last_impression-c1-injected-1-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim. Development review: Line 21 reverses lifelong left-handedness; line 5 contradicts the unchanged 27-coin count with 34. Applied patches restore left-handedness and remove 34, and both resolved rechecks agree."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Line 21 reverses lifelong left-handedness; line 5 contradicts the unchanged 27-coin count with 34. Applied patches restore left-handedness and remove 34, and both resolved rechecks agree."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Line 21 reverses lifelong left-handedness; line 5 contradicts the unchanged 27-coin count with 34. Applied patches restore left-handedness and remove 34, and both resolved rechecks agree."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Line 21 reverses lifelong left-handedness; line 5 contradicts the unchanged 27-coin count with 34. Applied patches restore left-handedness and remove 34, and both resolved rechecks agree."
+        }
+      },
+      "notes": "Line 21 reverses lifelong left-handedness; line 5 contradicts the unchanged 27-coin count with 34. Applied patches restore left-handedness and remove 34, and both resolved rechecks agree."
+    },
+    "last_impression-c1-injected-2": {
+      "matches": {
+        "last_impression-c1-injected-2-defect-1": "c01-r01-o02",
+        "last_impression-c1-injected-2-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence; it is outside the separately marked recollection, dream and hypothetical passages. Development review: Line 21 makes the currently living Pike dead ten years earlier. Lines 1,7,15,19 contain removable first-person present prefixes. Both problems and all five applied replacements were inspected; style severity should be major/local, not blocking."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The defect consists of four bounded unquoted first-person/present-tense prefixes. Removing those prefixes at the four listed sites preserves all original narration, event order, factual content and the companion injected defect. Treat it as one recurring multi-span local style defect, not a structural rewrite. Development review: Line 21 makes the currently living Pike dead ten years earlier. Lines 1,7,15,19 contain removable first-person present prefixes. Both problems and all five applied replacements were inspected; style severity should be major/local, not blocking."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Line 21 makes the currently living Pike dead ten years earlier. Lines 1,7,15,19 contain removable first-person present prefixes. Both problems and all five applied replacements were inspected; style severity should be major/local, not blocking."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Line 21 makes the currently living Pike dead ten years earlier. Lines 1,7,15,19 contain removable first-person present prefixes. Both problems and all five applied replacements were inspected; style severity should be major/local, not blocking."
+        }
+      },
+      "notes": "Line 21 makes the currently living Pike dead ten years earlier. Lines 1,7,15,19 contain removable first-person present prefixes. Both problems and all five applied replacements were inspected; style severity should be major/local, not blocking."
+    },
+    "last_impression-c2-control": {
+      "matches": {},
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 preserves leaflet integrity until the designated chapter-three transfer, but does not impose an exclusive Jonas custodian or prohibit temporary handling. The observation strengthens that instruction into a ban on the chapter-two handoff to Elise. Prior holder F-105 does not forbid an evidenced later change."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacements keep the leaflet with Jonas and return it to his cap; the complained-of transfer is absent in the revision."
+        }
+      }
+    },
+    "last_impression-c2-injected-1": {
+      "matches": {
+        "last_impression-c2-injected-1-defect-1": "c02-r01-o01",
+        "last_impression-c2-injected-1-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 gives the still-damaged press a clean impression on soaking-wet paper, directly contradicting L-4; blocking/local is correct."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 9 confirms Miriam dead, while L-7 requires survival and line 13 has her return alive; blocking/local. Extra stateRef F-102 is irrelevant (key holder), but the cited prose lines and L-7 do establish the problem."
+        },
+        "c02-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 preserves leaflet integrity until the designated chapter-three transfer, but does not impose an exclusive Jonas custodian or prohibit temporary handling. The observation strengthens that instruction into a ban on the chapter-two handoff to Elise. Prior holder F-105 does not forbid an evidenced later change."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement states the damaged press cannot make the wet-paper impression."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement removes Miriam death and leaves her return pending, compatible with the living return."
+        },
+        "c02-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacements keep the leaflet in Jonas custody throughout."
+        }
+      }
+    },
+    "last_impression-c2-injected-2": {
+      "matches": {
+        "last_impression-c2-injected-2-defect-1": "c02-r01-o01",
+        "last_impression-c2-injected-2-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 reverses Elise lifelong handedness; major/local is correct."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 3 gives incompatible unchanged final counts 32 and 39 after 27+5; major/local is correct."
+        },
+        "c02-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 preserves leaflet integrity until the designated chapter-three transfer, but does not impose an exclusive Jonas custodian or prohibit temporary handling. The observation strengthens that instruction into a ban on the chapter-two handoff to Elise. Prior holder F-105 does not forbid an evidenced later change."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement restores lifelong left-handedness."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied deletion removes the conflicting 39-coin count."
+        },
+        "c02-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacements keep the leaflet with Jonas rather than handing it to Elise."
+        }
+      }
+    },
+    "last_impression-c3-injected-1": {
+      "matches": {
+        "last_impression-c3-injected-1-defect-1": "c03-r01-o02",
+        "last_impression-c3-injected-1-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence; it is outside the separately marked recollection, dream and hypothetical passages. Development review: The waking final sentence resurrects Pike after chapter two; the other four cited prefixes are removable first-person present narration. Correctly major/local for style and blocking/local for resurrection. Applied replacements convert the prefixes and delete the waking return; both resolved findings are supported."
+        },
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The defect consists of four bounded unquoted first-person/present-tense prefixes. Removing those prefixes at the four listed sites preserves all original narration, event order, factual content and the companion injected defect. Treat it as one recurring multi-span local style defect, not a structural rewrite. Development review: The waking final sentence resurrects Pike after chapter two; the other four cited prefixes are removable first-person present narration. Correctly major/local for style and blocking/local for resurrection. Applied replacements convert the prefixes and delete the waking return; both resolved findings are supported."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: The waking final sentence resurrects Pike after chapter two; the other four cited prefixes are removable first-person present narration. Correctly major/local for style and blocking/local for resurrection. Applied replacements convert the prefixes and delete the waking return; both resolved findings are supported."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: The waking final sentence resurrects Pike after chapter two; the other four cited prefixes are removable first-person present narration. Correctly major/local for style and blocking/local for resurrection. Applied replacements convert the prefixes and delete the waking return; both resolved findings are supported."
+        }
+      },
+      "notes": "The waking final sentence resurrects Pike after chapter two; the other four cited prefixes are removable first-person present narration. Correctly major/local for style and blocking/local for resurrection. Applied replacements convert the prefixes and delete the waking return; both resolved findings are supported."
+    },
+    "last_impression-c3-injected-2": {
+      "matches": {
+        "last_impression-c3-injected-2-defect-1": "c03-r01-o01",
+        "last_impression-c3-injected-2-defect-2": "c03-r01-o02"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "Unquoted actual-world narration contradicts the explicit supplied physical rule, with no hypothetical or reported-speech wrapper. Development review: Actual line 1 gives the still-damaged press a clean wet-paper impression; line 9 kills Miriam despite L-7 and her later living actions. Both blocking/local. Applied replacements negate the impossible impression and remove the death; both resolved decisions agree. The recheck adds only a subjective minor sequencing concern, excluded from the objective pool."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "A confirmed permanent death directly violates the author’s explicit keep-alive requirement for this named person. Development review: Actual line 1 gives the still-damaged press a clean wet-paper impression; line 9 kills Miriam despite L-7 and her later living actions. Both blocking/local. Applied replacements negate the impossible impression and remove the death; both resolved decisions agree. The recheck adds only a subjective minor sequencing concern, excluded from the objective pool."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 gives the still-damaged press a clean wet-paper impression; line 9 kills Miriam despite L-7 and her later living actions. Both blocking/local. Applied replacements negate the impossible impression and remove the death; both resolved decisions agree. The recheck adds only a subjective minor sequencing concern, excluded from the objective pool."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 gives the still-damaged press a clean wet-paper impression; line 9 kills Miriam despite L-7 and her later living actions. Both blocking/local. Applied replacements negate the impossible impression and remove the death; both resolved decisions agree. The recheck adds only a subjective minor sequencing concern, excluded from the objective pool."
+        }
+      },
+      "notes": "Actual line 1 gives the still-damaged press a clean wet-paper impression; line 9 kills Miriam despite L-7 and her later living actions. Both blocking/local. Applied replacements negate the impossible impression and remove the death; both resolved decisions agree. The recheck adds only a subjective minor sequencing concern, excluded from the objective pool."
+    },
+    "last_impression-c3-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    },
+    "quiet_europa-c1-injected-1": {
+      "matches": {
+        "quiet_europa-c1-injected-1-defect-1": "c01-r01-o01",
+        "quiet_europa-c1-injected-1-defect-2": "c01-r01-o02"
+      },
+      "observations": {
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim. Development review: Actual line 1 reverses Nia fixed right-handedness; line 7 contradicts the unchanged 60-unit reserve with 67 after 64 minus 4. Both major/local. Applied replacements restore right-handedness and a consistent 60 units; both resolved findings agree."
+        },
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Actual line 1 reverses Nia fixed right-handedness; line 7 contradicts the unchanged 60-unit reserve with 67 after 64 minus 4. Both major/local. Applied replacements restore right-handedness and a consistent 60 units; both resolved findings agree."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Nia fixed right-handedness; line 7 contradicts the unchanged 60-unit reserve with 67 after 64 minus 4. Both major/local. Applied replacements restore right-handedness and a consistent 60 units; both resolved findings agree."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Nia fixed right-handedness; line 7 contradicts the unchanged 60-unit reserve with 67 after 64 minus 4. Both major/local. Applied replacements restore right-handedness and a consistent 60 units; both resolved findings agree."
+        }
+      },
+      "notes": "Actual line 1 reverses Nia fixed right-handedness; line 7 contradicts the unchanged 60-unit reserve with 67 after 64 minus 4. Both major/local. Applied replacements restore right-handedness and a consistent 60 units; both resolved findings agree."
+    },
+    "quiet_europa-c1-injected-2": {
+      "matches": {
+        "quiet_europa-c1-injected-2-defect-1": "c01-r01-o02",
+        "quiet_europa-c1-injected-2-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The final waking action contradicts the supplied death chronology. The semantic defect is retained but its first-person closing anchor and evidence are new. Development review: Actual waking line 23 makes the currently living Anton dead ten years earlier. The full rewritten narration is first-person, with actual line 1 and waking end inspected; structural scope is correct but style should be major. Applied replacement restores Anton alive, so the resolved timeline decision agrees."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "structural",
+          "reason": "The third-person source narration is removed, not retained behind removable insertions. Restoring the required narrative mode requires recasting action subjects, possessives, introspection, attribution of other characters’ mental states and transitions throughout the chapter. Neither a deletion of four asides nor a change to a framing sentence restores the source narrative. Development review: Actual waking line 23 makes the currently living Anton dead ten years earlier. The full rewritten narration is first-person, with actual line 1 and waking end inspected; structural scope is correct but style should be major. Applied replacement restores Anton alive, so the resolved timeline decision agrees."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 23 makes the currently living Anton dead ten years earlier. The full rewritten narration is first-person, with actual line 1 and waking end inspected; structural scope is correct but style should be major. Applied replacement restores Anton alive, so the resolved timeline decision agrees."
+        }
+      },
+      "notes": "Actual waking line 23 makes the currently living Anton dead ten years earlier. The full rewritten narration is first-person, with actual line 1 and waking end inspected; structural scope is correct but style should be major. Applied replacement restores Anton alive, so the resolved timeline decision agrees."
+    },
+    "quiet_europa-c1-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "subjectives": {
+        "c01-r01-o01": "Sleep/room sequencing is explicitly presented as subjective clarity uncertainty, with no invented spatial exclusion.",
+        "c01-r01-o02": "The reflection/wafer phrasing is a limited readability concern and is correctly not declared an objective custody contradiction."
+      }
+    },
+    "quiet_europa-c2-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    },
+    "quiet_europa-c2-injected-1": {
+      "matches": {
+        "quiet_europa-c2-injected-1-defect-1": "c02-r01-o01",
+        "quiet_europa-c2-injected-1-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "Unquoted actual-world narration contradicts the explicit supplied physical rule, with no hypothetical or reported-speech wrapper. Development review: Actual line 1 permits both interlocked airlock doors open together despite L-4; line 7 confirms Mira dead despite L-7. Both blocking/local. Applied replacements prohibit simultaneous opening and remove the death claim; both resolved rechecks are correct."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "A confirmed permanent death directly violates the author’s explicit keep-alive requirement for this named person. Development review: Actual line 1 permits both interlocked airlock doors open together despite L-4; line 7 confirms Mira dead despite L-7. Both blocking/local. Applied replacements prohibit simultaneous opening and remove the death claim; both resolved rechecks are correct."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 permits both interlocked airlock doors open together despite L-4; line 7 confirms Mira dead despite L-7. Both blocking/local. Applied replacements prohibit simultaneous opening and remove the death claim; both resolved rechecks are correct."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 permits both interlocked airlock doors open together despite L-4; line 7 confirms Mira dead despite L-7. Both blocking/local. Applied replacements prohibit simultaneous opening and remove the death claim; both resolved rechecks are correct."
+        }
+      },
+      "notes": "Actual line 1 permits both interlocked airlock doors open together despite L-4; line 7 confirms Mira dead despite L-7. Both blocking/local. Applied replacements prohibit simultaneous opening and remove the death claim; both resolved rechecks are correct."
+    },
+    "quiet_europa-c2-injected-2": {
+      "matches": {
+        "quiet_europa-c2-injected-2-defect-1": "c02-r01-o01",
+        "quiet_europa-c2-injected-2-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim. Development review: Actual line 1 reverses Nia lifelong right-handedness; line 5 gives incompatible unchanged totals 66 and 73 after replenishment. Both major/local. Applied replacements restore the invariant and a single completed reserve value; both resolved findings are supported."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Actual line 1 reverses Nia lifelong right-handedness; line 5 gives incompatible unchanged totals 66 and 73 after replenishment. Both major/local. Applied replacements restore the invariant and a single completed reserve value; both resolved findings are supported."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Nia lifelong right-handedness; line 5 gives incompatible unchanged totals 66 and 73 after replenishment. Both major/local. Applied replacements restore the invariant and a single completed reserve value; both resolved findings are supported."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Nia lifelong right-handedness; line 5 gives incompatible unchanged totals 66 and 73 after replenishment. Both major/local. Applied replacements restore the invariant and a single completed reserve value; both resolved findings are supported."
+        }
+      },
+      "notes": "Actual line 1 reverses Nia lifelong right-handedness; line 5 gives incompatible unchanged totals 66 and 73 after replenishment. Both major/local. Applied replacements restore the invariant and a single completed reserve value; both resolved findings are supported."
+    },
+    "quiet_europa-c3-control": {
+      "matches": {},
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "F-108 is already the eleven charged cells remaining after the chapter-one failed cell. The beacon and final call describe the same two used cells, not two separate draws. Frozen source arithmetic is 11-2=9 (DS09 c3 F-308). Re-subtracting the prior failure and/or the same beacon use invents extra removals."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": false,
+          "expectedResolved": false,
+          "reason": "The revision changes the correct nine to eight by subtracting the historical failed cell again from the eleven already charged cells. The accounting concern is not correctly resolved against the full state/evidence chain."
+        }
+      },
+      "introducedIssues": [
+        "The false observation causes the correct nine-cell inventory to be rewritten as eight."
+      ]
+    },
+    "quiet_europa-c3-injected-1": {
+      "matches": {
+        "quiet_europa-c3-injected-1-defect-1": "c03-r01-o02",
+        "quiet_europa-c3-injected-1-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "structural",
+          "reason": "The full-chapter waking first-person narration is an evidenced structural narrative-mode defect, but its approved severity is major rather than blocking."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual waking line 23 resurrects Anton, who is dead in F-204 and the fixed chronology; blocking/local."
+        },
+        "c03-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "Actual line 5 explicitly explains different checkpoints: original account 64, four-unit test -> sealed strip 60, later cartridge +6 -> F-203 66, crossing -9 ->57. Treating the original account beginning as the same instant as the pre-crossing state invents simultaneity."
+        },
+        "c03-r02-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "structural",
+          "reason": "The full-chapter waking first-person narration is an evidenced structural narrative-mode defect, but its approved severity is major rather than blocking."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "The applied deletion removes the waking Anton return."
+        },
+        "c03-r01-o03": {
+          "pass": false,
+          "expectedResolved": false,
+          "reason": "The replacement changes the historical account start from 64 to 66 and the cartridge addition from six to two. It still does not preserve the supplied transaction chain 64-4+6=66, 66-9=57. Local changed-number agreement is not a correct resolution of the reported accounting concern."
+        }
+      },
+      "introducedIssues": [
+        "The false arithmetic observation causes the correct six-unit replenishment history to be changed to two."
+      ],
+      "notes": "E06 checks actual source-consistent resolution of the accounting chain, not merely deletion of the complained-about number. The recheck repeats the unchanged structural style issue as a new observation; it remains part of the all-objective observation pool, but does not create another E02 gold match."
+    },
+    "quiet_europa-c3-injected-2": {
+      "matches": {
+        "quiet_europa-c3-injected-2-defect-1": "c03-r01-o01",
+        "quiet_europa-c3-injected-2-defect-2": "c03-r01-o03"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 permits simultaneous interlocked doors against L-4; blocking/local."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "F-108 is already the eleven charged cells remaining after the chapter-one failed cell. The beacon and final call describe the same two used cells, not two separate draws. Frozen source arithmetic is 11-2=9 (DS09 c3 F-308). Re-subtracting the prior failure and/or the same beacon use invents extra removals."
+        },
+        "c03-r01-o03": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 15 confirms Mira dead despite L-7 and her later living actions; blocking/local."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement restores the interlock prohibition."
+        },
+        "c03-r01-o02": {
+          "pass": false,
+          "expectedResolved": false,
+          "reason": "The patch rewrites the correct nine-cell final count as six, based on repeated historical/same-event subtraction. The revised count is not source-consistent with F-108 11 and the one two-cell beacon draw."
+        },
+        "c03-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement keeps Mira alive and removes the death assertion."
+        }
+      },
+      "introducedIssues": [
+        "The false observation causes the correct nine-cell inventory to be rewritten as six."
+      ]
+    },
+    "borrowed_rain-c1-injected-1": {
+      "matches": {
+        "borrowed_rain-c1-injected-1-defect-1": "c01-r01-o01",
+        "borrowed_rain-c1-injected-1-defect-2": "c01-r01-o02"
+      },
+      "observations": {
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute. Development review: Actual line 7 reverses Sera lifelong left-handedness; lines 11 and 17 retain ten seeds while an inserted sentence gives the same unchanged count as 17. Both major/local. Applied replacements restore the handedness and ten-seed total, supporting both resolved rechecks."
+        },
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Actual line 7 reverses Sera lifelong left-handedness; lines 11 and 17 retain ten seeds while an inserted sentence gives the same unchanged count as 17. Both major/local. Applied replacements restore the handedness and ten-seed total, supporting both resolved rechecks."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 7 reverses Sera lifelong left-handedness; lines 11 and 17 retain ten seeds while an inserted sentence gives the same unchanged count as 17. Both major/local. Applied replacements restore the handedness and ten-seed total, supporting both resolved rechecks."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 7 reverses Sera lifelong left-handedness; lines 11 and 17 retain ten seeds while an inserted sentence gives the same unchanged count as 17. Both major/local. Applied replacements restore the handedness and ten-seed total, supporting both resolved rechecks."
+        }
+      },
+      "notes": "Actual line 7 reverses Sera lifelong left-handedness; lines 11 and 17 retain ten seeds while an inserted sentence gives the same unchanged count as 17. Both major/local. Applied replacements restore the handedness and ten-seed total, supporting both resolved rechecks."
+    },
+    "borrowed_rain-c1-injected-2": {
+      "matches": {
+        "borrowed_rain-c1-injected-2-defect-1": "c01-r01-o02",
+        "borrowed_rain-c1-injected-2-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence outside dreams, recollections and hypotheticals. Development review: Actual line 21 makes the opening living old tree dead ten years earlier. The four removable first-person present prefixes are objective style violations, correctly local but should be major rather than blocking. Applied replacements convert the prefixes and delete the false historic death; both resolved rechecks agree."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Deleting the four clearly delimited insertions restores the original narration; their distribution does not make this structural. Development review: Actual line 21 makes the opening living old tree dead ten years earlier. The four removable first-person present prefixes are objective style violations, correctly local but should be major rather than blocking. Applied replacements convert the prefixes and delete the false historic death; both resolved rechecks agree."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 21 makes the opening living old tree dead ten years earlier. The four removable first-person present prefixes are objective style violations, correctly local but should be major rather than blocking. Applied replacements convert the prefixes and delete the false historic death; both resolved rechecks agree."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 21 makes the opening living old tree dead ten years earlier. The four removable first-person present prefixes are objective style violations, correctly local but should be major rather than blocking. Applied replacements convert the prefixes and delete the false historic death; both resolved rechecks agree."
+        }
+      },
+      "notes": "Actual line 21 makes the opening living old tree dead ten years earlier. The four removable first-person present prefixes are objective style violations, correctly local but should be major rather than blocking. Applied replacements convert the prefixes and delete the false historic death; both resolved rechecks agree."
+    },
+    "borrowed_rain-c2-injected-1": {
+      "matches": {
+        "borrowed_rain-c2-injected-1-defect-1": "c02-r01-o01",
+        "borrowed_rain-c2-injected-1-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "Actual-world narration violates the supplied physical rule. Development review: Actual line 1 releases rain without any offered memory, contrary to L-4. Line 7 kills Mael despite L-7 and his later living actions. Both blocking/local. Applied deletions remove both contradictions. The additional chapter-reference observations are subjective and excluded from the objective pool."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "A permanent death contradicts the named author keep-alive requirement. Development review: Actual line 1 releases rain without any offered memory, contrary to L-4. Line 7 kills Mael despite L-7 and his later living actions. Both blocking/local. Applied deletions remove both contradictions. The additional chapter-reference observations are subjective and excluded from the objective pool."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 releases rain without any offered memory, contrary to L-4. Line 7 kills Mael despite L-7 and his later living actions. Both blocking/local. Applied deletions remove both contradictions. The additional chapter-reference observations are subjective and excluded from the objective pool."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 releases rain without any offered memory, contrary to L-4. Line 7 kills Mael despite L-7 and his later living actions. Both blocking/local. Applied deletions remove both contradictions. The additional chapter-reference observations are subjective and excluded from the objective pool."
+        }
+      },
+      "notes": "Actual line 1 releases rain without any offered memory, contrary to L-4. Line 7 kills Mael despite L-7 and his later living actions. Both blocking/local. Applied deletions remove both contradictions. The additional chapter-reference observations are subjective and excluded from the objective pool."
+    },
+    "borrowed_rain-c2-injected-2": {
+      "matches": {
+        "borrowed_rain-c2-injected-2-defect-1": "c02-r01-o01",
+        "borrowed_rain-c2-injected-2-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute. Development review: Actual line 1 reverses Sera lifelong handedness; line 3 contradicts the unchanged eleven-seed count with eighteen. Both major/local. Applied replacements restore left-handedness and eleven, supporting both resolved findings; the extra meta-phrasing concern is subjective."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Actual line 1 reverses Sera lifelong handedness; line 3 contradicts the unchanged eleven-seed count with eighteen. Both major/local. Applied replacements restore left-handedness and eleven, supporting both resolved findings; the extra meta-phrasing concern is subjective."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Sera lifelong handedness; line 3 contradicts the unchanged eleven-seed count with eighteen. Both major/local. Applied replacements restore left-handedness and eleven, supporting both resolved findings; the extra meta-phrasing concern is subjective."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 reverses Sera lifelong handedness; line 3 contradicts the unchanged eleven-seed count with eighteen. Both major/local. Applied replacements restore left-handedness and eleven, supporting both resolved findings; the extra meta-phrasing concern is subjective."
+        }
+      },
+      "notes": "Actual line 1 reverses Sera lifelong handedness; line 3 contradicts the unchanged eleven-seed count with eighteen. Both major/local. Applied replacements restore left-handedness and eleven, supporting both resolved findings; the extra meta-phrasing concern is subjective."
+    },
+    "borrowed_rain-c1-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    },
+    "borrowed_rain-c2-control": {
+      "matches": {},
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 constrains memory-book integrity before the chapter-three transfer. It does not say first or require an unchanged exclusive custodian. The observation adds first in its conclusion and treats temporary overnight possession as forbidden despite the book staying intact."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacements explicitly keep the volume with Fenn and give Sera her shawl as a pillow; the complained-of possession is absent."
+        }
+      },
+      "subjectives": {
+        "c02-r01-o02": "Chapter-reference phrasing is a literary concern and is correctly not asserted as objective."
+      }
+    },
+    "borrowed_rain-c3-injected-1": {
+      "matches": {
+        "borrowed_rain-c3-injected-1-defect-1": "c03-r01-o02",
+        "borrowed_rain-c3-injected-1-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence outside dreams, recollections and hypotheticals. Development review: Actual waking line 21 revives the same dead old tree, explicitly distinguished from the new sapling. Four removable first-person present prefixes are local style defects; style should be major, not blocking. Applied replacements remove the resurrection and convert all four prefixes; resolved findings agree."
+        },
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Deleting the four clearly delimited insertions restores the original narration; their distribution does not make this structural. Development review: Actual waking line 21 revives the same dead old tree, explicitly distinguished from the new sapling. Four removable first-person present prefixes are local style defects; style should be major, not blocking. Applied replacements remove the resurrection and convert all four prefixes; resolved findings agree."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 revives the same dead old tree, explicitly distinguished from the new sapling. Four removable first-person present prefixes are local style defects; style should be major, not blocking. Applied replacements remove the resurrection and convert all four prefixes; resolved findings agree."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 revives the same dead old tree, explicitly distinguished from the new sapling. Four removable first-person present prefixes are local style defects; style should be major, not blocking. Applied replacements remove the resurrection and convert all four prefixes; resolved findings agree."
+        }
+      },
+      "notes": "Actual waking line 21 revives the same dead old tree, explicitly distinguished from the new sapling. Four removable first-person present prefixes are local style defects; style should be major, not blocking. Applied replacements remove the resurrection and convert all four prefixes; resolved findings agree."
+    },
+    "borrowed_rain-c3-control": {
+      "matches": {},
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "Orin gives first and the paragraph explicitly names two who continued, giving three spent seeds and eight remaining from eleven. The identity of the person who declined is not explicitly restricted to those two completed givers. The wording is ambiguous, but the observation assumes an exclusive participant set to force two gifts; that reading is not a proven objective contradiction."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "F-208 is the prior chapter cistern location. Current narration can establish a later square location after an unshown move; remained is scoped to the current scene, not all previous history. Missing narration of the move does not prove no move occurred."
+        },
+        "c03-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "The later past-tense location sentence about where Sera stood when the first rain fell can summarize the earlier scene. Prose order alone does not establish a second first-rain event after the first ended; the observation invents that temporal exclusivity."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "The replacement explicitly distinguishes three other volunteers, one decline and two completed gifts plus Orin; three spent seeds and eight remaining are now unambiguous and source-consistent."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "The replacement explicitly narrates the bell carried from cistern to square."
+        },
+        "c03-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "The replacements distinguish Orin seed-shower from the later phrase first new rain; no factual incompatibility remains."
+        }
+      }
+    },
+    "borrowed_rain-c3-injected-2": {
+      "matches": {
+        "borrowed_rain-c3-injected-2-defect-1": "c03-r01-o01",
+        "borrowed_rain-c3-injected-2-defect-2": "c03-r01-o02"
+      },
+      "observations": {
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 15 explicitly releases rain with no offered memory, violating L-4; blocking/local."
+        },
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 11 kills Mael contrary to L-7 and his later living action; blocking/local."
+        },
+        "c03-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "F-208 is the prior chapter cistern location. Current narration can establish a later square location after an unshown move; remained is scoped to the current scene, not all previous history. Missing narration of the move does not prove no move occurred."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement requires a freely offered true memory before the rain."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement keeps Mael alive and helped into a chair."
+        },
+        "c03-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement explicitly carries the bell from the cistern to the square."
+        }
+      }
+    },
+    "tide_register-c1-injected-1": {
+      "matches": {
+        "tide_register-c1-injected-1-defect-1": "c01-r01-o02",
+        "tide_register-c1-injected-1-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute. Development review: Actual line 21 reverses Lena lifelong right-handedness; line 1 contradicts the same unchanged post-payment total of 15 with 22. Both major/local. Applied replacements restore right-handedness and 15, supporting both resolved rechecks."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth. Development review: Actual line 21 reverses Lena lifelong right-handedness; line 1 contradicts the same unchanged post-payment total of 15 with 22. Both major/local. Applied replacements restore right-handedness and 15, supporting both resolved rechecks."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 21 reverses Lena lifelong right-handedness; line 1 contradicts the same unchanged post-payment total of 15 with 22. Both major/local. Applied replacements restore right-handedness and 15, supporting both resolved rechecks."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 21 reverses Lena lifelong right-handedness; line 1 contradicts the same unchanged post-payment total of 15 with 22. Both major/local. Applied replacements restore right-handedness and 15, supporting both resolved rechecks."
+        }
+      },
+      "notes": "Actual line 21 reverses Lena lifelong right-handedness; line 1 contradicts the same unchanged post-payment total of 15 with 22. Both major/local. Applied replacements restore right-handedness and 15, supporting both resolved rechecks."
+    },
+    "tide_register-c1-injected-2": {
+      "matches": {
+        "tide_register-c1-injected-2-defect-1": "c01-r01-o02",
+        "tide_register-c1-injected-2-defect-2": "c01-r01-o01"
+      },
+      "observations": {
+        "c01-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence outside dreams, recollections and hypotheticals. Development review: Actual waking line 21 makes the living Rook dead ten years earlier. Four removable first-person present prefixes are local style defects but their severity should be major, not blocking. Applied replacements convert prefixes and delete the historic death claim; both resolved findings agree."
+        },
+        "c01-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Deleting the four clearly delimited insertions restores the original narration; their distribution does not make this structural. Development review: Actual waking line 21 makes the living Rook dead ten years earlier. Four removable first-person present prefixes are local style defects but their severity should be major, not blocking. Applied replacements convert prefixes and delete the historic death claim; both resolved findings agree."
+        }
+      },
+      "rechecks": {
+        "c01-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 makes the living Rook dead ten years earlier. Four removable first-person present prefixes are local style defects but their severity should be major, not blocking. Applied replacements convert prefixes and delete the historic death claim; both resolved findings agree."
+        },
+        "c01-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 makes the living Rook dead ten years earlier. Four removable first-person present prefixes are local style defects but their severity should be major, not blocking. Applied replacements convert prefixes and delete the historic death claim; both resolved findings agree."
+        }
+      },
+      "notes": "Actual waking line 21 makes the living Rook dead ten years earlier. Four removable first-person present prefixes are local style defects but their severity should be major, not blocking. Applied replacements convert prefixes and delete the historic death claim; both resolved findings agree."
+    },
+    "tide_register-c1-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    },
+    "tide_register-c2-control": {
+      "matches": {},
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "L-6 requires the tide register to stay intact until its designated chapter-three transfer. It does not prohibit earlier temporary handling or require an unchanged exclusive custodian. The observation adds that prohibition to the supplied instruction."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "The passage explicitly mentions another member of the watch. It does not establish that every definite officer reference is the same individual at the same instant, or impose exclusive companion/location intervals. A clarity ambiguity is possible, but the observation treats an assumed identity and simultaneity as a confirmed contradiction; two companions are not inherently incompatible."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacements explicitly retain the register with Ivo and out of Lena custody."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement explicitly separates the hall watch member from the officer kept at the bridge."
+        }
+      }
+    },
+    "tide_register-c2-injected-1": {
+      "matches": {
+        "tide_register-c2-injected-1-defect-1": "c02-r01-o01",
+        "tide_register-c2-injected-1-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 rings the bell without any movement of the necessary manual lever, violating L-4; blocking/local."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 15 kills Ivo, contrary to L-7 and his living appearance in line 21; blocking/local."
+        },
+        "c02-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "The passage explicitly mentions another member of the watch. It does not establish that every definite officer reference is the same individual at the same instant, or impose exclusive companion/location intervals. A clarity ambiguity is possible, but the observation treats an assumed identity and simultaneity as a confirmed contradiction; two companions are not inherently incompatible. This impact expressly says if the two officer references denote the same person, acknowledging its unproved premise."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement removes the spontaneous tide-driven bell ringing."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement attributes the prior death to Rook and leaves Ivo alive."
+        },
+        "c02-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement explicitly distinguishes the hall watch member and bridge officer."
+        }
+      }
+    },
+    "tide_register-c2-injected-2": {
+      "matches": {
+        "tide_register-c2-injected-2-defect-1": "c02-r01-o01",
+        "tide_register-c2-injected-2-defect-2": "c02-r01-o02"
+      },
+      "observations": {
+        "c02-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 1 reverses Lena lifelong right-handedness; major/local."
+        },
+        "c02-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "reason": "Actual line 9 gives incompatible same unchanged totals 17 and 24 after the two-coin refund; major/local."
+        },
+        "c02-r01-o03": {
+          "objectiveCorrect": false,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": false,
+          "reason": "The passage explicitly mentions another member of the watch. It does not establish that every definite officer reference is the same individual at the same instant, or impose exclusive companion/location intervals. A clarity ambiguity is possible, but the observation treats an assumed identity and simultaneity as a confirmed contradiction; two companions are not inherently incompatible."
+        }
+      },
+      "rechecks": {
+        "c02-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement restores lifelong right-handedness."
+        },
+        "c02-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement removes the contradictory 24-coin total."
+        },
+        "c02-r01-o03": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Applied replacement explicitly separates the hall and bridge watch members."
+        }
+      }
+    },
+    "tide_register-c3-injected-1": {
+      "matches": {
+        "tide_register-c3-injected-1-defect-1": "c03-r01-o02",
+        "tide_register-c3-injected-1-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "The waking present contradicts the supplied life/death sequence outside dreams, recollections and hypotheticals. Development review: Actual waking line 21 resurrects Rook despite F-204 and the chronology. The four removable first-person present prefixes are local, with expected major severity rather than blocking. Applied replacements convert the prefixes and delete the waking return; both resolved decisions agree."
+        },
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": false,
+          "evidenceCorrect": true,
+          "expectedSeverity": "major",
+          "expectedScope": "local",
+          "reason": "Deleting the four clearly delimited insertions restores the original narration; their distribution does not make this structural. Development review: Actual waking line 21 resurrects Rook despite F-204 and the chronology. The four removable first-person present prefixes are local, with expected major severity rather than blocking. Applied replacements convert the prefixes and delete the waking return; both resolved decisions agree."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 resurrects Rook despite F-204 and the chronology. The four removable first-person present prefixes are local, with expected major severity rather than blocking. Applied replacements convert the prefixes and delete the waking return; both resolved decisions agree."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual waking line 21 resurrects Rook despite F-204 and the chronology. The four removable first-person present prefixes are local, with expected major severity rather than blocking. Applied replacements convert the prefixes and delete the waking return; both resolved decisions agree."
+        }
+      },
+      "notes": "Actual waking line 21 resurrects Rook despite F-204 and the chronology. The four removable first-person present prefixes are local, with expected major severity rather than blocking. Applied replacements convert the prefixes and delete the waking return; both resolved decisions agree."
+    },
+    "tide_register-c3-injected-2": {
+      "matches": {
+        "tide_register-c3-injected-2-defect-1": "c03-r01-o02",
+        "tide_register-c3-injected-2-defect-2": "c03-r01-o01"
+      },
+      "observations": {
+        "c03-r01-o02": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "Actual-world narration violates the supplied physical rule. Development review: Actual line 1 rings the bell without required lever movement; line 7 kills Ivo despite L-7 and his later living presence. Both blocking/local. Applied replacements retain the silent bell and living Ivo; both resolved decisions agree."
+        },
+        "c03-r01-o01": {
+          "objectiveCorrect": true,
+          "severityScopeCorrect": true,
+          "evidenceCorrect": true,
+          "expectedSeverity": "blocking",
+          "expectedScope": "local",
+          "reason": "A permanent death contradicts the named author keep-alive requirement. Development review: Actual line 1 rings the bell without required lever movement; line 7 kills Ivo despite L-7 and his later living presence. Both blocking/local. Applied replacements retain the silent bell and living Ivo; both resolved decisions agree."
+        }
+      },
+      "rechecks": {
+        "c03-r01-o01": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 rings the bell without required lever movement; line 7 kills Ivo despite L-7 and his later living presence. Both blocking/local. Applied replacements retain the silent bell and living Ivo; both resolved decisions agree."
+        },
+        "c03-r01-o02": {
+          "pass": true,
+          "expectedResolved": true,
+          "reason": "Inspected the applied find/replace changes and revised result: Actual line 1 rings the bell without required lever movement; line 7 kills Ivo despite L-7 and his later living presence. Both blocking/local. Applied replacements retain the silent bell and living Ivo; both resolved decisions agree."
+        }
+      },
+      "notes": "Actual line 1 rings the bell without required lever movement; line 7 kills Ivo despite L-7 and his later living presence. Both blocking/local. Applied replacements retain the silent bell and living Ivo; both resolved decisions agree."
+    },
+    "tide_register-c3-control": {
+      "matches": {},
+      "observations": {},
+      "rechecks": {},
+      "notes": "No observations or rechecks returned; no injected defects."
+    }
+  },
+  "status": "complete_development_self_review",
+  "date": "2026-10-30T14:57:49.806Z",
+  "inputEdition": "Frozen DS10 v1, all 45 old dev + old acceptance variants; no semantic input override during this run",
+  "metrics": [
+    {
+      "id": "E02",
+      "n": 60,
+      "successes": 60,
+      "value": 1,
+      "threshold": 0.8,
+      "confidence95": [
+        0.93982814785791,
+        0.9999999999999998
+      ],
+      "meetsDevelopmentGoal": true,
+      "formalUseAllowed": false,
+      "byCategory": {
+        "characterisation": {
+          "n": 10,
+          "successes": 10
+        },
+        "factual_details": {
+          "n": 10,
+          "successes": 10
+        },
+        "timeline_plot": {
+          "n": 10,
+          "successes": 10
+        },
+        "narrative_style": {
+          "n": 10,
+          "successes": 10
+        },
+        "world_setting": {
+          "n": 10,
+          "successes": 10
+        },
+        "ledger_violation": {
+          "n": 10,
+          "successes": 10
+        }
+      }
+    },
+    {
+      "id": "E03",
+      "n": 50,
+      "successes": 37,
+      "value": 0.74,
+      "threshold": 0.7,
+      "confidence95": [
+        0.6044684273515117,
+        0.8412847250644762
+      ],
+      "meetsDevelopmentGoal": true,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E04",
+      "n": 50,
+      "successes": 32,
+      "value": 0.64,
+      "threshold": 0.75,
+      "confidence95": [
+        0.501410168761127,
+        0.7586125034815325
+      ],
+      "meetsDevelopmentGoal": false,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E05",
+      "n": 50,
+      "successes": 37,
+      "value": 0.74,
+      "threshold": 0.88,
+      "confidence95": [
+        0.6044684273515117,
+        0.8412847250644762
+      ],
+      "meetsDevelopmentGoal": false,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E06",
+      "n": 20,
+      "successes": 17,
+      "value": 0.85,
+      "threshold": 0.8,
+      "confidence95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "meetsDevelopmentGoal": true,
+      "formalUseAllowed": false,
+      "selectionGoal": false
+    }
+  ],
+  "program": [
+    {
+      "id": "E01",
+      "n": 81,
+      "value": {
+        "first": 0.9876543209876543,
+        "final": 1
+      },
+      "successes": {
+        "first": 80,
+        "final": 81
+      },
+      "threshold": {
+        "first": 0.8,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.9333311840195164,
+          0.9978173499414611
+        ],
+        "final": [
+          0.9547219145675847,
+          1
+        ]
+      },
+      "passed": true,
+      "status": "measured",
+      "unavailable": 0
+    },
+    {
+      "id": "W05",
+      "n": 36,
+      "value": 1,
+      "successes": 36,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 20,
+      "confidence95": [
+        0.9035813714055363,
+        1
+      ],
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "H12",
+      "n": 118,
+      "successes": 118,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.9684716609775057,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 118,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.9684716609775057,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 118,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.9684716609775057,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 118,
+      "successes": 118,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.9684716609775057,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 118,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.9684716609775057,
+        1
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "population": {
+    "objectiveObservations": 78,
+    "rechecks": 73,
+    "goldDefects": 60
+  },
+  "samples": {
+    "observations": [
+      {
+        "caseId": "tide_register-c2-injected-2",
+        "observationId": "c02-r01-o01",
+        "rank": "00a4df849012966771adc89b80b358a0608e6cec2947f06b4c1e54b5b615a933"
+      },
+      {
+        "caseId": "bakery_apartment-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "02420cc7b753594eb85a179d6f2cf0130a374cdc89a42b033b50ee2fd9a79f63"
+      },
+      {
+        "caseId": "quiet_europa-c1-injected-2",
+        "observationId": "c01-r01-o01",
+        "rank": "06b2b119e728c62e23e61957d6499ca3289d77179d89c7bf30fb6dca716e0cfc"
+      },
+      {
+        "caseId": "quiet_europa-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "0c63ca5c6af9a0f93493d9b62d8100707823dd5c087138476852fbad233af281"
+      },
+      {
+        "caseId": "last_impression-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "0dfcbffcc181b3ece961f06e7f98c3b1c1c22393d5a6ba0f269d8c458ebb8abd"
+      },
+      {
+        "caseId": "tide_register-c3-injected-2",
+        "observationId": "c03-r01-o01",
+        "rank": "102e904e012169a928255cc95d17e96658657c9bd27b07189c56bbeccc5a587a"
+      },
+      {
+        "caseId": "borrowed_rain-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "13d9132a1bdeb00adca41c305d183f13ccea8fad23b11f5dff12517326bd911b"
+      },
+      {
+        "caseId": "last_impression-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "17db6500f443eecd9a634bfe5e2dc7bf13bcc94fb00e496210ce9ac19a9bb4ad"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "1d9ea8873bc6a914c269a36b2b917782d996beaa9e01f1bead967c6892ea3f37"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "2014487c073a6d2d8e81c74f3d8de3884513b16f2b0bf1870692ad2b1268316c"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-1",
+        "observationId": "c03-r01-o03",
+        "rank": "20266d9b4c33efeeba8c287f7ab23c3c45c01173f2f0a42c073e5f0a98e1d8d6"
+      },
+      {
+        "caseId": "bakery_apartment-c2-injected-2",
+        "observationId": "c02-r01-o02",
+        "rank": "2120a3d920cc5713555cc59f3a84217d5a433c5e71e4eeff8eb2641847fe89b9"
+      },
+      {
+        "caseId": "borrowed_rain-c2-injected-2",
+        "observationId": "c02-r01-o01",
+        "rank": "22e9e8388d96d0b0aab598e51459c821625dfd35de1da4d170d6d2e169b0e8b4"
+      },
+      {
+        "caseId": "bakery_apartment-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "2b564a46fec5d81b28c0abb720a207df8d745c7480c1cc3cc1896128b83c55fe"
+      },
+      {
+        "caseId": "last_impression-c3-injected-2",
+        "observationId": "c03-r01-o01",
+        "rank": "2f89513e5ec4286fb757b44f11e4ab8f809ea6b791bb426dccf4ff26b36ce2eb"
+      },
+      {
+        "caseId": "quiet_europa-c3-control",
+        "observationId": "c03-r01-o01",
+        "rank": "2fe5ff0cb91f6da4cd36c595e0ff8f69f7683bcc90af9df626b2f4f2be31f4d7"
+      },
+      {
+        "caseId": "tide_register-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "333ba77f03305da74e862e7fc628b881eecbb28fe8622bb78e14eda37df8ce2e"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-2",
+        "observationId": "c03-r01-o02",
+        "rank": "3413c9da3fce701c78e3e122a764f29c9fb596c3d6a992c8923e441d74eab7ca"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "34eac421223191594f35ce447ec5f85079285aa04471d1412b40c33e15bdd157"
+      },
+      {
+        "caseId": "bakery_apartment-c1-injected-2",
+        "observationId": "c01-r01-o01",
+        "rank": "3672516873dcc70d3c31c366429f8453b78194a9171af66c2101b774bfc850cb"
+      },
+      {
+        "caseId": "last_impression-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "3c727f52aaa45c1741cb3c6ed17d71779b5143ff8dd4002ed55e344d94ca4022"
+      },
+      {
+        "caseId": "borrowed_rain-c3-injected-1",
+        "observationId": "c03-r01-o02",
+        "rank": "3e53dfd716ab4af06625dca0028f5117eaeb0a4315bb3bcf435713c052bcd069"
+      },
+      {
+        "caseId": "last_impression-c2-injected-2",
+        "observationId": "c02-r01-o03",
+        "rank": "460dfbadf950aed6a85b9cab1ea78d06029b387a8ea934bd4f609665156bfbc8"
+      },
+      {
+        "caseId": "tide_register-c3-injected-2",
+        "observationId": "c03-r01-o02",
+        "rank": "47bb868355cad64ccb70a2a85ed770332b77f3d28676aad5d190043e1f1b4c56"
+      },
+      {
+        "caseId": "bakery_apartment-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "4bc583abfcdc7b2e5cf4135bc0766632faf0995d243097081dca524166e62c06"
+      },
+      {
+        "caseId": "tide_register-c2-injected-2",
+        "observationId": "c02-r01-o03",
+        "rank": "4d2b8a27eb78918bd9d14eb1347f2a9756afaefcc811fb9739ebe7da65e6a551"
+      },
+      {
+        "caseId": "last_impression-c3-injected-1",
+        "observationId": "c03-r01-o01",
+        "rank": "4ee5b7c9e6aabd4a572dc22fc7cc188df043d13209fb05c54ca411ec98d357e8"
+      },
+      {
+        "caseId": "bakery_apartment-c3-injected-1",
+        "observationId": "c03-r01-o02",
+        "rank": "518c99e2a0f979dc9c4e22f967d99977d82eaa16d33c2e9e90127c98bbcc503f"
+      },
+      {
+        "caseId": "tide_register-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "522892268eac797459bb0e106487269ef14f85623cc422109270ff353b80ab5d"
+      },
+      {
+        "caseId": "borrowed_rain-c2-injected-2",
+        "observationId": "c02-r01-o02",
+        "rank": "558671d078a28f9fec04ec6f0a09692e1d44070be368451cad3a272a8903e33b"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-2",
+        "observationId": "c03-r01-o03",
+        "rank": "57c5e0ce478ed4afecba5004df55e470af4fb6e489249e52c31d1f685569e7a3"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-2",
+        "observationId": "c01-r01-o01",
+        "rank": "60de6908674c83dce50115816a98f5b547c64fde2f5e8d258d56d098ac23378c"
+      },
+      {
+        "caseId": "quiet_europa-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "620562d7334ae6a87f9d6b87ed68000f9fbfbb9c9e57cdd6a36b569dd14c905b"
+      },
+      {
+        "caseId": "tide_register-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "6267fae272ecff31a27372c518d216e30327e7b4a7defa80dce89db0486c1931"
+      },
+      {
+        "caseId": "borrowed_rain-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "62bcc50f9b14e4c3ba35ff7b9949b07e5dc8d0ca44e7ce4a66f53d749a8e7f3b"
+      },
+      {
+        "caseId": "last_impression-c1-injected-2",
+        "observationId": "c01-r01-o01",
+        "rank": "67c1958a4f5d162a792e3eceaf681e55d393cf4d9f4a8fd90c4681accac449f3"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-1",
+        "observationId": "c03-r02-o01",
+        "rank": "6ad5646a75813a8d6f47ce18d1d04ca3cf185a3f70d4f862886ba8567f5976fa"
+      },
+      {
+        "caseId": "quiet_europa-c2-injected-1",
+        "observationId": "c02-r01-o01",
+        "rank": "711009b27960aa2e98960972aa0c77348482233eea4a55d2deaf3224cbaf0c9a"
+      },
+      {
+        "caseId": "bakery_apartment-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "73361d5679b0194b20f5c735e10571824d9c43425cc54697672d076f21b3dd04"
+      },
+      {
+        "caseId": "borrowed_rain-c3-injected-2",
+        "observationId": "c03-r01-o02",
+        "rank": "764cfa99c06fbf2c7714d23554aea7834ba6e59e86c67db84db858bb190f1d7e"
+      },
+      {
+        "caseId": "tide_register-c2-injected-1",
+        "observationId": "c02-r01-o01",
+        "rank": "7be6f1e669d0a001c7c2e993600057f38e97c44367fc915901782fe4e15b8212"
+      },
+      {
+        "caseId": "last_impression-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "8857f1e17bf7a39dfa756be68c4d66b094769eef15ae6e03497c76b390927d40"
+      },
+      {
+        "caseId": "last_impression-c3-injected-1",
+        "observationId": "c03-r01-o02",
+        "rank": "8f314017d27c7876b995471d391690ab31d4eaedcfee77003e6dfd5eebbf81a2"
+      },
+      {
+        "caseId": "borrowed_rain-c3-control",
+        "observationId": "c03-r01-o02",
+        "rank": "90d5207dbe8edad4af6f9704d822deed245aa89a79af3334e96a9645e8d1d7db"
+      },
+      {
+        "caseId": "bakery_apartment-c3-injected-2",
+        "observationId": "c03-r01-o01",
+        "rank": "91873a6ea923561c8e0989b2ea513dd98566ece467f848b66b32afb00ceeb812"
+      },
+      {
+        "caseId": "last_impression-c2-injected-1",
+        "observationId": "c02-r01-o03",
+        "rank": "9e1e8c978bfa4ff69ecc99435e5ebfa26140ef061fbbd59b836d3fc0c0cab6bc"
+      },
+      {
+        "caseId": "tide_register-c2-control",
+        "observationId": "c02-r01-o02",
+        "rank": "9f773099d0a07a2c21a039566c918930a0dd7466f67f3e3def1f1f0e732e46c4"
+      },
+      {
+        "caseId": "last_impression-c2-injected-2",
+        "observationId": "c02-r01-o02",
+        "rank": "a3ea21ccbf78e4cc52f809fd68f4d819ea61a282307e99f838ba3d55bf5fb748"
+      },
+      {
+        "caseId": "bakery_apartment-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "a5de5488c9db6498a6ce2c6c56feb3a862362cb26ebab0bd24b7d9b5b57649ce"
+      },
+      {
+        "caseId": "tide_register-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "aaccce51307c033d34301a637601935875d47403940404e9d70edf5a6fde7679"
+      }
+    ],
+    "rechecks": [
+      {
+        "caseId": "tide_register-c2-injected-2",
+        "observationId": "c02-r01-o01",
+        "rank": "00a4df849012966771adc89b80b358a0608e6cec2947f06b4c1e54b5b615a933"
+      },
+      {
+        "caseId": "bakery_apartment-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "02420cc7b753594eb85a179d6f2cf0130a374cdc89a42b033b50ee2fd9a79f63"
+      },
+      {
+        "caseId": "quiet_europa-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "0c63ca5c6af9a0f93493d9b62d8100707823dd5c087138476852fbad233af281"
+      },
+      {
+        "caseId": "last_impression-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "0dfcbffcc181b3ece961f06e7f98c3b1c1c22393d5a6ba0f269d8c458ebb8abd"
+      },
+      {
+        "caseId": "tide_register-c3-injected-2",
+        "observationId": "c03-r01-o01",
+        "rank": "102e904e012169a928255cc95d17e96658657c9bd27b07189c56bbeccc5a587a"
+      },
+      {
+        "caseId": "borrowed_rain-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "13d9132a1bdeb00adca41c305d183f13ccea8fad23b11f5dff12517326bd911b"
+      },
+      {
+        "caseId": "last_impression-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "17db6500f443eecd9a634bfe5e2dc7bf13bcc94fb00e496210ce9ac19a9bb4ad"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-1",
+        "observationId": "c01-r01-o02",
+        "rank": "1d9ea8873bc6a914c269a36b2b917782d996beaa9e01f1bead967c6892ea3f37"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-2",
+        "observationId": "c01-r01-o02",
+        "rank": "2014487c073a6d2d8e81c74f3d8de3884513b16f2b0bf1870692ad2b1268316c"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-1",
+        "observationId": "c03-r01-o03",
+        "rank": "20266d9b4c33efeeba8c287f7ab23c3c45c01173f2f0a42c073e5f0a98e1d8d6"
+      },
+      {
+        "caseId": "bakery_apartment-c2-injected-2",
+        "observationId": "c02-r01-o02",
+        "rank": "2120a3d920cc5713555cc59f3a84217d5a433c5e71e4eeff8eb2641847fe89b9"
+      },
+      {
+        "caseId": "borrowed_rain-c2-injected-2",
+        "observationId": "c02-r01-o01",
+        "rank": "22e9e8388d96d0b0aab598e51459c821625dfd35de1da4d170d6d2e169b0e8b4"
+      },
+      {
+        "caseId": "bakery_apartment-c2-injected-1",
+        "observationId": "c02-r01-o02",
+        "rank": "2b564a46fec5d81b28c0abb720a207df8d745c7480c1cc3cc1896128b83c55fe"
+      },
+      {
+        "caseId": "last_impression-c3-injected-2",
+        "observationId": "c03-r01-o01",
+        "rank": "2f89513e5ec4286fb757b44f11e4ab8f809ea6b791bb426dccf4ff26b36ce2eb"
+      },
+      {
+        "caseId": "quiet_europa-c3-control",
+        "observationId": "c03-r01-o01",
+        "rank": "2fe5ff0cb91f6da4cd36c595e0ff8f69f7683bcc90af9df626b2f4f2be31f4d7"
+      },
+      {
+        "caseId": "tide_register-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "333ba77f03305da74e862e7fc628b881eecbb28fe8622bb78e14eda37df8ce2e"
+      },
+      {
+        "caseId": "quiet_europa-c3-injected-2",
+        "observationId": "c03-r01-o02",
+        "rank": "3413c9da3fce701c78e3e122a764f29c9fb596c3d6a992c8923e441d74eab7ca"
+      },
+      {
+        "caseId": "borrowed_rain-c1-injected-1",
+        "observationId": "c01-r01-o01",
+        "rank": "34eac421223191594f35ce447ec5f85079285aa04471d1412b40c33e15bdd157"
+      },
+      {
+        "caseId": "last_impression-c2-control",
+        "observationId": "c02-r01-o01",
+        "rank": "3c727f52aaa45c1741cb3c6ed17d71779b5143ff8dd4002ed55e344d94ca4022"
+      },
+      {
+        "caseId": "borrowed_rain-c3-injected-1",
+        "observationId": "c03-r01-o02",
+        "rank": "3e53dfd716ab4af06625dca0028f5117eaeb0a4315bb3bcf435713c052bcd069"
+      }
+    ]
+  },
+  "allReviewedRates": [
+    {
+      "id": "E03",
+      "n": 78,
+      "successes": 61,
+      "value": 0.782051282051282,
+      "threshold": 0.7,
+      "confidence95": [
+        0.6783929457018985,
+        0.8592318795886587
+      ],
+      "meetsDevelopmentGoal": true,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E04",
+      "n": 78,
+      "successes": 51,
+      "value": 0.6538461538461539,
+      "threshold": 0.75,
+      "confidence95": [
+        0.543301943767048,
+        0.7499479609368923
+      ],
+      "meetsDevelopmentGoal": false,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E05",
+      "n": 78,
+      "successes": 61,
+      "value": 0.782051282051282,
+      "threshold": 0.88,
+      "confidence95": [
+        0.6783929457018985,
+        0.8592318795886587
+      ],
+      "meetsDevelopmentGoal": false,
+      "formalUseAllowed": false
+    },
+    {
+      "id": "E06",
+      "n": 73,
+      "successes": 70,
+      "value": 0.958904109589041,
+      "threshold": 0.8,
+      "confidence95": [
+        0.8859990837370165,
+        0.9859260596460794
+      ],
+      "meetsDevelopmentGoal": true,
+      "formalUseAllowed": false
+    }
+  ],
+  "costs": {
+    "knownUsd": 0.7511095800000002,
+    "reservedUsd": 0,
+    "unknownCalls": 0,
+    "requests": 118,
+    "totalUsd": 0.7511095800000002
+  },
+  "totalRepairCosts": {
+    "knownUsd": 0.9645785400000002,
+    "reservedUsd": 0.5053785,
+    "unknownCalls": 2,
+    "requests": 208,
+    "totalUsd": 1.4699570400000002
+  }
+}

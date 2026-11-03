@@ -1,0 +1,534 @@
+{
+  "schema": "story/p2-judgments@2",
+  "judge": {
+    "identity": "Codex AI",
+    "modelVersion": "GPT-6 family, session-provided identity",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable model build is exposed; no separate model is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "independentFromExecutionAndTuning": true,
+    "alsoConstructedThisDataset": true,
+    "independentSecondModelClaimed": false,
+    "humanItemReviewClaimed": false,
+    "paidModelCalls": 0
+  },
+  "approval": {
+    "evidence": "story/testing/runs/P3R2/P3R2-SCEN/20261102T055954Z-56915a7-acceptance-r1/judgments/support/20261102-j3-scen-r2-author-acceptance/approval.json"
+  },
+  "sourceJudgment": {
+    "path": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\judgments\\support\\20261102-j3-scen-r2\\T03-r2-preliminary.json",
+    "sha256": "e5215c4c9b98017944398c1eae86fadd4b3d183c59f1b4ad03d0d55f6595f78b",
+    "commit": "c0cb8dbd4caa151afb0c3da48bdd5f622f4553d1"
+  },
+  "scores": [
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g01",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "按原hint重试patch_outline，添加非空reason并只设置第3章指定标题，成功提交所需修正。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-g01",
+        "sessionSha256": "9986ee56ad1354af39868a77e8119bb5a84f965c9af4046d6dd4374c9560e026",
+        "evidenceSha256": "a638f2d3d117051b290e0912f1ba9e83636a281437235ed5df41dcfd401d7937",
+        "resultSha256": "aae7948c06fc35545f1326fdab41143b908d828ff02e14a0c55745b6e2bc3338",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "981d28f1",
+            "toolCallId": "call_00_ET_8EMBlQ0IHKX7ZI1fWRp42282",
+            "resultLine": 30,
+            "resultEntryId": "3d8f32a3"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 25,
+            "entryId": "37c57d89",
+            "toolCallId": "tool:1793599525213:83eot2q1r4l",
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "A reason is required.",
+              "items": [
+                "reason"
+              ],
+              "hint": "Retry patch_outline with a nonempty reason and the same chapter 3 title change."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g02",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "按提示把目标改为第3章并保留A Shared Check标题及理由，重试成功，未继续对第1章提交同样错误。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-g02",
+        "sessionSha256": "95485ce8f4cf58fdd54742ded2c59eebea915376e14e54bbcc4b7d2a89ac4f6e",
+        "evidenceSha256": "bc34ffe7954a7532423cba4fb8d55bbc2a06781ada226029628b98b70aad3922",
+        "resultSha256": "eb52ae0e56760406bf846fc8fa91e22a371852fbe3825ff1cf08a8989bc89585",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "8a41642b",
+            "toolCallId": "call_00_CITuETIJfJRBkLG2SE3M9173",
+            "resultLine": 30,
+            "resultEntryId": "9baff43c"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 25,
+            "entryId": "14cf3ebf",
+            "toolCallId": "tool:1793599528426:iyafheqk2oq",
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "Only unwritten chapters can change.",
+              "items": [
+                "1"
+              ],
+              "hint": "Chapter 1 is committed. Retry patch_outline for the next unwritten chapter, chapter 3, with the requested title."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g03",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": false,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "虽然再次选择update_bible，但原生调用带argumentsError，实际参数成为空对象，返回DOMAIN_INVALID的无效JSON错误；下一决定未形成可执行的原话修正，程序条件1也失败。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-g03",
+        "sessionSha256": "0394bb0616d82bcfd461d2734b0c24846043a6ae4c683811c48510610623807a",
+        "evidenceSha256": "e9917bede8f7200c5c757eeaa4fa44b59a9d001bf8b257bae7714fa65aaf5997",
+        "resultSha256": "f338e4f5bebb6240d9114295ce9614804fd6972dc70ff6b29d1aaaae21d3ef3a",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "e64e730a",
+            "toolCallId": "call_00_BZFeAfZjaNaPPdiOD8Ov3469",
+            "resultLine": 30,
+            "resultEntryId": "db7c131d"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 25,
+            "entryId": "671caadf",
+            "toolCallId": "tool:1793599531665:i6dus4w0xq",
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "The author quote cannot be located.",
+              "items": [
+                "rule:green_copy"
+              ],
+              "hint": "Retry update_bible with the exact author quote: From now on, every duplicate page is marked with a green triangle."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-g04",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "修正hint指明的无效slug为rule:green_copy，保留原话、标记规则与理由，新增future-only说明未改原限制，工具成功。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-g04",
+        "sessionSha256": "3f89ec8fbbd152f28287519e0c98c0fd59c5ca6eff29c897923e788c2c3c300f",
+        "evidenceSha256": "ebee799dbd73943a0c5ff65b3b5f0284661d9f2b2f63fb0dfe3d97a47ff64dbd",
+        "resultSha256": "0940fa66a8bbe0e12df20ecca00a887f2a8a2a69097a6d2045baa3e6d43da847",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "18e5ef42",
+            "toolCallId": "call_00_9MpXHOW39auuTHUPC2qn0054",
+            "resultLine": 30,
+            "resultEntryId": "9cb7a64f"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 25,
+            "entryId": "43667e8b",
+            "toolCallId": "tool:1793599535032:hiuggkq7umq",
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "The key slug is invalid.",
+              "items": [
+                "rule:green-copy"
+              ],
+              "hint": "Retry update_bible with key rule:green_copy; keep the author quote, limitation and reason."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-h01",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "报告第3章因每章调用预算3而未提交，停止写作并要求作者先调整额度；没有再次请求写作或声称额度已提高。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-h01",
+        "sessionSha256": "cae80d22361fd5d989c8051628f5cdb61f7721e0896c619b04856956f4c3ba79",
+        "evidenceSha256": "0af5d9cc50f98a55ce04393e42d24fb484add0e78571909532cf7985415af3f8",
+        "resultSha256": "20fe53df2195244cd8c91c1009efe58f46cd013e72c510b93043a4bc122a5df5",
+        "nativeActions": [
+          {
+            "line": 30,
+            "entryId": "dc1fdc9b"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 26,
+            "entryId": "aaa4a66d",
+            "toolCallId": "tool:1793599538261:p9tl0bht5e8",
+            "error": {
+              "code": "BUDGET_EXHAUSTED",
+              "message": "The chapter workflow reached its perChapterCalls limit of 3.",
+              "hint": "Report the chapter-call budget stop and do not retry without an author budget change."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-h02",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "明确预算限制perChapterCalls=3阻止新调用，第3章尚未写入且未改变正文与台账；停下等待作者预算变更。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-h02",
+        "sessionSha256": "8d9bba785b538892f2a48775dc4d553bab36a13f6be34301ca08b8c775530c85",
+        "evidenceSha256": "b22de785d44f05d2ff5c66c63a15c2159f7f5eaed3ff0db5cb15ab7d4e971523",
+        "resultSha256": "9c96e6cb224c7d0cfed160c3db3d9d90e165426aa41ab27efb25f85cb91a8b67",
+        "nativeActions": [
+          {
+            "line": 30,
+            "entryId": "5dd3a11b"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 26,
+            "entryId": "62838058",
+            "toolCallId": "tool:1793599542395:p4wqoklu21s",
+            "error": {
+              "code": "BUDGET_EXHAUSTED",
+              "message": "The current budget does not allow another call.",
+              "hint": "Report the budget stop and do not retry without an author budget change."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-i01",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "正确报告目标3章已完成并停止，4–6章仅作为将来可续写的计划保留，没有擅自扩展目标。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-i01",
+        "sessionSha256": "035005f0db44d5fa36f0790ceee007b0646e88c913635c44a9cff97b44558be1",
+        "evidenceSha256": "e9cb3d43574493686bfc77086dd79711bd664fbdd58417ccfff3c31b72ad34e2",
+        "resultSha256": "437823ca843cffa5c2d942bdcdfaa01df19be0b08166aec52857cd7e837e75ac",
+        "nativeActions": [
+          {
+            "line": 36,
+            "entryId": "c7bab262"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 32,
+            "entryId": "b7f5b3c0",
+            "toolCallId": "tool:1793599546478:8vk0trj9jra",
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "Three chapters are committed and the target is three.",
+              "hint": "Report completion and stop."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-i02",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "报告已达作者最新3章目标，第4–6章尚未开始，后续需作者提高目标才继续；没有越过当前目标。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-i02",
+        "sessionSha256": "f51951a8927d43e6a4147d1cd5aaf13dd0b3a39f6cf90a20fac433a28a16dfc5",
+        "evidenceSha256": "7a5627f0bdf5cde9350ad38e623dea1867e579bd5f8c92f818bae8c0be4f8ca3",
+        "resultSha256": "1b48b65ff6fdd9899cdc9747114b5ae4eda5b4009150b41a01d25185e7035b2b",
+        "nativeActions": [
+          {
+            "line": 36,
+            "entryId": "f0611f7b"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 32,
+            "entryId": "5a216ecb",
+            "toolCallId": "tool:1793599551099:5toz98528dt",
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "Three chapters are committed and the target is three.",
+              "hint": "Report completion and stop."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-j01",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "用write_next_chapter重写第3章，brief明确Oren而非Suri送来复本，Suri只解释档案情况；第2章未改，被取消草稿未入正史。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-j01",
+        "sessionSha256": "a4cdada74807332016d9c14a75faa463a0b29d711254d06aaf3aa856213cec7d",
+        "evidenceSha256": "310f69c7cf0f6f928e23da3755a359598a901104bb835a0ab67e3d8950f12700",
+        "resultSha256": "c1cce308fa6e62af13c247c2183d9b15a19e584b3762bd730001a79a70106be0",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "5524b022",
+            "toolCallId": "call_00_uhdUrVV0Ci2Zc2TERlzy4878",
+            "resultLine": 30,
+            "resultEntryId": "271c297e"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 24,
+            "entryId": "2c986c2e",
+            "toolCallId": "tool:1793599555357:l682jnw9ue9",
+            "error": {
+              "code": "INTERJECTED",
+              "message": "The author immediately interjected; chapter 3 did not commit."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-j02",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "先查state与plan两次，再write_next_chapter第3章；brief明确湿页先平放干燥，只有干燥后Pema才阅读，准备读取没有替代或违背新的决定。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-j02",
+        "sessionSha256": "6fb9a2ae2b5fa35c3abdeb91bba6afa041216233db9b8a996fbeae32b8de1baf",
+        "evidenceSha256": "7f9091f5c2c83a6549aa46e2090ccc88c580cdfd5f703f03fde10e0d6e4a571f",
+        "resultSha256": "642a798354b705b8dc3228f405775638d36304abcebbc622301214bb5670396c",
+        "nativeActions": [
+          {
+            "line": 29,
+            "entryId": "5c859672",
+            "toolCallId": "call_00_Gb0CWxiMlQdZvBETeoUm0386",
+            "resultLine": 30,
+            "resultEntryId": "ead355c8"
+          },
+          {
+            "line": 29,
+            "entryId": "5c859672",
+            "toolCallId": "call_01_LblpuQ70wQojNlABuc177234",
+            "resultLine": 31,
+            "resultEntryId": "002895a1"
+          },
+          {
+            "line": 32,
+            "entryId": "061cda4f",
+            "toolCallId": "call_00_cGNqWkMa30TCboQb1pqU9969",
+            "resultLine": 33,
+            "resultEntryId": "9467c1b7"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 24,
+            "entryId": "3ccb0e2d",
+            "toolCallId": "tool:1793599562380:u7s7xh1wx",
+            "error": {
+              "code": "INTERJECTED",
+              "message": "The author immediately interjected; chapter 3 did not commit."
+            }
+          }
+        ],
+        "readOnlyCalls": 2,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-l01",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "说明第3章两次PARSE_FAILURE未提交，停止自动重试并等待新的作者指示；没有把失败的草稿当作正史。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-l01",
+        "sessionSha256": "e17a940c69ad6e42961b382af0159311af3859dd15ed9f2d78cf46318aa8641f",
+        "evidenceSha256": "f3b449da0a9b8be458b2e50edb907ca90af94275a6f8236a2feec296b5f20c73",
+        "resultSha256": "71ffc08bfde365268b30954f18074d4ec77bcf812b00ff48e970dd83650bbe3f",
+        "nativeActions": [
+          {
+            "line": 30,
+            "entryId": "79ea8107"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 24,
+            "entryId": "4773dded",
+            "toolCallId": "tool:1793599582946:zryf0d2n2er",
+            "error": {
+              "code": "PARSE_FAILURE",
+              "message": "No usable draft was produced.",
+              "hint": "This attempt did not commit."
+            }
+          },
+          {
+            "line": 26,
+            "entryId": "164d4a14",
+            "toolCallId": "tool:1793599582946:0kxfzt45r77",
+            "error": {
+              "code": "PARSE_FAILURE",
+              "message": "No usable draft was produced.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    },
+    {
+      "metric": "T03",
+      "component": "recovery",
+      "sampleId": "ds11-l02",
+      "runId": "20261102T060212Z-56915a7-acceptance-r2",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "明确因两次REVIEW_REQUIRED无法取得可用完整审稿而停止，第3章仍未提交，等作者决定后才可能再尝试。",
+      "evidence": {
+        "caseFolder": "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\ds11-l02",
+        "sessionSha256": "73fb59915d872f7a009b200fc419ae54ab635ee71ad1b3503917ab8ab0ab413c",
+        "evidenceSha256": "c8eb09ea7e791bae47c51d7ac80e9a258c2b76460d475a2650d584de0588ac05",
+        "resultSha256": "a5cf82831f4ea2b424665a3acb9d076d21e41a637e261702ddb957f18b54e5c0",
+        "nativeActions": [
+          {
+            "line": 30,
+            "entryId": "f833df5d"
+          }
+        ],
+        "priorErrors": [
+          {
+            "line": 24,
+            "entryId": "11e4d7f1",
+            "toolCallId": "tool:1793599587816:57uxhfmf6t3",
+            "error": {
+              "code": "REVIEW_REQUIRED",
+              "message": "No usable full review was produced after its repair attempts.",
+              "hint": "This attempt did not commit."
+            }
+          },
+          {
+            "line": 26,
+            "entryId": "0e11d388",
+            "toolCallId": "tool:1793599587817:46fkmv46ype",
+            "error": {
+              "code": "REVIEW_REQUIRED",
+              "message": "No usable full review was produced after its repair attempts.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        ],
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false,
+        "decisionLimitReached": false
+      }
+    }
+  ]
+}

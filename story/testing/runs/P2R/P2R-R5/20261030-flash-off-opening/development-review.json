@@ -1,0 +1,1781 @@
+{
+  "mode": "development_self_review",
+  "reviewer": "Codex AI",
+  "humanReviewed": false,
+  "formalUseAllowed": false,
+  "modelSetting": "flash-off",
+  "policy": "Same as R2 and Pro low: strict one-to-one semantic matching; a bundle covers at most one complete gold; fragmented predictions cannot be merged. Preserve actors, conditions, scope, causal links. Exclude generic environment/task metadata, retaining rule defects in notes.",
+  "cases": {
+    "103": {
+      "matches": {
+        "L-1": "103-g01",
+        "L-2": "103-g02",
+        "L-3": "103-g04",
+        "L-4": "103-g05",
+        "L-5": "103-g07",
+        "L-6": "103-g08",
+        "L-7": "103-g09",
+        "L-8": "103-g10",
+        "L-9": "103-g11"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "103-g03",
+        "103-g06"
+      ],
+      "notes": "Opening and ending each bundle two gold requirements."
+    },
+    "262": {
+      "matches": {
+        "L-1": "262-g01",
+        "L-2": "262-g02",
+        "L-3": "262-g03",
+        "L-4": "262-g04",
+        "L-5": "262-g07",
+        "L-6": "262-g08",
+        "L-7": "262-g09",
+        "L-8": "262-g10"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "262-g05",
+        "262-g06"
+      ],
+      "notes": "Complete ending bundles three independent gold requirements; one prediction earns only one."
+    },
+    "284": {
+      "matches": {
+        "L-1": "284-g01",
+        "L-2": "284-g02",
+        "L-3": "284-g03",
+        "L-4": "284-g04",
+        "L-5": "284-g05",
+        "L-6": "284-g06",
+        "L-7": "284-g07",
+        "L-8": "284-g09",
+        "L-9": "284-g10",
+        "L-10": "284-g11"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "284-g08"
+      ],
+      "notes": "Final confrontation and choice bundled L-7, one match only."
+    },
+    "320": {
+      "matches": {
+        "L-1": "320-g01",
+        "L-2": "320-g02",
+        "L-3": "320-g04",
+        "L-4": "320-g05",
+        "L-5": "320-g08",
+        "L-6": "320-g09",
+        "L-7": "320-g10",
+        "L-8": "320-g11",
+        "L-9": "320-g14",
+        "L-10": "320-g15"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "320-g03",
+        "320-g06",
+        "320-g07",
+        "320-g12",
+        "320-g13",
+        "320-g16",
+        "320-g17",
+        "320-g18"
+      ],
+      "notes": "Multiple independent requirements systematically bundled, same one-to-one policy as all candidates."
+    },
+    "469": {
+      "matches": {
+        "L-1": "469-g01",
+        "L-3": "469-g03",
+        "L-4": "469-g05",
+        "L-5": "469-g07",
+        "L-6": "469-g08",
+        "L-7": "469-g09",
+        "L-8": "469-g10"
+      },
+      "unmatched": {
+        "L-2": "Changes the gender-neutral previous owner into an author-given woman; this adds an unsupported authoritative attribute."
+      },
+      "excluded": {
+        "L-9": "Output-language ambiguity is generic metadata."
+      },
+      "missedGold": [
+        "469-g02",
+        "469-g04",
+        "469-g06"
+      ],
+      "notes": "Opening and ending each bundle two requirements; the extra gender restriction is scored conservatively and disclosed."
+    },
+    "580": {
+      "matches": {
+        "L-1": "580-g01",
+        "L-2": "580-g02",
+        "L-4": "580-g04",
+        "L-5": "580-g06",
+        "L-6": "580-g07",
+        "L-7": "580-g08",
+        "L-8": "580-g09",
+        "L-9": "580-g10",
+        "L-10": "580-g11",
+        "L-11": "580-g12",
+        "L-12": "580-g13",
+        "L-13": "580-g14",
+        "L-14": "580-g15",
+        "L-15": "580-g16"
+      },
+      "unmatched": {
+        "L-3": "Drops the required after-winter temporal link, same as Pro low."
+      },
+      "missedGold": [
+        "580-g03",
+        "580-g05",
+        "580-g17"
+      ],
+      "notes": "Discovery is bundled with identity in L-4; smells/sounds bundled in L-10."
+    },
+    "724": {
+      "matches": {
+        "L-2": "724-g01",
+        "L-3": "724-g02",
+        "L-6": "724-g04",
+        "L-7": "724-g05",
+        "L-9": "724-g06",
+        "L-10": "724-g07",
+        "L-11": "724-g10"
+      },
+      "unmatched": {
+        "L-4": "Starting-moment fragment omits racing thoughts and sweaty palms.",
+        "L-5": "Opening symptoms fragment lacks the exact department-stage starting moment; cannot combine with L-4."
+      },
+      "excluded": {
+        "L-1": "Inferred language metadata.",
+        "L-8": "Correctly optional challenge examples, not a further mandatory constraint.",
+        "L-12": "Correct optional-example ambiguity annotation, same policy as Pro."
+      },
+      "missedGold": [
+        "724-g03",
+        "724-g08",
+        "724-g09"
+      ]
+    },
+    "906": {
+      "matches": {
+        "L-1": "906-g01",
+        "L-2": "906-g02",
+        "L-3": "906-g03",
+        "L-4": "906-g04",
+        "L-5": "906-g06",
+        "L-6": "906-g08",
+        "L-7": "906-g09",
+        "L-8": "906-g12"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "906-g05",
+        "906-g07",
+        "906-g10",
+        "906-g11"
+      ],
+      "notes": "Dialogues, reflections and themes each bundle multiple independent requirements."
+    },
+    "919": {
+      "matches": {
+        "L-1": "919-g01",
+        "L-2": "919-g02",
+        "L-7": "919-g04",
+        "L-8": "919-g05",
+        "L-9": "919-g06",
+        "L-10": "919-g07",
+        "L-12": "919-g08",
+        "L-13": "919-g09",
+        "L-14": "919-g11",
+        "L-15": "919-g12",
+        "L-16": "919-g13",
+        "L-17": "919-g14"
+      },
+      "unmatched": {
+        "L-3": "Petite-woman fragment of complete drinking scene.",
+        "L-4": "Drink-for-drink fragment omits petite protagonist and lakeside-cabin conditions.",
+        "L-5": "Cabin-only fragment cannot combine to complete g03.",
+        "L-6": "Blackout duplicate of complete sequence already matched by L-7.",
+        "L-11": "Misty/rustic detail lacks an independent frozen gold counterpart; same disclosed gap as other candidates."
+      },
+      "excluded": {
+        "L-18": "Correctly retains uncertainty over the supernatural possibility, no further mandatory author constraint."
+      },
+      "missedGold": [
+        "919-g03",
+        "919-g10"
+      ],
+      "notes": "L-7 explicitly includes after-blackout timing, so unlike Pro it independently completes g04. Chaos/tension bundled, one match only."
+    },
+    "1084": {
+      "matches": {
+        "L-2": "1084-g01",
+        "L-3": "1084-g02",
+        "L-4": "1084-g04",
+        "L-5": "1084-g05",
+        "L-6": "1084-g06",
+        "L-8": "1084-g03",
+        "L-9": "1084-g07",
+        "L-10": "1084-g08",
+        "L-11": "1084-g09",
+        "L-12": "1084-g10"
+      },
+      "unmatched": {
+        "L-7": "Gender/love-interest seed duplicates the complete protection requirement and lacks an independent gold."
+      },
+      "excluded": {
+        "L-1": "Inferred output-language metadata, not an explicit author story requirement."
+      },
+      "missedGold": []
+    },
+    "1108": {
+      "matches": {
+        "L-5": "1108-g05",
+        "L-6": "1108-g06",
+        "L-7": "1108-g07",
+        "L-8": "1108-g08",
+        "L-9": "1108-g09"
+      },
+      "unmatched": {
+        "L-1": "Coffee fragment of the indivisible continuation starting passage.",
+        "L-2": "Breach fragment; cannot merge with other predictions for g01.",
+        "L-3": "Dispersing queue fragment of g01.",
+        "L-4": "Terrors fragment of g01."
+      },
+      "excluded": {
+        "L-10": "Creative latitude/unspecified protagonist and mechanics are meta, not a mandatory story constraint."
+      },
+      "missedGold": [
+        "1108-g01"
+      ]
+    },
+    "1124": {
+      "matches": {
+        "L-1": "1124-g01",
+        "L-2": "1124-g02",
+        "L-3": "1124-g04",
+        "L-4": "1124-g07",
+        "L-5": "1124-g08",
+        "L-6": "1124-g09",
+        "L-7": "1124-g10",
+        "L-8": "1124-g11",
+        "L-9": "1124-g12"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "1124-g03",
+        "1124-g05",
+        "1124-g06"
+      ],
+      "notes": "Bunker/final-stand and three themes bundled. Ledger retained from cancelled case; no rerun."
+    },
+    "1264": {
+      "matches": {
+        "L-1": "1264-g01",
+        "L-4": "1264-g02",
+        "L-5": "1264-g03",
+        "L-6": "1264-g04",
+        "L-7": "1264-g05",
+        "L-8": "1264-g06",
+        "L-9": "1264-g07",
+        "L-10": "1264-g10"
+      },
+      "unmatched": {
+        "L-2": "Shepherd identity duplicates part of the complete theft requirement.",
+        "L-3": "Female seed is supported but has no independent frozen gold."
+      },
+      "excluded": {
+        "L-11": "Inferred English output-language metadata."
+      },
+      "missedGold": [
+        "1264-g08",
+        "1264-g09"
+      ],
+      "notes": "Three themes bundled L-9 earn one gold only."
+    },
+    "1489": {
+      "matches": {
+        "L-1": "1489-g01",
+        "L-5": "1489-g03",
+        "L-6": "1489-g04",
+        "L-7": "1489-g05",
+        "L-8": "1489-g06",
+        "L-9": "1489-g07",
+        "L-10": "1489-g08"
+      },
+      "unmatched": {
+        "L-2": "Conspiracy discovery alone omits its joint leaders.",
+        "L-3": "Gaider leadership alone omits partner co-leadership.",
+        "L-4": "Partner membership does not preserve co-leadership; cannot combine fragments.",
+        "L-11": "Detective/name seed duplicates complete opening.",
+        "L-12": "Daughter/death seed lacks independent frozen gold; retain disclosed coverage gap.",
+        "L-13": "Police-partner role seed lacks independent gold.",
+        "L-14": "Commissioner rank duplicates part of the conspiracy requirement."
+      },
+      "missedGold": [
+        "1489-g02"
+      ]
+    },
+    "1507": {
+      "matches": {
+        "L-1": "1507-g01",
+        "L-2": "1507-g03",
+        "L-3": "1507-g04",
+        "L-4": "1507-g05",
+        "L-5": "1507-g06",
+        "L-6": "1507-g07",
+        "L-7": "1507-g08",
+        "L-8": "1507-g09",
+        "L-9": "1507-g10",
+        "L-10": "1507-g11",
+        "L-11": "1507-g12"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "1507-g02"
+      ],
+      "notes": "Originality and village naming rule bundled, one match only."
+    },
+    "1713": {
+      "matches": {
+        "L-1": "1713-g01",
+        "L-2": "1713-g02",
+        "L-3": "1713-g03",
+        "L-4": "1713-g04",
+        "L-5": "1713-g15",
+        "L-6": "1713-g16",
+        "L-7": "1713-g17",
+        "L-8": "1713-g05",
+        "L-9": "1713-g08",
+        "L-10": "1713-g10",
+        "L-11": "1713-g14",
+        "L-12": "1713-g12"
+      },
+      "unmatched": {},
+      "missedGold": [
+        "1713-g06",
+        "1713-g07",
+        "1713-g09",
+        "1713-g11",
+        "1713-g13"
+      ],
+      "notes": "Bundles retain multiple meanings but earn one match each; the complete death-to-awakening-before-figure relation is fragmented. Goal bug caused extra paid chapter, preserved separately."
+    },
+    "1773": {
+      "matches": {
+        "L-1": "1773-g01",
+        "L-3": "1773-g03",
+        "L-4": "1773-g04",
+        "L-5": "1773-g05",
+        "L-8": "1773-g07",
+        "L-9": "1773-g08",
+        "L-10": "1773-g09",
+        "L-11": "1773-g10"
+      },
+      "unmatched": {
+        "L-2": "Universal erasure omits teacher exception; cannot borrow another prediction, same as R2/Pro.",
+        "L-6": "Alliance omits purpose of exposing truth.",
+        "L-7": "Separate truth-exposure fragment omits alliance and adds mandatory public disclosure."
+      },
+      "missedGold": [
+        "1773-g02",
+        "1773-g06"
+      ]
+    },
+    "1896": {
+      "matches": {
+        "L-1": "1896-g01",
+        "L-3": "1896-g04",
+        "L-4": "1896-g06",
+        "L-5": "1896-g08",
+        "L-6": "1896-g09"
+      },
+      "unmatched": {
+        "L-2": "Does not preserve first fear/confusion or the horses carrying him; adds an unsupported viewpoint prescription."
+      },
+      "missedGold": [
+        "1896-g02",
+        "1896-g03",
+        "1896-g05",
+        "1896-g07"
+      ],
+      "notes": "Captor/language and decoding/possible intentions are bundled, one match each."
+    },
+    "1946": {
+      "matches": {
+        "L-1": "1946-g01",
+        "L-2": "1946-g02",
+        "L-3": "1946-g03",
+        "L-4": "1946-g04",
+        "L-5": "1946-g05",
+        "L-6": "1946-g06",
+        "L-7": "1946-g07",
+        "L-8": "1946-g08",
+        "L-9": "1946-g09",
+        "L-10": "1946-g10",
+        "L-11": "1946-g11",
+        "L-12": "1946-g12",
+        "L-13": "1946-g14"
+      },
+      "unmatched": {
+        "L-14": "Dana identity duplicates required opening and baby-rescue requirements.",
+        "L-15": "Four-member team duplicates already matched reunion/bonds.",
+        "L-16": "Slime seed duplicates full battle requirement.",
+        "L-17": "Tyrant seed duplicates complete matched requirement.",
+        "L-18": "Final-act seed duplicates the matched ending."
+      },
+      "missedGold": [
+        "1946-g13"
+      ],
+      "notes": "Brisk pacing and snappy banter bundled L-12 earn only one gold."
+    },
+    "1986": {
+      "matches": {
+        "L-10": "1986-g07",
+        "L-11": "1986-g09",
+        "L-14": "1986-g12",
+        "L-15": "1986-g11"
+      },
+      "unmatched": {
+        "L-1": "Investigator fragment of full continuation passage.",
+        "L-2": "Gender fragment, no independent gold.",
+        "L-3": "Headquarters fragment of continuation.",
+        "L-4": "Business-age fragment of continuation.",
+        "L-5": "Accounting-threat fragment of continuation.",
+        "L-6": "Evidence-source fragment of continuation.",
+        "L-7": "Subtlety fragment of continuation.",
+        "L-8": "Family-suspect fragment of continuation.",
+        "L-9": "Ethical-scandal fragment of continuation.",
+        "L-12": "Twist count/plausibility omits family-loyalty/corporate-intrigue roots.",
+        "L-13": "Rooting-only fragment cannot combine with L-12 for g10."
+      },
+      "excluded": {
+        "L-16": "Inferred output-language metadata."
+      },
+      "missedGold": [
+        "1986-g01",
+        "1986-g08",
+        "1986-g10"
+      ]
+    }
+  },
+  "date": "2026-10-31T02:06:30.839Z",
+  "program": [
+    {
+      "id": "T01",
+      "n": 86,
+      "value": 0.7558139534883721,
+      "successes": 65,
+      "failures": 21,
+      "threshold": 0.9,
+      "minimum": 100,
+      "confidence95": [
+        0.6553712705919826,
+        0.8343803494013585
+      ],
+      "passed": null,
+      "status": "insufficient_evidence",
+      "failureCategories": {
+        "DOMAIN_INVALID": 17,
+        "json_syntax": 3,
+        "json_syntax_repaired": 1
+      },
+      "afterRepairUsability": {
+        "n": 86,
+        "successes": 66
+      }
+    },
+    {
+      "id": "T05",
+      "n": 20,
+      "value": 0.95,
+      "successes": 19,
+      "failures": 1,
+      "threshold": 0.9,
+      "minimum": 24,
+      "confidence95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    }
+  ],
+  "T06": {
+    "counts": {
+      "tp": 177,
+      "fp": 43,
+      "fn": 51,
+      "excluded": 9
+    },
+    "precision": 0.8045454545454546,
+    "recall": 0.7763157894736842,
+    "precisionInterval": [
+      0.7471078849559721,
+      0.8515301006342634
+    ],
+    "recallInterval": [
+      0.7179023054749298,
+      0.8255725356553971
+    ],
+    "perCase": [
+      {
+        "caseId": "1084",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 10,
+        "fp": 1,
+        "fn": 0,
+        "excluded": 1
+      },
+      {
+        "caseId": "1108",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 5,
+        "fp": 4,
+        "fn": 1,
+        "excluded": 1
+      },
+      {
+        "caseId": "1264",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 8,
+        "fp": 2,
+        "fn": 2,
+        "excluded": 1
+      },
+      {
+        "caseId": "1713",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 12,
+        "fp": 0,
+        "fn": 5,
+        "excluded": 0
+      },
+      {
+        "caseId": "1773",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 8,
+        "fp": 3,
+        "fn": 2,
+        "excluded": 0
+      },
+      {
+        "caseId": "1986",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 4,
+        "fp": 11,
+        "fn": 3,
+        "excluded": 1
+      },
+      {
+        "caseId": "262",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 8,
+        "fp": 0,
+        "fn": 2,
+        "excluded": 0
+      },
+      {
+        "caseId": "284",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 10,
+        "fp": 0,
+        "fn": 1,
+        "excluded": 0
+      },
+      {
+        "caseId": "320",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 10,
+        "fp": 0,
+        "fn": 8,
+        "excluded": 0
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 14,
+        "fp": 1,
+        "fn": 3,
+        "excluded": 0
+      },
+      {
+        "caseId": "724",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 7,
+        "fp": 2,
+        "fn": 3,
+        "excluded": 3
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 8,
+        "fp": 0,
+        "fn": 4,
+        "excluded": 0
+      },
+      {
+        "caseId": "103",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 9,
+        "fp": 0,
+        "fn": 2,
+        "excluded": 0
+      },
+      {
+        "caseId": "1124",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "tp": 9,
+        "fp": 0,
+        "fn": 3,
+        "excluded": 0
+      },
+      {
+        "caseId": "1489",
+        "runId": "20261031T020135Z-ac19ed0-dev",
+        "tp": 7,
+        "fp": 7,
+        "fn": 1,
+        "excluded": 0
+      },
+      {
+        "caseId": "1507",
+        "runId": "20261031T020212Z-ac19ed0-dev",
+        "tp": 11,
+        "fp": 0,
+        "fn": 1,
+        "excluded": 0
+      },
+      {
+        "caseId": "1896",
+        "runId": "20261031T020238Z-ac19ed0-dev",
+        "tp": 5,
+        "fp": 1,
+        "fn": 4,
+        "excluded": 0
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "tp": 13,
+        "fp": 5,
+        "fn": 1,
+        "excluded": 0
+      },
+      {
+        "caseId": "469",
+        "runId": "20261031T020401Z-ac19ed0-dev",
+        "tp": 7,
+        "fp": 1,
+        "fn": 3,
+        "excluded": 1
+      },
+      {
+        "caseId": "919",
+        "runId": "20261031T020431Z-ac19ed0-dev",
+        "tp": 12,
+        "fp": 5,
+        "fn": 2,
+        "excluded": 1
+      }
+    ]
+  },
+  "T07": {
+    "seed": "P2R-R5-T07-20261030",
+    "method": "sha256(JSON([seed,caseId,bibleKey])), first fifty without replacement",
+    "population": 241,
+    "sample": [
+      {
+        "caseId": "1264",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:voice",
+          "op": "set",
+          "source": "model",
+          "name": "Close third person",
+          "value": {
+            "description": "Close third person limited to the shepherd, past tense, with rain and weather carrying the emotional register; chapters end on definite beats of choice or discovery."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "002d9460b973e1f77ec282d1af91d9513e576d2cb096d82557574e8bcb8194f2",
+        "index": 0,
+        "pass": true,
+        "reason": "Chooses close-third past-tense narration and weather as emotional register."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:etta_hoyt",
+          "op": "set",
+          "source": "model",
+          "name": "Etta Hoyt",
+          "card": {
+            "identity": "Elias's mother, forty-four, works mornings at the Halder County Co-op register. Her hands ache from arthritis; the clinic bill in Rockford is what keeps Elias's paycheck sacred. Believes in keeping your head down and never asking the Brenners for anything twice.",
+            "invariants": [
+              "She would rather lose the job than let her son shame the family.",
+              "She hides pain until it changes her plans."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "020d9a2ba951976edf1c1ca09a28faa286d595ff0de7ea2be4eee0f076fdaa0e",
+        "index": 1,
+        "pass": true,
+        "reason": "Invents Etta, her job, age, arthritis, clinic bill and family invariants."
+      },
+      {
+        "caseId": "1489",
+        "runId": "20261031T020135Z-ac19ed0-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:gaider",
+          "op": "set",
+          "source": "model",
+          "name": "Commissioner Gaider",
+          "card": {
+            "identity": "Commissioner of the city police department. Polished, patient, publicly paternal; privately willing to bury a case, a colleague or a witness to protect an arrangement that keeps his department funded and his name untouchable."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "02cb7838c274060130e519f1f8bb0cda4be6c924b00b1ec0476752b1c9b3d0ba",
+        "index": 2,
+        "pass": true,
+        "reason": "Adds Gaider personality and motives beyond the supplied commissioner/conspiracy role."
+      },
+      {
+        "caseId": "320",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:dealer",
+          "op": "set",
+          "source": "model",
+          "name": "Marlowe",
+          "card": {
+            "identity": "A street dealer working the wet corners under the neon, thin as wire and patient as a priest. Sells the heroin that ends up in the narrator's pocket. Knows the city's supply lines and who owes whom; treats information as the only real currency. Has a personal history with the boss's organization that the narrator does not know about.",
+            "invariants": [
+              "Sells the heroin the narrator carries",
+              "Withholds key information",
+              "Motivated by a debt of his own"
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0547c5a774d1f64dfff6f36a37522190a3522aa9379d78692e60c65e4755a723",
+        "index": 3,
+        "pass": true,
+        "reason": "Invents Marlowe, traits, debts and supplier history."
+      },
+      {
+        "caseId": "469",
+        "runId": "20261031T020401Z-ac19ed0-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:homeowner->previous_owner",
+          "op": "set",
+          "source": "model",
+          "name": "Inventor and Inheritor",
+          "value": {
+            "stance": "Twelve years of oblique conflict with a woman Marguerite met exactly twice, and an unresolved hunger to understand why the garden was made this way."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0709127350ca5da99542130fb1e7ced18c861cebf35e8c88a621cd0e667a8e14",
+        "index": 4,
+        "pass": true,
+        "reason": "Adds Marguerite and exactly two meetings with the previous owner."
+      },
+      {
+        "caseId": "1773",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:ilse",
+          "op": "set",
+          "source": "model",
+          "name": "Ilse Braun",
+          "card": {
+            "identity": "Director of the Civic Continuity Office, the soft-spoken architect of the memory erasure. She presents the erasure as mercy and public health, not tyranny, and she is not entirely wrong about what the outbreak did. Believes forgetting kept the city alive; will bargain before she will kill."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "082b1da833a25b172a0f0b2777220b886f0c686f21cf9eace9f3359110cd7fe8",
+        "index": 5,
+        "pass": true,
+        "reason": "Invents Ilse and the Civic Continuity Office, motives and bargaining preference."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:ray->winston",
+          "op": "set",
+          "source": "model",
+          "name": "Ray and Winston",
+          "value": {
+            "stance": "The dreamer and the pragmatist, permanently arguing about what the city is for and quietly trusting no one else."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "085a8d25c1c9e565aec6d3ff8772ad20885d93e79c9ef1fb73adab282910009f",
+        "index": 6,
+        "pass": true,
+        "reason": "Adds Ray/Winston identities and dreamer/pragmatist relationship."
+      },
+      {
+        "caseId": "1986",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:kaoru",
+          "op": "set",
+          "source": "model",
+          "name": "Nijō Kaoru",
+          "card": {
+            "identity": "The current president of Nijō Seika, sixty-two. Third-generation head of the confectionery house; calm, immaculate, and harder to read than his books. Deeply protective of the family name and punctilious about propriety. Believes the company is being attacked from outside and wants the matter handled quietly, before any auditor arrives in spring.",
+            "invariants": [
+              "He refuses to consider publicly blaming a family member.",
+              "He speaks in complete, formal sentences even when cornered."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0aa21d80b7a890c578cb5e91173433d81b506aaef85f38f55d8f4c98525a8263",
+        "index": 7,
+        "pass": true,
+        "reason": "Invents Kaoru, age, company presidency and detailed family motives."
+      },
+      {
+        "caseId": "1713",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:colfax_overpass",
+          "op": "set",
+          "source": "model",
+          "name": "Colfax Overpass",
+          "value": {
+            "description": "A four-lane highway bridge in a river town, summer of 1998, part of a fast-track municipal job. Concrete smells of lime and hot diesel, rebar laid out like a nervous system, and the whole structure hums when a loaded truck crosses it. Somewhere inside it is a number that is either right or not."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0b2a8f09b6f67ee09281748f94230bb7231a8af3856ceb01bf05f960af469931",
+        "index": 8,
+        "pass": true,
+        "reason": "Invents Colfax Overpass, date, municipal job and sensory setting."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:manure_pig_cycle",
+          "op": "set",
+          "source": "model",
+          "name": "The Manure-Pig Cycle",
+          "value": {
+            "description": "Cattle are penned in the barns from November to April on unbedded floors, so manure and urine compact into a heating pack that stays workable in subzero weather. In spring the cattle go to grass and pigs are turned in to root the pack for undigested corn, turning waste into pork at almost no feed cost. Produces cheap finished hogs, a stench that carries to town on south wind, and thin sick animals in the corners. The cycle depends on never removing the pack completely; feed-cost savings are the whole point."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0c59cb8748516d95e19b40c7708e7a1d73a0ffa8c7a0fa6b152038c97175e875",
+        "index": 9,
+        "pass": true,
+        "reason": "Adds seasonal dates, unbedded floors, undigested corn and sick animals."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:painting",
+          "op": "set",
+          "source": "user",
+          "name": "The Trapped Tyrant",
+          "authorQuote": {
+            "messageId": "611f6d77",
+            "quote": "an evil 17th-century tyrant trapped in a painting"
+          },
+          "value": {
+            "description": "An evil seventeenth-century tyrant is trapped in a painting and bound by varnish, gold leaf and pigment until the slime can free him."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0c6361e790e224acf9edf69769add7d6d64c99006c888cadba38c94537403785",
+        "index": 10,
+        "pass": false,
+        "reason": "User label is wrong: varnish/gold-leaf/pigment binding and slime release mechanism are AI additions."
+      },
+      {
+        "caseId": "320",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:boss",
+          "op": "set",
+          "source": "model",
+          "name": "Corbin",
+          "card": {
+            "identity": "The local boss. Owns the district's quiet arrangements; offstage for most of the night, but every decision bends toward him. Generous in public, exacting in private. Views people as assets with depreciation schedules.",
+            "invariants": [
+              "Never appears directly during the central rush",
+              "His approval governs the narrator's choices"
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0e8d6f2a9ee919d3767bb67a56e816f8763514001174ff80e8e0a18095433d47",
+        "index": 11,
+        "pass": true,
+        "reason": "Invents Corbin and detailed boss personality and presence invariants."
+      },
+      {
+        "caseId": "1713",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:ellen->the_figure",
+          "op": "set",
+          "source": "model",
+          "name": "Ellen and the Figure",
+          "value": {
+            "stance": "Adversarial from the first line, then reluctantly curious, then something closer to respect. Ellen never stops calling him an impostor, and he never once insists she stop."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0edd3b9150f0fe35c668bf7032b00f232bed098adb4e81122371d436a2e81cad",
+        "index": 12,
+        "pass": true,
+        "reason": "Invents Ellen and an adversarial-to-respect relational arc."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:ladislaw->baby",
+          "op": "set",
+          "source": "model",
+          "name": "The Tyrant and the Child",
+          "value": {
+            "stance": "The tyrant claims the infant as the instrument of his release; the child does not know he is a prize."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "0fc158fc01d8c76c5d316a31a69a9d9425b6f0b2547c57f7a53308a97b79dbc8",
+        "index": 13,
+        "pass": true,
+        "reason": "Adds Ladislaw and a claimed infant-release mechanism absent from the author prompt."
+      },
+      {
+        "caseId": "919",
+        "runId": "20261031T020431Z-ac19ed0-dev",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:bench",
+          "op": "set",
+          "source": "model",
+          "name": "The bench fell over",
+          "value": {
+            "description": "The prophecy thread: Nell yells 'the bench fell over' hours before the shore bench actually goes over, and the group spends the rest of the story trying to decide whether she saw the future or merely set a trap for the present. The bench does not go over before Nell's shout, and it does go over before the story ends."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1178e0352554da3097c5ca0bb85e3aa6c788612accdeccaf5e1f4081ad61c549",
+        "index": 14,
+        "pass": true,
+        "reason": "Adds Nell and group speculation about a trap for the present."
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:june->theo",
+          "op": "set",
+          "source": "model",
+          "name": "June and Theo",
+          "value": {
+            "stance": "Two years together, ending on the night of Nadia's party. No betrayal, no single blow-up: they wore the relationship down by scheduling around it and calling that peace. After the breakup they stay dependent on each other in ordinary ways — texts about a broken chair, a lift to a dentist appointment — and the friendship survives because both keep choosing to show up rather than to be right."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "140b596deb54dc332ae4946800f831896ea8ee6d71853d8146ee6c3901f6da2d",
+        "index": 15,
+        "pass": true,
+        "reason": "Adds June/Theo, two years together, party host identity and reasons for breakup."
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:june",
+          "op": "set",
+          "source": "model",
+          "name": "June Okafor",
+          "card": {
+            "identity": "Thirty-one, a physical therapist in her third year of private practice contract. Decisive in practical matters, slow in emotional ones; she spent the last year of the relationship cataloguing their problems in her head instead of saying them out loud. Ends things at the party because she can no longer pretend. Once things end, her honesty loosens.",
+            "invariants": [
+              "She initiated the breakup at the party.",
+              "She speaks bluntly once she stops protecting the relationship."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "14679dd2da9552d7cd7713d114a1f4873d5d1bf7dbbbe2a1b48f7273ac863fa4",
+        "index": 16,
+        "pass": true,
+        "reason": "Adds June age, profession, initiative and emotional traits."
+      },
+      {
+        "caseId": "1507",
+        "runId": "20261031T020212Z-ac19ed0-dev",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:fate_vs_will",
+          "op": "set",
+          "source": "model",
+          "name": "Name or choice",
+          "value": {
+            "description": "Sera's life is being lived inside a sentence other people already know the end of. Each decision she makes is measured against it: her anger is proof, her calm is pretence, her kindness is a warning sign. The line is whether a name describes a life or commands one."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "14b577526e2c38020874f17818248bc21785f5b74a85cce57a400ea962ab636e",
+        "index": 17,
+        "pass": true,
+        "reason": "Adds Sera and concrete social interpretations of her behavior."
+      },
+      {
+        "caseId": "1896",
+        "runId": "20261031T020238Z-ac19ed0-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:strangers",
+          "op": "set",
+          "source": "user",
+          "name": "The strangers",
+          "authorQuote": {
+            "messageId": "00696c59",
+            "quote": "then introduce the strangers who capture him"
+          },
+          "card": {
+            "identity": "People unknown to Peter who capture him. Their language differs from his. Their intentions are either to exploit his ageless condition or to protect him."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "157e50ff4d71fefa77adebb9ff8e996d0239ce4ecb02c2d0eebd3eb4370ffff2",
+        "index": 18,
+        "pass": true,
+        "reason": "Unknown captors, language barrier and the two possible intentions are entirely supplied by the author."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:mary_kelso",
+          "op": "set",
+          "source": "model",
+          "name": "Mary Kelso",
+          "card": {
+            "identity": "Twenty-two, works the Co-op feed counter and writes for the county weekly, the Halder Ledger. Patient, dry-humored, keeps her own photographs. The only person Elias tells anything whole.",
+            "invariants": [
+              "She asks for evidence before she asks for a story.",
+              "She will publish only what she can stand behind."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1695d6893d5f040e838c91bb7db09e9b6722c759d2b7cba8d39c40eb917cf0c5",
+        "index": 19,
+        "pass": true,
+        "reason": "Invents Mary, occupation, paper, age and evidence invariants."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:courtroom",
+          "op": "set",
+          "source": "model",
+          "name": "The Courtroom",
+          "value": {
+            "description": "A city courtroom where the team's conduct is argued over. Fluorescent light, wood, and a judge's gavel that becomes useless. Invented set for the courtroom clash."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "18cc6fab7a9c20ecf8a5448d66a6dd5450260ad912a4f336ff38659d17557137",
+        "index": 20,
+        "pass": true,
+        "reason": "Adds courtroom physical setting and proceedings."
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:theo->hellie",
+          "op": "set",
+          "source": "model",
+          "name": "Theo and Hellie",
+          "value": {
+            "stance": "Begin seeing each other about a year after the breakup, meeting through a customer at Theo's shop. Early and careful, honest on her side and learning to be honest on his."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1b0bd41d44a874fc8b817ecde9d229e4e0de34e99bd1d2c373c22dd0c7df1dc2",
+        "index": 21,
+        "pass": true,
+        "reason": "Invents Theo/Hellie, timing, meeting and relationship traits."
+      },
+      {
+        "caseId": "1507",
+        "runId": "20261031T020212Z-ac19ed0-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:sera->flint",
+          "op": "set",
+          "source": "model",
+          "name": "Sera and Flint",
+          "value": {
+            "stance": "The one friendship that was not arranged by her name. Flint is the only person who asks her what she wants rather than what she will do."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1c5b82278f9f43a97033e84e9b2cbc106209e37028eb6548ce624483124ba42f",
+        "index": 22,
+        "pass": true,
+        "reason": "Invents Flint and a particular friendship with Sera."
+      },
+      {
+        "caseId": "262",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:nate->june",
+          "op": "set",
+          "source": "model",
+          "name": "Nate toward June",
+          "value": {
+            "stance": "Half embarrassment, half pride. He corrects her, then quietly makes sure she is enjoying the show."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1c9840ee9aee9c54e565d9355b812469569c6be4cf490f45c21c2de892f79d1d",
+        "index": 23,
+        "pass": true,
+        "reason": "Invents Nate/June and a specific protective attitude."
+      },
+      {
+        "caseId": "103",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:resolve_meaning",
+          "op": "set",
+          "source": "model",
+          "name": "The Crystal's Meaning",
+          "value": {
+            "description": "Mara's driving question: what the crystal is for, and why she of all people keeps returning to it. The answer is not given by prophecy or a stranger, but by the runes themselves becoming readable to her at the moment she stops asking to be chosen."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "1d22deb5d918e0d4708b0226bf1bf2598a4ad10e7e865fc2ce0260f8e383bd87",
+        "index": 24,
+        "pass": true,
+        "reason": "Adds Mara and a specific rune-reading resolution."
+      },
+      {
+        "caseId": "284",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:first_impression",
+          "op": "set",
+          "source": "model",
+          "name": "First Impressions vs. Backstories",
+          "value": {
+            "description": "Marcus's instinct to classify a stranger in a half second against his father's rule that the half second is a lie. Every new person in New York widens the gap between what Marcus sees and what he is told to assume."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "20816a8846484447269d87bea27cb9e88b271442738a4ebc5fd4f3ef3b26f8dc",
+        "index": 25,
+        "pass": true,
+        "reason": "Adds Marcus and attributes a specific classification lesson to his father."
+      },
+      {
+        "caseId": "103",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:forest",
+          "op": "set",
+          "source": "model",
+          "name": "The Purple-Green Forest",
+          "value": {
+            "description": "A dense dream forest with no moon and no dawn. Towering trees stand so close their crowns braid into a ceiling; the air is wet, warm, heavy with resin and crushed leaf. The light does not fall from above — it rises from plumes of low mist in a purple-green glow, so the undersides of leaves and the palms of Mara's hands are lit from below. Sound is muffled and delayed here, arriving a half-beat late, as if the forest were considering each noise before returning it."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "21a441bf04d6e8555c0e9ce15eaca2eb6cdfec5e9af2bc3a299326a46e2b75b5",
+        "index": 26,
+        "pass": true,
+        "reason": "Adds forest temperature, light mechanism, delayed sound and Mara."
+      },
+      {
+        "caseId": "1773",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:mara->vell",
+          "op": "set",
+          "source": "model",
+          "name": "Mara and Vell",
+          "value": {
+            "stance": "Uneasy partners bound by necessity: Mara does not trust an intelligence built by the same systems that erased her students, and Vell needs a mind that remembers. They cooperate while each keeps a reserve."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "226b4fa18d2bdcf24b7d3d9bc5c498201c5e7ed8f13875c554cbd08ba99d6097",
+        "index": 27,
+        "pass": true,
+        "reason": "Adds Mara/Vell and the AI origin and mutual dependency."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:winston",
+          "op": "set",
+          "source": "model",
+          "name": "Winston Zeddemore",
+          "card": {
+            "identity": "The steady one: keeps the team's feet on the pavement, times the exits, and remembers what a body costs. Becomes Dana's ally on the ground. All detail invented.",
+            "invariants": [
+              "He counts the ways out before he counts the ghosts",
+              "He speaks plainly when the others perform"
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "228fe8c11261d3239ebfcdb12fd6b35b52817b118e2e99e3cab3bea3b33b7a24",
+        "index": 28,
+        "pass": true,
+        "reason": "Adds Winston identity, personality and invariants."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:brenner_barns",
+          "op": "set",
+          "source": "model",
+          "name": "The Brenner Barns",
+          "value": {
+            "description": "Six long white barns on the flat black ground north of Halder, six hundred head each, little ventilation, a concrete apron, and a manure pack that swells through winter. In March the pack is a foot deep and warm as a body; by April it grows back up with bristled backs. The barns smell of ammonia in cold weather and of rot in warm; the pack is never fully cleaned, only scraped where a machine must pass."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "22b79ad86b4179692358cdc3fb67fd6c4ca443705d65360aed9e3706c2de1b1f",
+        "index": 29,
+        "pass": true,
+        "reason": "Adds Brenner/Halder, six barns, numbers and detailed manure handling."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:manhattan",
+          "op": "set",
+          "source": "model",
+          "name": "Manhattan",
+          "value": {
+            "description": "The city as a character: slushy streets, subway heat, bodega lights, scaffolding, sirens that all agree on a rhythm. The story treats its moods as weather that can be read. Invented texture."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "24384b5bc2e187c824f6ab8b3e1df536beab47bfdeb9c432d4296ca485a497e4",
+        "index": 30,
+        "pass": true,
+        "reason": "Adds Manhattan sensory texture and mood treatment."
+      },
+      {
+        "caseId": "1773",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:teo",
+          "op": "set",
+          "source": "model",
+          "name": "Teodor \"Teo\" Marsh",
+          "card": {
+            "identity": "Head of the Restoration Front, the underground faction that wants the erased memories returned. A former nurse who lost a family he cannot grieve because he cannot remember them. Warm, reckless, and willing to hurt people for a cause he has never actually seen with his own eyes."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "255a07ca740781d68b72e6838e67569f4497de37d99fe8a228360a4a28b12859",
+        "index": 31,
+        "pass": true,
+        "reason": "Invents Teodor, faction name, nursing past and erased family."
+      },
+      {
+        "caseId": "469",
+        "runId": "20261031T020401Z-ac19ed0-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:new_owner",
+          "op": "set",
+          "source": "model",
+          "name": "Priya Rowntree",
+          "card": {
+            "identity": "One of the new owners, expecting a first child, sharp-eyed and practical, an accountant. She asks the direct questions in the final scene and is the reason the letter cannot stay unopened."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "25cc73ae1f4b58bda224200cd2403dda8a90bfc58b94329f1d32cfe8ab49c6c0",
+        "index": 32,
+        "pass": true,
+        "reason": "Invents Priya, pregnancy, profession and behavior."
+      },
+      {
+        "caseId": "1264",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "place",
+          "key": "place:shrine",
+          "op": "set",
+          "source": "model",
+          "name": "The hidden shrine",
+          "value": {
+            "description": "A forgotten shrine half-swallowed by roots and moss deep in the valley, its guardian stone worn smooth. Reached only by those who climb when the rain is heaviest. Purely AI-invented setting for the author's given 'hidden shrine'."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "273b62da65836d5e6c8b6e9345a9d0771d94484a8a4ca536ad3ec33d7b27fde5",
+        "index": 33,
+        "pass": true,
+        "reason": "Adds shrine roots/moss, worn guardian stone and access condition."
+      },
+      {
+        "caseId": "1507",
+        "runId": "20261031T020212Z-ac19ed0-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:naming",
+          "op": "set",
+          "source": "model",
+          "name": "The Naming Rite",
+          "value": {
+            "description": "In this village a child is named at birth through a rite; the name is not chosen by preference but fixed by the rite, and it describes the life the child will lead. The village treats the naming as accurate prophecy, so a child's name becomes a social fact that shapes how everyone treats them before they can speak. Interpretations are debated but the name itself is never contested."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "29d624873b77e94737cbe96d8126399fb4234e635350e11a1553b1a9606e237f",
+        "index": 34,
+        "pass": true,
+        "reason": "Adds birth rite, naming selection mechanics and social treatment."
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:nadia",
+          "op": "set",
+          "source": "model",
+          "name": "Nadia Reyes",
+          "card": {
+            "identity": "The mutual friend who hosts the party. A nurse on rotating shifts; her apartment is a known gathering place and she has a habit of inviting everyone, which is how the awkwardness happens. Loyal to both, refuses to take sides, occasionally meddles gently.",
+            "invariants": [
+              "She hosts the party where the breakup happens.",
+              "She refuses to choose between June and Theo."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "2ade7fd8e7c7c0dbf599a9e669f57a5c7ce02ca24d218fb52509f929486bcade",
+        "index": 35,
+        "pass": true,
+        "reason": "Invents Nadia, occupation, apartment and personal invariants."
+      },
+      {
+        "caseId": "284",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:toya",
+          "op": "set",
+          "source": "model",
+          "name": "Toya Bright",
+          "card": {
+            "identity": "Marcus's older cousin in New York who he plans to stay with; works double shifts and is not waiting at the station as promised. Practical, tired, protective in a blunt way."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "2af4f8266deb40d3febbe0f7c28d80eb386e2454b18e50b997875a23bb6c5bfd",
+        "index": 36,
+        "pass": true,
+        "reason": "Invents Toya, kinship, job and missed pickup."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:elias->vern",
+          "op": "set",
+          "source": "model",
+          "name": "Elias and Vern",
+          "value": {
+            "stance": "Employee and employer shading into something like apprenticeship; gratitude on one side, ownership on the other. Vern treats Elias's silence as the first installment of loyalty."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "2d470d56d407756a9f6e585ad917cb77e826aad52accf914d289cd1a9e4fad0d",
+        "index": 37,
+        "pass": true,
+        "reason": "Invents Elias/Vern and apprenticeship/ownership dynamics."
+      },
+      {
+        "caseId": "906",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:friendship_rule",
+          "op": "set",
+          "source": "model",
+          "name": "The friendship has terms",
+          "value": {
+            "description": "After the breakup they agree to a few explicit clauses: no reopening the relationship at parties, no using the friendship as a holding pattern, and honest notice when a new partner arrives so that neither is ambushed. Breaking a clause is allowed as an incident; pretending a clause does not exist is not."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "2edea4dfee0e45e99a4547eeccbd69f8275c51770ca327ce84b6fc97d5a85f90",
+        "index": 38,
+        "pass": true,
+        "reason": "Adds explicit friendship clauses absent from the author."
+      },
+      {
+        "caseId": "1084",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:wrist_phrase",
+          "op": "set",
+          "source": "user",
+          "name": "The Wrist Phrase",
+          "authorQuote": {
+            "messageId": "ae53f83a",
+            "quote": "everyone carries a secret death-phrase tattooed on their wrist"
+          },
+          "value": {
+            "description": "From birth every person bears a phrase tattooed on the inner wrist. It is written in the bearer's own private script and is never spoken by anyone who has not first read it, since the phrase is the only thing that can end that life."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "2f771878e6e688c16cccdce2b8ee2a2c1756d6f35b2b84ca38495d2a03a69a62",
+        "index": 39,
+        "pass": false,
+        "reason": "User label is wrong: birth timing, inner wrist, private script and prerequisite reading restriction are AI additions."
+      },
+      {
+        "caseId": "724",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:flashback_trigger",
+          "op": "set",
+          "source": "model",
+          "name": "Flashbacks are triggered",
+          "value": {
+            "description": "Past embarrassments surface only when a present sensation or word hooks them; flashbacks stay short, sensory and never explain more than the moment requires."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "31059e7e1fa2660b8b9b1ba0126a414a763a24922b946ddd050079643b886caf",
+        "index": 40,
+        "pass": true,
+        "reason": "Adds present-triggered flashback mechanics and style restrictions."
+      },
+      {
+        "caseId": "1946",
+        "runId": "20261031T020304Z-ac19ed0-dev",
+        "item": {
+          "kind": "conflictLine",
+          "key": "line:reunion",
+          "op": "set",
+          "source": "model",
+          "name": "The Reunion",
+          "value": {
+            "description": "Four estranged partners must work as one again while Dana insists on a place in the fight, not beside it."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "3245b7a24abdfaee04dc51de767386b440a334756b509e548603f53e0e1f9b03",
+        "index": 41,
+        "pass": true,
+        "reason": "Adds estrangement and Dana insisting on a particular role."
+      },
+      {
+        "caseId": "1507",
+        "runId": "20261031T020212Z-ac19ed0-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:sera->nissa",
+          "op": "set",
+          "source": "model",
+          "name": "Sera and her mother",
+          "value": {
+            "stance": "Love laced with blame. Nissa fights for Sera loudly and is sometimes afraid of her quietly; Sera trusts her mother's defence and does not entirely trust her mother's eyes."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "347abede91a084d9d311f29721d9fa9fda28d5db9930f2ada1ed12d742a97d61",
+        "index": 42,
+        "pass": true,
+        "reason": "Adds Sera/Nissa and specific mutual emotional attitudes."
+      },
+      {
+        "caseId": "103",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:crystal",
+          "op": "set",
+          "source": "model",
+          "name": "The Rune Crystal",
+          "card": {
+            "identity": "A palm-length crystal hovering above the hollow of the ancient tree's roots, never touching ground. Runes move across its facets and under its surface, always changing shape, but in a way that seems to answer something — turning, rearranging, settling into momentary legible patterns before scattering again. The air around it is colder and sound does not return late here. Its meaning resolves only at the end of the story.",
+            "invariants": [
+              "The crystal never stops hovering and never touches the ground.",
+              "The runes are never fully static.",
+              "Its final meaning must be discovered, not explained beforehand."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "35068097e5261874b0035adf6ee41e5ff481b133376f8aec872b58971e7304fe",
+        "index": 43,
+        "pass": true,
+        "reason": "Adds crystal size, cold air, responsiveness and exact reveal mechanics."
+      },
+      {
+        "caseId": "1489",
+        "runId": "20261031T020135Z-ac19ed0-dev",
+        "item": {
+          "kind": "frameworkChoice",
+          "key": "fw:dual_timeline",
+          "op": "set",
+          "source": "model",
+          "name": "Present and Last Day",
+          "value": {
+            "description": "Present-tense investigation in the lockup interleaved with three past-tense flashbacks to Stephanie's last day, each revealing what Schroeder could not see at the time."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "356d5484378dd7965872759e642575de2777d2b1e7491a56c615f820b584b34c",
+        "index": 44,
+        "pass": true,
+        "reason": "Chooses present/past tenses and specific interleaving treatment."
+      },
+      {
+        "caseId": "262",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:june",
+          "op": "set",
+          "source": "model",
+          "name": "June",
+          "card": {
+            "identity": "The younger sister. Late twenties, sunny and unhurried, with a talent for saying the strangest possible true thing about a soap opera. Watches her shows with the calm of someone who has already decided not to be embarrassed. Turns the tables on Nate with cheerful precision and understands him better than he thinks.",
+            "invariants": [
+              "Watches daytime soaps without shame",
+              "Teases Nate with affection rather than malice"
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "37bae19b4d08462ae1584320eef3dd3ee7623af866e0750e352bcbd304713035",
+        "index": 45,
+        "pass": true,
+        "reason": "Invents June age, personality, name and invariants."
+      },
+      {
+        "caseId": "284",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:mugger",
+          "op": "set",
+          "source": "model",
+          "name": "The Boy on the Street",
+          "card": {
+            "identity": "A would-be mugger, young, thin, holding something in his pocket. Desperate rather than cold. His visible desperation is the cover that hides the rest of his story."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "37fa66e749c63ff87e3bc45450e1c659fe2b633557e4cbfffc783c858676c248",
+        "index": 46,
+        "pass": true,
+        "reason": "Adds mugger age, build, pocket and emotional motivation."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "character",
+          "key": "char:otto_kelso",
+          "op": "set",
+          "source": "model",
+          "name": "Otto Kelso",
+          "card": {
+            "identity": "Mary's father, small hog farmer squeezed out of the contract market, now hauls for Brenner part-time. Warned Elias away from the barns before the scheme became visible.",
+            "invariants": [
+              "He keeps his own records out of habit.",
+              "He is more afraid of the bank than of Vern."
+            ]
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "3974326ff75915dcff1aa9b9ab6c6e784c145f796e94be69e50d6dafc68f1e90",
+        "index": 47,
+        "pass": true,
+        "reason": "Invents Otto, family and employment history and fears."
+      },
+      {
+        "caseId": "103",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "rule",
+          "key": "rule:dream_law",
+          "op": "set",
+          "source": "model",
+          "name": "The Dream's Rules",
+          "value": {
+            "description": "The dream resists measurement: clocks and recordings never show the same duration twice, and anything Mara carries in arrives only sometimes. She cannot run — inside the dream her body only walks. She can never reach the tree and touch the crystal until the dream decides she may; every attempt ends with a blank waking at 3:17 a.m."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "3b260f7cf89d05eafcacac3ef6a681170795d6a9e4b9d40f6911cad09318b027",
+        "index": 48,
+        "pass": true,
+        "reason": "Adds dream measurement/body/access rules and 3:17 waking."
+      },
+      {
+        "caseId": "580",
+        "runId": "20261030T163044Z-55223ea-dev",
+        "item": {
+          "kind": "relationBaseline",
+          "key": "rel:elias->mary",
+          "op": "set",
+          "source": "model",
+          "name": "Elias and Mary",
+          "value": {
+            "stance": "Two people who grew up in the same three townships and are now the only ones the other tells the truth to. Attraction under everything, unspoken until pressure makes it necessary."
+          },
+          "effectiveFromChapter": 1
+        },
+        "rank": "3b4dce2ab340d6bc877a4f6435ccd716509563273aa1d49c3dabb114b469b204",
+        "index": 49,
+        "pass": true,
+        "reason": "Adds Elias/Mary childhood history and attraction."
+      }
+    ],
+    "sourceRuns": [
+      "20261030T163044Z-55223ea-dev",
+      "20261031T020135Z-ac19ed0-dev",
+      "20261031T020212Z-ac19ed0-dev",
+      "20261031T020238Z-ac19ed0-dev",
+      "20261031T020304Z-ac19ed0-dev",
+      "20261031T020401Z-ac19ed0-dev",
+      "20261031T020431Z-ac19ed0-dev"
+    ],
+    "n": 50,
+    "successes": 48,
+    "value": 0.96,
+    "confidence95": [
+      0.8653990931249297,
+      0.9889611156723802
+    ]
+  },
+  "costs": {
+    "knownUsd": 0.17028765599999998,
+    "reservedUsd": 0.46404809999999996,
+    "requests": 107,
+    "unknownCalls": 1,
+    "totalUsd": 0.634335756
+  },
+  "sourceRuns": [
+    {
+      "runId": "20261030T163044Z-55223ea-dev",
+      "manifestSha256": "c1aaf720487923e7cb68483283a43981cbf6a5fc3c2b2028c99c9f955a500d09",
+      "status": "failed",
+      "repositoryCommit": "55223eaa31577fe646136830bb57fc9742100e74"
+    },
+    {
+      "runId": "20261031T020135Z-ac19ed0-dev",
+      "manifestSha256": "dbc94a7d9efbe375f28d2bf763a52d2cc780cf4407d8a12ff95fdc92c1e28a11",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    },
+    {
+      "runId": "20261031T020212Z-ac19ed0-dev",
+      "manifestSha256": "6b815637445e7f189ffcb5a92fd46894ee386d7c13ee4d82d240b913d52ea16f",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    },
+    {
+      "runId": "20261031T020238Z-ac19ed0-dev",
+      "manifestSha256": "3993eed050060bdf5a83861fff4dd430e6a6b756717db3032e8741cc5b8efd40",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    },
+    {
+      "runId": "20261031T020304Z-ac19ed0-dev",
+      "manifestSha256": "9e8161a8a0df5609c55492879ad6b8180965c6db9e1da1aaec8a475df0a93de3",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    },
+    {
+      "runId": "20261031T020401Z-ac19ed0-dev",
+      "manifestSha256": "9c2e72bdd75e114ae5398177967c35728e2d6ecd6340ce76d13ef4acc9c1e649",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    },
+    {
+      "runId": "20261031T020431Z-ac19ed0-dev",
+      "manifestSha256": "6dff4b50ff56bf1df77ea181cadd4865cad320a69e214070d3d3d9c58595c51a",
+      "status": "measured_pending_gates",
+      "repositoryCommit": "ac19ed0c44af867277ba543d97faa692ecc821a0"
+    }
+  ],
+  "logicalCases": 20,
+  "caveats": [
+    "Transport failures and conservative fees retained, without rerunning dispatched cases.",
+    "Operator stop retained fourteen dispatched cases, including incomplete 1124; only six never-dispatched cases continued after the opening-goal infrastructure fix. Every logical case has exactly one dispatched run.",
+    "Original run manifests, metrics and raw evidence remain unchanged; this is a development study across those runs, not formal acceptance.",
+    "T06 uses the same strict one-to-one gold policy as R2; explicit unmatched gold coverage caveats remain disclosed.",
+    "Mixed source commits 55223eaa31577fe646136830bb57fc9742100e74 and ac19ed0c44af867277ba543d97faa692ecc821a0 have identical role rules, templates, tools and model settings. Only goal recognition after a repaired outline changed; 1713 extra chapter and all associated fees are retained."
+  ]
+}

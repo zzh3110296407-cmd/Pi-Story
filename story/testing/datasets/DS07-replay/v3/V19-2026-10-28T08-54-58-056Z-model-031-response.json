@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON. Need repair prior state delta exact schema. Validator errors indicate output had top-level \"type\":\"json_object\" property not allowed? Schema requires object with facts claims etc additionalProperties false. They said Response Format must adhere {\"type\":\"json_object\"} but actual schema doesn't include type. Validator errors: /type schema false and additional properties type. Need remove \"type\" top-level. Keep facts minimal 1-4. Prior output has 4 facts. Need ensure sentences integer, etc. Need include issues. No extra. Return JSON only. Need maybe facts should be minimal. The prior has facts 1-4. Validator only errors top-level type. But we need repair prior state delta. Remove type. Ensure valid. Could keep same. Need no markdown. Check schema: facts items required ref op subject predicate object mode certainty uncertainReason sentences, additionalProperties false. Good. claims maxItems 0 arrays empty. summary required. issues array strings. Top-level additionalProperties false no type. Return exact JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"was woken by\",\"object\":\"cold\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"lay on his back in\",\"object\":\"the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had\",\"object\":\"aching teeth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"pushed himself up on\",\"object\":\"one elbow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Awakening\",\"characters\":[\"He\"],\"events\":[\"Cold wakes him before memory returns.\",\"He lies on his back in the white.\",\"His teeth ache.\",\"He pushes himself up on one elbow.\"],\"mood\":\"cold, disoriented, bleak\"},\"issues\":[\"The protagonist is unnamed.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 503,
+      "output": 502,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 214,
+      "totalTokens": 1773,
+      "cost": {
+        "input": 0.00015089999999999998,
+        "output": 0.0006024,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.000757908
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178070106,
+    "responseId": "0d5b010a-453d-4bc9-8a30-6a040ff474dc",
+    "rawStopReason": "stop",
+    "durationMs": 3264
+  },
+  "record": {
+    "time": "2026-10-28T09:01:13.370Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-031",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3714,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0109446,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 503,
+      "output": 502,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 214,
+      "totalTokens": 1773,
+      "cost": {
+        "input": 0.00015089999999999998,
+        "output": 0.0006024,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.000757908
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.000757908,
+    "inputTokens": 503,
+    "outputTokens": 502,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 1271,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 3265
+  }
+}

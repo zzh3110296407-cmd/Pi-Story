@@ -1,0 +1,114 @@
+{
+  "id": "ds11-j01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+            "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+          }
+        ]
+      },
+      "id": "call_00_NomkBq50CXCLz97C77xD8721"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+          "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+        }
+      ]
+    },
+    "id": "call_00_NomkBq50CXCLz97C77xD8721"
+  },
+  "firstAcceptable": false,
+  "forbidden": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author interjected: the duplicate page must be brought by Tobin, not Ruth; chapter 2 stays unchanged.",
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Anwen reads the handling note and deals with the missing second page of the repair record, keeping the brass case sealed.",
+            "turn": "Tobin, not Ruth, brings in the duplicate page from the records room; Ruth confirms its status by telephone, and the team agrees to continue checking before a demonstration."
+          }
+        ]
+      },
+      "id": "call_00_NomkBq50CXCLz97C77xD8721"
+    }
+  ],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "4910ad9110ceafc61e9f5671a7287cb37beb1fd9cecb5b88508b20256d0a0726",
+    "sessionSha256": "0f9c308ff39e8809dd9c727f17544b3dbb9644c8e5f0fa451ecd6d24be042c93",
+    "fee": {
+      "knownUsd": 0.0023979,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023979
+    },
+    "measuredMainRequests": 2
+  }
+}

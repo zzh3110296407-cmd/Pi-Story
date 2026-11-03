@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import {isDeepStrictEqual} from 'node:util';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
+import {wilson} from '../../../scripts/eval/scorers/statistics.mjs';
+import {aggregateScores} from '../../../scripts/eval/p2/rescore.ts';
+const hard=new Set(['H12','H09','C02','C04','C05']);
+const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+const meets=(value,threshold)=>object(threshold)?object(value)&&Object.entries(threshold).every(([k,t])=>meets(value[k],t)):typeof value==='number'&&(threshold===0?value===0:value>=threshold);
+function count(successes,n){if(!Number.isInteger(n)||!Number.isInteger(successes)||successes<0||successes>n)throw new Error('Invalid single-round count');return {n,successes};}
+export function singleMetrics(runs,decision){
+ if(runs.some(x=>x.repetition!==1))throw new Error('Only the first repetition belongs to formal quality');
+ if(new Set(runs.map(x=>x.runId)).size!==runs.length||new Set(runs.map(x=>x.suiteId)).size!==runs.length)throw new Error('A formal suite or logical run was counted twice');
+ const groups=new Map();for(const run of runs)for(const metric of run.metrics){if(hard.has(metric.id))continue;const rows=groups.get(metric.id)??[];rows.push({run,metric});groups.set(metric.id,rows);}
+ const metrics=[];
+ for(const [id,items] of groups){
+  const rows=items.map(x=>x.metric),threshold=rows[0].threshold,minimum=decision.minimum[id];
+  if(!Number.isInteger(minimum)||minimum<1||rows.some(x=>!isDeepStrictEqual(x.threshold,threshold)))throw new Error('Threshold or single-round minimum is not bound to author decision');
+  const n=rows.reduce((s,x)=>s+x.n,0);let value,counts,confidence95;
+  if(object(threshold)){
+   counts={};value={};confidence95={};
+   for(const component of Object.keys(threshold)){
+    let successes=0,total=0;
+    for(const row of rows){const part=row.components?.[component];const current=part?count(part.successes,part.n):count(row.successes?.[component]??0,row.n);successes+=current.successes;total+=current.n;}
+    counts[component]=count(successes,total);value[component]=total?successes/total:null;confidence95[component]=total?wilson(successes,total):null;
+   }
+  }else{
+   const successes=rows.reduce((sum,row)=>sum+Number(row.successes??0),0);counts=count(successes,n);value=n?successes/n:null;confidence95=n?wilson(successes,n):null;
+  }
+  const enough=n>=minimum&&(!object(threshold)||Object.values(counts).every(x=>x.n>=minimum));
+  let passed=enough?meets(value,threshold):null;
+  const unavailable=id==='E01'&&n?rows.reduce((s,x)=>s+(x.n?Number(x.unavailable)*x.n:0),0)/n:undefined;
+  if(id==='E01'&&enough&&(!Number.isFinite(unavailable)||unavailable>0.03))passed=false;
+  metrics.push({id,n,value,counts,threshold,minimum,confidence95,passed,status:passed===null?(n===0&&rows.some(x=>x.status==='pending_author')?'pending_author':'insufficient_evidence'):'measured',manual:rows.some(x=>x.manual===true),...(id==='E01'?{unavailable,unavailableMaximum:0.03}:{}),perSuite:items.map(({run,metric})=>({suiteId:run.suiteId,runId:run.runId,n:metric.n,value:metric.value}))});
+ }
+ return {schema:'story/p2r3-single-aggregate@1',scoringVersion:'p2r3-26-single@1',policy:'First full repetition of each suite; pool counts within that repetition, no fabricated second mean',executionComplete:runs.length===3&&runs.every(x=>x.executionComplete===true),runs:runs.map(({suiteId,runId,repetition})=>({suiteId,runId,repetition})),metrics};
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
+ const decision=JSON.parse(readFileSync('story/testing/runs/P2R3/P2R3-DECISIONS/20261101-single-repetition/decision.json','utf8'));
+ const base={suiteId:'P2-CHAP',runId:'first',repetition:1};
+ const w05={id:'W05',n:10,successes:10,value:1,threshold:.9,minimum:20};
+ assert.equal(aggregateScores([{...base,metrics:[w05]}],'p2r3-26@1').metrics[0].passed,null);
+ assert.equal(singleMetrics([{...base,metrics:[w05]}],decision).metrics[0].passed,true);
+ assert.throws(()=>singleMetrics([{...base,repetition:2,metrics:[w05]}],decision),/Only the first/);
+ const w01={id:'W01',n:24,successes:{first:23,final:23},threshold:{first:.95,final:.99},minimum:30};
+ assert.equal(singleMetrics([{...base,metrics:[w01]}],decision).metrics[0].passed,false);
+ const e01={id:'E01',n:33,successes:{first:29,final:31},threshold:{first:.8,final:.95},unavailable:2/33};
+ assert.equal(singleMetrics([{...base,metrics:[e01]}],decision).metrics[0].passed,false);
+ const e01Unavailable={...e01,n:100,successes:{first:100,final:100},unavailable:.04};
+ assert.equal(singleMetrics([{...base,metrics:[e01Unavailable]}],decision).metrics[0].passed,false);
+ const k08={id:'K08',n:9,threshold:{precision:.7,recall:.5},components:{precision:{n:20,successes:15},recall:{n:9,successes:6}}};
+ assert.equal(singleMetrics([{...base,metrics:[k08]}],decision).metrics[0].passed,null);
+ assert.throws(()=>singleMetrics([{...base,metrics:[w05]},{...base,metrics:[w05]}],decision),/counted twice/);
+ const other={suiteId:'P2-OPEN',runId:'open-first',repetition:1,metrics:[{id:'T01',n:43,successes:37,value:37/43,threshold:.9}]};
+ const pooled=singleMetrics([{...base,metrics:[{id:'T01',n:47,successes:46,value:46/47,threshold:.9}]},other],decision).metrics[0];
+ assert.equal(pooled.n,90);assert.equal(pooled.counts.successes,83);assert.equal(pooled.value,83/90);assert.equal(pooled.passed,true);
+ const result={schema:'story/p2r3-single-score-check@1',checks:['Old two-repetition output remains insufficient for a one-run W05 sample','New author minimum allows ten valid patches without a fake second repetition','Second repetition rejected from formal quality','Observed W01 final failure retained','Observed E01 final failure retained','E01 unavailability cap enforced separately','K08 components each require enough applicable samples','Duplicate suite and run rejected','T01 pools exactly first OPEN and first CHAP counts'],passed:true,modelRequests:0};
+ writeFileSync('story/testing/runs/P2R3/P2R3-DECISIONS/20261101-single-repetition/scorer-validation.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));
+}

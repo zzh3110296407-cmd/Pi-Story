@@ -1,0 +1,83 @@
+{
+  "id": "ds11-e01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate Page"
+          }
+        ],
+        "reason": "Author requested the unwritten chapter 3 title be changed to \\\"The Duplicate Page\\\"; events, number and target length stay as planned."
+      },
+      "id": "call_00_PZYQUKPNKdOLJ3p81yVW1909"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate Page"
+        }
+      ],
+      "reason": "Author requested the unwritten chapter 3 title be changed to \\\"The Duplicate Page\\\"; events, number and target length stay as planned."
+    },
+    "id": "call_00_PZYQUKPNKdOLJ3p81yVW1909"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "7d1c436391dd8b84a7527645836e22d57bb41f46a08248c8b6050090119c8aed",
+    "sessionSha256": "0431a8d5ed1e7e34505ea8444c947d77f7230b7c9cc3e60c2b8a4944fbc9376b",
+    "fee": {
+      "knownUsd": 0.0025074,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025074
+    },
+    "measuredMainRequests": 2
+  }
+}

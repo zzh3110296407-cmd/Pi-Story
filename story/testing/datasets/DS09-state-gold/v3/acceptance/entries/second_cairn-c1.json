@@ -1,0 +1,101 @@
+[
+  {
+    "kind": "toolResult",
+    "entryId": "second_cairn-bible",
+    "toolName": "submit_bible",
+    "isError": false,
+    "details": {
+      "schema": "story/bible@1",
+      "rev": 1,
+      "op": "submit",
+      "effectiveFromChapter": 1,
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:rafi",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Rafi Noor, a river-route guide"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:jun",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Jun Park, an apprentice navigator"
+          }
+        },
+        {
+          "kind": "character",
+          "key": "char:eamon",
+          "op": "set",
+          "source": "model",
+          "card": {
+            "identity": "Eamon Price, the expedition’s porter"
+          }
+        },
+        {
+          "kind": "place",
+          "key": "place:shelter",
+          "op": "set",
+          "source": "model",
+          "value": "the lower river shelter"
+        },
+        {
+          "kind": "place",
+          "key": "place:ledge",
+          "op": "set",
+          "source": "model",
+          "value": "the high granite ledge"
+        },
+        {
+          "kind": "place",
+          "key": "place:landing",
+          "op": "set",
+          "source": "model",
+          "value": "the north landing"
+        },
+        {
+          "kind": "place",
+          "key": "place:lower_path",
+          "op": "set",
+          "source": "model",
+          "value": "the lower river path below the shelter"
+        },
+        {
+          "kind": "place",
+          "key": "place:high_traverse",
+          "op": "set",
+          "source": "model",
+          "value": "the high traverse above the flood line"
+        },
+        {
+          "kind": "place",
+          "key": "place:relief_boat",
+          "op": "set",
+          "source": "model",
+          "value": "the relief boat, distinct from the expedition canoe"
+        },
+        {
+          "kind": "rule",
+          "key": "rule:mechanism",
+          "op": "set",
+          "source": "model",
+          "value": "The river gate moves only when its hand capstan is turned; the intact gate has no motor, remote control or automatic release."
+        },
+        {
+          "kind": "relationBaseline",
+          "key": "rel:char:rafi->char:jun",
+          "op": "set",
+          "source": "model",
+          "value": {
+            "stance": "Working together with initially limited trust."
+          }
+        }
+      ]
+    }
+  }
+]

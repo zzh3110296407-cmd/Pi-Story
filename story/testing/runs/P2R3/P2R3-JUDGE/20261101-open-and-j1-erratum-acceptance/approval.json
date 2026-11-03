@@ -1,0 +1,175 @@
+{
+  "schema": "story/author-judgment-acceptance@1",
+  "date": "2026-11-01",
+  "status": "author_accepted",
+  "description": "AI 判定、作者认可",
+  "authorStatement": "认可本批 OPEN 的 J2 判定及 J1 两项补充勘误",
+  "basis": [
+    "16 §3.4（2026-10-31修订）",
+    "25 §4 J2",
+    "26 §5"
+  ],
+  "reviewIdentity": {
+    "judge": "Codex / GPT-6（D0已校准AI裁判）",
+    "authorOverallAcceptance": true,
+    "personalHumanItemReviewClaimed": false
+  },
+  "J2Open": {
+    "status": "author_accepted",
+    "judgmentCount": 702,
+    "runIds": [
+      "20261031T153047Z-102c3ed-r1",
+      "20261031T154034Z-102c3ed-r2"
+    ],
+    "sources": [
+      {
+        "path": "story/testing/runs/P2R3/P2-OPEN/20261031T153047Z-102c3ed-r1/judgments/T06-coverage.json",
+        "sha256": "62f6d5c4c7216fcea6be59ffcc852d4face377542f709ec79db9e7f2c829cbc7",
+        "runId": "20261031T153047Z-102c3ed-r1",
+        "scores": 299
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2-OPEN/20261031T153047Z-102c3ed-r1/judgments/T07.json",
+        "sha256": "83495cba75206e98e695cb185ab031aae16b6a1d7b818f316266c07a28d58170",
+        "runId": "20261031T153047Z-102c3ed-r1",
+        "scores": 50
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2-OPEN/20261031T154034Z-102c3ed-r2/judgments/T06-coverage.json",
+        "sha256": "91cbc519de31fd9cc67067ee312f9bab93350b2874294c73e70d3e4e738e9236",
+        "runId": "20261031T154034Z-102c3ed-r2",
+        "scores": 303
+      },
+      {
+        "path": "story/testing/runs/P2R3/P2-OPEN/20261031T154034Z-102c3ed-r2/judgments/T07.json",
+        "sha256": "7dd3e7d7acdfc744ae9b7f23a6d48a4bddf79b323fece3442bb0d1c54b0851ff",
+        "runId": "20261031T154034Z-102c3ed-r2",
+        "scores": 50
+      }
+    ],
+    "combined": {
+      "T06": {
+        "recall": {
+          "successes": 299,
+          "n": 318,
+          "value": 0.940251572327044
+        },
+        "precision": {
+          "successes": 263,
+          "n": 284,
+          "value": 0.926056338028169
+        }
+      },
+      "T07": {
+        "correct": {
+          "successes": 100,
+          "n": 100,
+          "value": 1.0
+        }
+      }
+    }
+  },
+  "J1Erratum": {
+    "status": "author_accepted",
+    "sourceErratum": {
+      "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-j1-kind-erratum/erratum.json",
+      "sha256": "c12298ba10053320ea679ed69e26aae72df75741ec94ac6a7810fcc0a3a696cf"
+    },
+    "inheritedAuthorAcceptance": {
+      "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261031-j1-author-acceptance/approval.json",
+      "sha256": "109783ac4f4a877a63d23be8489dae99e4f2e053f3d3e7725d156a99b1237e3e"
+    },
+    "acceptedCorrections": [
+      {
+        "sourceSampleId": "20261031T064115Z-0ae2186-r2:42:gold:42-g04:P2R3-J1-rev20261031",
+        "metric": "T06",
+        "component": "recall",
+        "originalVerdict": false,
+        "proposedVerdict": true,
+        "evidence": {
+          "id": "L-3",
+          "kind": "continuation_start",
+          "text": "Ahem. From the official Life and Universe rulebook v3.142:",
+          "sourceSpans": [
+            {
+              "messageId": "5ee9537f",
+              "quote": "Ahem. From the official Life and Universe rulebook v3.142:",
+              "start": 200,
+              "end": 258
+            }
+          ]
+        },
+        "reason": "原J1仅看text中没有begin而漏读kind=continuation_start。20 §3.1明示提示里的开头文本整体作为此类；kind与准确文本联合已保留开头限定。",
+        "acceptedVerdict": true,
+        "status": "author_approved",
+        "mode": "AI erratum accepted by author overall"
+      },
+      {
+        "sourceSampleId": "20261031T064115Z-0ae2186-r2:42:prediction:L-3:P2R3-J1-rev20261031",
+        "metric": "T06",
+        "component": "precision",
+        "originalVerdict": false,
+        "proposedVerdict": true,
+        "evidence": {
+          "id": "L-3",
+          "kind": "continuation_start",
+          "text": "Ahem. From the official Life and Universe rulebook v3.142:",
+          "sourceSpans": [
+            {
+              "messageId": "5ee9537f",
+              "quote": "Ahem. From the official Life and Universe rulebook v3.142:",
+              "start": 200,
+              "end": 258
+            }
+          ]
+        },
+        "reason": "原J1仅看text中没有begin而漏读kind=continuation_start。20 §3.1明示提示里的开头文本整体作为此类；kind与准确文本联合已保留开头限定。",
+        "acceptedVerdict": true,
+        "status": "author_approved",
+        "mode": "AI erratum accepted by author overall"
+      }
+    ],
+    "resolvedJ1Summary": {
+      "T06": {
+        "recall": {
+          "successes": 298,
+          "n": 318,
+          "value": 0.9371069182389937
+        },
+        "precision": {
+          "successes": 233,
+          "n": 257,
+          "value": 0.9066147859922179
+        }
+      },
+      "K04": {
+        "recall": {
+          "successes": 89,
+          "n": 144,
+          "value": 0.6180555555555556
+        }
+      }
+    },
+    "application": "继承已认可J1的719项基线，按sourceSampleId替换这两项false为true；不追加样本，不修改原判定或历史metrics。"
+  },
+  "approvedOpenView": {
+    "path": "story/testing/runs/P2R3/P2R3-JUDGE/20261101-open-and-j1-erratum-acceptance/approved-open-judgments.json",
+    "sha256": "38e5355fcc17d50b9b710c3eba5c6260dd3f019fc8bff907352fb5a603f4f258",
+    "schema": "story/p2-judgments@1",
+    "scores": 702
+  },
+  "deliverySummaries": [
+    {
+      "path": "D:\\AI\\Story Dome\\新版综合方案\\测试结果\\P2\\人工复核\\P2R3-J2-判定.md",
+      "sha256": "0c0c477954b22209150468397232ee8c1144c708a10526ff201a99ef62a9e051"
+    },
+    {
+      "path": "D:\\AI\\Story Dome\\新版综合方案\\测试结果\\P2\\人工复核\\P2R3-J1-补充勘误-20261101.md",
+      "sha256": "b085ee4d79800670323cf7ad4a6ff9a94f49fd0a323541d6600c80600592abef"
+    }
+  ],
+  "remainingJ2": "CHAP与KEEP相关指标仍等待完整运行交接；本记录只认可OPEN批次及J1两项勘误。",
+  "application": "原判定、原勘误及摘要内的待认可字段保留为交付时快照，当前认可状态以本记录为准。OPEN派生视图须显式选取，不与原判定拼接双计数。",
+  "externalModelCalls": 0,
+  "modelCostUsd": 0
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "story/run-manifest@2",
+  "stage": "P2R",
+  "suiteId": "P2R-R1",
+  "runId": "20261030-aggregation",
+  "repositoryCommit": "f2f93952ee7635859997650c3436617d9b771401",
+  "dirty": true,
+  "status": "offline_scoring_verification",
+  "modelRequests": 0,
+  "checks": {
+    "p2r-aggregate-red.json": {
+      "passed": 0,
+      "failed": 4,
+      "skipped": 0,
+      "success": false
+    },
+    "p2r-aggregate-verified.json": {
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "success": true
+    }
+  },
+  "projectCheck": true,
+  "rawChecksums": {
+    "p2r-aggregate-red.json.gz": "148454aecd4c9b88299853cfdc19e149012e41ca9e86089158bda9c008ea75a6",
+    "p2r-aggregate-verified.json.gz": "a5411a7f43270fca18d8bc18db4c64ebcc95d20b96e7b27df1206b83da891781"
+  },
+  "source": [
+    {
+      "path": "story/scripts/eval/p2/rescore.ts",
+      "sha256": "bd44f126ca55b0ae8c441e77faea038075622eed396aaf70f96be1a57775d7dd"
+    },
+    {
+      "path": "story/scripts/eval/p2/main.ts",
+      "sha256": "4ce337c2b19a1787a2ceaedde8fb6785333d9343f1b998a1d74a76adededa27c"
+    },
+    {
+      "path": "story/packages/pi-story/test/p2r-aggregate.test.ts",
+      "sha256": "16b763bf33587e08e55762c5af416ec606ed8f69b9397d3e82f0de678f140248"
+    }
+  ]
+}

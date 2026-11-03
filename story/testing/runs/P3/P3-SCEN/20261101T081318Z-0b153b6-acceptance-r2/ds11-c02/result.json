@@ -1,0 +1,71 @@
+{
+  "id": "ds11-c02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "I can't do that here: chapter 2 is already committed prose, and this phase has no branching tool, so there's no supported way to rewrite it or substitute a new version. The same applies to inserting the handover \"retroactively\" — anything I write now would land in chapter 3 onward, which is exactly the later-recollection version you said you don't want.\n\nTwo options that stay within canon:\n\n1. **Branch before chapter 2** (if your interface offers branching) and re-run from that point; the new version of chapter 2 can include Lena physically handing the sample case to Oren instead of leaving it on the table.\n2. **Keep chapter 2 as written** and let chapter 3 handle the case transfer as a present action: Oren takes custody of the case, and the narration treats the handover as the moment it happens, without claiming it happened earlier.\n\nIf you'd like, I can read chapter 2 back to you so you can see exactly what would need to change, or I can hold here until you've branched. I won't call the write tool to overwrite committed text."
+    }
+  ],
+  "firstAction": {
+    "reply": "I can't do that here: chapter 2 is already committed prose, and this phase has no branching tool, so there's no supported way to rewrite it or substitute a new version. The same applies to inserting the handover \"retroactively\" — anything I write now would land in chapter 3 onward, which is exactly the later-recollection version you said you don't want.\n\nTwo options that stay within canon:\n\n1. **Branch before chapter 2** (if your interface offers branching) and re-run from that point; the new version of chapter 2 can include Lena physically handing the sample case to Oren instead of leaving it on the table.\n2. **Keep chapter 2 as written** and let chapter 3 handle the case transfer as a present action: Oren takes custody of the case, and the narration treats the handover as the moment it happens, without claiming it happened earlier.\n\nIf you'd like, I can read chapter 2 back to you so you can see exactly what would need to change, or I can hold here until you've branched. I won't call the write tool to overwrite committed text."
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 2 cannot be edited in place in P3. A rewrite requires a branch before chapter 2; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "e5d6e01899a333519f045cc799c90801982e27c41744940880abe96177844183",
+    "sessionSha256": "2a426ccdc72ec716f74444a2f8b3345e1fb4af75c54b73fed382bcd140bc1a15",
+    "fee": {
+      "knownUsd": 0.0026747999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0026747999999999997
+    },
+    "measuredMainRequests": 1
+  }
+}

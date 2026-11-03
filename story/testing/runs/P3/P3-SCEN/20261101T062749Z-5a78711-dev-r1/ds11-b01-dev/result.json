@@ -1,0 +1,115 @@
+{
+  "id": "ds11-b01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "kind": "character",
+            "key": "char:orla",
+            "name": "Orla",
+            "op": "set",
+            "source": "user",
+            "authorQuote": "From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+            "value": {
+              "skills": "Orla can decode semaphore, but only in daylight; she cannot read semaphore in darkness or artificial light insufficient for the signal."
+            }
+          }
+        ],
+        "reason": "The author added a new ability for Orla that must apply from the next unwritten chapter onward while leaving all committed events and existing descriptions unchanged."
+      },
+      "id": "call_00_ojOpF3AOSvDfKdpy2cel2922"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "kind": "character",
+          "key": "char:orla",
+          "name": "Orla",
+          "op": "set",
+          "source": "user",
+          "authorQuote": "From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+          "value": {
+            "skills": "Orla can decode semaphore, but only in daylight; she cannot read semaphore in darkness or artificial light insufficient for the signal."
+          }
+        }
+      ],
+      "reason": "The author added a new ability for Orla that must apply from the next unwritten chapter onward while leaving all committed events and existing descriptions unchanged."
+    },
+    "id": "call_00_ojOpF3AOSvDfKdpy2cel2922"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Orla can decode semaphore, but only in daylight.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "failed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "9857dd44ab3dab339a450b2155b97075ff3d5e4cf22dd34ad8ccd050d36d47e0",
+    "sessionSha256": "e2dd625455365e2aa349d74acd1824e9ce222ef99d3e34e5387da2b8b0135a08",
+    "fee": {
+      "knownUsd": 0.0023651999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0023651999999999996
+    },
+    "measuredMainRequests": 2
+  }
+}

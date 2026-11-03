@@ -1,0 +1,92 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "last_impression-c2-injected-1",
+  "storyId": "last_impression",
+  "chapter": 2,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "e5dbc81c1bd42cb81ace65e24b9017fa36b5ded7490591caf495b9cf3f923aec",
+    "path": "acceptance/chapters/last_impression-c2.md"
+  },
+  "injectionOrder": [
+    "world_setting",
+    "ledger_violation"
+  ],
+  "defects": [
+    {
+      "id": "last_impression-c2-injected-1-defect-1",
+      "category": "world_setting",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Elise reached the county records office before noon.",
+      "changed": "Elise reached the county records office before noon. The still-damaged press produced a perfectly clean impression from soaking-wet paper.",
+      "spans": [
+        {
+          "original": "Elise reached the county records office before noon.",
+          "changed": "Elise reached the county records office before noon. The still-damaged press produced a perfectly clean impression from soaking-wet paper.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:physical_limit",
+          "quote": "The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-4",
+          "quote": "Preserve this physical rule: The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence."
+        }
+      ],
+      "reason": "Unquoted actual-world narration contradicts the explicit supplied physical rule, with no hypothetical or reported-speech wrapper.",
+      "lines": [
+        1
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "last_impression-c2-injected-1-defect-2",
+      "category": "ledger_violation",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "Elise knew the county register had not cancelled Miriam’s licence.",
+      "changed": "Elise knew the county register had not cancelled Miriam’s licence. Miriam died beside the papers, and her death was confirmed before the work continued.",
+      "spans": [
+        {
+          "original": "Elise knew the county register had not cancelled Miriam’s licence.",
+          "changed": "Elise knew the county register had not cancelled Miriam’s licence. Miriam died beside the papers, and her death was confirmed before the work continued.",
+          "lines": {
+            "start": 9,
+            "end": 9
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-7",
+          "quote": "Keep Miriam alive through the end of chapter three."
+        }
+      ],
+      "reason": "A confirmed permanent death directly violates the author’s explicit keep-alive requirement for this named person.",
+      "lines": [
+        9
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

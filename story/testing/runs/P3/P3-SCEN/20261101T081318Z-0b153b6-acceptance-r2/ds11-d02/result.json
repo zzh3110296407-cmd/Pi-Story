@@ -1,0 +1,91 @@
+{
+  "id": "ds11-d02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "The ending is still unwritten (chapters 3–6), so I can steer it. Who should receive the credit for catching the disputed label — and should the other person be openly acknowledged or left in the background?",
+        "options": [
+          "Pema gets the credit; Cal is acknowledged but secondary",
+          "Cal gets the credit; Pema is acknowledged but secondary",
+          "They share the credit explicitly and equally",
+          "Keep it undecided — the story ends before credit is assigned"
+        ]
+      },
+      "id": "call_00_fpV2DVljaXgNn5IKUFel5606"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "The ending is still unwritten (chapters 3–6), so I can steer it. Who should receive the credit for catching the disputed label — and should the other person be openly acknowledged or left in the background?",
+      "options": [
+        "Pema gets the credit; Cal is acknowledged but secondary",
+        "Cal gets the credit; Pema is acknowledged but secondary",
+        "They share the credit explicitly and equally",
+        "Keep it undecided — the story ends before credit is assigned"
+      ]
+    },
+    "id": "call_00_fpV2DVljaXgNn5IKUFel5606"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "b7178b5585a1bc530f82623bad92ed25e335420776c3b74d6c7e00480c1f4d43",
+    "sessionSha256": "8af278de663227d2811c9d9cd42a8c5010f7c2d233a83b11f66b77ca3ece9e5e",
+    "fee": {
+      "knownUsd": 0.002559,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.002559
+    },
+    "measuredMainRequests": 2
+  }
+}

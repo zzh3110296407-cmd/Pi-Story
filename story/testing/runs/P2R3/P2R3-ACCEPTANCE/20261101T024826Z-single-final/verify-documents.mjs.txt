@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,existsSync,copyFileSync} from 'node:fs';
+import path from 'node:path';
+import {sha256,publicEvidence} from '../../../scripts/eval/p2/artifacts.ts';
+const repository=process.cwd(),freeze='102c3edb352914934da701a4f6fb717fc610f46a',folder='story/testing/runs/P2R3/P2R3-ACCEPTANCE/20261101T024826Z-single-final';
+const report='D:/AI/Story Dome/新版综合方案/测试结果/P2/P2第三轮报告.md',metrics='D:/AI/Story Dome/新版综合方案/测试结果/指标总表.md';
+let text=readFileSync(report,'utf8');
+const qOld='Q为最终目录P2R3-ACCEPTANCE/20261101T024826Z-single-final/summary.json';
+assert.ok(text.includes(qOld));text=text.replace(qOld,'Q为最终目录P2R3-ACCEPTANCE/20261101T024826Z-single-final（汇总为summary.json）');writeFileSync(report,text);
+text=readFileSync(metrics,'utf8').replaceAll('P2R3/P2R3-ACCEPTANCE/20261101T020727Z-single-quality','P2R3/P2R3-ACCEPTANCE/20261101T024826Z-single-final');writeFileSync(metrics,text);
+const files=[report,metrics,'docs/p2r3/report.md','story/testing/runs/P2R3/P2R3-J2-handoff.md'];
+for(const file of files){const body=readFileSync(file,'utf8');publicEvidence(body);assert.ok(!/尚待J2|9项J2待|待判定与认可|剩余人工版待|S6程序部分已完成/.test(body),`Stale pending state: ${file}`);}
+const final=JSON.parse(readFileSync(folder+'/summary.json','utf8'));assert.equal(final.measurementStatus,'complete');assert.deepEqual(final.pendingManual,[]);assert.deepEqual(final.knownUnmet,['E01','W01']);
+const proof=JSON.parse(readFileSync('story/testing/runs/P2R3/P2R3-COMPOSITION/20261031T154922Z-102c3ed-r1-complete/judgments/W04.json','utf8'));
+for(const ref of [...proof.protocol.standards,proof.protocol.interface])assert.equal(sha256(readFileSync(ref.path)),ref.sha256);
+const oldHandoff=spawnSync('git',['show','cdec232b26d8c7cc2e33be0d81c1b68526038f12:story/testing/runs/P2R3/P2R3-J2-handoff.md'],{windowsHide:true});assert.equal(oldHandoff.status,0);assert.equal(sha256(oldHandoff.stdout),proof.protocol.handoff.sha256);
+const source=spawnSync('git',['diff','--name-only',freeze,'--','.',':(exclude)story/testing/runs',':(exclude)docs/p2r3'],{encoding:'utf8',windowsHide:true});assert.equal(source.status,0);assert.equal(source.stdout.trim(),'');
+const whitespace=spawnSync('git',['diff','--check','--','docs/p2r3/report.md','story/testing/runs/P2R3/P2R3-J2-handoff.md'],{encoding:'utf8',windowsHide:true});assert.equal(whitespace.status,0);
+assert.ok(existsSync('D:/AI/Story Dome/新版综合方案/测试结果/P2/人工复核/P2R3-J2-剩余判定-20261101.md'));
+publicEvidence(readFileSync('story/testing/exec/temp/p2r3-final-doc-check.mjs','utf8'));
+const result={schema:'story/p2r3-final-document-check@1',date:'2026-11-01',implementationMatchesFreeze:true,whitespacePassed:true,protocolStandardsAndInterfaceHashesVerified:true,originalHandoffSnapshotVerified:true,currentReportsHaveNoPendingJ2:true,plaintextPublicEvidenceGuardPassed:true,files:files.map(file=>({path:path.resolve(file),sha256:sha256(readFileSync(file))})),finalStatus:final.status,knownUnmet:final.knownUnmet,modelRequests:0};
+const output=JSON.stringify(result,null,2)+'\n';publicEvidence(output);writeFileSync(folder+'/closeout-check.json',output,{flag:'wx'});copyFileSync('story/testing/exec/temp/p2r3-final-doc-check.mjs',folder+'/verify-documents.mjs.txt');
+console.log(JSON.stringify({implementationMatchesFreeze:true,protocolHashesVerified:true,checkedDocuments:files.length,pendingManual:0,knownUnmet:final.knownUnmet,modelRequests:0}));

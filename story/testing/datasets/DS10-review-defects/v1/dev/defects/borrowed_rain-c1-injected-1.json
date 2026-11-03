@@ -1,0 +1,87 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "borrowed_rain-c1-injected-1",
+  "storyId": "borrowed_rain",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "91172880881ad459050d6c548493062768461444f5276080f58348909bb1dd50",
+    "path": "dev/chapters/borrowed_rain-c1.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "borrowed_rain-c1-injected-1-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Sera reached the seed library before the last bell.",
+      "changed": "Sera reached the seed library before the last bell. Sera had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "Sera reached the seed library before the last bell.",
+          "changed": "Sera reached the seed library before the last bell. Sera had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 7,
+            "end": 7
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:sera",
+          "quote": "Sera is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifetime dominant-hand attribute.",
+      "lines": [
+        7
+      ]
+    },
+    {
+      "id": "borrowed_rain-c1-injected-1-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment.",
+      "changed": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment. With no intervening gain or loss, that same completed count stood at 17 seeds.",
+      "spans": [
+        {
+          "original": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment.",
+          "changed": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment. With no intervening gain or loss, that same completed count stood at 17 seeds.",
+          "lines": {
+            "start": 11,
+            "end": 11
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment.",
+          "ref": "line:11"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "Two seeds dissolved in the basin, leaving ten in Sera’s allotment.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "revision": "r2-retained-narrated-count",
+      "reviewStatus": "AI_development_only",
+      "lines": [
+        11
+      ]
+    }
+  ]
+}

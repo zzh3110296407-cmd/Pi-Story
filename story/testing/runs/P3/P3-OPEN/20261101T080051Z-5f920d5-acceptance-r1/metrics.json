@@ -1,0 +1,110 @@
+{
+  "schema": "story/metrics@2",
+  "suiteId": "P3-OPEN",
+  "runId": "20261101T080051Z-5f920d5-acceptance-r1",
+  "metrics": [
+    {
+      "id": "T05",
+      "n": 12,
+      "value": 1,
+      "successes": 12,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 10,
+      "confidence95": [
+        0.7575059933447592,
+        1
+      ],
+      "passed": true,
+      "status": "measured"
+    },
+    {
+      "id": "T06",
+      "n": 0,
+      "value": null,
+      "threshold": {
+        "precision": 0.85,
+        "recall": 0.8
+      },
+      "minimum": 60,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    },
+    {
+      "id": "T07",
+      "n": 0,
+      "value": null,
+      "threshold": 0.9,
+      "minimum": 50,
+      "confidence95": null,
+      "passed": null,
+      "status": "pending_author",
+      "manual": true
+    }
+  ],
+  "observations": {
+    "execution": {
+      "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+      "total": {
+        "logicalRequests": 0,
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "chapters": [],
+      "overhead": {
+        "knownUsd": 0,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "networkRequests": 0,
+        "mainLogicalRequests": 0,
+        "mainNetworkRequests": 0
+      },
+      "risk": {
+        "n": 0,
+        "withRisk": 0,
+        "rate": null
+      },
+      "state": {
+        "n": 0,
+        "provisional": 0,
+        "provisionalRate": null,
+        "issues": 0,
+        "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+      },
+      "relatedItemPrecision": {
+        "value": null,
+        "status": "pending_human"
+      },
+      "patchEffects": []
+    },
+    "ruleTexts": null,
+    "inputEstimateMultiples": {
+      "n": 0,
+      "median": null,
+      "max": null
+    },
+    "writerOutputTokens": [],
+    "truncations": 0,
+    "formatFailures": 0,
+    "callAudit": []
+  },
+  "scoringVersion": "p3-29@1",
+  "judgmentProtocol": {
+    "ledger": "coverage-rev20261031",
+    "facts": "predicate-and-entity-rev20261031",
+    "notApplicable": "excluded from scored denominator; retained in judgment source"
+  },
+  "T01": {
+    "status": "aggregate_all_real_suites",
+    "minimum": 100
+  },
+  "expectedPrompts": 12,
+  "observedPrompts": 12,
+  "complete": true
+}

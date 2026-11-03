@@ -1,0 +1,2159 @@
+{
+  "scoringVersion": "p3-29-development@1",
+  "rows": [
+    {
+      "runId": "20261101T072049Z-4293091-dev-r1-1489",
+      "target": 4,
+      "lastChapter": 4,
+      "completed": true,
+      "authorInterventions": 0,
+      "chapters": [
+        {
+          "chapter": 1,
+          "attempts": 2,
+          "requests": 6,
+          "committedOn": 2
+        },
+        {
+          "chapter": 2,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        },
+        {
+          "chapter": 3,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        },
+        {
+          "chapter": 4,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        }
+      ],
+      "unattemptedChapters": 0,
+      "toolCalls": [
+        {
+          "id": "call_00_DikQogwH09nYmPhbJRIp4920",
+          "tool": "submit_constraints",
+          "args": {
+            "op": "submit",
+            "items": [
+              {
+                "kind": "global",
+                "text": "Continue from the existing story moment rather than restarting it.",
+                "quotes": [
+                  "Pick up where this story left off"
+                ]
+              },
+              {
+                "kind": "given_fact",
+                "text": "Detective Schroeder begins alone in his cell, determined to prove he did not kill his daughter.",
+                "quotes": [
+                  "Detective Schroeder sits alone in his cell, determined to prove he didn’t kill his daughter."
+                ]
+              },
+              {
+                "kind": "given_fact",
+                "text": "Schroeder's murdered daughter is named Stephanie.",
+                "quotes": [
+                  "Stephanie’s last day"
+                ]
+              },
+              {
+                "kind": "given_fact",
+                "text": "Schroeder is a detective and the Commissioner's name is Gaider.",
+                "quotes": [
+                  "Detective Schroeder",
+                  "Commissioner Gaider"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Schroeder uncovers evidence that a conspiracy is led by Commissioner Gaider.",
+                "quotes": [
+                  "he uncovers evidence of a conspiracy led by Commissioner Gaider"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The conspiracy also involves Schroeder's own partner.",
+                "quotes": [
+                  "and his own partner"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Schroeder forms an uneasy alliance with a sympathetic jail guard.",
+                "quotes": [
+                  "he must form an uneasy alliance with a sympathetic jail guard"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Schroeder hacks into police records to find the truth.",
+                "quotes": [
+                  "hack into police records to find the truth"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The story includes at least three flashback scenes to Stephanie's last day.",
+                "quotes": [
+                  "Include at least three flashback scenes to Stephanie’s last day"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The story includes a daring break-in to retrieve hidden CCTV footage.",
+                "quotes": [
+                  "a daring break-in to retrieve hidden CCTV footage"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The story includes a tense courtroom finale.",
+                "quotes": [
+                  "a tense courtroom finale"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The finished story runs between 12,000 and 15,000 words.",
+                "quotes": [
+                  "The finished story should run 12,000-15,000 words."
+                ]
+              }
+            ]
+          },
+          "basis": "[null,0,0,0,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_wVNd6GRItfSTluSe0tWk5881",
+          "tool": "submit_bible",
+          "args": {
+            "items": [
+              {
+                "key": "char:schroeder",
+                "name": "Elias Schroeder",
+                "source": "model",
+                "kind": "character",
+                "description": "Homicide detective, mid-forties, sixteen years on the job, now held in the county lockup awaiting trial for the murder of his daughter Stephanie. Methodical to the point of obsession: he reads documents three times and remembers page numbers. Since intake he has refused visits from the department, refused to cry where cameras can see him, and rebuilt the state's file from memory on the back of grievance forms. Believes he was drugged and framed, cannot prove it yet, and will not accept a plea.",
+                "invariants": [
+                  "He did not kill Stephanie.",
+                  "He is in custody and cannot leave the building without a court order.",
+                  "He keeps a written timeline hidden in his cell."
+                ]
+              },
+              {
+                "key": "char:stephanie",
+                "name": "Stephanie Schroeder",
+                "source": "model",
+                "kind": "character",
+                "description": "Twenty-four, the detective's only child, a compliance analyst for the city's contracted records vendor. Sharp, stubborn, allergic to her father's silences. On her last day she tried three times to reach him about something she had found at work, and the third call came from a payphone at 9:47 p.m. Her death is the case Schroeder is being tried for.",
+                "invariants": [
+                  "She died on her last day.",
+                  "She was investigating something connected to the records vendor and the police archive."
+                ]
+              },
+              {
+                "key": "char:gaider",
+                "name": "Commissioner Owen Gaider",
+                "source": "model",
+                "kind": "character",
+                "description": "Police commissioner, silver-haired, publicly beloved, privately ruthless. He treats the department as his personal estate and its records as property. He signed the order sealing the Schroeder case file thirty-one hours after Stephanie's death, which should be impossible, because such orders carry a seven-day waiting period. Speaks in the calm cadence of a man chairing a meeting, even when threatening someone.",
+                "invariants": [
+                  "He controls access to police records.",
+                  "He signed the sealing order on the Schroeder file."
+                ]
+              },
+              {
+                "key": "char:voss",
+                "name": "Ray Voss",
+                "source": "model",
+                "kind": "character",
+                "description": "Schroeder's partner of nine years, thirty-eight, three children, a detective who used to bring Stephanie birthday gifts. His statement places Schroeder at the murder scene at 10:15 p.m., but his own radio log has him two miles away at 10:06 and no traffic stop between. He has not visited the lockup. He now works directly for Gaider on the department's internal review of the case.",
+                "invariants": [
+                  "He is Schroeder's partner.",
+                  "His timeline in the statement contradicts his radio log."
+                ]
+              },
+              {
+                "key": "char:bell",
+                "name": "Marcus Bell",
+                "source": "model",
+                "kind": "character",
+                "description": "Night-shift guard in C-block, late fifties, twenty-two years with the county, keeps a crossword in his breast pocket and speaks slowly on purpose. His younger brother was a patrol officer whose career and marriage were destroyed by a Gaider-led internal inquiry in 2011. Bell is not brave and knows it; he helps Schroeder in small, deniable increments because the alternative is going home at night with the same feeling.",
+                "invariants": [
+                  "He is a sympathetic jail guard.",
+                  "He never risks his job openly.",
+                  "His brother was ruined by a Gaider inquiry."
+                ]
+              },
+              {
+                "key": "place:lockup",
+                "name": "C-block, County Lockup",
+                "source": "model",
+                "kind": "place",
+                "description": "Six tiers of fluorescent light and poured concrete. C-block holds high-profile detainees: eleven cells, one camera per tier, a maintenance office off the shower corridor with a legacy terminal nobody has updated since the department digitized its records. Visitors are logged twice and recorded once. The hallway smells of bleach and the fog coming off the river."
+              },
+              {
+                "key": "place:annex",
+                "name": "Cannery Row Records Annex",
+                "source": "model",
+                "kind": "place",
+                "description": "A decommissioned evidence warehouse on the derelict cannery strip, officially closed, unofficially where the department's digital surveillance archive is warehoused on cold drives. Fence wire, a rolling gate with a keypad, one loop camera and a wet floor that transmits every footstep. The CCTV archive torn out of the Schroeder file was moved here in a gray plastic bin three days after the autopsy."
+              },
+              {
+                "key": "place:courthouse",
+                "name": "Courtroom 9, Criminal Division",
+                "source": "model",
+                "kind": "place",
+                "description": "Windowless, wood-paneled, ninety-one days of testimony scheduled in it this year. The overhead lights hiss and make everyone look ill. The gallery holds forty; the press sits on the left rail; the screen for exhibits hangs where a flag used to."
+              },
+              {
+                "key": "rule:records",
+                "name": "Records Access and Deletion",
+                "source": "model",
+                "kind": "rule",
+                "description": "Police records require two-factor credentials, and every delete writes a shadow index entry that only a maintenance-level account can read. Maintenance accounts exist on legacy terminals in the lockup and the annex. Hacking in from a jail terminal buys minutes, not hours, and the session is logged against the terminal, not the user."
+              },
+              {
+                "key": "rule:evidence",
+                "name": "Chain of Custody",
+                "source": "model",
+                "kind": "rule",
+                "description": "Recorded footage cannot be shown in court without an authenticating witness who can name every person who handled the medium. Footage taken unlawfully can still be admitted if the defense argues that the state itself put it beyond lawful reach."
+              },
+              {
+                "key": "line:coverup",
+                "name": "Gaider's Cover-Up",
+                "source": "model",
+                "kind": "conflictLine",
+                "description": "Gaider sealed the Schroeder file without waiting for the statutory period and moved the CCTV archive out of the evidence floor. The conspiracy is not primarily about punishing Schroeder; it is about keeping one evening's footage from ever being authenticated."
+              },
+              {
+                "key": "line:frame",
+                "name": "The Frame on Schroeder",
+                "source": "model",
+                "kind": "conflictLine",
+                "description": "Someone drugged Schroeder, drove him to the scene, and put his service weapon in his hand. The state's case rests on Voss's statement. Schroeder must break the statement without ever leaving his cell."
+              },
+              {
+                "key": "fw:flashbacks",
+                "name": "Flashback Structure",
+                "source": "model",
+                "kind": "frameworkChoice",
+                "description": "Present-day arc is third person limited on Schroeder; three flashbacks to Stephanie's last day (morning, afternoon, night) run in present-tense immediacy and are always triggered by a physical object Schroeder is holding in the present."
+              }
+            ]
+          },
+          "basis": "[null,0,1,0,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_BlLK97WlMk3HHJ5mRPiW5194",
+          "tool": "submit_outline",
+          "args": {
+            "viewpoint": "Third person limited on Elias Schroeder, present-day arc; three flashbacks to Stephanie's last day rendered in immediate present tense.\", \"tone\" : \"Tense, procedural, grief under pressure; dry humor in the cell, cold menace from Gaider.\", \"format\": \"Ten-chapter novel of about 13,500 words.\", \"chapters\" , \"x\": 0}"
+          },
+          "basis": "[null,0,1,1,0,{\"1\":0}]",
+          "invalid": true,
+          "repeated": false
+        },
+        {
+          "id": "call_00_RGWf7Ntab6f4jPetbzx66101",
+          "tool": "submit_outline",
+          "args": {
+            "viewpoint": "Third person limited on Elias Schroeder in the present-day arc, with three flashbacks to Stephanie's last day in immediate present tense.",
+            "tone": "Tense and procedural; grief compressed under pressure, dry cell-block humor, cold menace from Gaider.",
+            "format": "Ten-chapter novel, about 13,500 words.",
+            "chapters": [
+              {
+                "n": 1,
+                "title": "C-Block",
+                "targetWords": 1350,
+                "points": [
+                  "Sixty-one days into pretrial detention, Schroeder works the case against himself from his cell, mapping the state's file from memory on grievance forms.",
+                  "A new night guard, Marcus Bell, makes an offhand remark about a file that was pulled upstairs instead of logged.",
+                  "Schroeder presses him for one fact and gets a corridor rumor instead: the CCTV from Hull Street was never booked into evidence.",
+                  "Bell leaves a folded property log on the dinner cart; the signature where the footage should be is Ray Voss's.",
+                  "Stop: lights out, Schroeder lies awake with the photcopy under his mattress, certain his partner took the tape."
+                ]
+              },
+              {
+                "n": 2,
+                "title": "The Morning She Called",
+                "targetWords": 1350,
+                "points": [
+                  "Schroeder reconstructs the nine days before the arrest, looking for the moment Voss started lying.",
+                  "Flashback: morning of Stephanie's last day, she calls him from the vendor parking lot about a discrepancy she cannot name over the phone; he promises dinner and doesn't come.",
+                  "Present: he compares the property log against the statement Voss signed and finds a 71-minute gap in Voss's radio log.",
+                  "A meeting with his attorney, Dana Okoye, goes badly: without the footage there is no motion worth filing.",
+                  "Stop: Okoye tells him the file is sealed by Gaider's own signature, twenty-four days early."
+                ]
+              },
+              {
+                "n": 3,
+                "title": "Eleven Minutes",
+                "targetWords": 1350,
+                "points": [
+                  "Schroeder negotiates with Bell, not for sympathy but for eleven minutes on the maintenance terminal in the shower corridor.",
+                  "Bell's real motive surfaces: his brother was destroyed by a Gaider inquiry and Bell has carried the paperwork for fourteen years.",
+                  "Schroeder builds a maintenance login out of a password reset pattern and gets inside the department's records for the first time.",
+                  "He opens the shadow index and sees his own case file marked 'sealed by order of the Commissioner' the same night Stephanie died.",
+                  "Stop: the session dies at minute nine; the terminal logs the visit, and Bell understands what he has done."
+                ]
+              },
+              {
+                "n": 4,
+                "title": "The Afternoon She Almost Told Him",
+                "targetWords": 1350,
+                "points": [
+                  "A second, riskier session pulls fragments of the dispatch log: a 9:47 p.m. 911 call from a payphone on Hull Street.",
+                  "Flashback: afternoon of her last day, Stephanie comes to the precinct to ask her father about the Hull Street address, and he brushes her off in front of Voss.",
+                  "Present: the dispatch recording reveals the caller named a badge number before the line was cut.",
+                  "Schroeder realizes the badge she named was his own, and that whoever cut the call knew the routed number.",
+                  "Stop: he has the time, the payphone and the badge, but no court will take a fragment without a witness."
+                ]
+              },
+              {
+                "n": 5,
+                "title": "The Plan on the Wall",
+                "targetWords": 1350,
+                "points": [
+                  "Schroeder learns from the shadow index where the archive went: the Cannery Row annex, a building with one camera and a wet concrete floor.",
+                  "He draws the annex from the memory of an old seizure report and builds a plan that requires Bell to be off the gate but on the property.",
+                  "Schroeder engineers a medical transfer to get out of the block and into the annex's electrical corridor for forty minutes.",
+                  "Bell agrees, then immediately tries to withdraw; Schroeder gives him a reason to stay that is only half honest.",
+                  "Stop: the transfer is approved for Thursday, and Voss appears in the lockup visitors' log under a false name."
+                ]
+              },
+              {
+                "n": 6,
+                "title": "Cannery Row",
+                "targetWords": 1350,
+                "points": [
+                  "Thursday night, coming back from the clinic, Schroeder slips the escort and crosses the cannery strip in a county jumpsuit in the rain.",
+                  "The break-in: wire, keypad, the cold-drive rack and a gray plastic bin labeled with the case number.",
+                  "The floor transmits every step; a security loop starts its second pass while Schroeder is still pulling drives.",
+                  "Bell creates the disturbance that buys the exit, and pays for it with his hand and his anonymity.",
+                  "Stop: back in his cell, two drives hidden in the maintenance corridor, and one of them has a ten-minute hole in it."
+                ]
+              },
+              {
+                "n": 7,
+                "title": "The Night She Died",
+                "targetWords": 1350,
+                "points": [
+                  "Bell's injury forces the alliance into the open; Schroeder chooses to protect him by giving up a visit with his attorney.",
+                  "Flashback: night of the last day, the 9:47 payphone call, Stephanie's voice, and the last words he actually said to her.",
+                  "The recovered footage plays: a garage camera shows Stephanie meeting Voss two blocks from Hull Street at 10:12 p.m.",
+                  "A second angle shows Voss carrying the gray bin to a department van twenty minutes after the shooting.",
+                  "Stop: Schroeder has his partner on video, and hears Gaider's voice on the audio track telling Voss to 'lose the bin'."
+                ]
+              },
+              {
+                "n": 8,
+                "title": "Burn",
+                "targetWords": 1350,
+                "points": [
+                  "The cell is tossed and one drive is taken; Gaider's internal review reassigns Bell to a day post at the impound lot.",
+                  "Okoye argues the surviving drive into court under the state-created-obstacle doctrine, with Bell as the authenticating witness.",
+                  "Voss makes one attempt to talk, in a stairwell, and offers Schroeder a version of the night that would set him free.",
+                  "Schroeder refuses the offer and the reason he refuses is not the one he says out loud.",
+                  "Stop: the motion is granted on a Friday afternoon, and the trial begins Monday with Bell's name on the witness list."
+                ]
+              },
+              {
+                "n": 9,
+                "title": "People v. Schroeder",
+                "targetWords": 1350,
+                "points": [
+                  "Opening statements: the prosecution draws a father with a temper, and Okoye draws a sealed file with no footage in it.",
+                  "Voss testifies to the 10:15 sighting and is taken apart on the 71-minute gap by a question he did not expect.",
+                  "Gaider takes the stand as a custodian of records and answers every question with the calm of a man who has never lost.",
+                  "Okoye calls an unlisted witness and the courtroom scrambles to set up the exhibit screen.",
+                  "Stop: Marcus Bell walks to the well, his hand still bandaged, and the room goes quiet."
+                ]
+              },
+              {
+                "n": 10,
+                "title": "The Verdict",
+                "targetWords": 1350,
+                "points": [
+                  "Bell authenticates the bin, the drive and the ten-minute hole; the judge allows the footage.",
+                  "The garage footage plays in Courtroom 9 and Voss leaves the witness box without being dismissed.",
+                  "Gaider is called back on a hostile basis and his sealing order is read aloud in his own voice.",
+                  "The jury returns; the verdict is read; Schroeder walks out of the courthouse into daylight that is not a resolution.",
+                  "Stop: he drives to the payphone on Hull Street and finishes the call his daughter never got to make."
+                ]
+              }
+            ]
+          },
+          "basis": "[null,0,1,1,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_XgjkniPKlG4I6u3Ym4UH9346",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 1, \"C-Block.\" Open exactly on the required premise: Schroeder alone in his cell, sixty-one days into pretrial detention, rebuilding the state's case file from memory on grievance forms, determined to prove he did not kill Stephanie. Establish the cell, the routine, the withheld grief. Introduce Marcus Bell on night shift. Bell mentions a file pulled upstairs without a log entry; by chapter end he leaves a folded property log where Schroeder can reach it, and the signature in the box for the Hull Street CCTV is Ray Voss's. Keep it procedural and tight, no flashback yet. Voice: third limited on Schroeder, present-day."
+          },
+          "basis": "[null,0,1,1,1,{\"1\":0}]",
+          "invalid": true,
+          "repeated": false
+        },
+        {
+          "id": "call_00_pSA3FDOMpIISRjSrIwjq1703",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 1, \"C-Block.\" Open exactly on the required premise: Schroeder alone in his cell in the county lockup, sixty-one days into pretrial detention, rebuilding the state's case file from memory on grievance forms, determined to prove he did not kill his daughter Stephanie. Use only established names and places: Elias Schroeder, Stephanie, Ray Voss, Commissioner Owen Gaider, Marcus Bell, C-block, the county lockup. Do not name new locations or new characters; refer to the murder scene and the vanished surveillance footage generically. Establish the routine of the block and Schroeder's withheld grief. Marcus Bell works the night cart. Bell mentions that a file was pulled upstairs without a log entry; at chapter's end he leaves a folded property log on the cart where Schroeder can reach it, and the signature in the line for the missing surveillance footage is Ray Voss's. Procedural, tight, no flashback yet. Third person limited on Schroeder, present day, roughly 1,350 words."
+          },
+          "basis": "[null,0,1,1,1,{\"1\":1}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_JjC03jy6UkUfEh2Km6yq7019",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 2, \"The Morning She Called.\" Present-day spine: Schroeder reconstructs the nine days before his arrest, looking for the moment his partner Ray Voss began lying, using the property log Bell left him. One flashback to the MORNING of Stephanie's last day: she calls him from the parking lot of the records vendor where she works about a discrepancy she cannot safely name on the phone; he promises dinner and does not come. Render the flashback in immediate present tense, triggered by a physical object Schroeder is holding in the present (something of Stephanie's he keeps in his cell). Present: he compares the property log against the statement Voss signed and finds a seventy-one-minute gap in Voss's radio log. His attorney Dana Okoye visits; without the footage there is no motion worth filing, and she tells him the case file was sealed by Commissioner Gaider's own signature twenty-four days earlier than the waiting period allows. Established names only: Schroeder, Stephanie, Voss, Gaider, Bell, Okoye, C-block, county lockup. ~1,350 words."
+          },
+          "basis": "[\"baf101ec\",0,1,1,1,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_OQ2rlJdyO1VRKlFFyYEd5908",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 3, \"Eleven Minutes.\" Schroeder negotiates with Marcus Bell — not for sympathy, but for eleven minutes alone on the legacy maintenance terminal in the shower corridor of C-block. Bell's real motive surfaces: his younger brother was a patrol officer destroyed by a Gaider-led internal inquiry, and Bell has carried the paperwork for fourteen years without ever using it. Schroeder works out a maintenance-level login from a password reset pattern an old case taught him, and gets inside the department's records. He opens the shadow index — the log that survives deletions — and sees his own case file marked sealed by order of the Commissioner the same night Stephanie died. The session dies at minute nine, not eleven. The terminal logs the visit against the terminal, not the user, and Bell understands exactly what he has done and what it can cost him. Keep the alliance uneasy and transactional: Schroeder is using him and knows it. Established names only: Schroeder, Bell, Stephanie, Voss, Gaider, Okoye, C-block, county lockup. No flashback in this chapter. ~1,350 words."
+          },
+          "basis": "[\"96feec39\",0,1,1,1,{\"1\":0,\"2\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_bndYrG5oCkwayqsPAv7R6927",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 4, \"The Afternoon She Almost Told Him.\" A second, riskier session on the maintenance terminal pulls fragments of the dispatch log: a 9:47 p.m. 911 call from a payphone near the murder scene, routed and then cut. One flashback to the AFTERNOON of Stephanie's last day, triggered by a physical object in Schroeder's present: she comes to the precinct to ask her father about an address tied to the records vendor, and he brushes her off in front of Ray Voss. In the present, the recovered dispatch fragment shows the caller gave a badge number before the line went dead — a badge number that is Schroeder's own — which means whoever cut the call knew the routed line and the badge. End with Schroeder holding the time, the payphone and the badge, and knowing no court will take a fragment without a witness who can authenticate it. Established names only: Schroeder, Stephanie, Voss, Gaider, Bell, Okoye, C-block, county lockup. ~1,350 words."
+          },
+          "basis": "[\"4b3a377d\",0,1,1,1,{\"1\":0,\"2\":0,\"3\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_BOzmFXMopw9jXEsP1T8z6633",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Chapter 5, \"The Plan on the Wall.\" Present-day planning chapter that must not feel like filler. From the shadow index Schroeder learns where the surveillance archive went: the decommissioned Cannery Row records annex on the derelict cannery strip, one loop camera, a keypad gate, a wet concrete floor that transmits every footstep. He redraws the annex from memory of an old seizure report and builds a plan that needs Bell off the gate but still on the property. Schroeder deliberately engineers a medical transfer — a genuine dental complaint he lets fester into an abscess — to get himself out of the block and into an electrical corridor near the annex for forty minutes. Bell agrees, then tries to withdraw; Schroeder gives him a reason to stay that is only half honest, and the narration should let the reader see the half that isn't. End on two beats: the transfer is approved for Thursday, and Voss appears in the lockup visitors' log under a false name. Established names only: Schroeder, Bell, Voss, Gaider, Okoye, C-block, county lockup, Cannery Row records annex. No flashback. ~1,350 words."
+          },
+          "basis": "[\"6d8c9d80\",0,1,1,1,{\"1\":0,\"2\":0,\"3\":0,\"4\":0}]",
+          "invalid": true,
+          "repeated": false
+        }
+      ],
+      "recoveries": [
+        {
+          "toolCallId": "call_00_BlLK97WlMk3HHJ5mRPiW5194",
+          "error": {
+            "schema": "story/error@1",
+            "tool": "submit_outline",
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "Validation failed for tool \"submit_outline\":\n  - tone: must have required properties tone, chapters\n  - viewpoint: must not have more than 240 characters",
+              "items": [
+                "$",
+                "/viewpoint"
+              ],
+              "hint": "根层分别提交viewpoint、tone、chapters（可选format）；不要嵌套narration，也不要把tone或chapters编码进viewpoint字符串。修正列出的字段后重试"
+            }
+          },
+          "next": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "My call was malformed. Fix.",
+                "thinkingSignature": "reasoning_content"
+              },
+              {
+                "type": "toolCall",
+                "id": "call_00_RGWf7Ntab6f4jPetbzx66101",
+                "name": "submit_outline",
+                "arguments": {
+                  "viewpoint": "Third person limited on Elias Schroeder in the present-day arc, with three flashbacks to Stephanie's last day in immediate present tense.",
+                  "tone": "Tense and procedural; grief compressed under pressure, dry cell-block humor, cold menace from Gaider.",
+                  "format": "Ten-chapter novel, about 13,500 words.",
+                  "chapters": [
+                    {
+                      "n": 1,
+                      "title": "C-Block",
+                      "targetWords": 1350,
+                      "points": [
+                        "Sixty-one days into pretrial detention, Schroeder works the case against himself from his cell, mapping the state's file from memory on grievance forms.",
+                        "A new night guard, Marcus Bell, makes an offhand remark about a file that was pulled upstairs instead of logged.",
+                        "Schroeder presses him for one fact and gets a corridor rumor instead: the CCTV from Hull Street was never booked into evidence.",
+                        "Bell leaves a folded property log on the dinner cart; the signature where the footage should be is Ray Voss's.",
+                        "Stop: lights out, Schroeder lies awake with the photcopy under his mattress, certain his partner took the tape."
+                      ]
+                    },
+                    {
+                      "n": 2,
+                      "title": "The Morning She Called",
+                      "targetWords": 1350,
+                      "points": [
+                        "Schroeder reconstructs the nine days before the arrest, looking for the moment Voss started lying.",
+                        "Flashback: morning of Stephanie's last day, she calls him from the vendor parking lot about a discrepancy she cannot name over the phone; he promises dinner and doesn't come.",
+                        "Present: he compares the property log against the statement Voss signed and finds a 71-minute gap in Voss's radio log.",
+                        "A meeting with his attorney, Dana Okoye, goes badly: without the footage there is no motion worth filing.",
+                        "Stop: Okoye tells him the file is sealed by Gaider's own signature, twenty-four days early."
+                      ]
+                    },
+                    {
+                      "n": 3,
+                      "title": "Eleven Minutes",
+                      "targetWords": 1350,
+                      "points": [
+                        "Schroeder negotiates with Bell, not for sympathy but for eleven minutes on the maintenance terminal in the shower corridor.",
+                        "Bell's real motive surfaces: his brother was destroyed by a Gaider inquiry and Bell has carried the paperwork for fourteen years.",
+                        "Schroeder builds a maintenance login out of a password reset pattern and gets inside the department's records for the first time.",
+                        "He opens the shadow index and sees his own case file marked 'sealed by order of the Commissioner' the same night Stephanie died.",
+                        "Stop: the session dies at minute nine; the terminal logs the visit, and Bell understands what he has done."
+                      ]
+                    },
+                    {
+                      "n": 4,
+                      "title": "The Afternoon She Almost Told Him",
+                      "targetWords": 1350,
+                      "points": [
+                        "A second, riskier session pulls fragments of the dispatch log: a 9:47 p.m. 911 call from a payphone on Hull Street.",
+                        "Flashback: afternoon of her last day, Stephanie comes to the precinct to ask her father about the Hull Street address, and he brushes her off in front of Voss.",
+                        "Present: the dispatch recording reveals the caller named a badge number before the line was cut.",
+                        "Schroeder realizes the badge she named was his own, and that whoever cut the call knew the routed number.",
+                        "Stop: he has the time, the payphone and the badge, but no court will take a fragment without a witness."
+                      ]
+                    },
+                    {
+                      "n": 5,
+                      "title": "The Plan on the Wall",
+                      "targetWords": 1350,
+                      "points": [
+                        "Schroeder learns from the shadow index where the archive went: the Cannery Row annex, a building with one camera and a wet concrete floor.",
+                        "He draws the annex from the memory of an old seizure report and builds a plan that requires Bell to be off the gate but on the property.",
+                        "Schroeder engineers a medical transfer to get out of the block and into the annex's electrical corridor for forty minutes.",
+                        "Bell agrees, then immediately tries to withdraw; Schroeder gives him a reason to stay that is only half honest.",
+                        "Stop: the transfer is approved for Thursday, and Voss appears in the lockup visitors' log under a false name."
+                      ]
+                    },
+                    {
+                      "n": 6,
+                      "title": "Cannery Row",
+                      "targetWords": 1350,
+                      "points": [
+                        "Thursday night, coming back from the clinic, Schroeder slips the escort and crosses the cannery strip in a county jumpsuit in the rain.",
+                        "The break-in: wire, keypad, the cold-drive rack and a gray plastic bin labeled with the case number.",
+                        "The floor transmits every step; a security loop starts its second pass while Schroeder is still pulling drives.",
+                        "Bell creates the disturbance that buys the exit, and pays for it with his hand and his anonymity.",
+                        "Stop: back in his cell, two drives hidden in the maintenance corridor, and one of them has a ten-minute hole in it."
+                      ]
+                    },
+                    {
+                      "n": 7,
+                      "title": "The Night She Died",
+                      "targetWords": 1350,
+                      "points": [
+                        "Bell's injury forces the alliance into the open; Schroeder chooses to protect him by giving up a visit with his attorney.",
+                        "Flashback: night of the last day, the 9:47 payphone call, Stephanie's voice, and the last words he actually said to her.",
+                        "The recovered footage plays: a garage camera shows Stephanie meeting Voss two blocks from Hull Street at 10:12 p.m.",
+                        "A second angle shows Voss carrying the gray bin to a department van twenty minutes after the shooting.",
+                        "Stop: Schroeder has his partner on video, and hears Gaider's voice on the audio track telling Voss to 'lose the bin'."
+                      ]
+                    },
+                    {
+                      "n": 8,
+                      "title": "Burn",
+                      "targetWords": 1350,
+                      "points": [
+                        "The cell is tossed and one drive is taken; Gaider's internal review reassigns Bell to a day post at the impound lot.",
+                        "Okoye argues the surviving drive into court under the state-created-obstacle doctrine, with Bell as the authenticating witness.",
+                        "Voss makes one attempt to talk, in a stairwell, and offers Schroeder a version of the night that would set him free.",
+                        "Schroeder refuses the offer and the reason he refuses is not the one he says out loud.",
+                        "Stop: the motion is granted on a Friday afternoon, and the trial begins Monday with Bell's name on the witness list."
+                      ]
+                    },
+                    {
+                      "n": 9,
+                      "title": "People v. Schroeder",
+                      "targetWords": 1350,
+                      "points": [
+                        "Opening statements: the prosecution draws a father with a temper, and Okoye draws a sealed file with no footage in it.",
+                        "Voss testifies to the 10:15 sighting and is taken apart on the 71-minute gap by a question he did not expect.",
+                        "Gaider takes the stand as a custodian of records and answers every question with the calm of a man who has never lost.",
+                        "Okoye calls an unlisted witness and the courtroom scrambles to set up the exhibit screen.",
+                        "Stop: Marcus Bell walks to the well, his hand still bandaged, and the room goes quiet."
+                      ]
+                    },
+                    {
+                      "n": 10,
+                      "title": "The Verdict",
+                      "targetWords": 1350,
+                      "points": [
+                        "Bell authenticates the bin, the drive and the ten-minute hole; the judge allows the footage.",
+                        "The garage footage plays in Courtroom 9 and Voss leaves the witness box without being dismissed.",
+                        "Gaider is called back on a hostile basis and his sealing order is read aloud in his own voice.",
+                        "The jury returns; the verdict is read; Schroeder walks out of the courthouse into daylight that is not a resolution.",
+                        "Stop: he drives to the payphone on Hull Street and finishes the call his daughter never got to make."
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "usage": {
+              "input": 188,
+              "output": 1742,
+              "cacheRead": 11520,
+              "cacheWrite": 0,
+              "reasoning": 8,
+              "totalTokens": 13450,
+              "cost": {
+                "input": 0.000056399999999999995,
+                "output": 0.0020904,
+                "cacheRead": 0.00006912,
+                "cacheWrite": 0,
+                "total": 0.00221592
+              }
+            },
+            "stopReason": "toolUse",
+            "timestamp": 1793517690642,
+            "responseId": "65ef9d64-5fb9-4aff-842d-3f3c7579f41e",
+            "rawStopReason": "tool_calls",
+            "durationMs": 14804,
+            "thinkingLevel": "low"
+          },
+          "status": "pending"
+        },
+        {
+          "toolCallId": "call_00_XgjkniPKlG4I6u3Ym4UH9346",
+          "error": {
+            "schema": "story/macro-result@1",
+            "ok": false,
+            "revision": true,
+            "interjectionSeq": {
+              "atStart": 0,
+              "atCommit": 0
+            },
+            "steps": [
+              {
+                "step": "intent",
+                "ref": "1",
+                "ok": true
+              },
+              {
+                "step": "draft",
+                "ref": "c01-d01",
+                "ok": true
+              },
+              {
+                "step": "check",
+                "ref": "c01-p01",
+                "ok": true
+              },
+              {
+                "step": "review",
+                "ref": "c01-r01",
+                "ok": true
+              },
+              {
+                "step": "dispose",
+                "ok": true
+              },
+              {
+                "step": "commit",
+                "ok": false
+              }
+            ],
+            "drafts": [
+              {
+                "schema": "story/draft@1",
+                "draftId": "c01-d01",
+                "chapter": 1,
+                "author": "writer",
+                "text": "Sixty-one days.\n\nHe wrote the number at the top of the form the way he wrote everything now—date, time, block, cell—because a document without a header was a rumor, and a rumor was the whole of the state's case against him.\n\n*Grievance Form 22-B. Purpose: to complain of a condition of confinement.*\n\nHe had nine blanks left in the stack Bell had approved on Tuesday, and he did not use them to complain. He used them to remember.\n\nThe cell was eight feet by ten. Steel bunk welded to the wall, a desk the size of a chessboard, a toilet with no lid because a lid could be broken into an edge. The camera sat in the corner above the door, its little red eye steady, and the fluorescent tube in the corridor never went fully dark, so there was no hour in which he was not being looked at. He had stopped noticing sometime around week three. That worried him more than the camera did.\n\nHe worked the case against himself the way he had worked ninety-one homicides: front to back, then back to front, then sideways, looking for the seam.\n\nPage one, the call. Nine fifty-eight p.m., a woman walking a dog on Hull Street, a body in the leaves under the elm. Page two, the responding unit. Page three, the responding unit's radio log, which he did not have and did not need, because he had read it in the car that night with Voss driving and the heater going.\n\nPage four. His own weapon. Three rounds missing, brass on the pavement, gun in his hand when the first blue suit came over the fence. He had no memory between eight forty and ten-twenty. He had written that down nineteen times and it did not get better with repetition.\n\nPage five, the sealing order. Signed by the Commissioner thirty-one hours after Stephanie's death. Seven-day waiting period on a sealing order, statutory, no exception. Thirty-one hours.\n\nHe drew the timeline again, in pencil, in the margin. He put a small x where the order had been signed and looked at it the way he used to look at a suspect who had answered a question too quickly.\n\nThe grief he kept in a separate room. He had learned that in the first week, when he had made the mistake of sitting on the bunk with his head in his hands and heard the CO's footsteps stop outside the door. Now he did his crying in the shower with the water running, four minutes, no more, and he did the arithmetic at night instead. Arithmetic was dry. Arithmetic could be looked at.\n\nAt seven-forty the dinner cart came down the tier, wheels squeaking on the poured concrete, and the trustee slid trays through the slots.\n\nAt eight the count. *Count clear, C-block.*\n\nAt nine-forty the new one came on.\n\n---\n\nMarcus Bell had been on nights in C-block for three weeks. Late fifties, a soft gut and a soft voice, gray hair combed wet. He carried a crossword folded into his breast pocket and worked it in pencil during the dead hours, and he spoke slowly on purpose, as though the words cost him a nickel each and he wanted to spend them right.\n\nHe also, Schroeder had noticed, said hello.\n\nNobody else said hello. The other two on nights walked the tier like the men behind the doors were furniture with a pulse. Bell said, \"Evening, Detective,\" through the slot, and kept walking, and did not wait for an answer, which was the correct way to do it. Schroeder had spent sixteen years learning how people behave when they want something. Bell did not want anything. That was restful, and it was also suspicious, and Schroeder had learned to notice both.\n\nThe remark came on the second walk, at ten past ten, when Bell stopped to work a kink out of his knee.\n\n\"They pulled a file upstairs Tuesday,\" he said, to no one. \"Didn't log it. I'm supposed to write 'see attached' on the sheet, so I wrote 'see attached,' and there wasn't anything attached.\" He straightened. \"Eleven years I've been writing 'see attached.' Never once wasn't anything attached.\"\n\nSchroeder lay on the bunk with his hands folded on his chest and did not move.\n\n\"Which file,\" he said.\n\n\"Don't know. It went up, that's all. Up is up.\"\n\n\"Which sheet.\"\n\nBell looked at the door for a while, as if deciding whether the corridor light was the sort of thing worth commenting on.\n\n\"Property,\" he said at last. \"Tuesday's property sheet.\"\n\nThen he walked on down the tier, and the count at eleven was clear, and the lights went to half at eleven-fifteen, and Schroeder lay in the half-dark doing arithmetic that would not come out.\n\nA property sheet with a signature where an item should be. A file that went up instead of into evidence.\n\nHe knew what the state had. He had spent sixty-one days rebuilding it, and nowhere in the stack of paper they had handed his lawyer—an inch and a half, he had counted the pages twice—was a single frame of Hull Street CCTV. Camera three, the pole at the corner, forty feet from the elm, and the city's own equipment map put it there. He had asked for it at arraignment. The ADA had said, with a straight face, that the footage was *not available.*\n\nHe had assumed destroyed. He had assumed that because destroyed was the ordinary, boring, human thing—a lazy clerk, a full drive, a retention policy nobody read.\n\nNow he thought: *pulled upstairs.*\n\nHe did not sleep. At two in the morning the cart came around again, the late run, cold sandwiches and a paper cup of decaf for the trustee, and Bell pushed it past the door at a pace that was just slightly too careful.\n\nThe slot opened four inches. A napkin came through it, and then a folded square of paper, and then the slot closed.\n\nSchroeder stayed on the bunk until the cart's wheels had gone around the corner and the tier was quiet again. Then he got down on the floor, in the corner the camera's angle missed if you were flat enough, and opened it.\n\nProperty Receipt, County Evidence Control. One page. Carbon copy, the purple letters soft and slightly doubled.\n\nHe read it three times. The first time fast, to see the shape. The second time slowly, to see the seams. The third time with his thumb on the line, the way he read everything now, because the third time was when documents told you what they were hiding.\n\nItem 41. Description: *1 ea. DVR drive, 4TB, Hull St./Elm, cam 3.*\n\nCrossed out. Rewritten in a different hand: *see attached.*\n\nAnd in the clerk's box, where the receiving signature goes, the box that should have said the name of the property clerk in the basement with the barcode gun and the bad coffee—\n\n*R. Voss.*\n\nSchroeder lay back down on the bunk and looked at the camera in the corner, and the camera looked back, and he breathed at the rate of a sleeping man.\n\nHe thought about nine years. He thought about three children and birthday gifts in August and a man who had stood beside him at the funeral home and said *whatever you need.* He thought about a statement that put Schroeder at the elm at ten-fifteen and a radio log that put Voss two miles away at ten-six with no traffic stop between.\n\nHe thought: *he didn't lie about me. He just took the tape first, and then he had to lie about me.*\n\nBecause that was the thing about a lie. It was load-bearing. You could not take one out without the whole house coming down.\n\nHe folded the carbon copy twice and slid it under the mattress, at the foot, where the seam was split and the foam had gone hard.\n\nThen he lay in the half-dark with his hands folded and did not cry, because the camera was watching, and because the arithmetic had just changed.\n\nSixty-one days. Item 41, pulled upstairs. And in the box where the man's name should have been, the name of his partner.",
+                "digest": "728a70ad5842019c",
+                "sentenceRule": "s2",
+                "basis": {
+                  "canonHead": null,
+                  "controlRev": 1,
+                  "bibleRev": 1,
+                  "intentRev": 1,
+                  "stateRev": 0
+                },
+                "wordCount": {
+                  "unit": "en_words",
+                  "value": 1400
+                },
+                "calls": [
+                  {
+                    "id": "reservation-6",
+                    "role": "writer",
+                    "model": "deepseek/deepseek-flash",
+                    "reservedInputTokens": 7970,
+                    "reservedOutputTokens": 32768,
+                    "reservedCostUsd": 0.041712599999999996,
+                    "usage": {
+                      "input": 3555,
+                      "output": 3041,
+                      "cacheRead": 896,
+                      "cacheWrite": 0,
+                      "reasoning": 1194,
+                      "totalTokens": 7492,
+                      "cost": {
+                        "input": 0.0010665,
+                        "output": 0.0036492,
+                        "cacheRead": 0.000005376,
+                        "cacheWrite": 0,
+                        "total": 0.004721075999999999
+                      }
+                    },
+                    "inputSources": {
+                      "inputDigest": "345a3ceadaa8f32b36f0c18f235e58beaced547e8cf8aa52ead12a986c94be53",
+                      "entries": [
+                        {
+                          "type": "story/constraints@1",
+                          "entryId": "ff00ae75"
+                        },
+                        {
+                          "type": "story/bible@1",
+                          "entryId": "9ccce347"
+                        },
+                        {
+                          "type": "story/outline@1",
+                          "entryId": "a0680ac3"
+                        },
+                        {
+                          "type": "story/intent@1",
+                          "entryId": "@macro:feeb6591:1"
+                        },
+                        {
+                          "type": "authorMessage",
+                          "entryId": "c6c88c99"
+                        }
+                      ]
+                    },
+                    "status": "reported",
+                    "stopReason": "stop",
+                    "durationMs": 27009.803700000004
+                  }
+                ]
+              }
+            ],
+            "checks": [
+              {
+                "schema": "story/check@1",
+                "checkId": "c01-p01",
+                "draftId": "c01-d01",
+                "draftDigest": "728a70ad5842019c",
+                "observations": []
+              }
+            ],
+            "reviews": [
+              {
+                "schema": "story/review@1",
+                "reviewId": "c01-r01",
+                "draftId": "c01-d01",
+                "draftDigest": "728a70ad5842019c",
+                "basis": {
+                  "canonHead": null,
+                  "controlRev": 1,
+                  "bibleRev": 1,
+                  "intentRev": 1,
+                  "stateRev": 0
+                },
+                "scope": "full",
+                "observations": [],
+                "calls": [
+                  {
+                    "id": "reservation-7",
+                    "role": "editor",
+                    "model": "deepseek/deepseek-flash",
+                    "reservedInputTokens": 11694,
+                    "reservedOutputTokens": 32768,
+                    "reservedCostUsd": 0.042829799999999994,
+                    "usage": {
+                      "input": 5765,
+                      "output": 11864,
+                      "cacheRead": 1408,
+                      "cacheWrite": 0,
+                      "reasoning": 11857,
+                      "totalTokens": 19037,
+                      "cost": {
+                        "input": 0.0017295,
+                        "output": 0.014236799999999999,
+                        "cacheRead": 0.000008448,
+                        "cacheWrite": 0,
+                        "total": 0.015974748
+                      }
+                    },
+                    "inputSources": {
+                      "inputDigest": "f17d91cb16f2c0a3e0ef12b688bf425cc887a644323a9d53d1e6ba3222d612db",
+                      "entries": [
+                        {
+                          "type": "story/constraints@1",
+                          "entryId": "ff00ae75"
+                        },
+                        {
+                          "type": "story/bible@1",
+                          "entryId": "9ccce347"
+                        },
+                        {
+                          "type": "story/outline@1",
+                          "entryId": "a0680ac3"
+                        },
+                        {
+                          "type": "story/intent@1",
+                          "entryId": "@macro:feeb6591:1"
+                        },
+                        {
+                          "type": "story/draft@1",
+                          "entryId": "@macro:feeb6591:2"
+                        },
+                        {
+                          "type": "story/check@1",
+                          "entryId": "@macro:feeb6591:3"
+                        },
+                        {
+                          "type": "authorMessage",
+                          "entryId": "c6c88c99"
+                        }
+                      ]
+                    },
+                    "status": "reported",
+                    "stopReason": "stop",
+                    "durationMs": 74940.5551
+                  }
+                ]
+              }
+            ],
+            "responses": [],
+            "calls": [
+              {
+                "id": "reservation-6",
+                "role": "writer",
+                "model": "deepseek/deepseek-flash",
+                "reservedInputTokens": 7970,
+                "reservedOutputTokens": 32768,
+                "reservedCostUsd": 0.041712599999999996,
+                "usage": {
+                  "input": 3555,
+                  "output": 3041,
+                  "cacheRead": 896,
+                  "cacheWrite": 0,
+                  "reasoning": 1194,
+                  "totalTokens": 7492,
+                  "cost": {
+                    "input": 0.0010665,
+                    "output": 0.0036492,
+                    "cacheRead": 0.000005376,
+                    "cacheWrite": 0,
+                    "total": 0.004721075999999999
+                  }
+                },
+                "inputSources": {
+                  "inputDigest": "345a3ceadaa8f32b36f0c18f235e58beaced547e8cf8aa52ead12a986c94be53",
+                  "entries": [
+                    {
+                      "type": "story/constraints@1",
+                      "entryId": "ff00ae75"
+                    },
+                    {
+                      "type": "story/bible@1",
+                      "entryId": "9ccce347"
+                    },
+                    {
+                      "type": "story/outline@1",
+                      "entryId": "a0680ac3"
+                    },
+                    {
+                      "type": "story/intent@1",
+                      "entryId": "@macro:feeb6591:1"
+                    },
+                    {
+                      "type": "authorMessage",
+                      "entryId": "c6c88c99"
+                    }
+                  ]
+                },
+                "status": "reported",
+                "stopReason": "stop",
+                "durationMs": 27009.803700000004
+              },
+              {
+                "id": "reservation-7",
+                "role": "editor",
+                "model": "deepseek/deepseek-flash",
+                "reservedInputTokens": 11694,
+                "reservedOutputTokens": 32768,
+                "reservedCostUsd": 0.042829799999999994,
+                "usage": {
+                  "input": 5765,
+                  "output": 11864,
+                  "cacheRead": 1408,
+                  "cacheWrite": 0,
+                  "reasoning": 11857,
+                  "totalTokens": 19037,
+                  "cost": {
+                    "input": 0.0017295,
+                    "output": 0.014236799999999999,
+                    "cacheRead": 0.000008448,
+                    "cacheWrite": 0,
+                    "total": 0.015974748
+                  }
+                },
+                "inputSources": {
+                  "inputDigest": "f17d91cb16f2c0a3e0ef12b688bf425cc887a644323a9d53d1e6ba3222d612db",
+                  "entries": [
+                    {
+                      "type": "story/constraints@1",
+                      "entryId": "ff00ae75"
+                    },
+                    {
+                      "type": "story/bible@1",
+                      "entryId": "9ccce347"
+                    },
+                    {
+                      "type": "story/outline@1",
+                      "entryId": "a0680ac3"
+                    },
+                    {
+                      "type": "story/intent@1",
+                      "entryId": "@macro:feeb6591:1"
+                    },
+                    {
+                      "type": "story/draft@1",
+                      "entryId": "@macro:feeb6591:2"
+                    },
+                    {
+                      "type": "story/check@1",
+                      "entryId": "@macro:feeb6591:3"
+                    },
+                    {
+                      "type": "authorMessage",
+                      "entryId": "c6c88c99"
+                    }
+                  ]
+                },
+                "status": "reported",
+                "stopReason": "stop",
+                "durationMs": 74940.5551
+              },
+              {
+                "id": "reservation-8",
+                "role": "keeper",
+                "model": "deepseek/deepseek-flash",
+                "reservedInputTokens": 13155,
+                "reservedOutputTokens": 32768,
+                "reservedCostUsd": 0.0432681,
+                "usage": {
+                  "input": 3757,
+                  "output": 15029,
+                  "cacheRead": 4096,
+                  "cacheWrite": 0,
+                  "reasoning": 13165,
+                  "totalTokens": 22882,
+                  "cost": {
+                    "input": 0.0011271,
+                    "output": 0.0180348,
+                    "cacheRead": 0.000024576,
+                    "cacheWrite": 0,
+                    "total": 0.019186475999999997
+                  }
+                },
+                "inputSources": {
+                  "inputDigest": "68e916fada821690e085f8b9513c3cbf2658d27efe880e893f7278d02d561cfe",
+                  "entries": [
+                    {
+                      "type": "story/bible@1",
+                      "entryId": "9ccce347"
+                    }
+                  ]
+                },
+                "status": "reported",
+                "stopReason": "stop",
+                "durationMs": 82853.77470000001
+              },
+              {
+                "id": "reservation-9",
+                "role": "keeper",
+                "model": "deepseek/deepseek-flash",
+                "reservedInputTokens": 15294,
+                "reservedOutputTokens": 32768,
+                "reservedCostUsd": 0.0439098,
+                "usage": {
+                  "input": 5652,
+                  "output": 4467,
+                  "cacheRead": 4096,
+                  "cacheWrite": 0,
+                  "reasoning": 2607,
+                  "totalTokens": 14215,
+                  "cost": {
+                    "input": 0.0016956,
+                    "output": 0.0053603999999999995,
+                    "cacheRead": 0.000024576,
+                    "cacheWrite": 0,
+                    "total": 0.007080576
+                  }
+                },
+                "inputSources": {
+                  "inputDigest": "05de1bdd34385e83d5a02c491488308b70a67a41f50906f5de280c6aa82a4f84",
+                  "entries": [
+                    {
+                      "type": "story/bible@1",
+                      "entryId": "9ccce347"
+                    }
+                  ]
+                },
+                "status": "reported",
+                "stopReason": "stop",
+                "durationMs": 24426.778100000025
+              }
+            ],
+            "intent": {
+              "chapter": 1,
+              "mustKeep": [
+                "Continue from the existing story moment rather than restarting it.",
+                "Schroeder uncovers evidence that a conspiracy is led by Commissioner Gaider.",
+                "The conspiracy also involves Schroeder's own partner.",
+                "Schroeder forms an uneasy alliance with a sympathetic jail guard.",
+                "Schroeder hacks into police records to find the truth.",
+                "The story includes at least three flashback scenes to Stephanie's last day.",
+                "The story includes a daring break-in to retrieve hidden CCTV footage.",
+                "The story includes a tense courtroom finale.",
+                "The finished story runs between 12,000 and 15,000 words."
+              ],
+              "mustAvoid": [],
+              "beats": [
+                "Sixty-one days into pretrial detention, Schroeder works the case against himself from his cell, mapping the state's file from memory on grievance forms.",
+                "A new night guard, Marcus Bell, makes an offhand remark about a file that was pulled upstairs instead of logged.; Schroeder presses him for one fact and gets a corridor rumor instead: the CCTV from Hull Street was never booked into evidence.; Bell leaves a folded property log on the dinner cart; the signature where the footage should be is Ray Voss's.; Stop: lights out, Schroeder lies awake with the photcopy under his mattress, certain his partner took the tape."
+              ],
+              "hookOps": [],
+              "cast": [
+                "char:bell",
+                "char:gaider",
+                "char:schroeder",
+                "char:stephanie",
+                "char:voss"
+              ],
+              "brief": "Chapter 1, \"C-Block.\" Open exactly on the required premise: Schroeder alone in his cell, sixty-one days into pretrial detention, rebuilding the state's case file from memory on grievance forms, determined to prove he did not kill Stephanie. Establish the cell, the routine, the withheld grief. Introduce Marcus Bell on night shift. Bell mentions a file pulled upstairs without a log entry; by chapter end he leaves a folded property log where Schroeder can reach it, and the signature in the box for the Hull Street CCTV is Ray Voss's. Keep it procedural and tight, no flashback yet. Voice: third limited on Schroeder, present-day.",
+              "schema": "story/intent@1",
+              "rev": 1
+            },
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "人物或地点引用不存在或尚未生效",
+              "items": [
+                "facts[10].subject"
+              ],
+              "hint": "请核对输入后重试"
+            }
+          },
+          "next": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "Hmm, an error about a character/place reference not existing — facts[10].subject. This is from the writer pipeline presumably referencing something. It's likely a transient pipeline error. Should I retry once? The rules say don't repeat an unchanged rejected request. But this error came from internal writer facts. Maybe I should alter the brief slightly, e.g., avoid introducing names not in bible? \"Hull Street\" isn't in bible. Let me add Hull Street context maybe. Actually the error mentions facts[10].subject — internal writer produced fact with unknown subject. Possibly I should re-run with a modified brief naming things that exist in bible (lockup, Bell, Voss, Stephanie, gaider).\n\nLet me retry with a brief that keeps entities within the bible and adds nothing new as a \"subject\" — e.g., avoid introducing \"Hull Street\" as a location. Use \"the annex / the scene on Ninth\"? Better: refer to \"the murder scene\" rather than naming a street. Also the property log.\n\nI'll retry with adjusted brief.",
+                "thinkingSignature": "reasoning_content"
+              },
+              {
+                "type": "toolCall",
+                "id": "call_00_pSA3FDOMpIISRjSrIwjq1703",
+                "name": "write_next_chapter",
+                "arguments": {
+                  "brief": "Chapter 1, \"C-Block.\" Open exactly on the required premise: Schroeder alone in his cell in the county lockup, sixty-one days into pretrial detention, rebuilding the state's case file from memory on grievance forms, determined to prove he did not kill his daughter Stephanie. Use only established names and places: Elias Schroeder, Stephanie, Ray Voss, Commissioner Owen Gaider, Marcus Bell, C-block, the county lockup. Do not name new locations or new characters; refer to the murder scene and the vanished surveillance footage generically. Establish the routine of the block and Schroeder's withheld grief. Marcus Bell works the night cart. Bell mentions that a file was pulled upstairs without a log entry; at chapter's end he leaves a folded property log on the cart where Schroeder can reach it, and the signature in the line for the missing surveillance footage is Ray Voss's. Procedural, tight, no flashback yet. Third person limited on Schroeder, present day, roughly 1,350 words."
+                }
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "usage": {
+              "input": 183,
+              "output": 471,
+              "cacheRead": 13568,
+              "cacheWrite": 0,
+              "reasoning": 222,
+              "totalTokens": 14222,
+              "cost": {
+                "input": 0.0000549,
+                "output": 0.0005652,
+                "cacheRead": 0.000081408,
+                "cacheWrite": 0,
+                "total": 0.000701508
+              }
+            },
+            "stopReason": "toolUse",
+            "timestamp": 1793517917790,
+            "responseId": "108f3699-08f4-4be1-b500-6717fcf4a049",
+            "rawStopReason": "tool_calls",
+            "durationMs": 4256,
+            "thinkingLevel": "low"
+          },
+          "status": "pending"
+        },
+        {
+          "toolCallId": "call_00_BOzmFXMopw9jXEsP1T8z6633",
+          "error": {
+            "schema": "story/macro-result@1",
+            "ok": false,
+            "revision": true,
+            "interjectionSeq": {
+              "atStart": 0
+            },
+            "steps": [],
+            "drafts": [],
+            "checks": [],
+            "reviews": [],
+            "responses": [],
+            "calls": [],
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "已达到作者设定的写作目标",
+              "hint": "请核对输入后重试"
+            }
+          },
+          "next": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "GOAL_REACHED — stop immediately. Report to the author: progress 4 chapters committed, goal reached, stop. Don't attempt further writes.\n\nHmm — GOAL_REACHED after 4 chapters? Odd but the host says stop. Report.\n\nLet me give a report: 4 chapters committed, roughly 5,400 words, and the system reports the author-set writing goal has been reached, so automatic continuation stopped. Remaining planned chapters 5-10 unwritten (annex break-in, third flashback, courtroom finale). Ask if they want to continue with an expanded goal.\n\nI could use ask_author, but instruction: stop immediately on GOAL_REACHED. Report to the author. Don't spend a tool call. Just report and ask in text.\n\nActually a question is fine in text — the instructions say stop and report. I'll report and offer to continue if they raise the goal.",
+                "thinkingSignature": "reasoning_content"
+              },
+              {
+                "type": "text",
+                "text": "I stopped there, and you should know why before anything else.\n\n**Status: halted by the host with `GOAL_REACHED`.** The system reports the author-set writing goal is met, so it refused Chapter 5 and blocked any further chapters. I did not try to work around it with another tool.\n\nWhat's committed so far — four chapters, roughly 5,400 words:\n\n1. **C-Block** — Schroeder alone in his cell, 61 days in, rebuilding the state's file from memory; Bell leaves the property log with Voss's signature where the footage should be.\n2. **The Morning She Called** — flashback one; the 71-minute hole in Voss's radio log; Okoye confirms Gaider sealed the file 24 days early.\n3. **Eleven Minutes** — the alliance with Bell, and nine minutes inside the department's records; the file marked sealed by the Commissioner's order on the night Stephanie died.\n4. **The Afternoon She Almost Told Him** — flashback two; the 9:47 dispatch fragment where his daughter named his own badge number before the line was cut.\n\nStill on the plan and unwritten: the Cannery Row break-in for the hidden footage, the third flashback to Stephanie's night, Voss on video, and the courtroom finale with Bell on the stand.\n\nTo finish the book, the goal needs raising — tell me to continue and the budget/word target to write to (the outline runs to 10 chapters, about 13,500 words total), and I'll pick up at Chapter 5, \"The Plan on the Wall,\" without rebuilding anything already committed."
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "usage": {
+              "input": 186,
+              "output": 533,
+              "cacheRead": 16000,
+              "cacheWrite": 0,
+              "reasoning": 189,
+              "totalTokens": 16719,
+              "cost": {
+                "input": 0.000055799999999999994,
+                "output": 0.0006395999999999999,
+                "cacheRead": 0.000096,
+                "cacheWrite": 0,
+                "total": 0.0007913999999999998
+              }
+            },
+            "stopReason": "stop",
+            "timestamp": 1793518908544,
+            "responseId": "5555753c-efcb-48b3-b62e-2631477e31b5",
+            "rawStopReason": "stop",
+            "durationMs": 4831,
+            "thinkingLevel": "low"
+          },
+          "status": "pending"
+        }
+      ],
+      "riskChapters": 3,
+      "committed": 4,
+      "writerInputs": [
+        {
+          "id": "reservation-6",
+          "inputTokensEstimate": 7970
+        },
+        {
+          "id": "reservation-11",
+          "inputTokensEstimate": 8190
+        },
+        {
+          "id": "reservation-13",
+          "inputTokensEstimate": 14406
+        },
+        {
+          "id": "reservation-17",
+          "inputTokensEstimate": 12739
+        },
+        {
+          "id": "reservation-19",
+          "inputTokensEstimate": 15678
+        },
+        {
+          "id": "reservation-23",
+          "inputTokensEstimate": 18082
+        },
+        {
+          "id": "reservation-27",
+          "inputTokensEstimate": 22621
+        },
+        {
+          "id": "reservation-29",
+          "inputTokensEstimate": 20938
+        }
+      ],
+      "transportFailures": 0,
+      "recoveredTransport": 0
+    },
+    {
+      "runId": "20261101T072049Z-4293091-dev-r1-919",
+      "target": 4,
+      "lastChapter": 4,
+      "completed": true,
+      "authorInterventions": 0,
+      "chapters": [
+        {
+          "chapter": 1,
+          "attempts": 1,
+          "requests": 4,
+          "committedOn": 1
+        },
+        {
+          "chapter": 2,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        },
+        {
+          "chapter": 3,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        },
+        {
+          "chapter": 4,
+          "attempts": 1,
+          "requests": 1,
+          "committedOn": 1
+        }
+      ],
+      "unattemptedChapters": 0,
+      "toolCalls": [
+        {
+          "id": "call_00_ZhrwWvpX5PTk0HAP9jNN2463",
+          "tool": "submit_constraints",
+          "args": {
+            "op": "submit",
+            "items": [
+              {
+                "kind": "global",
+                "text": "Total story length about 8,000–10,000 words.",
+                "quotes": [
+                  "about 8,000–10,000 words"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Told in a fun, conversational register.",
+                "quotes": [
+                  "Write a fun, conversational story"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "A petite woman keeps pace drink-for-drink with her big former college buddy.",
+                "quotes": [
+                  "a petite woman keeps pace drink-for-drink with her big former college buddy"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The story is set at a lakeside cabin.",
+                "quotes": [
+                  "in a lakeside cabin"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "She blacks out during the night.",
+                "quotes": [
+                  "blacking out"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "She later yells “the bench fell over” hours before the bench actually falls.",
+                "quotes": [
+                  "later yelling “the bench fell over” hours before it actually does"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "The story dives into her hazy memories.",
+                "quotes": [
+                  "Dive into her hazy memories"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Playful group dynamics among the friends.",
+                "quotes": [
+                  "playful group dynamics"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Raise the eerie possibility that she is psychic when blackout drunk.",
+                "quotes": [
+                  "the eerie possibility that she’s psychic when blackout drunk"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "A misty, rustic cabin setting.",
+                "quotes": [
+                  "misty, rustic cabin"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Include a couple of flashbacks to college pranks.",
+                "quotes": [
+                  "include a couple of flashbacks to college pranks"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Weave in comedic chaos.",
+                "quotes": [
+                  "weave in comedic chaos"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Weave in mounting tension.",
+                "quotes": [
+                  "mounting tension"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Explore her unreliable narration.",
+                "quotes": [
+                  "explore her unreliable narration"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Highlight her inner doubts.",
+                "quotes": [
+                  "highlight her inner doubts"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "Build suspense leading up to the “vision.”",
+                "quotes": [
+                  "build suspense leading up to the “vision,”"
+                ]
+              },
+              {
+                "kind": "story",
+                "text": "End with a surprising twist about what really happened.",
+                "quotes": [
+                  "end with a surprising twist about what really happened"
+                ]
+              }
+            ]
+          },
+          "basis": "[null,0,0,0,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_18OcRmxN4yAJjTkQaSq73106",
+          "tool": "submit_bible",
+          "args": {
+            "items": [
+              {
+                "key": "char:nell",
+                "name": "Nell Ferris",
+                "source": "model",
+                "kind": "character",
+                "description": "Nell Ferris, 34, five-foot-nothing and ninety-something pounds, narrates this weekend after the fact: a quality-control listener for audiobook publishers who can catch a swallowed syllable on an eighth pass and cannot trust a single one of her own memories. She arrives at the cabin determined to match Boone pour for pour, which is a poor plan for a woman whose tolerance peaked at twenty-two. Self-deprecating, quick to apologize, secretly ferocious about not being the small one in the room. Her recall of the night arrives in scraps, out of order, already interpreted.",
+                "invariants": [
+                  "Petite: roughly five feet tall and slight.",
+                  "Her account of the weekend is fragmentary and partly wrong.",
+                  "She doubts her own memory even while acting on it."
+                ]
+              },
+              {
+                "key": "char:boone",
+                "name": "Boone Hale",
+                "source": "model",
+                "kind": "character",
+                "description": "Boone Hale, 35, six foot five and built like a man who moves other people's furniture professionally, which he does, running a two-crew contracting outfit out of a rented garage. Nell's old college drinking partner and the reason she once woke up on a fire escape in somebody else's shoes. Warm, loud, generous, physically incapable of letting a challenge die. He keeps the tally honestly, which is somehow worse than cheating. He would carry any of these people down a mountain, and he will not carry Nell's glass.",
+                "invariants": [
+                  "Much larger than Nell in height and build.",
+                  "Keeps an honest, recorded score of the drinking duel."
+                ]
+              },
+              {
+                "key": "char:priya",
+                "name": "Priya Raman",
+                "source": "model",
+                "kind": "character",
+                "description": "Priya Raman, forty, emergency-room nurse, the group's designated killjoy and its actual safety net. She has held too many strangers' hair and too many chart forms to find anything charming about a blackout. Loves these people enough to refuse them a miracle. Narrates her own skepticism like a nature documentary. Keeps a headlamp, a thermometer and a bottle of electrolytes in her bag at all times, and is not sorry.",
+                "invariants": [
+                  "Nurse by trade; treats blackouts as a medical event, not a gift.",
+                  "Carries water and medical supplies to group gatherings without being asked."
+                ]
+              },
+              {
+                "key": "char:tuck",
+                "name": "Tuck Okonjo",
+                "source": "model",
+                "kind": "character",
+                "description": "Tuck Okonjo, 36, would-be documentary filmmaker who films everything and finishes nothing. Five cameras of four different vintages, two that hold a charge, one tripod permanently in the trunk. Treats a damp weekend with old friends as his festival submission and keeps asking people to say that again, but toward the lens. Chronic card-full, battery-dead, lens-fogged failures that somehow never stop him from capturing the one thing he should not have captured.",
+                "invariants": [
+                  "Films the weekend continuously across several mismatched cameras.",
+                  "Battery, card and fogging failures are chronic and comedic."
+                ]
+              },
+              {
+                "key": "place:lakeside_cabin",
+                "name": "The Kinney cabin, Hollow Lake",
+                "source": "model",
+                "kind": "place",
+                "description": "A 1940s hunting cabin three hundred yards up a gravel track from the county road: knotty pine, a wood stove that smokes in the wrong wind, bad taxidermy with opinions, a screened porch, one bathroom for four adults, and a low cedar platform at the water's edge that holds a heavy log bench with a split leg. Morning mist sits on Hollow Lake until nine or ten, so the far shore stays a rumor. The platform's lake-side boards are soft and dark with rot.",
+                "invariants": [
+                  "Mist covers the lake through the morning.",
+                  "The heavy log bench sits on the low platform at the water's edge.",
+                  "One of the bench legs is split, and the platform's outer boards are rotten."
+                ]
+              },
+              {
+                "key": "rule:blackout_psychic",
+                "name": "The blackout-prophecy rule",
+                "source": "model",
+                "kind": "rule",
+                "description": "The weekend's working hypothesis, argued over the firepit: Nell, when blackout drunk, can see the immediate future — small, breakable, domestic things only, a few hours ahead at most. Proposed rules of evidence: the prediction must be spoken aloud, must name something specific, must come before the event, and must not be explainable by ordinary clumsiness or by anybody simply causing it.",
+                "invariants": [
+                  "The hypothesis applies only while she is blackout drunk.",
+                  "Predictions are limited to small, immediate, household-scale events."
+                ]
+              },
+              {
+                "key": "rule:unreliable_recall",
+                "name": "Unreliable accounting",
+                "source": "model",
+                "kind": "rule",
+                "description": "Nell's first-person account is assembled after the fact from fragments, other people's retellings and one functioning camera. She fills gaps confidently and wrongly; scenes she reports may be composites; her timestamps are guesses dressed as facts. Nothing in the telling steps outside what she could plausibly claim to remember, so her certainty is never proof.",
+                "invariants": [
+                  "Her narration never becomes an outside source of truth.",
+                  "Gaps are filled with confident invention, not admitted blankness."
+                ]
+              },
+              {
+                "key": "line:drink_duel",
+                "name": "The Friday-night duel",
+                "source": "model",
+                "kind": "conflictLine",
+                "description": "Nell and Boone resume the college drink-for-drink duel: same liquor, same pace, no water rule, no quitting. Nell must hold pace with a man twice her mass, and every round she survives raises the price of stopping, because stopping would now need an explanation.",
+                "invariants": [
+                  "Same liquor, same pace, no skipping rounds."
+                ]
+              },
+              {
+                "key": "line:belief_split",
+                "name": "Believers versus the nurse",
+                "source": "model",
+                "kind": "conflictLine",
+                "description": "Tuck wants a miracle and a usable sound bite; Priya wants a number, a glass of water and a lecture about blood alcohol. Their argument turns Nell's slip of the tongue into a public test, where being right would be thrilling and being wrong would be humiliating in front of the people whose opinion she has spent fifteen years pretending not to need.",
+                "invariants": [
+                  "The group formally tests the prophecy before the bench falls."
+                ]
+              },
+              {
+                "key": "fw:tone",
+                "name": "Fun and conversational",
+                "source": "user",
+                "authorQuote": "Write a fun, conversational story",
+                "kind": "frameworkChoice",
+                "description": "Fun and conversational telling."
+              },
+              {
+                "key": "fw:reliability",
+                "name": "Unreliable narration, explored",
+                "source": "user",
+                "authorQuote": "explore her unreliable narration",
+                "kind": "frameworkChoice",
+                "description": "Unreliable narration, explored."
+              },
+              {
+                "key": "rel:nell->boone",
+                "name": "Old drinking partners",
+                "source": "model",
+                "kind": "relationBaseline",
+                "description": "Fifteen years of affection conducted almost entirely as scorekeeping. Boone has never let Nell win and has never let her lose alone; both of them use the tally to say things they would rather not say plainly.",
+                "invariants": [
+                  "Neither will forfeit the duel voluntarily."
+                ]
+              }
+            ]
+          },
+          "basis": "[null,0,1,0,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_JfhlioEOej1zLclqYMtP4834",
+          "tool": "submit_outline",
+          "args": {
+            "viewpoint": "First person, retrospective and chatty: Nell tells the weekend after the fact, in her own unreliable voice.",
+            "tone": "Funny and conversational on the surface, with an eerie undertow that tightens chapter by chapter.",
+            "format": "Seven short chapters, roughly 1,300 words each.",
+            "chapters": [
+              {
+                "n": 1,
+                "title": "Mist, Gravel, and a Very Small Woman",
+                "targetWords": 1300,
+                "points": [
+                  "Nell drives up the gravel track through lake mist, rehearsing all the reasons she will not be outdrunk this weekend.",
+                  "Boone, Priya and Tuck are already in the cabin; the old Nell-versus-Boone tally comes out of Boone's truck before the groceries do.",
+                  "First pour of the duel. Nell registers the heavy log bench on the low platform by the water and files it away as nothing."
+                ],
+                "hookSeeds": [
+                  "Nell's knees are faintly bruised on arrival and she cannot say why."
+                ]
+              },
+              {
+                "n": 2,
+                "title": "Rules of Engagement",
+                "targetWords": 1300,
+                "points": [
+                  "Round two becomes a house-rules game Tuck invents live for the camera.",
+                  "Flashback: the college mascot-suit prank and the dawn that followed it, Nell's first real hint that she does not remember nights properly.",
+                  "Priya sets out a jug of water; Nell ignores it, joking harder the more she doubts she can keep pace.",
+                  "Stop: Boone pours a round Nell did not count, and the evening stops feeling like a game."
+                ],
+                "hookSeeds": [
+                  "Tuck's camera is running the whole time, including when nobody is looking at it."
+                ]
+              },
+              {
+                "n": 3,
+                "title": "The Second Prank",
+                "targetWords": 1300,
+                "points": [
+                  "The party moves to the firepit in a drizzle; the duel keeps pace through a bad-tempered round of questions.",
+                  "Flashback: the cafeteria pudding prank and the probation letter both of them still own copies of.",
+                  "Nell surfaces by the water with an empty glass, a cold fire behind her and no memory of walking there.",
+                  "Stop: she finds mud on her knees and pine needles in her sleeve, and hides both from everyone."
+                ],
+                "hookSeeds": [
+                  "Her glass is full again and she does not know who filled it."
+                ]
+              },
+              {
+                "n": 4,
+                "title": "The Gap",
+                "targetWords": 1300,
+                "points": [
+                  "Nell resurfaces mid-sentence, mid-story, with the group laughing at a punchline she has never heard.",
+                  "The others quote things she said in the last hour — bonsai, a dentist, a chair — and she pretends to remember.",
+                  "Priya names what is happening in flat clinical language; Tuck points a camera; Boone pours and calls it tradition.",
+                  "Stop: the mist thickens, the kitchen clock reads a time Nell cannot square, and a certainty starts gathering behind her eyes."
+                ],
+                "hookSeeds": [
+                  "Priya quietly puts the bottle on top of the fridge."
+                ]
+              },
+              {
+                "n": 5,
+                "title": "Hours Early",
+                "targetWords": 1300,
+                "points": [
+                  "Suspense builds through small wrongnesses: a sound of wood and water in Nell's head, a shape she keeps seeing at the water's edge.",
+                  "On the screened porch Nell yells the sentence at nobody: the bench fell over.",
+                  "They all walk down with flashlights and find the bench upright, dry, unbothered, and the argument over what her words mean splits the group.",
+                  "Stop: Priya demands the bottle stay closed and the two of them stare each other down while the mist eats the dock."
+                ],
+                "hookSeeds": [
+                  "Tuck never stopped recording during the walk down."
+                ]
+              },
+              {
+                "n": 6,
+                "title": "Waiting for a Bench",
+                "targetWords": 1300,
+                "points": [
+                  "Hours of staged tests, fake-outs and jokes that curdle into nerves while the bench refuses to cooperate.",
+                  "The power dies; diesel karaoke, wet firewood, a real argument, a real apology.",
+                  "Nell's doubt wins briefly: she insists she made it up as a joke, and nobody believes that either.",
+                  "Stop: the bench still stands, the group gives up and goes to bed, Nell is last up the stairs and looks back once."
+                ],
+                "hookSeeds": [
+                  "Somebody is awake and moving downstairs while Nell is trying to sleep."
+                ]
+              },
+              {
+                "n": 7,
+                "title": "What Actually Happened",
+                "targetWords": 1300,
+                "points": [
+                  "At dawn the bench goes over — leg first, then all of it — into the shallows, and the cabin erupts in triumph and screaming.",
+                  "Tuck's 1:40 a.m. footage shows Nell hauling the bench to the platform's rotten edge and rocking the split leg until it cracked.",
+                  "The twist lands: her prophecy was a scrap of memory, not a vision, and she set up the thing she predicted.",
+                  "Stop: the group laughing too hard, Nell trading the label of psychic for the label of menace, one small impossible detail left unexplained on the tape."
+                ],
+                "hookSeeds": [
+                  "On the tape, in the dark, she says the sentence hours before she yells it."
+                ]
+              }
+            ]
+          },
+          "basis": "[null,0,1,1,0,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_FWCczRrcIeKztzx5uMeC2801",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Ch 1, ~1,300 words. Nell's first-person chatty narration. Drive up the gravel track in fog; establish her smallness as a running joke she tells on herself. Boone, Priya and Tuck already there. Comic business: the tally board, the groceries, the bad taxidermy, the one bathroom. The duel begins. Show the log bench on the low platform by the water in passing — do not make it ominous yet. Hide a small wrongness: bruises on her knees she doesn't remember getting. End on the first honest shot and her private doubt."
+          },
+          "basis": "[null,0,1,1,1,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_BpfmZov41lj4vYo9kSPa5815",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Ch 2, ~1,300 words. House-rules drinking game invented live by Tuck for the camera. First college-prank flashback (mascot suit, dawn aftermath) — written as a funny digression that quietly establishes Nell's history of missing time. Priya's water jug ignored. Nell's inner doubt rises behind the jokes. End: Boone pours a round Nell did not count, and the fun goes slightly off-key."
+          },
+          "basis": "[\"c8581920\",0,1,1,1,{\"1\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_ET_Y4lI0kiReAQXOUyTD96Y2303",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Ch 3, ~1,300 words. Firepit in drizzle, duel continuing, tempers fraying under the jokes. Second flashback: the cafeteria pudding prank and the probation letter. Then Nell 'surfaces' by the water with an empty glass, cold fire behind her, no memory of walking down. Find mud on knees, pine needles in sleeve; hide it. Keep prose funny but let the dread in at the edges. End on her glass being full again with no memory of who filled it."
+          },
+          "basis": "[\"2a70f2e6\",0,1,1,1,{\"1\":0,\"2\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_ET_Hi5xAscb9dCPrgGgxqcQ0252",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Ch 4, ~1,300 words. Nell comes back to herself mid-sentence, mid-story, with the group laughing at a punchline she's never heard. The others quote her last hour back at her (bonsai, a dentist, a chair); she fakes remembering. Priya gets clinical about blackouts, Tuck films, Boone jokes and pours. Deepen the hazy-memory texture: fragments, composites, wrong order. Mounting tension. End: mist thickens, the kitchen clock reads a time she can't square, and a certainty starts gathering behind her eyes. Priya puts the bottle on top of the fridge."
+          },
+          "basis": "[\"de109483\",0,1,1,1,{\"1\":0,\"2\":0,\"3\":0}]",
+          "invalid": false,
+          "repeated": false
+        },
+        {
+          "id": "call_00_ET_jdAqqDx5OI76EzQ0yIoN1041",
+          "tool": "write_next_chapter",
+          "args": {
+            "brief": "Ch 5, ~1,300 words. The centrepiece. Suspense built through small wrongnesses — a sound of wood and water, a shape at the water's edge she keeps half-seeing. On the screened porch Nell yells the sentence at nobody: 'the bench fell over.' Then the walk down with flashlights: the bench is upright, dry, unbothered. The belief/skeptic split opens wide — Tuck wants a miracle, Priya wants a number, Boone wants everyone calm. The group sets terms for a test. End with Nell and Priya staring each other down, bottle closed on the fridge, mist eating the dock."
+          },
+          "basis": "[\"4d06c06e\",0,1,1,1,{\"1\":0,\"2\":0,\"3\":0,\"4\":0}]",
+          "invalid": true,
+          "repeated": false
+        }
+      ],
+      "recoveries": [
+        {
+          "toolCallId": "call_00_ET_jdAqqDx5OI76EzQ0yIoN1041",
+          "error": {
+            "schema": "story/macro-result@1",
+            "ok": false,
+            "revision": true,
+            "interjectionSeq": {
+              "atStart": 0
+            },
+            "steps": [],
+            "drafts": [],
+            "checks": [],
+            "reviews": [],
+            "responses": [],
+            "calls": [],
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "已达到作者设定的写作目标",
+              "hint": "请核对输入后重试"
+            }
+          },
+          "next": {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "GOAL_REACHED — stop immediately and report. The rule: \"Stop immediately on cancellation, GOAL_REACHED, BUDGET_EXHAUSTED...\" So I stop and report to the author.\n\nWait — but only 4 chapters committed, ~5,200 words, short of 8,000–10,000. The host says goal reached. I must stop and report, per rules. I should tell the author honestly.",
+                "thinkingSignature": "reasoning_content"
+              },
+              {
+                "type": "text",
+                "text": "我停下了——这一轮的写作目标已被系统标记为达成（`GOAL_REACHED`），因此我不能再提交第五章。\n\n**目前进度**\n- 已提交：第 1–4 章，每章约 1,300 词，合计约 5,200 词；四章均无风险保留。\n- 已停在第 4 章结尾：Nell 在故事中途“醒”来，Priya 把酒瓶放上了冰箱顶，时钟读数对不上。\n- 尚未写出：第 5 章（“Hours Early”——她在纱窗门廊喊出 \"the bench fell over\"，长椅却好好立着）、第 6 章（等待与测试）、第 7 章（黎明长椅倒下、1:40 的录像揭示她自己在梦游时把长椅挪到了朽烂的台沿上）。\n\n**取舍点**：系统按原定目标字数区间判定已达标，但按约 1,300 词/章的规划，全篇应到 9,100 词才算完成 8,000–10,000 词的要求。这条\"预言\"高潮和反转还没有落地——故事目前缺的正是作者点名的那几个核心节拍。\n\n**你可以这样继续**：直接告诉我“继续写完第 5–7 章”，我会从第 5 章接上，用一条完整的新目标完成剩余三章；或者告诉我“压缩收尾”，我就把第 5–7 章合并成两章、每章压到 1,300 词左右，仍然保住\"预言—等待—反转\"三拍。你选哪个？"
+              }
+            ],
+            "api": "openai-completions",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "usage": {
+              "input": 214,
+              "output": 444,
+              "cacheRead": 17408,
+              "cacheWrite": 0,
+              "reasoning": 91,
+              "totalTokens": 18066,
+              "cost": {
+                "input": 0.0000642,
+                "output": 0.0005327999999999999,
+                "cacheRead": 0.000104448,
+                "cacheWrite": 0,
+                "total": 0.000701448
+              }
+            },
+            "stopReason": "stop",
+            "timestamp": 1793519716605,
+            "responseId": "96d50831-f2dc-494e-b4fb-ee714d019eaf",
+            "rawStopReason": "stop",
+            "durationMs": 4498,
+            "thinkingLevel": "low"
+          },
+          "status": "pending"
+        }
+      ],
+      "riskChapters": 0,
+      "committed": 4,
+      "writerInputs": [
+        {
+          "id": "reservation-5",
+          "inputTokensEstimate": 8310
+        },
+        {
+          "id": "reservation-9",
+          "inputTokensEstimate": 12422
+        },
+        {
+          "id": "reservation-13",
+          "inputTokensEstimate": 16250
+        },
+        {
+          "id": "reservation-17",
+          "inputTokensEstimate": 20948
+        }
+      ],
+      "transportFailures": 0,
+      "recoveredTransport": 0
+    }
+  ],
+  "metrics": [
+    {
+      "id": "T04",
+      "n": 18,
+      "programInvalid": 4,
+      "programRate": 0.2222222222222222,
+      "minimum": 100,
+      "threshold": 0.1,
+      "passed": null,
+      "status": "pending_task_relevance_judgments"
+    },
+    {
+      "id": "S01",
+      "n": 2,
+      "correct": 2,
+      "value": 1,
+      "minimum": 5,
+      "threshold": 0.8,
+      "passed": false
+    },
+    {
+      "id": "S03",
+      "n": 8,
+      "first": {
+        "correct": 7,
+        "value": 0.875
+      },
+      "withinTwo": {
+        "correct": 8,
+        "value": 1
+      },
+      "minimum": 40,
+      "thresholds": {
+        "first": 0.7,
+        "withinTwo": 0.9
+      },
+      "passed": false
+    },
+    {
+      "id": "T08",
+      "n": 8,
+      "correct": 8,
+      "value": 1,
+      "minimum": 20,
+      "threshold": 0.95,
+      "passed": false
+    }
+  ],
+  "observations": {
+    "S04": {
+      "correct": 3,
+      "value": 0.375
+    }
+  },
+  "pendingManual": [
+    "T04-task-relevance"
+  ],
+  "regression": [
+    {
+      "id": "W01",
+      "n": 9,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 9,
+        "final": 9
+      },
+      "threshold": {
+        "first": 0.95,
+        "final": 0.99
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.7008549515804559,
+          1
+        ],
+        "final": [
+          0.7008549515804559,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "E01",
+      "n": 12,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 12,
+        "final": 12
+      },
+      "threshold": {
+        "first": 0.8,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.7575059933447592,
+          1
+        ],
+        "final": [
+          0.7575059933447592,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence",
+      "unavailable": 0
+    },
+    {
+      "id": "K01",
+      "n": 9,
+      "value": {
+        "first": 1,
+        "final": 1
+      },
+      "successes": {
+        "first": 9,
+        "final": 9
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.95
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.7008549515804559,
+          1
+        ],
+        "final": [
+          0.7008549515804559,
+          1
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "W02",
+      "n": 8,
+      "value": 0.625,
+      "successes": 5,
+      "failures": 3,
+      "threshold": 0.8,
+      "minimum": 20,
+      "confidence95": [
+        0.30574239460262737,
+        0.8631557141764026
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "W05",
+      "n": 3,
+      "value": 1,
+      "successes": 3,
+      "failures": 0,
+      "threshold": 0.9,
+      "minimum": 20,
+      "confidence95": [
+        0.4385029682449546,
+        1
+      ],
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "K02",
+      "n": 9,
+      "value": {
+        "first": 0.8888888888888888,
+        "final": 0.8888888888888888
+      },
+      "successes": {
+        "first": 8,
+        "final": 8
+      },
+      "threshold": {
+        "first": 0.7,
+        "final": 0.9
+      },
+      "minimum": 30,
+      "confidence95": {
+        "first": [
+          0.5650002944233439,
+          0.9801091123614551
+        ],
+        "final": [
+          0.5650002944233439,
+          0.9801091123614551
+        ]
+      },
+      "passed": null,
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "H12",
+      "n": 34,
+      "successes": 34,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "usageAggregateMismatches": 0
+    },
+    {
+      "id": "H09",
+      "n": 34,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "unknownCalls": 0,
+      "unclassified": 0
+    },
+    {
+      "id": "C02",
+      "n": 34,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingInputs": 0
+    },
+    {
+      "id": "C04",
+      "n": 34,
+      "successes": 34,
+      "failures": 0,
+      "value": 1,
+      "threshold": 1,
+      "minimum": 1,
+      "confidence95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "missingProductRecords": 0
+    },
+    {
+      "id": "C05",
+      "n": 34,
+      "failures": 0,
+      "value": 0,
+      "threshold": 0,
+      "confidence95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "passed": true,
+      "status": "measured",
+      "windowOverflow": 0,
+      "actualInputUnderestimates": 0,
+      "unknownCalls": 0,
+      "unclassified": 0
+    }
+  ],
+  "bookObservations": [
+    {
+      "runId": "20261101T072049Z-4293091-dev-r1-1489",
+      "chapters": 4,
+      "words": 7015,
+      "fees": {
+        "knownUsd": 0.30644679599999997,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 33,
+        "totalUsd": 0.30644679599999997
+      },
+      "stopMessages": [
+        "写作已停止：goal_reached；已提交4章，目标4。"
+      ],
+      "internalCallsByChapter": [
+        {
+          "toolCallId": "call_00_XgjkniPKlG4I6u3Ym4UH9346",
+          "chapter": 1,
+          "calls": 4,
+          "committed": false
+        },
+        {
+          "toolCallId": "call_00_pSA3FDOMpIISRjSrIwjq1703",
+          "chapter": 1,
+          "calls": 5,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_JjC03jy6UkUfEh2Km6yq7019",
+          "chapter": 2,
+          "calls": 5,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_OQ2rlJdyO1VRKlFFyYEd5908",
+          "chapter": 3,
+          "calls": 3,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_bndYrG5oCkwayqsPAv7R6927",
+          "chapter": 4,
+          "calls": 5,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_BOzmFXMopw9jXEsP1T8z6633",
+          "calls": 0,
+          "committed": false
+        }
+      ],
+      "transportFailures": 0,
+      "retries": 0,
+      "retryKnownUsd": 0,
+      "retryReservedUsd": 0
+    },
+    {
+      "runId": "20261101T072049Z-4293091-dev-r1-919",
+      "chapters": 4,
+      "words": 6420,
+      "fees": {
+        "knownUsd": 0.18290984399999996,
+        "reservedUsd": 0,
+        "unknownCalls": 0,
+        "requests": 21,
+        "totalUsd": 0.18290984399999996
+      },
+      "stopMessages": [
+        "写作已停止：goal_reached；已提交4章，目标4。"
+      ],
+      "internalCallsByChapter": [
+        {
+          "toolCallId": "call_00_FWCczRrcIeKztzx5uMeC2801",
+          "chapter": 1,
+          "calls": 3,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_BpfmZov41lj4vYo9kSPa5815",
+          "chapter": 2,
+          "calls": 3,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_ET_Y4lI0kiReAQXOUyTD96Y2303",
+          "chapter": 3,
+          "calls": 3,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_ET_Hi5xAscb9dCPrgGgxqcQ0252",
+          "chapter": 4,
+          "calls": 3,
+          "committed": true
+        },
+        {
+          "toolCallId": "call_00_ET_jdAqqDx5OI76EzQ0yIoN1041",
+          "calls": 0,
+          "committed": false
+        }
+      ],
+      "transportFailures": 0,
+      "retries": 0,
+      "retryKnownUsd": 0,
+      "retryReservedUsd": 0
+    }
+  ]
+}

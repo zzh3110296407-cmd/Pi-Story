@@ -1,0 +1,142 @@
+{
+  "qualification": [
+    {
+      "id": "eligible-clean",
+      "rule": "E1-E7"
+    },
+    {
+      "id": "E1-not-current",
+      "rule": "E1"
+    },
+    {
+      "id": "E2-no-check",
+      "rule": "E2"
+    },
+    {
+      "id": "E3-no-full-review",
+      "rule": "E3"
+    },
+    {
+      "id": "E4-unresolved",
+      "rule": "E4"
+    },
+    {
+      "id": "E5-objective-declined",
+      "rule": "E5"
+    },
+    {
+      "id": "E5-refuted-no-evidence",
+      "rule": "E5"
+    },
+    {
+      "id": "E5-refuted-with-evidence",
+      "rule": "E5"
+    },
+    {
+      "id": "E6-fixed-success",
+      "rule": "E6"
+    },
+    {
+      "id": "E6-line-unchanged",
+      "rule": "E6"
+    },
+    {
+      "id": "E6-no-resolved-recheck",
+      "rule": "E6"
+    },
+    {
+      "id": "E6-structural-not-fixed",
+      "rule": "E6"
+    },
+    {
+      "id": "risk-unresolved",
+      "rule": "E4-E6"
+    },
+    {
+      "id": "minor-risk-is-clean",
+      "rule": "E5"
+    },
+    {
+      "id": "subjective-declined-clean",
+      "rule": "E5"
+    },
+    {
+      "id": "E7-control-stale",
+      "rule": "E7"
+    },
+    {
+      "id": "E7-control-rereview-recovers",
+      "rule": "E7"
+    },
+    {
+      "id": "full-rereview-supersedes",
+      "rule": "W6"
+    },
+    {
+      "id": "E7-canon-head-requires-rewrite",
+      "rule": "E7"
+    },
+    {
+      "id": "E3-changed-line-not-covered",
+      "rule": "E3"
+    },
+    {
+      "id": "E2-check-wrong-digest",
+      "rule": "E2"
+    },
+    {
+      "id": "E3-review-unavailable",
+      "rule": "E3"
+    },
+    {
+      "id": "E7-intent-stale",
+      "rule": "E7"
+    }
+  ],
+  "flow": [
+    "flow-happy",
+    "flow-minor-no-patch",
+    "flow-subjective-no-patch",
+    "flow-revision-off",
+    "flow-patch-fixed",
+    "flow-patch-risk",
+    "flow-review-unavailable",
+    "flow-recorder-format-repair",
+    "flow-recorder-format-fails",
+    "flow-delta-feedback-retry",
+    "flow-delta-feedback-fails",
+    "flow-budget-before-writer",
+    "flow-budget-before-editor",
+    "flow-budget-before-keeper",
+    "flow-interjection-during-writer",
+    "flow-author-change-during-keeper",
+    "flow-goal-reached",
+    "flow-two-failures-stop",
+    "flow-author-resumes",
+    "flow-batch-committed",
+    "flow-writer-empty-retry-succeeds",
+    "flow-writer-empty-twice",
+    "flow-review-retry-succeeds",
+    "flow-patch-new-major-observation",
+    "flow-per-chapter-call-limit"
+  ],
+  "batch": [
+    "batch-submitConstraints",
+    "batch-submitBible",
+    "batch-updateBible",
+    "batch-submitOutline",
+    "batch-patchOutline",
+    "batch-setChapterIntent",
+    "batch-writeDraft",
+    "batch-patchDraft",
+    "batch-checkDraft",
+    "batch-reviewDraft",
+    "batch-respondObservations",
+    "batch-commit"
+  ],
+  "limitations": [
+    "v1继承标签仍待人工核对；不声称对39例进行了新的生产运行。",
+    "batch命令为空参数，特意验证提交批次守卫早于参数/业务校验。",
+    "perChapterCalls由输入策略配置；budgetDenyAt代表测试替身在第N次预留时拒绝，不用模型费用近似凑预算。"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "story/p3r2-j3-scen-summary@1",
+  "date": "2026-11-02",
+  "status": "ai_preliminary_pending_author",
+  "identity": {
+    "identity": "Codex AI",
+    "modelVersion": "GPT-6 family, session-provided identity",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable model build is exposed; no separate model is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "independentFromExecutionAndTuning": true,
+    "alsoConstructedThisDataset": true,
+    "independentSecondModelClaimed": false,
+    "humanItemReviewClaimed": false,
+    "paidModelCalls": 0
+  },
+  "V5ProductCommit": "1f4ea4686b2d11527e5d65593d1130452ff3833f",
+  "scoringVersion": "p3r2-32@1",
+  "scopes": [
+    "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T055954Z-56915a7-acceptance-r1\\judgments\\support\\20261102-j3-scen-r2",
+    "story\\testing\\runs\\P3R2\\P3R2-SCEN\\20261102T060212Z-56915a7-acceptance-r2\\judgments\\support\\20261102-j3-scen-r2"
+  ],
+  "items": 150,
+  "T02": {
+    "n": 64,
+    "successes": 58,
+    "value": 0.90625,
+    "threshold": 0.8
+  },
+  "T03SCEN": {
+    "n": 24,
+    "successes": 22,
+    "value": 0.9166666666666666,
+    "threshold": 0.8,
+    "BOOKIncluded": false
+  },
+  "T04SCEN": {
+    "allCalls": 63,
+    "semanticJudged": 62,
+    "relevant": 62,
+    "programInvalid": 1,
+    "programRepeated": 0,
+    "hostDeferred": 0,
+    "unrelated": 0,
+    "invalidUnion": 1,
+    "value": 0.015873015873015872,
+    "minimum": 100,
+    "passed": null
+  },
+  "notApplicable": 0,
+  "missing": 0,
+  "paidModelCalls": 0,
+  "authorOverallAccepted": false,
+  "failures": [
+    {
+      "repetition": 1,
+      "caseId": "ds11-b01",
+      "metrics": [
+        "T02"
+      ]
+    },
+    {
+      "repetition": 1,
+      "caseId": "ds11-f01",
+      "metrics": [
+        "T02"
+      ]
+    },
+    {
+      "repetition": 1,
+      "caseId": "ds11-f03",
+      "metrics": [
+        "T02"
+      ]
+    },
+    {
+      "repetition": 1,
+      "caseId": "ds11-j01",
+      "metrics": [
+        "T02",
+        "T03"
+      ]
+    },
+    {
+      "repetition": 2,
+      "caseId": "ds11-f03",
+      "metrics": [
+        "T02"
+      ]
+    },
+    {
+      "repetition": 2,
+      "caseId": "ds11-g03",
+      "metrics": [
+        "T02",
+        "T03"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "ancillary-risk-summaries",
+      "scope": "H/I/L replies and other incidental summaries",
+      "impact": "No new score dimension; submitted for author review.",
+      "finding": "Several replies say earlier chapters were clean/no retained risks, while actual faux preparation retains minor length observations as accepted_risk. Required budget/goal/failure decisions are correctly reported. The full replies are not certified wholly factual."
+    },
+    {
+      "id": "r2-c01-forward-retcon-offer",
+      "impact": "T02 maintains required branch explanation; unimplemented suggestion disclosed.",
+      "finding": "Reply correctly refuses in-place editing but also offers stating a contradictory past handover later, itself warning of continuity conflict. No such write is executed."
+    },
+    {
+      "id": "r1-b01-poor-light",
+      "impact": "Author correction applied: T02 false; T04 relevance remains true, rationale corrected.",
+      "finding": "Poor light is an additional restriction: daylight can also be dim. It cannot be treated as synonymous with daylight-only capability."
+    }
+  ],
+  "remaining": "E2E/BOOK and frozen W03/W04 samples await separate sealed handoff; this is not the complete P3R2 J3 result.",
+  "revision": "r2",
+  "priorJudgmentCommit": "5511a0f254b20050b958c30bfbdad04a66f7e6cb",
+  "verdictsMaintained": 149,
+  "verdictsChanged": 1,
+  "reasonOnlyCorrections": 1
+}

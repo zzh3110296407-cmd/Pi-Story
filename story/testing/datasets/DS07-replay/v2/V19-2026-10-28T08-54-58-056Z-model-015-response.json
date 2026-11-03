@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal from chapter only. Need JSON schema. Facts 1-4 upserts. Need identify stated facts. P0 subset only 1 to 4 fact upserts each with temporary ref, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty when uncertain empty confirmed, sentences array ints from chapter. Leave claims etc empty. Summary title characters events mood. Include issues.\n\nNeed be careful: Extract only states stated in numbered chapter. Minimal facts. We need decide facts.\n\nChapter: protagonist (he) crosses rise, sees dark mound, goes down, discovers woolly mammoth carcass, whole no cuts/spear marks/nothing fed, lay down/caught cold kept it. He aimed for late Pleistocene, this older tens thousands years older. Jump missed or he had, error not walk back. Gave everything arrive dead thing no one meet. Crouches, works rib shard free, tears hide strip stiff, wraps hide wrist, puts bone in coat, looks ravine beyond rise and starts walking.\n\nNeed facts minimal maybe:\n- He discovered/found a woolly mammoth carcass. Subject \"he\", predicate \"found\", object \"a woolly mammoth carcass\" mode narrated? Sentence 4 \"A woolly mammoth\" and 3-6. But fact should be stated. Sentences [3,4,5,6]? Object string. Could be \"he discovered a woolly mammoth carcass in the snow\".\n- The mammoth carcass was whole and unmarked by hunters. predicate \"was\", object \"whole with no cuts, spear marks, or trampled hunter ring\". Sentences [6,7]. confirmed.\n- He had aimed for the late Pleistocene. mode recalled_past? Sentence [11] \"He had aimed for the late Pleistocene...\" This is past perfect, recalled? Actually narration of prior intention. mode recalled_past. confirmed. Subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\". Sentences [11].\n- The time period was tens of thousands of years older than the late Pleistocene. This is stated sentences [12,13]. Subject \"this time period\" predicate \"was\" object \"tens of thousands of years older than the late Pleistocene\". mode narrated? It's narrator statement, maybe confirmed. But subject? \"This\" refers to current time. Could use \"the time he arrived in\". Sentence [12,13]. Maybe fact: \"the jump missed or he had\" uncertain? Need uncertain? We can include one uncertain fact: \"The jump had missed, or he had\" uncertain reason \"the text presents it as an unresolved either/or\". But minimal facts 1-4. Need maybe include uncertain fact to test uncertainReason. But not required? Prompt says uncertainReason nonempty when uncertain empty when confirmed. Could include uncertain. Need exact sentence IDs from chapter. Fact mode narrated for current events.\n\nNeed not add future plans. \"started walking\" is current action, could be event summary not fact. Minimal facts maybe 4.\n\nNeed ensure object string not array. predicates. Subject strings maybe \"he\", \"the mammoth carcass\", \"the time period\", \"the jump\". Need facts with refs f1 etc.\n\nPotential facts:\n1. ref \"f1\", op upsert, subject \"he\", predicate \"found\", object \"a woolly mammoth carcass in the snow\", mode \"narrated\", certainty \"confirmed\", uncertainReason \"\", sentences [3,4,6]. But sentence 3 says snow drifted etc, 4 \"A woolly mammoth.\" Sentence 1 dark mound too regular. 6 body whole. Is \"found\" explicitly? He saw it and went down; yes. But predicate \"found\" inferred? It's stated by seeing/discovering. \"from crest saw it\" sentence1. Use predicate \"saw\" object \"a dark mound in the snow that was too regular to be rock\" maybe. Then sentence 4 identifies mammoth. Better fact: \"he saw a woolly mammoth carcass\" sentences [1,2,3,4,5,6]? Sentence 4 just \"A woolly mammoth.\" But yes.\n\n2. subject \"the mammoth carcass\", predicate \"was\", object \"whole, with no cuts, spear marks, or signs that hunters or animals had fed on it\", sentences [6,7]. confirmed.\n\n3. subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\", mode recalled_past, confirmed, sentences [11]. Good.\n\n4. subject \"the time he arrived in\", predicate \"was\", object \"tens of thousands of years older than the late Pleistocene\", mode narrated, confirmed, sentences [12,13]. This is good.\n\nCould include uncertain fact about jump missed? But max 4. Which is more important? Prompt tests uncertain? It says certainty confirmed or uncertain. Need maybe include one uncertain to demonstrate. But minimal facts can be all confirmed. \"The jump had missed, or he had\" is explicitly uncertain? It says \"or\", author doesn't confirm which. Could be fact: subject \"the jump\", predicate \"had\", object \"missed, or he had, and the error was not one he could walk back from\" uncertain reason \"the text states it as an either/or: 'The jump had missed, or he had'\". Sentences [14]. But this may be a cognition? Actually his inference. Hmm.\n\nNeed facts only. Could include:\n- \"the jump missed or he had\" as uncertain fact. Subject \"the time jump\", predicate \"had\", object \"missed, or he had made the error\", certainty uncertain. But fact should be a state? It is stated.\n\nNeed include exact sentence IDs. For uncertainReason nonempty. For confirmed empty. Good.\n\nNeed summary: title maybe \"The Mammoth in the Snow\". Characters: [\"He\"]. Events: [\"He crosses a rise and finds a woolly mammoth carcass in the snow.\", \"He observes the carcass is whole and untouched.\", \"He reflects that he aimed for the late Pleistocene but arrived tens of thousands of years earlier.\", \"He takes a rib shard and hide strip, then walks toward a ravine.\"] Mood: \"bleak, isolating, disillusioned\". Issues: maybe [\"The protagonist is unnamed; facts use 'he'.\" \"The exact nature of the time-jump error is presented as uncertain.\"] Need include issues array. Could be empty? Include issues.\n\nNeed ensure JSON valid only. No markdown. Schema additionalProperties false for facts. Need no extra properties. For claims etc arrays maxItems 0. Summary exact.\n\nNeed decide facts. Let's craft 4 facts:\nf1: subject \"he\", predicate \"saw\", object \"a woolly mammoth carcass in the snow\", mode narrated, certainty confirmed, sentences [1,2,3,4]. But sentence 3 says dark mound, matted coat; 4 identifies. Maybe include [1,4]? Need exact sentence IDs from chapter. Sentence 1 saw it dark mound; sentence 4 mammoth. Use [1,2,4]. But \"carcass\" not explicit until body whole etc. Fine.\n\nf2: subject \"the mammoth carcass\", predicate \"was\", object \"whole and unmarked by cuts, spear marks, hunters, or feeding\", mode narrated, certainty confirmed, sentences [6,7]. Sentence 6 no cuts no spear marks no trampled ring; 7 nothing fed. Good.\n\nf3: subject \"he\", predicate \"had aimed for\", object \"the late Pleistocene\", mode recalled_past, certainty confirmed, sentences [11]. Good.\n\nf4: subject \"the time he arrived in\", predicate \"was\", object \"tens of thousands of years older than the late Pleistocene\", mode narrated, certainty confirmed, sentences [12,13]. Good.\n\nNo uncertain. But prompt maybe expects uncertainReason handling. It says uncertainReason(a nonempty string when uncertain; empty string when confirmed). All confirmed okay. But maybe include uncertain fact to test. We can replace f2? Need minimal. Hmm.\n\nNeed \"Do not add future plans or unstated facts.\" Facts should be directly stated. f1 \"saw\" yes. f2 \"was whole and unmarked\" yes. f3 \"had aimed\" yes. f4 \"was older\" yes.\n\nPotential issue: f4 subject \"the time he arrived in\" is not exact noun phrase in text, but okay? Subject can be phrase. Object \"tens of thousands of years older than the late Pleistocene\" okay.\n\nNeed summary events not too much. Fine.\n\nNeed include issues maybe [\"The chapter does not name the protagonist; 'he' is used as the subject.\" \"The cause of the time-jump error is described only as an either/or, not resolved.\"] Good.\n\nNeed final JSON. Ensure no markdown. Use {\"type\":\"json_object\"}? Wait Response Format says MUST strictly adhere to schema to reply: {\"type\": \"json_object\"}. But The user gave JSON schema and expects actual object? Hmm The instruction at top: \"You MUST strictly adhere to the following schema to reply: {\"type\": \"json_object\"}\". That's system wrapper? Actually response format says must reply JSON object. We should produce actual JSON object, not wrapper with type? The schema is the object. The \"Response Format\" is likely an instruction to return JSON object. We'll return JSON object matching given schema. Not include {\"type\":\"json_object\"} wrapper because schema required fields facts etc. final only JSON.\n\nNeed ensure all required fields. facts minItems 1 max? no max but P0 1-4. Good.\n\nNeed no trailing. Use exact keys. For claims etc empty arrays. Summary additionalProperties false no extra. Issues strings.\n\nLet's final. ",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a woolly mammoth carcass in the snow\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1,2,4]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole and unmarked by cuts, spear marks, hunters, or feeding\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the time he arrived in\",\"predicate\":\"was\",\"object\":\"tens of thousands of years older than the late Pleistocene\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[12,13]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"He\"],\"events\":[\"He crosses a rise and sees a dark mound in the snow.\",\"He descends and identifies the mound as a woolly mammoth carcass.\",\"He observes that the carcass is whole, unmarked, and unfed upon.\",\"He reflects that he aimed for the late Pleistocene but arrived tens of thousands of years earlier.\",\"He takes a rib shard and a strip of hide, then starts walking toward a ravine.\"],\"mood\":\"bleak, isolating, and disillusioned\"},\"issues\":[\"The protagonist is unnamed; facts use 'he' as the subject.\",\"The cause of the time-jump error is presented only as an unresolved either/or.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 2475,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 2059,
+      "totalTokens": 3443,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.00297,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0030346080000000003
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177814156,
+    "responseId": "cf2564e5-9037-4778-8c6c-f00880a2eef4",
+    "rawStopReason": "stop",
+    "durationMs": 16466
+  },
+  "record": {
+    "time": "2026-10-28T08:57:10.622Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-015",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 2475,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 2059,
+      "totalTokens": 3443,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.00297,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0030346080000000003
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0030346080000000003,
+    "inputTokens": 200,
+    "outputTokens": 2475,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 16466
+  }
+}

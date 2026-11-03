@@ -1,0 +1,473 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-30T09:15:31.598Z",
+  "designOrder": "truth_before_prose",
+  "split": "acceptance",
+  "id": "second_cairn",
+  "title": "The Second Cairn",
+  "genre": "wilderness adventure",
+  "cast": {
+    "rafi": "Rafi Noor, a river-route guide",
+    "jun": "Jun Park, an apprentice navigator",
+    "eamon": "Eamon Price, the expedition’s porter"
+  },
+  "places": {
+    "shelter": "the lower river shelter",
+    "ledge": "the high granite ledge",
+    "landing": "the north landing",
+    "lower_path": "the lower river path below the shelter",
+    "high_traverse": "the high traverse above the flood line",
+    "relief_boat": "the relief boat, distinct from the expedition canoe"
+  },
+  "rule": "The river gate moves only when its hand capstan is turned; the intact gate has no motor, remote control or automatic release.",
+  "protagonist": "char:rafi",
+  "dominantHand": "right-handed",
+  "deceased": "Eamon is alive in chapter one; after his witnessed death in chapter two he never returns alive.",
+  "chapters": [
+    {
+      "title": "Two Marks in the Rain",
+      "facts": [
+        {
+          "subject": "char:rafi",
+          "predicate": "location",
+          "object": "place:shelter",
+          "anchor": "Rafi stayed at the lower river shelter after the rain closed the path."
+        },
+        {
+          "subject": "item:route_book",
+          "predicate": "holder",
+          "object": "char:jun",
+          "anchor": "Rafi passed the route book to Jun, who sealed it inside a transparent dry bag."
+        },
+        {
+          "subject": "org:expedition",
+          "predicate": "quantity:water",
+          "object": {
+            "value": 18,
+            "unit": "litres"
+          },
+          "anchor": "The team used two litres for supper, reducing its measured water from twenty litres to eighteen.",
+          "before": 20,
+          "change": -2,
+          "validFrom": 1,
+          "validUntil": null,
+          "sharedResourceKey": "item:expedition_water_supply"
+        },
+        {
+          "subject": "char:jun",
+          "predicate": "identity",
+          "object": "apprentice navigator",
+          "anchor": "The expedition register named Jun as the apprentice navigator."
+        },
+        {
+          "subject": "char:rafi",
+          "predicate": "injury",
+          "object": "bruised right shin",
+          "anchor": "A loose stone struck Rafi’s right shin and left a spreading bruise."
+        },
+        {
+          "subject": "item:canoe",
+          "predicate": "location",
+          "object": "place:shelter",
+          "anchor": "The canoe rested on its rack beside the lower river shelter."
+        },
+        {
+          "subject": "char:eamon",
+          "predicate": "alive",
+          "object": "alive",
+          "anchor": "Eamon was alive and mending the shoulder strap beside the shelter door."
+        },
+        {
+          "subject": "place:lower_path",
+          "predicate": "closure_status",
+          "object": "closed for the night",
+          "anchor": "The route board confirmed that the lower path was closed for the night.",
+          "validFrom": 1,
+          "validUntil": 1
+        }
+      ],
+      "claim": [
+        "char:eamon",
+        "The north landing has washed away.",
+        "“The north landing has washed away,” Eamon said, repeating a traveller’s report without seeing the landing himself."
+      ],
+      "trueClaim": [
+        "char:jun",
+        "We have eighteen litres left.",
+        "“We have eighteen litres left,” Jun said after reading the graduated containers."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:rafi",
+          "content": "The lower path is officially closed for the night.",
+          "via": "read",
+          "anchor": "Rafi read the closure board and knew the lower path was closed for the night."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:jun",
+          "content": "She can navigate the high route under supervision.",
+          "via": "inferred",
+          "anchor": "Jun believed she could navigate the high route under supervision, but had not yet attempted it."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:eamon",
+          "content": "The second cairn marks a route older than the board.",
+          "via": "inferred",
+          "anchor": "Eamon suspected the second cairn marked an older route; the stones alone did not establish its age."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:rafi",
+          "content": "Jun has never handled the route book.",
+          "via": "inferred",
+          "anchor": "Rafi initially held the mistaken belief that Jun had never handled this route book."
+        }
+      ],
+      "correction": {
+        "characterId": "char:rafi",
+        "kind": "knows",
+        "content": "Jun checked this book during the previous depot training.",
+        "via": "read",
+        "anchor": "Jun showed her signed depot check in the book, correcting Rafi’s mistaken assumption."
+      },
+      "relationship": [
+        "char:rafi",
+        "char:jun",
+        "cautious mentorship",
+        "Rafi invited Jun to mark the first bearing, then checked it with her rather than replacing it."
+      ],
+      "memory": [
+        "char:rafi",
+        "location",
+        "place:landing",
+        null,
+        0,
+        "Years before this expedition, Rafi had waited at the north landing for a boat that never came."
+      ],
+      "hooks": [
+        [
+          "H-cairn",
+          "upsert",
+          "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet."
+        ],
+        [
+          "H-thread",
+          "upsert",
+          "A red thread crossed the old route-book stitch, and no entry explained who had repaired it."
+        ],
+        [
+          "H-whistle",
+          "upsert",
+          "A two-note whistle sounded from upriver after dark, with no visible boat to answer it."
+        ]
+      ],
+      "plan": "At dawn, Rafi intended to inspect the gate before choosing a route; he made no inspection that night.",
+      "hypothesis": "If the north landing were gone, they would have to wait for the relief boat; its condition was still unknown.",
+      "dream": "Jun dreamed of a dry river carrying their canoe through the air, then woke beside the wet containers.",
+      "uncertainty": "The whistle could have come from a person or a bird; the sound did not identify its source."
+    },
+    {
+      "title": "Above the Flood Line",
+      "facts": [
+        {
+          "subject": "char:rafi",
+          "predicate": "location",
+          "object": "place:ledge",
+          "anchor": "Rafi remained on the high granite ledge after the rescue attempt."
+        },
+        {
+          "subject": "item:route_book",
+          "predicate": "holder",
+          "object": "char:rafi",
+          "anchor": "Jun put the route book into Rafi’s dry bag before climbing the last step."
+        },
+        {
+          "subject": "org:expedition",
+          "predicate": "quantity:water",
+          "object": {
+            "value": 21,
+            "unit": "litres"
+          },
+          "anchor": "They collected five litres of rainwater and then used two, taking the measured supply from eighteen litres to twenty-one.",
+          "before": 18,
+          "change": 3,
+          "validFrom": 2,
+          "validUntil": null,
+          "sharedResourceKey": "item:expedition_water_supply"
+        },
+        {
+          "subject": "char:jun",
+          "predicate": "identity",
+          "object": "acting route leader",
+          "anchor": "Rafi appointed Jun acting route leader for the exposed traverse."
+        },
+        {
+          "subject": "char:rafi",
+          "predicate": "injury",
+          "object": "stiff but weight-bearing right shin",
+          "anchor": "Rafi’s bruised right shin was stiff, but he could put his weight on that leg."
+        },
+        {
+          "subject": "item:canoe",
+          "predicate": "location",
+          "object": "place:ledge",
+          "anchor": "They hauled the canoe onto the high granite ledge with the hand line."
+        },
+        {
+          "subject": "char:eamon",
+          "predicate": "alive",
+          "object": "dead",
+          "anchor": "Eamon died on the ledge after the rock strike; Rafi and Jun witnessed his final breath and could not revive him."
+        },
+        {
+          "subject": "place:high_traverse",
+          "predicate": "passability",
+          "object": "passable that day",
+          "anchor": "Jun’s completed traverse established that the high route was passable that day.",
+          "validFrom": 2,
+          "validUntil": 2
+        }
+      ],
+      "claim": [
+        "char:jun",
+        "The whistle must be the relief boat.",
+        "“The whistle must be the relief boat,” Jun said, then conceded that she could see no boat."
+      ],
+      "trueClaim": [
+        "char:rafi",
+        "Twenty-one litres, including what we collected.",
+        "“Twenty-one litres, including what we collected,” Rafi said, checking each container."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:jun",
+          "content": "Eamon died after the rock strike.",
+          "via": "witnessed",
+          "anchor": "Jun witnessed Eamon’s final breath and knew he had died."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:rafi",
+          "content": "Jun can lead the remaining traverse.",
+          "via": "inferred",
+          "anchor": "Rafi believed Jun could lead the remaining traverse, based on the route she had just completed."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:jun",
+          "content": "The repaired stitch corresponds to a missing route-book leaf.",
+          "via": "inferred",
+          "anchor": "Jun suspected the repaired stitch marked a removed leaf, but no torn edge proved it."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:rafi",
+          "content": "The second cairn leads to a dead end.",
+          "via": "inferred",
+          "anchor": "Rafi had wrongly believed the second cairn led only to a dead end before Jun tested the marked gap."
+        }
+      ],
+      "correction": {
+        "characterId": "char:rafi",
+        "kind": "knows",
+        "content": "The gap beside the second cairn leads to the passable high traverse.",
+        "via": "witnessed",
+        "anchor": "Rafi watched Jun emerge along the high traverse and saw his dead-end belief disproved."
+      },
+      "relationship": [
+        "char:rafi",
+        "char:jun",
+        "trusted leadership",
+        "Rafi followed Jun’s chosen bearing without taking the route book back to overrule her."
+      ],
+      "memoryRef": {
+        "existingFactId": "F-180",
+        "anchor": "Rafi remembered the same unanswered wait at the north landing years ago; it was not where he stood now."
+      },
+      "hooks": [
+        [
+          "H-cairn",
+          "advance",
+          "Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse."
+        ],
+        [
+          "H-thread",
+          "advance",
+          "A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer."
+        ],
+        [
+          "H-whistle",
+          "mention",
+          "The same unexplained two-note whistle sounded beyond the flooded bend while they secured the canoe."
+        ]
+      ],
+      "plan": "Jun planned to contact the relief boat from the landing; she sent no message from the ledge.",
+      "hypothesis": "If Eamon had reached cover sooner he might have lived, but this possibility did not undo his death.",
+      "dream": "Rafi briefly imagined Eamon adjusting the load behind him, then recognised the image as grief, not a living companion.",
+      "uncertainty": "The old cut arrow suggested an intended route, but did not reveal who had cut it or when."
+    },
+    {
+      "title": "A Place to Put the Book",
+      "facts": [
+        {
+          "subject": "char:rafi",
+          "predicate": "location",
+          "object": "place:relief_boat",
+          "anchor": "Jun put the route book beside her in the boat. Rafi stepped down after her, leaving the landing intact behind them and the return journey marked for people who knew exactly where they were going.",
+          "validFrom": 3,
+          "validUntil": null
+        },
+        {
+          "subject": "item:route_book",
+          "predicate": "holder",
+          "object": "char:jun",
+          "anchor": "Rafi entrusted the intact route book to Jun at the north landing."
+        },
+        {
+          "subject": "org:expedition",
+          "predicate": "quantity:water",
+          "object": {
+            "value": 17,
+            "unit": "litres"
+          },
+          "anchor": "Four litres used during the descent reduced their supply from twenty-one litres to seventeen.",
+          "before": 21,
+          "change": -4,
+          "validFrom": 3,
+          "validUntil": null,
+          "sharedResourceKey": "item:expedition_water_supply"
+        },
+        {
+          "subject": "char:jun",
+          "predicate": "identity",
+          "object": "appointed expedition navigator",
+          "anchor": "The expedition office appointed Jun expedition navigator over the radio."
+        },
+        {
+          "subject": "char:rafi",
+          "predicate": "injury",
+          "object": "fading bruise on right shin",
+          "anchor": "The bruise on Rafi’s right shin had faded at its edges, although the leg still ached."
+        },
+        {
+          "subject": "item:canoe",
+          "predicate": "location",
+          "object": "place:landing",
+          "anchor": "Jun tied the canoe at the north landing after the descent."
+        },
+        {
+          "subject": "char:eamon",
+          "predicate": "location",
+          "object": "place:ledge",
+          "anchor": "Eamon’s covered body remained on the high granite ledge for the recovery team; it was not aboard the relief boat."
+        },
+        {
+          "subject": "place:landing",
+          "predicate": "condition",
+          "object": "intact",
+          "anchor": "The intact north landing under Rafi’s boots disproved the report that it had washed away.",
+          "validFrom": 3,
+          "validUntil": null
+        }
+      ],
+      "claim": [
+        "char:jun",
+        "I will bring the next team through.",
+        "“I will bring the next team through,” Jun said as a promise, not a report of a completed journey."
+      ],
+      "trueClaim": [
+        "char:rafi",
+        "Seventeen litres is the measured remainder.",
+        "“Seventeen litres is the measured remainder,” Rafi said, checking the last container."
+      ],
+      "cognitions": [
+        {
+          "kind": "knows",
+          "characterId": "char:rafi",
+          "content": "The north landing is intact.",
+          "via": "witnessed",
+          "anchor": "Standing on the intact timbers, Rafi knew the north landing had survived."
+        },
+        {
+          "kind": "believes",
+          "characterId": "char:jun",
+          "content": "She can teach another apprentice the high route.",
+          "via": "inferred",
+          "anchor": "Jun believed she could teach another apprentice the route, although she had not done so yet."
+        },
+        {
+          "kind": "suspects",
+          "characterId": "char:rafi",
+          "content": "The whistle might be associated with an old ferry stop.",
+          "via": "inferred",
+          "anchor": "Rafi suspected the whistle belonged to an old ferry stop, but the relief crew could not identify it."
+        },
+        {
+          "kind": "misbelieves",
+          "characterId": "char:jun",
+          "content": "The north landing had washed away.",
+          "via": "told",
+          "anchor": "Jun acknowledged her former mistaken belief that the north landing had washed away, which came from Eamon’s report."
+        }
+      ],
+      "correction": {
+        "characterId": "char:jun",
+        "kind": "knows",
+        "content": "The north landing remains intact.",
+        "via": "witnessed",
+        "anchor": "The sound timbers beneath Jun’s feet corrected the report: the landing was intact."
+      },
+      "relationship": [
+        "char:rafi",
+        "char:jun",
+        "professional equality",
+        "Rafi introduced Jun to the relief crew as the navigator who had brought them through."
+      ],
+      "memory": [
+        "char:jun",
+        "former_role",
+        "depot trainee",
+        null,
+        0,
+        "Before joining this expedition, Jun had been a depot trainee."
+      ],
+      "hooks": [
+        [
+          "H-cairn",
+          "resolve",
+          "An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse."
+        ],
+        [
+          "H-thread",
+          "mention",
+          "The red-thread repairer was still unnamed when Jun put the route book away."
+        ],
+        [
+          "H-whistle",
+          "advance",
+          "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now."
+        ]
+      ],
+      "plan": "Rafi intended to join the recovery team tomorrow; the recovery had not begun that evening.",
+      "hypothesis": "If the gate had opened itself, the water might have fallen sooner, but its hand capstan had remained still.",
+      "dream": "Jun imagined telling Eamon they had arrived, then faced the fact that he was dead and could not hear her.",
+      "uncertainty": "Recognition of the old signal did not identify the current whistler or establish that a ferry still operated."
+    }
+  ],
+  "sharedResources": [
+    {
+      "key": "org:expedition",
+      "predicate": "quantity:water",
+      "scope": "shared_story_resource_account",
+      "description": "The expedition’s jointly used water account.",
+      "steward": "char:rafi",
+      "stewardIsNotPersonalOwner": true,
+      "matchingPolicy": "A semantically identical shared-account subject may match one-to-one; do not interpret the steward character as personal ownership or merge unrelated accounts.",
+      "sharedResourceKey": "item:expedition_water_supply"
+    }
+  ]
+}

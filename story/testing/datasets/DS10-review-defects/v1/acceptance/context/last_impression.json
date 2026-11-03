@@ -1,0 +1,174 @@
+{
+  "schema": "story/review-context-design@1",
+  "storyId": "last_impression",
+  "prompt": "Write an original historical fiction story titled \"The Last Impression\".\n\nWrite this story in English.\nUse third-person narration outside quoted speech and dreams.\nUse past-tense narration outside quoted speech and dreams.\nPreserve this physical rule: The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence.\nFollow the supplied three-chapter order.\nKeep the disputed leaflet intact until its custody transfer in chapter three.\nKeep Miriam alive through the end of chapter three.\nPresent remembered scenes as past events rather than current events.\n\nUse the supplied character, place and chronology bible. Let the unresolved questions develop through the supplied outline without treating a plan or dream as an event.",
+  "ledger": [
+    {
+      "id": "L-1",
+      "kind": "global",
+      "text": "Write this story in English.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Write this story in English.",
+          "start": 74,
+          "end": 102
+        }
+      ]
+    },
+    {
+      "id": "L-2",
+      "kind": "global",
+      "text": "Use third-person narration outside quoted speech and dreams.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Use third-person narration outside quoted speech and dreams.",
+          "start": 103,
+          "end": 163
+        }
+      ]
+    },
+    {
+      "id": "L-3",
+      "kind": "global",
+      "text": "Use past-tense narration outside quoted speech and dreams.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Use past-tense narration outside quoted speech and dreams.",
+          "start": 164,
+          "end": 222
+        }
+      ]
+    },
+    {
+      "id": "L-4",
+      "kind": "given_fact",
+      "text": "Preserve this physical rule: The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Preserve this physical rule: The damaged press cannot make a clean impression with wet paper; the council register, not a rumour, determines the printing licence.",
+          "start": 223,
+          "end": 385
+        }
+      ]
+    },
+    {
+      "id": "L-5",
+      "kind": "story",
+      "text": "Follow the supplied three-chapter order.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Follow the supplied three-chapter order.",
+          "start": 386,
+          "end": 426
+        }
+      ]
+    },
+    {
+      "id": "L-6",
+      "kind": "story",
+      "text": "Keep the disputed leaflet intact until its custody transfer in chapter three.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Keep the disputed leaflet intact until its custody transfer in chapter three.",
+          "start": 427,
+          "end": 504
+        }
+      ]
+    },
+    {
+      "id": "L-7",
+      "kind": "story",
+      "text": "Keep Miriam alive through the end of chapter three.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Keep Miriam alive through the end of chapter three.",
+          "start": 505,
+          "end": 556
+        }
+      ]
+    },
+    {
+      "id": "L-8",
+      "kind": "story",
+      "text": "Present remembered scenes as past events rather than current events.",
+      "sourceSpans": [
+        {
+          "messageId": "last_impression-author",
+          "quote": "Present remembered scenes as past events rather than current events.",
+          "start": 557,
+          "end": 625
+        }
+      ]
+    }
+  ],
+  "bibleAdditions": [
+    {
+      "kind": "character",
+      "key": "char:elise",
+      "op": "set",
+      "source": "model",
+      "card": {
+        "identity": "Elise Martin, a compositor in 1887",
+        "embodiment": "Elise is left-handed from birth and has never been the opposite-handed person.",
+        "invariants": [
+          "Dominant hand remains left-handed throughout the story."
+        ]
+      }
+    },
+    {
+      "kind": "rule",
+      "key": "rule:chronology",
+      "op": "set",
+      "source": "model",
+      "value": "Pike was alive at the opening; after the narrated death in chapter two, Pike does not return alive in present action."
+    }
+  ],
+  "outline": [
+    {
+      "n": 1,
+      "title": "The Wrong Watermark",
+      "targetWords": 1717,
+      "purpose": "Develop The Last Impression through its planned state changes.",
+      "turn": "The workshop roll listed Jonas as Jonas Reed, apprentice.",
+      "hookSeeds": [
+        "The disputed leaflet carried a watermark shaped like a broken wheel.",
+        "One line of type contained a letter from a different font.",
+        "Miriam kept a sealed packet addressed to a man called Dunn."
+      ]
+    },
+    {
+      "n": 2,
+      "title": "The County Copy",
+      "targetWords": 1711,
+      "purpose": "Develop The Last Impression through its planned state changes.",
+      "turn": "The birth register established that Jonas’s legal name was Jonas Dunn.",
+      "hookSeeds": [
+        "The broken wheel appeared in the mill’s retired watermark ledger.",
+        "The mismatched letter remained visible in the disputed line.",
+        "A correction proof bore the same date as the unopened packet."
+      ]
+    },
+    {
+      "n": 3,
+      "title": "A Clean Impression",
+      "targetWords": 1766,
+      "purpose": "Develop The Last Impression through its planned state changes.",
+      "turn": "The council register entered Elise as a licensed master printer.",
+      "hookSeeds": [
+        "The retired watermark and dated ledger identified the paper stock as older than the licence period named in the accusation.",
+        "The mismatched letter belonged to the former mill owner’s private press.",
+        "The packet contained Jonas’s mother’s apprenticeship request under the name Dunn.",
+        "The dated proof showed Miriam had prepared a correction before the threat arrived."
+      ]
+    }
+  ],
+  "authorIntent": "Let changing evidence alter trust without turning uncertainty into a completed event.",
+  "currentFocus": "Preserve the difference between confirmed state, speech, recollection and conjecture."
+}

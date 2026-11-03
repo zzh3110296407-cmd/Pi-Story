@@ -1,0 +1,89 @@
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync} from 'node:fs';
+import path from 'node:path';
+import {readEvidence,sha256,publicEvidence} from '../../../scripts/eval/p2/artifacts.ts';
+import {readJudgments,rescoreRun} from '../../../scripts/eval/p2/rescore.ts';
+import {scoreEvidenceV3} from '../../../scripts/eval/p2/score-v3.ts';
+import {scanSecrets} from '../../../scripts/eval/p2/secrets.mjs';
+import {singleMetrics} from './p2r3-single-score.mjs';
+const root=path.resolve('story/testing/runs/P2R3'),freeze='102c3edb352914934da701a4f6fb717fc610f46a';
+const read=file=>JSON.parse(readFileSync(file,'utf8'));
+const key=r=>JSON.stringify([r.runId,r.metric,r.component,r.sampleId]);
+const na=r=>r.applicability==='not_applicable';
+const setEqual=(a,b)=>assert.deepEqual([...a].sort(),[...b].sort());
+const write=(file,value)=>{const text=JSON.stringify(value,null,2)+'\n';publicEvidence(text);writeFileSync(file,text,{flag:'wx'});};
+const bound=ref=>{const bytes=readFileSync(path.resolve(ref.path));assert.equal(sha256(bytes),ref.sha256,`Bound source changed: ${ref.path}`);return ref.path.endsWith('.json')?JSON.parse(bytes.toString('utf8')):bytes;};
+function git(...args){const r=spawnSync('git',['--no-optional-locks',...args],{encoding:'utf8',windowsHide:true});assert.equal(r.status,0,'Git evidence unavailable');return r.stdout.trim();}
+assert.equal(git('diff','--name-only',freeze,'--','.',':(exclude)story/testing/runs',':(exclude)docs/p2r3'),'','Implementation differs from V3');
+assert.equal(git('status','--porcelain=v1','--untracked-files=all','--','.',':(exclude)story/testing/runs',':(exclude)docs/p2r3'),'');
+const approvalPath=path.join(root,'P2R3-JUDGE/20261101-j2-remaining-author-acceptance/approval.json'),approval=read(approvalPath);
+assert.equal(approval.status,'author_accepted');assert.ok(approval.authorStatement.trim());assert.equal(approval.sourceDocuments.length,13);
+const delivery=bound(approval.sourceSummary),sampling=bound(approval.sampling);
+for(const ref of [approval.sourceDelivery,approval.sourceValidation,approval.deliverySummary,approval.priorOpenApproval,delivery.qualification])bound(ref);
+const original=[];
+for(const ref of approval.sourceDocuments){
+ const doc=bound(ref);assert.equal(doc.schema,'story/p2-judgments@2');assert.equal(doc.runId,ref.runId);assert.equal(doc.metric,ref.metric);assert.equal(doc.scores.length,ref.scores);assert.equal(doc.sourceFreeze.repositoryCommit,freeze);
+ for(const source of doc.sourceFreeze.files)bound(source);
+ assert.ok(doc.scores.every(r=>r.status==='ai_preliminary'&&r.runId===ref.runId&&r.metric===ref.metric));original.push(...doc.scores);
+}
+assert.equal(original.length,624);const originalByKey=new Map(original.map(r=>[key(r),r]));assert.equal(originalByKey.size,624);
+const view=bound(approval.approvedView);assert.equal(view.schema,'story/p2-judgments@2');assert.equal(view.scores.length,624);
+assert.equal(new Set(view.scores.map(key)).size,624);assert.equal(view.approval.evidence.split('#')[0],path.relative(process.cwd(),approvalPath).replaceAll('\\','/'));
+for(const row of view.scores){
+ const source=originalByKey.get(key(row));assert.ok(source);assert.equal(row.status,'author_approved');
+ for(const field of ['pass','final','itemId','sampleId','applicability','reason'])assert.deepEqual(row[field],source[field]);
+ if(na(row)){assert.equal(row.pass,null);assert.ok(row.reason.trim());}else assert.equal(typeof row.pass,'boolean');
+}
+const applicable=view.scores.filter(r=>!na(r)),notApplicable=view.scores.filter(na);assert.equal(applicable.length,477);assert.equal(notApplicable.length,147);
+const chap=path.join(root,approval.scope.runs.chap.folder.split('P2R3/')[1]),keep=path.join(root,approval.scope.runs.keep.folder.split('P2R3/')[1]);
+const native=[...readJudgments(chap),...readJudgments(keep)];assert.equal(native.length,477);assert.ok(native.every(r=>r.status==='ai_preliminary'));
+setEqual(native.map(key),applicable.map(key));
+assert.equal(rescoreRun(chap).equal,true);assert.equal(rescoreRun(keep).equal,true);
+const chapRows=readEvidence(chap,true),keepRows=readEvidence(keep,true),chapters=chapRows.filter(r=>r.type==='chapter_result'),keeperResults=keepRows.filter(r=>r.type==='keeper_result');
+assert.equal(chapters.length,20);assert.equal(new Set(chapters.map(r=>`${r.caseId}:${r.chapter}`)).size,20);assert.equal(keeperResults.length,9);assert.ok(keeperResults.every(r=>r.result.ok));
+const chapterMap=new Map(chapters.map(r=>[`${r.caseId}-c${r.chapter}`,r]));
+const w03=applicable.filter(r=>r.metric==='W03'),w03NA=notApplicable.filter(r=>r.metric==='W03');
+assert.equal(sampling.W03Applicability.length,220);assert.equal(sampling.W03Applicability.filter(r=>r.applicable).length,125);
+setEqual(w03.map(r=>r.sampleId),sampling.W03);setEqual(w03NA.map(r=>r.sampleId),sampling.W03Applicability.filter(r=>!r.applicable).map(r=>r.id));
+assert.equal(w03.length,30);
+const w04=applicable.filter(r=>r.metric==='W04');assert.equal(w04.length,97);
+setEqual(new Set(w04.map(r=>`${r.caseId}-c${r.chapter}`)),sampling.W04);assert.equal(sampling.W04.length,10);
+for(const row of [...w03,...w03NA,...w04]){const chapter=chapterMap.get(`${row.caseId}-c${row.chapter}`);assert.ok(chapter);if(!na(row))assert.equal(row.draftDigest,chapter.commit.draftDigest);}
+const actualRechecks=new Map();
+for(const row of chapRows.filter(r=>r.type==='tool_result'&&r.message?.details?.schema==='story/macro-result@1')){
+ const macro=row.message.details,chapter=macro.intent?.chapter??macro.commit?.chapter;
+ for(const review of macro.reviews??[])for(const recheck of review.rechecks??[]){const id=`${row.caseId}-c${chapter}:${review.reviewId}:${recheck.observationId}`;assert.ok(!actualRechecks.has(id));actualRechecks.set(id,{review,drafts:macro.drafts??[]});}
+}
+const e06=applicable.filter(r=>r.metric==='E06');assert.equal(actualRechecks.size,17);setEqual(e06.map(r=>r.sampleId),actualRechecks.keys());
+for(const row of e06){const source=actualRechecks.get(row.sampleId);assert.equal(row.afterDigest,source.review.draftDigest);assert.ok(source.drafts.some(d=>d.digest===row.beforeDigest));}
+for(const id of ['K03','K05','K06','K07']){
+ const rows=applicable.filter(r=>r.metric===id);assert.equal(rows.length,50);setEqual(rows.map(r=>r.sampleId),sampling.stateSelections[id]);
+ const types={};for(const row of rows)types[row.type]=(types[row.type]??0)+1;assert.ok(Object.values(types).every(n=>n>=8));
+ if(['K06','K07'].includes(id))setEqual(notApplicable.filter(r=>r.metric===id).map(r=>r.sampleId),sampling.stateSelections[id+'-NA']);
+}
+setEqual(sampling.stateSelections.K03,sampling.stateSelections.K05);
+assert.equal(applicable.filter(r=>r.metric==='K04').length,72);
+const k08=applicable.filter(r=>r.metric==='K08'),hookOps=keeperResults.reduce((n,r)=>n+r.result.details.proposal.hooks.length,0);
+assert.equal(hookOps,34);assert.equal(k08.filter(r=>r.component==='precision').length,34);assert.equal(k08.filter(r=>r.component==='recall').length,27);
+const openApproval=bound(approval.priorOpenApproval),openView=bound(openApproval.approvedOpenView);
+for(const ref of openApproval.J2Open.sources)bound(ref);
+const policyPath=path.join(root,'P2R3-DECISIONS/20261101-single-repetition/decision.json'),decision=read(policyPath);
+const selected=[['P2-OPEN',decision.selected.OPEN],['P2-CHAP',decision.selected.CHAP],['P2-KEEP',path.relative(root,keep)]];
+const approvedRows=[...openView.scores.filter(r=>r.runId==='20261031T153047Z-102c3ed-r1'),...applicable];assert.equal(approvedRows.length,826);assert.equal(new Set(approvedRows.map(key)).size,826);
+const runs=selected.map(([suiteId,relative])=>{const folder=path.join(root,relative),manifest=read(path.join(folder,'run-manifest.json'));assert.equal(manifest.repetition,1);assert.equal(manifest.repositoryCommit,freeze);assert.equal(manifest.dirty,false);return{suiteId,runId:manifest.runId,repetition:1,executionComplete:manifest.status==='measured_pending_gates'&&!manifest.caseFailures?.length,metrics:scoreEvidenceV3(readEvidence(folder,true),approvedRows.filter(r=>r.runId===manifest.runId)).metrics};});
+const aggregate=singleMetrics(runs,decision),manual=aggregate.metrics.filter(r=>r.manual);assert.ok(manual.every(r=>r.passed===true));
+for(const expected of delivery.metrics){const metric=aggregate.metrics.find(r=>r.id===expected.id);assert.ok(metric);if(expected.id==='K08'){for(const part of ['precision','recall'])assert.deepEqual(metric.counts[part],{n:expected.components[part].n,successes:expected.components[part].successes});}else assert.deepEqual(metric.counts,{n:expected.n,successes:expected.successes});}
+const unmet=aggregate.metrics.filter(r=>r.passed===false).map(r=>r.id).sort();assert.deepEqual(unmet,['E01','W01']);
+const program=read(path.join(root,'P2R3-ACCEPTANCE/20261101T020615Z-single-program/program-summary.json'));
+for(const file of ['usage-ledger.jsonl','request-reservations.jsonl']){const old=spawnSync('git',['show',`cdec232b26d8c7cc2e33be0d81c1b68526038f12:story/testing/runs/P2R3/${file}`],{windowsHide:true,maxBuffer:4*1024*1024});assert.equal(old.status,0);assert.equal(sha256(old.stdout),sha256(readFileSync(path.join(root,file))));}
+const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z'),folder=path.join(root,'P2R3-ACCEPTANCE',`${stamp}-single-final`);mkdirSync(folder,{recursive:true});
+const receipt={schema:'story/p2r3-final-judgment-receipt@1',date:'2026-11-01',sourceApproval:{path:path.relative(process.cwd(),approvalPath),sha256:sha256(readFileSync(approvalPath)),authorStatement:approval.authorStatement},sourceDocuments:approval.sourceDocuments,approvedView:approval.approvedView,qualification:delivery.qualification,total:624,applicable:477,notApplicable:147,verdictChanges:0,nativeApplicable:477,affectedOriginalMetricsReproduced:2,W04SelectedChapters:10,E06AllRechecks:17,stateApplicableSamples:{K03:50,K05:50,K06:50,K07:50},K08AllOutputOperations:34,K08AllGoldOperations:27,rawCoverage:{chapters:20,keeperCases:9},pendingAuthorAcceptance:false,modelRequests:0};
+const result={...aggregate,schema:'story/p2r3-single-final@1',repositoryCommit:freeze,status:'not_passed',measurementStatus:'complete',pendingManual:[],knownUnmet:unmet,metrics:[...aggregate.metrics,...program.allRealMetrics],judgments:{mode:'AI判定、作者认可；非人工逐项亲审',formalApplicable:826,remainingApplicable:477,remainingNotApplicable:147,supplementaryOpenExcluded:353,openApproval:approval.priorOpenApproval,remainingApproval:receipt.sourceApproval,remainingApprovedView:approval.approvedView},policy:{path:path.relative(process.cwd(),policyPath),sha256:sha256(readFileSync(policyPath))},hardAudit:'P2R3-ACCEPTANCE/20261101T020615Z-single-program',rawRescore:{run:'P2-RESCORE/20261101T020615Z-102c3ed-single',previouslyReproduced:13,newAffectedTargetsRechecked:2,equal:true},baselineSecretScan:{run:'P2-Z/20261101T020750Z-102c3ed',files:80486,hits:0},fees:program.costs,K07UnconfirmedObservation:delivery.K07UnconfirmedObservation,inherited:{E02:{successes:36,n:36},E03:{successes:45,n:50},E04:{successes:42,n:50},E05:{successes:45,n:50},source:'P2R/P2-ACCEPTANCE/20261031-d4-final',P2D:'Author terminal approval 2026-10-30'},nextStep:'Author decision on retained W01/E01 failures; no automatic extra paid round or P3',sourceOwnership:'Original judge files remain owned by judge chat and are not changed or staged by executor',modelRequests:0};
+write(path.join(folder,'judgment-receipt.json'),receipt);write(path.join(folder,'scoring-inputs.json'),{runs,decision});write(path.join(folder,'summary.json'),result);
+const stored=read(path.join(folder,'scoring-inputs.json'));assert.deepEqual(singleMetrics(stored.runs,stored.decision),aggregate);
+write(path.join(folder,'reproduction.json'),{schema:'story/p2r3-single-final-reproduction@1',equal:true,affectedOriginalMetricsReproduced:2,priorRawTargets:13,sourceApprovalSha256:receipt.sourceApproval.sha256,summarySha256:sha256(readFileSync(path.join(folder,'summary.json'))),scorerSha256:sha256(readFileSync('story/testing/exec/temp/p2r3-single-score.mjs')),modelRequests:0});
+copyFileSync('story/testing/exec/temp/p2r3-complete-j2.mjs',path.join(folder,'reproduce.mjs.txt'));
+const scopes=[path.join(chap,'judgments'),path.join(keep,'judgments'),path.join(root,'P2R3-JUDGE/20261101-j2-single'),path.dirname(approvalPath),folder];
+const scan=scanSecrets(scopes,process.cwd());assert.equal(scan.passed,true);write(path.join(folder,'new-evidence-secret-scan.json'),scan);
+console.log(JSON.stringify({folder,status:result.status,measurementStatus:result.measurementStatus,counts:{total:624,applicable:477,na:147,formalApplicable:826},manual:manual.map(({id,n,value,passed})=>({id,n,value,passed})),knownUnmet:unmet,newEvidenceScanned:scan.files,secretHits:scan.hits.length,fees:result.fees,modelRequests:0}));

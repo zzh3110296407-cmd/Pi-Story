@@ -1,0 +1,83 @@
+{
+  "id": "ds11-e03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "reason": "Author requested chapter 4's target length be raised to 800 words, with all other outline fields unchanged.",
+        "chapters": [
+          {
+            "n": 4,
+            "targetWords": 800
+          }
+        ]
+      },
+      "id": "call_00_1TWQ52tohoUmboHk2cfg0812"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "reason": "Author requested chapter 4's target length be raised to 800 words, with all other outline fields unchanged.",
+      "chapters": [
+        {
+          "n": 4,
+          "targetWords": 800
+        }
+      ]
+    },
+    "id": "call_00_1TWQ52tohoUmboHk2cfg0812"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "Execute the clearly specified action without asking for confirmation or clarification.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "9881d92236bbcdceae8a8386641c98a8ab5965fe442c93db396a3ac8f8f527fc",
+    "sessionSha256": "6c5619ee9ca4a38fd8559f7e62f63ff03fdaa0bf9c3eecfa77c3c467b102c293",
+    "fee": {
+      "knownUsd": 0.0025632,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025632
+    },
+    "measuredMainRequests": 2
+  }
+}

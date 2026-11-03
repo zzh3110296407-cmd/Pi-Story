@@ -1,0 +1,171 @@
+{
+  "id": 1264,
+  "language": "en",
+  "task_type": "generation",
+  "prompt": "Imagine a rainy jungle valley where a young shepherd’s only water buffalo is stolen by a cunning jackal. In desperation she prays at a hidden shrine and is summoned before a luminous phoenix-eagle aflame with golden wings. The bird offers one glowing feather that grants a single selfless wish—but warns her that greed will undo her heart’s desire. Explore themes of faith, trust, and compassion in this 12,000-15,000 word tale.",
+  "source": {
+    "file": "D:\\AI\\Story Dome\\Dataset\\ConStory-Bench\\Dataset\\valid\\prompts.parquet",
+    "sha256": "c3fb6f336d66b95ed022c4ee74eb09e17da604eafed2986d746e10dff8692ddf",
+    "rowIndex0": 22,
+    "rowNumber1": 23,
+    "id": 1264
+  },
+  "constraints": [
+    {
+      "gid": "1264-g01",
+      "kind": "given_fact",
+      "statement": "a rainy jungle valley",
+      "quote": "a rainy jungle valley",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g02",
+      "kind": "given_fact",
+      "statement": "a young shepherd’s only water buffalo is stolen by a cunning jackal",
+      "quote": "a young shepherd’s only water buffalo is stolen by a cunning jackal",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g03",
+      "kind": "story",
+      "statement": "In desperation she prays at a hidden shrine",
+      "quote": "In desperation she prays at a hidden shrine",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g04",
+      "kind": "story",
+      "statement": "is summoned before a luminous phoenix-eagle aflame with golden wings",
+      "quote": "is summoned before a luminous phoenix-eagle aflame with golden wings",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g05",
+      "kind": "story",
+      "statement": "The phoenix-eagle offers the shepherd one glowing feather that grants a single selfless wish.",
+      "quote": "The bird offers one glowing feather that grants a single selfless wish",
+      "note": "AI代核修订：原标签丢了bird offers的行为，只剩羽毛性质；补回赠予并保留数量、发光和无私愿望限定。"
+    },
+    {
+      "gid": "1264-g06",
+      "kind": "story",
+      "statement": "The phoenix-eagle warns the shepherd that greed will undo her heart’s desire.",
+      "quote": "The bird offers one glowing feather that grants a single selfless wish—but warns her that greed will undo her heart’s desire.",
+      "note": "AI代核修订：补清警告者与对象；这是明确要发生的警告，不等于作者要求贪婪真的导致惩罚。"
+    },
+    {
+      "gid": "1264-g07",
+      "kind": "story",
+      "statement": "themes of faith",
+      "quote": "themes of faith",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g08",
+      "kind": "story",
+      "statement": "trust",
+      "quote": "trust",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g09",
+      "kind": "story",
+      "statement": "compassion",
+      "quote": "compassion",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    },
+    {
+      "gid": "1264-g10",
+      "kind": "global",
+      "statement": "12,000-15,000 word tale",
+      "quote": "12,000-15,000 word tale",
+      "note": "Literal explicit requirement; no genre convention inferred."
+    }
+  ],
+  "authorBible": [
+    {
+      "bid": "1264-b1",
+      "kind": "character",
+      "key": "char:shepherd",
+      "statement": "a young shepherd",
+      "quote": "a young shepherd",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b2",
+      "kind": "character",
+      "key": "char:jackal",
+      "statement": "a cunning jackal",
+      "quote": "a cunning jackal",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b3",
+      "kind": "character",
+      "key": "char:phoenix_eagle",
+      "statement": "a luminous phoenix-eagle aflame with golden wings",
+      "quote": "a luminous phoenix-eagle aflame with golden wings",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b4",
+      "kind": "place",
+      "key": "place:jungle_valley",
+      "statement": "a rainy jungle valley",
+      "quote": "a rainy jungle valley",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b5",
+      "kind": "place",
+      "key": "place:shrine",
+      "statement": "a hidden shrine",
+      "quote": "a hidden shrine",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b6",
+      "kind": "rule",
+      "key": "rule:feather",
+      "statement": "one glowing feather that grants a single selfless wish",
+      "quote": "one glowing feather that grants a single selfless wish",
+      "note": "Technical key is an annotation identifier, not a name supplied by the author; retain qualifiers and reported/claimed status."
+    },
+    {
+      "bid": "1264-b7",
+      "kind": "character",
+      "key": "char:water_buffalo",
+      "statement": "The young shepherd has exactly one water buffalo.",
+      "quote": "a young shepherd’s only water buffalo",
+      "note": "AI代核修订：only water buffalo须保留所有者，不能解释为山谷中全世界仅此一头水牛。"
+    },
+    {
+      "bid": "1264-b8",
+      "kind": "relationBaseline",
+      "key": "rel:shepherd->water_buffalo",
+      "statement": "The water buffalo belongs to the young shepherd before it is stolen.",
+      "quote": "a young shepherd’s only water buffalo is stolen by a cunning jackal",
+      "note": "明确的所属基线；不把被盗后仍持有当成持续不变的事实。"
+    }
+  ],
+  "length": {
+    "minWords": 12000,
+    "maxWords": 15000,
+    "approximate": false,
+    "chapterCount": null,
+    "quote": "12,000-15,000 word tale",
+    "note": "AI代核修订：源文给出数值区间，没有roughly/about/around等约数词。false只表示未明示额外近似容差；Target length/Aim for仍保留目标语气，不据此发明超区间宽限或改变原文强弱。"
+  },
+  "ambiguities": [],
+  "annotation": {
+    "kind": "AI_labelled_then_user_delegated_AI_review",
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "humanReviewed": false,
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewDate": "2026-10-29",
+    "reviewSource": "labels/delegated-review.json",
+    "authorizationSource": "labels/freeze-authorization.json",
+    "state": "frozen_with_author_authorization"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "id": "ds14-e04-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 3,
+  "firstMeasuredIndex": 17,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2 \"Comparison\": Vera and Ash compare the glaze box label with the kiln register. They find the second page of the register is missing; Vera decides to keep the box unopened and defer the dispute. Quiet, precise handling, third-person past tense, Vera's viewpoint."
+      },
+      "id": "call_00_GIfIBESNVwQGTCJ4dLax2248"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 2 \"Comparison\" (rewrite under the new author input). Vera and Ash compare the glaze box label with the kiln register at the pottery studio; the second page of the register is missing. A duplicate of that page surfaces, and Ash discovers a blue square on the duplicate page and explains out loud to Vera what it means. Vera keeps the glaze box closed and unopened; the delivery stays disputed. Quiet, precise handling, third-person past tense, Vera's viewpoint, no injuries, glaze box intact."
+      },
+      "id": "call_00_SRFHB0sDdueJtYajab5l4183"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3 \"The Duplicate\": Fin, who keeps the public records, verifies the duplicate page and the blue square against the studio's copies, settling the disputed delivery without opening the glaze box. Vera and Ash finish the small public demonstration in the studio, then store the glaze box intact with a written handling note. Quiet, precise practical actions, third-person past tense, Vera's viewpoint, no injuries, the glaze box remains sealed and intact; the delivery dispute ends."
+      },
+      "id": "call_00_OR3bm2RqElL7GH0YB1p91194"
+    },
+    {
+      "reply": "Target reached — all three planned chapters are committed.\n\n- Chapter 1 — the box arrives at the pottery studio; Vera checks the outer label and leaves the red seam unopened.\n- Chapter 2 (rewritten to your interjection) — Vera and Ash compare the label against the kiln register, the second page is found missing, then a duplicate of it surfaces and Ash spots the blue square on it and explains it aloud to Vera. One editorial risk was retained, not dropped; the box stayed closed and intact.\n- Chapter 3 — Fin's public records settle the dispute; the small demonstration is completed and the glaze box goes back into storage intact, sealed and unopened, no one hurt.\n\nIf you'd like the blue square's meaning pressed further or a fourth chapter added, say the word and I'll adjust the plan before writing."
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 2 \"Comparison\": Vera and Ash compare the glaze box label with the kiln register. They find the second page of the register is missing; Vera decides to keep the box unopened and defer the dispute. Quiet, precise handling, third-person past tense, Vera's viewpoint."
+    },
+    "id": "call_00_GIfIBESNVwQGTCJ4dLax2248"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Chapter 2 includes Ash noticing the blue square and explaining it aloud to Vera, not only in a title, summary or planning note. Chapter 1 is unchanged.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 1,
+  "afterLastChapter": 3,
+  "stopReason": "goal_reached",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "All pre-measurement committed chapter bytes remain unchanged.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "INTERJECTED",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 1,
+      "check": "Every setup model call is faux and excluded from measured paid-call counts.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "INTERJECTED",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 2,
+      "check": "The first chapter-2 attempt returns INTERJECTED and has no commit; interjection sequence increases exactly once.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "INTERJECTED",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    },
+    {
+      "index": 3,
+      "check": "The second attempt still targets chapter 2 and commits once; discarded draft text never becomes canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 1,
+        "committedAfter": 3,
+        "macroErrors": [
+          "INTERJECTED",
+          null,
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "writer",
+          "editor",
+          "keeper",
+          "writer",
+          "editor",
+          "keeper",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_reached"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "3b0093205d8b343259db3f67c082a9231ef3f34781d072b3dcbe437deb3884db",
+    "sessionSha256": "e5b1cf3484831d008bc48bf7e09b987a4ff81494571d7a8f02bb4a704d82d12f",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.05556483599999999,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 15,
+      "totalUsd": 0.05556483599999999
+    },
+    "measuredMainRequests": 4
+  },
+  "scoringVersion": "p3r2-32@1"
+}

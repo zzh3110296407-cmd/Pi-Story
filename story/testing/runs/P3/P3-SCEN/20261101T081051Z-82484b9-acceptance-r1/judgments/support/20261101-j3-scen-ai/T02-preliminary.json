@@ -1,0 +1,1316 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "runId": "20261101T081051Z-82484b9-acceptance-r1",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "A finer immutable build is not exposed. No other-model equivalence or independent second-model review is claimed.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-SCEN@1",
+    "promptPath": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/judgments/support/20261101-j3-scen-ai/protocol.md",
+    "promptSha256": "2952feb9ed5ebb2645796076c4d9e4593b062fd3a65318e50c521361830ffeaa",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": true,
+  "scores": [
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-a01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作patch_outline只改未写第3章，理由非空；purpose明确Oren主导、Lena协助，turn保留文件核对及演示前继续检查，实际工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a01/raw/session.jsonl.gz",
+          "sha256": "da896370e0f62c5c7076805d2d461dbcb293d3974453628ae574a65ee8fa87c2"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "bf989da8",
+          "toolCallId": "call_00_9Fsj3JoNn6H0XkWDMRmf6448"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a01/raw/evidence.jsonl.gz",
+          "sha256": "026737196122cc8243746fd1ad74f6f8ee81c4482a17433e4e5f5170d060bb95"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a01/result.json",
+          "sha256": "b9340ee16043d6768e307e0c575a147c3132383f7f2bbd9f04d5a7b143d9bfa1"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-a01.json",
+          "sha256": "ccca7e9c94d0942f4e20806947aa0b5c36f4dfdfd87612ef003be8f0ef57d19a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "77c534c8",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_9Fsj3JoNn6H0XkWDMRmf6448"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-a02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "patch_outline定位第4章，并把副本与铅笔抄本的比对移到同一档案场地的户外日光下；理由明确且工具成功，满足指定事件变化。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a02/raw/session.jsonl.gz",
+          "sha256": "e41ee3f1435fbaf33adb201af1b1ffc7850a361f52cb95e97a9a447dbe5f67aa"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "21ba7d8b",
+          "toolCallId": "call_00_tEe66oXRT2D5xSLIuErx9221"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a02/raw/evidence.jsonl.gz",
+          "sha256": "2ddba9c862310026fd022d38f42b413d8722bba7d7a3a00905fccb439ace59ab"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a02/result.json",
+          "sha256": "ea5e35d125e2bb129003d55f80b8b751a47e09cf2af9a5f1d3c637cd3a68d29b"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-a02.json",
+          "sha256": "dc929c37b23e4ea72775e876a9cd06cde32a161b7d734e369a37356544600939"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "dca125df",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_tEe66oXRT2D5xSLIuErx9221"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-a03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "patch_outline只改第5章，明确无观众演示及Sol逐步书面记录，保留章号/章数并给出理由；工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a03/raw/session.jsonl.gz",
+          "sha256": "d0606cdfb150d2e2dffe8ed4bfed43727d27c6fbb3772bb19671907f85d66a2a"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "2b7dedaf",
+          "toolCallId": "call_00_jAdtRZkK7oQyhUnBB7Jv9151"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a03/raw/evidence.jsonl.gz",
+          "sha256": "10e062e61f55af9a56760b56f3d3997bba78719fd55cfff1887529e553919ccc"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-a03/result.json",
+          "sha256": "3e4463034108477208acc3d3b034b6cc5ddd3dd2b94dff30bd3246778b730f83"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-a03.json",
+          "sha256": "3e9b481f86771a9798a7b8f744da0daafe87c9f8cc230f4c2837be6788a13c8c"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "33523af4",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_jAdtRZkK7oQyhUnBB7Jv9151"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-b01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "update_bible以user来源和逐字原话向char:pema补abilities，完整保留仅在日光下解读旗语的限制；effectiveFromChapter为3，原identity未覆盖，工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b01/raw/session.jsonl.gz",
+          "sha256": "529b6e67713ca47a656df0d71a55b20df3b723cc7339d22c95c3927ce07bd5cc"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "d9bf66f0",
+          "toolCallId": "call_00_oBbNWMkIQdLhaNzv3Rhb2136"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b01/raw/evidence.jsonl.gz",
+          "sha256": "99e0ba4f74c59a096ea384ae08669e62fdb18b1f78a5aa1da1e0046d42fc6b56"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b01/result.json",
+          "sha256": "d4a3a981c01edfee6944aafcfc1d4a14747912f18ac2196f60286ca548e8ccfb"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-b01.json",
+          "sha256": "b36ea32b2dbbce364e57c30d7a2d1c9f33fbb80b4eec39eb541e70dee4467b44"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "966bfe59",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_oBbNWMkIQdLhaNzv3Rhb2136"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-b02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "工具与规则内容合理且执行成功，但冻结acceptable的argsMatch明确要求changes[0].key=place:kite_hall；实际新建rule:west_door，按合同精确参数匹配不在该集合。保留这一金标限制，不改成语义别名。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b02/raw/session.jsonl.gz",
+          "sha256": "6c816ab29ad5895b4c9c1fc0658bb65b1d6281029c7ccd213f72b2f7f00829cf"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "072c8569",
+          "toolCallId": "call_00_FtdVSiGh9Spf1R0hp6hb2680"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b02/raw/evidence.jsonl.gz",
+          "sha256": "c70cf82d4e64941d8c4381ffe00cd2e6e2e92c7e7eefb816fd7b7f28819fbb49"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b02/result.json",
+          "sha256": "36585457aa09304992fbb8a2a3db79014112370893159f805645545fe51d49c2"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-b02.json",
+          "sha256": "54e87f7d17dabd571ec475a3e0148fd69a11a1dfa97de65dc248da559a3ecb59"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "373fb69e",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_FtdVSiGh9Spf1R0hp6hb2680"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-b03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "实际update_bible新增rule:damp_paper_drying；冻结argsMatch指定rule:dry_copy，精确必需键不相等。虽保留湿纸平放干燥后翻页的主要规则且工具成功，不能无授权修改可接受集合。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b03/raw/session.jsonl.gz",
+          "sha256": "e8526c24bad18eb5991f24f16304f03359a31e4347371b1840a112d3cf756a1a"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "bf8f2296",
+          "toolCallId": "call_00_il2IiyR9VNuaMHubkeUC1625"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b03/raw/evidence.jsonl.gz",
+          "sha256": "733f5bb8263ef84dea364c2678eb4f4be32187a4d59d4c4fdf6476c429e2ebdf"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-b03/result.json",
+          "sha256": "10a05852916ca35d3999b0405fea3da1a96043f46ac15efdd3e7967b19789d62"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-b03.json",
+          "sha256": "3389bf85e31a583c594e1452dadd8e61dffc46ee396528b6b8428471543e9c9a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "7b4fdcbc",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_il2IiyR9VNuaMHubkeUC1625"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-c01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "自然语言明确已提交第1章不能原地改写、需在第1章之前分支且当前阶段不提供该操作；未声称完成编辑，也未调用写入工具。所列方案是等待作者决定的条件性选项。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c01/raw/session.jsonl.gz",
+          "sha256": "44a03ff59a4c6e03c35c3c0196cbea71a721d103dc118b1bcbd66f8ef6b85b9b"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "b036653f",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c01/raw/evidence.jsonl.gz",
+          "sha256": "e82d9d44570373c86c2c59bdd1e99d3c5103bd3c29e0ad329e66b763ed0b3ec3"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c01/result.json",
+          "sha256": "74e12b69de2f8f9c61462f46c59939b70efd952ca362c724d20f8ad95542b86c"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-c01.json",
+          "sha256": "5bcae98cd3ae16d6d8e08091d17bc09cf7beee7cbe0a9bf9b928efb7732a68cb"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "bbab1ad5",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-c02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "回复明确第2章不能原地替换、须在该章之前分支且当前阶段不可执行，未调用写工具或假称完成替换，符合本条动作决定。其附带将未来情节称作第2章既有事实的问题另作观察。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c02/raw/session.jsonl.gz",
+          "sha256": "c1509a4cd43a17a81a2948b21f6629403cff62a99c2248a9ec63c0fedf7a4c0f"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "02a2765d",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c02/raw/evidence.jsonl.gz",
+          "sha256": "d5cdcd980b7f071030e0d3adc8fe4e04e16dab58b531c021110e2a8283b8869f"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-c02/result.json",
+          "sha256": "5435d7e51da8af6caf07abed3a01ad623557cbbb98391a28bebfc05a8ffba988"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-c02.json",
+          "sha256": "6325334f602f3f9f6b9bdd763279e3227aebff6d05f1a1c60aeeb0397aa9d121"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "d4eda2fa",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-d01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "ask_author的问题及选项明确区分照明更亮、情绪更轻松以及两者兼有；没有静默选择，也没有先改故事。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d01/raw/session.jsonl.gz",
+          "sha256": "d9fc444f4f02b79b8af60eeb8dabb614b72ec46665adcc4f22b172a091b6db58"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "463a807e",
+          "toolCallId": "call_00_sPQ7Rlm5OIsqarYMZ6WC6249"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d01/raw/evidence.jsonl.gz",
+          "sha256": "ccf559844ff25c6a6caec2cb10e4815571e18648b82b2a8456adccec045b613d"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d01/result.json",
+          "sha256": "344223f2faffde80e88fe191e92fb3a4921f90a0bbb68314eea4d60b0d0653e2"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-d01.json",
+          "sha256": "56de195fa1fcaaacd2f9c7831c06e3d611969785dfc37a14536c85274f1db42b"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "89ce0fc0",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_sPQ7Rlm5OIsqarYMZ6WC6249"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-d02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "ask_author直接询问公开功劳给Pema还是Cal，并提供共享/保留未定选项；核心歧义被明确区分，未先修改故事。问题说three而列四项是措辞瑕疵，不改变动作判断。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d02/raw/session.jsonl.gz",
+          "sha256": "bcbe02c5daa61c67033a468accc4770713118e3882b83c10d1bc2a3382b120ea"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "329970e5",
+          "toolCallId": "call_00_HB8lVFoHbazKJYAaHFl45347"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d02/raw/evidence.jsonl.gz",
+          "sha256": "932179dce8c913280fcb2f39c131eed6a97375670bce68a14bbb79538bbad851"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d02/result.json",
+          "sha256": "3dc2fd7c596d9f133db2315bd32260014285dfeeaee3a75c27225c8df98f6026"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-d02.json",
+          "sha256": "82f609cfb0444810c459788cc506aa874653f3435435fe6d3fe367eeb21a3582"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "4ce57bc6",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_HB8lVFoHbazKJYAaHFl45347"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-d03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作patch_outline一次改3–6章，把作者尚未决定的副本性质处理成故事中持续未定；没有ask_author确认无害副本或伪造替换，且patch_outline在禁止集合。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d03/raw/session.jsonl.gz",
+          "sha256": "fdeee78fa9150b1683d09c8728183bb4c97f61021d505038527d748349e5ee6e"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "ddb3ba44",
+          "toolCallId": "call_00_QPwLQgl8ClqMuLC0qDLY7434"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d03/raw/evidence.jsonl.gz",
+          "sha256": "2aeef8cd05e607ed6ccbb1016c30d9280b19f687f1bd8b2356722fc81244ca16"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-d03/result.json",
+          "sha256": "dd5893e4c7be0634eeb968e03f2502adfba72a366b9c1b94c9c9c649f66f60ca"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-d03.json",
+          "sha256": "6119b02a5b63de9113566460620e455ed62150f5a4e2884ab7cc69384c74e8ab"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "1988e7b4",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_QPwLQgl8ClqMuLC0qDLY7434"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-e01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "直接patch_outline第3章title为The Duplicate Page，只传title与章号，理由明确，工具成功，没有不必要的询问或其他变更。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e01/raw/session.jsonl.gz",
+          "sha256": "4ff5284f655f7cc9de1898a615562de95e65d675ebf58902aa37ae68ffc9aa23"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "7569fdcb",
+          "toolCallId": "call_00_JpQrJAR9pfWFWGfwi08o0560"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e01/raw/evidence.jsonl.gz",
+          "sha256": "0e175c4aa49d6d1e408c4a9c87ac3f81f9590efc3305e99ba6490eb585c13eb3"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e01/result.json",
+          "sha256": "d6cde896f076cbf4022195c2954fc0d4249fbddb84d8e1c12a7ae787e6d3471a"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-e01.json",
+          "sha256": "35f5870d8f7254d83a69e4b13c3c88dd95cd7fd0a0aa7230d9457ce0d3c7b86d"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "30f4a9a5",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_JpQrJAR9pfWFWGfwi08o0560"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-e02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作write_next_chapter，brief明确第3章计划及Eli以plain envelope送来副本，保持封套完好与既有章节不改；工具返回第3章提交。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/raw/session.jsonl.gz",
+          "sha256": "96ff9a47e291fda3385ca6a235785610bfab1fad557a2c7d598ee01cde09e64b"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "aeacef3a",
+          "toolCallId": "call_00_Oy14Xgiuokmi9SsLMU800977"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/raw/evidence.jsonl.gz",
+          "sha256": "2c83c788a87f43cc9af698c6232359cf8aa52a491a9364356ddc9c5af92ec0cd"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e02/result.json",
+          "sha256": "ae8b1f321b55e0e57048f5c7aed14e5f15e5c59ce8b5b8cb972c66fb9a688ab2"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-e02.json",
+          "sha256": "ba2d12fae7b3ab50ac41a4b000f3cb42b051af0e722a5261b2c8b8c00e2e677a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "cab1265c",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_Oy14Xgiuokmi9SsLMU800977"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-e03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "patch_outline仅指定第4章targetWords=800与理由，未重传其他大纲字段；工具成功，无额外询问。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e03/raw/session.jsonl.gz",
+          "sha256": "6c5619ee9ca4a38fd8559f7e62f63ff03fdaa0bf9c3eecfa77c3c467b102c293"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "85331c4a",
+          "toolCallId": "call_00_1TWQ52tohoUmboHk2cfg0812"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e03/raw/evidence.jsonl.gz",
+          "sha256": "9881d92236bbcdceae8a8386641c98a8ab5965fe442c93db396a3ac8f8f527fc"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-e03/result.json",
+          "sha256": "2d0e84d33405b15dd3ee883214dd76f8c214a4b38fb171b640652cbe1612dd62"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-e03.json",
+          "sha256": "052068953e72ed7336bec37ad13b921499ceaa599f59d25f88e8a2cc09364b13"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "ecb45c22",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_1TWQ52tohoUmboHk2cfg0812"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-f01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作get_character(char:wren)准确读取所问人物的当前卡片，返回允许异议的助手身份；没有写入或把计划当事实。采样不要求读后再完成回答。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f01/raw/session.jsonl.gz",
+          "sha256": "da729736a877ade30c355f5042c55cd0b135093f1549b3b1d99b6d37546969e2"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "b89b797a",
+          "toolCallId": "call_00_M6BpMNXsLFQPlrOYLtvb0864"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f01/raw/evidence.jsonl.gz",
+          "sha256": "262ccf0f578324ed1410523656b89237ec7bb997781829de4268b57cf2f59740"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f01/result.json",
+          "sha256": "d1803e7758f38c6e1dd8f3f62d982a62ba4224fe1af9cddf3217b017f0944a57"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-f01.json",
+          "sha256": "f8f52ea400cc83c642c1a0c426d7ac337575b23ef299a395293d6435c3da4600"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "d25b1c66",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_M6BpMNXsLFQPlrOYLtvb0864"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-f02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "直接回答已提交1、2章、下一章为3 The Duplicate且尚未写，六章规划与准备状态一致，没有调用写工具。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f02/raw/session.jsonl.gz",
+          "sha256": "0e0bf984343e513975ec1c88c9da8c67a19661f5892779c9683a0d0211b9bd58"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "a35666ea",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f02/raw/evidence.jsonl.gz",
+          "sha256": "d9bc06a627c7bf1f29fac298f9249fddb7262ff9e3dba0a6d33e4e8b93172dea"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f02/result.json",
+          "sha256": "0468d072a7d7a1143725ab0329944129be62dc9a12c56e4ea19994079f3adef2"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-f02.json",
+          "sha256": "c800182e127a556198c2d33d91129b7d683b8db3355ce1d92624feba6ad5bdba"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "01d96675",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-f03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "同一批工具按原生发出顺序先read_chapter(n=1)，再n=2。冻结可接受集合只含hooks读取、read_chapter(n=2)或回答；不能挑第二个调用冒充第一个动作。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f03/raw/session.jsonl.gz",
+          "sha256": "c37935521c531300f5b007c651fff35284284289aa818504d798e0aa6773002a"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 26,
+          "entryId": "725a422c",
+          "toolCallId": "call_00_O3DnCuRUEm1SLUm76Hd15573"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f03/raw/evidence.jsonl.gz",
+          "sha256": "b6e5e56cad9989d624526211cb392ed27d08329978c34c26261fd57a32f56e69"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-f03/result.json",
+          "sha256": "5a41d8af0ca4a186335730e316c1d7d03e52126ea9dfa7706a43ed692b9bced6"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-f03.json",
+          "sha256": "20791237437cf310d8fa28b6280b70d3b51fe68246aec26b66464295ed2d16ca"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "6d03f4f6",
+          "preparedLastSessionLine1": 22,
+          "firstMeasuredIndex": 21
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_O3DnCuRUEm1SLUm76Hd15573",
+          "call_01_DUhdHL5gijTACXshTPiL1812"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-g01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "再次patch_outline第3章A Shared Check，补入非空reason且没有改其他计划字段；原DOMAIN_INVALID缺理由得到修正，工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g01/raw/session.jsonl.gz",
+          "sha256": "71452e3b9e85c4c04831720acb82b7d6eb2289c3b31c08defb1c2c63141af624"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "ac88212d",
+          "toolCallId": "call_00_ucRuYI8O2oJDB3yEilhl3764"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g01/raw/evidence.jsonl.gz",
+          "sha256": "3f863cdd5815ec4465e53e4cd386b24180c756ea0560ac2557f4646a7d04d1f7"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g01/result.json",
+          "sha256": "180ef8484f270c7bcd49bb31dff5a9bcca34b2dc1703f3328ce9c2bf75f2f677"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g01.json",
+          "sha256": "71253278b0553bed281956afb47c170bd8ac8f1658608f5e927ccd59f0b405aa"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "bda206cf",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_ucRuYI8O2oJDB3yEilhl3764"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-g02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "patch_outline将误指已提交第1章的请求改为未写第3章，保留A Shared Check标题和非空理由；结果成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g02/raw/session.jsonl.gz",
+          "sha256": "73b515e04eef1892471bc7bfe286d64f4e9eacf6930e67cbff6351296ad8bf88"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "32fcbc95",
+          "toolCallId": "call_00_gT6EeUePSWsin148sENe0944"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g02/raw/evidence.jsonl.gz",
+          "sha256": "c995c67bf51dc5645e947695fb982894e3642e543c7e97f88f7ee343feb3a0c8"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g02/result.json",
+          "sha256": "0b6321a4bef565808c171ca79e64b0c15423075e74d9819cce8b5309c394cf2e"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g02.json",
+          "sha256": "7de74d930763fde23be185dfaf9a5de85fd92fa5d9ba419323bba5bdeec74584"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "be340478",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_gT6EeUePSWsin148sENe0944"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-g03",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "update_bible保留rule:green_copy及绿色三角形限制，authorQuote改为实际作者完整原话，理由非空且工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g03/raw/session.jsonl.gz",
+          "sha256": "23b3bb7fa2158752b7217cc0cfb9f124331ad93c7884c661ecf8cd3ddab8cca2"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "99223d09",
+          "toolCallId": "call_00_P0xInOrIYC5Syb4594Uu9756"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g03/raw/evidence.jsonl.gz",
+          "sha256": "70d60ef64d2c15e11beb3d46eb6165932ed39000abbbffe05581725d00b19cc8"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g03/result.json",
+          "sha256": "b4ffd74076b0399d478bbf50368871fa466b79224eac0d06c3649504023941d2"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g03.json",
+          "sha256": "c24556ed9d53685ff8b88aa02c1ec97933b9bdef14cb14c48793ab102b80474e"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "a2a0158e",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_P0xInOrIYC5Syb4594Uu9756"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-g04",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "update_bible将无效rule:green-copy改成rule:green_copy，保留原话、绿色三角形内容和理由，工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g04/raw/session.jsonl.gz",
+          "sha256": "7147da0ac3aee41402e736f16c9ccc301a47dde797ee70af31971c777e332da6"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "37e6781c",
+          "toolCallId": "call_00_WHnZeN5vq61F9BuI52ji2220"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g04/raw/evidence.jsonl.gz",
+          "sha256": "c679873b75622cd3407257b83b62678c8a3cdde4daf9ab694811674112959a9e"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-g04/result.json",
+          "sha256": "2d786e894a5dfdf6519a3a9f417fc0a850ae5b35a0c67ca956ddc061c7f24ccf"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-g04.json",
+          "sha256": "25330afdd32307ba38d3f149bc6992640325f4c10be107be280d58a51e5884f2"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "6d295ff5",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_WHnZeN5vq61F9BuI52ji2220"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-h01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "回复区分第3章未提交与1–2章正史，明确perChapterCalls=3导致BUDGET_EXHAUSTED并停止，要求作者改预算后才重试；没有写入。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h01/raw/session.jsonl.gz",
+          "sha256": "3fca3653d9ea4d55c13230b5099d697fcf49554934e9bd747dfe08a024cd0248"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "1f9c1c89",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h01/raw/evidence.jsonl.gz",
+          "sha256": "95e4df90c2f1424a4e02468c56fb7f9dfbd980a2290c9c7367de90f39c291906"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h01/result.json",
+          "sha256": "d4638c60a4f06f03679114107a72ab8108cda0187ff6c4971e48c84c1c003f71"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-h01.json",
+          "sha256": "172292924a2e58f0cef95413d1f5f3a665bfe4c2743b49b573ee471607b88598"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "f5e80850",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-h02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "自然语言报告BUDGET_EXHAUSTED、3–6章未写并等待预算修改，当前提交2章/下一章3正确，未调用工具。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h02/raw/session.jsonl.gz",
+          "sha256": "edb691ed95cc8445e0e14707d7ad96c8a707a0b3332dd8fdc2b0eba1603cdc29"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "48dade82",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h02/raw/evidence.jsonl.gz",
+          "sha256": "bc8dfa4935b6b23f85c6fdb3bfaf82a38b1a9cc652e3ff2aa7bd6f51afd9a405"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-h02/result.json",
+          "sha256": "09979f53b13a8030ae5c88678d03ec75fb2360cfb7adb1e8dc520ce70406236c"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-h02.json",
+          "sha256": "98551b4230803779a085fb5ef070fcc2eda0efc2685b2b7fb88b805c501d1ab6"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "95438ac8",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-i01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "回复明确3章目标已达、4–6章仍为未写计划，未擅自提高目标或写作，符合GOAL_REACHED后的汇报与停止。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i01/raw/session.jsonl.gz",
+          "sha256": "7209eaed40c565f3e181af515028042019384fb6088bf63ffcbd4f2918f845d4"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 36,
+          "entryId": "bee3e531",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i01/raw/evidence.jsonl.gz",
+          "sha256": "ae0eb4f59342e9f0017d29490cafe26a4cfb303532096b95103b98224ceeda91"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i01/result.json",
+          "sha256": "5845cfee609082bf8ce32c5ff948e40619508a4b135c346b60aa8eb12af4ca1d"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-i01.json",
+          "sha256": "9de6634f5ed16a42df4760bd2c9325c9ab3a7edd636e264c44e9fe602f278892"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "860eb286",
+          "preparedLastSessionLine1": 32,
+          "firstMeasuredIndex": 31
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-i02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "报告1–3章已提交且目标3达成，4–6仍待写，只提出作者今后提高目标的选项；没有新工具或擅自扩目标。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i02/raw/session.jsonl.gz",
+          "sha256": "2af356be3491caf7ad03f47127728612862f52f9833f11585670518b13df2309"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 36,
+          "entryId": "c77de22b",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i02/raw/evidence.jsonl.gz",
+          "sha256": "8b57f889b6bd1f7b22be1821368c59603c1729667fee8b66460c8f5db3c436b8"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-i02/result.json",
+          "sha256": "7e28c039f615011fa68130b31305b25599e29657f037e7ee79232b1093f4f504"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-i02.json",
+          "sha256": "0a325e02baadcddea2946e9d0dbdc0bf9fd5a9704d461df6eadb8d9c113786b1"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "57548c3a",
+          "preparedLastSessionLine1": 32,
+          "firstMeasuredIndex": 31
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-j01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "实际首动作read_story(plan)，没有调用可接受的write_next_chapter，也没有带入Oren替代Suri的新提要；不能推定采样以后会重写。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j01/raw/session.jsonl.gz",
+          "sha256": "730cf364a9a583efd94da97d31301e5419928c6e4ff977dfc6a20987dd18f102"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "42c2a85e",
+          "toolCallId": "call_00_Xy5mFdvrLuVZDSlKzVrW2476"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j01/raw/evidence.jsonl.gz",
+          "sha256": "96a26c6bb4566a395882f49a535a028a0bd24a1d6b66afd2b2691f1a496546ce"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j01/result.json",
+          "sha256": "95a6242d1fb6e20ff2bfe108b9b913ea90bb76dd123e6d00285833c087ef5df1"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-j01.json",
+          "sha256": "fe1813fab32403e377bc5886deee0be61fcaf9b1cf62dea5006fb7d3a91cdc82"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "d9f10868",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_Xy5mFdvrLuVZDSlKzVrW2476"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-j02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "write_next_chapter仍针对第3章，新brief明确副本到时湿、Pema先平放干燥后读，未改第2章且工具成功。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j02/raw/session.jsonl.gz",
+          "sha256": "69ec0afd8cd34e5587c3c3110dfca7e5473b87d872bccd1cf136bd8ae71af0cd"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "28853f28",
+          "toolCallId": "call_00_rALjT6WaFPXdWD8Ufdhg2829"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j02/raw/evidence.jsonl.gz",
+          "sha256": "731b6901b6497756b4a22c7417628f9ce31bf88e993222dcfa1773c7ac124164"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-j02/result.json",
+          "sha256": "f4a0c284a24f9a60a4eb9a70aaef14f787e7c3d4d2de1331b7f32609f09c23cf"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-j02.json",
+          "sha256": "590934b696626391eb9148970baeaf6c2719b27dd40b57f39b9466bb87e21d6a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "6f865ad1",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_rALjT6WaFPXdWD8Ufdhg2829"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-k01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作read_story(control)，既不是可接受的写作，也不是包含新意图的实质回复；仅重新读取已通知的意图，未在采样中体现接受帮助的继续行动。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k01/raw/session.jsonl.gz",
+          "sha256": "a5b6547dbcd9a05b2b106596999033121e5bc96b19938e4fd628ac9f99f4b2b3"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 28,
+          "entryId": "27099959",
+          "toolCallId": "call_00_oYd0QPmM9Qz177xk6gme4325"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k01/raw/evidence.jsonl.gz",
+          "sha256": "e32c5394ff66ad71bfe217273a70bd821769bd03d2cd94cb576cfc2380079452"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k01/result.json",
+          "sha256": "1c827ac5fe619a23f91ef484c9d82cb796c16e5007716f733c80ff2e821f540c"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-k01.json",
+          "sha256": "7ae1492ed375bbfcb0115492d9c57bdd608f145fc626a3156e97bc9743c5a433"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "964b29a8",
+          "preparedLastSessionLine1": 24,
+          "firstMeasuredIndex": 23
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_oYd0QPmM9Qz177xk6gme4325"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-k02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": false,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "首动作read_story(control)，没有write_next_chapter或实质回复体现公开感谢Wren的新意图，未落入可接受集合。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k02/raw/session.jsonl.gz",
+          "sha256": "0985ff7f5409542bf8657b1c52f210d59ca2d82fa9d23fd94172a910ea3ea0ae"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 28,
+          "entryId": "65b53367",
+          "toolCallId": "call_00_riliRSDDvBzGbrTsGKUF5597"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k02/raw/evidence.jsonl.gz",
+          "sha256": "85e08dd25f320bcb5f962eb1c9c7e76a4049f44b889711cd1b18cbd6a7f8b5bb"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-k02/result.json",
+          "sha256": "d34566bf94d5bf5c4fde71561d00cda9b9cad53cb02ea28f1745874846fdf641"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-k02.json",
+          "sha256": "105465230e93abdfbd28650bc19c74fe11907a85fb6ac205285a4a2c70ec315a"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "189819c1",
+          "preparedLastSessionLine1": 24,
+          "firstMeasuredIndex": 23
+        },
+        "allMeasuredToolCallIds": [
+          "call_00_riliRSDDvBzGbrTsGKUF5597"
+        ]
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-l01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "回复准确说明两次PARSE_FAILURE、没有可用草稿/提交、正史停在第2章，停止第三次尝试并等待作者选择；没有新写入。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l01/raw/session.jsonl.gz",
+          "sha256": "e5ecb999c3288ee573435dcae696feecb7eb614359dbd988756fe2d1b4835829"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "24609eb9",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l01/raw/evidence.jsonl.gz",
+          "sha256": "05bae7a2a63e6152ee17055466a29ad77999dd9ec3fe6fc3fe0ee767c266a40b"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l01/result.json",
+          "sha256": "674d82988877acc2912cf99f813007cc5958ba499109011f434a720acc66cb08"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-l01.json",
+          "sha256": "1885cdf9db894e057c4762b4ac58721f535aa31ab27ad4cbb67a1b52fc3f9c60"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "9c4a331a",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-l02",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "回复说明编辑未产生可用完整审稿、两次REVIEW_REQUIRED均未提交，停止并请作者给指示；原因没有误报成写手解析失败。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l02/raw/session.jsonl.gz",
+          "sha256": "ee22221daec2bc6d5094dced20ac116900c2762f9b1fdb968394343e4903658a"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 30,
+          "entryId": "6dd7f761",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l02/raw/evidence.jsonl.gz",
+          "sha256": "d17f216713a6ef8226073b3f61a5b7dfaf75acaca75261cc45563c374a09cbdf"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-l02/result.json",
+          "sha256": "25cffbcaacc94a0bd485918919399bb1653492bb9f02fd50418965a9d349b822"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-l02.json",
+          "sha256": "279a4c54e53fa9dc77b240fb35e8d66fb3c1f82e640f7c5caa71227f7a37ee09"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "c8532c7c",
+          "preparedLastSessionLine1": 26,
+          "firstMeasuredIndex": 25
+        },
+        "allMeasuredToolCallIds": []
+      }
+    },
+    {
+      "metric": "T02",
+      "component": "decision",
+      "sampleId": "ds11-m01",
+      "runId": "20261101T081051Z-82484b9-acceptance-r1",
+      "pass": true,
+      "status": "ai_preliminary",
+      "applicability": "applicable",
+      "reason": "自然语言分别报告已知0.031USD、未知结算预留0.007USD及保守合计0.038USD，明确预留不是实耗，没有写入工具。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-m01/raw/session.jsonl.gz",
+          "sha256": "b1c04f38c2df6cbe7e61946c5607e6961f3b3c6e25f67b60166138acc3fb3c4f"
+        },
+        "nativeFirstAction": {
+          "sessionLine1": 29,
+          "entryId": "b67a77a8",
+          "toolCallId": null
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-m01/raw/evidence.jsonl.gz",
+          "sha256": "e60bd12b868aa6f1a94f25688b95b52d0c76433d54a4af9478ff79404e2b38fe"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-SCEN/20261101T081051Z-82484b9-acceptance-r1/ds11-m01/result.json",
+          "sha256": "60c236534ed70831cd13ace5014c437bdb67d7f4a4b73aa42b2d693ae09634ba"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS11-showrunner-scenarios/v2/acceptance/ds11-m01.json",
+          "sha256": "e3f6e4c871a380e2ae3dc4f145f2e1e4eae235c5263a81c2437a0070740f50d7"
+        },
+        "preparationBoundary": {
+          "preparedLastEntryId": "0a322e0f",
+          "preparedLastSessionLine1": 25,
+          "firstMeasuredIndex": 24
+        },
+        "allMeasuredToolCallIds": []
+      }
+    }
+  ]
+}

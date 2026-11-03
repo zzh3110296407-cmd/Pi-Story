@@ -1,0 +1,94 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "quiet_europa-c1-injected-1",
+  "storyId": "quiet_europa",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v1",
+    "sha256": "1cb750c8031f33b7e800f485282c690c89be91806e154277b5eaab3daa0cdb77",
+    "path": "acceptance/chapters/quiet_europa-c1.md"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "id": "quiet_europa-c1-injected-1-defect-1",
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "Nia reached the brine pump chamber before the pressure alarm stopped.",
+      "changed": "Nia reached the brine pump chamber before the pressure alarm stopped. Nia had been left-handed from birth and had never been right-handed.",
+      "spans": [
+        {
+          "original": "Nia reached the brine pump chamber before the pressure alarm stopped.",
+          "changed": "Nia reached the brine pump chamber before the pressure alarm stopped. Nia had been left-handed from birth and had never been right-handed.",
+          "lines": {
+            "start": 1,
+            "end": 1
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:nia",
+          "quote": "Nia is right-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "An explicit lifetime embodiment attribute is reversed by unquoted narration, not developed through a temporary injury or a character’s claim.",
+      "lines": [
+        1
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review.json",
+      "reviewStatus": "r1_review_applied",
+      "aiReviewVerdict": "agree"
+    },
+    {
+      "id": "quiet_europa-c1-injected-1-defect-2",
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "The test consumed four oxygen units and left sixty in the portable reserve.",
+      "changed": "The test consumed four oxygen units and left sixty in the portable reserve. With no intervening gain or loss, that same completed count stood at 67 units.",
+      "spans": [
+        {
+          "original": "The test consumed four oxygen units and left sixty in the portable reserve.",
+          "changed": "The test consumed four oxygen units and left sixty in the portable reserve. With no intervening gain or loss, that same completed count stood at 67 units.",
+          "lines": {
+            "start": 7,
+            "end": 7
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "The test consumed four oxygen units and left sixty in the portable reserve.",
+          "ref": "line:7"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "The test consumed four oxygen units and left sixty in the portable reserve.",
+          "note": "An actual supplied authoring target, not previously committed canon."
+        }
+      ],
+      "reason": "The correct narrated completed count is retained in the final variant. An immediately following narrated total contradicts that same count while explicitly ruling out an intervening change. No character’s speech or removed source sentence is treated as independent truth.",
+      "lines": [
+        7
+      ],
+      "reviewIdentity": "AI delegated by user",
+      "reviewSource": "labels/delegated-review-r2.json",
+      "reviewStatus": "r2_review_and_requested_prose_repairs_applied",
+      "revision": "r2-retained-narrated-count",
+      "aiReviewVerdict": "agree"
+    }
+  ]
+}

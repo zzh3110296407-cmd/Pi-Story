@@ -1,0 +1,71 @@
+{
+  "id": "ds14-e01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 2,
+  "actions": [],
+  "firstAction": null,
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 0,
+  "afterLastChapter": 0,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The slash command is dispatched before any ordinary author message; do not synthesize a story prompt.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 0,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "Return DOMAIN_INVALID and a notification meaning send the story prompt first.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 0,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "No story.control entry, model request or story mutation is produced.",
+      "status": "incomplete",
+      "evidence": {
+        "committedBefore": 0,
+        "committedAfter": 0,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "751266fdcd0c91fc150adbe190f3d146415120dfef221635fd78f15ab27ff85b",
+    "sessionSha256": "246474e36389b1786863f76087cafabe90d9a46794ffb9a5add9c0edda82ca53",
+    "sessionSource": "in_memory_snapshot",
+    "fee": {
+      "knownUsd": 0,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 0,
+      "totalUsd": 0
+    },
+    "measuredMainRequests": 0
+  }
+}

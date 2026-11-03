@@ -1,0 +1,163 @@
+{
+  "schema": "story/p3-approved-open-offline-score@1",
+  "date": "2026-11-01",
+  "inputs": {
+    "approval": {
+      "path": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/judgments/support/20261101-j3-open-author-acceptance/approval.json",
+      "sha256": "d4a264ca5df9d0ab22a38f4881ae2b7ed4c587df300232394f74021f02c2f3a8"
+    },
+    "normalizedRootFiles": [
+      {
+        "path": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/judgments/T06.json",
+        "sha256": "ee369fe0274731818d39feae11c59232d46f3e68e157d591ba817a0f7fc6f863"
+      },
+      {
+        "path": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/judgments/T07.json",
+        "sha256": "23100407eb4c8b1233741ef432f14abb8cc0d2731cef6491fe2ca2be6d70f3fc"
+      }
+    ],
+    "originalMetrics": {
+      "path": "story/testing/runs/P3/P3-OPEN/20261101T080051Z-5f920d5-acceptance-r1/metrics.json",
+      "sha256": "9973a83227f35bfc467704dc44a52f7de1314eadb2412a39f040dab1753e53cd"
+    }
+  },
+  "result": {
+    "schema": "story/metrics@2",
+    "suiteId": "P3-OPEN",
+    "runId": "20261101T080051Z-5f920d5-acceptance-r1",
+    "metrics": [
+      {
+        "id": "T05",
+        "n": 12,
+        "value": 1,
+        "successes": 12,
+        "failures": 0,
+        "threshold": 0.9,
+        "minimum": 10,
+        "confidence95": [
+          0.7575059933447592,
+          1
+        ],
+        "passed": true,
+        "status": "measured"
+      },
+      {
+        "id": "T06",
+        "n": 159,
+        "value": {
+          "precision": 0.8968253968253969,
+          "recall": 0.9119496855345912
+        },
+        "threshold": {
+          "precision": 0.85,
+          "recall": 0.8
+        },
+        "minimum": 60,
+        "manual": true,
+        "components": {
+          "precision": {
+            "n": 126,
+            "successes": 113
+          },
+          "recall": {
+            "n": 159,
+            "successes": 145
+          }
+        },
+        "confidence95": {
+          "precision": [
+            0.8314622980954791,
+            0.9387077300932523
+          ],
+          "recall": [
+            0.8576372124261619,
+            0.9468262267293731
+          ]
+        },
+        "passed": true,
+        "status": "author_measured"
+      },
+      {
+        "id": "T07",
+        "n": 50,
+        "value": 1,
+        "successes": 50,
+        "failures": 0,
+        "threshold": 0.9,
+        "minimum": 50,
+        "confidence95": [
+          0.9286524008666414,
+          1
+        ],
+        "passed": true,
+        "status": "measured",
+        "manual": true
+      }
+    ],
+    "observations": {
+      "execution": {
+        "accounting": "Each macro includes requests since the previous macro; the first includes opening. Remaining requests are overhead. Fees use the frozen catalog prices.",
+        "total": {
+          "logicalRequests": 0,
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 0,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        "chapters": [],
+        "overhead": {
+          "knownUsd": 0,
+          "reservedUsd": 0,
+          "unknownCalls": 0,
+          "networkRequests": 0,
+          "mainLogicalRequests": 0,
+          "mainNetworkRequests": 0
+        },
+        "risk": {
+          "n": 0,
+          "withRisk": 0,
+          "rate": null
+        },
+        "state": {
+          "n": 0,
+          "provisional": 0,
+          "provisionalRate": null,
+          "issues": 0,
+          "scope": "fact/cognition/relation upserts; claims and hook lifecycle are separate"
+        },
+        "relatedItemPrecision": {
+          "value": null,
+          "status": "pending_human"
+        },
+        "patchEffects": []
+      },
+      "ruleTexts": null,
+      "inputEstimateMultiples": {
+        "n": 0,
+        "median": null,
+        "max": null
+      },
+      "writerOutputTokens": [],
+      "truncations": 0,
+      "formatFailures": 0,
+      "callAudit": []
+    },
+    "scoringVersion": "p3-29@1",
+    "judgmentProtocol": {
+      "ledger": "coverage-rev20261031",
+      "facts": "predicate-and-entity-rev20261031",
+      "notApplicable": "excluded from scored denominator; retained in judgment source"
+    },
+    "T01": {
+      "status": "aggregate_all_real_suites",
+      "minimum": 100
+    },
+    "expectedPrompts": 12,
+    "observedPrompts": 12,
+    "complete": true
+  },
+  "originalMetricsOverwritten": false,
+  "scope": "OPEN T05/T06/T07 only; no new model calls or cost audit"
+}

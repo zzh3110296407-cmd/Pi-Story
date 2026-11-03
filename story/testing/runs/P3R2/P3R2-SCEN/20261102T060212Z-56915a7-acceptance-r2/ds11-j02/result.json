@@ -1,0 +1,113 @@
+{
+  "id": "ds11-j02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 2,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "read_state",
+      "args": {},
+      "id": "call_00_Gb0CWxiMlQdZvBETeoUm0386"
+    },
+    {
+      "tool": "read_story",
+      "args": {
+        "section": "plan"
+      },
+      "id": "call_01_LblpuQ70wQojNlABuc177234"
+    },
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3, \"The Duplicate\". Pema reads the handling note, then asks Eli about the missing second page of the tide register. Eli brings out a duplicate page — but it arrives wet from a leaking salt-store gutter. Pema does not read it while damp: she sets it between blotters, weights the corners with clean glass and a flat brass bar, and waits while it dries flat, checking the edges. Only then does she read it. The wet page does not touch the wax packet; keep the packet sealed and intact. Practical, quiet actions. Stop with the team agreeing to continue checking the duplicate page against the label before any public demonstration, and one detail on the duplicate that does not match what they expected."
+      },
+      "id": "call_00_cGNqWkMa30TCboQb1pqU9969"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 3, \"The Duplicate\". Pema reads the handling note, then asks Eli about the missing second page of the tide register. Eli brings out a duplicate page — but it arrives wet from a leaking salt-store gutter. Pema does not read it while damp: she sets it between blotters, weights the corners with clean glass and a flat brass bar, and waits while it dries flat, checking the edges. Only then does she read it. The wet page does not touch the wax packet; keep the packet sealed and intact. Practical, quiet actions. Stop with the team agreeing to continue checking the duplicate page against the label before any public demonstration, and one detail on the duplicate that does not match what they expected."
+    },
+    "id": "call_00_cGNqWkMa30TCboQb1pqU9969"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 2,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 3,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 2,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 2,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "7f9091f5c2c83a6549aa46e2090ccc88c580cdfd5f703f03fde10e0d6e4a571f",
+    "sessionSha256": "6fb9a2ae2b5fa35c3abdeb91bba6afa041216233db9b8a996fbeae32b8de1baf",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.003356616,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 3,
+      "totalUsd": 0.003356616
+    },
+    "measuredMainRequests": 3
+  },
+  "scoringVersion": "p3r2-32@1"
+}

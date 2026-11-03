@@ -1,0 +1,8 @@
+{
+	"core": { "project": [], "external": ["typebox"], "node": ["node:crypto"], "pi": false },
+	"pi-story": { "project": ["core"], "external": "*", "node": "*", "pi": true },
+	"runner": { "project": ["core", "pi-story"], "external": "*", "node": "*", "pi": true },
+	"evals": { "project": ["runner", "core"], "external": "*", "node": "*", "pi": false },
+	"bridge": { "project": ["core"], "external": "*", "node": "*", "pi": true },
+	"web": { "project": [], "external": "*", "node": [], "pi": false }
+}

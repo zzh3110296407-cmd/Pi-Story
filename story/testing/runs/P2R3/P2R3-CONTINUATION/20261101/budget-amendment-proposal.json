@@ -1,0 +1,15 @@
+{
+  "schema": "story/p2r3-budget-amendment-proposal@1",
+  "status": "pending_author_decision",
+  "logicalRun": "P2-CHAP/20261031T154922Z-102c3ed-r1",
+  "previousLimitUsd": 3,
+  "proposedLimitUsd": 4,
+  "roundStopUsd": 6.5,
+  "roundMaximumUsd": 8,
+  "reason": "The author-paused run retains 1.5524244 USD in unknown-usage reservations. Only 0.562519488 USD remained under its three-dollar guard; the resumed showrunner needs approximately 0.46 USD reservation per request, so the next dispatch can be blocked before remaining chapters finish even when actual known charges are small.",
+  "guardSource": "story/scripts/eval/p2/ledger.ts UsageLedger.reserve rejects snapshot(runId).totalUsd + reservedCostUsd > runLimitUsd",
+  "application": "Only after author decision, any further continuation must subtract ALL earlier physical-segment conservative fees from the approved four-dollar logical ceiling. Preserve every reservation, every failed physical run and every completed chapter. Do not retry the completed parts.",
+  "sourceAndScoringChanges": 0,
+  "repeatAndSampleChanges": 0,
+  "feeReservationsRemoved": 0
+}

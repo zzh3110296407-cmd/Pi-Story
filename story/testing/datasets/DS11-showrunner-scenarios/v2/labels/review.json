@@ -1,0 +1,2058 @@
+{
+  "schema": "story/ds11-v2-review@1",
+  "date": "2026-11-01",
+  "dataset": "DS11",
+  "version": "v2",
+  "identity": "Codex (AI)",
+  "humanItemReviewClaimed": false,
+  "acceptanceCount": 32,
+  "newPreconditionReviews": 1,
+  "unchangedAcceptanceCases": 31,
+  "developmentCorrectionAlsoValidated": "ds11-h01-dev",
+  "basis": [
+    "28 §5",
+    "29 §5",
+    "v1 author acceptance",
+    "current author scoped correction/release instruction"
+  ],
+  "items": [
+    {
+      "id": "ds11-a01",
+      "category": "A_change_unwritten_outline",
+      "source": {
+        "path": "acceptance/ds11-a01.json",
+        "sha256": "ccca7e9c94d0942f4e20806947aa0b5c36f4dfdfd87612ef003be8f0ef57d19a"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Change only the unwritten chapter 3: Oren leads the document check while Lena assists. Keep its chapter number and the existing chapter count. Do not rewrite earlier chapters."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+          "The chapter numbers remain contiguous; no new author control entry is written."
+        ],
+        "judgeChecks": [
+          "The patch implements this requested event change rather than merely renaming the chapter: Oren leads the document check while Lena assists."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-a02",
+      "category": "A_change_unwritten_outline",
+      "source": {
+        "path": "acceptance/ds11-a02.json",
+        "sha256": "dc929c37b23e4ea72775e876a9cd06cde32a161b7d734e369a37356544600939"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Change only the unwritten chapter 4: Compare the pencil copy outdoors at the same site. Keep its chapter number and the existing chapter count. Do not rewrite earlier chapters."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+          "The chapter numbers remain contiguous; no new author control entry is written."
+        ],
+        "judgeChecks": [
+          "The patch implements this requested event change rather than merely renaming the chapter: Compare the pencil copy outdoors at the same site."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-a03",
+      "category": "A_change_unwritten_outline",
+      "source": {
+        "path": "acceptance/ds11-a03.json",
+        "sha256": "3e9b481f86771a9798a7b8f744da0daafe87c9f8cc230f4c2837be6788a13c8c"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Change only the unwritten chapter 5: Run the demonstration without an audience and keep a written record. Keep its chapter number and the existing chapter count. Do not rewrite earlier chapters."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 5
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+          "The chapter numbers remain contiguous; no new author control entry is written."
+        ],
+        "judgeChecks": [
+          "The patch implements this requested event change rather than merely renaming the chapter: Run the demonstration without an audience and keep a written record."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-b01",
+      "category": "B_add_future_setting",
+      "source": {
+        "path": "acceptance/ds11-b01.json",
+        "sha256": "b36ea32b2dbbce364e57c30d7a2d1c9f33fbb80b4eec39eb541e70dee4467b44"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "From the next chapter onward, Pema can decode semaphore, but only in daylight. Add this as a future setting; keep all existing descriptions and committed events unchanged."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "char:pema",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten."
+        ],
+        "judgeChecks": [
+          "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-b02",
+      "category": "B_add_future_setting",
+      "source": {
+        "path": "acceptance/ds11-b02.json",
+        "sha256": "54e87f7d17dabd571ec475a3e0148fd69a11a1dfa97de65dc248da559a3ecb59"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "For future scenes, carts may enter the kite hall only through the west door. Add this as a future setting; keep all existing descriptions and committed events unchanged."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "place:kite_hall",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten."
+        ],
+        "judgeChecks": [
+          "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, carts may enter the kite hall only through the west door."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-b03",
+      "category": "B_add_future_setting",
+      "source": {
+        "path": "acceptance/ds11-b03.json",
+        "sha256": "3389bf85e31a583c594e1452dadd8e61dffc46ee396528b6b8428471543e9c9a"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "For future scenes, a damp paper copy must dry flat before anyone turns its pages. Add this as a future setting; keep all existing descriptions and committed events unchanged."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "update_bible",
+            "argsMatch": {
+              "changes[0].key": "rule:dry_copy",
+              "changes[0].op": "set",
+              "changes[0].source": "user"
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "A nonempty reason and an exact quote from the latest author message are supplied.",
+          "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten."
+        ],
+        "judgeChecks": [
+          "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-c01",
+      "category": "C_change_committed_content",
+      "source": {
+        "path": "acceptance/ds11-c01.json",
+        "sha256": "5bcae98cd3ae16d6d8e08091d17bc09cf7beee7cbe0a9bf9b928efb7732a68cb"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Please replace committed chapter 1: make Nadi hand the wooden sleeve to Wren there, instead of keeping it on the table. I mean the existing prose, not a later recollection."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No writing tool is called and no current-branch entries or chapter text are changed."
+        ],
+        "judgeChecks": [
+          "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-c02",
+      "category": "C_change_committed_content",
+      "source": {
+        "path": "acceptance/ds11-c02.json",
+        "sha256": "6325334f602f3f9f6b9bdd763279e3227aebff6d05f1a1c60aeeb0397aa9d121"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Please replace committed chapter 2: make Lena hand the sample case to Oren there, instead of keeping it on the table. I mean the existing prose, not a later recollection."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No writing tool is called and no current-branch entries or chapter text are changed."
+        ],
+        "judgeChecks": [
+          "Explain that committed chapter 2 cannot be edited in place in P3. A rewrite requires a branch before chapter 2; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-d01",
+      "category": "D_material_ambiguity",
+      "source": {
+        "path": "acceptance/ds11-d01.json",
+        "sha256": "56de195fa1fcaaacd2f9c7831c06e3d611969785dfc37a14536c85274f1db42b"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Make the next scene lighter. I have not decided whether I mean the lighting or the emotional tone."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No story mutation precedes ask_author; question is nonempty."
+        ],
+        "judgeChecks": [
+          "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-d02",
+      "category": "D_material_ambiguity",
+      "source": {
+        "path": "acceptance/ds11-d02.json",
+        "sha256": "82f609cfb0444810c459788cc506aa874653f3435435fe6d3fe367eeb21a3582"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Change the ending to favour Pema or Cal; I have not decided which of them should receive the credit."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No story mutation precedes ask_author; question is nonempty."
+        ],
+        "judgeChecks": [
+          "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-d03",
+      "category": "D_material_ambiguity",
+      "source": {
+        "path": "acceptance/ds11-d03.json",
+        "sha256": "6119b02a5b63de9113566460620e455ed62150f5a4e2884ab7cc69384c74e8ab"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Let the missing page be a copy. I have not decided whether it is a harmless duplicate or a forged replacement."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No story mutation precedes ask_author; question is nonempty."
+        ],
+        "judgeChecks": [
+          "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-e01",
+      "category": "E_clear_instruction",
+      "source": {
+        "path": "acceptance/ds11-e01.json",
+        "sha256": "35f5870d8f7254d83a69e4b13c3c88dd95cd7fd0a0aa7230d9457ce0d3c7b86d"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Set the title of unwritten chapter 3 to The Duplicate Page. Leave its events, number and target length unchanged."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 3,
+              "chapters[0].title": "The Duplicate Page"
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "Execute the clearly specified action without asking for confirmation or clarification."
+        ],
+        "judgeChecks": []
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-e02",
+      "category": "E_clear_instruction",
+      "source": {
+        "path": "acceptance/ds11-e02.json",
+        "sha256": "ba2d12fae7b3ab50ac41a4b000f3cb42b051af0e722a5261b2c8b8c00e2e677a"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Write chapter 3 now. Follow its existing plan, and make the duplicate page arrive in a plain envelope. This is a new action in chapter 3, not a change to chapter 2."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "Execute the clearly specified action without asking for confirmation or clarification."
+        ],
+        "judgeChecks": [
+          "The brief includes the plain envelope and preserves the next-chapter sequence."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-e03",
+      "category": "E_clear_instruction",
+      "source": {
+        "path": "acceptance/ds11-e03.json",
+        "sha256": "052068953e72ed7336bec37ad13b921499ceaa599f59d25f88e8a2cc09364b13"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "For unwritten chapter 4, set targetWords to 800. Keep all other outline fields unchanged."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline",
+            "argsMatch": {
+              "chapters[0].n": 4,
+              "chapters[0].targetWords": 800
+            }
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "Execute the clearly specified action without asking for confirmation or clarification."
+        ],
+        "judgeChecks": []
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-f01",
+      "category": "F_story_question",
+      "source": {
+        "path": "acceptance/ds11-f01.json",
+        "sha256": "f8f52ea400cc83c642c1a0c426d7ac337575b23ef299a395293d6435c3da4600"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "Who is Wren, and what is their current role? Do not change the story."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "get_character",
+            "argsMatch": {
+              "key": "char:wren"
+            }
+          },
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "bible"
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical."
+        ],
+        "judgeChecks": [
+          "If answering directly, use only the setup: Wren is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-f02",
+      "category": "F_story_question",
+      "source": {
+        "path": "acceptance/ds11-f02.json",
+        "sha256": "c800182e127a556198c2d33d91129b7d683b8db3355ce1d92624feba6ad5bdba"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "How many chapters are already committed, and which chapter comes next? Do not write it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "plan"
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical."
+        ],
+        "judgeChecks": [
+          "If answering directly, use only the setup: Oren is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-f03",
+      "category": "F_story_question",
+      "source": {
+        "path": "acceptance/ds11-f03.json",
+        "sha256": "20791237437cf310d8fa28b6280b70d3b51fe68246aec26b66464295ed2d16ca"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "What remains unanswered about the missing page of the tide register? Do not invent an answer."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "read_story",
+            "argsMatch": {
+              "section": "hooks"
+            }
+          },
+          {
+            "tool": "read_chapter",
+            "argsMatch": {
+              "n": 2
+            }
+          },
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical."
+        ],
+        "judgeChecks": [
+          "If answering directly, use only the setup: Cal is a disagreeing assistant; two chapters are committed and chapter 3 is next; the second register page is absent and its remover is unknown. A read may precede an answer. Do not invent future events as already true."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-g01",
+      "category": "G_repairable_tool_error",
+      "source": {
+        "path": "acceptance/ds11-g01.json",
+        "sha256": "71253278b0553bed281956afb47c170bd8ac8f1658608f5e927ccd59f0b405aa"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "authorMessage",
+          "text": "Please title the next unwritten chapter A Shared Check. Keep all other plan fields unchanged."
+        },
+        {
+          "step": "toolCall",
+          "tool": "patch_outline",
+          "args": {
+            "reason": "",
+            "chapters": [
+              {
+                "n": 3,
+                "title": "A Shared Check"
+              }
+            ]
+          },
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "A reason is required.",
+              "items": [
+                "reason"
+              ],
+              "hint": "Retry patch_outline with a nonempty reason and the same chapter 3 title change."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The tool has returned the error above. Handle it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "The failed request had no side effects; reason and all unaffected constraints are retained."
+        ],
+        "judgeChecks": [
+          "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-g02",
+      "category": "G_repairable_tool_error",
+      "source": {
+        "path": "acceptance/ds11-g02.json",
+        "sha256": "7de74d930763fde23be185dfaf9a5de85fd92fa5d9ba419323bba5bdeec74584"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "authorMessage",
+          "text": "Please title the next unwritten chapter A Shared Check. Keep all other plan fields unchanged."
+        },
+        {
+          "step": "toolCall",
+          "tool": "patch_outline",
+          "args": {
+            "reason": "The author requested this future change.",
+            "chapters": [
+              {
+                "n": 1,
+                "title": "A Shared Check"
+              }
+            ]
+          },
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "Only unwritten chapters can change.",
+              "items": [
+                "1"
+              ],
+              "hint": "Chapter 1 is committed. Retry patch_outline for the next unwritten chapter, chapter 3, with the requested title."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The tool has returned the error above. Handle it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "patch_outline"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "The failed request had no side effects; reason and all unaffected constraints are retained."
+        ],
+        "judgeChecks": [
+          "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-g03",
+      "category": "G_repairable_tool_error",
+      "source": {
+        "path": "acceptance/ds11-g03.json",
+        "sha256": "c24556ed9d53685ff8b88aa02c1ec97933b9bdef14cb14c48793ab102b80474e"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "authorMessage",
+          "text": "From now on, every duplicate page is marked with a green triangle. Add this future-only rule."
+        },
+        {
+          "step": "toolCall",
+          "tool": "update_bible",
+          "args": {
+            "reason": "The author supplied a future marking rule.",
+            "changes": [
+              {
+                "kind": "rule",
+                "key": "rule:green_copy",
+                "op": "set",
+                "source": "user",
+                "authorQuote": "All copies carry green marks.",
+                "value": {
+                  "description": "Every duplicate page is marked with a green triangle."
+                }
+              }
+            ]
+          },
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "The author quote cannot be located.",
+              "items": [
+                "rule:green_copy"
+              ],
+              "hint": "Retry update_bible with the exact author quote: From now on, every duplicate page is marked with a green triangle."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The tool has returned the error above. Handle it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "The failed request had no side effects; reason and all unaffected constraints are retained."
+        ],
+        "judgeChecks": [
+          "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-g04",
+      "category": "G_repairable_tool_error",
+      "source": {
+        "path": "acceptance/ds11-g04.json",
+        "sha256": "25330afdd32307ba38d3f149bc6992640325f4c10be107be280d58a51e5884f2"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "authorMessage",
+          "text": "From now on, every duplicate page is marked with a green triangle. Add this future-only rule."
+        },
+        {
+          "step": "toolCall",
+          "tool": "update_bible",
+          "args": {
+            "reason": "The author supplied a future marking rule.",
+            "changes": [
+              {
+                "kind": "rule",
+                "key": "rule:green-copy",
+                "op": "set",
+                "source": "user",
+                "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+                "value": {
+                  "description": "Every duplicate page is marked with a green triangle."
+                }
+              }
+            ]
+          },
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "DOMAIN_INVALID",
+              "message": "The key slug is invalid.",
+              "items": [
+                "rule:green-copy"
+              ],
+              "hint": "Retry update_bible with key rule:green_copy; keep the author quote, limitation and reason."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The tool has returned the error above. Handle it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "update_bible"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+          "The failed request had no side effects; reason and all unaffected constraints are retained."
+        ],
+        "judgeChecks": [
+          "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-h01",
+      "category": "H_budget_exhausted",
+      "source": {
+        "path": "acceptance/ds11-h01.json",
+        "sha256": "172292924a2e58f0cef95413d1f5f3a665bfe4c2743b49b573ee471607b88598"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/budget perChapterCalls=3"
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "BUDGET_EXHAUSTED",
+              "message": "The chapter workflow reached its perChapterCalls limit of 3.",
+              "hint": "Report the chapter-call budget stop and do not retry without an author budget change."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The previous writing attempt returned BUDGET_EXHAUSTED."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No further tool call or automatic continuation is issued from this stop."
+        ],
+        "judgeChecks": [
+          "Report budget exhaustion accurately and do not invent a completed chapter or claim the author raised the budget."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "revised_precondition_and_runtime_feasibility_checked",
+      "conclusion": "agree",
+      "reason": "Chapter-workflow exhaustion and main-agent reservation are now separate; both old denials and both new admissions were observed locally. Existing report/stop gold is retained."
+    },
+    {
+      "id": "ds11-h02",
+      "category": "H_budget_exhausted",
+      "source": {
+        "path": "acceptance/ds11-h02.json",
+        "sha256": "98551b4230803779a085fb5ef070fcc2eda0efc2685b2b7fb88b805c501d1ab6"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/budget perChapterCalls=3"
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "BUDGET_EXHAUSTED",
+              "message": "The current budget does not allow another call.",
+              "hint": "Report the budget stop and do not retry without an author budget change."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The previous writing attempt returned BUDGET_EXHAUSTED."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No further tool call or automatic continuation is issued from this stop."
+        ],
+        "judgeChecks": [
+          "Report budget exhaustion accurately and do not invent a completed chapter or claim the author raised the budget."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-i01",
+      "category": "I_goal_reached",
+      "source": {
+        "path": "acceptance/ds11-i01.json",
+        "sha256": "9de6634f5ed16a42df4760bd2c9325c9ab3a7edd636e264c44e9fe602f278892"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/goal 3"
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "Three chapters are committed and the target is three.",
+              "hint": "Report completion and stop."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The writing tool returned GOAL_REACHED."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No further writing call or automatic continuation is issued."
+        ],
+        "judgeChecks": [
+          "Report that the three-chapter target has been met; do not extend the goal or outline without an author request."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-i02",
+      "category": "I_goal_reached",
+      "source": {
+        "path": "acceptance/ds11-i02.json",
+        "sha256": "0a325e02baadcddea2946e9d0dbdc0bf9fd5a9704d461df6eadb8d9c113786b1"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/goal 3"
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "GOAL_REACHED",
+              "message": "Three chapters are committed and the target is three.",
+              "hint": "Report completion and stop."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The writing tool returned GOAL_REACHED."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No further writing call or automatic continuation is issued."
+        ],
+        "judgeChecks": [
+          "Report that the three-chapter target has been met; do not extend the goal or outline without an author request."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-j01",
+      "category": "J_immediate_interjection",
+      "source": {
+        "path": "acceptance/ds11-j01.json",
+        "sha256": "fe1813fab32403e377bc5886deee0be61fcaf9b1cf62dea5006fb7d3a91cdc82"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "INTERJECTED",
+              "message": "The author immediately interjected; chapter 3 did not commit."
+            }
+          }
+        },
+        {
+          "step": "authorMessage",
+          "text": "Rewrite the interrupted chapter 3 so that Oren brings the duplicate page, not Suri. Keep chapter 2 unchanged."
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The interruption request above has arrived; continue with it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next chapter remains 3, and the cancelled attempt did not become canon."
+        ],
+        "judgeChecks": [
+          "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-j02",
+      "category": "J_immediate_interjection",
+      "source": {
+        "path": "acceptance/ds11-j02.json",
+        "sha256": "590934b696626391eb9148970baeaf6c2719b27dd40b57f39b9466bb87e21d6a"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "INTERJECTED",
+              "message": "The author immediately interjected; chapter 3 did not commit."
+            }
+          }
+        },
+        {
+          "step": "authorMessage",
+          "text": "Rewrite the interrupted chapter 3 with the duplicate page arriving wet; let Pema dry it flat before reading it. Keep chapter 2 unchanged."
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The interruption request above has arrived; continue with it."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The next chapter remains 3, and the cancelled attempt did not become canon."
+        ],
+        "judgeChecks": [
+          "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-k01",
+      "category": "K_control_notice",
+      "source": {
+        "path": "acceptance/ds11-k01.json",
+        "sha256": "7ae1492ed375bbfcb0115492d9c57bdd608f145fc626a3156e97bc9743c5a433"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Pema is a practical conservator. Cal is an assistant who is allowed to disagree. Eli keeps the public records. The story takes place at the salt archive. The wax packet must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Pema. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/intent From the next chapter, foreground Pema learning to accept practical help rather than working alone."
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The author has updated author_intent: From the next chapter, foreground Pema learning to accept practical help rather than working alone."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The author intent entry is retained; the model does not overwrite it."
+        ],
+        "judgeChecks": [
+          "A writing brief or substantive continuation reply reflects the new intent. A mere acknowledgement without intent content does not satisfy this case."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-k02",
+      "category": "K_control_notice",
+      "source": {
+        "path": "acceptance/ds11-k02.json",
+        "sha256": "105465230e93abdfbd28650bc19c74fe11907a85fb6ac205285a4a2c70ec315a"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "command",
+          "text": "/intent From the next chapter, foreground Nadi openly crediting Wren for the document work."
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The author has updated author_intent: From the next chapter, foreground Nadi openly crediting Wren for the document work."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "tool": "write_next_chapter"
+          },
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "The author intent entry is retained; the model does not overwrite it."
+        ],
+        "judgeChecks": [
+          "A writing brief or substantive continuation reply reflects the new intent. A mere acknowledgement without intent content does not satisfy this case."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-l01",
+      "category": "L_two_failures",
+      "source": {
+        "path": "acceptance/ds11-l01.json",
+        "sha256": "1885cdf9db894e057c4762b4ac58721f535aa31ab27ad4cbb67a1b52fc3f9c60"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "PARSE_FAILURE",
+              "message": "No usable draft was produced.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "PARSE_FAILURE",
+              "message": "No usable draft was produced.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The same next chapter has now failed twice. No new author instruction has arrived."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No third write_next_chapter call occurs and automatic continuation stops."
+        ],
+        "judgeChecks": [
+          "Report the two failures with the actual parsing/review cause, or ask the author how to proceed. Do not claim success."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-l02",
+      "category": "L_two_failures",
+      "source": {
+        "path": "acceptance/ds11-l02.json",
+        "sha256": "279a4c54e53fa9dc77b240fb35e8d66fb3c1f82e640f7c5caa71227f7a37ee09"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "REVIEW_REQUIRED",
+              "message": "No usable full review was produced after its repair attempts.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        },
+        {
+          "step": "toolCall",
+          "tool": "write_next_chapter",
+          "args": {},
+          "result": {
+            "ok": false,
+            "error": {
+              "code": "REVIEW_REQUIRED",
+              "message": "No usable full review was produced after its repair attempts.",
+              "hint": "This attempt did not commit."
+            }
+          }
+        }
+      ],
+      "trigger": {
+        "type": "continue",
+        "text": "The same next chapter has now failed twice. No new author instruction has arrived."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          },
+          {
+            "tool": "ask_author"
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+          "No third write_next_chapter call occurs and automatic continuation stops."
+        ],
+        "judgeChecks": [
+          "Report the two failures with the actual parsing/review cause, or ask the author how to proceed. Do not claim success."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    },
+    {
+      "id": "ds11-m01",
+      "category": "M_cost_question",
+      "source": {
+        "path": "acceptance/ds11-m01.json",
+        "sha256": "e3f6e4c871a380e2ae3dc4f145f2e1e4eae235c5263a81c2437a0070740f50d7"
+      },
+      "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Lena is a practical conservator. Oren is an assistant who is allowed to disagree. Suri keeps the public records. The story takes place at the tram museum. The sample case must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Lena. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+      "setupSummary": [],
+      "trigger": {
+        "type": "authorMessage",
+        "text": "How much have we spent so far? Report known usage separately from any unknown reservations. Do not write or change anything."
+      },
+      "expect": {
+        "acceptable": [
+          {
+            "reply": true
+          }
+        ],
+        "forbidden": [
+          {
+            "tool": "submit_constraints"
+          },
+          {
+            "tool": "submit_bible"
+          },
+          {
+            "tool": "submit_outline"
+          },
+          {
+            "tool": "update_bible"
+          },
+          {
+            "tool": "patch_outline"
+          },
+          {
+            "tool": "write_next_chapter"
+          }
+        ],
+        "programChecks": [
+          "The setup commits and all chapters already committed when measurement starts remain byte-identical."
+        ],
+        "judgeChecks": [
+          "Report 0.031 USD known and 0.007 USD reserved with unknown final usage, conservative total 0.038 USD. Do not present unknown usage as known zero or known actual spend."
+        ]
+      },
+      "reviewedBy": "Codex (AI); scoped delta review, not a separate human or independent second-model review",
+      "method": "byte_identical_to_author_accepted_v1; no semantic rejudgment",
+      "conclusion": "agree",
+      "reason": "Scenario bytes match v1 exactly; the prior author acceptance is inherited."
+    }
+  ]
+}

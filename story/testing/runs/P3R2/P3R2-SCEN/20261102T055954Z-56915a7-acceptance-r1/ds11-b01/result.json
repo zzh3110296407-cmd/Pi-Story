@@ -1,0 +1,131 @@
+{
+  "id": "ds11-b01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "char:pema",
+            "kind": "character",
+            "source": "user",
+            "authorQuote": "From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+            "op": "set",
+            "value": {
+              "abilities": "Pema can decode semaphore signals.",
+              "limits": "She can decode semaphore only in daylight; at night or in poor light she cannot read the signals."
+            }
+          }
+        ],
+        "reason": "作者要求自下一章起补充 Pema 能解码旗语、但仅限白天的能力设定；只新增字段，不改动已有描述与已写正文。"
+      },
+      "id": "call_00_JAyNAlK4Vrl6YhRPAYdq4858"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "char:pema",
+          "kind": "character",
+          "source": "user",
+          "authorQuote": "From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+          "op": "set",
+          "value": {
+            "abilities": "Pema can decode semaphore signals.",
+            "limits": "She can decode semaphore only in daylight; at night or in poor light she cannot read the signals."
+          }
+        }
+      ],
+      "reason": "作者要求自下一章起补充 Pema 能解码旗语、但仅限白天的能力设定；只新增字段，不改动已有描述与已写正文。"
+    },
+    "id": "call_00_JAyNAlK4Vrl6YhRPAYdq4858"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: From the next chapter onward, Pema can decode semaphore, but only in daylight.",
+      "status": "pending"
+    },
+    {
+      "check": "Accept either an additive attribute on the relevant existing card or a new rule entry when semantically appropriate. Do not require a new key, namespace, field name or one classification; preserve the entire author-given limitation, its referent and future-only scope without changing existing fields.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d7ddda1614f6e4cbf45e5bda786d5c742b6137bf876aa6dd100f4ce678e960a0",
+    "sessionSha256": "5924c58a47c4cbb64c282596960183d23a2f3055e111de64469d9223fc150c39",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0026666999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0026666999999999997
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

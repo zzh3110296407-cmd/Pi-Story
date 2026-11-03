@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON. Need extract minimal DeltaProposal facts 1-4 upserts. Need infer states stated. Chapter is literary. Facts: He woke cold? Memory? He lay on back in white, sky colorless. Teeth ached. Pushed up on one elbow. Snow settling into coat. Knew arithmetic of exposure. Got knees under him. Wind. Saw rise dark rock west and shadow ravine. Started walking counting steps. Need choose 1-4 facts. Minimal P0. Need exact sentence IDs. Mode narrated or recalled_past. Certainty confirmed/uncertain with reasons. Need no future plans. Facts should be atomic subject predicate object string. Could use subject \"He\" predicate \"lay on his back in the white\" object? Hmm schema subject/predicate/object strings. Facts as triples. Need temporary refs.\n\nNeed obey \"Extract minimal DeltaProposal\" and \"P0 subset tests only 1 to 4 fact upserts\". Need 1-4 facts. Need summary title characters events mood. Issues.\n\nNeed cite exact sentence IDs. Ensure facts only stated. Could include:\nref f1 op upsert subject \"he\" predicate \"woke to\" object \"cold before memory\" mode narrated certainty confirmed sentences [1]\nBut sentence 1 says Cold woke him first, before memory did. Good.\nf2 subject \"he\" predicate \"lay on\" object \"his back in the white\" sentences [2]\nf3 subject \"he\" predicate \"saw\" object \"a rise of dark rock to the west and a shadow beyond it that might have been a ravine\" certainty uncertain because \"might have been\" sentence [12]. uncertainReason \"The shadow only might have been a ravine.\" Good.\nf4 subject \"he\" predicate \"started\" object \"walking and counting his steps\" sentence [15]. Good.\nNeed maybe include \"his teeth ached\" etc. 4 max.\n\nNeed JSON only. Summary title characters events mood. Title can \"Cold Arrival\". Characters [\"He\"]. Events list: wakes in cold, lies in snow, sees rocks/ravine, starts walking counting steps. Mood \"desolate, disoriented\". Issues maybe [\"The protagonist is unnamed; referent 'he' used.\"] Need no extra. JSON object.\n\nNeed ensure facts sentences array integers. uncertainReason empty for confirmed, nonempty for uncertain. For uncertain fact, certainty uncertain. Good.\n\nCould fact f2 \"He lay on his back in the white\" object \"on his back in the white\" predicate \"lay\". Better. f1 subject \"He\" predicate \"was woken by\" object \"cold before memory\" maybe. Need no issue.\n\nNeed adhere schema exactly, additionalProperties false. Summary required. Issues array.\n\nFinal only JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"was woken first by\",\"object\":\"cold, before memory\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"lay\",\"object\":\"on his back in the white\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[2]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"saw\",\"object\":\"a rise of dark rock to the west and beyond it a shadow that might have been a ravine\",\"mode\":\"narrated\",\"certainty\":\"uncertain\",\"uncertainReason\":\"The shadow only might have been a ravine.\",\"sentences\":[12]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"He\",\"predicate\":\"started\",\"object\":\"walking and counting his steps\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[15]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"Cold Arrival\",\"characters\":[\"He\"],\"events\":[\"He is woken by cold before memory.\",\"He lies on his back in the white.\",\"He sees dark rock to the west and a possible ravine.\",\"He starts walking and counting his steps.\"],\"mood\":\"desolate and disoriented\"},\"issues\":[\"The protagonist is unnamed and referred to only as 'he'.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 159,
+      "output": 920,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 579,
+      "totalTokens": 1847,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001104,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0011563079999999998
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177743903,
+    "responseId": "edf3bdda-fd9d-46e0-95da-4d02f87b39dd",
+    "rawStopReason": "stop",
+    "durationMs": 6114
+  },
+  "record": {
+    "time": "2026-10-28T08:55:50.017Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-006",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3261,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108087,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 159,
+      "output": 920,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 579,
+      "totalTokens": 1847,
+      "cost": {
+        "input": 0.0000477,
+        "output": 0.001104,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0011563079999999998
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0011563079999999998,
+    "inputTokens": 159,
+    "outputTokens": 920,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 927,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 6115
+  }
+}

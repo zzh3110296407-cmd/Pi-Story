@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "unclaimed_pedestal-c1-injected-1",
+  "storyId": "unclaimed_pedestal",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/unclaimed_pedestal-c1.md",
+    "sha256": "e7a1ab2bcb7efa723adff4daba0b6be5615a48630e3b9e2e8bf7a66b4f21137c"
+  },
+  "injectionOrder": [
+    "characterisation",
+    "factual_details"
+  ],
+  "defects": [
+    {
+      "category": "characterisation",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Leila had been right-handed from birth and had never been left-handed.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Leila had been right-handed from birth and had never been left-handed.",
+          "lines": {
+            "start": 39,
+            "end": 39
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "char:leila",
+          "quote": "Leila is left-handed from birth and has never been the opposite-handed person."
+        }
+      ],
+      "reason": "Unquoted narration reverses the explicit lifelong dominant-hand invariant; an injury or temporary use of the other hand cannot explain it.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c1-injected-1-defect-1",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "category": "factual_details",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "With no intervening gain or loss after that completed count, the very same balance was 71 pounds, not 64 pounds.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "With no intervening gain or loss after that completed count, the very same balance was 71 pounds, not 64 pounds.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "current_chapter_narration",
+          "quote": "An eight-pound tape purchase reduced petty cash from seventy-two pounds to sixty-four.",
+          "ref": "line:9"
+        },
+        {
+          "kind": "chapter_intent",
+          "ref": "mustKeep[1]",
+          "quote": "An eight-pound tape purchase reduced petty cash from seventy-two pounds to sixty-four."
+        }
+      ],
+      "reason": "The correct narrated count is retained in this actual variant; the added count contradicts that same completed balance with all intervening changes explicitly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "unclaimed_pedestal-c1-injected-1-defect-2",
+      "lines": [
+        41
+      ]
+    }
+  ]
+}

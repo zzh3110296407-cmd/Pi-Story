@@ -1,0 +1,123 @@
+{
+  "id": "ds11-b03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "key": "rule:damp_paper_drying",
+            "kind": "rule",
+            "name": "Damp paper drying",
+            "source": "user",
+            "authorQuote": "a damp paper copy must dry flat before anyone turns its pages",
+            "op": "set",
+            "value": {
+              "statement": "A damp paper copy must dry flat before anyone turns its pages.",
+              "scope": "Applies to any paper copy handled in future scenes at the tram museum.",
+              "invariants": [
+                "Damp paper copies are dried flat before any page is turned."
+              ]
+            }
+          }
+        ],
+        "reason": "作者新增未来场景的纸张处理限制；只向后补充，未改动任何既有设定或已提交正文。"
+      },
+      "id": "call_00_il2IiyR9VNuaMHubkeUC1625"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "key": "rule:damp_paper_drying",
+          "kind": "rule",
+          "name": "Damp paper drying",
+          "source": "user",
+          "authorQuote": "a damp paper copy must dry flat before anyone turns its pages",
+          "op": "set",
+          "value": {
+            "statement": "A damp paper copy must dry flat before anyone turns its pages.",
+            "scope": "Applies to any paper copy handled in future scenes at the tram museum.",
+            "invariants": [
+              "Damp paper copies are dried flat before any page is turned."
+            ]
+          }
+        }
+      ],
+      "reason": "作者新增未来场景的纸张处理限制；只向后补充，未改动任何既有设定或已提交正文。"
+    },
+    "id": "call_00_il2IiyR9VNuaMHubkeUC1625"
+  },
+  "firstAcceptable": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new field or new rule preserves the entire limitation, without broadening it: For future scenes, a damp paper copy must dry flat before anyone turns its pages.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "A nonempty reason and an exact quote from the latest author message are supplied.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The resulting bible revision becomes effective at chapter 3; no prior effective revision or existing field is rewritten.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "733f5bb8263ef84dea364c2678eb4f4be32187a4d59d4c4fdf6476c429e2ebdf",
+    "sessionSha256": "e8526c24bad18eb5991f24f16304f03359a31e4347371b1840a112d3cf756a1a",
+    "fee": {
+      "knownUsd": 0.0027876,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0027876
+    },
+    "measuredMainRequests": 2
+  }
+}

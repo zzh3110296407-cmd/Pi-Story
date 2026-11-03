@@ -1,0 +1,394 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "bakery_apartment-c2",
+  "storyId": "bakery_apartment",
+  "chapter": 2,
+  "title": "The Unsigned Register",
+  "cast": [
+    "char:naomi",
+    "char:daniel",
+    "char:ruth",
+    "char:ames"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1739
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:naomi",
+      "predicate": "location",
+      "object": "place:clinic",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0015",
+        "c02.s0120"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Naomi waited with Ruth in the neighbourhood clinic."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:brass_key",
+      "predicate": "holder",
+      "object": "char:daniel",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0007"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Ruth handed the brass key to Daniel before the taxi left."
+    },
+    {
+      "id": "F-203",
+      "subject": "char:naomi",
+      "predicate": "quantity:fund",
+      "object": {
+        "value": 260,
+        "unit": "pounds"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:naomi",
+      "evidence": [
+        "c02.s0061",
+        "c02.s0062"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "A forty-pound refund brought the household fund to two hundred and sixty pounds.",
+      "arithmetic": {
+        "before": 220,
+        "change": 40,
+        "after": 260
+      }
+    },
+    {
+      "id": "F-204",
+      "subject": "char:daniel",
+      "predicate": "true_identity",
+      "object": "a qualified piano tuner",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0036"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Daniel’s certificate established that he was a qualified piano tuner."
+    },
+    {
+      "id": "F-205",
+      "subject": "item:father_letter",
+      "predicate": "holder",
+      "object": "char:naomi",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0030"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Daniel gave the letter back to Naomi outside the clinic."
+    },
+    {
+      "id": "F-206",
+      "subject": "char:daniel",
+      "predicate": "injury",
+      "object": "minor burn on left wrist",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0023"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Daniel showed them the minor burn on his left wrist."
+    },
+    {
+      "id": "F-207",
+      "subject": "item:blue_tin",
+      "predicate": "holder",
+      "object": "char:ames",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0055"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Mrs. Ames took the blue tin to the community hall for safekeeping."
+    },
+    {
+      "id": "F-208",
+      "subject": "char:ruth",
+      "predicate": "location",
+      "object": "place:clinic",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0104"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Ruth remained in the clinic’s observation room that evening."
+    },
+    {
+      "id": "F-290",
+      "subject": "char:daniel",
+      "predicate": "concealment_motive",
+      "object": "avoiding another family argument",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0070"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "The text presents a suspicion, not independently established evidence.",
+      "statement": "Naomi suspected her brother had hidden his qualification to avoid another family argument."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:daniel",
+      "content": "I never wanted anything to do with the piano.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c02.s0039"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:naomi",
+      "content": "The fund is two hundred and sixty pounds,",
+      "truth": "true",
+      "evidence": [
+        "c02.s0062"
+      ],
+      "corroboratedBy": "F-203"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:naomi",
+      "kind": "knows",
+      "content": "Naomi knew the lease register still lacked both heirs’ signatures.",
+      "acquiredChapter": 2,
+      "via": "told",
+      "evidence": [
+        "c02.s0083",
+        "c02.s0084",
+        "c02.s0085"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:ames",
+      "kind": "misbelieves",
+      "content": "Mrs. Ames believed the refund was a buyer’s deposit, but the repair shop’s receipt named it a returned overpayment.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0058"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+      "supersededBy": "K-25",
+      "temporalScope": "former_belief_superseded_within_chapter",
+      "viaScored": false,
+      "recordPolicy": "historical_attitude_not_required_as_active_add",
+      "requireHistoricalAdd": false
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:naomi",
+      "kind": "suspects",
+      "content": "Naomi suspected her brother had hidden his qualification to avoid another family argument.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0070"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:naomi",
+      "kind": "believes",
+      "content": "Naomi believed Mrs. Ames would attend the hall meeting.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0111"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-25",
+      "characterId": "char:ames",
+      "kind": "knows",
+      "content": "Mrs. Ames recognises the receipt records a returned overpayment, not a buyer’s deposit.",
+      "acquiredChapter": 2,
+      "via": "read",
+      "evidence": [
+        "c02.s0058",
+        "c02.s0059",
+        "c02.s0060"
+      ],
+      "certainty": "confirmed",
+      "supersededBy": null
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:naomi->daniel",
+      "from": "char:naomi",
+      "to": "char:daniel",
+      "stance": "conditional cooperation",
+      "keyFact": true,
+      "evidence": [
+        "c02.s0086"
+      ],
+      "statement": "Naomi and Daniel agreed to check the lease together before either answered the landlord."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "advance",
+      "statement": "The unsigned receipt matched a payment in Ruth’s old union ledger.",
+      "evidence": [
+        "c02.s0049"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "mention",
+      "statement": "Daniel tapped the delayed piano key without explaining it.",
+      "evidence": [
+        "c02.s0066"
+      ]
+    },
+    {
+      "id": "H-4",
+      "operation": "upsert",
+      "statement": "A pencilled date on the certificate matched their father’s last birthday.",
+      "evidence": [
+        "c02.s0089"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "bakery_apartment-c2-trap-1",
+      "kind": "plan",
+      "statement": "Naomi intended to speak to the landlord the next morning.",
+      "evidence": [
+        "c02.s0097"
+      ],
+      "reason": "An intention is not a completed event."
+    },
+    {
+      "id": "bakery_apartment-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If they moved the piano, the room could hold a second table.",
+      "evidence": [
+        "c02.s0100"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "bakery_apartment-c2-trap-3",
+      "kind": "dream",
+      "statement": "In the clinic chair she dreamed the bakery had no upstairs floor.",
+      "evidence": [
+        "c02.s0112"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Naomi suspected her brother had hidden his qualification to avoid another family argument.",
+      "evidence": [
+        "c02.s0070"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "F-280",
+      "subject": "char:naomi",
+      "predicate": "location",
+      "object": "place:apartment",
+      "validFrom": 1,
+      "validUntil": 1,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c02.s0063",
+        "c02.s0064",
+        "c02.s0065"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Naomi recalled arriving at the upstairs apartment on the first evening of this visit.",
+      "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one.",
+      "recordPolicy": "reference_existing",
+      "targetCollection": "historicalReferences",
+      "expectedOperation": "retain_existing",
+      "existingFactId": "F-101",
+      "mustNotCreateDuplicate": true
+    }
+  ],
+  "annotation": {
+    "kind": "AI_designed_then_user_delegated_AI_review",
+    "humanReviewed": false,
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewSource": "labels/delegated-review.json",
+    "authorFreezeSource": "labels/freeze-authorization.json",
+    "reviewPolicies": {
+      "factModes": "数量世界事实有独立叙述；reported记录原话来源，不作为唯一世界事实模式。允许持久层narrated并另记claim，不要求重复世界事实。recalled映射到recalled_past。",
+      "cognitionTiming": "新增acquiredChapter与P1结算章一致；实际旧信念形成时间未知另记null，不伪造0。明确被纠正的旧信念须supersede，不作为章末活跃态度。 同章已结束的历史态度不强制新加为活跃认知；输入中已有旧条目才要求supersede，不要求P1不支持的同批新增后再替换操作。",
+      "cognitionVia": "明确电话转告、读文件/日志或推断时按上下文判；泛泛的believed/不知道/猜测并未交代途径时，默认inferred不能作为唯一严格命中条件。viaScored=false及acceptedVia是金标评分元数据，不直接写入P1 schema。",
+      "traps": "mustNotRecord只禁止把给定计划/假设/梦境证据直接实化，不排斥后续独立证据已证实的事实。",
+      "uncertainty": "confirmed认知确认的是态度；被怀疑的世界命题仍只能未确认或不抽取。未提出具体命题时不强制编出一项事实。",
+      "identifiers": "F/K/H编号是本故事的参考标识。实际运行按语义与来源映射；新增纠正和supersede引用必须使用一致的实际分配ID，不逐字强制与金标编号一致。"
+    }
+  }
+}

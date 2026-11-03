@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer only JSON. Need repair prior output: validator errors indicate top-level \"type\":\"json_object\" is invalid? Wait schema required facts etc, additionalProperties false, no property type. They said \"You MUST strictly adhere to schema: {\"type\": \"json_object\"}\"? Conflicting: user says response format must be {\"type\":\"json_object\"} but then JSON schema disallows type additional property. Validator errors: /type schema is false, must not have additional properties type. So remove top-level \"type\":\"json_object\". Return JSON object with facts etc only. Need minimal DeltaProposal following schema. Prior facts maybe 4 allowed (1 to 4). Need ensure issues. Could reuse prior facts but remove type. Need maybe check fact-3 mode? \"He had aimed...\" recalled_past, \"This was older\" narrated? Prior mode recalled_past for fact-3 includes sentence 13 maybe okay. But task says extract minimal DeltaProposal only. Prior output likely okay except top-level type. Need return only JSON. No markdown. Ensure no additional props. facts min1. claims max0 etc. summary required. issues array. Need maybe no \"type\". Let's craft valid JSON.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"fact-1\",\"op\":\"upsert\",\"subject\":\"mammoth carcass\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]},{\"ref\":\"fact-2\",\"op\":\"upsert\",\"subject\":\"mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole and untouched, with no cuts, spear marks, trampled hunter ring, or signs of feeding\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"fact-3\",\"op\":\"upsert\",\"subject\":\"the time he reached\",\"predicate\":\"was\",\"object\":\"tens of thousands of years older than the late Pleistocene he had aimed for\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11,12,13]},{\"ref\":\"fact-4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"took\",\"object\":\"a shard of rib and a strip of hide, wrapped the hide around his wrist, and put the bone in his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"he\"],\"events\":[\"He finds a whole woolly mammoth carcass in the snow.\",\"He recognizes that the time is far older than his intended late Pleistocene target.\",\"He takes a rib shard and hide strip and walks toward the ravine.\"],\"mood\":\"bleak, solitary, disoriented\"},\"issues\":[\"The protagonist is unnamed; 'he' is used as the character label.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 518,
+      "output": 641,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 251,
+      "totalTokens": 2055,
+      "cost": {
+        "input": 0.00015539999999999998,
+        "output": 0.0007691999999999999,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.0009299759999999999
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793178083182,
+    "responseId": "4308b711-ec81-4ee6-94d7-54449ee92ddd",
+    "rawStopReason": "stop",
+    "durationMs": 6762
+  },
+  "record": {
+    "time": "2026-10-28T09:01:29.943Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-034",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3858,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.010987799999999999,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 518,
+      "output": 641,
+      "cacheRead": 896,
+      "cacheWrite": 0,
+      "reasoning": 251,
+      "totalTokens": 2055,
+      "cost": {
+        "input": 0.00015539999999999998,
+        "output": 0.0007691999999999999,
+        "cacheRead": 0.000005376,
+        "cacheWrite": 0,
+        "total": 0.0009299759999999999
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0009299759999999999,
+    "inputTokens": 518,
+    "outputTokens": 641,
+    "cacheReadTokens": 896,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 1414,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 6761
+  }
+}

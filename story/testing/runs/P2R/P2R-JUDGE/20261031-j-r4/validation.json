@@ -1,0 +1,33 @@
+{
+  "schema": "story/p2r-jr4-validation@1",
+  "validatedAt": "2026-10-31T12:21:21.191Z",
+  "judgmentFiles": 31,
+  "rows": 1715,
+  "metrics": 15,
+  "authorRows": 176,
+  "sourceRuns": [
+    "20261031T063135Z-0ae2186-r1",
+    "20261031T064115Z-0ae2186-r2",
+    "20261031T064958Z-0ae2186-r1",
+    "20261031T075152Z-0ae2186-r1",
+    "20261031T080054Z-0ae2186-r2",
+    "20261031T081133Z-0ae2186-r1"
+  ],
+  "checks": [
+    "Existing readJudgments schema/public-evidence validation passed on every run.",
+    "Every selected raw evidence checksum and source snapshot verified using readEvidence(folder,true).",
+    "Original run-manifest/metrics and qualification/protocol SHA-256 unchanged.",
+    "All metric counts, one-to-one identifiers, type strata and applicable sample minimums checked.",
+    "Author sample IDs reproduced from recorded fixed seed and exact coverage checked per metric/component.",
+    "Author verdicts and identities remain unfilled; no author-approved row invented.",
+    "Failed KEEP cases retained in gold recall denominators; source quality scope unchanged.",
+    "External author sheet and review entry equal committed canonical copies.",
+    "Indexed chapter/review/recheck contexts verified by SHA-256; each source file is under 1 MiB."
+  ],
+  "projectCheck": {
+    "command": "npm --prefix story run check",
+    "exitCode": 0,
+    "observed": "27 dataset versions and 9569 public files verified; Biome checked 135 files with no fixes; TypeScript completed successfully."
+  },
+  "result": "passed"
+}

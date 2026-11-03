@@ -1,0 +1,75 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { foldBranch } from '../../../../../packages/core/src/fold/index.ts';
+import { schemas, validate } from '../../../../../packages/core/src/schema/index.ts';
+import { digest, wordCount } from '../../../../../packages/core/src/shared/text.ts';
+
+const root=fileURLToPath(new URL('../',import.meta.url));
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const write=(name,value)=>{const target=path.join(root,name);mkdirSync(path.dirname(target),{recursive:true});writeFileSync(target,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');};
+const tool=(entryId,toolName,details)=>({kind:'toolResult',entryId,toolName,isError:false,details});
+const control=(entryId,field,text,rev)=>({kind:'custom',entryId,customType:'story.control',data:{schema:'story/control@1',field,text,rev}});
+const original='If the bell rings again, Ada must wait beside the red door. This condition is part of the complete author message.';
+const quote='If the bell rings again, Ada must wait beside the red door.';
+const continuation='Ada heard the northern bell.';
+const intentText='Find the brass key without claiming to know who forged it.';
+const focus='Emphasize Ada and Nolan learning to trust each other.';
+const authorIntent='Keep the lighthouse mystery grounded in observable evidence.';
+const future='SK_TEST_P2_CANARY_FUTURE_1111111111111111';
+const hiddenIntent='SK_TEST_P2_CANARY_INTENT_2222222222222222';
+const hiddenLedger='SK_TEST_P2_CANARY_LEDGER_3333333333333333';
+const before='Ada handed the brass key to Nolan.';
+const draftText='Nolan laid the brass key on the mantel.\nAda watched the northern window.';
+function entries({edited=false,canaryIntent=false,canaryLedger=false}={}){
+ const basis={canonHead:null,controlRev:0,bibleRev:1,intentRev:0,stateRev:0};
+ const summary={chapter:1,title:'The First Bell',characters:['char:ada','char:nolan'],events:[before],stateChanges:['Nolan holds the key.'],hookActivity:[],mood:'wary'};
+ const fact={id:'F-1',subject:'item:brass_key',predicate:'holder',object:'char:nolan',validFrom:1,validUntil:null,mode:'narrated',status:'confirmed',visibility:'public',evidence:['c01.s0001'],sourceChapter:1};
+ const delta={chapter:1,basis,factOps:{upsert:[fact],expire:[],confirm:[]},claimOps:{add:[]},cognitionOps:{add:[],supersede:[],confirm:[]},relationOps:{upsert:[],confirm:[]},hookOps:{upsert:[],advance:[],mention:[],resolve:[],defer:[],supersede:[]},summary,issues:[]};
+ const source=(q)=>{const messageId=q===continuation?'author-continuation':q==='Keep Ada alive through chapter four.'?'author-global':'author-prompt';const message=messageId==='author-continuation'?continuation:messageId==='author-global'?'Keep Ada alive through chapter four.':original;return {messageId,quote:q,start:message.indexOf(q),end:message.indexOf(q)+q.length};};
+ const ledger=[{id:'L-1',kind:'story',text:'Ada must wait beside the red door.',sourceSpans:[source(quote)]},{id:'L-2',kind:'continuation_start',text:continuation,sourceSpans:[source(continuation)]},{id:'L-3',kind:'global',text:'Keep Ada alive through chapter four.',sourceSpans:[source('Keep Ada alive through chapter four.')]}];
+ if(canaryLedger)ledger.push({id:'L-4',kind:'story',text:hiddenLedger,sourceSpans:[source(quote)]});
+ const base=[{kind:'authorMessage',entryId:'author-prompt',text:original},tool('ledger','submit_constraints',{schema:'story/constraints@1',rev:1,op:'submit',items:ledger}),tool('bible','submit_bible',{schema:'story/bible@1',rev:1,op:'submit',effectiveFromChapter:1,changes:[{kind:'character',key:'char:ada',op:'set',source:'model',card:{identity:'Ada, a lighthouse keeper'}},{kind:'character',key:'char:nolan',op:'set',source:'model',card:{identity:'Nolan, a visiting locksmith'}},{kind:'place',key:'place:lighthouse',op:'set',source:'model',value:'The active northern lighthouse.'},{kind:'rule',key:'rule:no_magic',op:'set',source:'model',value:'The lighthouse contains no working magic.'}]}),tool('outline','submit_outline',{schema:'story/outline@1',rev:1,op:'submit',narration:{viewpoint:'third person limited',tone:'restrained'},chapters:[{n:1,title:'First Bell',targetWords:1600,purpose:'The key changes hands.'},{n:2,title:'Northern Window',targetWords:1600,purpose:intentText},{n:3,title:'The Hidden Room',targetWords:1600,purpose:'A later discovery remains a plan.'}]}),tool('commit-1','commit_chapter',{schema:'story/commit-result@1',ok:true,calls:[],commit:{schema:'story/commit@1',chapter:1,draftId:'c01-d01',draftDigest:digest(before),text:before,sentenceRule:'s2',quality:'clean',basis,delta,summary,responses:[]}}),control('author-intent','author_intent',authorIntent,2),control('author-focus','current_focus',focus,3),tool('intent-2','set_chapter_intent',{schema:'story/intent@1',chapter:2,rev:1,mustKeep:[intentText],mustAvoid:['Do not treat speculation as fact.'],beats:['Inspect the mantel.'],hookOps:[],cast:['char:ada','char:nolan'],brief:canaryIntent?hiddenIntent:'Keep the action in the lighthouse.'}),tool('future-bible','update_bible',{schema:'story/bible@1',rev:2,op:'update',reason:'Reserved for a later chapter.',effectiveFromChapter:3,changes:[{kind:'place',key:'place:future_vault',op:'set',source:'model',value:future}]})];
+ base.splice(1,0,{kind:'authorMessage',entryId:'author-continuation',text:continuation},{kind:'authorMessage',entryId:'author-global',text:'Keep Ada alive through chapter four.'});
+ if(edited)base.push({kind:'custom',entryId:'author-ledger-edit',customType:'story.control',data:{schema:'story/control@1',field:'ledger_edit',rev:4,ledgerPatch:[{id:'L-1',op:'set',kind:'story',text:'If the bell rings again, Ada must wait beside the blue door.'}]}});
+ const m=foldBranch(base),b={canonHead:m.canonHead,controlRev:m.controlRev,bibleRev:m.bibleRev,intentRev:m.intents[2].rev,stateRev:m.stateRev};
+ const draft={schema:'story/draft@1',draftId:'c02-d01',chapter:2,author:'writer',text:draftText,digest:digest(draftText),sentenceRule:'s2',basis:b,wordCount:wordCount(draftText),calls:[]};
+ const observation={id:'c02-r01-o01',by:'editor',category:'factual_details',severity:'major',objective:true,evidence:{lines:[1],stateRefs:['F-1']},impact:'Check the stated key location against the current holder.',scope:'local'};
+ base.push(tool('draft-2','write_draft',draft),tool('review-2','review_draft',{schema:'story/review@1',reviewId:'c02-r01',draftId:draft.draftId,draftDigest:draft.digest,basis:b,scope:'full',observations:[observation],calls:[]}));
+ for(const e of base){const data=e.details??e.data;if(!data)continue;const name=Object.keys(schemas).find(name=>schemas[name].properties?.schema?.const===data.schema);assert(name,`Unknown fixture schema ${data.schema}`);const result=validate(schemas[name],data);assert(result.ok,JSON.stringify({entry:e.entryId,errors:result.errors}));}
+ const folded=foldBranch(base);assert.equal(folded.lastChapter,1);assert.equal(folded.drafts.at(-1).draftId,'c02-d01');assert.equal(folded.authorMessages[0].text,original);if(edited){assert.equal(folded.ledger[0].authorEditEntryId,'author-ledger-edit');assert.deepEqual(folded.ledger[0].sourceSpans,[]);}
+ return base;
+}
+const condition=(type,value)=>({type,value});
+const contains=text=>condition('text_contains',text),absent=text=>condition('text_absent',text),field=name=>condition('field_absent',name),jsonPath=p=>condition('json_path_exists',p);
+const cases=[];
+function add(role,name,must,forbidden=[],options={}){cases.push({id:`ctx-${String(cases.length+1).padStart(2,'0')}-${name}`,description:name.replaceAll('-',' '),entries:entries(options),role,chapter:2,must,forbidden,notes:'English fixture; no model calls. Interpret predicates on the parsed role user-input JSON and its serialization, not on test metadata or provider secrets.'});}
+add('writer','full-author-message',[contains(original),contains(quote),jsonPath('$.intent')],[absent(future)]);
+add('writer','continuation-start',[contains(continuation)],[absent(future)]);
+add('writer','author-control',[contains(authorIntent),contains(focus)],[absent(future)]);
+add('writer','active-bible-and-state',[contains('The active northern lighthouse.'),contains('char:ada'),contains('char:nolan'),contains('item:brass_key')],[absent(future),absent('place:future_vault')]);
+add('writer','edited-ledger-authority',[contains('If the bell rings again, Ada must wait beside the blue door.'),contains('author-ledger-edit')],[absent('Ada must wait beside the red door.')],{edited:true});
+for(const [name,must]of [['patch-draft',[contains(draftText)]],['patch-observation',[contains('c02-r01-o01'),contains('Check the stated key location against the current holder.')]],['patch-cast',[contains('char:ada'),contains('char:nolan')]],['patch-author-message',[contains(original)]]])add('patch',name,must,[absent(future)]);
+for(const[name,must]of [['editor-numbered-draft',[contains('Nolan laid the brass key on the mantel.'),jsonPath('$.intent')]],['editor-ledger',[contains(original),contains(quote)]],['editor-bible-state',[contains('The active northern lighthouse.'),contains('item:brass_key')]],['editor-focus',[contains(authorIntent),contains(focus)]]])add('editor',name,must,[absent(future)]);
+for(const[name,must]of [['recheck-numbered-draft',[contains('Nolan laid the brass key on the mantel.')]],['recheck-observation',[contains('c02-r01-o01')]],['recheck-ledger-intent',[contains(quote),contains(intentText)]],['recheck-active-bible',[contains('The active northern lighthouse.')]]])add('recheck',name,must,[absent(future)]);
+const isolated=[field('outline'),field('intent'),field('ledger'),field('brief'),field('authorIntent'),field('currentFocus'),field('mustKeep'),field('beats'),absent(authorIntent),absent(focus),absent(quote)];
+add('keeper','keeper-numbered-sentences',[contains('c02.s0001'),contains('Nolan laid the brass key on the mantel.')],isolated);
+add('keeper','keeper-current-state',[contains('F-1'),contains('item:brass_key'),contains('char:nolan')],isolated);
+add('keeper','keeper-entity-table',[contains('char:ada'),contains('char:nolan'),contains('place:lighthouse')],[...isolated,absent('place:future_vault')]);
+add('keeper','keeper-predicates',[contains('alive'),contains('holder'),contains('location'),contains('identity')],isolated);
+add('keeper','canary-future-bible',[contains('char:ada')],[...isolated,absent(future)]);
+add('keeper','canary-chapter-intent',[contains('c02.s0001')],[...isolated,absent(hiddenIntent)],{canaryIntent:true});
+add('keeper','canary-ledger',[contains('item:brass_key')],[...isolated,absent(hiddenLedger)],{canaryLedger:true});
+add('keeper','edited-ledger-not-leaked',[contains('c02.s0001')],[...isolated,absent('blue door')],{edited:true});
+assert.equal(cases.length,25);for(const role of ['writer','patch','editor','recheck','keeper'])assert(cases.filter(c=>c.role===role).length>=3);
+for(const c of cases)write(`acceptance/${c.id}.json`,c);
+for(const c of [cases[0],cases[5],cases[17]])write(`dev/example-${c.role}.json`,{...c,id:`example-${c.role}`,exampleOf:c.id});
+const sample=[...cases].sort((a,b)=>hash(`20261029:${a.id}`).localeCompare(hash(`20261029:${b.id}`))).slice(0,5);
+write('labels/review.json',{seed:20261029,sampleRate:.2,items:sample.map(c=>({itemId:c.id,role:c.role,must:c.must,forbidden:c.forbidden,authorVerdict:null,changedTo:null,note:null,reviewer:null,date:null}))});
+write('labels/annotation.json',{kind:'AI_constructed',date:'2026-10-29',humanReviewed:false,reviewState:'pending_20_percent_sample',scope:'P2 C01/C02 mechanical context contracts',roleCounts:Object.fromEntries(['writer','patch','editor','recheck','keeper'].map(role=>[role,cases.filter(c=>c.role===role).length]))});
+write('LABELING.md','# DS12 context cases v1\n\nAI constructed on 2026-10-29. There are 25 acceptance cases and three explicitly overlapping development examples, not independent evaluation samples. Every role has at least three cases. All BranchEntry payloads satisfy the frozen P1 schemas and fold to chapter 1 with c02-d01 current. No P2 role rules or provider prompts were inspected.\n\nPredicates use `{type,value}`: json_path_exists supports a root path such as $.intent on the parsed role input; text_contains/text_absent use case-sensitive literal containment of the serialized input; field_absent means no object property with that exact name at any depth. Test metadata, this README, and the case entries themselves are not the measured role input. Driver task selectors map patch/recheck to writer/editor input construction with the current draft/observation and changed-line scope respectively.\n\nSynthetic key-shaped canaries begin SK_TEST_P2_CANARY and are expressly not credentials; they test role isolation without resembling a live provider credential. The future Bible entry is effective from chapter 3 and must be excluded at chapter 2. DD04 requires edited L-1 to use the new literal command text and authorEditEntryId, without obsolete sourceSpans.\n\nThe author samples five cases using the fixed SHA-256 rank seed 20261029. Approval may follow J1 per plan 20; pending approval is not represented as completed. Build and validation use P1 schemas, digest, wordCount and foldBranch only. No context measurement or paid model runs occurred. Run `node build/build.mjs` only in a new draft version; do not regenerate a committed version.\n');
+const files=[];function walk(dir){for(const e of readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else{const rel=path.relative(root,p).split(path.sep).join('/');if(rel==='manifest.json')continue;files.push({path:rel,sha256:hash(readFileSync(p)),source:'Original P2 context fixture constructed from published plan 20 and frozen P1 contracts',license:'AGPL-3.0-only',split:rel.startsWith('acceptance/')?'acceptance':rel.startsWith('dev/')?'development':'metadata'});}}}walk(root);
+write('manifest.json',{schema:'story/dataset-manifest@1',id:'DS12',version:'v1',frozenAt:new Date().toISOString(),seed:20261029,annotationStatus:'AI_constructed; author_sample_pending; J1 exception applies',files:files.sort((a,b)=>a.path.localeCompare(b.path))});
+console.log('DS12: 25 acceptance cases, 3 dev examples; schema and fold checks passed.');

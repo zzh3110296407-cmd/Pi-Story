@@ -1,0 +1,57 @@
+{
+  "id": "ds11-m01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "reply": "**Spend so far**\n\n- Known spend: **$0.031**\n- Unknown reservations: **$0.007**\n- Conservative total: **$0.038**\n\nThe known amount is what has been definitively accounted for; the $0.007 is reserved but not yet confirmed, so treat $0.038 as the upper-bound estimate rather than a settled total.\n\n**Progress (unchanged, nothing written)**\n- Chapters committed: 2 of 6 planned, both clean with no retained risks\n- Next chapter: 3 (\"The Duplicate\"), not started\n- Budget: none set"
+    }
+  ],
+  "firstAction": {
+    "reply": "**Spend so far**\n\n- Known spend: **$0.031**\n- Unknown reservations: **$0.007**\n- Conservative total: **$0.038**\n\nThe known amount is what has been definitively accounted for; the $0.007 is reserved but not yet confirmed, so treat $0.038 as the upper-bound estimate rather than a settled total.\n\n**Progress (unchanged, nothing written)**\n- Chapters committed: 2 of 6 planned, both clean with no retained risks\n- Next chapter: 3 (\"The Duplicate\"), not started\n- Budget: none set"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Report 0.031 USD known and 0.007 USD reserved with unknown final usage, conservative total 0.038 USD. Do not present unknown usage as known zero or known actual spend.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "5f78163e1dd8a4147459b345be03ec5f0a704ee31ddc6d5c5da70e13e036798d",
+    "sessionSha256": "97b246461c3c85b7e982ad83c09cb2f0b872fbec088c80aa4396454d55d25d0c",
+    "fee": {
+      "knownUsd": 0.0023318999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0023318999999999996
+    },
+    "measuredMainRequests": 1
+  }
+}

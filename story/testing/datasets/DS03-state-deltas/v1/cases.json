@@ -1,0 +1,3365 @@
+[
+  {
+    "id": "valid-fact",
+    "group": "valid",
+    "rule": "D1",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "圣经人物存在，本章叙述直接支持生存状态。"
+  },
+  {
+    "id": "valid-item-first-seen",
+    "group": "valid",
+    "rule": "D1",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "item:old_book",
+          "predicate": "holder",
+          "object": "char:stranger",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            32
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "item首次出现可直接使用，持有者人物已存在。"
+  },
+  {
+    "id": "valid-evidence-last",
+    "group": "valid",
+    "rule": "D2",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [
+        {
+          "ref": "s-last",
+          "speaker": "char:shopkeeper",
+          "content": "陌生人值得信任",
+          "sentences": [
+            36
+          ]
+        }
+      ],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "最后一句仍是有效的本章证据。"
+  },
+  {
+    "id": "valid-claim",
+    "group": "valid",
+    "rule": "D3",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [
+        {
+          "ref": "s-1",
+          "speaker": "char:shopkeeper",
+          "content": "钥匙在河底",
+          "sentences": [
+            8
+          ]
+        }
+      ],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "已按转述表示，不把说话内容当作事实。"
+  },
+  {
+    "id": "valid-recalled-new",
+    "group": "valid",
+    "rule": "D4",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:father",
+          "predicate": "alive",
+          "object": "dead",
+          "mode": "recalled_past",
+          "certainty": "confirmed",
+          "sentences": [
+            29
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "没有父亲现有生死状态，回忆揭示至今仍成立的死亡事实。"
+  },
+  {
+    "id": "valid-recalled-past-only",
+    "group": "valid",
+    "rule": "D4",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:lin_yao",
+          "predicate": "location",
+          "object": "山城",
+          "mode": "recalled_past",
+          "certainty": "confirmed",
+          "sentences": [
+            28
+          ],
+          "validUntil": 0
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "只描述第0章之前，既不覆盖第1章起的旧位置，也不使其失效。"
+  },
+  {
+    "id": "valid-cognition",
+    "group": "valid",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ]
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "本章新增认知获得章由本章回填。"
+  },
+  {
+    "id": "valid-believes",
+    "group": "valid",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "believes",
+          "content": "店主值得信任",
+          "via": "inferred",
+          "certainty": "confirmed",
+          "sentences": [
+            19
+          ]
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "信念与事实分开保存。"
+  },
+  {
+    "id": "valid-suspects",
+    "group": "valid",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:shopkeeper",
+          "kind": "suspects",
+          "content": "陌生人另有身份",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            13
+          ]
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "角色怀疑不升级为事实。"
+  },
+  {
+    "id": "valid-relation",
+    "group": "valid",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "r-new",
+          "op": "upsert",
+          "key": "rel:lin_yao->shopkeeper",
+          "stance": "信任",
+          "certainty": "confirmed",
+          "sentences": [
+            19
+          ]
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "关系逐项明确确定性。"
+  },
+  {
+    "id": "valid-uncertain-fact",
+    "group": "valid",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "uncertain",
+          "sentences": [
+            15
+          ],
+          "uncertainReason": "叙述尚有疑点"
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "uncertain有逐项原因，写入时必须成为provisional。"
+  },
+  {
+    "id": "valid-uncertain-cognition",
+    "group": "valid",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "uncertain",
+          "sentences": [
+            11
+          ],
+          "uncertainReason": "消息未经旁证"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "uncertain有逐项原因，写入时必须成为provisional。"
+  },
+  {
+    "id": "valid-uncertain-relation",
+    "group": "valid",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "r-new",
+          "op": "upsert",
+          "key": "rel:lin_yao->shopkeeper",
+          "stance": "信任",
+          "certainty": "uncertain",
+          "sentences": [
+            19
+          ],
+          "uncertainReason": "态度可能是伪装"
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "uncertain有逐项原因，写入时必须成为provisional。"
+  },
+  {
+    "id": "valid-confirm-fact",
+    "group": "valid",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "cf",
+          "op": "confirm",
+          "id": "F-3",
+          "sentences": [
+            17
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "以新证据确认旧provisional条目，不改变其内容。"
+  },
+  {
+    "id": "valid-confirm-cognition",
+    "group": "valid",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "ck",
+          "op": "confirm",
+          "characterId": "char:lin_yao",
+          "kind": "believes",
+          "content": "店主值得信任",
+          "via": "inferred",
+          "certainty": "confirmed",
+          "sentences": [
+            19
+          ],
+          "id": "K-1"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "以新证据确认旧provisional条目，不改变其内容。"
+  },
+  {
+    "id": "valid-confirm-relation",
+    "group": "valid",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "cr",
+          "op": "confirm",
+          "key": "rel:shopkeeper->lin_yao",
+          "sentences": [
+            18
+          ]
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "以新证据确认旧provisional条目，不改变其内容。"
+  },
+  {
+    "id": "valid-hook-mention-H-2",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-op",
+          "op": "mention",
+          "id": "H-2",
+          "sentences": [
+            23
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "提及不改状态或lastAdvancedChapter。"
+  },
+  {
+    "id": "valid-hook-advance-H-1",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-op",
+          "op": "advance",
+          "id": "H-1",
+          "sentences": [
+            20
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "合法的未终结伏笔迁移。"
+  },
+  {
+    "id": "valid-hook-resolve-H-1",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-op",
+          "op": "resolve",
+          "id": "H-1",
+          "sentences": [
+            21
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "合法的未终结伏笔迁移。"
+  },
+  {
+    "id": "valid-hook-defer-H-2",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-op",
+          "op": "defer",
+          "id": "H-2",
+          "sentences": [
+            22
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "合法的未终结伏笔迁移。"
+  },
+  {
+    "id": "valid-hook-advance-H-3",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-op",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            20
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "合法的未终结伏笔迁移。"
+  },
+  {
+    "id": "valid-new-hook",
+    "group": "valid",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h-new",
+          "op": "upsert",
+          "type": "陌生印章",
+          "sentences": [
+            33
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "正文出现新线索，创建新伏笔。"
+  },
+  {
+    "id": "valid-quantity-change",
+    "group": "valid",
+    "rule": "D6",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "expire-q",
+          "op": "expire",
+          "id": "F-2",
+          "validUntil": 1,
+          "sentences": [
+            5
+          ]
+        },
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:lin_yao",
+          "predicate": "quantity:silver",
+          "object": {
+            "value": 12,
+            "unit": "枚"
+          },
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            5,
+            31
+          ],
+          "change": 2
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "旧10+变化2=新12，旧值同增量失效。"
+  },
+  {
+    "id": "valid-holder-transfer",
+    "group": "valid",
+    "rule": "D6",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "expire-holder",
+          "op": "expire",
+          "id": "F-4",
+          "validUntil": 1,
+          "sentences": [
+            1
+          ]
+        },
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:shopkeeper",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            1
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": []
+    },
+    "reason": "易主时同增量结束旧持有者。"
+  },
+  {
+    "id": "D1-missing-character",
+    "group": "violation",
+    "rule": "D1",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:missing",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].subject"
+      ]
+    },
+    "reason": "char引用不在圣经。"
+  },
+  {
+    "id": "D1-missing-place",
+    "group": "violation",
+    "rule": "D1",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "location",
+          "object": "place:missing",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].object"
+      ]
+    },
+    "reason": "place引用不在圣经。"
+  },
+  {
+    "id": "D1-missing-expire",
+    "group": "violation",
+    "rule": "D1",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "e",
+          "op": "expire",
+          "id": "F-999",
+          "validUntil": 1,
+          "sentences": [
+            1
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].id"
+      ]
+    },
+    "reason": "失效目标不存在。"
+  },
+  {
+    "id": "D2-no-evidence",
+    "group": "violation",
+    "rule": "D2",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": []
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].sentences"
+      ]
+    },
+    "reason": "证据数组不能为空；属于格式层先拒绝。"
+  },
+  {
+    "id": "D2-out-of-range",
+    "group": "violation",
+    "rule": "D2",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            37
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].sentences"
+      ]
+    },
+    "reason": "本章只有36句。"
+  },
+  {
+    "id": "D2-foreign-ref",
+    "group": "violation",
+    "rule": "D2",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            "c01.s0001"
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].sentences[0]"
+      ]
+    },
+    "reason": "提议只收本章整数句号，不能传其他章节引用。"
+  },
+  {
+    "id": "D3-curly",
+    "group": "violation",
+    "rule": "D3",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "test_statement",
+          "object": "河底",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            8
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          8
+        ]
+      }
+    },
+    "reason": "证据完全在对白引号内，必须降为转述。",
+    "outcome": "downgrade"
+  },
+  {
+    "id": "D3-corner",
+    "group": "violation",
+    "rule": "D3",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "test_statement",
+          "object": "dead",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            9
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          9
+        ]
+      }
+    },
+    "reason": "证据完全在对白引号内，必须降为转述。",
+    "outcome": "downgrade"
+  },
+  {
+    "id": "D3-double-corner",
+    "group": "violation",
+    "rule": "D3",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "test_statement",
+          "object": "烧毁",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            10
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": true,
+      "errorCode": null,
+      "items": [],
+      "transform": {
+        "factCount": 0,
+        "claimCount": 1,
+        "mode": "claim",
+        "evidenceSentences": [
+          10
+        ]
+      }
+    },
+    "reason": "证据完全在对白引号内，必须降为转述。",
+    "outcome": "downgrade"
+  },
+  {
+    "id": "D4-recall-expires-current",
+    "group": "violation",
+    "rule": "D4",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "e",
+          "op": "expire",
+          "id": "F-1",
+          "validUntil": 1,
+          "sentences": [
+            28
+          ]
+        },
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:lin_yao",
+          "predicate": "location",
+          "object": "山城",
+          "mode": "recalled_past",
+          "certainty": "confirmed",
+          "sentences": [
+            28
+          ],
+          "validUntil": 0
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]"
+      ]
+    },
+    "reason": "回忆不得使现有事实失效。"
+  },
+  {
+    "id": "D4-recall-no-end",
+    "group": "violation",
+    "rule": "D4",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:lin_yao",
+          "predicate": "location",
+          "object": "山城",
+          "mode": "recalled_past",
+          "certainty": "confirmed",
+          "sentences": [
+            28
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].validUntil"
+      ]
+    },
+    "reason": "已有当前位置，回忆中不同位置必须只描述过去。"
+  },
+  {
+    "id": "D4-recall-current-end",
+    "group": "violation",
+    "rule": "D4",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "identity",
+          "object": "画师",
+          "mode": "recalled_past",
+          "certainty": "confirmed",
+          "sentences": [
+            30
+          ],
+          "validUntil": 2
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].validUntil"
+      ]
+    },
+    "reason": "回忆冲突值有效期不能延至当前第2章。"
+  },
+  {
+    "id": "D5-nonfactual-mode-1",
+    "group": "violation",
+    "rule": "D5",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "planned",
+          "certainty": "confirmed",
+          "sentences": [
+            25
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "reason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "gateScope": "P1-format-only"
+  },
+  {
+    "id": "D5-nonfactual-mode-2",
+    "group": "violation",
+    "rule": "D5",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "hypothetical",
+          "certainty": "confirmed",
+          "sentences": [
+            26
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "reason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "gateScope": "P1-format-only"
+  },
+  {
+    "id": "D5-nonfactual-mode-3",
+    "group": "violation",
+    "rule": "D5",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "dreamed",
+          "certainty": "confirmed",
+          "sentences": [
+            27
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].mode"
+      ]
+    },
+    "reason": "P1只能机械拒绝非事实mode枚举；这不证明能识别伪装成narrated的计划或梦境。",
+    "gateScope": "P1-format-only"
+  },
+  {
+    "id": "D6-no-expiration",
+    "group": "violation",
+    "rule": "D6",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "item:brass_key",
+          "predicate": "holder",
+          "object": "char:shopkeeper",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            1
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]"
+      ]
+    },
+    "reason": "单值旧持有者未失效。"
+  },
+  {
+    "id": "D6-unbalanced-quantity",
+    "group": "violation",
+    "rule": "D6",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "e",
+          "op": "expire",
+          "id": "F-2",
+          "validUntil": 1,
+          "sentences": [
+            5
+          ]
+        },
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:lin_yao",
+          "predicate": "quantity:silver",
+          "object": {
+            "value": 12,
+            "unit": "枚"
+          },
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            5,
+            31
+          ],
+          "change": 3
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[1].change"
+      ]
+    },
+    "reason": "10+3不等于12。"
+  },
+  {
+    "id": "D6-two-new-values",
+    "group": "violation",
+    "rule": "D6",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "one",
+          "op": "upsert",
+          "subject": "item:new_token",
+          "predicate": "holder",
+          "object": "char:lin_yao",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            15
+          ]
+        },
+        {
+          "ref": "two",
+          "op": "upsert",
+          "subject": "item:new_token",
+          "predicate": "holder",
+          "object": "char:shopkeeper",
+          "mode": "narrated",
+          "certainty": "confirmed",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0]",
+        "facts[1]"
+      ]
+    },
+    "reason": "同一新物品同时有两个持有者。"
+  },
+  {
+    "id": "D7-cross-character-1",
+    "group": "violation",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "replacement",
+          "op": "add",
+          "characterId": "char:shopkeeper",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ]
+        },
+        {
+          "ref": "supersede",
+          "op": "supersede",
+          "characterId": "char:shopkeeper",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ],
+          "id": "K-1",
+          "by": "replacement"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "reason": "不能用一个角色的新认知取代另一个角色的旧认知。"
+  },
+  {
+    "id": "D7-cross-character-2",
+    "group": "violation",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "replacement",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ]
+        },
+        {
+          "ref": "supersede",
+          "op": "supersede",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ],
+          "id": "K-2",
+          "by": "replacement"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "reason": "不能用一个角色的新认知取代另一个角色的旧认知。"
+  },
+  {
+    "id": "D7-cross-character-3",
+    "group": "violation",
+    "rule": "D7",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "replacement",
+          "op": "add",
+          "characterId": "char:shopkeeper",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ]
+        },
+        {
+          "ref": "supersede",
+          "op": "supersede",
+          "characterId": "char:shopkeeper",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            11
+          ],
+          "id": "K-3",
+          "by": "replacement"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[1].id"
+      ]
+    },
+    "reason": "不能用一个角色的新认知取代另一个角色的旧认知。"
+  },
+  {
+    "id": "D8-terminal-1",
+    "group": "violation",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h",
+          "op": "advance",
+          "id": "H-4",
+          "sentences": [
+            20
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "reason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。"
+  },
+  {
+    "id": "D8-terminal-2",
+    "group": "violation",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h",
+          "op": "resolve",
+          "id": "H-5",
+          "sentences": [
+            20
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "reason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。"
+  },
+  {
+    "id": "D8-terminal-3",
+    "group": "violation",
+    "rule": "D8",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [
+        {
+          "ref": "h",
+          "op": "mention",
+          "id": "H-4",
+          "sentences": [
+            20
+          ]
+        }
+      ],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "hooks[0].id"
+      ]
+    },
+    "reason": "终结伏笔不可再推进、回收或提及；旧线重开创建新伏笔。"
+  },
+  {
+    "id": "D9-confirm-changes-fact",
+    "group": "violation",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "cf",
+          "op": "confirm",
+          "id": "F-3",
+          "object": "铁",
+          "sentences": [
+            17
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "facts[0].object"
+      ]
+    },
+    "reason": "confirm不能把铜改成铁。"
+  },
+  {
+    "id": "D9-confirm-changes-cognition",
+    "group": "violation",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "ck",
+          "op": "confirm",
+          "characterId": "char:lin_yao",
+          "kind": "believes",
+          "content": "店主不值得信任",
+          "via": "told",
+          "certainty": "confirmed",
+          "sentences": [
+            19
+          ],
+          "id": "K-1"
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "cognitions[0].content"
+      ]
+    },
+    "reason": "confirm不得改认知内容。"
+  },
+  {
+    "id": "D9-confirm-changes-relation",
+    "group": "violation",
+    "rule": "D9",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "cr",
+          "op": "confirm",
+          "key": "rel:shopkeeper->lin_yao",
+          "stance": "敌对",
+          "sentences": [
+            18
+          ]
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "DOMAIN_INVALID",
+      "items": [
+        "relations[0].stance"
+      ]
+    },
+    "reason": "confirm不得改关系立场。"
+  },
+  {
+    "id": "D10-leak-1",
+    "group": "violation",
+    "rule": "D10",
+    "layer": "keeper_input",
+    "context": "context.json",
+    "input": {
+      "numberedText": "林遥把铜钥匙交给店主。\n店主把钥匙放进木盒。\n店主熄灭油灯。\n林遥走到河岸。\n林遥收到两枚银币。\n林遥付出三枚银币。\n天边的云渐渐散开。\n“钥匙在河底。”\n「店主已经死了。」\n『那本日志已经烧毁。』\n店主告诉林遥钟声意味着渡口关闭。\n林遥读懂了日志上的暗号。\n店主开始怀疑陌生人的身份。\n林遥发现陌生人就是父亲的旧友。\n店主仍然活着。\n林遥仔细检查了手里的纸条。\n林遥摸到钥匙上的铜锈，确认它是铜制的。\n店主承认自己信任林遥。\n林遥终于确信店主值得信任。\n林遥意识到钟声就是航路暗号。\n日志背面的纸条揭开了钟声之谜。\n他们暂时搁置追查蓝线来历。\n墙上又出现一枚蓝色结。\n一本新账册给出了另一条追查方向。\n林遥决定明天才出发。\n如果河水上涨，渡船就不能通行。\n林遥梦见父亲回到了书店。\n林遥想起去年自己住在山城。\n林遥想起父亲早已去世。\n旧日的店主其实是一名画师。\n银币袋里现在有十二枚银币。\n林遥把一本旧书送给陌生人。\n箱底出现一枚陌生的印章。\n店主从书店走到河岸。\n林遥不再相信那封假信。\n店主改口说陌生人值得信任。",
+      "state": {
+        "facts": [
+          {
+            "id": "F-1",
+            "subject": "char:lin_yao",
+            "predicate": "location",
+            "object": "place:bookshop",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-2",
+            "subject": "char:lin_yao",
+            "predicate": "quantity:silver",
+            "object": {
+              "value": 10,
+              "unit": "枚"
+            },
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0004"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-3",
+            "subject": "item:brass_key",
+            "predicate": "material",
+            "object": "铜",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "provisional",
+            "uncertainReason": "前章明确保留不确定性",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0010"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-4",
+            "subject": "item:brass_key",
+            "predicate": "holder",
+            "object": "char:lin_yao",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-5",
+            "subject": "char:shopkeeper",
+            "predicate": "identity",
+            "object": "书商",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0002"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-6",
+            "subject": "char:stranger",
+            "predicate": "identity",
+            "object": "旅人",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "sourceChapter": 1
+          }
+        ],
+        "cognitions": [
+          {
+            "id": "K-1",
+            "characterId": "char:lin_yao",
+            "kind": "believes",
+            "content": "店主值得信任",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0005"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚无把握",
+            "supersededBy": null
+          },
+          {
+            "id": "K-2",
+            "characterId": "char:shopkeeper",
+            "kind": "knows",
+            "content": "林遥持有钥匙",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0006"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          },
+          {
+            "id": "K-3",
+            "characterId": "char:stranger",
+            "kind": "believes",
+            "content": "日志已经烧毁",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          }
+        ],
+        "relations": [
+          {
+            "key": "rel:shopkeeper->lin_yao",
+            "from": "char:shopkeeper",
+            "to": "char:lin_yao",
+            "stance": "信任",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0008"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚待确认"
+          },
+          {
+            "key": "rel:lin_yao->stranger",
+            "from": "char:lin_yao",
+            "to": "char:stranger",
+            "stance": "戒备",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0009"
+            ],
+            "status": "confirmed"
+          }
+        ],
+        "hooks": [
+          {
+            "id": "H-1",
+            "type": "钟声之谜",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-2",
+            "type": "蓝线来历",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-3",
+            "type": "旧渡船",
+            "status": "deferred",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-4",
+            "type": "旧门牌",
+            "status": "resolved",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-5",
+            "type": "旧路线",
+            "status": "superseded",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          }
+        ]
+      },
+      "bibleKeys": [
+        "char:lin_yao",
+        "char:shopkeeper",
+        "char:stranger",
+        "char:father",
+        "place:bookshop",
+        "place:river",
+        "place:future_port"
+      ],
+      "outline": {
+        "chapters": [
+          {
+            "n": 3,
+            "purpose": "未来计划"
+          }
+        ]
+      }
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "outline"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "reason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。"
+  },
+  {
+    "id": "D10-leak-2",
+    "group": "violation",
+    "rule": "D10",
+    "layer": "keeper_input",
+    "context": "context.json",
+    "input": {
+      "numberedText": "林遥把铜钥匙交给店主。\n店主把钥匙放进木盒。\n店主熄灭油灯。\n林遥走到河岸。\n林遥收到两枚银币。\n林遥付出三枚银币。\n天边的云渐渐散开。\n“钥匙在河底。”\n「店主已经死了。」\n『那本日志已经烧毁。』\n店主告诉林遥钟声意味着渡口关闭。\n林遥读懂了日志上的暗号。\n店主开始怀疑陌生人的身份。\n林遥发现陌生人就是父亲的旧友。\n店主仍然活着。\n林遥仔细检查了手里的纸条。\n林遥摸到钥匙上的铜锈，确认它是铜制的。\n店主承认自己信任林遥。\n林遥终于确信店主值得信任。\n林遥意识到钟声就是航路暗号。\n日志背面的纸条揭开了钟声之谜。\n他们暂时搁置追查蓝线来历。\n墙上又出现一枚蓝色结。\n一本新账册给出了另一条追查方向。\n林遥决定明天才出发。\n如果河水上涨，渡船就不能通行。\n林遥梦见父亲回到了书店。\n林遥想起去年自己住在山城。\n林遥想起父亲早已去世。\n旧日的店主其实是一名画师。\n银币袋里现在有十二枚银币。\n林遥把一本旧书送给陌生人。\n箱底出现一枚陌生的印章。\n店主从书店走到河岸。\n林遥不再相信那封假信。\n店主改口说陌生人值得信任。",
+      "state": {
+        "facts": [
+          {
+            "id": "F-1",
+            "subject": "char:lin_yao",
+            "predicate": "location",
+            "object": "place:bookshop",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-2",
+            "subject": "char:lin_yao",
+            "predicate": "quantity:silver",
+            "object": {
+              "value": 10,
+              "unit": "枚"
+            },
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0004"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-3",
+            "subject": "item:brass_key",
+            "predicate": "material",
+            "object": "铜",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "provisional",
+            "uncertainReason": "前章明确保留不确定性",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0010"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-4",
+            "subject": "item:brass_key",
+            "predicate": "holder",
+            "object": "char:lin_yao",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-5",
+            "subject": "char:shopkeeper",
+            "predicate": "identity",
+            "object": "书商",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0002"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-6",
+            "subject": "char:stranger",
+            "predicate": "identity",
+            "object": "旅人",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "sourceChapter": 1
+          }
+        ],
+        "cognitions": [
+          {
+            "id": "K-1",
+            "characterId": "char:lin_yao",
+            "kind": "believes",
+            "content": "店主值得信任",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0005"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚无把握",
+            "supersededBy": null
+          },
+          {
+            "id": "K-2",
+            "characterId": "char:shopkeeper",
+            "kind": "knows",
+            "content": "林遥持有钥匙",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0006"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          },
+          {
+            "id": "K-3",
+            "characterId": "char:stranger",
+            "kind": "believes",
+            "content": "日志已经烧毁",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          }
+        ],
+        "relations": [
+          {
+            "key": "rel:shopkeeper->lin_yao",
+            "from": "char:shopkeeper",
+            "to": "char:lin_yao",
+            "stance": "信任",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0008"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚待确认"
+          },
+          {
+            "key": "rel:lin_yao->stranger",
+            "from": "char:lin_yao",
+            "to": "char:stranger",
+            "stance": "戒备",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0009"
+            ],
+            "status": "confirmed"
+          }
+        ],
+        "hooks": [
+          {
+            "id": "H-1",
+            "type": "钟声之谜",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-2",
+            "type": "蓝线来历",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-3",
+            "type": "旧渡船",
+            "status": "deferred",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-4",
+            "type": "旧门牌",
+            "status": "resolved",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-5",
+            "type": "旧路线",
+            "status": "superseded",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          }
+        ]
+      },
+      "bibleKeys": [
+        "char:lin_yao",
+        "char:shopkeeper",
+        "char:stranger",
+        "char:father",
+        "place:bookshop",
+        "place:river",
+        "place:future_port"
+      ],
+      "chapterIntent": {
+        "mustKeep": [
+          "尚未发生的事件"
+        ]
+      }
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "chapterIntent"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "reason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。"
+  },
+  {
+    "id": "D10-leak-3",
+    "group": "violation",
+    "rule": "D10",
+    "layer": "keeper_input",
+    "context": "context.json",
+    "input": {
+      "numberedText": "林遥把铜钥匙交给店主。\n店主把钥匙放进木盒。\n店主熄灭油灯。\n林遥走到河岸。\n林遥收到两枚银币。\n林遥付出三枚银币。\n天边的云渐渐散开。\n“钥匙在河底。”\n「店主已经死了。」\n『那本日志已经烧毁。』\n店主告诉林遥钟声意味着渡口关闭。\n林遥读懂了日志上的暗号。\n店主开始怀疑陌生人的身份。\n林遥发现陌生人就是父亲的旧友。\n店主仍然活着。\n林遥仔细检查了手里的纸条。\n林遥摸到钥匙上的铜锈，确认它是铜制的。\n店主承认自己信任林遥。\n林遥终于确信店主值得信任。\n林遥意识到钟声就是航路暗号。\n日志背面的纸条揭开了钟声之谜。\n他们暂时搁置追查蓝线来历。\n墙上又出现一枚蓝色结。\n一本新账册给出了另一条追查方向。\n林遥决定明天才出发。\n如果河水上涨，渡船就不能通行。\n林遥梦见父亲回到了书店。\n林遥想起去年自己住在山城。\n林遥想起父亲早已去世。\n旧日的店主其实是一名画师。\n银币袋里现在有十二枚银币。\n林遥把一本旧书送给陌生人。\n箱底出现一枚陌生的印章。\n店主从书店走到河岸。\n林遥不再相信那封假信。\n店主改口说陌生人值得信任。",
+      "state": {
+        "facts": [
+          {
+            "id": "F-1",
+            "subject": "char:lin_yao",
+            "predicate": "location",
+            "object": "place:bookshop",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-2",
+            "subject": "char:lin_yao",
+            "predicate": "quantity:silver",
+            "object": {
+              "value": 10,
+              "unit": "枚"
+            },
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0004"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-3",
+            "subject": "item:brass_key",
+            "predicate": "material",
+            "object": "铜",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "provisional",
+            "uncertainReason": "前章明确保留不确定性",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0010"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-4",
+            "subject": "item:brass_key",
+            "predicate": "holder",
+            "object": "char:lin_yao",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0003"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-5",
+            "subject": "char:shopkeeper",
+            "predicate": "identity",
+            "object": "书商",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0002"
+            ],
+            "sourceChapter": 1
+          },
+          {
+            "id": "F-6",
+            "subject": "char:stranger",
+            "predicate": "identity",
+            "object": "旅人",
+            "validFrom": 1,
+            "validUntil": null,
+            "mode": "narrated",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "sourceChapter": 1
+          }
+        ],
+        "cognitions": [
+          {
+            "id": "K-1",
+            "characterId": "char:lin_yao",
+            "kind": "believes",
+            "content": "店主值得信任",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0005"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚无把握",
+            "supersededBy": null
+          },
+          {
+            "id": "K-2",
+            "characterId": "char:shopkeeper",
+            "kind": "knows",
+            "content": "林遥持有钥匙",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0006"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          },
+          {
+            "id": "K-3",
+            "characterId": "char:stranger",
+            "kind": "believes",
+            "content": "日志已经烧毁",
+            "about": null,
+            "acquiredChapter": 1,
+            "via": "inferred",
+            "evidence": [
+              "c01.s0007"
+            ],
+            "status": "confirmed",
+            "supersededBy": null
+          }
+        ],
+        "relations": [
+          {
+            "key": "rel:shopkeeper->lin_yao",
+            "from": "char:shopkeeper",
+            "to": "char:lin_yao",
+            "stance": "信任",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0008"
+            ],
+            "status": "provisional",
+            "uncertainReason": "尚待确认"
+          },
+          {
+            "key": "rel:lin_yao->stranger",
+            "from": "char:lin_yao",
+            "to": "char:stranger",
+            "stance": "戒备",
+            "sinceChapter": 1,
+            "evidence": [
+              "c01.s0009"
+            ],
+            "status": "confirmed"
+          }
+        ],
+        "hooks": [
+          {
+            "id": "H-1",
+            "type": "钟声之谜",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-2",
+            "type": "蓝线来历",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-3",
+            "type": "旧渡船",
+            "status": "deferred",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-4",
+            "type": "旧门牌",
+            "status": "resolved",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          },
+          {
+            "id": "H-5",
+            "type": "旧路线",
+            "status": "superseded",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "dependsOn": []
+          }
+        ]
+      },
+      "bibleKeys": [
+        "char:lin_yao",
+        "char:shopkeeper",
+        "char:stranger",
+        "char:father",
+        "place:bookshop",
+        "place:river",
+        "place:future_port"
+      ],
+      "outline": "未来计划",
+      "chapterIntent": "未来意图"
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": null,
+      "items": [
+        "outline",
+        "chapterIntent"
+      ],
+      "assertion": "forbidden-input-items-absent"
+    },
+    "reason": "D10属于记录员输入装配合同，不能把此用例送进DeltaProposal校验器或声称它有某个未规定的错误码。"
+  },
+  {
+    "id": "D11-fact-certainty",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].certainty"
+      ]
+    },
+    "reason": "逐项certainty必填，不从issues推断。"
+  },
+  {
+    "id": "D11-cognition-certainty",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "sentences": [
+            11
+          ]
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "cognitions[0].certainty"
+      ]
+    },
+    "reason": "逐项certainty必填，不从issues推断。"
+  },
+  {
+    "id": "D11-relation-certainty",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "r-new",
+          "op": "upsert",
+          "key": "rel:lin_yao->shopkeeper",
+          "stance": "信任",
+          "sentences": [
+            19
+          ]
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "relations[0].certainty"
+      ]
+    },
+    "reason": "逐项certainty必填，不从issues推断。"
+  },
+  {
+    "id": "D11-fact-reason",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [
+        {
+          "ref": "f-new",
+          "op": "upsert",
+          "subject": "char:shopkeeper",
+          "predicate": "alive",
+          "object": "alive",
+          "mode": "narrated",
+          "certainty": "uncertain",
+          "sentences": [
+            15
+          ]
+        }
+      ],
+      "claims": [],
+      "cognitions": [],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "facts[0].uncertainReason"
+      ]
+    },
+    "reason": "uncertain必须有逐项原因。"
+  },
+  {
+    "id": "D11-cognition-reason",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [
+        {
+          "ref": "k-new",
+          "op": "add",
+          "characterId": "char:lin_yao",
+          "kind": "knows",
+          "content": "钟声意味着渡口关闭",
+          "via": "told",
+          "certainty": "uncertain",
+          "sentences": [
+            11
+          ]
+        }
+      ],
+      "relations": [],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "cognitions[0].uncertainReason"
+      ]
+    },
+    "reason": "uncertain必须有逐项原因。"
+  },
+  {
+    "id": "D11-relation-reason",
+    "group": "violation",
+    "rule": "D11",
+    "layer": "proposal",
+    "context": "context.json",
+    "proposal": {
+      "facts": [],
+      "claims": [],
+      "cognitions": [],
+      "relations": [
+        {
+          "ref": "r-new",
+          "op": "upsert",
+          "key": "rel:lin_yao->shopkeeper",
+          "stance": "信任",
+          "certainty": "uncertain",
+          "sentences": [
+            19
+          ]
+        }
+      ],
+      "hooks": [],
+      "summary": {
+        "title": "钥匙的去向",
+        "characters": [
+          "char:lin_yao"
+        ],
+        "events": [
+          "林遥继续调查。"
+        ],
+        "mood": "谨慎"
+      },
+      "issues": []
+    },
+    "expected": {
+      "ok": false,
+      "errorCode": "PARSE_FAILURE",
+      "items": [
+        "relations[0].uncertainReason"
+      ]
+    },
+    "reason": "uncertain必须有逐项原因。"
+  }
+]

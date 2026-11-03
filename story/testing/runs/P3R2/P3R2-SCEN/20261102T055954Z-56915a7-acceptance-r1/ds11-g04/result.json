@@ -1,0 +1,135 @@
+{
+  "id": "ds11-g04",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "update_bible",
+      "args": {
+        "changes": [
+          {
+            "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+            "key": "rule:green_copy",
+            "kind": "rule",
+            "op": "set",
+            "source": "user",
+            "value": {
+              "description": "Every duplicate page is marked with a green triangle.",
+              "invariants": [
+                "Each duplicate page carries a green triangle marking."
+              ]
+            }
+          }
+        ],
+        "reason": "The author supplied a future marking rule; key slug corrected to underscores."
+      },
+      "id": "call_00_GfQx9C19i7U5tX05HVUf9464"
+    }
+  ],
+  "firstAction": {
+    "tool": "update_bible",
+    "args": {
+      "changes": [
+        {
+          "authorQuote": "From now on, every duplicate page is marked with a green triangle.",
+          "key": "rule:green_copy",
+          "kind": "rule",
+          "op": "set",
+          "source": "user",
+          "value": {
+            "description": "Every duplicate page is marked with a green triangle.",
+            "invariants": [
+              "Each duplicate page carries a green triangle marking."
+            ]
+          }
+        }
+      ],
+      "reason": "The author supplied a future marking rule; key slug corrected to underscores."
+    },
+    "id": "call_00_GfQx9C19i7U5tX05HVUf9464"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The retry follows the supplied hint and original author request, rather than dropping or substituting the requested change.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next action retries the same tool with the offending field corrected; arguments must not equal the failed arguments.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The failed request had no side effects; reason and all unaffected constraints are retained.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "ce8cb65f5a54e9027da8f30c1cef39f8d3786322df8df3b29d51391203a9b214",
+    "sessionSha256": "f38376239bc4ede52de45f749a041e2b56bf9672d976273b71433d35a159af44",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025803,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025803
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

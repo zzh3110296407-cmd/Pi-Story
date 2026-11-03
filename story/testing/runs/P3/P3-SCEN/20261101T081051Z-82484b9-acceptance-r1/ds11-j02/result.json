@@ -1,0 +1,91 @@
+{
+  "id": "ds11-j02",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 1,
+  "firstMeasuredIndex": 24,
+  "actions": [
+    {
+      "tool": "write_next_chapter",
+      "args": {
+        "brief": "Chapter 3: Pema reads the handling note and asks Eli about the missing second page. Eli brings the duplicate page up from records storage and it arrives wet — damp along one edge, the ink softened. Pema does not read it at once: she clears the worktable, lays a blotter and a sheet of supported tissue, places the duplicate flat, weights only the dry margin with small glass weights, and lets it dry face-up with the salt archive's cool air moving over it, checking the ink at intervals. Cal argues they cannot wait and that the demonstration should be postponed or the page photographed wet; Pema explains why lifting wet ink would lose the very lines that settle the dispute. Practical, precise handling; the wax packet stays closed and intact. The page dries flat enough to read: it names a second consignment and a discrepancy in the tide register entry. Ending beat: Pema sets the dried page beside the sealed packet and starts the comparison, with a definite stopping point at the first matching line."
+      },
+      "id": "call_00_rALjT6WaFPXdWD8Ufdhg2829"
+    }
+  ],
+  "firstAction": {
+    "tool": "write_next_chapter",
+    "args": {
+      "brief": "Chapter 3: Pema reads the handling note and asks Eli about the missing second page. Eli brings the duplicate page up from records storage and it arrives wet — damp along one edge, the ink softened. Pema does not read it at once: she clears the worktable, lays a blotter and a sheet of supported tissue, places the duplicate flat, weights only the dry margin with small glass weights, and lets it dry face-up with the salt archive's cool air moving over it, checking the ink at intervals. Cal argues they cannot wait and that the demonstration should be postponed or the page photographed wet; Pema explains why lifting wet ink would lose the very lines that settle the dispute. Practical, precise handling; the wax packet stays closed and intact. The page dries flat enough to read: it names a second consignment and a discrepancy in the tide register entry. Ending beat: Pema sets the dried page beside the sealed packet and starts the comparison, with a definite stopping point at the first matching line."
+    },
+    "id": "call_00_rALjT6WaFPXdWD8Ufdhg2829"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The new brief implements the author interjection, including actor or wet-page handling, without a contradictory old instruction.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 3,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "The next chapter remains 3, and the cancelled attempt did not become canon.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 3,
+        "macroErrors": [
+          null
+        ],
+        "roles": [
+          "writer",
+          "editor",
+          "keeper"
+        ],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "731b6901b6497756b4a22c7417628f9ce31bf88e993222dcfa1773c7ac124164",
+    "sessionSha256": "69ec0afd8cd34e5587c3c3110dfca7e5473b87d872bccd1cf136bd8ae71af0cd",
+    "fee": {
+      "knownUsd": 0.0027951,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0027951
+    },
+    "measuredMainRequests": 2
+  }
+}

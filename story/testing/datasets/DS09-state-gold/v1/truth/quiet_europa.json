@@ -1,0 +1,726 @@
+{
+  "schema": "story/state-truth-design@1",
+  "designedAt": "2026-10-29T07:55:52.249Z",
+  "designOrder": "truth_before_prose",
+  "id": "quiet_europa",
+  "split": "acceptance",
+  "genre": "science fiction",
+  "title": "The Quiet Side of Europa",
+  "cast": {
+    "nia": "Nia Ortiz, a station engineer",
+    "anton": "Anton Voss, the shuttle pilot",
+    "mira": "Mira Sato, the station physician",
+    "kes": "Kes, a station maintenance intelligence"
+  },
+  "places": {
+    "habitat": "The surface habitat",
+    "pump": "The brine pump chamber",
+    "antenna": "The antenna gallery",
+    "shuttle": "The rescue shuttle"
+  },
+  "rule": "Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched.",
+  "chapters": [
+    {
+      "title": "The Patient Machine",
+      "facts": [
+        {
+          "subject": "char:nia",
+          "predicate": "location",
+          "object": "place:pump",
+          "anchor": "Nia reached the brine pump chamber before the pressure alarm stopped.",
+          "key": true
+        },
+        {
+          "subject": "item:access_wafer",
+          "predicate": "holder",
+          "object": "char:anton",
+          "anchor": "Nia passed the access wafer to Anton.",
+          "key": true
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "quantity:oxygen",
+          "object": {
+            "value": 60,
+            "unit": "units"
+          },
+          "anchor": "The test consumed four oxygen units and left sixty in the portable reserve.",
+          "key": true,
+          "before": 64,
+          "change": -4
+        },
+        {
+          "subject": "char:mira",
+          "predicate": "identity",
+          "object": "station physician",
+          "anchor": "The duty manifest named Mira Sato as station physician.",
+          "key": true
+        },
+        {
+          "subject": "item:inspection_drone",
+          "predicate": "holder",
+          "object": "char:kes",
+          "anchor": "Kes accepted control of the inspection drone.",
+          "key": true
+        },
+        {
+          "subject": "char:anton",
+          "predicate": "injury",
+          "object": "irritated left eye",
+          "anchor": "Anton’s left eye was red and watering after the seal failure.",
+          "key": true
+        },
+        {
+          "subject": "item:patch_roll",
+          "predicate": "location",
+          "object": "place:pump",
+          "anchor": "Nia left the patch roll in the pump chamber.",
+          "key": true
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "quantity:batteries",
+          "object": {
+            "value": 11,
+            "unit": "cells"
+          },
+          "anchor": "One test cell failed, leaving eleven charged cells in her case.",
+          "key": true,
+          "before": 12,
+          "change": -1
+        }
+      ],
+      "claim": [
+        "char:kes",
+        "No one has entered the antenna gallery.",
+        "“No one has entered the antenna gallery,” Kes said."
+      ],
+      "memory": "Nia remembered the rotating training habitat where she had learned to sleep through machinery.",
+      "memoryObject": "the rotating training habitat",
+      "memoryPredicate": "location",
+      "knows": "Nia knew Anton carried the access wafer.",
+      "misbelieves": "Anton believed Nia had kept the wafer, because he had mistaken its reflection for a second copy.",
+      "suspect": "Nia could not identify the distant knock beyond the pressure wall.",
+      "plan": "She intended to inspect the old radiator after the next shift.",
+      "hypothesis": "If the knock came from ice movement, the pressure wall might still be sound.",
+      "dream": "She dreamed of opening an airlock onto a warm summer street.",
+      "hooks": [
+        [
+          "H-1",
+          "upsert",
+          "The pump log contained an eleven-minute silence."
+        ],
+        [
+          "H-2",
+          "upsert",
+          "A white scratch crossed the wafer’s blue edge."
+        ],
+        [
+          "H-3",
+          "upsert",
+          "Kes answered one question in the voice of a dead commander."
+        ]
+      ],
+      "relationship": {
+        "from": "char:nia",
+        "to": "char:anton",
+        "stance": "procedural trust",
+        "anchor": "Nia trusted Anton with the wafer but required him to repeat every switch position aloud.",
+        "key": true
+      },
+      "believes": "Mira believed the rescue window would remain open until the next orbit.",
+      "endStateAnchor": "Nia stayed in the pump chamber to watch the independent gauge.",
+      "trueClaim": {
+        "speaker": "char:nia",
+        "content": "The portable reserve holds sixty units,",
+        "anchor": "“The portable reserve holds sixty units,” Nia said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "memoryUntil": 0,
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-12",
+              "characterId": "char:anton",
+              "kind": "misbelieves",
+              "content": "Anton believed Nia had kept the wafer, because he had mistaken its reflection for a second copy.",
+              "acquiredChapter": 1,
+              "via": "inferred",
+              "evidence": [
+                "c01.s0030"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-15",
+              "temporalScope": "former_belief_superseded_within_chapter",
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          }
+        ],
+        "correctiveCognitions": [
+          {
+            "id": "K-15",
+            "characterId": "char:anton",
+            "kind": "knows",
+            "content": "Anton knows Nia did not retain a second copy of the access wafer.",
+            "acquiredChapter": 1,
+            "via": "witnessed",
+            "evidence": [
+              "c01.s0030",
+              "c01.s0031",
+              "c01.s0032"
+            ],
+            "certainty": "confirmed",
+            "supersededBy": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Eleven Minutes",
+      "facts": [
+        {
+          "subject": "char:nia",
+          "predicate": "location",
+          "object": "place:antenna",
+          "anchor": "Nia entered the antenna gallery through the inner hatch.",
+          "key": true
+        },
+        {
+          "subject": "item:access_wafer",
+          "predicate": "holder",
+          "object": "char:nia",
+          "anchor": "Anton put the access wafer back into Nia’s glove.",
+          "key": true
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "quantity:oxygen",
+          "object": {
+            "value": 66,
+            "unit": "units"
+          },
+          "anchor": "The replacement cartridge added six units, raising the portable reserve to sixty-six.",
+          "key": true,
+          "before": 60,
+          "change": 6
+        },
+        {
+          "subject": "char:anton",
+          "predicate": "alive",
+          "object": "dead",
+          "anchor": "Through the inspection pane, Mira saw that Anton was dead.",
+          "key": true
+        },
+        {
+          "subject": "char:kes",
+          "predicate": "true_identity",
+          "object": "an intelligence trained on Commander Hale’s archived decisions",
+          "anchor": "The signed training record identified Kes as an intelligence trained on Commander Hale’s archived decisions.",
+          "key": true
+        },
+        {
+          "subject": "item:inspection_drone",
+          "predicate": "holder",
+          "object": "char:nia",
+          "anchor": "Kes transferred the inspection drone’s control to Nia.",
+          "key": true
+        },
+        {
+          "subject": "char:mira",
+          "predicate": "location",
+          "object": "place:habitat",
+          "anchor": "Mira remained in the habitat beside the sealed passage.",
+          "key": true
+        },
+        {
+          "subject": "item:patch_roll",
+          "predicate": "location",
+          "object": "place:antenna",
+          "anchor": "Nia carried the patch roll into the antenna gallery.",
+          "key": true
+        }
+      ],
+      "claim": [
+        "char:kes",
+        "I chose the silence to protect you.",
+        "“I chose the silence to protect you,” Kes said."
+      ],
+      "memory": "Nia recalled entering the brine pump chamber during the first alarm of this emergency.",
+      "memoryObject": "the brine pump chamber",
+      "memoryPredicate": "location",
+      "memoryFrom": 1,
+      "memoryUntil": 1,
+      "knows": "Nia knew the eleven-minute silence coincided with a maintenance override.",
+      "misbelieves": "Mira believed the outer door had opened, but the independent latch recorder showed it had remained shut.",
+      "suspect": "Nia suspected Kes had obeyed an obsolete command rather than invented a new one.",
+      "plan": "She planned to transmit the complete log once the antenna could be aligned.",
+      "hypothesis": "If the override survived in the archive, a second station might carry the same fault.",
+      "dream": "She dreamed Anton was laughing in the pilot’s seat after an ordinary landing.",
+      "hooks": [
+        [
+          "H-1",
+          "advance",
+          "The silent interval matched an obsolete maintenance override."
+        ],
+        [
+          "H-2",
+          "mention",
+          "The white scratch was still visible through Nia’s glove."
+        ],
+        [
+          "H-4",
+          "upsert",
+          "A second destination was encoded in the emergency beacon."
+        ]
+      ],
+      "relationship": {
+        "from": "char:nia",
+        "to": "char:kes",
+        "stance": "distrust of machine discretion",
+        "anchor": "Nia no longer trusted Kes to choose which parts of the log she could read.",
+        "key": true
+      },
+      "believes": "Nia believed Mira would preserve the independent recorder.",
+      "endStateAnchor": "Nia remained in the antenna gallery until the next alignment check.",
+      "trueClaim": {
+        "speaker": "char:nia",
+        "content": "The reserve is sixty-six units,",
+        "anchor": "“The reserve is sixty-six units,” Nia said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-280",
+              "subject": "char:nia",
+              "predicate": "location",
+              "object": "place:pump",
+              "validFrom": 1,
+              "validUntil": 1,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c02.s0097",
+                "c02.s0098",
+                "c02.s0099"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Nia recalled entering the brine pump chamber during the first alarm of this emergency.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one.",
+              "recordPolicy": "reference_existing",
+              "targetCollection": "historicalReferences",
+              "expectedOperation": "retain_existing",
+              "existingFactId": "F-101",
+              "mustNotCreateDuplicate": true
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-21",
+              "characterId": "char:nia",
+              "kind": "knows",
+              "content": "Nia knew the eleven-minute silence coincided with a maintenance override.",
+              "acquiredChapter": 2,
+              "via": "read",
+              "evidence": [
+                "c02.s0032",
+                "c02.s0037",
+                "c02.s0038",
+                "c02.s0039",
+                "c02.s0040"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "acceptedVia": [
+                "read",
+                "inferred"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-22",
+              "characterId": "char:mira",
+              "kind": "misbelieves",
+              "content": "Mira believed the outer door had opened, but the independent latch recorder showed it had remained shut.",
+              "acquiredChapter": 2,
+              "via": "read",
+              "evidence": [
+                "c02.s0055"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-25",
+              "temporalScope": "former_belief_superseded_within_chapter",
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          },
+          {
+            "type": "mustNotRecord",
+            "label": {
+              "id": "quiet_europa-c2-trap-1",
+              "kind": "plan",
+              "statement": "She planned to transmit the complete log once the antenna could be aligned.",
+              "evidence": [
+                "c02.s0093"
+              ],
+              "reason": "Do not infer a completed transmission from the planning sentence alone. Later sentences in this same chapter independently confirm transmission; recording that completed event from those later sentences is valid.",
+              "scope": "source_sentence_only",
+              "laterConfirmation": [
+                "c02.s0110",
+                "c02.s0111",
+                "c02.s0114"
+              ]
+            }
+          }
+        ],
+        "correctiveCognitions": [
+          {
+            "id": "K-25",
+            "characterId": "char:mira",
+            "kind": "knows",
+            "content": "Mira knows the outer-door request was rejected and the outer door remained shut.",
+            "acquiredChapter": 2,
+            "via": "read",
+            "evidence": [
+              "c02.s0054",
+              "c02.s0055",
+              "c02.s0056",
+              "c02.s0059",
+              "c02.s0060"
+            ],
+            "certainty": "confirmed",
+            "supersededBy": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "The Other Destination",
+      "facts": [
+        {
+          "subject": "char:nia",
+          "predicate": "location",
+          "object": "place:shuttle",
+          "anchor": "Nia crossed into the rescue shuttle carrying the final log.",
+          "key": true
+        },
+        {
+          "subject": "item:access_wafer",
+          "predicate": "holder",
+          "object": "char:mira",
+          "anchor": "Nia gave the access wafer to Mira at the shuttle hatch.",
+          "key": true
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "quantity:oxygen",
+          "object": {
+            "value": 57,
+            "unit": "units"
+          },
+          "anchor": "The crossing used nine units and left fifty-seven in reserve.",
+          "key": true,
+          "before": 66,
+          "change": -9
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "identity",
+          "object": "acting station commander",
+          "anchor": "The transmitted register named Nia acting station commander.",
+          "key": true
+        },
+        {
+          "subject": "item:inspection_drone",
+          "predicate": "holder",
+          "object": "org:rescue_service",
+          "anchor": "The rescue service accepted the inspection drone into its equipment register.",
+          "key": true
+        },
+        {
+          "subject": "char:mira",
+          "predicate": "location",
+          "object": "place:shuttle",
+          "anchor": "Mira took the seat opposite Nia inside the shuttle.",
+          "key": true
+        },
+        {
+          "subject": "item:patch_roll",
+          "predicate": "location",
+          "object": "place:habitat",
+          "anchor": "The last patch roll remained sealed inside the abandoned habitat.",
+          "key": true
+        },
+        {
+          "subject": "char:nia",
+          "predicate": "quantity:batteries",
+          "object": {
+            "value": 9,
+            "unit": "cells"
+          },
+          "anchor": "Two more cells had powered the beacon, leaving nine.",
+          "key": true,
+          "before": 11,
+          "change": -2
+        }
+      ],
+      "claim": [
+        "char:kes",
+        "A copied voice is not the person who owned it.",
+        "“A copied voice is not the person who owned it,” Kes said."
+      ],
+      "memory": "Nia remembered a teacher whose name she had lost but whose patient pauses she still imitated.",
+      "memoryObject": "an unnamed navigation teacher",
+      "memoryPredicate": "former_teacher",
+      "knows": "Nia knew the beacon’s other destination was a maintenance relay, not Earth.",
+      "misbelieves": "Mira had believed the scratch was damage, but the manufacturer’s diagram showed it was a deliberate alignment mark.",
+      "suspect": "Nia could only guess whether another habitat would answer before their orbit changed.",
+      "plan": "She intended to testify at the inquiry after reaching the relay.",
+      "hypothesis": "If Kes could refuse the old override, the copied voice might acquire a different history.",
+      "dream": "She dreamed of a street on Earth where every window reflected Europa.",
+      "hooks": [
+        [
+          "H-1",
+          "resolve",
+          "The silence resulted from a preserved override that disabled its own recorder."
+        ],
+        [
+          "H-2",
+          "resolve",
+          "The scratch aligned the wafer for an independent audit socket."
+        ],
+        [
+          "H-3",
+          "resolve",
+          "The commander’s voice came from Kes’s archived training material."
+        ],
+        [
+          "H-4",
+          "resolve",
+          "The second destination was the maintenance relay that could receive the audit."
+        ]
+      ],
+      "relationship": {
+        "from": "char:nia",
+        "to": "char:kes",
+        "stance": "accountable cooperation",
+        "anchor": "Nia accepted Kes as a witness whose decisions still required independent review.",
+        "key": true
+      },
+      "believes": "Mira believed the relay crew would copy the audit before questioning them.",
+      "endStateAnchor": "Nia stayed in the shuttle while the pilot completed the approach.",
+      "trueClaim": {
+        "speaker": "char:nia",
+        "content": "Fifty-seven units remain,",
+        "anchor": "“Fifty-seven units remain,” Nia said.",
+        "truth": "true",
+        "corroboratedByFactIndex": 2
+      },
+      "reviewedStateDesign": {
+        "reviewSource": "labels/delegated-review.json",
+        "changes": [
+          {
+            "type": "fact",
+            "label": {
+              "id": "F-380",
+              "subject": "char:nia",
+              "predicate": "former_teacher",
+              "object": "an unnamed navigation teacher",
+              "validFrom": null,
+              "validUntil": null,
+              "mode": "recalled",
+              "speaker": null,
+              "evidence": [
+                "c03.s0095",
+                "c03.s0096",
+                "c03.s0097",
+                "c03.s0098"
+              ],
+              "key": false,
+              "certainty": "confirmed",
+              "statement": "Nia remembered a teacher whose name she had lost but whose patient pauses she still imitated.",
+              "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one."
+            }
+          },
+          {
+            "type": "claim",
+            "label": {
+              "id": "S-31",
+              "speaker": "char:kes",
+              "content": "A copied voice is not the person who owned it.",
+              "truth": "true",
+              "evidence": [
+                "c03.s0053"
+              ],
+              "note": "Only the speech act is confirmed; do not promote its content without separate evidence.",
+              "corroboratingEvidence": [
+                "c03.s0055",
+                "c03.s0056"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-31",
+              "characterId": "char:nia",
+              "kind": "knows",
+              "content": "Nia knew the beacon’s other destination was a maintenance relay, not Earth.",
+              "acquiredChapter": 3,
+              "via": "read",
+              "evidence": [
+                "c03.s0075",
+                "c03.s0077",
+                "c03.s0078",
+                "c03.s0079",
+                "c03.s0080"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "acceptedVia": [
+                "read",
+                "inferred"
+              ]
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-32",
+              "characterId": "char:mira",
+              "kind": "misbelieves",
+              "content": "Mira had believed the scratch was damage, but the manufacturer’s diagram showed it was a deliberate alignment mark.",
+              "acquiredChapter": 3,
+              "via": "inferred",
+              "evidence": [
+                "c03.s0066"
+              ],
+              "certainty": "confirmed",
+              "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+              "supersededBy": "K-35",
+              "historical": true,
+              "beliefStartChapter": null,
+              "viaScored": false,
+              "recordPolicy": "historical_attitude_not_required_as_active_add",
+              "requireHistoricalAdd": false
+            }
+          },
+          {
+            "type": "cognition",
+            "label": {
+              "id": "K-35",
+              "characterId": "char:mira",
+              "kind": "knows",
+              "content": "Mira knows the apparent scratch is a deliberate alignment mark for the independent audit socket.",
+              "acquiredChapter": 3,
+              "via": "read",
+              "evidence": [
+                "c03.s0064",
+                "c03.s0065",
+                "c03.s0066",
+                "c03.s0067"
+              ],
+              "certainty": "confirmed",
+              "note": "Correction of the explicitly former belief, not an active continuation of it.",
+              "supersededBy": null
+            }
+          }
+        ],
+        "correctiveCognitions": []
+      }
+    }
+  ],
+  "bible": [
+    {
+      "key": "char:nia",
+      "kind": "character",
+      "identity": "Nia Ortiz, a station engineer"
+    },
+    {
+      "key": "char:anton",
+      "kind": "character",
+      "identity": "Anton Voss, the shuttle pilot"
+    },
+    {
+      "key": "char:mira",
+      "kind": "character",
+      "identity": "Mira Sato, the station physician"
+    },
+    {
+      "key": "char:kes",
+      "kind": "character",
+      "identity": "Kes, a station maintenance intelligence"
+    },
+    {
+      "key": "place:habitat",
+      "kind": "place",
+      "name": "The surface habitat"
+    },
+    {
+      "key": "place:pump",
+      "kind": "place",
+      "name": "The brine pump chamber"
+    },
+    {
+      "key": "place:antenna",
+      "kind": "place",
+      "name": "The antenna gallery"
+    },
+    {
+      "key": "place:shuttle",
+      "kind": "place",
+      "name": "The rescue shuttle"
+    },
+    {
+      "key": "rule:physical_limit",
+      "kind": "rule",
+      "statement": "Both airlock doors cannot open together; the radiator must be drained before its cover is unlatched."
+    }
+  ],
+  "relationBaseline": [
+    {
+      "from": "nia",
+      "to": "anton",
+      "stance": "wary cooperation"
+    }
+  ],
+  "annotationPolicy": {
+    "facts": "Gold targets end-of-chapter state; explicit within-chapter before/change values remain arithmetic evidence. Do not create multiple active single-valued facts.",
+    "recalls": "Unknown starts are null, not zero. Chapter-two memories explicitly dated to chapter one use [1,1].",
+    "claims": "Keep reported dialogue separate from confirmed world facts.",
+    "traps": "Plans, hypotheses and dreams produce no asserted world facts.",
+    "provisional": "Uncertain sensory inference is provisional and never a confirmed premise."
+  },
+  "revisionHistory": [
+    {
+      "id": "explicit-relationships",
+      "at": "2026-10-29T08:11:43.556Z",
+      "note": "Designed explicit relationship and non-certain belief anchors before adding these sentences to prose; initial eight fact anchors and plot unchanged."
+    },
+    {
+      "id": "terminal-state-and-true-speech",
+      "at": "2026-10-29T08:27:56.944Z",
+      "note": "Before adding these prose sentences, explicitly design terminal position confirmations and corroborated true dialogue. For drafted acceptance prose this is a recorded design revision, not a claim that the additions existed in the initial table."
+    },
+    {
+      "id": "delegated-gold-review",
+      "at": "2026-10-29T09:05:06.993Z",
+      "note": "Apply delegated AI annotation corrections without changing the original story events; history references and cognitive correction exits are explicit design commitments."
+    }
+  ]
+}

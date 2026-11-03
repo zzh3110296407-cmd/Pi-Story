@@ -1,0 +1,2759 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T064958Z-0ae2186-r1",
+  "suiteId": "P2-CHAP",
+  "scores": [
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c2:fact:upsert:F-8",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c2:fact:upsert:F-8",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-8",
+          "subject": "place:kestrel_city",
+          "predicate": "free_predicate",
+          "object": "Ambient Lull concentration in the city's air is 340 parts per million.",
+          "validFrom": 2,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c02.s0022"
+          ],
+          "sourceChapter": 2
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0022",
+            "text": "The Lull concentration in the ambient column was running at three hundred and forty parts per million."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:fact:upsert:F-6",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:fact:upsert:F-6",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-6",
+          "subject": "place:halvern",
+          "predicate": "free_predicate",
+          "object": "The seed bank for the whole valley lies behind the inner brewhouse fence; the north barricade has gone over and the pallet fence line is failing.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0008",
+            "c01.s0010",
+            "c01.s0032",
+            "c01.s0049",
+            "c01.s0076"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0008",
+            "text": "Above me, the barricade on the north line went over with a sound like a woodpile learning to fly."
+          },
+          {
+            "ref": "c01.s0010",
+            "text": "Through the brewhouse window I could see the pallet wall listing, the dead pickup trucks stacked in a herringbone that Marisol had insisted on and that I had called, at the time, \"a lot of effort to build a fence out of things that used to be useful.\""
+          },
+          {
+            "ref": "c01.s0032",
+            "text": "\"The inner one is pallets *and* the seed bank for the whole valley, Gideon."
+          },
+          {
+            "ref": "c01.s0049",
+            "text": "The fence line was a mess of leaning pallets and the smell of the infected — spoiled fruit and wet pennies and, underneath, something sweet that I recognized and did not want to recognize."
+          },
+          {
+            "ref": "c01.s0076",
+            "text": "I looked at the patch of split wort, and at the other three pressing in around it, and behind them a fourth and a fifth, and the fence, which was pallets, and the grain behind it, and the twenty thousand gallons of beer in my cellar that these two hundred survivors had been drinking instead of water because the well had gone brackish in June."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:fact:upsert:F-1",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:fact:upsert:F-1",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-1",
+          "subject": "char:gideon",
+          "predicate": "free_predicate",
+          "object": "Gideon Marsh is a brewer; his brewhouse and cellar stand in Halvern Hollow, and he answers its doors.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0002",
+            "c01.s0009",
+            "c01.s0010",
+            "c01.s0019"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0002",
+            "text": "The stout in the third carboy had gone sour, and I knew it before I pulled the airlock."
+          },
+          {
+            "ref": "c01.s0009",
+            "text": "I climbed the cellar steps with a lantern in one hand and my chest thumping in a way I chose to attribute to the stairs."
+          },
+          {
+            "ref": "c01.s0010",
+            "text": "Through the brewhouse window I could see the pallet wall listing, the dead pickup trucks stacked in a herringbone that Marisol had insisted on and that I had called, at the time, \"a lot of effort to build a fence out of things that used to be useful.\""
+          },
+          {
+            "ref": "c01.s0019",
+            "text": "I set the lantern on the mash tun and opened it, because I am, at bottom, a man who answers doors."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c1:fact:upsert:F-5",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c1:fact:upsert:F-5",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-5",
+          "subject": "item:chair",
+          "predicate": "free_predicate",
+          "object": "The high-backed wooden chair was placed square to the wall under the front-room window and found the next morning turned a quarter-turn out from the wall, facing the door, with no dust disturbed on the boards.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0080",
+            "c01.s0081",
+            "c01.s0083",
+            "c01.s0084"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0080",
+            "text": "Dave knew precisely where it stood, because he had put it there himself: a high-backed wooden chair, too heavy for the room, that he had dragged into the corner under the window and set square to the wall so it was out of the way of the boxes."
+          },
+          {
+            "ref": "c01.s0081",
+            "text": "In the morning it was a quarter-turn out from the wall, facing the door."
+          },
+          {
+            "ref": "c01.s0083",
+            "text": "There was no dust disturbed on the boards."
+          },
+          {
+            "ref": "c01.s0084",
+            "text": "The chair had not been dragged; it had simply come round, the way a chair will if nobody is watching it, the way a person turns in their sleep."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c3:fact:upsert:F-18",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c3:fact:upsert:F-18",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-18",
+          "subject": "char:tull",
+          "predicate": "free_predicate",
+          "object": "Tull took Gideon's ration bottle, smashed it on the lane as bait, and led three infected away on the noise-rigged cart before rejoining the group at the ridge.",
+          "validFrom": 3,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c03.s0041",
+            "c03.s0044",
+            "c03.s0050",
+            "c03.s0051",
+            "c03.s0093"
+          ],
+          "sourceChapter": 3
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0041",
+            "text": "\"Mr. Marsh,\" he said, \"I'm going to need a beer.\""
+          },
+          {
+            "ref": "c03.s0044",
+            "text": "I got the ration bottle out and put it in his hand."
+          },
+          {
+            "ref": "c03.s0050",
+            "text": "He took the cart out onto the lane and cracked the bottle against the wheel hub, and the sound of it — glass and then that wet splash and then the smell lifting up — made all three of them stop dead the way a room stops when a cork goes."
+          },
+          {
+            "ref": "c03.s0051",
+            "text": "Then Tull turned the noise-makers on and pedalled away down the lane, dragging the cart with beer running off the boards behind it, and three beer-thirsty dead men went after him at a shambling trot like commuters who had heard the last train called."
+          },
+          {
+            "ref": "c03.s0093",
+            "text": "And then we came up over the lip of the drainage channel at the ridge line and Tull was waiting there, white-faced, holding the cart's handlebar with both hands, and he said, \"I lost them at the split, but — Mr. Marsh."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c4:fact:upsert:F-11",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c4:fact:upsert:F-11",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-11",
+          "subject": "place:blue_base",
+          "predicate": "free_predicate",
+          "object": "The third super wave entered the base at 30:10 with four super minions, a cannon and casters; the team cleared the entire wave at 30:40.",
+          "validFrom": 4,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c04.s0058",
+            "c04.s0059",
+            "c04.s0060",
+            "c04.s0079",
+            "c04.s0080",
+            "c04.s0081"
+          ],
+          "sourceChapter": 4
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0058",
+            "text": "We hit the choke at 30:10."
+          },
+          {
+            "ref": "c04.s0059",
+            "text": "The wave was already inside."
+          },
+          {
+            "ref": "c04.s0060",
+            "text": "Four super minions shoulder to shoulder, the cannon behind them, casters flooding the gap where the inhibitor used to be."
+          },
+          {
+            "ref": "c04.s0079",
+            "text": "The wave broke at 30:40."
+          },
+          {
+            "ref": "c04.s0080",
+            "text": "All of it."
+          },
+          {
+            "ref": "c04.s0081",
+            "text": "The huge ones, the little ones, the whole terrible family — and then there was just the floor of our base and the four of us breathing, and Kade at a hundred and forty health saying, \"See?"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c4:fact:upsert:F-7",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c4:fact:upsert:F-7",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "时间 29:00 由本章首句确认，内容正确；所引 s0002–s0008 未含该时间锚，证据不完整。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-7",
+          "subject": "place:rift",
+          "predicate": "free_predicate",
+          "object": "At 29:00 the team moved into the river mouth to contest the Baron pit; the enemy left Baron before the team arrived, and the fight spilled into the narrow river mouth.",
+          "validFrom": 4,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c04.s0002",
+            "c04.s0003",
+            "c04.s0004",
+            "c04.s0005",
+            "c04.s0006",
+            "c04.s0008"
+          ],
+          "sourceChapter": 4
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0002",
+            "text": "\"Pit,\" Sana said."
+          },
+          {
+            "ref": "c04.s0003",
+            "text": "\"Go.\""
+          },
+          {
+            "ref": "c04.s0004",
+            "text": "We went."
+          },
+          {
+            "ref": "c04.s0005",
+            "text": "Four of us into the river mouth, Kade first because Kade is always first now that he's decided he's the tank, Bo behind him counting under his breath, \"two-oh-two, two-oh-three,\" Ilya trailing with his lantern already out like a man carrying an umbrella into a storm he's certain is coming."
+          },
+          {
+            "ref": "c04.s0006",
+            "text": "The enemy peeled off Baron before we got there."
+          },
+          {
+            "ref": "c04.s0008",
+            "text": "Lee Sin kicked out of the pit first, then Renekton, then the whole glass family spilled into the river mouth where the ground is narrow and there's nowhere to run."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c3:fact:upsert:F-9",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c3:fact:upsert:F-9",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-9",
+          "subject": "item:sideboard",
+          "predicate": "free_predicate",
+          "object": "On the third morning, the sideboard was again found pulled three inches out from the wall, with the dust between it and the wallpaper undisturbed; Dave had pushed it back the previous morning, and his partner pushed it back again.",
+          "validFrom": 3,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c03.s0025",
+            "c03.s0027",
+            "c03.s0028",
+            "c03.s0029",
+            "c03.s0041",
+            "c03.s0044"
+          ],
+          "sourceChapter": 3
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0025",
+            "text": "At home, the sideboard was out from the wall again."
+          },
+          {
+            "ref": "c03.s0027",
+            "text": "Three inches, clean and even, the whole length of it."
+          },
+          {
+            "ref": "c03.s0028",
+            "text": "The dust between the wood and the wallpaper lay undisturbed, grey and soft, exactly as it had the night before."
+          },
+          {
+            "ref": "c03.s0029",
+            "text": "Exactly as it had when he had pushed the sideboard back with his shoulder and stood there pressing it flat, as if firmness might mean something to a house."
+          },
+          {
+            "ref": "c03.s0041",
+            "text": "They shoved, and the sideboard went back against the wall with a dull knock, and they dusted their palms on their jeans."
+          },
+          {
+            "ref": "c03.s0044",
+            "text": "“I pushed it back yesterday morning.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c4:claim:add:S-11",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c4:claim:add:S-11",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "原文明确是 Ruth 发言，speaker 却为 unknown；内容转述本身正确。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-11",
+          "speaker": "unknown",
+          "content": "As of this morning the atmospheric program is placed under external review; Ruth has recommended a full audit of the seeding contracts and that the filter team be led by someone with inside standing, offering Soren the North Wall directorship so the review answers to him, with the memo sealed as part of the audited record for the duration of the review.",
+          "chapter": 4,
+          "evidence": [
+            "c04.s0043",
+            "c04.s0044",
+            "c04.s0045",
+            "c04.s0047",
+            "c04.s0048",
+            "c04.s0049",
+            "c04.s0051"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0043",
+            "text": "As of this morning the atmospheric program is being placed under external review."
+          },
+          {
+            "ref": "c04.s0044",
+            "text": "I've recommended a full audit of the seeding contracts."
+          },
+          {
+            "ref": "c04.s0045",
+            "text": "I've also recommended that the filter team be led by someone who understands the network from the inside — someone with the standing to see the audit through.\""
+          },
+          {
+            "ref": "c04.s0047",
+            "text": "\"That's a directorship, Soren."
+          },
+          {
+            "ref": "c04.s0048",
+            "text": "North Wall."
+          },
+          {
+            "ref": "c04.s0049",
+            "text": "The review answers to you.\""
+          },
+          {
+            "ref": "c04.s0051",
+            "text": "\"Becomes part of the audited record, which is sealed for the duration of the review.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c1:claim:add:S-1",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c1:claim:add:S-1",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-1",
+          "speaker": "char:cass",
+          "content": "The clear-masks are free today.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0005",
+            "c01.s0007"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0005",
+            "text": "\"It's free,\" Cass said, for the fourth time."
+          },
+          {
+            "ref": "c01.s0007",
+            "text": "\"It's free today.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c1:claim:add:S-12",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c1:claim:add:S-12",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "第一人称叙述者的明确发言不能归为 unknown；应关联本书已知主角。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-12",
+          "speaker": "unknown",
+          "content": "Hold the choke; I am not here for the wave.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0087",
+            "c01.s0088"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0087",
+            "text": "\"Hold the choke,\" I said."
+          },
+          {
+            "ref": "c01.s0088",
+            "text": "\"I'm not here for the wave.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:claim:add:S-2",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:claim:add:S-2",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-2",
+          "speaker": "char:gideon",
+          "content": "Prine is a veterinarian.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0042"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0042",
+            "text": "He's a veterinarian.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c1:claim:add:S-3",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c1:claim:add:S-3",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-3",
+          "speaker": "char:dave",
+          "content": "I lived in the cottage on Mill Road.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0067"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0067",
+            "text": "“I lived in the cottage on Mill Road.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c1:claim:add:S-2",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c1:claim:add:S-2",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-2",
+          "speaker": "unknown",
+          "content": "The clear-masks adjust automatically, and the first breath is a shock.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0025",
+            "c01.s0034",
+            "c01.s0035"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0025",
+            "text": "A worker with a bullhorn called out that the masks adjusted automatically and to help children with the straps."
+          },
+          {
+            "ref": "c01.s0034",
+            "text": "\"Breathe normal."
+          },
+          {
+            "ref": "c01.s0035",
+            "text": "First one's a kick.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c4:claim:add:S-33",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c4:claim:add:S-33",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-33",
+          "speaker": "char:ilya",
+          "content": "The boy wants to backdoor, and nobody follows him.",
+          "chapter": 4,
+          "evidence": [
+            "c04.s0105",
+            "c04.s0106",
+            "c04.s0107",
+            "c04.s0108"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0105",
+            "text": "\"Backdoor,\" Ilya said, in his flat doom voice, and for once it didn't sound like doom at all."
+          },
+          {
+            "ref": "c04.s0106",
+            "text": "\"The boy wants to backdoor."
+          },
+          {
+            "ref": "c04.s0107",
+            "text": "Of course he does."
+          },
+          {
+            "ref": "c04.s0108",
+            "text": "Nobody follows him.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:claim:add:S-7",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:claim:add:S-7",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-7",
+          "speaker": "char:marisol",
+          "content": "Gideon is the only man in the valley who knows what is in those cellars, what the barrels are worth, and how to draw them off without killing everyone in the room.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0088",
+            "c01.s0089"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0088",
+            "text": "\"You're the only man in this valley who knows what's in those cellars, what the barrels are worth, how to draw them off, and how to open a fermentation vessel without killing everyone in the room."
+          },
+          {
+            "ref": "c01.s0089",
+            "text": "Also you don't scare, which is a documented problem, and you don't need much sleep, which is a documented problem in the other direction.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c3:claim:add:S-10",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c3:claim:add:S-10",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-10",
+          "speaker": "char:dave",
+          "content": "I did not move the sideboard again.",
+          "chapter": 3,
+          "evidence": [
+            "c03.s0046"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0046",
+            "text": "“I didn’t move it.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c2:claim:add:S-6",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c2:claim:add:S-6",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "“inside of the glass, where nobody can see...” 实际由 partner 模仿Dave说出；不能把所有具体说法都归到 Dave 自己的发言。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-6",
+          "speaker": "char:dave",
+          "content": "Something is on the inside of the glass, where nobody can see it, and not on the outside; it is not dirt and cannot be cleaned off with a razor blade.",
+          "chapter": 2,
+          "evidence": [
+            "c02.s0021",
+            "c02.s0022",
+            "c02.s0023",
+            "c02.s0025",
+            "c02.s0027"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0021",
+            "text": "“I’m saying it’s not dirt."
+          },
+          {
+            "ref": "c02.s0022",
+            "text": "I cleaned it."
+          },
+          {
+            "ref": "c02.s0023",
+            "text": "I cleaned it with a razor blade.”"
+          },
+          {
+            "ref": "c02.s0025",
+            "text": "“Something is on the glass.”"
+          },
+          {
+            "ref": "c02.s0027",
+            "text": "“On the inside of the glass, where nobody can see it, and not on the outside, where everybody can.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:837:c1:claim:add:S-6",
+      "itemId": "20261031T064958Z-0ae2186-r1:837:c1:claim:add:S-6",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "837",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-6",
+          "speaker": "char:ilya",
+          "content": "He is going to die, but he will die with his hook up.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0041",
+            "c01.s0042",
+            "c01.s0043"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0041",
+            "text": "Ilya stepped up past the inhibitor stump, which is a thing a support should never do, and said, \"Well."
+          },
+          {
+            "ref": "c01.s0042",
+            "text": "I'm going to die."
+          },
+          {
+            "ref": "c01.s0043",
+            "text": "But I'm going to die with my hook up, and that's more than most men can say,\" and he threw it."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c2:claim:add:S-4",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c2:claim:add:S-4",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Ruth 的明确撤回发言被归为 unknown，丢失可识别的说话者。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-4",
+          "speaker": "unknown",
+          "content": "I misspoke: the seeding program was for particulate dispersal — industrial haze mitigation — and that has always been the record.",
+          "chapter": 2,
+          "evidence": [
+            "c02.s0065",
+            "c02.s0066",
+            "c02.s0067",
+            "c02.s0068",
+            "c02.s0069"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0065",
+            "text": "\"Strike that,\" she said, clearly, evenly, at a volume that carried."
+          },
+          {
+            "ref": "c02.s0066",
+            "text": "\"I misspoke."
+          },
+          {
+            "ref": "c02.s0067",
+            "text": "The seeding program was for particulate dispersal — industrial haze mitigation."
+          },
+          {
+            "ref": "c02.s0068",
+            "text": "That's the record."
+          },
+          {
+            "ref": "c02.s0069",
+            "text": "That's always been the record.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c1:claim:add:S-4",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c1:claim:add:S-4",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-4",
+          "speaker": "char:partner",
+          "content": "The cottage on Mill Road was built in 1987 and has double glazing.",
+          "chapter": 1,
+          "evidence": [
+            "c01.s0068"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0068",
+            "text": "“The cottage on Mill Road was built in 1987 and has double glazing.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c4:claim:add:S-19",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c4:claim:add:S-19",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-19",
+          "speaker": "char:anselm",
+          "content": "The barrel she found is the abbey's spring brew, nineteen years in wood; the thieves stole it and shelved it correctly.",
+          "chapter": 4,
+          "evidence": [
+            "c04.s0034",
+            "c04.s0035",
+            "c04.s0036"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0034",
+            "text": "\"The abbey's spring brew,\" she said."
+          },
+          {
+            "ref": "c04.s0035",
+            "text": "\"Nineteen years in wood."
+          },
+          {
+            "ref": "c04.s0036",
+            "text": "They stole it and they shelved it correctly.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c2:cognition:add:K-4",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c2:cognition:add:K-4",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-4",
+          "characterId": "char:dave",
+          "kind": "knows",
+          "content": "The sideboard had moved three inches out from the wall, leaving a clean gap while the dust between it and the wall was undisturbed.",
+          "about": "F-8",
+          "acquiredChapter": 2,
+          "via": "witnessed",
+          "evidence": [
+            "c02.s0077",
+            "c02.s0080",
+            "c02.s0081",
+            "c02.s0082",
+            "c02.s0083"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0077",
+            "text": "Then he went into the front room to sit down, and the sideboard had moved."
+          },
+          {
+            "ref": "c02.s0080",
+            "text": "He had measured it with his own knuckles the day they moved in, because it had seemed to him that a piece of furniture that heavy ought to be flat to the wall and it would not go."
+          },
+          {
+            "ref": "c02.s0081",
+            "text": "Three inches."
+          },
+          {
+            "ref": "c02.s0082",
+            "text": "He crouched and put his hand in the space, up against the wallpaper, and felt the air there."
+          },
+          {
+            "ref": "c02.s0083",
+            "text": "Three inches, clean and even the whole length of it, while the boards between the wall and the sideboard held every particle of dust that had ever been there, undisturbed."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c4:cognition:add:K-12",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c4:cognition:add:K-12",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-12",
+          "characterId": "char:gideon",
+          "kind": "believes",
+          "content": "A gallon and a half is the dose per man, so a whole swarm cannot simply be flooded with beer.",
+          "about": null,
+          "acquiredChapter": 4,
+          "via": "told",
+          "evidence": [
+            "c04.s0136",
+            "c04.s0138",
+            "c04.s0139"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0136",
+            "text": "\"A gallon and a half.\""
+          },
+          {
+            "ref": "c04.s0138",
+            "text": "\"Tell me that's per man and not per swarm.\""
+          },
+          {
+            "ref": "c04.s0139",
+            "text": "\"It's not per swarm,\" Prine said."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c2:cognition:add:K-1",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c2:cognition:add:K-1",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-1",
+          "characterId": "char:op",
+          "kind": "knows",
+          "content": "The first entry in the sub-rule index, '§2.1 — On waiting rooms,' is already out of date; an annotation says 2.1(b) is repealed and 2.1(c) is pending.",
+          "about": "H-2",
+          "acquiredChapter": 2,
+          "via": "read",
+          "evidence": [
+            "c02.s0095",
+            "c02.s0096",
+            "c02.s0097",
+            "c02.s0098"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0095",
+            "text": "I opened the sub-rule index just now, and I need to warn you before I transcribe a single line: the first entry is already out of date."
+          },
+          {
+            "ref": "c02.s0096",
+            "text": "I am looking at it."
+          },
+          {
+            "ref": "c02.s0097",
+            "text": "It says “§2.1 — On waiting rooms.”"
+          },
+          {
+            "ref": "c02.s0098",
+            "text": "Underneath, in fresher toner, someone has written “see 2.1(b), repealed, see also 2.1(c), pending.”"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c3:cognition:add:K-3",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c3:cognition:add:K-3",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-3",
+          "characterId": "char:op",
+          "kind": "knows",
+          "content": "Footnote 4 lists §2.2(d) in the index under both \"Naming, provisional\" and \"Naming, permanent,\" and both entries are current.",
+          "about": "F-5",
+          "acquiredChapter": 3,
+          "via": "read",
+          "evidence": [
+            "c03.s0081",
+            "c03.s0082",
+            "c03.s0083"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0081",
+            "text": "**Footnote 4:** §2.2(d) is listed in the index under “Naming, provisional” and also under “Naming, permanent.”"
+          },
+          {
+            "ref": "c03.s0082",
+            "text": "Both entries are current."
+          },
+          {
+            "ref": "c03.s0083",
+            "text": "The rulebook has no opinion about the contradiction."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c3:cognition:add:K-8",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c3:cognition:add:K-8",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "通读本章41行确认六年夜班与长期情绪压抑，认知概括可以成立；所引句跳过直接包含六年的两个句子，K05仍为证据不完整。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-8",
+          "characterId": "char:nadia",
+          "kind": "knows",
+          "content": "The gas suppressed her feelings for six years; what she had called strength was the gas.",
+          "about": null,
+          "acquiredChapter": 3,
+          "via": "inferred",
+          "evidence": [
+            "c03.s0054",
+            "c03.s0057",
+            "c03.s0058",
+            "c03.s0059"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0054",
+            "text": "Because here was what nobody had told them, here was what the mask had done: she felt the sirens and the shouting in her own back, low down, where she had put everything."
+          },
+          {
+            "ref": "c03.s0057",
+            "text": "Her mother's funeral, four years back, which she had attended dry-eyed and been praised for, *so strong, so steady* — she had wanted to fall down on the wet grass and howl and instead she had made sandwiches and there had been, she understood now, a smooth grey hand laid over her mouth the entire time, and she had called it being strong, and it had been the gas."
+          },
+          {
+            "ref": "c03.s0058",
+            "text": "It was not strong."
+          },
+          {
+            "ref": "c03.s0059",
+            "text": "It was gone."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c4:cognition:add:K-10",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c4:cognition:add:K-10",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-10",
+          "characterId": "char:soren",
+          "kind": "knows",
+          "content": "Kestrel City appears sixteen times in the continuity memo's table of covered municipalities, showing the program has long covered the city.",
+          "about": "F-22",
+          "acquiredChapter": 4,
+          "via": "read",
+          "evidence": [
+            "c04.s0018",
+            "c04.s0019",
+            "c04.s0020",
+            "c04.s0021"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0018",
+            "text": "The second page had a table."
+          },
+          {
+            "ref": "c04.s0019",
+            "text": "In the left column, the years."
+          },
+          {
+            "ref": "c04.s0020",
+            "text": "In the right column, the municipalities covered."
+          },
+          {
+            "ref": "c04.s0021",
+            "text": "Kestrel City was in the right column sixteen times."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c2:cognition:add:K-2",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c2:cognition:add:K-2",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-2",
+          "characterId": "char:dave",
+          "kind": "knows",
+          "content": "The mist in the cemetery lay thick and motionless along the oldest rows on the second morning, and there was no wind to move it.",
+          "about": "F-6",
+          "acquiredChapter": 2,
+          "via": "witnessed",
+          "evidence": [
+            "c02.s0009",
+            "c02.s0010",
+            "c02.s0014",
+            "c02.s0015"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0009",
+            "text": "The second morning the mist was up to his knees, and it was thicker along the oldest rows."
+          },
+          {
+            "ref": "c02.s0010",
+            "text": "He noticed because he had to step around a stone that had fallen flat, a low slab worn smooth as a countertop, and when he looked down the row the mist lay heavier there, a dense white banding that filled the gaps between the markers like water finding a level."
+          },
+          {
+            "ref": "c02.s0014",
+            "text": "The mist did not move."
+          },
+          {
+            "ref": "c02.s0015",
+            "text": "There was no wind to move it."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c4:cognition:add:K-9",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c4:cognition:add:K-9",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 4,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-9",
+          "characterId": "char:soren",
+          "kind": "knows",
+          "content": "Contract 41-C's Schedule B authorizes atmospheric suspension of chemical agents with sustained release, and the continuity memo calls suspension of the ambient agent a necessary condition of civic function in Districts Three through Nine.",
+          "about": "F-21",
+          "acquiredChapter": 4,
+          "via": "read",
+          "evidence": [
+            "c04.s0007",
+            "c04.s0011",
+            "c04.s0012",
+            "c04.s0017"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0007",
+            "text": "Under *scope of services*, subheading four, a line: *atmospheric suspension of chemical agents per Schedule B.*"
+          },
+          {
+            "ref": "c04.s0011",
+            "text": "Seeding flights, and beside each flight a load weight in kilograms."
+          },
+          {
+            "ref": "c04.s0012",
+            "text": "An environmental impact statement at the back with the compliance stamp at the bottom, and someone's initials above it in green pen, and beside those initials, in the same green pen, the words *sustained release authorized — see continuity memo.*"
+          },
+          {
+            "ref": "c04.s0017",
+            "text": "Its first line was: *Suspension of the ambient agent has proven a necessary condition of civic function in Districts Three through Nine; discontinuation is not recommended at this time.*"
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c2:relation:upsert:rel:dave->partner",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c2:relation:upsert:rel:dave->partner",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:dave->partner",
+          "from": "char:dave",
+          "to": "char:partner",
+          "stance": "Partners; the partner treats Dave's fears about the house as a joke, which Dave cannot challenge without becoming the joke, leaving him isolated in his fear.",
+          "sinceChapter": 2,
+          "evidence": [
+            "c02.s0026",
+            "c02.s0036",
+            "c02.s0048",
+            "c02.s0056",
+            "c02.s0057",
+            "c02.s0063"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0026",
+            "text": "“Something is on the glass,” his partner repeated, in the voice of a documentary narrator."
+          },
+          {
+            "ref": "c02.s0036",
+            "text": "“A doctor would say, has he been under a lot of strain, has he been getting his sleep, has he been spending a lot of time alone in a house that is making noises.”"
+          },
+          {
+            "ref": "c02.s0048",
+            "text": "“I think we’ve moved into a house with a personality, and the personality has got under your skin, and now every time a floorboard breathes you’re going to come and tell me the furniture’s having ideas.”"
+          },
+          {
+            "ref": "c02.s0056",
+            "text": "That was the trouble with the two of them; he always laughed, because the joke was usually good, and because the alternative would have been to say the true thing, which was that he had stood in the doorway that morning with his tea going cold and been frightened, properly frightened, in a way he had not been since he was a child."
+          },
+          {
+            "ref": "c02.s0057",
+            "text": "And that he could not say it now because it would come out wrong and they would make it into another joke and it would be stuck that way, a running bit, trotted out at dinner parties for years."
+          },
+          {
+            "ref": "c02.s0063",
+            "text": "They were laughing too, genuinely, warmly, and that was worse, because they meant no harm and could not see the harm."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c1:relation:upsert:rel:nadia->pip",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c1:relation:upsert:rel:nadia->pip",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:nadia->pip",
+          "from": "char:nadia",
+          "to": "char:pip",
+          "stance": "mother",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0003",
+            "c01.s0014",
+            "c01.s0072"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0003",
+            "text": "Pip's hand was a small damp weight in hers."
+          },
+          {
+            "ref": "c01.s0014",
+            "text": "Seven years old and his wrists were still bird-bones."
+          },
+          {
+            "ref": "c01.s0072",
+            "text": "Her son's thin chest lifting."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:relation:upsert:rel:gideon->marisol",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:relation:upsert:rel:gideon->marisol",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:gideon->marisol",
+          "from": "char:gideon",
+          "to": "char:marisol",
+          "stance": "Prickly longtime allies: she needles him about his drinking and he deflects with jokes, but she trusts his brewing knowledge enough to demand he lead the raid, and he answers her summons.",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0020",
+            "c01.s0022",
+            "c01.s0026",
+            "c01.s0036",
+            "c01.s0038",
+            "c01.s0088",
+            "c01.s0119"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0020",
+            "text": "\"Your fence is down,\" said Marisol Vane."
+          },
+          {
+            "ref": "c01.s0022",
+            "text": "\"You heard and you came up from the cellar at a walk.\""
+          },
+          {
+            "ref": "c01.s0026",
+            "text": "She didn't look at me the way other people look at me now — the way that says *oh, the drunk from the cellar.*"
+          },
+          {
+            "ref": "c01.s0036",
+            "text": "She let that go, which is how I knew it was bad."
+          },
+          {
+            "ref": "c01.s0038",
+            "text": "She conserves grievance the way I conserve yeast: carefully, and against a lean season."
+          },
+          {
+            "ref": "c01.s0088",
+            "text": "\"You're the only man in this valley who knows what's in those cellars, what the barrels are worth, how to draw them off, and how to open a fermentation vessel without killing everyone in the room."
+          },
+          {
+            "ref": "c01.s0119",
+            "text": "She considered it, and then she nodded, once, which from Marisol is practically an embrace."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c1:relation:upsert:rel:nadia->cass",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c1:relation:upsert:rel:nadia->cass",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:nadia->cass",
+          "from": "char:nadia",
+          "to": "char:cass",
+          "stance": "married",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0043",
+            "c01.s0060"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0043",
+            "text": "Then she turned and looked at her husband."
+          },
+          {
+            "ref": "c01.s0060",
+            "text": "Cass pulled his mask down and said, \"Nadia — \" and she heard the whole argument in the two syllables, all of it, and here was the strange clean cruelty of it: she knew exactly what he would say, and exactly how she would answer, and exactly how it would end, which was nowhere, in the kitchen, at two in the morning, with the tap dripping."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c1:relation:upsert:rel:dave->partner",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c1:relation:upsert:rel:dave->partner",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:dave->partner",
+          "from": "char:dave",
+          "to": "char:partner",
+          "stance": "partners",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0008",
+            "c01.s0030",
+            "c01.s0063",
+            "c01.s0085"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0008",
+            "text": "“You’re doing the thing,” his partner said, coming up behind him with two duffels and a face full of the particular patience that meant they had already carried more than their share."
+          },
+          {
+            "ref": "c01.s0030",
+            "text": "They grinned at him, that quick slanting grin that had been the first thing he’d ever liked about them."
+          },
+          {
+            "ref": "c01.s0063",
+            "text": "They reached over and stole a potato off his plate, easy as anything."
+          },
+          {
+            "ref": "c01.s0085",
+            "text": "His partner came up behind him, yawned enormously, and put their chin on his shoulder."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c4:relation:upsert:rel:gideon->marisol",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c4:relation:upsert:rel:gideon->marisol",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Friday 是 Gideon 请求延期的回答，Marisol 只要求说出办法；写成她给到 Friday 是反向归因。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:gideon->marisol",
+          "from": "char:gideon",
+          "to": "char:marisol",
+          "stance": "Prickly alliance under strain: when he lost the second map in the culvert she only said 'Ten of us and one map, then,' and did not demand his coat or say the team was accounted for, and from the ridge she set the whole plan on his shoulders and gave him until Friday to say something clever.",
+          "sinceChapter": 4,
+          "evidence": [
+            "c04.s0126",
+            "c04.s0127",
+            "c04.s0131",
+            "c04.s0132",
+            "c04.s0141",
+            "c04.s0142",
+            "c04.s0143",
+            "c04.s0144",
+            "c04.s0145"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c04.s0126",
+            "text": "\"Second copy,\" Marisol said."
+          },
+          {
+            "ref": "c04.s0127",
+            "text": "\"Lost,\" I said."
+          },
+          {
+            "ref": "c04.s0131",
+            "text": "She looked at me for a while."
+          },
+          {
+            "ref": "c04.s0132",
+            "text": "Then she said, \"Ten of us and one map, then,\" and got up, and walked out of the ditch, and did not say *accounted for*, and did not ask me to turn out my coat."
+          },
+          {
+            "ref": "c04.s0141",
+            "text": "\"Gideon,\" Marisol said from the ridge, not turning."
+          },
+          {
+            "ref": "c04.s0142",
+            "text": "\"The whole plan is that château."
+          },
+          {
+            "ref": "c04.s0143",
+            "text": "The whole plan is you telling me there's a way to bring that crowd down a hill without bringing them down on us."
+          },
+          {
+            "ref": "c04.s0144",
+            "text": "So say something clever.\""
+          },
+          {
+            "ref": "c04.s0145",
+            "text": "I got up out of the ditch with the mud running off me and the one dry map of a stone cellar with one hole in its floor, and I said, honestly, \"Ask me on Friday.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c2:relation:upsert:rel:gideon->prine",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c2:relation:upsert:rel:gideon->prine",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系解释基本成立，但所引句未包含准许带活标本的具体决定，引用不完整。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:gideon->prine",
+          "from": "char:gideon",
+          "to": "char:prine",
+          "stance": "Wary respect: Gideon calls Prine the one he is afraid of because Prine wants only a fact, yet concedes him a live specimen in the cellar so long as his notes stay clear of the barrels.",
+          "sinceChapter": 2,
+          "evidence": [
+            "c02.s0083",
+            "c02.s0101",
+            "c02.s0103",
+            "c02.s0104"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0083",
+            "text": "Doc Prine came last, and Prine is the one I was afraid of, because Prine does not want anything except a fact."
+          },
+          {
+            "ref": "c02.s0101",
+            "text": "I have known few clean rhetorical victories."
+          },
+          {
+            "ref": "c02.s0103",
+            "text": "\"You go,\" I said."
+          },
+          {
+            "ref": "c02.s0104",
+            "text": "\"And you keep your notes at a distance from my barrels.\""
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c2:relation:upsert:rel:gideon->marisol",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c2:relation:upsert:rel:gideon->marisol",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相处张力成立，暗藏第二瓶属正文其他句；所引证据未支持该新增具体行为。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:gideon->marisol",
+          "from": "char:gideon",
+          "to": "char:marisol",
+          "stance": "Prickly longtime allies now sparring over discipline: she posts rules and vows to search his coat for missing bottles, while he secretly flouts her count with a hidden second bottle and still trusts her to bring the team home.",
+          "sinceChapter": 2,
+          "evidence": [
+            "c02.s0106",
+            "c02.s0112",
+            "c02.s0118",
+            "c02.s0120",
+            "c02.s0124",
+            "c02.s0144"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0106",
+            "text": "By evening, Marisol had the rules up on the brewhouse chalkboard in her square hand, and she read them out the way she read out guard rosters, which is to say she did not look up while saying them and expected you to have finished understanding before she finished."
+          },
+          {
+            "ref": "c02.s0112",
+            "text": "\"The infected,\" she said, \"are not on the roster."
+          },
+          {
+            "ref": "c02.s0118",
+            "text": "If I count short, Brewer, I will know whose coat to search.\""
+          },
+          {
+            "ref": "c02.s0120",
+            "text": "\"That time is on your forearm,\" I said, \"and it's not a rule, it's a statement of fact, and I'm not arguing with a fact.\""
+          },
+          {
+            "ref": "c02.s0124",
+            "text": "That's the last one and it's not negotiable,\" and she wrote it and underlined it twice, and Tull, who had come in with his true map under his arm and wet to the knee, read it over her shoulder and said, \"That's a good rule,\" in a way that made me want to give him the whole of the château and the whole of the world in a paper cup."
+          },
+          {
+            "ref": "c02.s0144",
+            "text": "She wouldn't count at the ridge, and she wouldn't count if she was bleeding, and she wouldn't count if I was bleeding either, and there is a sort of logic in that which I have never yet managed to argue down."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c3:relation:upsert:rel:gideon->tull",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c3:relation:upsert:rel:gideon->tull",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:gideon->tull",
+          "from": "char:gideon",
+          "to": "char:tull",
+          "stance": "Gruff tenderness and trust: Gideon gives Tull his own ration bottle as bait and watches him lead three infected away on the cart, certain the boy knows the drainage ditch better than it knows itself.",
+          "sinceChapter": 3,
+          "evidence": [
+            "c03.s0041",
+            "c03.s0044",
+            "c03.s0050",
+            "c03.s0051",
+            "c03.s0055",
+            "c03.s0056",
+            "c03.s0093"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0041",
+            "text": "\"Mr. Marsh,\" he said, \"I'm going to need a beer.\""
+          },
+          {
+            "ref": "c03.s0044",
+            "text": "I got the ration bottle out and put it in his hand."
+          },
+          {
+            "ref": "c03.s0050",
+            "text": "He took the cart out onto the lane and cracked the bottle against the wheel hub, and the sound of it — glass and then that wet splash and then the smell lifting up — made all three of them stop dead the way a room stops when a cork goes."
+          },
+          {
+            "ref": "c03.s0051",
+            "text": "Then Tull turned the noise-makers on and pedalled away down the lane, dragging the cart with beer running off the boards behind it, and three beer-thirsty dead men went after him at a shambling trot like commuters who had heard the last train called."
+          },
+          {
+            "ref": "c03.s0055",
+            "text": "\"He's been running from things on that cart since he was twelve."
+          },
+          {
+            "ref": "c03.s0056",
+            "text": "He knows the drainage ditch better than it knows itself.\""
+          },
+          {
+            "ref": "c03.s0093",
+            "text": "And then we came up over the lip of the drainage channel at the ridge line and Tull was waiting there, white-faced, holding the cart's handlebar with both hands, and he said, \"I lost them at the split, but — Mr. Marsh."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c3:hook:upsert:H-3",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c3:hook:upsert:H-3",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-3",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 3,
+          "lastAdvancedChapter": 3,
+          "expectedPayoff": "Who was Mary Ellery, and what is her connection to the Ellery property Dave bought?",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0011",
+            "text": "ELLERY."
+          },
+          {
+            "ref": "c03.s0012",
+            "text": "Below it, smaller: *Mary Ellery."
+          },
+          {
+            "ref": "c03.s0017",
+            "text": "He had signed the deed at the solicitor’s in June."
+          },
+          {
+            "ref": "c03.s0018",
+            "text": "He remembered the paper, the thick cream envelope, the way the woman had turned it round to face him and said, *the Ellery property*, as though the house were still a person’s."
+          }
+        ],
+        "rawHook": {
+          "ref": "h3_ellery",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who was Mary Ellery, and what is her connection to the Ellery property Dave bought?",
+          "sentences": [
+            11,
+            12,
+            17,
+            18
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c3:hook:upsert:H-3",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c3:hook:upsert:H-3",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-3",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 3,
+          "lastAdvancedChapter": 3,
+          "expectedPayoff": "Which queue OP is actually supposed to be in, and what the correct queue is for.",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0089",
+            "text": "And then I was at the front."
+          },
+          {
+            "ref": "c03.s0093",
+            "text": "“Wrong queue,” the clerk said."
+          },
+          {
+            "ref": "c03.s0098",
+            "text": "“Wrong queue for what?”"
+          },
+          {
+            "ref": "c03.s0100",
+            "text": "The clerk stamped something that was not my form, and slid it across the desk, and did not answer."
+          }
+        ],
+        "rawHook": {
+          "ref": "hook_wrong_queue",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Which queue OP is actually supposed to be in, and what the correct queue is for.",
+          "sentences": [
+            89,
+            93,
+            98,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c1:hook:upsert:H-1",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c1:hook:upsert:H-1",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-1",
+          "type": "mission",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Whether Gideon's raid on the beer cellars of Château Ferrand can be pulled off without getting his team killed.",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0085",
+            "text": "\"You want me to lead a raid.\""
+          },
+          {
+            "ref": "c01.s0086",
+            "text": "\"I want you to lead a raid.\""
+          },
+          {
+            "ref": "c01.s0093",
+            "text": "\"I'm not going to lead men to their deaths over a cellar of ale.\""
+          },
+          {
+            "ref": "c01.s0110",
+            "text": "\"Fine,\" I said."
+          },
+          {
+            "ref": "c01.s0115",
+            "text": "And nobody — nobody, Marisol, including your tactical spine — touches my cellar while I'm gone.\""
+          },
+          {
+            "ref": "c01.s0123",
+            "text": "\"Here's the plan,\" I said, \"and I want it understood from the start that it is a terrible plan, and that the alternative is a worse one.\""
+          }
+        ],
+        "rawHook": {
+          "ref": "raid_chateau",
+          "op": "upsert",
+          "type": "mission",
+          "expectedPayoff": "Whether Gideon's raid on the beer cellars of Château Ferrand can be pulled off without getting his team killed.",
+          "sentences": [
+            85,
+            86,
+            93,
+            110,
+            115,
+            123
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:527:c4:hook:advance:H-3",
+      "itemId": "20261031T064958Z-0ae2186-r1:527:c4:hook:advance:H-3",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "527",
+      "chapter": 4,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文只是仍未知、回访或人物未证实猜测；没有新增可核验线索，advance 过度，应 mention（87 另有明确 defer）。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c04.s0056",
+            "c04.s0057",
+            "c04.s0058",
+            "c04.s0064",
+            "c04.s0065",
+            "c04.s0066"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-3",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 3,
+          "lastAdvancedChapter": 3,
+          "expectedPayoff": "Who was Mary Ellery, and what is her connection to the Ellery property Dave bought?",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c04.s0056",
+            "text": "The mist lay along the old rows, and he went to the corner of the row without deciding to, and stood at the half-sunk slab with the lichen on it."
+          },
+          {
+            "ref": "c04.s0057",
+            "text": "“Mary Ellery,” he said aloud."
+          },
+          {
+            "ref": "c04.s0058",
+            "text": "“Beloved.”"
+          },
+          {
+            "ref": "c04.s0064",
+            "text": "“I’m sorry about the house,” he said, and felt foolish, and went on, because there was nobody to hear."
+          },
+          {
+            "ref": "c04.s0065",
+            "text": "“If it means anything."
+          },
+          {
+            "ref": "c04.s0066",
+            "text": "I don’t think I’ve been courteous about it.”"
+          }
+        ],
+        "rawHook": {
+          "ref": "h3_advance",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            56,
+            57,
+            58,
+            64,
+            65,
+            66
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:42:c3:hook:mention:H-1",
+      "itemId": "20261031T064958Z-0ae2186-r1:42:c3:hook:mention:H-1",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "42",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "mention",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c03.s0072"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-1",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "The missing Appendix G and the actual definition of winning The Internet will be revealed.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0072",
+            "text": "There is a footnote that says “see appeals,” and the appeals section has been removed from this printing, same as Appendix G, same as everything."
+          }
+        ],
+        "rawHook": {
+          "ref": "h1_mention",
+          "op": "mention",
+          "id": "H-1",
+          "sentences": [
+            72
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1769:c3:hook:advance:H-2",
+      "itemId": "20261031T064958Z-0ae2186-r1:1769:c3:hook:advance:H-2",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1769",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c03.s0095",
+            "c03.s0099",
+            "c03.s0101",
+            "c03.s0103"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-2",
+          "type": "threat",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "What the infected's craving for spilled beer means, and whether it will draw them through the failing fence.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0095",
+            "text": "I looked down the slope, and I looked past the co-op truck and the lane and the beer Tull had spilled into the road as a distraction, and I saw them."
+          },
+          {
+            "ref": "c03.s0099",
+            "text": "A crowd coming up out of the trees along the drainage line with their heads lifted and their shoulders loose, and behind them more, and the long ridge road above them running silver toward the château, and every one of them pointed up."
+          },
+          {
+            "ref": "c03.s0101",
+            "text": "\"They're following the smell,\" I said."
+          },
+          {
+            "ref": "c03.s0103",
+            "text": "Beer, blood, us — it's all the same direction.\""
+          }
+        ],
+        "rawHook": {
+          "ref": "h2_advance",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            95,
+            99,
+            101,
+            103
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K05",
+      "component": "correct",
+      "sampleId": "20261031T064958Z-0ae2186-r1:1587:c3:hook:upsert:H-6",
+      "itemId": "20261031T064958Z-0ae2186-r1:1587:c3:hook:upsert:H-6",
+      "runId": "20261031T064958Z-0ae2186-r1",
+      "caseId": "1587",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-6",
+          "type": "deadline",
+          "status": "open",
+          "startChapter": 3,
+          "lastAdvancedChapter": 3,
+          "expectedPayoff": "Will Pip survive Lull withdrawal, and can Nadia get him help in time?",
+          "dependsOn": [
+            "H-1"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0090",
+            "text": "Only he's got no way to make more of it, and no way to live without it, and if it goes on like this it will start shutting things down."
+          },
+          {
+            "ref": "c03.s0091",
+            "text": "Heart first, maybe."
+          },
+          {
+            "ref": "c03.s0092",
+            "text": "Then the rest.\""
+          },
+          {
+            "ref": "c03.s0095",
+            "text": "\"Weeks,\" she said."
+          },
+          {
+            "ref": "c03.s0096",
+            "text": "\"Maybe less."
+          },
+          {
+            "ref": "c03.s0097",
+            "text": "I'm sorry.\""
+          }
+        ],
+        "rawHook": {
+          "ref": "pip_survival",
+          "op": "upsert",
+          "type": "deadline",
+          "expectedPayoff": "Will Pip survive Lull withdrawal, and can Nadia get him help in time?",
+          "dependsOn": [
+            "H-1"
+          ],
+          "sentences": [
+            90,
+            91,
+            92,
+            95,
+            96,
+            97
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "story/p2-evidence-loss@1",
+  "runId": "20261030T010519Z-175a120-r1",
+  "recoveredAt": "2026-10-30T01:23:11.951Z",
+  "reason": "Execution workspace disappeared while the model process was active; the driver ended with ENOENT in EvidenceArchive.finish reading its journal.",
+  "lost": [
+    "fixed Pi build",
+    "dependency runtime",
+    "in-progress measurement journal",
+    "case session files",
+    "temporary helpers"
+  ],
+  "retained": {
+    "rawFiles": 48,
+    "manifest": true,
+    "canonicalReservations": true,
+    "canonicalCharges": true
+  },
+  "lastChatProgress": {
+    "committedChapters": 2,
+    "requestedChapters": 20,
+    "failedMacroAttempts": 1,
+    "lastMacroError": "TRANSPORT_FAILURE",
+    "logicalRequests": 24,
+    "completedResponses": 23,
+    "internalCalls": 14,
+    "source": "Last successful progress command in the execution chat; this is not a reconstructed product result."
+  },
+  "originalJournalIntegrity": "unavailable",
+  "recoveryPolicy": "Preserve raw bytes and fees. Do not reconstruct responses, CallRecords, chapter results, or success metrics. Exclude this attempt from complete formal repetitions; include it in all-real accounting."
+}

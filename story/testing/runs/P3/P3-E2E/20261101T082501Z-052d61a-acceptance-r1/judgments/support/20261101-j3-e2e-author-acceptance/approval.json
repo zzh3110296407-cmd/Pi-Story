@@ -1,0 +1,92 @@
+{
+  "schema": "story/judge-author-acceptance@1",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "runId": "20261101T082501Z-052d61a-acceptance-r1",
+  "status": "author_approved",
+  "authorStatement": "检完成：9 项初判均可维持，未发现需要改判或更正理由的问题，建议整体认可本批判定。\n已对照原始会话、首次写手输入、最终提交正文，并核验文件摘要与统计：\n- E05 两项判错成立：排队消息在第 3 章提交后才激活；首次写手输入和最终正文均未体现蓝色方块要求。这是一个用例的两个失败条件。[证据说明 (line 115)](D:/AI/Story Dome/新版综合方案/测试结果/P3/人工复核/P3-J3-E2E-14例初判复核.md:115)\n- E09 判对成立：预算回执明确说明停止原因；后续 aborted 是派发前被拦截的本地尝试，没有进入生成。[证据说明 (line 1898)](D:/AI/Story Dome/新版综合方案/测试结果/P3/人工复核/P3-J3-E2E-14例初判复核.md:1898)\n- 其余 6 项正文效果判对成立，要求实际落实在提交正文中。\n统计维持：正文效果 6/7、程序语义 1/2，0 项不适用，本批 9 项无缺测。\nS09 仍不能宣布通过：E11 因测试驱动未交付回答而保持未完成，分母仍为 15；即使 E11 补齐通过，E05 的失败仍使其无法达到 100%。",
+  "statementContext": "User replied to the explicit overall-acceptance request covering all9 preliminary E2E judgments, confirmed every verdict/reason and count, and recommended overall acceptance. Recorded as overall acceptance in that response context; no new verdict or rationale is inferred.",
+  "acceptanceMode": "overall_acceptance_confirmed_in_response_to_batch_review_request",
+  "identity": "AI判定、作者整体认可",
+  "personalHumanItemReviewClaimed": false,
+  "basis": [
+    "29 §4",
+    "16 §3.4",
+    "docs/p3/judgment-contract.md"
+  ],
+  "scope": {
+    "judgmentRows": 9,
+    "effect": {
+      "correct": 6,
+      "n": 7
+    },
+    "programSemantic": {
+      "correct": 1,
+      "n": 2
+    },
+    "notApplicable": 0,
+    "observationGapsInJudgedRows": 0,
+    "validCasesCovered": 14,
+    "formalDenominator": 15,
+    "E11Included": false,
+    "BOOKIncluded": false,
+    "coversOtherP3Suites": false
+  },
+  "acceptedRevisionCommit": "07c4785befbc8c524d5cf5e6314d65405ab47d54",
+  "acceptedSources": [
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/input-pins.json",
+      "sha256": "f5294bfd739b9392090213c070798e73b52b4789931cfaa0b9430ee40e248807"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/items.json",
+      "sha256": "2c3b15a546a42d091726f660ba8c50369b298526a4637623f1cba7b460af06b8"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/offline-score-ai-preliminary.json",
+      "sha256": "6dfe5416180dddcd70c8df7299ec4700cb442e23750deeac5b94cb0b13ca9a80"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/protocol.md",
+      "sha256": "63e3c2a309177611af56e13667a61c65762fdf45cc4f47d191655fde70baafb9"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/S09-effect-preliminary.json",
+      "sha256": "735835cc309740564b93aa4071b6544aba9b7aa2e8c2bcdff02bae5ec32c67da"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/S09-program-preliminary.json",
+      "sha256": "f1125c5efce48ee4ad31b006747ddaec25885308e057f1566f2cd470dccf99c5"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/sampling.json",
+      "sha256": "a951211a7790fe90457de9bc598fb1417ae1f7be20d7f021e2e163e063dae27f"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/summary.json",
+      "sha256": "2a07546e8fec7c18cf4f4a09e1fefa40c91f7eafebc48f206c579574ea710497"
+    },
+    {
+      "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/validation.json",
+      "sha256": "8a0b654a9998a9ed78ab4955e53114d1b0aa9c3283d6b1f388d256e890a73c0c"
+    }
+  ],
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build is exposed; no independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-E2E@1",
+    "promptPath": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/protocol.md",
+    "promptSha256": "63e3c2a309177611af56e13667a61c65762fdf45cc4f47d191655fde70baafb9",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "application": "Only approval/status metadata is added. All9 pass values, reasons, applicability, sample/run IDs and evidence remain identical. Preserve original preliminary files, dataset, raw, result, offline measurement view and metrics.",
+  "S09Limitation": "E11 remains measurement incomplete; S09 n remains15 and final value/passed stay null. Even an E11 pass cannot repair the already observed E05 failure or reach100%.",
+  "paidJudgeModelCalls": 0
+}

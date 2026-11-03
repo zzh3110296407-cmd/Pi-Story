@@ -1,0 +1,52 @@
+{
+  "schema": "story/p3-measurement-revision@2",
+  "productCommit": "a44db87ad272879275b0b2db30b8889ae8518893",
+  "measurementCommit": "e7245caa28e8fc68c40379cc7d63444b6caeaaee",
+  "changedFiles": [
+    "story/packages/pi-story/test/p3-dataset-contract.test.ts",
+    "story/packages/pi-story/test/p3-scenario-score.test.ts",
+    "story/packages/pi-story/test/p3-scenario.test.ts",
+    "story/scripts/eval/p3/checks.ts",
+    "story/scripts/eval/p3/datasets.ts",
+    "story/scripts/eval/p3/main.ts",
+    "story/scripts/eval/p3/metrics.ts",
+    "story/scripts/eval/p3/scenario-score.ts",
+    "story/scripts/eval/p3/scenario.ts",
+    "story/scripts/eval/p3/session.ts"
+  ],
+  "priorRevision": {
+    "commit": "17417e4a387b1ecbc091ad3d21f3cb045514a2ba",
+    "evidence": "P3-E2E/20261101T081545Z-ccbd53f-acceptance-r1/loader-repair.json"
+  },
+  "reason": "The first implementation omitted acceptance-only DS14 program-check predicates and used coarse combined checks at several indexes. E01 third-check regression exposed an incomplete value. Complete the original conditions, align their indexes, and retain observed failures.",
+  "unchanged": [
+    "product and core validation",
+    "role rules and settings",
+    "frozen dataset bytes",
+    "sample counts and repetitions",
+    "numeric formulas, minima and thresholds",
+    "original raw/results/metrics and paid calls"
+  ],
+  "repair": [
+    "Complete E01/E03/E05/E06/E07/E09/E11/E12/E13/E14 predicates from captured native/checkpoint evidence",
+    "Paraphrased writer-input visibility requires an additional independent author-approved S09/program judgment for the exact case:program:index; missing observations remain incomplete, failed predicates cannot be waived",
+    "Add a separate actual ProviderBudget.start main-reservation probe. Archived E09 can be checked offline against its original native branch and generated settings; the supplemental artifact must match the native-session SHA256"
+  ],
+  "regressions": {
+    "earlier": "E01 third frozen condition was incomplete",
+    "after": {
+      "tests": 20,
+      "files": 3,
+      "passed": true,
+      "supplementDigestRegressionPassed": true,
+      "projectCheckPassed": true
+    }
+  },
+  "offlineProof": {
+    "SCENReplaysEqual": 64,
+    "OPENApprovedRows": 335,
+    "OPENApprovedViewEqual": true
+  },
+  "retainedFailure": "The deterministic E09 local path aborts after an internal budget error without an explicit story.stop report. The expanded checker retains this as failed rather than claiming every condition passed.",
+  "executionProvenance": "The already-running E2E manifest remains pinned to measurement revision 17417e4a387b1ecbc091ad3d21f3cb045514a2ba. Later offline views identify this repair separately; do not retag or rerun existing paid cases."
+}

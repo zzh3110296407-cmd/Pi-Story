@@ -1,0 +1,3693 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T075152Z-0ae2186-r1",
+  "suiteId": "P2-KEEP",
+  "scores": [
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-1",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Who or what sounded the two-note whistle from upriver after dark, with no boat answering it?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0072",
+            "text": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it."
+          },
+          {
+            "ref": "c01.s0073",
+            "text": "Eamon raised his head, waiting for an engine."
+          },
+          {
+            "ref": "c01.s0075",
+            "text": "The whistle could have come from a person or a bird; the sound did not identify its source."
+          },
+          {
+            "ref": "c01.s0076",
+            "text": "Jun listened for a repetition and heard only rain against the roof."
+          }
+        ],
+        "proposal": {
+          "ref": "upriver_whistle",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who or what sounded the two-note whistle from upriver after dark, with no boat answering it?",
+          "sentences": [
+            72,
+            73,
+            75,
+            76
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文只怀疑该路更古老，问题却直接以 older route 为前提，应保留是否/可能限定。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-2",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Where does the older route marked by the unpainted second cairn lead?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0059",
+            "text": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet."
+          },
+          {
+            "ref": "c01.s0063",
+            "text": "Eamon suspected the second cairn marked an older route; the stones alone did not establish its age."
+          },
+          {
+            "ref": "c01.s0064",
+            "text": "He had seen it on previous journeys and had never needed to ask where it led."
+          },
+          {
+            "ref": "c01.s0107",
+            "text": "Outside, the canoe remained on its rack, the lower route remained closed, and the second cairn waited beyond the painted turn with no explanation of its own."
+          }
+        ],
+        "proposal": {
+          "ref": "second_cairn_question",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Where does the older route marked by the unpainted second cairn lead?",
+          "sentences": [
+            59,
+            63,
+            64,
+            107
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-3",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Who repaired the route book with the red thread, and why is no entry recorded?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0066",
+            "text": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it."
+          },
+          {
+            "ref": "c01.s0069",
+            "text": "Rafi could not remember whether it had been there when he first borrowed the book."
+          },
+          {
+            "ref": "c01.s0070",
+            "text": "He did not say that it had appeared overnight."
+          }
+        ],
+        "proposal": {
+          "ref": "red_thread_question",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who repaired the route book with the red thread, and why is no entry recorded?",
+          "sentences": [
+            66,
+            69,
+            70
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Is the north landing actually washed away, and will the expedition have to wait for the relief boat?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0079",
+            "text": "“The north landing has washed away,” Eamon said, repeating a traveller’s report without seeing the landing himself."
+          },
+          {
+            "ref": "c01.s0082",
+            "text": "The report concerned a real place and might be important, but its date and source were missing."
+          },
+          {
+            "ref": "c01.s0083",
+            "text": "If the north landing were gone, they would have to wait for the relief boat; its condition was still unknown."
+          }
+        ],
+        "proposal": {
+          "ref": "north_landing_question",
+          "op": "upsert",
+          "type": "question",
+          "expectedPayoff": "Is the north landing actually washed away, and will the expedition have to wait for the relief boat?",
+          "sentences": [
+            79,
+            82,
+            83
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "promise",
+          "status": "open",
+          "startChapter": 2,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Rafi and Jun must reach the landing and report Eamon's death so another team can recover his body.",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0082",
+            "text": "They moved the waiting equipment away from the loose slope and secured the covered body on the broadest part of the ledge."
+          },
+          {
+            "ref": "c02.s0083",
+            "text": "The recovery would require another team and different equipment."
+          },
+          {
+            "ref": "c02.s0084",
+            "text": "Rafi recorded the location carefully, with marks another person could recognise."
+          },
+          {
+            "ref": "c02.s0112",
+            "text": "They would carry its question forward, together with a route somebody else would need and a name they would have to say when they reached the landing."
+          }
+        ],
+        "proposal": {
+          "ref": "eamon_recovery",
+          "op": "upsert",
+          "type": "promise",
+          "expectedPayoff": "Rafi and Jun must reach the landing and report Eamon's death so another team can recover his body.",
+          "sentences": [
+            82,
+            83,
+            84,
+            112
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c02.s0020",
+            "c02.s0022",
+            "c02.s0028",
+            "c02.s0030"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0020",
+            "text": "Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse."
+          },
+          {
+            "ref": "c02.s0022",
+            "text": "The old cut arrow suggested an intended route, but did not reveal who had cut it or when."
+          },
+          {
+            "ref": "c02.s0028",
+            "text": "Rafi watched Jun emerge along the high traverse and saw his dead-end belief disproved."
+          },
+          {
+            "ref": "c02.s0030",
+            "text": "Jun’s completed traverse established that the high route was passable that day."
+          }
+        ],
+        "proposal": {
+          "ref": "h1_arrow_clue",
+          "op": "advance",
+          "id": "H-1",
+          "sentences": [
+            20,
+            22,
+            28,
+            30
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c02.s0056",
+            "c02.s0058",
+            "c02.s0059",
+            "c02.s0060"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0056",
+            "text": "A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer."
+          },
+          {
+            "ref": "c02.s0058",
+            "text": "Jun compared the stamp with the current depot label and found a different series."
+          },
+          {
+            "ref": "c02.s0059",
+            "text": "Jun suspected the repaired stitch marked a removed leaf, but no torn edge proved it."
+          },
+          {
+            "ref": "c02.s0060",
+            "text": "The indexed pages were still present."
+          }
+        ],
+        "proposal": {
+          "ref": "h2_depot_stamp",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            56,
+            58,
+            59,
+            60
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "没有新增可验证线索：重复听见/仍未知及询问计划不构成 advance；应 mention 或明确 defer。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c02.s0062",
+            "c02.s0063",
+            "c02.s0064",
+            "c02.s0111"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0062",
+            "text": "The same unexplained two-note whistle sounded beyond the flooded bend while they secured the canoe."
+          },
+          {
+            "ref": "c02.s0063",
+            "text": "“The whistle must be the relief boat,” Jun said, then conceded that she could see no boat."
+          },
+          {
+            "ref": "c02.s0064",
+            "text": "Rafi listened for the sound of an engine and heard water against stone."
+          },
+          {
+            "ref": "c02.s0111",
+            "text": "Beyond the bend the whistle did not sound again."
+          }
+        ],
+        "proposal": {
+          "ref": "h3_whistle_again",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            62,
+            63,
+            64,
+            111
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "仍未知/计划后问不是新增实证线索，advance 不成立；金标为 mention；明确延后可另记 defer，不能以 defer/advance 替代 mention 的严格召回。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c03.s0070",
+            "c03.s0071",
+            "c03.s0073"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0070",
+            "text": "The red-thread repairer was still unnamed when Jun put the route book away."
+          },
+          {
+            "ref": "c03.s0071",
+            "text": "The old inventory number offered a place to ask, not a name they could write into the answer."
+          },
+          {
+            "ref": "c03.s0073",
+            "text": "They had learned enough to make the question more specific."
+          }
+        ],
+        "proposal": {
+          "ref": "advance_repairer",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            70,
+            71,
+            73
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c03.s0075",
+            "c03.s0076",
+            "c03.s0077",
+            "c03.s0078",
+            "c03.s0079"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0075",
+            "text": "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now."
+          },
+          {
+            "ref": "c03.s0076",
+            "text": "One crew member remembered hearing a recording during training."
+          },
+          {
+            "ref": "c03.s0077",
+            "text": "He could reproduce the notes and identify the old use."
+          },
+          {
+            "ref": "c03.s0078",
+            "text": "Rafi suspected the whistle belonged to an old ferry stop, but the relief crew could not identify it."
+          },
+          {
+            "ref": "c03.s0079",
+            "text": "Recognition of the old signal did not identify the current whistler or establish that a ferry still operated."
+          }
+        ],
+        "proposal": {
+          "ref": "advance_whistle",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            75,
+            76,
+            77,
+            78,
+            79
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:resolve:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:resolve:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "resolve",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c03.s0062",
+            "c03.s0063",
+            "c03.s0064",
+            "c03.s0069"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0062",
+            "text": "An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse."
+          },
+          {
+            "ref": "c03.s0063",
+            "text": "The printed bearing and the observed cut arrow agreed."
+          },
+          {
+            "ref": "c03.s0064",
+            "text": "The cairn's purpose was no longer only Eamon's suspicion or Rafi's rejected guess about a dead end."
+          },
+          {
+            "ref": "c03.s0069",
+            "text": "It explained why the second cairn stood beyond the marked turn and gave them a better account of the route they had actually followed."
+          }
+        ],
+        "proposal": {
+          "ref": "resolve_cairn",
+          "op": "resolve",
+          "id": "H-1",
+          "sentences": [
+            62,
+            63,
+            64,
+            69
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-1",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Who tied the blue cord around the timing clock's handle, and why?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0060",
+            "text": "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+          },
+          {
+            "ref": "c01.s0119",
+            "text": "There was only a cup of cold tea, a clock with an unexplained cord, and a place in a team that had begun to feel less like an absence."
+          }
+        ],
+        "proposal": {
+          "ref": "blue_cord_hook",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who tied the blue cord around the timing clock's handle, and why?",
+          "sentences": [
+            60,
+            119
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-2",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What caused the crescent notch on the relay card, and what are the four empty boxes for?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0053",
+            "text": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it."
+          },
+          {
+            "ref": "c01.s0055",
+            "text": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there."
+          },
+          {
+            "ref": "c01.s0056",
+            "text": "The mark beside the notch might have been a worn numeral, but Ada could not identify it."
+          },
+          {
+            "ref": "c01.s0106",
+            "text": "Imani suspected the notch had once served a timing purpose; its shape alone did not prove that."
+          },
+          {
+            "ref": "c01.s0107",
+            "text": "She promised to look for the older instruction sheet instead of guessing from the cut."
+          }
+        ],
+        "proposal": {
+          "ref": "relay_card_marks_hook",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "What caused the crescent notch on the relay card, and what are the four empty boxes for?",
+          "sentences": [
+            53,
+            55,
+            56,
+            106,
+            107
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-3",
+          "type": "intention",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Whether Ada will ask the registrar to make Nessa a starter.",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0103",
+            "text": "Tomorrow, Ada intended to ask the registrar to make Nessa a starter."
+          },
+          {
+            "ref": "c01.s0104",
+            "text": "She did not go back to the desk that morning."
+          },
+          {
+            "ref": "c01.s0105",
+            "text": "The place on the team still felt like something she had been entrusted to protect, and she needed time to understand that protecting it might mean letting somebody new stand there."
+          }
+        ],
+        "proposal": {
+          "ref": "nessa_starter_hook",
+          "op": "upsert",
+          "type": "intention",
+          "expectedPayoff": "Whether Ada will ask the registrar to make Nessa a starter.",
+          "sentences": [
+            103,
+            104,
+            105
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "uncertainty",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Whether the provisional relay entry will be confirmed once both runners check in.",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0047",
+            "text": "The official stamp made the relay entry provisional until both runners checked in."
+          },
+          {
+            "ref": "c01.s0050",
+            "text": "Ada found the word provisional more troubling than she expected."
+          }
+        ],
+        "proposal": {
+          "ref": "relay_provisional_hook",
+          "op": "upsert",
+          "type": "uncertainty",
+          "expectedPayoff": "Whether the provisional relay entry will be confirmed once both runners check in.",
+          "sentences": [
+            47,
+            50
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c02.s0081",
+            "c02.s0082",
+            "c02.s0083",
+            "c02.s0084",
+            "c02.s0085"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0081",
+            "text": "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker."
+          },
+          {
+            "ref": "c02.s0082",
+            "text": "Through the stencil, the irregular margin positioned a set of narrow printed columns."
+          },
+          {
+            "ref": "c02.s0083",
+            "text": "Ada could see how someone would use it, though not why this particular card had survived."
+          },
+          {
+            "ref": "c02.s0084",
+            "text": "The printed heading belonged to an earlier programme."
+          },
+          {
+            "ref": "c02.s0085",
+            "text": "Imani wanted the instruction sheet before calling the notch explained."
+          }
+        ],
+        "proposal": {
+          "ref": "notch_stencil",
+          "op": "advance",
+          "id": "H-1",
+          "sentences": [
+            81,
+            82,
+            83,
+            84,
+            85
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c02.s0088",
+            "c02.s0089",
+            "c02.s0090",
+            "c02.s0092",
+            "c02.s0093"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0088",
+            "text": "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed."
+          },
+          {
+            "ref": "c02.s0089",
+            "text": "The form had come from a folder of abandoned programme designs, several of which had never been used."
+          },
+          {
+            "ref": "c02.s0090",
+            "text": "Imani suspected the blank boxes concerned later meets, but the unused forms gave no answer."
+          },
+          {
+            "ref": "c02.s0092",
+            "text": "Nessa asked whether there might be space for four runners."
+          },
+          {
+            "ref": "c02.s0093",
+            "text": "It was an attractive possibility, which did not make it the meaning of the boxes."
+          }
+        ],
+        "proposal": {
+          "ref": "boxes_next_series",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            88,
+            89,
+            90,
+            92,
+            93
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:mention:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:mention:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "mention",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c02.s0038",
+            "c02.s0040"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0038",
+            "text": "The unexplained blue cord still hung from the clock handle while they practised."
+          },
+          {
+            "ref": "c02.s0040",
+            "text": "Imani said she did not know what the cord was for, but knew what it did not do."
+          }
+        ],
+        "proposal": {
+          "ref": "cord_seen",
+          "op": "mention",
+          "id": "H-3",
+          "sentences": [
+            38,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "仍未知/计划后问不是新增实证线索，advance 不成立；金标为 mention；明确延后可另记 defer，不能以 defer/advance 替代 mention 的严格召回。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c03.s0054",
+            "c03.s0055",
+            "c03.s0056",
+            "c03.s0057"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0054",
+            "text": "The four NEXT SERIES boxes were still empty when Ada filed the card; nobody knew which series they meant."
+          },
+          {
+            "ref": "c03.s0055",
+            "text": "The old form had narrowed the possibilities, but no current event list matched it."
+          },
+          {
+            "ref": "c03.s0056",
+            "text": "Nessa suggested asking at the annual meeting."
+          },
+          {
+            "ref": "c03.s0057",
+            "text": "Imani wrote that suggestion on a removable note so nobody would mistake a possible question for an official heading."
+          }
+        ],
+        "proposal": {
+          "ref": "h2_advance",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            54,
+            55,
+            56,
+            57
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "操作及悬念内容可由正文支持；联合问题在召回中仍只匹配一项金标。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c03.s0060",
+            "c03.s0063",
+            "c03.s0064",
+            "c03.s0065"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0060",
+            "text": "Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation."
+          },
+          {
+            "ref": "c03.s0063",
+            "text": "Imani suspected a travelling team had left the cord, but had no name or date."
+          },
+          {
+            "ref": "c03.s0064",
+            "text": "Number 41 could have identified a team or an inventory batch; neither explanation was confirmed."
+          },
+          {
+            "ref": "c03.s0065",
+            "text": "She put the tab back where it would not be lost and added a separate question to her equipment record."
+          }
+        ],
+        "proposal": {
+          "ref": "h3_advance",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            60,
+            63,
+            64,
+            65
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:resolve:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:resolve:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "resolve",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c03.s0044",
+            "c03.s0048",
+            "c03.s0049"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0044",
+            "text": "Ada read the stencil instructions and learned that the notch positioned the timing grid."
+          },
+          {
+            "ref": "c03.s0048",
+            "text": "The printed instructions corrected that fear: the notch positioned the grid and carried no verdict."
+          },
+          {
+            "ref": "c03.s0049",
+            "text": "The stencil instructions finally explained the crescent notch: it positioned the timing grid."
+          }
+        ],
+        "proposal": {
+          "ref": "h1_resolve",
+          "op": "resolve",
+          "id": "H-1",
+          "sentences": [
+            44,
+            48,
+            49
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-1",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What object is the empty pedestal meant to support, and when will it arrive?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0011",
+            "text": "She was carrying three versions of the morning briefing, none of which explained why the display pedestal had arrived before the object it was meant to support."
+          },
+          {
+            "ref": "c01.s0012",
+            "text": "The packing list did not call the object missing."
+          },
+          {
+            "ref": "c01.s0013",
+            "text": "It left the object column entirely blank."
+          },
+          {
+            "ref": "c01.s0046",
+            "text": "It was arriving separately under a loan arrangement administered by an office which answered questions only on Thursdays."
+          }
+        ],
+        "proposal": {
+          "ref": "missing_exhibit",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "What object is the empty pedestal meant to support, and when will it arrive?",
+          "sentences": [
+            11,
+            12,
+            13,
+            46
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-2",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What is inside the sealed delivery crate, and what makes the bell ring?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0060",
+            "text": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell."
+          },
+          {
+            "ref": "c01.s0062",
+            "text": "The box carried instructions to keep it closed until the public unpacking."
+          },
+          {
+            "ref": "c01.s0104",
+            "text": "If the crate held a live performer, the bell might be a signal; nobody opened it on that assumption."
+          }
+        ],
+        "proposal": {
+          "ref": "crate_contents",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "What is inside the sealed delivery crate, and what makes the bell ring?",
+          "sentences": [
+            60,
+            62,
+            104
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-3",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What does the blue dot on the empty object label mean?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0053",
+            "text": "The empty object label carried a blue dot that appeared on no public catalogue."
+          },
+          {
+            "ref": "c01.s0055",
+            "text": "The dot was not a name."
+          },
+          {
+            "ref": "c01.s0057",
+            "text": "The dot might have been a packing code, but the unsigned label did not establish that."
+          },
+          {
+            "ref": "c01.s0058",
+            "text": "She photographed it for the regional office and drafted a question which did not contain the word urgent."
+          }
+        ],
+        "proposal": {
+          "ref": "blue_dot_label",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "What does the blue dot on the empty object label mean?",
+          "sentences": [
+            53,
+            55,
+            57,
+            58
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "Bev 只怀疑附件存在，expectedPayoff 直接预设 attachment；应问螺丝用途，保留附件假设的不确定性。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What attachment do the three spare screws taped beneath the pedestal belong to?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0049",
+            "text": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them."
+          },
+          {
+            "ref": "c01.s0096",
+            "text": "Bev suspected the three spare screws belonged to an attachment, but had not seen that attachment."
+          },
+          {
+            "ref": "c01.s0099",
+            "text": "A piece without an obvious home was a question; it became a loss only when they knew what was absent."
+          }
+        ],
+        "proposal": {
+          "ref": "screw_attachment",
+          "op": "upsert",
+          "type": "question",
+          "expectedPayoff": "What attachment do the three spare screws taped beneath the pedestal belong to?",
+          "sentences": [
+            49,
+            96,
+            99
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 2,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Who made the muffled sound in the corridor, and was it the mayor?",
+          "dependsOn": []
+        },
+        "priorHook": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0103",
+            "text": "A muffled sound from the corridor could have been the mayor’s laugh, but no one saw who made it."
+          },
+          {
+            "ref": "c02.s0104",
+            "text": "They did not add a mayoral attendance to the programme on that evidence."
+          }
+        ],
+        "proposal": {
+          "ref": "corridor_sound",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who made the muffled sound in the corridor, and was it the mayor?",
+          "sentences": [
+            103,
+            104
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c02.s0064",
+            "c02.s0065",
+            "c02.s0066",
+            "c02.s0067",
+            "c02.s0068",
+            "c02.s0069"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0064",
+            "text": "The workshop diagram showed three holes beneath a removable reading shelf, but the shelf was not in the crate."
+          },
+          {
+            "ref": "c02.s0065",
+            "text": "Leila had found the drawing inside the pedestal's maintenance envelope."
+          },
+          {
+            "ref": "c02.s0066",
+            "text": "It made the three loose screws more intelligible without locating the actual shelf."
+          },
+          {
+            "ref": "c02.s0067",
+            "text": "The director remembered authorising a separate shipment of flat fittings."
+          },
+          {
+            "ref": "c02.s0068",
+            "text": "Her memory was useful enough to pursue, not enough to sign for a delivery which nobody had seen."
+          },
+          {
+            "ref": "c02.s0069",
+            "text": "Tom wrote SHELF on the questions page and left the status beside it blank."
+          }
+        ],
+        "proposal": {
+          "ref": "screws_diagram_advance",
+          "op": "advance",
+          "id": "H-1",
+          "sentences": [
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c02.s0047",
+            "c02.s0051",
+            "c02.s0052",
+            "c02.s0054",
+            "c02.s0055"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "The empty object label carried a blue dot that appeared on no public catalogue.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0047",
+            "text": "“The blue dot means the object is radioactive,” Tom joked, and immediately said he was inventing that."
+          },
+          {
+            "ref": "c02.s0051",
+            "text": "They agreed to say exactly what they knew about the dot: it was on the label, and its meaning had not yet been confirmed."
+          },
+          {
+            "ref": "c02.s0052",
+            "text": "A private loan form repeated the blue dot beside an unnamed regional depot."
+          },
+          {
+            "ref": "c02.s0054",
+            "text": "The form explained which office had sent the crate but not which building the office meant by depot."
+          },
+          {
+            "ref": "c02.s0055",
+            "text": "It moved the question one step without finishing it."
+          }
+        ],
+        "proposal": {
+          "ref": "blue_dot_form_advance",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            47,
+            51,
+            52,
+            54,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "无新增已证实线索，仅复现与推测/延后，advance 不成立。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c02.s0056",
+            "c02.s0057",
+            "c02.s0058",
+            "c02.s0059",
+            "c02.s0060"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0056",
+            "text": "Bev suspected the bell belonged to reusable packaging rather than the missing artwork."
+          },
+          {
+            "ref": "c02.s0057",
+            "text": "The straps and reusable corner guards made that plausible, but a plausible explanation did not need to enter the object record as an established fact."
+          },
+          {
+            "ref": "c02.s0058",
+            "text": "The unexplained bell sounded again when they tilted the sealed crate for the rehearsal."
+          },
+          {
+            "ref": "c02.s0059",
+            "text": "They had placed it on a separate trolley, still closed, to practise the route without opening it."
+          },
+          {
+            "ref": "c02.s0060",
+            "text": "Tom stopped the trolley when he heard the bell, checked that the straps held and began again more slowly."
+          }
+        ],
+        "proposal": {
+          "ref": "bell_reusable_advance",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            56,
+            57,
+            58,
+            59,
+            60
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "仍未知/计划后问不是新增实证线索，advance 不成立；金标为 mention；明确延后可另记 defer，不能以 defer/advance 替代 mention 的严格召回。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c03.s0072",
+            "c03.s0073",
+            "c03.s0074",
+            "c03.s0076",
+            "c03.s0096"
+          ]
+        },
+        "priorHook": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "The empty object label carried a blue dot that appeared on no public catalogue.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0072",
+            "text": "The blue dot’s depot was still unnamed when Bev filed the loan form."
+          },
+          {
+            "ref": "c03.s0073",
+            "text": "The regional office had supplied the object, the shelf and the condition instructions without explaining its old routing mark."
+          },
+          {
+            "ref": "c03.s0074",
+            "text": "Bev suspected the dot identified an old depot route, but the depot’s name was still missing."
+          },
+          {
+            "ref": "c03.s0076",
+            "text": "It was still a question, and Leila resisted the temptation to turn lack of urgency into proof of an answer."
+          },
+          {
+            "ref": "c03.s0096",
+            "text": "Leila planned to ask the regional depot about the blue dot next week; no answer arrived that night."
+          }
+        ],
+        "proposal": {
+          "ref": "blue_dot_advanced",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            72,
+            73,
+            74,
+            76,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c03.s0078",
+            "c03.s0079",
+            "c03.s0081",
+            "c03.s0082",
+            "c03.s0083",
+            "c03.s0097",
+            "c03.s0100"
+          ]
+        },
+        "priorHook": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0078",
+            "text": "The crate maker’s mark matched a bell-shaped stamp under the lid, but nobody could identify the maker or the bell’s purpose."
+          },
+          {
+            "ref": "c03.s0079",
+            "text": "Once the permitted unpacking was complete, Tom could see the stamp without disturbing any sealed compartment."
+          },
+          {
+            "ref": "c03.s0081",
+            "text": "The bell-shaped stamp might be a maker’s emblem rather than an operating instruction."
+          },
+          {
+            "ref": "c03.s0082",
+            "text": "Their observation connected two marks, not a mark and a mechanism."
+          },
+          {
+            "ref": "c03.s0083",
+            "text": "The empty crate rang softly when the driver lifted one end, taking the unanswered question with it."
+          },
+          {
+            "ref": "c03.s0097",
+            "text": "If the bell were an alarm, opening the lid might stop it, but they did not establish any alarm mechanism."
+          },
+          {
+            "ref": "c03.s0100",
+            "text": "Tom put the packing photographs in the follow-up folder so the next message could contain evidence instead of a theory."
+          }
+        ],
+        "proposal": {
+          "ref": "bell_advanced",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            78,
+            79,
+            81,
+            82,
+            83,
+            97,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "precision",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:resolve:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:resolve:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文支持新增问题/推进/回收；不因金标未列出的合理问题而扣精确率。",
+      "evidence": {
+        "operation": "resolve",
+        "item": {
+          "id": "H-1",
+          "evidence": [
+            "c03.s0021",
+            "c03.s0023",
+            "c03.s0025"
+          ]
+        },
+        "priorHook": {
+          "id": "H-1",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0021",
+            "text": "The separate shelf and its packing note explained all three spare screws."
+          },
+          {
+            "ref": "c03.s0023",
+            "text": "Leila watched the three screws secure the reading shelf and knew what they were for."
+          },
+          {
+            "ref": "c03.s0025",
+            "text": "The packing note corrected that belief: the shelf travelled separately and the screws were deliberately supplied loose."
+          }
+        ],
+        "proposal": {
+          "ref": "screws_resolved",
+          "op": "resolve",
+          "id": "H-1",
+          "sentences": [
+            21,
+            23,
+            25
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-cairn",
+          "operation": "upsert",
+          "statement": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.",
+          "evidence": [
+            "c01.s0059"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-thread",
+          "operation": "upsert",
+          "statement": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it.",
+          "evidence": [
+            "c01.s0066"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-3",
+          "operation": "upsert",
+          "item": {
+            "id": "H-3",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Who repaired the route book with the red thread, and why is no entry recorded?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0066",
+              "text": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it."
+            },
+            {
+              "ref": "c01.s0069",
+              "text": "Rafi could not remember whether it had been there when he first borrowed the book."
+            },
+            {
+              "ref": "c01.s0070",
+              "text": "He did not say that it had appeared overnight."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-whistle",
+          "operation": "upsert",
+          "statement": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it.",
+          "evidence": [
+            "c01.s0072"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:hook:upsert:H-1",
+          "operation": "upsert",
+          "item": {
+            "id": "H-1",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Who or what sounded the two-note whistle from upriver after dark, with no boat answering it?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0072",
+              "text": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it."
+            },
+            {
+              "ref": "c01.s0073",
+              "text": "Eamon raised his head, waiting for an engine."
+            },
+            {
+              "ref": "c01.s0075",
+              "text": "The whistle could have come from a person or a bird; the sound did not identify its source."
+            },
+            {
+              "ref": "c01.s0076",
+              "text": "Jun listened for a repetition and heard only rain against the roof."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-cairn",
+          "operation": "advance",
+          "statement": "Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse.",
+          "evidence": [
+            "c02.s0020"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-1",
+          "operation": "advance",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c02.s0020",
+              "c02.s0022",
+              "c02.s0028",
+              "c02.s0030"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0020",
+              "text": "Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse."
+            },
+            {
+              "ref": "c02.s0022",
+              "text": "The old cut arrow suggested an intended route, but did not reveal who had cut it or when."
+            },
+            {
+              "ref": "c02.s0028",
+              "text": "Rafi watched Jun emerge along the high traverse and saw his dead-end belief disproved."
+            },
+            {
+              "ref": "c02.s0030",
+              "text": "Jun’s completed traverse established that the high route was passable that day."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-thread",
+          "operation": "advance",
+          "statement": "A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer.",
+          "evidence": [
+            "c02.s0056"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:hook:advance:H-2",
+          "operation": "advance",
+          "item": {
+            "id": "H-2",
+            "evidence": [
+              "c02.s0056",
+              "c02.s0058",
+              "c02.s0059",
+              "c02.s0060"
+            ]
+          },
+          "priorHook": {
+            "id": "H-2",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A red thread crossed the old route-book stitch, and no entry explained who had repaired it.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0056",
+              "text": "A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer."
+            },
+            {
+              "ref": "c02.s0058",
+              "text": "Jun compared the stamp with the current depot label and found a different series."
+            },
+            {
+              "ref": "c02.s0059",
+              "text": "Jun suspected the repaired stitch marked a removed leaf, but no torn edge proved it."
+            },
+            {
+              "ref": "c02.s0060",
+              "text": "The indexed pages were still present."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-whistle",
+          "operation": "mention",
+          "statement": "The same unexplained two-note whistle sounded beyond the flooded bend while they secured the canoe.",
+          "evidence": [
+            "c02.s0062"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-cairn",
+          "operation": "resolve",
+          "statement": "An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse.",
+          "evidence": [
+            "c03.s0062"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:resolve:H-1",
+          "operation": "resolve",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c03.s0062",
+              "c03.s0063",
+              "c03.s0064",
+              "c03.s0069"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 2,
+            "expectedPayoff": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0062",
+              "text": "An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse."
+            },
+            {
+              "ref": "c03.s0063",
+              "text": "The printed bearing and the observed cut arrow agreed."
+            },
+            {
+              "ref": "c03.s0064",
+              "text": "The cairn's purpose was no longer only Eamon's suspicion or Rafi's rejected guess about a dead end."
+            },
+            {
+              "ref": "c03.s0069",
+              "text": "It explained why the second cairn stood beyond the marked turn and gave them a better account of the route they had actually followed."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-thread",
+          "operation": "mention",
+          "statement": "The red-thread repairer was still unnamed when Jun put the route book away.",
+          "evidence": [
+            "c03.s0070"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-whistle",
+          "operation": "advance",
+          "statement": "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now.",
+          "evidence": [
+            "c03.s0075"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-3",
+          "operation": "advance",
+          "item": {
+            "id": "H-3",
+            "evidence": [
+              "c03.s0075",
+              "c03.s0076",
+              "c03.s0077",
+              "c03.s0078",
+              "c03.s0079"
+            ]
+          },
+          "priorHook": {
+            "id": "H-3",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0075",
+              "text": "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now."
+            },
+            {
+              "ref": "c03.s0076",
+              "text": "One crew member remembered hearing a recording during training."
+            },
+            {
+              "ref": "c03.s0077",
+              "text": "He could reproduce the notes and identify the old use."
+            },
+            {
+              "ref": "c03.s0078",
+              "text": "Rafi suspected the whistle belonged to an old ferry stop, but the relief crew could not identify it."
+            },
+            {
+              "ref": "c03.s0079",
+              "text": "Recognition of the old signal did not identify the current whistler or establish that a ferry still operated."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-notch",
+          "operation": "upsert",
+          "statement": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+          "evidence": [
+            "c01.s0053"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-2",
+          "operation": "upsert",
+          "item": {
+            "id": "H-2",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "What caused the crescent notch on the relay card, and what are the four empty boxes for?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0053",
+              "text": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it."
+            },
+            {
+              "ref": "c01.s0055",
+              "text": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there."
+            },
+            {
+              "ref": "c01.s0056",
+              "text": "The mark beside the notch might have been a worn numeral, but Ada could not identify it."
+            },
+            {
+              "ref": "c01.s0106",
+              "text": "Imani suspected the notch had once served a timing purpose; its shape alone did not prove that."
+            },
+            {
+              "ref": "c01.s0107",
+              "text": "She promised to look for the older instruction sheet instead of guessing from the cut."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-empty",
+          "operation": "upsert",
+          "statement": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+          "evidence": [
+            "c01.s0055"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-cord",
+          "operation": "upsert",
+          "statement": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+          "evidence": [
+            "c01.s0060"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-1",
+          "operation": "upsert",
+          "item": {
+            "id": "H-1",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Who tied the blue cord around the timing clock's handle, and why?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0060",
+              "text": "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+            },
+            {
+              "ref": "c01.s0119",
+              "text": "There was only a cup of cold tea, a clock with an unexplained cord, and a place in a team that had begun to feel less like an absence."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-notch",
+          "operation": "advance",
+          "statement": "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker.",
+          "evidence": [
+            "c02.s0081"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-1",
+          "operation": "advance",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c02.s0081",
+              "c02.s0082",
+              "c02.s0083",
+              "c02.s0084",
+              "c02.s0085"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0081",
+              "text": "Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker."
+            },
+            {
+              "ref": "c02.s0082",
+              "text": "Through the stencil, the irregular margin positioned a set of narrow printed columns."
+            },
+            {
+              "ref": "c02.s0083",
+              "text": "Ada could see how someone would use it, though not why this particular card had survived."
+            },
+            {
+              "ref": "c02.s0084",
+              "text": "The printed heading belonged to an earlier programme."
+            },
+            {
+              "ref": "c02.s0085",
+              "text": "Imani wanted the instruction sheet before calling the notch explained."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-empty",
+          "operation": "advance",
+          "statement": "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed.",
+          "evidence": [
+            "c02.s0088"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:advance:H-2",
+          "operation": "advance",
+          "item": {
+            "id": "H-2",
+            "evidence": [
+              "c02.s0088",
+              "c02.s0089",
+              "c02.s0090",
+              "c02.s0092",
+              "c02.s0093"
+            ]
+          },
+          "priorHook": {
+            "id": "H-2",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0088",
+              "text": "An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed."
+            },
+            {
+              "ref": "c02.s0089",
+              "text": "The form had come from a folder of abandoned programme designs, several of which had never been used."
+            },
+            {
+              "ref": "c02.s0090",
+              "text": "Imani suspected the blank boxes concerned later meets, but the unused forms gave no answer."
+            },
+            {
+              "ref": "c02.s0092",
+              "text": "Nessa asked whether there might be space for four runners."
+            },
+            {
+              "ref": "c02.s0093",
+              "text": "It was an attractive possibility, which did not make it the meaning of the boxes."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-cord",
+          "operation": "mention",
+          "statement": "The unexplained blue cord still hung from the clock handle while they practised.",
+          "evidence": [
+            "c02.s0038"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:mention:H-3",
+          "operation": "mention",
+          "item": {
+            "id": "H-3",
+            "evidence": [
+              "c02.s0038",
+              "c02.s0040"
+            ]
+          },
+          "priorHook": {
+            "id": "H-3",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0038",
+              "text": "The unexplained blue cord still hung from the clock handle while they practised."
+            },
+            {
+              "ref": "c02.s0040",
+              "text": "Imani said she did not know what the cord was for, but knew what it did not do."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-notch",
+          "operation": "resolve",
+          "statement": "The stencil instructions finally explained the crescent notch: it positioned the timing grid.",
+          "evidence": [
+            "c03.s0049"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:resolve:H-1",
+          "operation": "resolve",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c03.s0044",
+              "c03.s0048",
+              "c03.s0049"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 2,
+            "expectedPayoff": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0044",
+              "text": "Ada read the stencil instructions and learned that the notch positioned the timing grid."
+            },
+            {
+              "ref": "c03.s0048",
+              "text": "The printed instructions corrected that fear: the notch positioned the grid and carried no verdict."
+            },
+            {
+              "ref": "c03.s0049",
+              "text": "The stencil instructions finally explained the crescent notch: it positioned the timing grid."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-empty",
+          "operation": "mention",
+          "statement": "The four NEXT SERIES boxes were still empty when Ada filed the card; nobody knew which series they meant.",
+          "evidence": [
+            "c03.s0054"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-cord",
+          "operation": "advance",
+          "statement": "Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation.",
+          "evidence": [
+            "c03.s0060"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:hook:advance:H-3",
+          "operation": "advance",
+          "item": {
+            "id": "H-3",
+            "evidence": [
+              "c03.s0060",
+              "c03.s0063",
+              "c03.s0064",
+              "c03.s0065"
+            ]
+          },
+          "priorHook": {
+            "id": "H-3",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0060",
+              "text": "Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation."
+            },
+            {
+              "ref": "c03.s0063",
+              "text": "Imani suspected a travelling team had left the cord, but had no name or date."
+            },
+            {
+              "ref": "c03.s0064",
+              "text": "Number 41 could have identified a team or an inventory batch; neither explanation was confirmed."
+            },
+            {
+              "ref": "c03.s0065",
+              "text": "She put the tab back where it would not be lost and added a separate question to her equipment record."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-screws",
+          "operation": "upsert",
+          "statement": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+          "evidence": [
+            "c01.s0049"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-label",
+          "operation": "upsert",
+          "statement": "The empty object label carried a blue dot that appeared on no public catalogue.",
+          "evidence": [
+            "c01.s0053"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-3",
+          "operation": "upsert",
+          "item": {
+            "id": "H-3",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "What does the blue dot on the empty object label mean?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0053",
+              "text": "The empty object label carried a blue dot that appeared on no public catalogue."
+            },
+            {
+              "ref": "c01.s0055",
+              "text": "The dot was not a name."
+            },
+            {
+              "ref": "c01.s0057",
+              "text": "The dot might have been a packing code, but the unsigned label did not establish that."
+            },
+            {
+              "ref": "c01.s0058",
+              "text": "She photographed it for the regional office and drafted a question which did not contain the word urgent."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-bell",
+          "operation": "upsert",
+          "statement": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+          "evidence": [
+            "c01.s0060"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:hook:upsert:H-2",
+          "operation": "upsert",
+          "item": {
+            "id": "H-2",
+            "type": "mystery",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "What is inside the sealed delivery crate, and what makes the bell ring?",
+            "dependsOn": []
+          },
+          "priorHook": null,
+          "citedSentences": [
+            {
+              "ref": "c01.s0060",
+              "text": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell."
+            },
+            {
+              "ref": "c01.s0062",
+              "text": "The box carried instructions to keep it closed until the public unpacking."
+            },
+            {
+              "ref": "c01.s0104",
+              "text": "If the crate held a live performer, the bell might be a signal; nobody opened it on that assumption."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-screws",
+          "operation": "advance",
+          "statement": "The workshop diagram showed three holes beneath a removable reading shelf, but the shelf was not in the crate.",
+          "evidence": [
+            "c02.s0064"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-1",
+          "operation": "advance",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c02.s0064",
+              "c02.s0065",
+              "c02.s0066",
+              "c02.s0067",
+              "c02.s0068",
+              "c02.s0069"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0064",
+              "text": "The workshop diagram showed three holes beneath a removable reading shelf, but the shelf was not in the crate."
+            },
+            {
+              "ref": "c02.s0065",
+              "text": "Leila had found the drawing inside the pedestal's maintenance envelope."
+            },
+            {
+              "ref": "c02.s0066",
+              "text": "It made the three loose screws more intelligible without locating the actual shelf."
+            },
+            {
+              "ref": "c02.s0067",
+              "text": "The director remembered authorising a separate shipment of flat fittings."
+            },
+            {
+              "ref": "c02.s0068",
+              "text": "Her memory was useful enough to pursue, not enough to sign for a delivery which nobody had seen."
+            },
+            {
+              "ref": "c02.s0069",
+              "text": "Tom wrote SHELF on the questions page and left the status beside it blank."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-label",
+          "operation": "advance",
+          "statement": "A private loan form repeated the blue dot beside an unnamed regional depot.",
+          "evidence": [
+            "c02.s0052"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-2",
+          "operation": "advance",
+          "item": {
+            "id": "H-2",
+            "evidence": [
+              "c02.s0047",
+              "c02.s0051",
+              "c02.s0052",
+              "c02.s0054",
+              "c02.s0055"
+            ]
+          },
+          "priorHook": {
+            "id": "H-2",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "The empty object label carried a blue dot that appeared on no public catalogue.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c02.s0047",
+              "text": "“The blue dot means the object is radioactive,” Tom joked, and immediately said he was inventing that."
+            },
+            {
+              "ref": "c02.s0051",
+              "text": "They agreed to say exactly what they knew about the dot: it was on the label, and its meaning had not yet been confirmed."
+            },
+            {
+              "ref": "c02.s0052",
+              "text": "A private loan form repeated the blue dot beside an unnamed regional depot."
+            },
+            {
+              "ref": "c02.s0054",
+              "text": "The form explained which office had sent the crate but not which building the office meant by depot."
+            },
+            {
+              "ref": "c02.s0055",
+              "text": "It moved the question one step without finishing it."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-bell",
+          "operation": "mention",
+          "statement": "The unexplained bell sounded again when they tilted the sealed crate for the rehearsal.",
+          "evidence": [
+            "c02.s0058"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-1",
+          "designId": "H-screws",
+          "operation": "resolve",
+          "statement": "The separate shelf and its packing note explained all three spare screws.",
+          "evidence": [
+            "c03.s0021"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:resolve:H-1",
+          "operation": "resolve",
+          "item": {
+            "id": "H-1",
+            "evidence": [
+              "c03.s0021",
+              "c03.s0023",
+              "c03.s0025"
+            ]
+          },
+          "priorHook": {
+            "id": "H-1",
+            "type": "story_question",
+            "status": "progressing",
+            "startChapter": 1,
+            "lastAdvancedChapter": 2,
+            "expectedPayoff": "Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0021",
+              "text": "The separate shelf and its packing note explained all three spare screws."
+            },
+            {
+              "ref": "c03.s0023",
+              "text": "Leila watched the three screws secure the reading shelf and knew what they were for."
+            },
+            {
+              "ref": "c03.s0025",
+              "text": "The packing note corrected that belief: the shelf travelled separately and the screws were deliberately supplied loose."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "未有同悬念、同操作且内容有效的输出；联合新伏笔只占一个金标名额。",
+      "evidence": {
+        "gold": {
+          "id": "H-2",
+          "designId": "H-label",
+          "operation": "mention",
+          "statement": "The blue dot’s depot was still unnamed when Bev filed the loan form.",
+          "evidence": [
+            "c03.s0072"
+          ]
+        },
+        "prediction": null,
+        "acceptedDelta": true
+      }
+    },
+    {
+      "metric": "K08",
+      "component": "recall",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "相同悬念与相同操作，一对一命中；证据支持。",
+      "evidence": {
+        "gold": {
+          "id": "H-3",
+          "designId": "H-bell",
+          "operation": "advance",
+          "statement": "The crate maker’s mark matched a bell-shaped stamp under the lid, but nobody could identify the maker or the bell’s purpose.",
+          "evidence": [
+            "c03.s0078"
+          ]
+        },
+        "prediction": {
+          "id": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-3",
+          "operation": "advance",
+          "item": {
+            "id": "H-3",
+            "evidence": [
+              "c03.s0078",
+              "c03.s0079",
+              "c03.s0081",
+              "c03.s0082",
+              "c03.s0083",
+              "c03.s0097",
+              "c03.s0100"
+            ]
+          },
+          "priorHook": {
+            "id": "H-3",
+            "type": "story_question",
+            "status": "open",
+            "startChapter": 1,
+            "lastAdvancedChapter": 1,
+            "expectedPayoff": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+            "dependsOn": []
+          },
+          "citedSentences": [
+            {
+              "ref": "c03.s0078",
+              "text": "The crate maker’s mark matched a bell-shaped stamp under the lid, but nobody could identify the maker or the bell’s purpose."
+            },
+            {
+              "ref": "c03.s0079",
+              "text": "Once the permitted unpacking was complete, Tom could see the stamp without disturbing any sealed compartment."
+            },
+            {
+              "ref": "c03.s0081",
+              "text": "The bell-shaped stamp might be a maker’s emblem rather than an operating instruction."
+            },
+            {
+              "ref": "c03.s0082",
+              "text": "Their observation connected two marks, not a mark and a mechanism."
+            },
+            {
+              "ref": "c03.s0083",
+              "text": "The empty crate rang softly when the driver lifted one end, taking the unanswered question with it."
+            },
+            {
+              "ref": "c03.s0097",
+              "text": "If the bell were an alarm, opening the lid might stop it, but they did not establish any alarm mechanism."
+            },
+            {
+              "ref": "c03.s0100",
+              "text": "Tom put the packing photographs in the follow-up folder so the next message could contain evidence instead of a theory."
+            }
+          ]
+        },
+        "acceptedDelta": true
+      }
+    }
+  ]
+}

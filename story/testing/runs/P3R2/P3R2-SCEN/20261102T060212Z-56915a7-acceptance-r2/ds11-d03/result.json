@@ -1,0 +1,97 @@
+{
+  "id": "ds11-d03",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "Understood: the missing second page is a copy — but is it a harmless duplicate, or a forged replacement? This decides how Sol's record office, the demonstration and the closing of the dispute are played, so I'd like your call before I write chapter 3 onward.",
+        "options": [
+          "A harmless duplicate: someone copied the page for convenience and the original was never endangered — the dispute closes quietly with a filing correction.",
+          "A forged replacement: the copy was made to hide a changed entry — the dispute ends with the forgery documented in the public record, no one injured."
+        ]
+      },
+      "id": "call_00_EFFoWeOrtpsysuWROmvh6755"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "Understood: the missing second page is a copy — but is it a harmless duplicate, or a forged replacement? This decides how Sol's record office, the demonstration and the closing of the dispute are played, so I'd like your call before I write chapter 3 onward.",
+      "options": [
+        "A harmless duplicate: someone copied the page for convenience and the original was never endangered — the dispute closes quietly with a filing correction.",
+        "A forged replacement: the copy was made to hide a changed entry — the dispute ends with the forgery documented in the public record, no one injured."
+      ]
+    },
+    "id": "call_00_EFFoWeOrtpsysuWROmvh6755"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "d478ee4be22224982ba1d5aa344b7ddfe80a62911afcf0d831608d63771687b9",
+    "sessionSha256": "a5c3e3f4f1484585da6753ee41e84f1fddfedcd099cf9c90f2f54b45417842ca",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0028218,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0028218
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

@@ -1,0 +1,119 @@
+{
+  "id": "ds11-a01-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Tobin leads the document check of the delivery, and Anwen assists by handling and reading the papers he asks for.",
+            "turn": "Working through the handling note under Tobin's direction, they uncover a question about the record that sends them to Ruth for the duplicate page, ending with the team agreeing the check continues before any demonstration."
+          }
+        ],
+        "reason": "Author asked that Tobin lead the document check in unwritten chapter 3 while Anwen assists, keeping chapter number and total count."
+      },
+      "id": "call_00_PhJkerhIV7aU9PdfQSRN3803"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 3,
+          "title": "The Duplicate",
+          "targetWords": 750,
+          "purpose": "Tobin leads the document check of the delivery, and Anwen assists by handling and reading the papers he asks for.",
+          "turn": "Working through the handling note under Tobin's direction, they uncover a question about the record that sends them to Ruth for the duplicate page, ending with the team agreeing the check continues before any demonstration."
+        }
+      ],
+      "reason": "Author asked that Tobin lead the document check in unwritten chapter 3 while Anwen assists, keeping chapter number and total count."
+    },
+    "id": "call_00_PhJkerhIV7aU9PdfQSRN3803"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Tobin leads the document check while Anwen assists.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "58fe2682c6f86ad9b1c5beca354365102edd52be2218240ba2075f4e76690190",
+    "sessionSha256": "5ea7dbf4c0c56f384562bf973ddc08e65652d75df266cb25ee98d9ceea9c8730",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025838999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025838999999999997
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

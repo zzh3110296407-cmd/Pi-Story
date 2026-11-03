@@ -1,0 +1,78 @@
+{
+  "id": "ds11-c01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "我无法在当前阶段改写已提交的第1章正文。\n\n现行流程只允许在**尚未提交的章节**上做计划调整；一旦章节正文已进入正史，任何“改写成另一版内容”的操作都必须从该章之前建立新分支（P4），在分支里重写，而不能回头覆盖原文。\n\n原因是正史与后续章节的连贯性：第2章已经引用了第1章的既定事实（木套留在桌上、随后由两人对照标签与飞行登记簿），直接替换第1章会造成前后矛盾；即使只是“把木套递到 Wren 手里”这样的细节，也属于同一处已写定动作的替换。\n\n可行的做法：\n\n- 如果你希望，我可以指出在**未写的第3至6章**里可以怎样自然延续“木套由 Wren 经手”的处理方式（例如后续检查环节中 Wren 成为持物人），这需要你明确要求我改计划。\n- 若要真正修改第1章那句话，请在能建立分支的环节从第1章之前开新分支，我再按“Nadi 在第1章把木套递给 Wren”重写。\n\n你希望我按第一种方式，把后续未写章节的持物安排调整过来吗？"
+    }
+  ],
+  "firstAction": {
+    "reply": "我无法在当前阶段改写已提交的第1章正文。\n\n现行流程只允许在**尚未提交的章节**上做计划调整；一旦章节正文已进入正史，任何“改写成另一版内容”的操作都必须从该章之前建立新分支（P4），在分支里重写，而不能回头覆盖原文。\n\n原因是正史与后续章节的连贯性：第2章已经引用了第1章的既定事实（木套留在桌上、随后由两人对照标签与飞行登记簿），直接替换第1章会造成前后矛盾；即使只是“把木套递到 Wren 手里”这样的细节，也属于同一处已写定动作的替换。\n\n可行的做法：\n\n- 如果你希望，我可以指出在**未写的第3至6章**里可以怎样自然延续“木套由 Wren 经手”的处理方式（例如后续检查环节中 Wren 成为持物人），这需要你明确要求我改计划。\n- 若要真正修改第1章那句话，请在能建立分支的环节从第1章之前开新分支，我再按“Nadi 在第1章把木套递给 Wren”重写。\n\n你希望我按第一种方式，把后续未写章节的持物安排调整过来吗？"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "dc05985a0171d76b9ea6b467cedd9096c535896ddeb6c648932a49c45bf8e3aa",
+    "sessionSha256": "2c80c9e7ffe13368a158ef1da63cbb5e9f38505a2f695943c8fdeee3059cdf31",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0027107999999999998,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0027107999999999998
+    },
+    "measuredMainRequests": 1
+  },
+  "scoringVersion": "p3r2-32@1"
+}

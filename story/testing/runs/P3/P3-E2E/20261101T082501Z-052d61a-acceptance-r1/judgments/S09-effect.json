@@ -1,0 +1,371 @@
+{
+  "schema": "story/p2-judgments@2",
+  "stage": "P3",
+  "date": "2026-11-01",
+  "runId": "20261101T082501Z-052d61a-acceptance-r1",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build is exposed; no independent second-model or personal human item-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-E2E@1",
+    "promptPath": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-ai/protocol.md",
+    "promptSha256": "63e3c2a309177611af56e13667a61c65762fdf45cc4f47d191655fde70baafb9",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "approvalPending": false,
+  "scores": [
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e04:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "重写并提交的第2章正文第17–29行中，Jo主动找出副本页，指出蓝色方块，并对Aster解释其隔夜留置／重检含义及其不代表检查已完成；不是标题、摘要或计划中的提及。第1章保持原提交字节。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/raw/session.jsonl.gz",
+          "sha256": "01a816a9c29215ba5f5e2121df809a8f95baf5bcc045a1e373283557cab2a5f6"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/raw/evidence.jsonl.gz",
+          "sha256": "9b88ea99a0a7a0887213d8e97bd505f75e8ebbb9fa452f1bbe6788e165ee8290"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e04/result.json",
+          "sha256": "1785d38495c8a867f3029d520b95a3fae7595953f260b174a27945074742a9ba"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e04.json",
+          "sha256": "ff5f0227dc2e83748ab0cb7b59550d12906b4be7dd04bd8409e24af35da37095"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d03",
+          "textSha256": "5d021bd8662a5e2eed4aabb51159dd3b7328a263f6eb24f3cbe73e1c7b3e7a1e",
+          "sessionLine1": 26,
+          "entryId": "8a0222db",
+          "toolCallId": "call_00_P9Vyw0zsotRz51GW28fA2939",
+          "lines1": [
+            17,
+            21,
+            23,
+            25,
+            27,
+            29
+          ]
+        },
+        "priorChaptersUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e05:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": false,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "第3章最终提交正文虽有副本页和Jo发言，但全章没有蓝色方块，也没有Jo发现并向Aster解释该标记的场景；第19–27行实际写的是核对序列、日期、搬运次数及Jo质疑副本的证明力。第1章未变、第2章未提前纳入排队要求，只满足了该复合检查的部分条件。排队作者消息在第3章提交之后才成为原生作者条目；这是作者控制链路的可观察失败，不据此指控写手忽略了其从未收到的要求，也不是缺测或不适用。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/session.jsonl.gz",
+          "sha256": "bb1508c7dc1123bf5c7b7c38e6807417159764934cd7cbb6c6591c71b2a76dbc"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/evidence.jsonl.gz",
+          "sha256": "56427efefd0441892a77c445fe98ac7bdb5fefc12c8af937047955c3b09e15df"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/result.json",
+          "sha256": "f92dfaf4d8b5d3281d5a3213092dd8be69a9124631936cdd5c920bd42f526ce4"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e05.json",
+          "sha256": "c557223793c0dd957222b08bf0fc5aa951c72707b97a89fbbcceb1d2df7eafb2"
+        },
+        "committedProse": {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "textSha256": "eea457ae90924a1bf4b1aedb0f0cd6038d522eefcda2799104c462854b81a777",
+          "sessionLine1": 26,
+          "entryId": "a25ed520",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974",
+          "lines1": [
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            39,
+            41
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "firstChapter3WriterInput": {
+          "source": {
+            "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e05/raw/role_checkpoint/1087e4060cadff8438f5945f275942e42e4c4398575f4217c5f68fe6e4cd23a6.jsonl.gz",
+            "sha256": "6b88c45930c7a1d9a286c7c6625a434a59f6bb5e22f8492e3f1992ab6143fd2c"
+          },
+          "evidenceLine1": 189,
+          "reservationId": "reservation-15",
+          "toolCallId": "call_00_tY2L1LLQrEuIhdMaoH0r6974"
+        },
+        "authorActivatedAfterChapter3Commit": {
+          "authorSessionLine1": 29,
+          "authorEntryId": "29831c45",
+          "chapter3CommitSessionLine1": 26,
+          "chapter3CommitEntryId": "a25ed520"
+        }
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e06:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "刷新依据后首先提交的仍是第2章。正文第7–11行Jo扶稳托盘，第17–33行Aster让Jo独立复读并记录其异议而非压过她，第49–55行把共同记录视为更好并请Jo再读数字，实际体现接受实务帮助的作者意图。旧依据的在途稿未充当本次正文证据。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/raw/session.jsonl.gz",
+          "sha256": "662e6ef804d7652f03ce6af8d97f8d7a32be57962884970de44c64dd8639d418"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/raw/evidence.jsonl.gz",
+          "sha256": "d00a67596151b570935e5dbf6a947e6245b4c52ab7e35884364d6d0e3054d498"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e06/result.json",
+          "sha256": "85ac0d811ea463533d840ae8ae8523b56493cb5b3e603f7bf1dd9202bb9e8cea"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e06.json",
+          "sha256": "e40a5b975b9589bd4cfadb0ddc9693f7582ab530fb97f1be3f4948cff2036d72"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "bbd7cb58acfa5fe76759477ec7e013137e17c657cb6b371335664adbff23bddc",
+          "sessionLine1": 29,
+          "entryId": "8d8591f9",
+          "toolCallId": "call_00_4l80y6SbSIcu6PN16GmT4008",
+          "lines1": [
+            7,
+            11,
+            17,
+            21,
+            23,
+            31,
+            33,
+            49,
+            53,
+            55
+          ]
+        },
+        "priorChaptersUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e07:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "刷新后首先提交的第2章第5、9、15、19、21、29行持续写纸张干响、翻页细响，以及左掌、右手、指尖、拇指和压纸的位置，焦点已进入正文。该章处理的是标签抄页和登记册，不把它说成缺失登记页的副本已经取回；真正取得另一份副本的第3章第19–25行又明确写手的位置与纸的低语、翻落声，补充支持条件性焦点在处理副本时同样落实。后章仅作补充，不替代首个刷新后提交章。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/raw/session.jsonl.gz",
+          "sha256": "91071db3416ad5a5d8d11dc7974032f6e4248207fefd0f7cec8aea9482f0fd7e"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/raw/evidence.jsonl.gz",
+          "sha256": "5209d2f949d9f11672120768b771623e3f5edd5637022dc307a15a3f0327131c"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e07/result.json",
+          "sha256": "b6b7e2b67e9a64bfe977c581ff1b41dbc83d41450d03fa90ffe74c193da9d1bb"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e07.json",
+          "sha256": "de1d9c877e16bb21f5658b6ca25abc6c59b450898c51aa93905c04ebe755a8b3"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "a77050d612360422bff5448ae74e519d34d3e95449a32367152ed042b3d539aa",
+          "sessionLine1": 29,
+          "entryId": "c4144f8e",
+          "toolCallId": "call_00_Q07KGc1qJHQIU4PbPCUD6722",
+          "lines1": [
+            5,
+            9,
+            15,
+            19,
+            21,
+            29
+          ]
+        },
+        "priorChaptersUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e08:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "下一份提交正文为第2章，通读未发生敲铃。第1–7行明确没有戴手套的规定，可徒手接触，由Aster自选只戴左手手套，随后第47行自主脱下；没有把可选动作变成必须执行。戴手套本身符合可选要求，不因实际选择佩戴而扣分。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/raw/session.jsonl.gz",
+          "sha256": "b7e65ce2ca1d01e9bda5a8a230b41493eb165b579f03598c7dba8837422101c5"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/raw/evidence.jsonl.gz",
+          "sha256": "44fa35ed80881afd3770c3b7c7de2e39869a9ebe1aa805c79229838b846db049"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e08/result.json",
+          "sha256": "21e0539c1f4cd4f6f76d488037d5fc10fee51a53bc20ccaffd197a645e74af71"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e08.json",
+          "sha256": "ec82712977d517d7be39eadb0c2da48f6328bd45a1be522acc30e2445dca3de2"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d01",
+          "textSha256": "3058cd2a3cad723aa9425290cd4a034514d1624a71288235efe02909caf8e951",
+          "sessionLine1": 32,
+          "entryId": "5d804944",
+          "toolCallId": "call_00_pDhVlDTygvzBYx8hY4wR6831",
+          "lines1": [
+            1,
+            3,
+            5,
+            7,
+            47
+          ]
+        },
+        "priorChaptersUnchanged": true
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e12:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "实际update_bible的description及invariants均保留west door只能从里面打开，没有弱化成通常如此。下一份提交的第2章第49行明确Kei从里面操作门闩穿过西门；通读该章未引入从外解锁。该检查不要求凭空新增更多门的动作。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/raw/session.jsonl.gz",
+          "sha256": "e58daaa31086763e8c1a9fce6193fff8eb8a766e2dd0e026712925ed0f14bdf8"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/raw/evidence.jsonl.gz",
+          "sha256": "3a23efafc8dbb4e71e90689ab4c7cea17be7fe1f182db91a708c65f56409ddac"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e12/result.json",
+          "sha256": "432e11c7f22b9e9645170d2ee26e71d09ad0830649f1891cd0a3f9fbbe82ce4d"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e12.json",
+          "sha256": "200db1e556384cc7fe18546e01c4225dc9dfb4bec3ed46443b70a9351c2f8754"
+        },
+        "committedProse": {
+          "chapter": 2,
+          "draftId": "c02-d02",
+          "textSha256": "7791971f16d05db4336b08c05f14947f2f7d2365d153f2301566c931960ee487",
+          "sessionLine1": 25,
+          "entryId": "d7a28f51",
+          "toolCallId": "call_00_X15jdx6SaTVHdtx8o5b05667",
+          "lines1": [
+            49
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "planOrRuleAction": {
+          "sessionLine1": 22,
+          "entryId": "13803baa",
+          "toolCallId": "call_00_AeeRMKbVSqqYeRfcQ7A49120",
+          "tool": "update_bible"
+        }
+      }
+    },
+    {
+      "metric": "S09",
+      "component": "effect",
+      "sampleId": "ds14-e13:check:0",
+      "runId": "20261101T082501Z-052d61a-acceptance-r1",
+      "pass": true,
+      "status": "author_approved",
+      "applicability": "applicable",
+      "reason": "patch_outline的第3章purpose与turn明确由Jo作最后的公开说明。第3章最终正文第31–43行让Aster只做实物操作，Jo向观众说明争议如何解决并回答问题。第13–21行Aster此前向Kei核对记录属于准备阶段，不是取代Jo面向观众的最终说明，因此不判为仍由Aster主讲。",
+      "evidence": {
+        "session": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/raw/session.jsonl.gz",
+          "sha256": "25f15a2e35327dbe6090eede641dc4ac33be20f40f64946ab1246f5f7246217b"
+        },
+        "rawEvidence": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/raw/evidence.jsonl.gz",
+          "sha256": "8a3de6d1a89bac895cc334e0fe0de14660da8d58b4bb03691d64ddaf4e18790d"
+        },
+        "archivedResult": {
+          "path": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/ds14-e13/result.json",
+          "sha256": "021bec8fc5a7333841e338724b13d2987970e89482991a4f4e7c311fcdfa3a60"
+        },
+        "scenario": {
+          "path": "story/testing/datasets/DS14-author-control-e2e/v1/acceptance/ds14-e13.json",
+          "sha256": "109625f1dcdbb9ac68ec95f014bcc042f67583f4a596f915bc9902d86ac5a41f"
+        },
+        "committedProse": {
+          "chapter": 3,
+          "draftId": "c03-d02",
+          "textSha256": "3d59767ba20248855c8e7cea96d1f145a473008cb1026dcedfd81c1764f995e4",
+          "sessionLine1": 30,
+          "entryId": "117bd771",
+          "toolCallId": "call_00_wFGc3SsADmid9XP46Hpe0261",
+          "lines1": [
+            13,
+            17,
+            21,
+            31,
+            35,
+            39,
+            41,
+            43
+          ]
+        },
+        "priorChaptersUnchanged": true,
+        "planOrRuleAction": {
+          "sessionLine1": 22,
+          "entryId": "14a41ad6",
+          "toolCallId": "call_00_rAypgoet3z8pkBbnYNPY5210",
+          "tool": "patch_outline"
+        }
+      }
+    }
+  ],
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-E2E/20261101T082501Z-052d61a-acceptance-r1/judgments/support/20261101-j3-e2e-author-acceptance/approval.json",
+    "sha256": "5aaa3095bd6e187c89fd0ef25d19c25b67e900e7641311dfb407929311a1e806"
+  }
+}

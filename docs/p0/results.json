@@ -1,0 +1,142 @@
+{
+  "V01": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V01\\2026-10-28T08-05-40-429Z\\result.json",
+    "note": "打印与RPC均完成工具调用并实际写盘；终端人工项待作者操作"
+  },
+  "V02": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V02\\2026-10-28T08-12-06-899Z\\result.json",
+    "note": "实际请求仅含探针工具；read/bash/write/edit/codemode均被拒绝；仅4个探针命令"
+  },
+  "V03": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V03\\2026-10-28T08-12-52-311Z\\result.json",
+    "note": "扩展实际fold重开一致；分支仅含1,3，作者控制按分叉点回退"
+  },
+  "V04": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V04\\2026-10-28T08-12-33-700Z\\result.json",
+    "note": "第二个串行写入能看到第一个已持久化结果；本批无需覆盖层"
+  },
+  "V05": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V05\\2026-10-28T08-13-02-187Z\\result.json",
+    "note": "turn_end标签指向提交批最后一个probe_read结果；get_tree返回该标签"
+  },
+  "V06": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V06\\2026-10-28T08-15-21-346Z-model\\result.json",
+    "note": "替身分支无摘要；真实DeepSeek接受toolResult后直接user，HTTP200，1次调用"
+  },
+  "V24": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V24\\2026-10-28T08-16-13-804Z\\result.json",
+    "note": "get_entries返回details、自定义条目与leafId；since增量有效，无效游标报错"
+  },
+  "V08": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V08\\2026-10-28T08-16-40-693Z\\result.json",
+    "note": "强杀后session_start识别悬空调用并补中断条目；重开能继续，无合成结果写入"
+  },
+  "V09": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V09\\2026-10-28T08-17-00-770Z\\result.json",
+    "note": "100KiB/1/5/20MiB均能保存重开与RPC读取；20MiB耗时和内存明显上升，非大小上限证明"
+  },
+  "V07": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V07\\2026-10-28T08-18-16-680Z\\result.json",
+    "note": "故障场景完成：只读时事件/内存可假成功，必须文件确认；wx锁拒绝第二写者；20次强杀仅覆盖写入前"
+  },
+  "V10": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V10\\2026-10-28T08-22-07-260Z-model\\result.json",
+    "note": "替身与真实分段增量、缓存命中和实际压缩后规则均验证；夹具失败调用同样计费"
+  },
+  "V11": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V11\\2026-10-28T08-23-26-414Z\\result.json",
+    "note": "context_edit条目写入，后续实际请求使用替换内容"
+  },
+  "V12": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V12\\2026-10-28T08-36-12-000Z\\result.json",
+    "note": "4种停止路径通过；预算回归原throw派发1次，改abort后派发0次、无成功回复"
+  },
+  "V13": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V13\\2026-10-28T08-25-44-967Z\\result.json",
+    "note": "模型伪造修改工具被拒；作者带参命令与无参预填编辑框均写入正确控制条目"
+  },
+  "V14": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V14\\2026-10-28T08-25-54-649Z\\result.json",
+    "note": "运行中作者命令立即handled且先写控制条目；普通steer排队并在工具批结束后送达"
+  },
+  "V26": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V26\\2026-10-28T08-27-14-780Z\\result.json",
+    "note": "RPC steer即时触发input并返回INTERJECTED；followUp不触发闸门；终端人工项待执行"
+  },
+  "V15": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V15\\2026-10-28T08-29-01-172Z\\result.json",
+    "note": "打印、JSON与生产SDK均可运行；无UI时ask返回作者不在场"
+  },
+  "V16": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V16\\2026-10-28T08-29-43-032Z-model\\result.json",
+    "note": "工具内部真实调用取得用量；同一路径替身缺失用量被记为missing/null，未当作0"
+  },
+  "V17": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V17\\2026-10-28T08-31-04-880Z-model\\result.json",
+    "note": "复用V16；Pi会话统计逐项包含工具usage和费用，无新增请求"
+  },
+  "V18": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V18\\2026-10-28T08-31-50-781Z-model\\result.json",
+    "note": "throw会被吞且仍HTTP200；ctx.abort实测0次fetch/无HTTP，能在该固定SDK路径事前阻止"
+  },
+  "V27": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V27\\2026-10-28T08-32-35-042Z-model\\result.json",
+    "note": "20段中英混合输入校准；CJK0.889/Latin0.309另加2048，样本内全覆盖，后续预留沿用"
+  },
+  "V19": {
+    "status": "不成立·已用替代",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\result.json",
+    "note": "thinking低档强制工具400；JSON8192组首轮23/30，一次带具体格式错误修复后30/30；旧组和先导全保留"
+  },
+  "V20": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V20\\2026-10-28T09-05-17-202Z-model\\result.json",
+    "note": "Flash与Pro各5次均完成，0无效调用、0提交后写入；样本内优先Flash，非文学质量结论"
+  },
+  "V21": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V21\\2026-10-28T10-39-37-219Z\\result.json",
+    "note": "真实HTTP/WS与Edge网页往返通过，安全来源校验通过；已比较双进程和switch_session，截图已检查"
+  },
+  "V23": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V23\\2026-10-28T10-40-59-187Z\\result.json",
+    "note": "setStatus的statusKey=story、statusText=working经RPC和WS原样转发"
+  },
+  "V28": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V28\\2026-10-28T11-26-07-529Z\\result.json",
+    "note": "两次正常提交文件确认约143/170ms；只读假成功被拒并结束自有Pi，重开0提交；真实网页预览通过"
+  },
+  "V25": {
+    "status": "不成立·已用替代",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V25\\2026-10-28T11-26-38-601Z\\result.json",
+    "note": "全包含Cordis，改取17个Markdown闭包文件；独立构建与中文DOM/截图通过，保留大chunk警告及移植清单"
+  },
+  "V22": {
+    "status": "成立",
+    "evidence": "D:\\开源\\test\\pi-Story\\p0\\runs\\V22\\2026-10-28T11-26-07-121Z\\result.json",
+    "note": "已有普通对话后真实等待600005.8641ms无超时，回答控制条目已核对写盘；保留空白会话与外部中断记录"
+  }
+}

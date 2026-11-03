@@ -1,0 +1,732 @@
+{
+  "schema": "story/dataset-manifest@1",
+  "id": "DS07",
+  "version": "v3",
+  "frozenAt": "2026-10-29T03:13:34.776Z",
+  "seed": 20261028,
+  "status": "reference_pending_human_review",
+  "files": [
+    {
+      "path": "corrections.json",
+      "sha256": "dfea00fa084edab44765117e7ac2d271ecbd5f395e297d92cba5ac6959388ac3",
+      "source": "Author-approved AI evidence correction and review",
+      "license": "Project-authored annotations; AGPL-3.0-only",
+      "split": "all; explicit correction references separate from original replay"
+    },
+    {
+      "path": "fixtures/chapters.json",
+      "sha256": "0ab93b4373f0b6bbdcf3c4e09b6ab513da10a35c3dc93c589eb9a432e3657019",
+      "source": "DS07-replay/v1/fixtures/chapters.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\chapters.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "0ab93b4373f0b6bbdcf3c4e09b6ab513da10a35c3dc93c589eb9a432e3657019"
+    },
+    {
+      "path": "fixtures/chinese-sample.md",
+      "sha256": "3304a1f6126f9023352fd5440bb1e984f9f94202a4c9ed32ba862835315538b7",
+      "source": "DS07-replay/v1/fixtures/chinese-sample.md; D:\\开源\\test\\pi-Story\\p0\\fixtures\\chinese-sample.md",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "3304a1f6126f9023352fd5440bb1e984f9f94202a4c9ed32ba862835315538b7"
+    },
+    {
+      "path": "fixtures/fixture-sources.json",
+      "sha256": "6affd0503e61b0d27dfebe878300abf020b29d5f37e6b55cbbcb6f0a90f63a96",
+      "source": "DS07-replay/v1/fixtures/fixture-sources.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\fixture-sources.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "6affd0503e61b0d27dfebe878300abf020b29d5f37e6b55cbbcb6f0a90f63a96"
+    },
+    {
+      "path": "fixtures/prompts.json",
+      "sha256": "492b0835fc2b7b0859e22755d255074f533f462318f2af6b072953cc7e0571c0",
+      "source": "DS07-replay/v1/fixtures/prompts.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\prompts.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "492b0835fc2b7b0859e22755d255074f533f462318f2af6b072953cc7e0571c0"
+    },
+    {
+      "path": "fixtures/story-state.json",
+      "sha256": "8ae22fdc466d3241a488a44083b8b5666e7c04489e0c74a14b90c4777dd2d6e0",
+      "source": "DS07-replay/v1/fixtures/story-state.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\story-state.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "8ae22fdc466d3241a488a44083b8b5666e7c04489e0c74a14b90c4777dd2d6e0"
+    },
+    {
+      "path": "fixtures/writing-1.json",
+      "sha256": "f73b774796e241fee7970db7c35099baad25710603b7afa6eaef4c98b0f155c3",
+      "source": "DS07-replay/v1/fixtures/writing-1.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\writing-1.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "f73b774796e241fee7970db7c35099baad25710603b7afa6eaef4c98b0f155c3"
+    },
+    {
+      "path": "fixtures/writing-2.json",
+      "sha256": "26ef10c9e2a1118c5372cd8b6017233459c2a813cdcfc554c060912d6997dbd7",
+      "source": "DS07-replay/v1/fixtures/writing-2.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\writing-2.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "26ef10c9e2a1118c5372cd8b6017233459c2a813cdcfc554c060912d6997dbd7"
+    },
+    {
+      "path": "fixtures/writing-3.json",
+      "sha256": "98226cfd08ade20d4296cec8a47d6d3cc42263d6c8a195228970a3cc70196b50",
+      "source": "DS07-replay/v1/fixtures/writing-3.json; D:\\开源\\test\\pi-Story\\p0\\fixtures\\writing-3.json",
+      "license": "Existing author-authorized local P0 fixture; benchmark prompt license inherited, no redistribution",
+      "split": "observation",
+      "originalSha256": "98226cfd08ade20d4296cec8a47d6d3cc42263d6c8a195228970a3cc70196b50"
+    },
+    {
+      "path": "judgments.json",
+      "sha256": "6324e0117fcf77c492f11a74fe18ee71259d3139e160b17ae7beb89b2ce5271b",
+      "source": "Author-approved AI evidence correction and review",
+      "license": "Project-authored annotations; AGPL-3.0-only",
+      "split": "all; explicit correction references separate from original replay"
+    },
+    {
+      "path": "LABELING.md",
+      "sha256": "2fc72315f5975457fc4e46704d2835a0d1a9eae77eb0657cfb8223dbcf75eb89",
+      "source": "AI-authored test specification based on design documents 09/11/12/15/16/18",
+      "license": "Project-authored fixture and annotations; AGPL-3.0-only",
+      "split": "all; deterministic rule fixture"
+    },
+    {
+      "path": "labels/annotation.json",
+      "sha256": "feed33a1e1923372ea036e697cf6ef122ee7bfcb90a18cb9341aabcb0a00d40d",
+      "source": "AI-authored test specification based on design documents 09/11/12/15/16/18",
+      "license": "Project-authored fixture and annotations; AGPL-3.0-only",
+      "split": "all; deterministic rule fixture"
+    },
+    {
+      "path": "labels/replay-review.json",
+      "sha256": "982584c5743498b57006e50aaf962afb1bc7ee81bc3ffd102c36cb1863c421ae",
+      "source": "AI-authored test specification based on design documents 09/11/12/15/16/18",
+      "license": "Project-authored fixture and annotations; AGPL-3.0-only",
+      "split": "all; deterministic rule fixture"
+    },
+    {
+      "path": "observations.json",
+      "sha256": "08577e7315d6c108c77d946199026113f408f1a732cbcdc3c36f035fa63cd345",
+      "source": "DS07-replay/v1/observations.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\observations.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "08577e7315d6c108c77d946199026113f408f1a732cbcdc3c36f035fa63cd345"
+    },
+    {
+      "path": "pairs.json",
+      "sha256": "510afe04fa91028ed282848d75e27e6fd3ec38e1096ea22ffd66b9674d2c5bc9",
+      "source": "AI-authored test specification based on design documents 09/11/12/15/16/18",
+      "license": "Project-authored fixture and annotations; AGPL-3.0-only",
+      "split": "all; deterministic rule fixture"
+    },
+    {
+      "path": "result.json",
+      "sha256": "a54d18528433ba46772108b157c2170cba634a7914ea11c1e88171e6a0e96fc8",
+      "source": "DS07-replay/v1/result.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\result.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "a54d18528433ba46772108b157c2170cba634a7914ea11c1e88171e6a0e96fc8"
+    },
+    {
+      "path": "run.json",
+      "sha256": "29f4967c2bf82562158657c05177fa521dcfa9639c50bfc12d207c5e3c7e126d",
+      "source": "DS07-replay/v1/run.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\run.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "29f4967c2bf82562158657c05177fa521dcfa9639c50bfc12d207c5e3c7e126d"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-001-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-001-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-001-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-001-response.json",
+      "sha256": "fa9249210730cc886b4c0522503c9bf61128dd7cbcc27a5df0041dff3e859a26",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-001-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-001-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "fa9249210730cc886b4c0522503c9bf61128dd7cbcc27a5df0041dff3e859a26"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-002-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-002-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-002-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-002-response.json",
+      "sha256": "8fb4f0555aecb3f0d421b542c0dc8168f38ad96f31d1b9eac5cea98d24e8269d",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-002-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-002-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8fb4f0555aecb3f0d421b542c0dc8168f38ad96f31d1b9eac5cea98d24e8269d"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-003-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-003-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-003-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-003-response.json",
+      "sha256": "592480a3fe584945397edc599d8d5b6089dbf3597e9d1871295b925fcf3d07b6",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-003-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-003-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "592480a3fe584945397edc599d8d5b6089dbf3597e9d1871295b925fcf3d07b6"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-004-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-004-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-004-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-004-response.json",
+      "sha256": "4f2886efce541060244d820b7e31a74d44f5a8458a92721bb1b4d09376df2e65",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-004-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-004-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "4f2886efce541060244d820b7e31a74d44f5a8458a92721bb1b4d09376df2e65"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-005-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-005-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-005-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-005-response.json",
+      "sha256": "a324815f845e67a8188e65621ce27db1b6ff0f152b4429d4856f143d79fd8d73",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-005-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-005-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "a324815f845e67a8188e65621ce27db1b6ff0f152b4429d4856f143d79fd8d73"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-006-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-006-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-006-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-006-response.json",
+      "sha256": "760888b202483c1f8cc6f51f7e4526cbbe6197e1a5719a06f88120aa6a4b7799",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-006-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-006-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "760888b202483c1f8cc6f51f7e4526cbbe6197e1a5719a06f88120aa6a4b7799"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-007-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-007-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-007-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-007-response.json",
+      "sha256": "4f01fe98fe84467b3b2fb3adbeff90cc963e4fa7476bb6c5b32593860b6d79a9",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-007-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-007-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "4f01fe98fe84467b3b2fb3adbeff90cc963e4fa7476bb6c5b32593860b6d79a9"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-008-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-008-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-008-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-008-response.json",
+      "sha256": "d05a457d2ec0bca0a54e1dd87efbb9cd891484241e123e7e73a239806330efbd",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-008-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-008-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "d05a457d2ec0bca0a54e1dd87efbb9cd891484241e123e7e73a239806330efbd"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-009-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-009-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-009-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-009-response.json",
+      "sha256": "9526e6c7e0ed6b9505aadb49b1adf934b45500e013946739a1835f2f8cec7748",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-009-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-009-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "9526e6c7e0ed6b9505aadb49b1adf934b45500e013946739a1835f2f8cec7748"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-010-request.json",
+      "sha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-010-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-010-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "c023edfe25272674aacdc01be1d2f30b96db547ef665e81a97f596f8057112ad"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-010-response.json",
+      "sha256": "daadc1c97ce207c83b6c0fd7b957c9b6617c3d1b890f1f58d35158da4a42f029",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-010-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-010-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "daadc1c97ce207c83b6c0fd7b957c9b6617c3d1b890f1f58d35158da4a42f029"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-011-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-011-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-011-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-011-response.json",
+      "sha256": "9fec85f7a1d4be75087450b69e63e1880fcf3d3933a50090286fcbda7c321ae4",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-011-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-011-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "9fec85f7a1d4be75087450b69e63e1880fcf3d3933a50090286fcbda7c321ae4"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-012-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-012-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-012-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-012-response.json",
+      "sha256": "ff028b212b7e4ab0773398cdc60d48757d933f6492bd83df483113dd88492c49",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-012-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-012-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "ff028b212b7e4ab0773398cdc60d48757d933f6492bd83df483113dd88492c49"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-013-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-013-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-013-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-013-response.json",
+      "sha256": "53b0d34d6d6021b513de18de2d81ba36d6748deef10d2955141817258e72893d",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-013-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-013-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "53b0d34d6d6021b513de18de2d81ba36d6748deef10d2955141817258e72893d"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-014-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-014-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-014-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-014-response.json",
+      "sha256": "7e4c2ad1c58ea10f0f4fe40e35c15fd9d732544a54d7a7fbabdcf797e7193e30",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-014-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-014-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "7e4c2ad1c58ea10f0f4fe40e35c15fd9d732544a54d7a7fbabdcf797e7193e30"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-015-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-015-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-015-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-015-response.json",
+      "sha256": "f34e36398ea5eea78f213508c9e2ee781f5e5100a3c3c0179e01693cf974ab22",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-015-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-015-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "f34e36398ea5eea78f213508c9e2ee781f5e5100a3c3c0179e01693cf974ab22"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-016-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-016-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-016-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-016-response.json",
+      "sha256": "59caa3db0871e710db797ca90a01e1c89f25f5b9c8cb4ea262c8c943f0de398d",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-016-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-016-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "59caa3db0871e710db797ca90a01e1c89f25f5b9c8cb4ea262c8c943f0de398d"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-017-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-017-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-017-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-017-response.json",
+      "sha256": "8e64c29c2d8dce8941920d521605afda7fc23d727c960fe3c2f9e0d9cd5afd0e",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-017-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-017-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8e64c29c2d8dce8941920d521605afda7fc23d727c960fe3c2f9e0d9cd5afd0e"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-018-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-018-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-018-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-018-response.json",
+      "sha256": "648a90228f6b08e881afe475918243003d10cc2016e3b838fb05e1ab8b2121a9",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-018-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-018-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "648a90228f6b08e881afe475918243003d10cc2016e3b838fb05e1ab8b2121a9"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-019-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-019-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-019-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-019-response.json",
+      "sha256": "4054eb58330a3c8204fa393265dd9fd1795be05e5ec2ee42a828d13eee793812",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-019-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-019-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "4054eb58330a3c8204fa393265dd9fd1795be05e5ec2ee42a828d13eee793812"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-020-request.json",
+      "sha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-020-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-020-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "25e049e302ff86da03da9b9e4a9414abd06f88b8e91a3ed0b56d2f81a839dd2b"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-020-response.json",
+      "sha256": "eff5d5c0c6a45abc5815911ed773b79550af1dc144f6637cb7603a47dd8adeac",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-020-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-020-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "eff5d5c0c6a45abc5815911ed773b79550af1dc144f6637cb7603a47dd8adeac"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-021-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-021-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-021-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-021-response.json",
+      "sha256": "0943fcf9a3a85218e4585febdddd126069656d86cb51a176d9967eadf2d5f4d1",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-021-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-021-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "0943fcf9a3a85218e4585febdddd126069656d86cb51a176d9967eadf2d5f4d1"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-022-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-022-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-022-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-022-response.json",
+      "sha256": "6649d3b6560ee9858311e0147691655b77abb09f71244693325bb799538bcaa8",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-022-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-022-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "6649d3b6560ee9858311e0147691655b77abb09f71244693325bb799538bcaa8"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-023-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-023-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-023-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-023-response.json",
+      "sha256": "0de3499ce5b2d895be1ad273823759b837636216c2583ca5a5160b48679d0a49",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-023-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-023-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "0de3499ce5b2d895be1ad273823759b837636216c2583ca5a5160b48679d0a49"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-024-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-024-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-024-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-024-response.json",
+      "sha256": "e25be53c32a3de1bf59f5c1dc4edf41a4da4189994e1df23587f38648088ccb2",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-024-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-024-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "e25be53c32a3de1bf59f5c1dc4edf41a4da4189994e1df23587f38648088ccb2"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-025-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-025-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-025-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-025-response.json",
+      "sha256": "2aeab3ee25acd2a336062425606121073ace42049333fba9323c29d5420a1d89",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-025-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-025-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "2aeab3ee25acd2a336062425606121073ace42049333fba9323c29d5420a1d89"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-026-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-026-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-026-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-026-response.json",
+      "sha256": "1589d30a1cb5e8800c5ed4093d1140bb9fffef37b51cce928b3ffb9b068e6212",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-026-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-026-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "1589d30a1cb5e8800c5ed4093d1140bb9fffef37b51cce928b3ffb9b068e6212"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-027-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-027-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-027-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-027-response.json",
+      "sha256": "62adca6aed4eed98c97a5de8d1009469e015dfddcfabbdcdd85b86c5bbc15374",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-027-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-027-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "62adca6aed4eed98c97a5de8d1009469e015dfddcfabbdcdd85b86c5bbc15374"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-028-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-028-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-028-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-028-response.json",
+      "sha256": "086ff9dd0f9395e4b5b75363c4b081fe9b72c902c419fded2e0e22c279d488e8",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-028-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-028-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "086ff9dd0f9395e4b5b75363c4b081fe9b72c902c419fded2e0e22c279d488e8"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-029-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-029-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-029-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-029-response.json",
+      "sha256": "6bbfc854888629f38c25ac9f7b70bad7241519ddc63f6b0c87edebe7eeaaf8a7",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-029-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-029-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "6bbfc854888629f38c25ac9f7b70bad7241519ddc63f6b0c87edebe7eeaaf8a7"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-030-request.json",
+      "sha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-030-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-030-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "8468773245f34a1ecdea24b62c59e459935a45ad57b481d59bd757168076d07f"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-030-response.json",
+      "sha256": "907ae6fd6b258c245de4b37c1778db9682e1bc004d703b957a32fe3db1d041b9",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-030-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-030-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "907ae6fd6b258c245de4b37c1778db9682e1bc004d703b957a32fe3db1d041b9"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-031-request.json",
+      "sha256": "4b97b0afa2cc1eef1fdf518c63d6e6f6da7e0ac5c69b0721ce50fb45cb5ed832",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-031-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-031-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "4b97b0afa2cc1eef1fdf518c63d6e6f6da7e0ac5c69b0721ce50fb45cb5ed832"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-031-response.json",
+      "sha256": "e75e017d9798172f6d72fe88599bb9cf97f2f8b1d14910dbaec347f5db606be2",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-031-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-031-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "e75e017d9798172f6d72fe88599bb9cf97f2f8b1d14910dbaec347f5db606be2"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-032-request.json",
+      "sha256": "2f7eb20c3772d0ce949cf8468d8fd4625fdcce491ebd08a002db36a824c63ab0",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-032-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-032-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "2f7eb20c3772d0ce949cf8468d8fd4625fdcce491ebd08a002db36a824c63ab0"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-032-response.json",
+      "sha256": "faa273f4274f99abe355c12897f3fc5ff88751140e382358208c1f07f6922566",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-032-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-032-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "faa273f4274f99abe355c12897f3fc5ff88751140e382358208c1f07f6922566"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-033-request.json",
+      "sha256": "ca0efb2bdda17dcff4410911e7fe201de91a07aebdf91174d3e67d3a89c988a9",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-033-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-033-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "ca0efb2bdda17dcff4410911e7fe201de91a07aebdf91174d3e67d3a89c988a9"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-033-response.json",
+      "sha256": "2a4ef00aea73b4d03f57db13fb1866003546b8fe8e1c00c3eb574344b25c7293",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-033-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-033-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "2a4ef00aea73b4d03f57db13fb1866003546b8fe8e1c00c3eb574344b25c7293"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-034-request.json",
+      "sha256": "dcd2d7819357a12e9988c93a654df525a276fb2373b35389a9aef1f7da6d690e",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-034-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-034-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "dcd2d7819357a12e9988c93a654df525a276fb2373b35389a9aef1f7da6d690e"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-034-response.json",
+      "sha256": "890f107f656c9fc94a2392d481248670079438a68068de4a2f4487d62a219063",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-034-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-034-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "890f107f656c9fc94a2392d481248670079438a68068de4a2f4487d62a219063"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-035-request.json",
+      "sha256": "51d11047de8fff532f021be63ad5a5c30eb8414a5d5c6613c429af074405b37c",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-035-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-035-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "51d11047de8fff532f021be63ad5a5c30eb8414a5d5c6613c429af074405b37c"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-035-response.json",
+      "sha256": "e332b4d7bd92fe0e1e5994f787d8cb03a0dcd031571bc716a6f63cd6e0807cbd",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-035-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-035-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "e332b4d7bd92fe0e1e5994f787d8cb03a0dcd031571bc716a6f63cd6e0807cbd"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-036-request.json",
+      "sha256": "52b66aff83881b1c4603ac153723166b2ed5060864f3ea18454b30cbcb270a5d",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-036-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-036-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "52b66aff83881b1c4603ac153723166b2ed5060864f3ea18454b30cbcb270a5d"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-036-response.json",
+      "sha256": "968e3a9d66da9d30ac52798840cb354a9c61993de55803ab876e1d9ee65bfafc",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-036-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-036-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "968e3a9d66da9d30ac52798840cb354a9c61993de55803ab876e1d9ee65bfafc"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-037-request.json",
+      "sha256": "0054d305bb0e560747c3f8d4bc76742758a4a8bd6c6eaa56d12136b6f7a39e14",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-037-request.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-037-request.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "0054d305bb0e560747c3f8d4bc76742758a4a8bd6c6eaa56d12136b6f7a39e14"
+    },
+    {
+      "path": "V19-2026-10-28T08-54-58-056Z-model-037-response.json",
+      "sha256": "41e9e771bd017703a59f9b8913c56ac520cfdf6cb26687f3a5115b0d6896f13c",
+      "source": "DS07-replay/v1/V19-2026-10-28T08-54-58-056Z-model-037-response.json; D:\\开源\\test\\pi-Story\\p0\\runs\\V19\\2026-10-28T08-54-58-056Z-model\\V19-2026-10-28T08-54-58-056Z-model-037-response.json",
+      "license": "P0 author-authorized local evidence",
+      "split": "observation",
+      "originalSha256": "41e9e771bd017703a59f9b8913c56ac520cfdf6cb26687f3a5115b0d6896f13c"
+    }
+  ]
+}

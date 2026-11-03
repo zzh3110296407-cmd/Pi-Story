@@ -1,0 +1,107 @@
+{
+  "id": "ds11-a03",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "targetWords": 750,
+            "purpose": "Run the demonstration without an audience, with Sol keeping a written record of each step.",
+            "turn": "The team completes the closed demonstration and the written record becomes the agreed account of what the kite hall actually did."
+          }
+        ],
+        "reason": "The author asked to change only the unwritten chapter 5 so the demonstration runs without an audience and Sol keeps a written record, keeping the chapter number and total count."
+      },
+      "id": "call_00_4z4xyravIiW0sM2BYIHS1699"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 5,
+          "title": "Demonstration",
+          "targetWords": 750,
+          "purpose": "Run the demonstration without an audience, with Sol keeping a written record of each step.",
+          "turn": "The team completes the closed demonstration and the written record becomes the agreed account of what the kite hall actually did."
+        }
+      ],
+      "reason": "The author asked to change only the unwritten chapter 5 so the demonstration runs without an audience and Sol keeps a written record, keeping the chapter number and total count."
+    },
+    "id": "call_00_4z4xyravIiW0sM2BYIHS1699"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Run the demonstration without an audience and keep a written record.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "f610be79820385a15cde78c83c2c86243134874f3dd869cf2198f60c82327422",
+    "sessionSha256": "43b223bb196f6a8d235922528bc2c453ae6bebe8ea40fe2b9c9a439e97e03901",
+    "fee": {
+      "knownUsd": 0.0024924,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0024924
+    },
+    "measuredMainRequests": 2
+  }
+}

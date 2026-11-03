@@ -1,0 +1,40 @@
+{
+  "mode": "infrastructure_interruption",
+  "date": "2026-10-30T13:58:08.554Z",
+  "formalUseAllowed": false,
+  "reason": "Operator stopped the first request after >10 min without terminal output. Node balance query returned ECONNRESET; PowerShell returned available CNY 4.50. Enabling NODE_USE_ENV_PROXY=1 and process-local HTTPS_PROXY with the existing enabled Windows loopback proxy made the same Node balance query succeed. No system setting changed.",
+  "completedCases": 0,
+  "requests": 1,
+  "knownUsd": 0,
+  "reservedUsd": 0.0423324,
+  "paidOutputReused": false,
+  "http": [
+    {
+      "keepAliveOnly": false
+    }
+  ],
+  "terminal": [
+    {
+      "type": "role_checkpoint",
+      "phase": "started"
+    },
+    {
+      "type": "provider_response",
+      "stopReason": "aborted",
+      "error": "Request was aborted"
+    },
+    {
+      "type": "response",
+      "httpStatus": 200,
+      "stopReason": "aborted",
+      "error": "Request was aborted",
+      "classification": "cancelled"
+    },
+    {
+      "type": "role_checkpoint",
+      "phase": "completed",
+      "stopReason": "aborted",
+      "status": "failed"
+    }
+  ]
+}

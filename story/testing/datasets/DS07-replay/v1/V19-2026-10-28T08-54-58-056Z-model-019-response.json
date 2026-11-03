@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal facts 1-4 upserts. Chapter 2. Need facts stated. Need decide facts. P0 subset tests only 1 to 4 fact upserts. Each temp ref, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason. sentences exact integer numbers.\n\nNeed include summary title characters events mood, issues.\n\nNeed no future plans. Facts from numbered chapter. We can choose 3-4 clear facts. Need subject/predicate/object. Potential facts:\n- Narrator/protagonist crossed rise and saw dark mound in snow (sentence 1). Subject \"he\" predicate \"saw\" object \"a dark mound in the white\" maybe narrated confirmed.\n- Animal is a woolly mammoth (sentence 4). Subject \"animal\" predicate \"is\" object \"woolly mammoth\" narrated confirmed.\n- Mammoth trunk lay curled against snow, one tusk sheared near root (sentence 5). Could be one fact.\n- Body was whole with no cuts/spear marks/trampled ring; nothing had fed on it (6-7).\n- He had aimed for late Pleistocene (11) recalled_past confirmed.\n- This was older, tens of thousands years older (12-13). Could be uncertain? He concludes? Narrated? \"This was older\" maybe cognition? But fact.\n- Jump had missed or he had, error not walk back from (14) maybe uncertain? Actually uncertain \"or\". But avoid.\n- He wrapped hide around wrist and put bone in coat (18). narrated confirmed.\n- He looked at ravine beyond rise and started walking (19) future action? Happens in chapter, narrated.\n\nNeed \"minimal DeltaProposal\" and P0 subset tests only 1 to 4 fact upserts. Let's include 4 facts. Need facts with sentences arrays. Avoid uncertain unless necessary. Could include uncertain fact if source says \"or\", with reason. But simpler confirmed.\n\nNeed summary title characters events mood. Title maybe \"The Mammoth in the Snow\". Characters [\"He\"] or unnamed protagonist. Events: crossed rise and found mammoth carcass; examined it; took rib shard and hide; walked toward ravine. Mood: bleak/isolated. Issues: mention protagonist unnamed, temporal target ambiguity? Need include issues array. Could be empty? They said include issues. Could list \"Protagonist is unnamed; referent 'he' used.\" or \"No explicit name for character.\" Also \"Fact granularity limited to P0 subset.\" But okay.\n\nNeed JSON valid. Ensure no extra properties? Schema additionalProperties false at top and facts items. Claims etc arrays empty. Summary exactly fields. Issues array strings.\n\nNeed decide facts subject strings. Use \"he\" maybe. Predicate \"crossed\" object \"the rise at a stumble\"? Need object string. Better:\n1 ref f1 subject \"he\" predicate \"saw\" object \"a dark mound in the white, too regular to be rock\" mode narrated certainty confirmed sentences [1].\n2 f2 subject \"the animal\" predicate \"was\" object \"a woolly mammoth\" mode narrated confirmed sentences [4].\n3 f3 subject \"the mammoth\" predicate \"had\" object \"its trunk curled against the snow and one tusk sheared near the root\" mode narrated confirmed sentences [5]. Predicate perhaps \"had\" okay. Object string can include.\n4 f4 subject \"he\" predicate \"had aimed for\" object \"the late Pleistocene—the caves, the fires, the people he had spent his life studying\" mode recalled_past confirmed sentences [11]. This is recalled past. Good.\n\nBut f1 sentence 1 says \"He crossed the rise at a stumble and from the crest saw it: a dark mound...\" Could subject he predicate \"saw\" object \"a dark mound in the white, too regular to be rock\". Fine.\n\nNeed maybe include fact \"He wrapped hide around wrist and put bone in coat\" sentences [18]. But only 4 max. Which more important? We can include 4. Need summary events include taking hide/bone even if not fact? Summary can include events in chapter. That's okay. But maybe facts should cover key. Could replace f3? Hmm.\n\nNeed \"mode\" for f2 \"narrated\" because sentence states. Fine.\nNeed certainty confirmed. uncertainReason empty string.\n\nNeed issues: \"Protagonist is unnamed; only 'he' is used.\" Also \"Exact temporal period is described only as older than late Pleistocene; no date given.\" But that is in chapter. Include.\n\nNeed ensure no claims/cognitions relations hooks extra props. Claims items max 0; array empty okay.\n\nNeed final only JSON no markdown.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"type\":\"json_object\",\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a dark mound in the white, too regular to be rock\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the animal\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"the mammoth\",\"predicate\":\"had\",\"object\":\"its trunk curled against the snow and one tusk sheared near the root\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[5]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene—the caves, the fires, the people he had spent his life studying\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"he\"],\"events\":[\"He crossed the rise and saw a dark mound in the snow.\",\"He found the body of a woolly mammoth with a sheared tusk.\",\"He remembered aiming for the late Pleistocene.\",\"He took a rib shard and hide, then walked toward the ravine.\"],\"mood\":\"bleak and isolated\"},\"issues\":[\"The protagonist is unnamed; the chapter refers to him only as 'he'.\",\"The exact time period is not stated beyond being older than the late Pleistocene.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1379,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 995,
+      "totalTokens": 2347,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0016547999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0017194079999999997
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177859253,
+    "responseId": "b86c7a0a-92e6-407a-ae8f-20dd5e7b63c5",
+    "rawStopReason": "stop",
+    "durationMs": 9047
+  },
+  "record": {
+    "time": "2026-10-28T08:57:48.300Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-019",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1379,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 995,
+      "totalTokens": 2347,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.0016547999999999999,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0017194079999999997
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0017194079999999997,
+    "inputTokens": 200,
+    "outputTokens": 1379,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 9048
+  }
+}

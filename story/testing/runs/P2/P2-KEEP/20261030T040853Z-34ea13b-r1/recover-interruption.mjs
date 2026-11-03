@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {existsSync,readFileSync,writeFileSync} from 'node:fs';
+import path from 'node:path';
+import {gzipSync} from 'node:zlib';
+import {publicEvidence,readEvidence,sha256} from '../../../../../scripts/eval/p2/artifacts.ts';
+import {UsageLedger} from '../../../../../scripts/eval/p2/ledger.ts';
+import {scoreEvidence} from '../../../../../scripts/eval/p2/score.ts';
+import {scanSecrets} from '../../../../../scripts/eval/p2/secrets.mjs';
+const folder=import.meta.dirname,root=path.resolve(folder,'../..'),repo=path.resolve(folder,'../../../../../..');
+const runId=path.basename(folder),work=path.join(repo,'story/testing/exec/runs/P2-KEEP',runId);
+const manifestFile=path.join(folder,'run-manifest.json'),manifest=JSON.parse(readFileSync(manifestFile,'utf8'));
+assert.equal(runId,'20261030T040853Z-34ea13b-r1');assert.equal(manifest.status,'running');assert(!existsSync(path.join(folder,'raw/evidence.jsonl.gz')));
+const original=readFileSync(path.join(work,'archive/evidence.jsonl'));assert(original.toString('utf8').endsWith('\n'));
+const records=original.toString('utf8').trimEnd().split('\n').map(JSON.parse),meta=records.find(row=>row.type==='meta');assert(meta.expectedCaseIds.length>0);
+const fees=new UsageLedger(path.join(root,'usage-ledger.jsonl'),path.join(root,'request-reservations.jsonl'));
+const rows=file=>readFileSync(file,'utf8').split(/\r?\n/u).filter(Boolean).map(JSON.parse),charged=new Set(rows(fees.ledgerFile).map(row=>row.requestId));
+for(const request of rows(fees.reservationsFile))if(request.runId===runId&&!charged.has(request.requestId))fees.complete(request.requestId,null,'process_interrupted');
+const packed=gzipSync(original),rawChecksums={evidenceSha256:sha256(packed)};
+writeFileSync(path.join(folder,'raw/evidence.jsonl.gz'),packed,{flag:'wx'});writeFileSync(path.join(folder,'raw/checksums.json'),JSON.stringify(rawChecksums,null,2)+'\n',{flag:'wx'});readEvidence(folder);
+const completed=new Set(records.filter(row=>row.type==='keeper_result').map(row=>row.caseId));
+const started=new Set(records.filter(row=>row.type==='evaluation_start').map(row=>row.caseId));
+const recoveredAt=new Date().toISOString();
+const recovery={schema:'story/p2-process-interruption@1',runId,recoveredAt,reason:'The Codex turn was intentionally interrupted; subsequent inspection found no running KEEP/EDIT batch or test process. Exact termination mechanism was not verified.',originalJournalSha256:sha256(original),originalJournalPreservedExactly:true,completedSamples:completed.size,successfulSamples:records.filter(row=>row.type==='keeper_result'&&row.result?.ok).length,expectedSamples:meta.expectedCaseIds.length,requests:records.filter(row=>row.type==='request').length,responses:records.filter(row=>row.type==='response').length,policy:'Exclude this incomplete repetition from formal quality aggregates. Retain raw evidence and all fees in all-real accounting. No replacement model run was started after this interruption.'};
+Object.assign(manifest,{status:'interrupted',executionComplete:false,recoveredAt,elapsedMs:null,rawChecksums,costs:fees.snapshot(runId),totalP2Costs:fees.snapshot(),caseFailures:meta.expectedCaseIds.filter(id=>!completed.has(id)).map(caseId=>({caseId,code:started.has(caseId)?'INTERRUPTED_BEFORE_KEEPER_RESULT':'NOT_EXECUTED_DUE_TO_INTERRUPTION'})),recovery});
+for(const [name,data] of [['run-manifest.json',manifest],['interruption.json',recovery],['metrics.json',scoreEvidence(readEvidence(folder),[])]]){const text=JSON.stringify(data,null,2)+'\n';publicEvidence(text);writeFileSync(path.join(folder,name),text);}
+const scan=scanSecrets([folder],repo);writeFileSync(path.join(folder,'secret-scan.json'),JSON.stringify(scan,null,2)+'\n');assert(scan.passed);
+console.log(JSON.stringify({runId,status:manifest.status,completedSamples:completed.size,expectedSamples:meta.expectedCaseIds.length,costs:manifest.costs,totalP2Costs:manifest.totalP2Costs,scanPassed:true}));

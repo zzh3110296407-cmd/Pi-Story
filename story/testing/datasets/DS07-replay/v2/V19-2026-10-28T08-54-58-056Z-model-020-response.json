@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need answer JSON only. Need extract minimal DeltaProposal facts 1-4. Chapter says mammoth carcass, no cuts/spear marks, he aimed late Pleistocene but this older tens thousands, jump missed, he takes rib shard and hide strip, wraps wrist, puts bone in coat, looks ravine and walks. Need facts upserts each temp ref. Minimal maybe 4 facts. Need exact sentence IDs. Must avoid unstated. Mode narrated or recalled_past. Certainty confirmed/uncertain. Facts: subject \"mammoth carcass\" predicate \"condition\" object \"whole, with no cuts, spear marks, or trampled hunter ring; nothing had fed on it\" sentences [6,7]? But object string can combine. Predicate maybe \"was\". Need robust.\n\nNeed include issues. Summary title characters events mood. Characters: \"he\" maybe protagonist. Events. Mood.\n\nNeed facts with refs Fact1 etc. Each sentences integer array from chapter. Ensure uncertainReason empty for confirmed. For uncertain fact about jump missed? Sentence 14 says \"The jump had missed, or he had, and the error was not one he could walk back from.\" This is narrator confirmed? It states uncertainty in wording. Could be uncertain with reason \"The narrator states it may be the jump or he that missed.\" But maybe don't need. Need minimal 1-4. Let's do 4 confirmed facts.\n\nFact1 subject \"mammoth carcass\" predicate \"was\" object \"a woolly mammoth\" sentences [4]? Actually [4] \"A woolly mammoth.\" Confirmed. Predicate \"species\" object \"woolly mammoth\". Good.\n\nFact2 subject \"mammoth carcass\" predicate \"condition\" object \"whole, with no cuts, spear marks, or trampled hunter ring, and nothing had fed on it\" sentences [6,7]. This combines two sentences. Good.\n\nFact3 subject \"he\" predicate \"had aimed for\" object \"the late Pleistocene—the caves, the fires, the people he had spent his life studying\" mode recalled_past? Sentence 11 \"He had aimed...\" It's past perfect, recalled? It is narrated? The schema modes narrated or recalled_past. Use recalled_past for past perfect? Hmm \"had aimed\" is recalled past? Could set mode recalled_past. Certainty confirmed. Sentences [11]. Object include.\n\nFact4 subject \"this time/place\" predicate \"was\" object \"tens of thousands of years older than the late Pleistocene\" sentences [12,13]? Better subject \"the setting\" predicate \"was older than the late Pleistocene by tens of thousands of years\" sentences [12,13]. Confirmed? Sentence 12 \"This was older.\" 13 \"Tens of thousands of years older.\" It's confirmed narration. Good.\n\nCould include fact about taking bone/hide: subject \"he\" predicate \"took\" object \"a shard of rib and a strip of hide, wrapping the hide around his wrist and putting the bone in his coat\" sentences [17,18]. That's 5, exceeds 4. Need only 1-4. Which most relevant? Minimal. Include 4 max. Maybe include taking objects instead of species? Need facts only 1-4. We need include core. The prompt says P0 subset tests only 1 to 4 fact upserts. So up to 4. Use 4. Need summary include events.\n\nNeed exact sentence IDs integer. JSON valid. Include issues array maybe empty or mention? \"Only chapter 2 provided; no future plans included.\" Issues can include something. Need no extra.\n\nNeed schema exact; claims etc empty arrays maxItems 0. Summary fields.\n\nNeed ensure facts each required. uncertainReason empty string when confirmed. refs strings. op upsert. mode values.\n\nPotential issue: Object string for fact2 contains commas; fine. Predicate concise.\n\nNeed decide fact for \"he took rib/hide and bone in coat\" important. Which four to choose? Maybe:\n1 mammoth identity [4]\n2 mammoth condition no marks [6,7]\n3 he aimed for late Pleistocene [11]\n4 he took rib shard/hide and bone [17,18]\nThen omit older? But older is crucial. Need include older instead of identity? Since mammoth implies. Maybe facts:\n1 \"mammoth carcass\" \"was\" \"a woolly mammoth\" [4]\n2 \"mammoth carcass\" \"was\" \"whole and untouched: no cuts, spear marks, trampled hunter ring, or feeding\" [6,7]\n3 \"the time he reached\" \"was\" \"tens of thousands of years older than the late Pleistocene he had aimed for\" [11,12,13]\n4 \"he\" \"took\" \"a shard of rib and a strip of hide, wrapped the hide around his wrist, and put the bone in his coat\" [17,18]\nThis includes aim in object of fact3, but subject time. Good.\n\nNeed exact sentence numbers [11,12,13] includes aim and older. Mode? It describes narrated? Sentence 11 recalled past. But fact combines. Use mode narrated? Maybe \"recalled_past\" because \"had aimed\". Certainty confirmed. Good.\n\nNeed summary title \"The Mammoth in the Snow\" characters [\"he\"] events [\"He finds a whole woolly mammoth carcass in the snow.\", \"He recognizes the time is far older than his intended late Pleistocene target.\", \"He takes a rib shard and hide strip and walks toward the ravine.\"] mood \"bleak, solitary, disoriented\". Issues [\"The protagonist is unnamed; 'he' used as character label.\"] Good.\n\nNeed final only JSON. Ensure no markdown.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"type\":\"json_object\",\"facts\":[{\"ref\":\"fact-1\",\"op\":\"upsert\",\"subject\":\"mammoth carcass\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[4]},{\"ref\":\"fact-2\",\"op\":\"upsert\",\"subject\":\"mammoth carcass\",\"predicate\":\"was\",\"object\":\"whole and untouched, with no cuts, spear marks, trampled hunter ring, or signs of feeding\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[6,7]},{\"ref\":\"fact-3\",\"op\":\"upsert\",\"subject\":\"the time he reached\",\"predicate\":\"was\",\"object\":\"tens of thousands of years older than the late Pleistocene he had aimed for\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11,12,13]},{\"ref\":\"fact-4\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"took\",\"object\":\"a shard of rib and a strip of hide, wrapped the hide around his wrist, and put the bone in his coat\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[17,18]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"The Mammoth in the Snow\",\"characters\":[\"he\"],\"events\":[\"He finds a whole woolly mammoth carcass in the snow.\",\"He recognizes that the time is far older than his intended late Pleistocene target.\",\"He takes a rib shard and hide strip and walks toward the ravine.\"],\"mood\":\"bleak, solitary, disoriented\"},\"issues\":[\"The protagonist is unnamed; 'he' is used as the character label.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1605,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1210,
+      "totalTokens": 2573,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001926,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.001990608
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177868309,
+    "responseId": "98c96881-b7e2-47f1-ad4a-f7c378a5d156",
+    "rawStopReason": "stop",
+    "durationMs": 9510
+  },
+  "record": {
+    "time": "2026-10-28T08:57:57.820Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-020",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1605,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1210,
+      "totalTokens": 2573,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001926,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.001990608
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.001990608,
+    "inputTokens": 200,
+    "outputTokens": 1605,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 9511
+  }
+}

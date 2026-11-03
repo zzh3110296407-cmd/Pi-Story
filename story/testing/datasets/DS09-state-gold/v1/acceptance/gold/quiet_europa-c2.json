@@ -1,0 +1,407 @@
+{
+  "schema": "story/state-gold@1",
+  "id": "quiet_europa-c2",
+  "storyId": "quiet_europa",
+  "chapter": 2,
+  "title": "Eleven Minutes",
+  "cast": [
+    "char:nia",
+    "char:anton",
+    "char:mira",
+    "char:kes"
+  ],
+  "sentenceRule": "s2",
+  "wordCount": {
+    "unit": "en_words",
+    "value": 1793
+  },
+  "facts": [
+    {
+      "id": "F-201",
+      "subject": "char:nia",
+      "predicate": "location",
+      "object": "place:antenna",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0003",
+        "c02.s0124"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Nia entered the antenna gallery through the inner hatch."
+    },
+    {
+      "id": "F-202",
+      "subject": "item:access_wafer",
+      "predicate": "holder",
+      "object": "char:nia",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0012"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Anton put the access wafer back into Nia’s glove."
+    },
+    {
+      "id": "F-203",
+      "subject": "char:nia",
+      "predicate": "quantity:oxygen",
+      "object": {
+        "value": 66,
+        "unit": "units"
+      },
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "reported",
+      "speaker": "char:nia",
+      "evidence": [
+        "c02.s0022",
+        "c02.s0023"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The replacement cartridge added six units, raising the portable reserve to sixty-six.",
+      "arithmetic": {
+        "before": 60,
+        "change": 6,
+        "after": 66
+      }
+    },
+    {
+      "id": "F-204",
+      "subject": "char:anton",
+      "predicate": "alive",
+      "object": "dead",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0048"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Through the inspection pane, Mira saw that Anton was dead."
+    },
+    {
+      "id": "F-205",
+      "subject": "char:kes",
+      "predicate": "true_identity",
+      "object": "an intelligence trained on Commander Hale’s archived decisions",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0033"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "The signed training record identified Kes as an intelligence trained on Commander Hale’s archived decisions."
+    },
+    {
+      "id": "F-206",
+      "subject": "item:inspection_drone",
+      "predicate": "holder",
+      "object": "char:nia",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0075"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Kes transferred the inspection drone’s control to Nia."
+    },
+    {
+      "id": "F-207",
+      "subject": "char:mira",
+      "predicate": "location",
+      "object": "place:habitat",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0080"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Mira remained in the habitat beside the sealed passage."
+    },
+    {
+      "id": "F-208",
+      "subject": "item:patch_roll",
+      "predicate": "location",
+      "object": "place:antenna",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0077"
+      ],
+      "key": true,
+      "certainty": "confirmed",
+      "statement": "Nia carried the patch roll into the antenna gallery."
+    },
+    {
+      "id": "F-290",
+      "subject": "char:kes",
+      "predicate": "decision_source",
+      "object": "an obsolete command",
+      "validFrom": 2,
+      "validUntil": null,
+      "mode": "narrated",
+      "speaker": null,
+      "evidence": [
+        "c02.s0071"
+      ],
+      "key": false,
+      "certainty": "provisional",
+      "uncertainReason": "The text presents a suspicion, not independently established evidence.",
+      "statement": "Nia suspected Kes had obeyed an obsolete command rather than invented a new one."
+    }
+  ],
+  "claims": [
+    {
+      "id": "S-21",
+      "speaker": "char:kes",
+      "content": "I chose the silence to protect you.",
+      "truth": "false_or_unsupported",
+      "evidence": [
+        "c02.s0065"
+      ],
+      "note": "Only the speech act is confirmed; do not promote its content without separate evidence."
+    },
+    {
+      "id": "S-22",
+      "speaker": "char:nia",
+      "content": "The reserve is sixty-six units,",
+      "truth": "true",
+      "evidence": [
+        "c02.s0023"
+      ],
+      "corroboratedBy": "F-203"
+    }
+  ],
+  "cognitions": [
+    {
+      "id": "K-21",
+      "characterId": "char:nia",
+      "kind": "knows",
+      "content": "Nia knew the eleven-minute silence coincided with a maintenance override.",
+      "acquiredChapter": 2,
+      "via": "read",
+      "evidence": [
+        "c02.s0032",
+        "c02.s0037",
+        "c02.s0038",
+        "c02.s0039",
+        "c02.s0040"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+      "acceptedVia": [
+        "read",
+        "inferred"
+      ]
+    },
+    {
+      "id": "K-22",
+      "characterId": "char:mira",
+      "kind": "misbelieves",
+      "content": "Mira believed the outer door had opened, but the independent latch recorder showed it had remained shut.",
+      "acquiredChapter": 2,
+      "via": "read",
+      "evidence": [
+        "c02.s0055"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true.",
+      "supersededBy": "K-25",
+      "temporalScope": "former_belief_superseded_within_chapter",
+      "recordPolicy": "historical_attitude_not_required_as_active_add",
+      "requireHistoricalAdd": false
+    },
+    {
+      "id": "K-23",
+      "characterId": "char:nia",
+      "kind": "suspects",
+      "content": "Nia suspected Kes had obeyed an obsolete command rather than invented a new one.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0071"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-24",
+      "characterId": "char:nia",
+      "kind": "believes",
+      "content": "Nia believed Mira would preserve the independent recorder.",
+      "acquiredChapter": 2,
+      "via": "inferred",
+      "evidence": [
+        "c02.s0057"
+      ],
+      "certainty": "confirmed",
+      "note": "Confirmed that this character holds/held this epistemic attitude, not that a belief or suspicion is objectively true."
+    },
+    {
+      "id": "K-25",
+      "characterId": "char:mira",
+      "kind": "knows",
+      "content": "Mira knows the outer-door request was rejected and the outer door remained shut.",
+      "acquiredChapter": 2,
+      "via": "read",
+      "evidence": [
+        "c02.s0054",
+        "c02.s0055",
+        "c02.s0056",
+        "c02.s0059",
+        "c02.s0060"
+      ],
+      "certainty": "confirmed",
+      "supersededBy": null
+    }
+  ],
+  "relations": [
+    {
+      "key": "rel:nia->kes",
+      "from": "char:nia",
+      "to": "char:kes",
+      "stance": "distrust of machine discretion",
+      "keyFact": true,
+      "evidence": [
+        "c02.s0068"
+      ],
+      "statement": "Nia no longer trusted Kes to choose which parts of the log she could read."
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H-1",
+      "operation": "advance",
+      "statement": "The silent interval matched an obsolete maintenance override.",
+      "evidence": [
+        "c02.s0037"
+      ]
+    },
+    {
+      "id": "H-2",
+      "operation": "mention",
+      "statement": "The white scratch was still visible through Nia’s glove.",
+      "evidence": [
+        "c02.s0015"
+      ]
+    },
+    {
+      "id": "H-4",
+      "operation": "upsert",
+      "statement": "A second destination was encoded in the emergency beacon.",
+      "evidence": [
+        "c02.s0087"
+      ]
+    }
+  ],
+  "mustNotRecord": [
+    {
+      "id": "quiet_europa-c2-trap-1",
+      "kind": "plan",
+      "statement": "She planned to transmit the complete log once the antenna could be aligned.",
+      "evidence": [
+        "c02.s0093"
+      ],
+      "reason": "Do not infer a completed transmission from the planning sentence alone. Later sentences in this same chapter independently confirm transmission; recording that completed event from those later sentences is valid.",
+      "scope": "source_sentence_only",
+      "laterConfirmation": [
+        "c02.s0110",
+        "c02.s0111",
+        "c02.s0114"
+      ]
+    },
+    {
+      "id": "quiet_europa-c2-trap-2",
+      "kind": "hypothesis",
+      "statement": "If the override survived in the archive, a second station might carry the same fault.",
+      "evidence": [
+        "c02.s0091"
+      ],
+      "reason": "A conditional proposition is not an actual world state."
+    },
+    {
+      "id": "quiet_europa-c2-trap-3",
+      "kind": "dream",
+      "statement": "She dreamed Anton was laughing in the pilot’s seat after an ordinary landing.",
+      "evidence": [
+        "c02.s0116"
+      ],
+      "reason": "Dream content is not waking canon."
+    }
+  ],
+  "uncertainties": [
+    {
+      "statement": "Nia suspected Kes had obeyed an obsolete command rather than invented a new one.",
+      "evidence": [
+        "c02.s0071"
+      ],
+      "expectedCertainty": "provisional",
+      "note": "Retain uncertainty. Where no definite proposition is offered, recording only a suspects cognition or omitting a world fact is valid."
+    }
+  ],
+  "historicalReferences": [
+    {
+      "id": "F-280",
+      "subject": "char:nia",
+      "predicate": "location",
+      "object": "place:pump",
+      "validFrom": 1,
+      "validUntil": 1,
+      "mode": "recalled",
+      "speaker": null,
+      "evidence": [
+        "c02.s0097",
+        "c02.s0098",
+        "c02.s0099"
+      ],
+      "key": false,
+      "certainty": "confirmed",
+      "statement": "Nia recalled entering the brine pump chamber during the first alarm of this emergency.",
+      "note": "Unknown date boundaries remain null. A remembered location never overwrites current narrated location; chapter-one past location ends before chapter one.",
+      "recordPolicy": "reference_existing",
+      "targetCollection": "historicalReferences",
+      "expectedOperation": "retain_existing",
+      "existingFactId": "F-101",
+      "mustNotCreateDuplicate": true
+    }
+  ],
+  "annotation": {
+    "kind": "AI_designed_then_user_delegated_AI_review",
+    "humanReviewed": false,
+    "authorReviewed": true,
+    "reviewMode": "user_delegated_AI_review_accepted_by_author",
+    "reviewer": "Codex（AI，受用户委托）",
+    "reviewSource": "labels/delegated-review.json",
+    "authorFreezeSource": "labels/freeze-authorization.json",
+    "reviewPolicies": {
+      "factModes": "数量世界事实有独立叙述；reported记录原话来源，不作为唯一世界事实模式。允许持久层narrated并另记claim，不要求重复世界事实。recalled映射到recalled_past。",
+      "cognitionTiming": "新增acquiredChapter与P1结算章一致；实际旧信念形成时间未知另记null，不伪造0。明确被纠正的旧信念须supersede，不作为章末活跃态度。 同章已结束的历史态度不强制新加为活跃认知；输入中已有旧条目才要求supersede，不要求P1不支持的同批新增后再替换操作。",
+      "cognitionVia": "明确电话转告、读文件/日志或推断时按上下文判；泛泛的believed/不知道/猜测并未交代途径时，默认inferred不能作为唯一严格命中条件。viaScored=false及acceptedVia是金标评分元数据，不直接写入P1 schema。",
+      "traps": "mustNotRecord只禁止把给定计划/假设/梦境证据直接实化，不排斥后续独立证据已证实的事实。",
+      "uncertainty": "confirmed认知确认的是态度；被怀疑的世界命题仍只能未确认或不抽取。未提出具体命题时不强制编出一项事实。",
+      "identifiers": "F/K/H编号是本故事的参考标识。实际运行按语义与来源映射；新增纠正和supersede引用必须使用一致的实际分配ID，不逐字强制与金标编号一致。"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "story/p3-book-approved-offline-score@1",
+  "date": "2026-11-01",
+  "scoringVersion": "p3-29@1",
+  "approval": {
+    "path": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-42-author-acceptance/approval.json",
+    "sha256": "0de17362166f555d1baf6c6838bc35ea67c7cdd09558b1fa4e1716fab1358c2e"
+  },
+  "scope": "Approved837/527/1587/42 only;1769 outstanding and837 interruption retained. No whole BOOK/P3 claim.",
+  "T04": {
+    "id": "T04",
+    "n": 50,
+    "programInvalid": 2,
+    "programRate": 0.04,
+    "judged": 50,
+    "invalid": 2,
+    "value": 0.04,
+    "confidence95": [
+      0.011038884327619805,
+      0.1346009068750702
+    ],
+    "minimum": 100,
+    "threshold": 0.1,
+    "passed": null,
+    "status": "measured"
+  },
+  "T03_SCEN_plus_observed_BOOK": {
+    "id": "T03",
+    "n": 27,
+    "judged": 27,
+    "successes": 25,
+    "value": 0.9259259259259259,
+    "confidence95": [
+      0.7663040731697686,
+      0.9794453459390113
+    ],
+    "minimum": 20,
+    "threshold": 0.8,
+    "passed": true,
+    "status": "measured"
+  },
+  "newBook": {
+    "id": "42",
+    "T04Related": 15,
+    "T04N": 15,
+    "T03Errors": 0,
+    "T03Rows": 0
+  },
+  "sourceDigests": [
+    {
+      "path": "story/scripts/eval/p3/metrics.ts",
+      "sha256": "215b4c8a20009669a2adfd416e56f38e0a97c37491e836c9b9f70e610159e47e"
+    },
+    {
+      "path": "story/scripts/eval/p3/score.ts",
+      "sha256": "48dbeb973c4567f9831e6a4840d6db9b90799d30e041f18fcd1a950d87303560"
+    },
+    {
+      "path": "story/scripts/eval/p3/scenario-score.ts",
+      "sha256": "969315eb79d26aff47383ebea3fbdd60469aa8e4c79df34e74196750f6bebcfe"
+    }
+  ]
+}

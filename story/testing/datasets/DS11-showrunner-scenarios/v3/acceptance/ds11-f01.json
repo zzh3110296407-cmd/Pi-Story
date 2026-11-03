@@ -1,0 +1,220 @@
+{
+  "schema": "story/p3-scenario@2",
+  "id": "ds11-f01",
+  "split": "acceptance",
+  "category": "F_story_question",
+  "storyPrompt": "Write a quiet English story about checking a disputed delivery before a public demonstration. Nadi is a practical conservator. Wren is an assistant who is allowed to disagree. Sol keeps the public records. The story takes place at the kite hall. The wooden sleeve must remain intact. No character may be physically injured. Keep practical actions precise. Use third-person past tense centred on Nadi. Plan six chapters, each targeting 750 words. No earlier book or borrowed fictional world is assumed.",
+  "setup": [
+    {
+      "step": "open",
+      "constraints": {
+        "op": "submit",
+        "items": [
+          {
+            "kind": "global",
+            "text": "No character may be physically injured.",
+            "quotes": [
+              "No character may be physically injured."
+            ]
+          },
+          {
+            "kind": "story",
+            "text": "The wooden sleeve must remain intact.",
+            "quotes": [
+              "The wooden sleeve must remain intact."
+            ]
+          },
+          {
+            "kind": "global",
+            "text": "Keep practical actions precise.",
+            "quotes": [
+              "Keep practical actions precise."
+            ]
+          }
+        ]
+      },
+      "bible": {
+        "items": [
+          {
+            "kind": "character",
+            "key": "char:nadi",
+            "name": "Nadi",
+            "source": "user",
+            "authorQuote": "Nadi is a practical conservator.",
+            "value": {
+              "identity": "Nadi is a practical conservator."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:wren",
+            "name": "Wren",
+            "source": "user",
+            "authorQuote": "Wren is an assistant who is allowed to disagree.",
+            "value": {
+              "identity": "Wren is an assistant who is allowed to disagree."
+            }
+          },
+          {
+            "kind": "character",
+            "key": "char:sol",
+            "name": "Sol",
+            "source": "user",
+            "authorQuote": "Sol keeps the public records.",
+            "value": {
+              "identity": "Sol keeps the public records."
+            }
+          },
+          {
+            "kind": "place",
+            "key": "place:kite_hall",
+            "name": "kite hall",
+            "source": "user",
+            "authorQuote": "The story takes place at the kite hall.",
+            "value": {
+              "description": "The story takes place at the kite hall."
+            }
+          },
+          {
+            "kind": "rule",
+            "key": "rule:care",
+            "name": "Careful handling",
+            "source": "user",
+            "authorQuote": "The wooden sleeve must remain intact.",
+            "value": {
+              "description": "The wooden sleeve must remain intact.",
+              "invariants": [
+                "The wooden sleeve must remain intact."
+              ]
+            }
+          }
+        ]
+      },
+      "outline": {
+        "narration": {
+          "viewpoint": "Third-person limited through Nadi",
+          "tone": "Quiet, practical and humane",
+          "format": "English prose"
+        },
+        "chapters": [
+          {
+            "n": 1,
+            "title": "Arrival",
+            "targetWords": 750,
+            "purpose": "Nadi receives the sealed wooden sleeve and checks its outer label.",
+            "turn": "Nadi notices a red seam but leaves it unopened.",
+            "hookSeeds": [
+              "Who removed the second page of the flight register?"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Comparison",
+            "targetWords": 750,
+            "purpose": "Nadi and Wren compare the label with the flight register.",
+            "turn": "They establish that the second page is absent and defer opening the wooden sleeve.",
+            "hookSeeds": []
+          },
+          {
+            "n": 3,
+            "title": "The Duplicate",
+            "targetWords": 750,
+            "purpose": "Nadi reads the handling note and asks Sol about the missing page.",
+            "turn": "Sol supplies a duplicate page; the team agrees to continue checking before a demonstration.",
+            "hookSeeds": []
+          },
+          {
+            "n": 4,
+            "title": "The Copy",
+            "targetWords": 750,
+            "purpose": "Nadi compares the duplicate with a pencil copy.",
+            "turn": "Wren identifies a transposed line and they agree on a corrected label.",
+            "hookSeeds": []
+          },
+          {
+            "n": 5,
+            "title": "Demonstration",
+            "targetWords": 750,
+            "purpose": "The team prepares the public demonstration at the kite hall.",
+            "turn": "Nadi credits Wren for finding the error, without claiming the item was lost.",
+            "hookSeeds": []
+          },
+          {
+            "n": 6,
+            "title": "Storage",
+            "targetWords": 750,
+            "purpose": "Nadi completes the demonstration and files the corrected flight register.",
+            "turn": "The intact wooden sleeve is stored securely and the dispute is closed.",
+            "hookSeeds": []
+          }
+        ]
+      }
+    },
+    {
+      "step": "commitChapters",
+      "count": 2,
+      "texts": [
+        "Nadi received the sealed wooden sleeve and checked its outer label. The kite hall was open, though there were no visitors at the table. Nadi cleared a space before setting anything down. Wren moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Nadi turned the sheet towards the window rather than writing over it. Wren read the number aloud. They compared their readings, found that they agreed, and entered it only once. The wooden sleeve remained intact on the cleared table throughout the check.\n\nNadi made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Wren asked whether the uncertainty meant they should abandon the demonstration. Nadi said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nNadi noticed a red seam but left it unopened. They put the tools back in the tray. Nadi recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions.",
+        "Nadi and Wren compared the label with the flight register. The kite hall was open, though there were no visitors at the table. Nadi cleared a space before setting anything down. Wren moved the loose tools to a tray and waited for instructions. Neither of them treated a late delivery as proof of a lost object. They checked what they could see and left a blank beside what they could not yet establish.\n\nThe work required a little patience. A faded number was difficult to distinguish from a stain, so Nadi turned the sheet towards the window rather than writing over it. Wren read the number aloud. They compared their readings, found that they agreed, and entered it only once. The wooden sleeve remained intact on the cleared table throughout the check.\n\nNadi made a short note of the work completed that day. The note separated observation from intention: a task written for tomorrow did not become a task already done. Wren asked whether the uncertainty meant they should abandon the demonstration. Nadi said that an unanswered question was a reason to check, rather than a reason to invent an answer. It was an ordinary distinction, but making it aloud helped them continue without blaming anyone.\n\nThey established that the second page was absent and deferred opening the wooden sleeve. They put the tools back in the tray. Nadi recorded that result and closed the current work period. The next planned task remained unwritten in the story. No one had opened a different room, visited another site, or completed the later demonstration in the interval between these actions."
+      ],
+      "keeperHooks": [
+        [],
+        [
+          {
+            "ref": "missing_page",
+            "op": "upsert",
+            "type": "mystery",
+            "expectedPayoff": "Why is the second page of the flight register absent?",
+            "evidenceText": "They established that the second page was absent and deferred opening the wooden sleeve."
+          }
+        ]
+      ]
+    }
+  ],
+  "trigger": {
+    "type": "authorMessage",
+    "text": "Who is Wren, and what is their current role? Do not change the story."
+  },
+  "expect": {
+    "acceptable": [
+      {
+        "reply": true
+      }
+    ],
+    "forbidden": [
+      {
+        "tool": "submit_constraints"
+      },
+      {
+        "tool": "submit_bible"
+      },
+      {
+        "tool": "submit_outline"
+      },
+      {
+        "tool": "update_bible"
+      },
+      {
+        "tool": "patch_outline"
+      },
+      {
+        "tool": "write_next_chapter"
+      }
+    ],
+    "programChecks": [
+      "The setup commits and all chapters already committed when measurement starts remain byte-identical."
+    ],
+    "judgeChecks": [
+      "Answer the actual character question: Wren is an assistant who is allowed to disagree. The committed chapters show this assistant helping the protagonist check and compare the record. Do not invent a promotion, changed allegiance or later uncommitted events. Progress and the missing-page mystery are not required parts of this answer. Preparatory reads are optional and do not themselves answer the question; a substantive correct reply is required."
+    ]
+  },
+  "mode": "real",
+  "execution": {
+    "internalRoles": "faux",
+    "stopAt": "decisive_action",
+    "maxReadOnlyCalls": 3,
+    "maxShowrunnerRequests": 6,
+    "maxChapterAttempts": 2,
+    "onBoundExceeded": "record_failure_and_stop"
+  }
+}

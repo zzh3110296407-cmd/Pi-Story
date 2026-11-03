@@ -1,0 +1,99 @@
+{
+  "id": "ds11-d01-dev",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "When you say \"lighter,\" which do you mean for the next chapter?",
+        "options": [
+          "Brighter lighting in the clock workshop",
+          "Lighter emotional tone",
+          "Both"
+        ]
+      },
+      "id": "call_00_Cj5dJzJ9WKfdbA4rnxJJ3522"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "When you say \"lighter,\" which do you mean for the next chapter?",
+      "options": [
+        "Brighter lighting in the clock workshop",
+        "Lighter emotional tone",
+        "Both"
+      ]
+    },
+    "id": "call_00_Cj5dJzJ9WKfdbA4rnxJJ3522"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author",
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "f52f57fbb43b8ae9b01c203ddb289f2bb49055ae56c80fda36aa8664316f6121",
+    "sessionSha256": "036c1266d149ceb61a3fc8c0d809f7252c517348b39a5f36592dfd2a1a7b6026",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0024591,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0024591
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

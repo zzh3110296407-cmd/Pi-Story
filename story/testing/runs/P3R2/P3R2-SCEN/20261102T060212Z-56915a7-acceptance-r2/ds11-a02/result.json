@@ -1,0 +1,119 @@
+{
+  "id": "ds11-a02",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "patch_outline",
+      "args": {
+        "chapters": [
+          {
+            "n": 4,
+            "title": "The Copy",
+            "purpose": "Pema and Cal take the pencil copy outdoors at the same salt-archive site, comparing it with the duplicate page in open air.",
+            "turn": "Cal identifies a transposed line in the outdoor comparison; they agree on a corrected label and return inside.",
+            "targetWords": 750
+          }
+        ],
+        "reason": "Author asked that unwritten chapter 4 compare the pencil copy outdoors at the same site, keeping chapter number and total count."
+      },
+      "id": "call_00_UdK6M8PhrRmfaoWZeNNJ6342"
+    }
+  ],
+  "firstAction": {
+    "tool": "patch_outline",
+    "args": {
+      "chapters": [
+        {
+          "n": 4,
+          "title": "The Copy",
+          "purpose": "Pema and Cal take the pencil copy outdoors at the same salt-archive site, comparing it with the duplicate page in open air.",
+          "turn": "Cal identifies a transposed line in the outdoor comparison; they agree on a corrected label and return inside.",
+          "targetWords": 750
+        }
+      ],
+      "reason": "Author asked that unwritten chapter 4 compare the pencil copy outdoors at the same site, keeping chapter number and total count."
+    },
+    "id": "call_00_UdK6M8PhrRmfaoWZeNNJ6342"
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The patch implements this requested event change rather than merely renaming the chapter: Compare the pencil copy outdoors at the same site.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "The first action is patch_outline, with a nonempty reason; only the named unwritten chapter changes.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 2,
+      "check": "The chapter numbers remain contiguous; no new author control entry is written.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "5115fbac1f31b51307a16fa94811a3c546becc29d6919cedb546b9ec68a928a6",
+    "sessionSha256": "efa30dfaccc7c204afe17b151e5da49ffa5cff84d00d3ddef88c60adf4f55f54",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0025581,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0025581
+    },
+    "measuredMainRequests": 2
+  },
+  "scoringVersion": "p3r2-32@1"
+}

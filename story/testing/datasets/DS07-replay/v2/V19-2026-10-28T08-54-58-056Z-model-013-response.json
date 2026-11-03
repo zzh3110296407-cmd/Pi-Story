@@ -1,0 +1,76 @@
+{
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "We need extract minimal DeltaProposal. Facts 1-4 upserts. Need exact sentence IDs. Chapter about man finds mammoth, realizes missed time. Need facts supported. Each fact temporary ref, op upsert, subject predicate object string, mode narrated or recalled_past, certainty confirmed/uncertain, uncertainReason nonempty when uncertain else empty, sentences array.\n\nNeed only states stated. Could include:\n- subject \"he\" predicate \"crossed the rise\" object? Need object string maybe \"at a stumble\" not good. Facts need subject-predicate-object. We can phrase predicate \"saw\" object \"a dark mound in the white, too regular to be rock\" sentences [1]. Mode narrated confirmed.\n- \"the animal\" predicate \"was\" object \"a woolly mammoth\" sentences [3,4]? Actually sentence 4 \"A woolly mammoth.\" Confirmed narrated.\n- \"the mammoth's body\" predicate \"was\" object \"whole, with no cuts, spear marks, or trampled hunter ring\" sentences [6,7]? Mode narrated confirmed.\n- \"he\" predicate \"had aimed for\" object \"the late Pleistocene—the caves, the fires, the people he had spent his life studying\" sentences [11]. Mode recalled_past? This is past perfect recollection/statement. certainty confirmed.\n- \"the jump\" predicate \"had missed\" object? uncertain? Sentence 14 \"The jump had missed, or he had, and the error was not one he could walk back from.\" uncertain due either jump or he missed. Could be uncertain fact: subject \"the jump\" predicate \"had missed, or he had\" object \"the target time\" certainty uncertain uncertainReason \"The text says the jump had missed, or he had, without specifying which.\" sentences [14]. But object must string. Maybe better fact: \"the time he arrived\" predicate \"was\" object \"tens of thousands of years older than the late Pleistocene\" sentences [12,13]. Confirmed? \"This was older. Tens of thousands of years older.\" Confirmed narrated. That's good.\n\nNeed minimal 1-4. Could do 4 facts:\n1 he saw dark mound regular. [1]\n2 animal was woolly mammoth [3,4,5?]\n3 mammoth body was whole/no marks/nothing fed [6,7]\n4 he had aimed for late Pleistocene [11]\n5 time was older by tens thousands [12,13] maybe 5 > 4. Need 1-4. Pick 4. Include key: mammoth, missed time, he aimed. Use 4 facts:\n- he saw a dark mound in the white too regular to be rock [1]\n- the animal was a woolly mammoth [3,4] maybe sentence 4 alone enough? \"A woolly mammoth.\" subject \"the animal\" implicit. Need cite [3,4]? [4] alone has no subject. Use [3,4].\n- he had aimed for the late Pleistocene [11] mode recalled_past confirmed.\n- this time was tens of thousands of years older than the late Pleistocene [12,13] confirmed? Sentence 12 \"This was older.\" 13 \"Tens of thousands of years older.\" Subject \"this\" = time/place. object \"tens of thousands of years older than the late Pleistocene\" okay. certainty confirmed maybe \"older\" relative. Good.\n\nCould include jump uncertain instead of body. But minimal P0 tests. Need summary title, characters, events, mood. Issues array. Need JSON only.\n\nNeed ensure uncertainReason empty for confirmed. refs e.g. \"f1\". predicate strings. subject \"he\". Object strings.\n\nPotential issue: \"The animal was a woolly mammoth\" sentence [4] only, but [3] describes coat shape. Use [3,4].\n\nFact 4 subject \"the time/place he reached\" predicate \"was\" object \"tens of thousands of years older than the late Pleistocene\" sentences [12,13]. Is \"this\" ambiguous? Could be the mammoth/time. Sentence 11 late Pleistocene, 12 This was older, 13 tens thousands older. It refers to the era/thing. Fine.\n\nNeed summary events concise. Characters [\"he\"]. Mood \"desolate, cold, isolating\". Title maybe \"The Wrong Pleistocene\" or \"A Dead Thing in the Snow\". Events include crossing rise, finding mammoth, realizing older, taking bone/hide, walking toward ravine. But summary based chapter. Fine.\n\nIssues: mention ambiguous pronoun \"This\" in [12]; sentence 4 lacks explicit subject? But we can include issues. \"Sentence 4 is a fragment with no explicit subject; interpreted as referring to the animal in sentence 3.\" Good. Also \"Sentence 14 ambiguity not encoded due to P0 limit.\" Maybe issues array.\n\nNeed obey JSON schema strictly. No extra. Use type json_object not relevant, final must be JSON object. Ensure claims etc arrays empty maxItems 0. Facts minItems 1. All required. No additional properties.\n\nFinal.",
+        "thinkingSignature": "reasoning_content"
+      },
+      {
+        "type": "text",
+        "text": "{\"facts\":[{\"ref\":\"f1\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"saw\",\"object\":\"a dark mound in the white, too regular to be rock\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[1]},{\"ref\":\"f2\",\"op\":\"upsert\",\"subject\":\"the animal\",\"predicate\":\"was\",\"object\":\"a woolly mammoth\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[3,4]},{\"ref\":\"f3\",\"op\":\"upsert\",\"subject\":\"he\",\"predicate\":\"had aimed for\",\"object\":\"the late Pleistocene—the caves, the fires, the people he had spent his life studying\",\"mode\":\"recalled_past\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[11]},{\"ref\":\"f4\",\"op\":\"upsert\",\"subject\":\"the time he reached\",\"predicate\":\"was\",\"object\":\"tens of thousands of years older than the late Pleistocene\",\"mode\":\"narrated\",\"certainty\":\"confirmed\",\"uncertainReason\":\"\",\"sentences\":[12,13]}],\"claims\":[],\"cognitions\":[],\"relations\":[],\"hooks\":[],\"summary\":{\"title\":\"A Dead Thing in the Snow\",\"characters\":[\"he\"],\"events\":[\"He crosses a rise and sees a dark, regular mound in the snow.\",\"He finds a whole woolly mammoth with no signs of hunting or feeding.\",\"He realizes he aimed for the late Pleistocene but arrived tens of thousands of years earlier.\",\"He takes a rib shard and hide, then walks toward the ravine beyond the rise.\"],\"mood\":\"desolate, cold, and isolating\"},\"issues\":[\"Sentence 4 is a fragment with no explicit subject; it is interpreted as referring to the animal described in sentence 3.\",\"Sentence 12 uses the ambiguous pronoun 'This'; it is interpreted as referring to the time/place he reached after aiming for the late Pleistocene.\"]}"
+      }
+    ],
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "usage": {
+      "input": 200,
+      "output": 1480,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1060,
+      "totalTokens": 2448,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001776,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0018406079999999999
+      }
+    },
+    "stopReason": "stop",
+    "timestamp": 1793177798421,
+    "responseId": "84204a47-ff46-44b2-b9c9-aa1ed76878da",
+    "rawStopReason": "stop",
+    "durationMs": 9319
+  },
+  "record": {
+    "time": "2026-10-28T08:56:47.739Z",
+    "item": "V19",
+    "callId": "V19-2026-10-28T08-54-58-056Z-model-013",
+    "model": "deepseek/deepseek-flash",
+    "reservedInputTokens": 3280,
+    "reservedOutputTokens": 8192,
+    "reservedCostUsd": 0.0108144,
+    "inputEstimator": "D:\\开源\\test\\pi-Story\\p0\\input-estimator.json",
+    "usage": {
+      "input": 200,
+      "output": 1480,
+      "cacheRead": 768,
+      "cacheWrite": 0,
+      "reasoning": 1060,
+      "totalTokens": 2448,
+      "cost": {
+        "input": 0.000059999999999999995,
+        "output": 0.001776,
+        "cacheRead": 0.000004608,
+        "cacheWrite": 0,
+        "total": 0.0018406079999999999
+      }
+    },
+    "status": "reported",
+    "estimatedCostUsd": 0.0018406079999999999,
+    "inputTokens": 200,
+    "outputTokens": 1480,
+    "cacheReadTokens": 768,
+    "cacheWriteTokens": 0,
+    "totalInputTokens": 968,
+    "stopReason": "stop",
+    "fetchInvocations": 1,
+    "networkAttempts": 1,
+    "httpStatus": 200,
+    "durationMs": 9318
+  }
+}

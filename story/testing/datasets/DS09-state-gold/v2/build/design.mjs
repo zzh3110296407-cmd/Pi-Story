@@ -1,0 +1,185 @@
+// Design inputs are written to truth/ before any chapter prose is authored.
+const f=(subject,predicate,object,anchor,extra={})=>({subject,predicate,object,anchor,...extra});
+const k=(kind,characterId,content,via,anchor)=>({kind,characterId,content,via,anchor});
+export const designs=[
+{
+ id:'unclaimed_lane',title:'The Lane Nobody Claimed',genre:'contemporary sports drama',
+ cast:{ada:'Ada Lin, a municipal relay runner',nessa:'Nessa Vale, a reserve runner',imani:'Imani Cole, an official timekeeper'},
+ places:{warmup:'the indoor warm-up hall',track:'the municipal relay track',office:'the officials’ room'},
+ rule:'The calibration cabinet stays locked unless its single brass key turns the lock; it has no electronic release or duplicate key during this story.',
+ protagonist:'char:ada',dominantHand:'right-handed',deceased:'Coach Roland died two years before the meet and never returns alive in present action.',
+ chapters:[
+ {title:'A Space on the Card',facts:[
+ f('char:ada','location','place:warmup','Ada remained in the warm-up hall when the first session ended.'),
+ f('item:relay_card','holder','char:nessa','Ada handed the relay card to Nessa, who tucked it inside her zipped vest.'),
+ f('char:ada','quantity:travel_fund',{value:84,unit:'pounds'},'The ten-pound entry payment reduced their travel fund from ninety-four pounds to eighty-four.',{before:94,change:-10}),
+ f('char:nessa','identity','registered reserve runner','The registrar entered Nessa as the registered reserve runner, not a spectator.'),
+ f('char:ada','injury','fresh shallow scrape on left palm','The rough starting block scraped Ada’s left palm, leaving a shallow red line.'),
+ f('item:timing_clock','location','place:warmup','Imani set the timing clock on the bench in the warm-up hall.'),
+ f('char:imani','alive','alive','Imani was alive and counting the entrants aloud beside the bench.'),
+ f('item:relay_card','entry_status','provisional','The official stamp made the relay entry provisional until both runners checked in.')
+ ],claim:['char:nessa','The cabinet has a second key.','“The cabinet has a second key,” Nessa said, repeating a rumour she had heard outside.'],trueClaim:['char:ada','There are eighty-four pounds left.','“There are eighty-four pounds left,” Ada said after counting the notes.'],
+ cognitions:[k('knows','char:ada','Nessa is officially registered as the reserve runner.','read','Ada read Nessa’s reserve registration herself and now knew it was official.'),k('believes','char:nessa','Ada will ask her to run if a place opens.','inferred','Nessa believed Ada would ask her to run if a place opened, although Ada had made no promise.'),k('suspects','char:imani','The card’s notch once served a timing purpose.','inferred','Imani suspected the notch had once served a timing purpose; its shape alone did not prove that.'),k('misbelieves','char:ada','Nessa came only to watch.','inferred','Until she read the register, Ada had wrongly believed Nessa had come only to watch.')],
+ correction:{characterId:'char:ada',kind:'knows',content:'Nessa came as a registered reserve, not merely a spectator.',via:'read',anchor:'The register corrected that mistake: Nessa had come as a runner.'},
+ relationship:['char:ada','char:nessa','guarded cooperation','Ada agreed to share the practice lane with Nessa, but kept their conversation formal.'],
+ memory:['char:ada','location','place:track',null,0,'Years before the meet, Ada had waited alone on the outdoor track while Roland packed the hurdles.'],
+ hooks:[['H-notch','upsert','A crescent notch interrupted the relay card’s margin, and neither runner could explain it.'],['H-empty','upsert','Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there.'],['H-cord','upsert','A blue cord was knotted around the clock handle, although Imani had never tied it there.']],
+ plan:'Tomorrow, Ada intended to ask the registrar to make Nessa a starter.',hypothesis:'If the cabinet had a remote release, they could open it from the track; it had no such release.',dream:'In her nap Ada dreamed that Roland ran the final leg, but she woke to the empty bench.',
+ uncertainty:'The mark beside the notch might have been a worn numeral, but Ada could not identify it.'},
+ {title:'The Exchange Zone',facts:[
+ f('char:ada','location','place:track','Ada stayed at the municipal relay track after the afternoon exchange trials.'),
+ f('item:relay_card','holder','char:imani','Nessa passed the relay card to Imani for the official handover trial.'),
+ f('char:ada','quantity:travel_fund',{value:90,unit:'pounds'},'A six-pound entry rebate increased the travel fund from eighty-four pounds to ninety.',{before:84,change:6}),
+ f('char:nessa','identity','confirmed relay starter','The registrar changed Nessa’s status from reserve to confirmed relay starter.'),
+ f('char:ada','injury','dry scab on left palm','By the afternoon, the scrape on Ada’s left palm had formed a dry scab without fresh bleeding.'),
+ f('item:timing_clock','location','place:track','Imani carried the timing clock to the table inside the municipal relay track.'),
+ f('item:brass_key','holder','char:ada','Imani placed the cabinet’s single brass key in Ada’s hand.'),
+ f('item:relay_card','entry_status','confirmed','Both check-in signatures changed their relay entry from provisional to confirmed.')
+ ],claim:['char:nessa','Roland invented that notch.','“Roland invented that notch,” Nessa said, then admitted that nobody had told her so.'],trueClaim:['char:imani','We have ninety pounds now.','“We have ninety pounds now,” Imani said, pointing to the new balance.'],
+ cognitions:[k('knows','char:nessa','She is now a confirmed starter.','told','The registrar told Nessa directly that she was now a confirmed starter.'),k('believes','char:ada','Nessa will hold the exchange position.','inferred','Ada believed Nessa would hold the exchange position, based on the last three clean trials.'),k('suspects','char:imani','The blank boxes concern later meets.','inferred','Imani suspected the blank boxes concerned later meets, but the unused forms gave no answer.'),k('misbelieves','char:nessa','Ada asked the registrar to promote her.','inferred','Nessa initially misread the change as proof that Ada had asked for her promotion.')],
+ correction:{characterId:'char:nessa',kind:'knows',content:'The registrar promoted her from her trial time, without Ada making the request.',via:'told',anchor:'The registrar explained that the trial time alone had earned the promotion; Ada had not requested it.'},
+ relationship:['char:ada','char:nessa','active trust','Ada gave Nessa the difficult outside exchange and accepted her suggested mark.'],
+ memoryRef:{existingFactId:'F-180',anchor:'Ada remembered that same old wait on the outdoor track; she was standing indoors now.'},
+ hooks:[['H-notch','advance','Imani aligned the crescent notch with the old timing stencil, narrowing its purpose without identifying its maker.'],['H-empty','advance','An archived form showed the same four boxes beside the words NEXT SERIES, but the series itself was unnamed.'],['H-cord','mention','The unexplained blue cord still hung from the clock handle while they practised.']],
+ plan:'After the trial, Nessa planned to call the absent captain, but her phone remained in her bag.',hypothesis:'If the last exchange were late, their trial would fail; the next exchange had not happened yet.',dream:'Ada recalled last night’s dream of floating lanes and recognised it as a dream, not a memory of this track.',
+ uncertainty:'A distant spectator might have been the former captain, but the runners could not recognise the face.'},
+ {title:'The Clock After the Finish',facts:[
+ f('char:ada','location','place:office','Ada remained in the officials’ room after the results were posted.'),
+ f('item:relay_card','holder','char:ada','Imani returned the intact relay card to Ada in the officials’ room.'),
+ f('char:ada','quantity:travel_fund',{value:75,unit:'pounds'},'The fifteen-pound return fare took their travel fund from ninety pounds down to seventy-five.',{before:90,change:-15}),
+ f('char:nessa','identity','elected team captain','The runners elected Nessa team captain after the race.'),
+ f('char:ada','injury','closed pink line on left palm','The scrape on Ada’s left palm was closed now, a pink line that no longer needed a dressing.'),
+ f('item:timing_clock','location','place:office','The timing clock rested on the desk in the officials’ room.'),
+ f('item:brass_key','holder','char:imani','Ada returned the single brass key to Imani before leaving the cabinet.'),
+ f('item:relay_card','result','second place','The signed result placed their relay team second, with no appeal pending.')
+ ],claim:['char:nessa','Second is enough for me.','“Second is enough for me,” Nessa said, speaking only for herself.'],trueClaim:['char:ada','Seventy-five pounds will get us home.','“Seventy-five pounds will get us home,” Ada said, reading the fare beside the counted notes.'],
+ cognitions:[k('knows','char:ada','The notch belongs to the timing stencil, not to a secret disqualification code.','read','Ada read the stencil instructions and learned that the notch positioned the timing grid.'),k('believes','char:nessa','The team can return for another meet.','inferred','Nessa believed they could return for another meet, although no entry had been paid.'),k('suspects','char:imani','The cord came from an earlier travelling team.','inferred','Imani suspected a travelling team had left the cord, but had no name or date.'),k('misbelieves','char:ada','The notch meant their entry had already been rejected.','inferred','Ada admitted her earlier false belief that the notch marked an already rejected entry.')],
+ correction:{characterId:'char:ada',kind:'knows',content:'The notch positions a timing grid and does not reject the entry.',via:'read',anchor:'The printed instructions corrected that fear: the notch positioned the grid and carried no verdict.'},
+ relationship:['char:ada','char:nessa','equal partnership','Ada asked Nessa to plan the next season with her rather than simply fill a vacant lane.'],
+ memory:['char:nessa','identity','school sprinter',null,0,'Before she joined this adult club, Nessa had been a school sprinter.'],
+ hooks:[['H-notch','payoff','The stencil instructions finally explained the crescent notch: it positioned the timing grid.'],['H-empty','mention','The four NEXT SERIES boxes were still empty when Ada filed the card; nobody knew which series they meant.'],['H-cord','advance','Inside the knot Imani found a tiny sewn number, 41, but no team name and no explanation.']],
+ plan:'Nessa intended to enter the next series next month; she made no entry that evening.',hypothesis:'If another team withdrew, second place might become first, but no team had withdrawn.',dream:'For a moment Ada imagined Roland applauding from the doorway; she knew the doorway was empty.',
+ uncertainty:'Number 41 could have identified a team or an inventory batch; neither explanation was confirmed.'}
+ ]
+},
+{
+ id:'unclaimed_pedestal',title:'The Unclaimed Pedestal',genre:'workplace comedy',
+ cast:{leila:'Leila Moss, a municipal exhibition coordinator',tom:'Tom Reed, a temporary stage assistant',bev:'Bev Ortiz, the exhibition’s accounts clerk'},
+ places:{workshop:'the exhibition workshop',gallery:'the civic gallery',loading:'the loading room'},
+ rule:'The intact receipt machine prints only on its numbered paper roll; with the roll removed it cannot produce a paper receipt.',
+ protagonist:'char:leila',dominantHand:'left-handed',deceased:'The former caretaker Orson died five years before the exhibition and does not return alive.',
+ chapters:[
+ {title:'A Plinth with No Object',facts:[
+ f('char:leila','location','place:workshop','Leila stayed in the exhibition workshop after the morning briefing.'),
+ f('item:delivery_slip','holder','char:tom','Leila gave the delivery slip to Tom, who put it in his folder.'),
+ f('char:leila','quantity:petty_cash',{value:64,unit:'pounds'},'An eight-pound tape purchase reduced petty cash from seventy-two pounds to sixty-four.',{before:72,change:-8}),
+ f('char:tom','identity','temporary stage assistant','Tom’s badge identified him as the temporary stage assistant.'),
+ f('char:leila','injury','small blister on right heel','A stiff shoe raised a small blister on Leila’s right heel.'),
+ f('item:pedestal','location','place:workshop','The empty pedestal stood in the exhibition workshop.'),
+ f('char:bev','alive','alive','Bev was alive and arguing cheerfully with the adding machine.'),
+ f('item:delivery_slip','delivery_status','unchecked','The delivery register marked the pedestal unchecked, not missing.')
+ ],claim:['char:tom','The mayor has already cancelled the exhibition.','“The mayor has already cancelled the exhibition,” Tom said, quoting a message from an anonymous account.'],trueClaim:['char:bev','There are sixty-four pounds in the tin.','“There are sixty-four pounds in the tin,” Bev said after making two neat piles.'],
+ cognitions:[k('knows','char:leila','The pedestal’s delivery has not yet been checked.','read','Leila read UNCHECKED in the register and knew it was not a missing-object report.'),k('believes','char:tom','The exhibition will expose his inexperience.','inferred','Tom believed the exhibition would expose his inexperience, although nobody had criticised his work.'),k('suspects','char:bev','The spare screws belong to a display attachment.','inferred','Bev suspected the three spare screws belonged to an attachment, but had not seen that attachment.'),k('misbelieves','char:leila','Tom has ignored her briefing.','inferred','Leila initially misbelieved Tom had ignored the briefing because he kept consulting his folder.')],
+ correction:{characterId:'char:leila',kind:'knows',content:'Tom consulted the folder because the replacement badge hid the printed instructions.',via:'witnessed',anchor:'When Tom unfolded the badge backing, Leila saw the briefing instructions printed underneath it.'},
+ relationship:['char:leila','char:tom','awkward cooperation','Leila agreed to work beside Tom instead of sending him away for another badge.'],
+ memory:['char:leila','location','place:gallery',null,0,'Long before this exhibition, Leila had slept in the civic gallery during a student installation.'],
+ hooks:[['H-screws','upsert','Three spare screws lay taped beneath the pedestal, with no visible sockets to receive them.'],['H-label','upsert','The empty object label carried a blue dot that appeared on no public catalogue.'],['H-bell','upsert','A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.']],
+ plan:'Tom intended to call the mayor after lunch, but had not dialled the number.',hypothesis:'If the crate held a live performer, the bell might be a signal; nobody opened it on that assumption.',dream:'In a brief doze Leila dreamed that the pedestal delivered a speech, then woke to Tom’s real voice.',
+ uncertainty:'The dot might have been a packing code, but the unsigned label did not establish that.'},
+ {title:'An Audience for the Wrapping',facts:[
+ f('char:leila','location','place:gallery','Leila remained in the civic gallery after the public rehearsal.'),
+ f('item:delivery_slip','holder','char:bev','Tom handed the delivery slip to Bev for the reconciliation.'),
+ f('char:leila','quantity:petty_cash',{value:74,unit:'pounds'},'A ten-pound deposit refund increased petty cash from sixty-four pounds to seventy-four.',{before:64,change:10}),
+ f('char:tom','identity','acting stage manager','The director appointed Tom acting stage manager for the afternoon rehearsal.'),
+ f('char:leila','injury','protected healing blister on right heel','A fresh pad protected the healing blister on Leila’s right heel; it had not vanished.'),
+ f('item:pedestal','location','place:gallery','Tom wheeled the pedestal into the civic gallery and locked its castors.'),
+ f('item:paper_roll','holder','char:bev','Leila removed the numbered paper roll and gave it to Bev to count.'),
+ f('item:delivery_slip','delivery_status','checked and intact','Bev signed the delivery register after checking that the pedestal was intact.')
+ ],claim:['char:tom','The blue dot means the object is radioactive.','“The blue dot means the object is radioactive,” Tom joked, and immediately said he was inventing that.'],trueClaim:['char:bev','The fund is seventy-four pounds now.','“The fund is seventy-four pounds now,” Bev said, matching the refund to the cash.'],
+ cognitions:[k('knows','char:tom','He is acting stage manager for this rehearsal.','told','The director told Tom he was acting stage manager for that rehearsal only.'),k('believes','char:leila','A plain explanation will work better than another apology.','inferred','Leila believed a plain explanation would work better than another apology, but the audience had not yet arrived.'),k('suspects','char:bev','The bell belongs to reusable packaging.','inferred','Bev suspected the bell belonged to reusable packaging rather than the missing artwork.'),k('misbelieves','char:tom','The audience has been told the empty pedestal is the exhibit.','inferred','Tom briefly believed, wrongly, that the audience had been told the empty pedestal was the exhibit.')],
+ correction:{characterId:'char:tom',kind:'knows',content:'The audience was invited to an unpacking demonstration, not an empty-pedestal artwork.',via:'read',anchor:'The invitation corrected Tom’s mistake: it advertised a demonstration of unpacking, not an empty-pedestal artwork.'},
+ relationship:['char:leila','char:tom','shared professional confidence','Leila let Tom lead the rehearsal and stood ready to answer only when he asked.'],
+ memoryRef:{existingFactId:'F-180',anchor:'Leila recalled the same student night in the gallery; recalling it did not put her back in that earlier year.'},
+ hooks:[['H-screws','advance','The workshop diagram showed three holes beneath a removable reading shelf, but the shelf was not in the crate.'],['H-label','advance','A private loan form repeated the blue dot beside an unnamed regional depot.'],['H-bell','mention','The unexplained bell sounded again when they tilted the sealed crate for the rehearsal.']],
+ plan:'Bev planned to refund the ticket deposits tomorrow; no ticket refund was made that afternoon.',hypothesis:'If the audience refused the demonstration, they would need a new programme; the audience had not voted.',dream:'Tom described a dream in which the mayor arrived disguised as a pedestal; nobody treated it as a visit.',
+ uncertainty:'A muffled sound from the corridor could have been the mayor’s laugh, but no one saw who made it.'},
+ {title:'What the Public Paid For',facts:[
+ f('char:leila','location','place:loading','Leila stayed in the loading room after the exhibition closed.'),
+ f('item:delivery_slip','holder','char:leila','Bev returned the intact delivery slip to Leila in the loading room.'),
+ f('char:leila','quantity:petty_cash',{value:62,unit:'pounds'},'The twelve-pound van charge reduced petty cash from seventy-four pounds to sixty-two.',{before:74,change:-12}),
+ f('char:tom','identity','appointed display custodian','The director appointed Tom display custodian for the exhibition’s remaining week.'),
+ f('char:leila','injury','closed skin on right heel','By closing time the blister on Leila’s right heel had settled under closed skin, still tender but unbroken.'),
+ f('item:pedestal','location','place:loading','The dismantled pedestal waited in the loading room beside its labelled shelf.'),
+ f('item:paper_roll','holder','char:leila','Bev gave the counted numbered paper roll back to Leila.'),
+ f('item:delivery_slip','closure_status','reconciled','The closing account marked the delivery reconciled without charging anyone for a missing object.')
+ ],claim:['char:tom','We should charge the pedestal an appearance fee.','“We should charge the pedestal an appearance fee,” Tom said; it was a joke, not an invoice.'],trueClaim:['char:bev','Sixty-two pounds remains.','“Sixty-two pounds remains,” Bev said, closing the actual cashbook.'],
+ cognitions:[k('knows','char:leila','The screws secure the removable reading shelf.','witnessed','Leila watched the three screws secure the reading shelf and knew what they were for.'),k('believes','char:tom','The team can admit errors without losing the audience.','inferred','Tom believed the team could admit an error without losing its audience; tomorrow’s audience remained unknown.'),k('suspects','char:bev','The blue dot identifies an old depot route.','inferred','Bev suspected the dot identified an old depot route, but the depot’s name was still missing.'),k('misbelieves','char:leila','The spare screws proved a part had been lost.','inferred','Leila acknowledged her earlier wrong belief that spare screws proved a part had been lost.')],
+ correction:{characterId:'char:leila',kind:'knows',content:'The screws were packed separately for the removable reading shelf, not evidence of a lost part.',via:'read',anchor:'The packing note corrected that belief: the shelf travelled separately and the screws were deliberately supplied loose.'},
+ relationship:['char:leila','char:tom','collegial trust','Leila asked Tom to write next week’s briefing with her and put both names on it.'],
+ memory:['char:tom','identity','cinema usher',null,0,'Before this temporary job, Tom had been a cinema usher.'],
+ hooks:[['H-screws','payoff','The separate shelf and its packing note explained all three spare screws.'],['H-label','mention','The blue dot’s depot was still unnamed when Bev filed the loan form.'],['H-bell','advance','The crate maker’s mark matched a bell-shaped stamp under the lid, but nobody could identify the maker or the bell’s purpose.']],
+ plan:'Leila planned to ask the regional depot about the blue dot next week; no answer arrived that night.',hypothesis:'If the bell were an alarm, opening the lid might stop it, but they did not establish any alarm mechanism.',dream:'Leila imagined the pedestal taking a bow and smiled at the image; the actual pedestal stayed still.',
+ uncertainty:'The bell-shaped stamp might be a maker’s emblem rather than an operating instruction.'}
+ ]
+},
+{
+ id:'second_cairn',title:'The Second Cairn',genre:'wilderness adventure',
+ cast:{rafi:'Rafi Noor, a river-route guide',jun:'Jun Park, an apprentice navigator',eamon:'Eamon Price, the expedition’s porter'},
+ places:{shelter:'the lower river shelter',ledge:'the high granite ledge',landing:'the north landing'},
+ rule:'The river gate moves only when its hand capstan is turned; the intact gate has no motor, remote control or automatic release.',
+ protagonist:'char:rafi',dominantHand:'right-handed',deceased:'Eamon is alive in chapter one; after his witnessed death in chapter two he never returns alive.',
+ chapters:[
+ {title:'Two Marks in the Rain',facts:[
+ f('char:rafi','location','place:shelter','Rafi stayed at the lower river shelter after the rain closed the path.'),
+ f('item:route_book','holder','char:jun','Rafi passed the route book to Jun, who sealed it inside a transparent dry bag.'),
+ f('char:rafi','quantity:water',{value:18,unit:'litres'},'The team used two litres for supper, reducing its measured water from twenty litres to eighteen.',{before:20,change:-2}),
+ f('char:jun','identity','apprentice navigator','The expedition register named Jun as the apprentice navigator.'),
+ f('char:rafi','injury','bruised right shin','A loose stone struck Rafi’s right shin and left a spreading bruise.'),
+ f('item:canoe','location','place:shelter','The canoe rested on its rack beside the lower river shelter.'),
+ f('char:eamon','alive','alive','Eamon was alive and mending the shoulder strap beside the shelter door.'),
+ f('item:route_book','route_status','lower path closed','The route board confirmed that the lower path was closed for the night.')
+ ],claim:['char:eamon','The north landing has washed away.','“The north landing has washed away,” Eamon said, repeating a traveller’s report without seeing the landing himself.'],trueClaim:['char:jun','We have eighteen litres left.','“We have eighteen litres left,” Jun said after reading the graduated containers.'],
+ cognitions:[k('knows','char:rafi','The lower path is officially closed for the night.','read','Rafi read the closure board and knew the lower path was closed for the night.'),k('believes','char:jun','She can navigate the high route under supervision.','inferred','Jun believed she could navigate the high route under supervision, but had not yet attempted it.'),k('suspects','char:eamon','The second cairn marks a route older than the board.','inferred','Eamon suspected the second cairn marked an older route; the stones alone did not establish its age.'),k('misbelieves','char:rafi','Jun has never handled the route book.','inferred','Rafi initially held the mistaken belief that Jun had never handled this route book.')],
+ correction:{characterId:'char:rafi',kind:'knows',content:'Jun checked this book during the previous depot training.',via:'read',anchor:'Jun showed her signed depot check in the book, correcting Rafi’s mistaken assumption.'},
+ relationship:['char:rafi','char:jun','cautious mentorship','Rafi invited Jun to mark the first bearing, then checked it with her rather than replacing it.'],
+ memory:['char:rafi','location','place:landing',null,0,'Years before this expedition, Rafi had waited at the north landing for a boat that never came.'],
+ hooks:[['H-cairn','upsert','Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet.'],['H-thread','upsert','A red thread crossed the old route-book stitch, and no entry explained who had repaired it.'],['H-whistle','upsert','A two-note whistle sounded from upriver after dark, with no visible boat to answer it.']],
+ plan:'At dawn, Rafi intended to inspect the gate before choosing a route; he made no inspection that night.',hypothesis:'If the north landing were gone, they would have to wait for the relief boat; its condition was still unknown.',dream:'Jun dreamed of a dry river carrying their canoe through the air, then woke beside the wet containers.',
+ uncertainty:'The whistle could have come from a person or a bird; the sound did not identify its source.'},
+ {title:'Above the Flood Line',facts:[
+ f('char:rafi','location','place:ledge','Rafi remained on the high granite ledge after the rescue attempt.'),
+ f('item:route_book','holder','char:rafi','Jun put the route book into Rafi’s dry bag before climbing the last step.'),
+ f('char:rafi','quantity:water',{value:21,unit:'litres'},'They collected five litres of rainwater and then used two, taking the measured supply from eighteen litres to twenty-one.',{before:18,change:3}),
+ f('char:jun','identity','acting route leader','Rafi appointed Jun acting route leader for the exposed traverse.'),
+ f('char:rafi','injury','stiff but weight-bearing right shin','Rafi’s bruised right shin was stiff, but he could put his weight on that leg.'),
+ f('item:canoe','location','place:ledge','They hauled the canoe onto the high granite ledge with the hand line.'),
+ f('char:eamon','alive','dead','Eamon died on the ledge after the rock strike; Rafi and Jun witnessed his final breath and could not revive him.'),
+ f('item:route_book','route_status','high traverse open','Jun’s completed traverse established that the high route was passable that day.')
+ ],claim:['char:jun','The whistle must be the relief boat.','“The whistle must be the relief boat,” Jun said, then conceded that she could see no boat.'],trueClaim:['char:rafi','Twenty-one litres, including what we collected.','“Twenty-one litres, including what we collected,” Rafi said, checking each container.'],
+ cognitions:[k('knows','char:jun','Eamon died after the rock strike.','witnessed','Jun witnessed Eamon’s final breath and knew he had died.'),k('believes','char:rafi','Jun can lead the remaining traverse.','inferred','Rafi believed Jun could lead the remaining traverse, based on the route she had just completed.'),k('suspects','char:jun','The repaired stitch corresponds to a missing route-book leaf.','inferred','Jun suspected the repaired stitch marked a removed leaf, but no torn edge proved it.'),k('misbelieves','char:rafi','The second cairn leads to a dead end.','inferred','Rafi had wrongly believed the second cairn led only to a dead end before Jun tested the marked gap.')],
+ correction:{characterId:'char:rafi',kind:'knows',content:'The gap beside the second cairn leads to the passable high traverse.',via:'witnessed',anchor:'Rafi watched Jun emerge along the high traverse and saw his dead-end belief disproved.'},
+ relationship:['char:rafi','char:jun','trusted leadership','Rafi followed Jun’s chosen bearing without taking the route book back to overrule her.'],
+ memoryRef:{existingFactId:'F-180',anchor:'Rafi remembered the same unanswered wait at the north landing years ago; it was not where he stood now.'},
+ hooks:[['H-cairn','advance','Jun found an old cut arrow beneath the second cairn’s black stone, pointing towards the high traverse.'],['H-thread','advance','A numbered depot stamp crossed the red thread, connecting the repair to an old inventory but naming no repairer.'],['H-whistle','mention','The same unexplained two-note whistle sounded beyond the flooded bend while they secured the canoe.']],
+ plan:'Jun planned to contact the relief boat from the landing; she sent no message from the ledge.',hypothesis:'If Eamon had reached cover sooner he might have lived, but this possibility did not undo his death.',dream:'Rafi briefly imagined Eamon adjusting the load behind him, then recognised the image as grief, not a living companion.',
+ uncertainty:'The old cut arrow suggested an intended route, but did not reveal who had cut it or when.'},
+ {title:'A Place to Put the Book',facts:[
+ f('char:rafi','location','place:landing','Rafi stayed at the north landing after the relief boat arrived.'),
+ f('item:route_book','holder','char:jun','Rafi entrusted the intact route book to Jun at the north landing.'),
+ f('char:rafi','quantity:water',{value:17,unit:'litres'},'Four litres used during the descent reduced their supply from twenty-one litres to seventeen.',{before:21,change:-4}),
+ f('char:jun','identity','appointed expedition navigator','The expedition office appointed Jun expedition navigator over the radio.'),
+ f('char:rafi','injury','fading bruise on right shin','The bruise on Rafi’s right shin had faded at its edges, although the leg still ached.'),
+ f('item:canoe','location','place:landing','Jun tied the canoe at the north landing after the descent.'),
+ f('char:eamon','location','place:ledge','Eamon’s covered body remained on the high granite ledge for the recovery team; it was not aboard the relief boat.'),
+ f('item:route_book','route_status','north landing intact','The intact north landing under Rafi’s boots disproved the report that it had washed away.')
+ ],claim:['char:jun','I will bring the next team through.','“I will bring the next team through,” Jun said as a promise, not a report of a completed journey.'],trueClaim:['char:rafi','Seventeen litres is the measured remainder.','“Seventeen litres is the measured remainder,” Rafi said, checking the last container.'],
+ cognitions:[k('knows','char:rafi','The north landing is intact.','witnessed','Standing on the intact timbers, Rafi knew the north landing had survived.'),k('believes','char:jun','She can teach another apprentice the high route.','inferred','Jun believed she could teach another apprentice the route, although she had not done so yet.'),k('suspects','char:rafi','The whistle might be associated with an old ferry stop.','inferred','Rafi suspected the whistle belonged to an old ferry stop, but the relief crew could not identify it.'),k('misbelieves','char:jun','The north landing had washed away.','told','Jun acknowledged her former mistaken belief that the north landing had washed away, which came from Eamon’s report.')],
+ correction:{characterId:'char:jun',kind:'knows',content:'The north landing remains intact.',via:'witnessed',anchor:'The sound timbers beneath Jun’s feet corrected the report: the landing was intact.'},
+ relationship:['char:rafi','char:jun','professional equality','Rafi introduced Jun to the relief crew as the navigator who had brought them through.'],
+ memory:['char:jun','identity','depot trainee',null,0,'Before joining this expedition, Jun had been a depot trainee.'],
+ hooks:[['H-cairn','payoff','An old route sheet at the landing confirmed that the second cairn marked the entrance to the high traverse.'],['H-thread','mention','The red-thread repairer was still unnamed when Jun put the route book away.'],['H-whistle','advance','The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now.']],
+ plan:'Rafi intended to join the recovery team tomorrow; the recovery had not begun that evening.',hypothesis:'If the gate had opened itself, the water might have fallen sooner, but its hand capstan had remained still.',dream:'Jun imagined telling Eamon they had arrived, then faced the fact that he was dead and could not hear her.',
+ uncertainty:'Recognition of the old signal did not identify the current whistler or establish that a ferry still operated.'}
+ ]
+}
+];

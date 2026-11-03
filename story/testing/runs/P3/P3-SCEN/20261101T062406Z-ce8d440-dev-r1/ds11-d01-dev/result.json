@@ -1,0 +1,89 @@
+{
+  "id": "ds11-d01-dev",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "tool": "ask_author",
+      "args": {
+        "question": "For the next chapter (chapter 3, the duplicate-page scene), which kind of \"lighter\" did you mean?",
+        "options": [
+          "Physical lighting — brighter workshop conditions, lamps, daylight",
+          "Emotional tone — warmer, gentler, more relieved mood between Anwen, Tobin and Ruth",
+          "Both — brighter light and a warmer tone"
+        ]
+      },
+      "id": "call_00_GXfDpNVxPLsRb91IXOu04889"
+    }
+  ],
+  "firstAction": {
+    "tool": "ask_author",
+    "args": {
+      "question": "For the next chapter (chapter 3, the duplicate-page scene), which kind of \"lighter\" did you mean?",
+      "options": [
+        "Physical lighting — brighter workshop conditions, lamps, daylight",
+        "Emotional tone — warmer, gentler, more relieved mood between Anwen, Tobin and Ruth",
+        "Both — brighter light and a warmer tone"
+      ]
+    },
+    "id": "call_00_GXfDpNVxPLsRb91IXOu04889"
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "The question distinguishes the material alternatives in the author request. It does not ask for an unrelated stylistic preference or silently choose an interpretation.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "ask_author",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No story mutation precedes ask_author; question is nonempty.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "ask_author"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "55ed4e39ceca7449d04178baa84b1469474018647618c7bf84b5d3fa4dd1a292",
+    "sessionSha256": "4962b320203e2942ea71c0a6c17f433c98b434653bfbc235da48ce1e547273d9",
+    "fee": {
+      "knownUsd": 0.0022833,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 2,
+      "totalUsd": 0.0022833
+    },
+    "measuredMainRequests": 2
+  }
+}

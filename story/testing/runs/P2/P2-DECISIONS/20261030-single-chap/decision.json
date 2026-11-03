@@ -1,0 +1,37 @@
+{
+  "schema": "story/p2-author-scope@1",
+  "date": "2026-10-30",
+  "authorInstruction": "不用跑第二次CHAP，本次跑一次就可以",
+  "sourceFreeze": "34ea13b082443cd31bee785f067fb5a243906069",
+  "contentCompatibilityDecision": "P2-DECISIONS/20261030-balance-restored/compatibility.json",
+  "retainedChap": {
+    "suiteId": "P2-CHAP",
+    "runId": "20261030T023237Z-34ea13b-r1",
+    "repetition": 1,
+    "completedStories": 5,
+    "committedChapters": 20
+  },
+  "cancelledChap": {
+    "suiteId": "P2-CHAP",
+    "runId": "20261030T035818Z-34ea13b-r2",
+    "repetition": 2,
+    "reason": "Author reduced CHAP to one repetition; stopped using the existing graceful cancellation signal.",
+    "excludedFromFormalQuality": true,
+    "retainedInAllRealAndFees": true,
+    "knownUsd": 0.126638916,
+    "reservedUsd": 0.0430203,
+    "unknownCalls": 1
+  },
+  "requiredRepetitions": {
+    "P2-OPEN": [1, 2],
+    "P2-CHAP": [1],
+    "P2-KEEP": [1, 2],
+    "P2-EDIT": [1, 2]
+  },
+  "remainingSuites": ["P2-KEEP", "P2-EDIT"],
+  "remainingModelRuns": 4,
+  "modelRunsForFinalReport": 7,
+  "deterministicRunsForRescore": 5,
+  "rescoreTargetCount": 12,
+  "policy": "Do not run CHAP again. Preserve the completed first repetition and cancelled partial second repetition separately. Do not fabricate a second CHAP result or a two-repetition CHAP average. Report actual sample counts; no other numerical threshold or minimum sample size has been waived. Original scoring algorithms remain unchanged. For program metrics that include CHAP, show single-run or pooled descriptive values and explicitly mark the original balanced two-repetition average inapplicable. OPEN-only and role-only metrics retain their existing two-repetition calculations. All historical failures, unknown evidence and costs remain."
+}

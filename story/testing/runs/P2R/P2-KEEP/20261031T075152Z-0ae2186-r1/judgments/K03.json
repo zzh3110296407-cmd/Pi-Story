@@ -1,0 +1,1854 @@
+{
+  "schema": "story/p2-judgments@1",
+  "stage": "P2R",
+  "date": "2026-10-31",
+  "judge": {
+    "agent": "Codex",
+    "modelVersion": "GPT-6 (session system identity)",
+    "snapshot": null,
+    "snapshotNote": "No finer immutable provider snapshot is exposed; none is invented.",
+    "judgedBy": "AI 裁判（已校准）"
+  },
+  "qualification": {
+    "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+    "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0",
+    "commit": "702cdd6c8352067bc53f5ac6353a12d8338b1bdc",
+    "protocol": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/protocol.md",
+    "protocolSha256": "4b98c191d737038766ee0fe10bf51261c7054ea65d7d7e7590d4acba4cf4198c"
+  },
+  "seed": "P2R-JR4-20261031-v1",
+  "sourceFreeze": "0ae2186e68a84f5c32600bb2609110804ee80c1c",
+  "authorSpotcheckComplete": false,
+  "statusExplanation": "正式完成的是已校准 AI 逐项判定。既有评分接口仅有 ai_preliminary/author_approved；保留 ai_preliminary 兼容值，不伪填 author_approved。作者按23§5/24§5完成抽查后方可闭合验收。",
+  "runId": "20261031T075152Z-0ae2186-r1",
+  "suiteId": "P2-KEEP",
+  "scores": [
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:fact:upsert:F-187",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:fact:upsert:F-187",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-187",
+          "subject": "char:ada",
+          "predicate": "injury",
+          "object": "dry scab on left palm, no fresh bleeding",
+          "validFrom": 2,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c02.s0030",
+            "c02.s0031",
+            "c02.s0032",
+            "c02.s0033"
+          ],
+          "sourceChapter": 2
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0030",
+            "text": "By the afternoon, the scrape on Ada’s left palm had formed a dry scab without fresh bleeding."
+          },
+          {
+            "ref": "c02.s0031",
+            "text": "She took off the oversized dressing because it folded when she closed her hand."
+          },
+          {
+            "ref": "c02.s0032",
+            "text": "The scab remained visible beneath it."
+          },
+          {
+            "ref": "c02.s0033",
+            "text": "When she gripped the baton later, she felt the tender patch and adjusted her fingers rather than pretending the scrape had never happened."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:fact:expire:F-205",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:fact:expire:F-205",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "expire",
+        "item": {
+          "id": "F-205",
+          "validUntil": 2,
+          "evidence": [
+            "c03.s0037",
+            "c03.s0039",
+            "c03.s0041"
+          ]
+        },
+        "priorTarget": {
+          "id": "F-205",
+          "subject": "char:ada",
+          "predicate": "injury",
+          "object": "dry scab on left palm",
+          "validFrom": 2,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c02.s0030"
+          ],
+          "sourceChapter": 2
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0037",
+            "text": "The scrape on Ada’s left palm was closed now, a pink line that no longer needed a dressing."
+          },
+          {
+            "ref": "c03.s0039",
+            "text": "The skin had not restored itself in a moment: there had been the raw line on arrival, the dry scab at the trial, and the gradual closing over the next two days."
+          },
+          {
+            "ref": "c03.s0041",
+            "text": "She could hold it normally without claiming that the injury had never existed."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:fact:upsert:F-11",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:fact:upsert:F-11",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-11",
+          "subject": "item:relay_card",
+          "predicate": "free_predicate",
+          "object": "The relay card has a crescent notch in its margin and four empty boxes beneath the team's names, with no legend explaining them.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0053",
+            "c01.s0055",
+            "c01.s0056"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0053",
+            "text": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it."
+          },
+          {
+            "ref": "c01.s0055",
+            "text": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there."
+          },
+          {
+            "ref": "c01.s0056",
+            "text": "The mark beside the notch might have been a worn numeral, but Ada could not identify it."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:fact:expire:F-206",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:fact:expire:F-206",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "expire",
+        "item": {
+          "id": "F-206",
+          "validUntil": 2,
+          "evidence": [
+            "c03.s0062"
+          ]
+        },
+        "priorTarget": {
+          "id": "F-206",
+          "subject": "item:pedestal",
+          "predicate": "location",
+          "object": "place:gallery",
+          "validFrom": 2,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c02.s0009"
+          ],
+          "sourceChapter": 2
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0062",
+            "text": "The dismantled pedestal waited in the loading room beside its labelled shelf."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:fact:upsert:F-8",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:fact:upsert:F-8",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-8",
+          "subject": "item:second_cairn",
+          "predicate": "free_predicate",
+          "object": "Beyond the marked turn stands a second cairn with a flat black stone, unpainted and absent from the current route sheet.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0059",
+            "c01.s0060",
+            "c01.s0061",
+            "c01.s0062"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0059",
+            "text": "Beyond the marked turn stood a second cairn with a flat black stone, absent from the current route sheet."
+          },
+          {
+            "ref": "c01.s0060",
+            "text": "They could see it through a break in the rain from the shelter's raised floor."
+          },
+          {
+            "ref": "c01.s0061",
+            "text": "The first cairn carried a painted arrow corresponding to the board."
+          },
+          {
+            "ref": "c01.s0062",
+            "text": "The second had no paint."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:fact:upsert:F-10",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "fact",
+        "operation": "upsert",
+        "item": {
+          "id": "F-10",
+          "subject": "char:rafi",
+          "predicate": "free_predicate",
+          "object": "Rafi has a spreading bruise on his right shin from a loose stone that rolled when he tested the rack's rear support.",
+          "validFrom": 1,
+          "validUntil": null,
+          "mode": "narrated",
+          "status": "confirmed",
+          "visibility": "public",
+          "evidence": [
+            "c01.s0031",
+            "c01.s0032",
+            "c01.s0033"
+          ],
+          "sourceChapter": 1
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0031",
+            "text": "A loose stone struck Rafi’s right shin and left a spreading bruise."
+          },
+          {
+            "ref": "c01.s0032",
+            "text": "It had rolled when he tested the rack's rear support with his boot."
+          },
+          {
+            "ref": "c01.s0033",
+            "text": "He stopped, waited for the first sharp ache to settle and checked that the leg would bear him."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:claim:add:S-23",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:claim:add:S-23",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "值、主体、历史/当前时段及陈述层次与正文相符。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-23",
+          "speaker": "char:bev",
+          "content": "Sixty-two pounds remains.",
+          "chapter": 3,
+          "evidence": [
+            "c03.s0058"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0058",
+            "text": "“Sixty-two pounds remains,” Bev said, closing the actual cashbook."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:claim:add:S-24",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:claim:add:S-24",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "claim",
+        "operation": "add",
+        "item": {
+          "id": "S-24",
+          "speaker": "char:ada",
+          "content": "Seventy-five pounds will get us home.",
+          "chapter": 3,
+          "evidence": [
+            "c03.s0023"
+          ]
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0023",
+            "text": "“Seventy-five pounds will get us home,” Ada said, reading the fare beside the counted notes."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-28",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-28",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-28",
+          "characterId": "char:bev",
+          "kind": "suspects",
+          "content": "The blue dot identified an old depot route, but the depot’s name is still missing.",
+          "about": "H-2",
+          "acquiredChapter": 3,
+          "via": "inferred",
+          "evidence": [
+            "c03.s0072",
+            "c03.s0073",
+            "c03.s0074"
+          ],
+          "status": "provisional",
+          "uncertainReason": "Bev’s suspicion is not confirmed; the depot remains unnamed.",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0072",
+            "text": "The blue dot’s depot was still unnamed when Bev filed the loan form."
+          },
+          {
+            "ref": "c03.s0073",
+            "text": "The regional office had supplied the object, the shelf and the condition instructions without explaining its old routing mark."
+          },
+          {
+            "ref": "c03.s0074",
+            "text": "Bev suspected the dot identified an old depot route, but the depot’s name was still missing."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-29",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-29",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "confirmed 只确认人物确实持有该 belief，内容保留未来不确定性，不等于客观预言。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-29",
+          "characterId": "char:tom",
+          "kind": "believes",
+          "content": "The team can admit an error without losing its audience, though tomorrow’s audience remains unknown.",
+          "about": null,
+          "acquiredChapter": 3,
+          "via": "inferred",
+          "evidence": [
+            "c03.s0087",
+            "c03.s0088",
+            "c03.s0090"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0087",
+            "text": "Tom believed the team could admit an error without losing its audience; tomorrow’s audience remained unknown."
+          },
+          {
+            "ref": "c03.s0088",
+            "text": "Today's visitors had stayed, asked questions and read the panels."
+          },
+          {
+            "ref": "c03.s0090",
+            "text": "A pleasant afternoon did not guarantee every afternoon that might follow."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:cognition:add:K-17",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:cognition:add:K-17",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-17",
+          "characterId": "char:tom",
+          "kind": "knows",
+          "content": "Safeguarding a thing is different from preventing anyone from using it.",
+          "about": null,
+          "acquiredChapter": 2,
+          "via": "witnessed",
+          "evidence": [
+            "c02.s0036",
+            "c02.s0037",
+            "c02.s0038",
+            "c02.s0039",
+            "c02.s0040"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0036",
+            "text": "Bev signed the delivery register after checking that the pedestal was intact."
+          },
+          {
+            "ref": "c02.s0037",
+            "text": "The slip itself remained uncut and unaltered."
+          },
+          {
+            "ref": "c02.s0038",
+            "text": "Reading and signing the separate register did not damage the document that would eventually return to Leila."
+          },
+          {
+            "ref": "c02.s0039",
+            "text": "Tom watched the process once, then returned to the rehearsal marks."
+          },
+          {
+            "ref": "c02.s0040",
+            "text": "He had learned the difference between safeguarding a thing and preventing anyone from using it."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-27",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:cognition:add:K-27",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-27",
+          "characterId": "char:leila",
+          "kind": "knows",
+          "content": "The three spare screws secure the reading shelf and were deliberately supplied loose; her earlier belief that they proved a part had been lost was wrong.",
+          "about": "F-299",
+          "acquiredChapter": 3,
+          "via": "witnessed",
+          "evidence": [
+            "c03.s0021",
+            "c03.s0023",
+            "c03.s0024",
+            "c03.s0025"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0021",
+            "text": "The separate shelf and its packing note explained all three spare screws."
+          },
+          {
+            "ref": "c03.s0023",
+            "text": "Leila watched the three screws secure the reading shelf and knew what they were for."
+          },
+          {
+            "ref": "c03.s0024",
+            "text": "Leila acknowledged her earlier wrong belief that spare screws proved a part had been lost."
+          },
+          {
+            "ref": "c03.s0025",
+            "text": "The packing note corrected that belief: the shelf travelled separately and the screws were deliberately supplied loose."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:cognition:add:K-18",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c2:c2:cognition:add:K-18",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-18",
+          "characterId": "char:rafi",
+          "kind": "knows",
+          "content": "The high route is passable that day.",
+          "about": "F-187",
+          "acquiredChapter": 2,
+          "via": "witnessed",
+          "evidence": [
+            "c02.s0028",
+            "c02.s0030"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0028",
+            "text": "Rafi watched Jun emerge along the high traverse and saw his dead-end belief disproved."
+          },
+          {
+            "ref": "c02.s0030",
+            "text": "Jun’s completed traverse established that the high route was passable that day."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:cognition:add:K-17",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:cognition:add:K-17",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-17",
+          "characterId": "char:ada",
+          "kind": "suspects",
+          "content": "Nessa wanted the invitation as well as the place.",
+          "about": null,
+          "acquiredChapter": 2,
+          "via": "inferred",
+          "evidence": [
+            "c02.s0055",
+            "c02.s0056"
+          ],
+          "status": "provisional",
+          "uncertainReason": "Ada saw the disappointment before she understood it.",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0055",
+            "text": "It was possible to be disappointed by a correction that gave her more credit, and Ada saw the disappointment before she understood it."
+          },
+          {
+            "ref": "c02.s0056",
+            "text": "Nessa had wanted the invitation as well as the place."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:cognition:add:K-26",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-26",
+          "characterId": "char:ada",
+          "kind": "knows",
+          "content": "The crescent notch positions the timing grid and carries no verdict.",
+          "about": "F-299",
+          "acquiredChapter": 3,
+          "via": "read",
+          "evidence": [
+            "c03.s0044",
+            "c03.s0048",
+            "c03.s0049"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0044",
+            "text": "Ada read the stencil instructions and learned that the notch positioned the timing grid."
+          },
+          {
+            "ref": "c03.s0048",
+            "text": "The printed instructions corrected that fear: the notch positioned the grid and carried no verdict."
+          },
+          {
+            "ref": "c03.s0049",
+            "text": "The stencil instructions finally explained the crescent notch: it positioned the timing grid."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:cognition:add:K-5",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:cognition:add:K-5",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "人物认知/转述与证据相符，推测仍为 provisional，没有升级为客观事实。",
+      "evidence": {
+        "kind": "cognition",
+        "operation": "add",
+        "item": {
+          "id": "K-5",
+          "characterId": "char:rafi",
+          "kind": "knows",
+          "content": "Jun had inspected the route book during training and had signed the depot check in it.",
+          "about": null,
+          "acquiredChapter": 1,
+          "via": "witnessed",
+          "evidence": [
+            "c01.s0049",
+            "c01.s0050"
+          ],
+          "status": "confirmed",
+          "supersededBy": null
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0049",
+            "text": "Jun showed her signed depot check in the book, correcting Rafi’s mistaken assumption."
+          },
+          {
+            "ref": "c01.s0050",
+            "text": "She had inspected the pages during training and knew which corner of the sleeve caught the cover."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:relation:upsert:rel:leila->tom",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:relation:upsert:rel:leila->tom",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:leila->tom",
+          "from": "char:leila",
+          "to": "char:tom",
+          "stance": "shared professional confidence and collaborative trust",
+          "sinceChapter": 3,
+          "evidence": [
+            "c03.s0091",
+            "c03.s0092",
+            "c03.s0093",
+            "c03.s0095"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0091",
+            "text": "Leila asked Tom to write next week’s briefing with her and put both names on it."
+          },
+          {
+            "ref": "c03.s0092",
+            "text": "He suggested starting with the actual sequence rather than an introductory paragraph about shared ambitions."
+          },
+          {
+            "ref": "c03.s0093",
+            "text": "She let him cross the paragraph out."
+          },
+          {
+            "ref": "c03.s0095",
+            "text": "For the first time all week the page looked as if it had been written for a person who would need to do something, rather than a person assessing whether its author sounded prepared."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:relation:upsert:rel:nessa->ada",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:relation:upsert:rel:nessa->ada",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:nessa->ada",
+          "from": "char:nessa",
+          "to": "char:ada",
+          "stance": "Hopeful reserve runner who believes Ada may give her a place on the team.",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0097"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0097",
+            "text": "Nessa believed Ada would ask her to run if a place opened, although Ada had made no promise."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:relation:upsert:rel:rafi->jun",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c1:c1:relation:upsert:rel:rafi->jun",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:rafi->jun",
+          "from": "char:rafi",
+          "to": "char:jun",
+          "stance": "Mentor and apprentice navigator; Rafi is learning to trust Jun's careful judgement.",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0039",
+            "c01.s0055",
+            "c01.s0058"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0039",
+            "text": "Rafi had asked for an apprentice because the route needed more than one person able to read it."
+          },
+          {
+            "ref": "c01.s0055",
+            "text": "Rafi invited Jun to mark the first bearing, then checked it with her rather than replacing it."
+          },
+          {
+            "ref": "c01.s0058",
+            "text": "Rafi found her careful confidence easier to trust once he stopped expecting it to resemble his own manner of speaking."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:relation:upsert:rel:rafi->jun",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:rafi->jun",
+          "from": "char:rafi",
+          "to": "char:jun",
+          "stance": "trusted leadership; Rafi entrusts Jun with the route book and introduces her as navigator",
+          "sinceChapter": 3,
+          "evidence": [
+            "c03.s0082",
+            "c03.s0086",
+            "c03.s0087"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0082",
+            "text": "Rafi introduced Jun to the relief crew as the navigator who had brought them through."
+          },
+          {
+            "ref": "c03.s0086",
+            "text": "Rafi entrusted the intact route book to Jun at the north landing."
+          },
+          {
+            "ref": "c03.s0087",
+            "text": "She checked the fastening and put it inside her own dry bag."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:relation:upsert:rel:leila->tom",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c1:c1:relation:upsert:rel:leila->tom",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "主体、值及时段与所列正文证据相符；未将推测或角色主张升级为客观真相。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:leila->tom",
+          "from": "char:leila",
+          "to": "char:tom",
+          "stance": "colleagues; Leila mentors Tom and chooses to work beside him",
+          "sinceChapter": 1,
+          "evidence": [
+            "c01.s0079",
+            "c01.s0108"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0079",
+            "text": "Leila agreed to work beside Tom instead of sending him away for another badge."
+          },
+          {
+            "ref": "c01.s0108",
+            "text": "By the end of the briefing, Tom had a corrected badge, a legible instruction sheet and a folder containing an intact delivery slip."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:relation:upsert:rel:ada->nessa",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:relation:upsert:rel:ada->nessa",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:ada->nessa",
+          "from": "char:ada",
+          "to": "char:nessa",
+          "stance": "Working partnership built on trust; Ada gives Nessa the difficult outside exchange and relies on her stated mark.",
+          "sinceChapter": 2,
+          "evidence": [
+            "c02.s0064",
+            "c02.s0066",
+            "c02.s0068",
+            "c02.s0118",
+            "c02.s0120"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0064",
+            "text": "Ada gave Nessa the difficult outside exchange and accepted her suggested mark."
+          },
+          {
+            "ref": "c02.s0066",
+            "text": "Ada believed Nessa would hold the exchange position, based on the last three clean trials."
+          },
+          {
+            "ref": "c02.s0068",
+            "text": "It made Ada willing to run towards the place where Nessa had said she would be."
+          },
+          {
+            "ref": "c02.s0118",
+            "text": "The official trial ended with a clean exchange."
+          },
+          {
+            "ref": "c02.s0120",
+            "text": "Nessa remained to help take down the unused practice tape."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:relation:upsert:rel:ada->nessa",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c3:c3:relation:upsert:rel:ada->nessa",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:ada->nessa",
+          "from": "char:ada",
+          "to": "char:nessa",
+          "stance": "trusted teammate and co-planner for the next season",
+          "sinceChapter": 3,
+          "evidence": [
+            "c03.s0086",
+            "c03.s0087",
+            "c03.s0088"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c03.s0086",
+            "text": "Ada asked Nessa to plan the next season with her rather than simply fill a vacant lane."
+          },
+          {
+            "ref": "c03.s0087",
+            "text": "They talked about shift patterns and the cost of hiring a practice lane, matters which sounded small beside the cheering they had heard outside."
+          },
+          {
+            "ref": "c03.s0088",
+            "text": "Ada trusted those small matters."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:relation:upsert:rel:leila->tom",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "relation",
+        "operation": "upsert",
+        "item": {
+          "key": "rel:leila->tom",
+          "from": "char:leila",
+          "to": "char:tom",
+          "stance": "Growing professional respect and trust; Leila lets Tom lead and revises her first judgment of him.",
+          "sinceChapter": 2,
+          "evidence": [
+            "c02.s0011",
+            "c02.s0031",
+            "c02.s0081",
+            "c02.s0087"
+          ],
+          "status": "confirmed"
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0011",
+            "text": "Leila noticed the extra care, remembered her first judgement of him and let him finish without offering a correction."
+          },
+          {
+            "ref": "c02.s0031",
+            "text": "Leila liked this more than she would have liked a ceremonial declaration of leadership."
+          },
+          {
+            "ref": "c02.s0081",
+            "text": "Leila let Tom lead the rehearsal and stood ready to answer only when he asked."
+          },
+          {
+            "ref": "c02.s0087",
+            "text": "Leila realised she had spent much of Monday wanting an assistant who already knew her unspoken procedures, which was a demanding qualification for temporary employment."
+          }
+        ],
+        "rawHook": null
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:second_cairn-c3:c3:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "second_cairn-c3",
+      "chapter": 3,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "关系变化或伏笔操作由正文明确支持，提及与推进未混淆。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c03.s0075",
+            "c03.s0076",
+            "c03.s0077",
+            "c03.s0078",
+            "c03.s0079"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A two-note whistle sounded from upriver after dark, with no visible boat to answer it.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0075",
+            "text": "The relief crew recognised the whistle’s two notes as an old ferry signal, but could not explain who was sounding it now."
+          },
+          {
+            "ref": "c03.s0076",
+            "text": "One crew member remembered hearing a recording during training."
+          },
+          {
+            "ref": "c03.s0077",
+            "text": "He could reproduce the notes and identify the old use."
+          },
+          {
+            "ref": "c03.s0078",
+            "text": "Rafi suspected the whistle belonged to an old ferry stop, but the relief crew could not identify it."
+          },
+          {
+            "ref": "c03.s0079",
+            "text": "Recognition of the old signal did not identify the current whistler or establish that a ferry still operated."
+          }
+        ],
+        "rawHook": {
+          "ref": "advance_whistle",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            75,
+            76,
+            77,
+            78,
+            79
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:mention:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c2:c2:hook:mention:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "mention",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c02.s0038",
+            "c02.s0040"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A blue cord was knotted around the clock handle, although Imani had never tied it there.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0038",
+            "text": "The unexplained blue cord still hung from the clock handle while they practised."
+          },
+          {
+            "ref": "c02.s0040",
+            "text": "Imani said she did not know what the cord was for, but knew what it did not do."
+          }
+        ],
+        "rawHook": {
+          "ref": "cord_seen",
+          "op": "mention",
+          "id": "H-3",
+          "sentences": [
+            38,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c3:c3:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c3",
+      "chapter": 3,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文只是仍未知、回访或人物未证实猜测；没有新增可核验线索，advance 过度，应 mention（87 另有明确 defer）。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c03.s0072",
+            "c03.s0073",
+            "c03.s0074",
+            "c03.s0076",
+            "c03.s0096"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "progressing",
+          "startChapter": 1,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "The empty object label carried a blue dot that appeared on no public catalogue.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c03.s0072",
+            "text": "The blue dot’s depot was still unnamed when Bev filed the loan form."
+          },
+          {
+            "ref": "c03.s0073",
+            "text": "The regional office had supplied the object, the shelf and the condition instructions without explaining its old routing mark."
+          },
+          {
+            "ref": "c03.s0074",
+            "text": "Bev suspected the dot identified an old depot route, but the depot’s name was still missing."
+          },
+          {
+            "ref": "c03.s0076",
+            "text": "It was still a question, and Leila resisted the temptation to turn lack of urgency into proof of an answer."
+          },
+          {
+            "ref": "c03.s0096",
+            "text": "Leila planned to ask the regional depot about the blue dot next week; no answer arrived that night."
+          }
+        ],
+        "rawHook": {
+          "ref": "blue_dot_advanced",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            72,
+            73,
+            74,
+            76,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-2",
+          "evidence": [
+            "c02.s0047",
+            "c02.s0051",
+            "c02.s0052",
+            "c02.s0054",
+            "c02.s0055"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-2",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "The empty object label carried a blue dot that appeared on no public catalogue.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0047",
+            "text": "“The blue dot means the object is radioactive,” Tom joked, and immediately said he was inventing that."
+          },
+          {
+            "ref": "c02.s0051",
+            "text": "They agreed to say exactly what they knew about the dot: it was on the label, and its meaning had not yet been confirmed."
+          },
+          {
+            "ref": "c02.s0052",
+            "text": "A private loan form repeated the blue dot beside an unnamed regional depot."
+          },
+          {
+            "ref": "c02.s0054",
+            "text": "The form explained which office had sent the crate but not which building the office meant by depot."
+          },
+          {
+            "ref": "c02.s0055",
+            "text": "It moved the question one step without finishing it."
+          }
+        ],
+        "rawHook": {
+          "ref": "blue_dot_form_advance",
+          "op": "advance",
+          "id": "H-2",
+          "sentences": [
+            47,
+            51,
+            52,
+            54,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-1",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-1",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-1",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "Who tied the blue cord around the timing clock's handle, and why?",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0060",
+            "text": "A blue cord was knotted around the clock handle, although Imani had never tied it there."
+          },
+          {
+            "ref": "c01.s0119",
+            "text": "There was only a cup of cold tea, a clock with an unexplained cord, and a place in a team that had begun to feel less like an absence."
+          }
+        ],
+        "rawHook": {
+          "ref": "blue_cord_hook",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who tied the blue cord around the timing clock's handle, and why?",
+          "sentences": [
+            60,
+            119
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-3",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:advance:H-3",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": false,
+      "preJudge": false,
+      "final": false,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "正文只是仍未知、回访或人物未证实猜测；没有新增可核验线索，advance 过度，应 mention（87 另有明确 defer）。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "advance",
+        "item": {
+          "id": "H-3",
+          "evidence": [
+            "c02.s0056",
+            "c02.s0057",
+            "c02.s0058",
+            "c02.s0059",
+            "c02.s0060"
+          ]
+        },
+        "priorTarget": {
+          "id": "H-3",
+          "type": "story_question",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "A small bell rang inside the sealed delivery crate whenever it tilted, though the packing list named no bell.",
+          "dependsOn": []
+        },
+        "citedSentences": [
+          {
+            "ref": "c02.s0056",
+            "text": "Bev suspected the bell belonged to reusable packaging rather than the missing artwork."
+          },
+          {
+            "ref": "c02.s0057",
+            "text": "The straps and reusable corner guards made that plausible, but a plausible explanation did not need to enter the object record as an established fact."
+          },
+          {
+            "ref": "c02.s0058",
+            "text": "The unexplained bell sounded again when they tilted the sealed crate for the rehearsal."
+          },
+          {
+            "ref": "c02.s0059",
+            "text": "They had placed it on a separate trolley, still closed, to practise the route without opening it."
+          },
+          {
+            "ref": "c02.s0060",
+            "text": "Tom stopped the trolley when he heard the bell, checked that the straps held and began again more slowly."
+          }
+        ],
+        "rawHook": {
+          "ref": "bell_reusable_advance",
+          "op": "advance",
+          "id": "H-3",
+          "sentences": [
+            56,
+            57,
+            58,
+            59,
+            60
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:upsert:H-4",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_pedestal-c2:c2:hook:upsert:H-4",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_pedestal-c2",
+      "chapter": 2,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-4",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 2,
+          "lastAdvancedChapter": 2,
+          "expectedPayoff": "Who made the muffled sound in the corridor, and was it the mayor?",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c02.s0103",
+            "text": "A muffled sound from the corridor could have been the mayor’s laugh, but no one saw who made it."
+          },
+          {
+            "ref": "c02.s0104",
+            "text": "They did not add a mayoral attendance to the programme on that evidence."
+          }
+        ],
+        "rawHook": {
+          "ref": "corridor_sound",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "Who made the muffled sound in the corridor, and was it the mayor?",
+          "sentences": [
+            103,
+            104
+          ]
+        }
+      }
+    },
+    {
+      "metric": "K03",
+      "component": "correct",
+      "sampleId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-2",
+      "itemId": "20261031T075152Z-0ae2186-r1:unclaimed_lane-c1:c1:hook:upsert:H-2",
+      "runId": "20261031T075152Z-0ae2186-r1",
+      "caseId": "unclaimed_lane-c1",
+      "chapter": 1,
+      "pass": true,
+      "preJudge": true,
+      "final": true,
+      "authorVerdict": null,
+      "status": "ai_preliminary",
+      "judgmentStage": "qualified_ai_judgment_pending_author_spotcheck",
+      "reviewCompleted": true,
+      "judgedBy": "AI 裁判（已校准）",
+      "date": "2026-10-31",
+      "note": "新问题有正文依据，提及、推进或明确延后与状态变化一致。",
+      "evidence": {
+        "kind": "hook",
+        "operation": "upsert",
+        "item": {
+          "id": "H-2",
+          "type": "mystery",
+          "status": "open",
+          "startChapter": 1,
+          "lastAdvancedChapter": 1,
+          "expectedPayoff": "What caused the crescent notch on the relay card, and what are the four empty boxes for?",
+          "dependsOn": []
+        },
+        "priorTarget": null,
+        "citedSentences": [
+          {
+            "ref": "c01.s0053",
+            "text": "A crescent notch interrupted the relay card’s margin, and neither runner could explain it."
+          },
+          {
+            "ref": "c01.s0055",
+            "text": "Four empty boxes remained beneath the team’s names, with no heading to explain what belonged there."
+          },
+          {
+            "ref": "c01.s0056",
+            "text": "The mark beside the notch might have been a worn numeral, but Ada could not identify it."
+          },
+          {
+            "ref": "c01.s0106",
+            "text": "Imani suspected the notch had once served a timing purpose; its shape alone did not prove that."
+          },
+          {
+            "ref": "c01.s0107",
+            "text": "She promised to look for the older instruction sheet instead of guessing from the cut."
+          }
+        ],
+        "rawHook": {
+          "ref": "relay_card_marks_hook",
+          "op": "upsert",
+          "type": "mystery",
+          "expectedPayoff": "What caused the crescent notch on the relay card, and what are the four empty boxes for?",
+          "sentences": [
+            53,
+            55,
+            56,
+            106,
+            107
+          ]
+        }
+      }
+    }
+  ]
+}

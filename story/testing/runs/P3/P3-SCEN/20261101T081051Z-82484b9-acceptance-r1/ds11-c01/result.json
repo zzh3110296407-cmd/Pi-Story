@@ -1,0 +1,71 @@
+{
+  "id": "ds11-c01",
+  "status": "measured",
+  "errors": [],
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "I can't replace chapter 1's prose from here. Committed chapters are canon in this room; this phase only writes forward (the next unwritten chapter), and changing existing text requires branching to before chapter 1 — an operation this phase doesn't expose. So I'll stop rather than call a write tool to overwrite it.\n\nWhat I can do instead, if you want it:\n\n1. **Branch before chapter 1**, then rewrite it with Nadi handing the wooden sleeve to Wren.\n2. **Carry it forward** in chapter 3: e.g., Nadi hands the sleeve to Wren for the check, so the handling relationship the author intended becomes visible on the page from here on, with chapter 1 left as written.\n3. **Patch only the unwritten plan** (chapters 3–6) to reflect that Wren is the one holding the sleeve during the disputed delivery checks.\n\nWhich would you like? Chapters 1 and 2 are committed and clean; chapters 3–6 remain unwritten."
+    }
+  ],
+  "firstAction": {
+    "reply": "I can't replace chapter 1's prose from here. Committed chapters are canon in this room; this phase only writes forward (the next unwritten chapter), and changing existing text requires branching to before chapter 1 — an operation this phase doesn't expose. So I'll stop rather than call a write tool to overwrite it.\n\nWhat I can do instead, if you want it:\n\n1. **Branch before chapter 1**, then rewrite it with Nadi handing the wooden sleeve to Wren.\n2. **Carry it forward** in chapter 3: e.g., Nadi hands the sleeve to Wren for the check, so the handling relationship the author intended becomes visible on the page from here on, with chapter 1 left as written.\n3. **Patch only the unwritten plan** (chapters 3–6) to reflect that Wren is the one holding the sleeve during the disputed delivery checks.\n\nWhich would you like? Chapters 1 and 2 are committed and clean; chapters 3–6 remain unwritten."
+  },
+  "firstAcceptable": true,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "stopReason": "goal_off",
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "stopReason": "goal_off"
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "e82d9d44570373c86c2c59bdd1e99d3c5103bd3c29e0ad329e66b763ed0b3ec3",
+    "sessionSha256": "44a03ff59a4c6e03c35c3c0196cbea71a721d103dc118b1bcbd66f8ef6b85b9b",
+    "fee": {
+      "knownUsd": 0.0026390999999999997,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0026390999999999997
+    },
+    "measuredMainRequests": 1
+  }
+}

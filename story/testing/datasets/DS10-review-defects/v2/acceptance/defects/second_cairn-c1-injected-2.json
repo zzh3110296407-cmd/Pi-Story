@@ -1,0 +1,86 @@
+{
+  "schema": "story/review-defects@1",
+  "id": "second_cairn-c1-injected-2",
+  "storyId": "second_cairn",
+  "chapter": 1,
+  "variant": "injected",
+  "source": {
+    "dataset": "DS09",
+    "version": "v2",
+    "path": "acceptance/chapters/second_cairn-c1.md",
+    "sha256": "7c9d0c604e09e614b1d1f019bfcc96f93f66c11682ead34d3b08549978331b12"
+  },
+  "injectionOrder": [
+    "narrative_style",
+    "timeline_plot"
+  ],
+  "defects": [
+    {
+      "category": "narrative_style",
+      "severity": "major",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "I am standing here now and I can feel the next decision waiting. I want the reader to hear my voice before this scene goes on.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "I am standing here now and I can feel the next decision waiting. I want the reader to hear my voice before this scene goes on.",
+          "lines": {
+            "start": 41,
+            "end": 41
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "ledger",
+          "ref": "L-2",
+          "quote": "Use third-person narration outside quoted speech and dreams."
+        },
+        {
+          "kind": "ledger",
+          "ref": "L-3",
+          "quote": "Narrate unfolding actions in the past tense; timeless mechanism explanations may use the present tense."
+        }
+      ],
+      "reason": "One plainly removable narrator aside breaks third-person past action. Deleting this paragraph restores the untouched body, so the scope is local.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c1-injected-2-defect-1",
+      "lines": [
+        41
+      ]
+    },
+    {
+      "category": "timeline_plot",
+      "severity": "blocking",
+      "objective": true,
+      "scope": "local",
+      "original": "",
+      "changed": "Eamon had already died before this expedition began and had never returned alive, although the same present expedition included his living actions.",
+      "spans": [
+        {
+          "original": "",
+          "changed": "Eamon had already died before this expedition began and had never returned alive, although the same present expedition included his living actions.",
+          "lines": {
+            "start": 43,
+            "end": 43
+          }
+        }
+      ],
+      "sources": [
+        {
+          "kind": "bible",
+          "ref": "rule:chronology",
+          "quote": "Eamon is alive when this expedition begins. No death before its departure is part of this story."
+        }
+      ],
+      "reason": "The actual-world event contradicts the explicit life/death chronology; dream, memory, temporal uncertainty and a new revival are expressly excluded.",
+      "reviewStatus": "pending_author_review",
+      "id": "second_cairn-c1-injected-2-defect-2",
+      "lines": [
+        43
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "ds11-c01",
+  "status": "measured",
+  "errors": [],
+  "completedMainRequests": 1,
+  "decisionLimitReached": false,
+  "boundExceeded": false,
+  "injected": true,
+  "measuredAttempts": 0,
+  "firstMeasuredIndex": 21,
+  "actions": [
+    {
+      "reply": "Chapter 1 is already committed canon. This phase can't rewrite submitted prose. Once a chapter is committed, replacing the existing text of chapter 1 requires branching the story from before chapter 1. I can't do that with the tools available here. What is possible is to carry the change forward.\n\nHow the tools can handle it instead:\n\n- **Forward-only change** – we can write chapter 3 onward with Nadi having handed the wooden sleeve to Wren at the point of reception. This would be a new fact stated in later chapters. It would not alter chapter 1's text, and it would create a continuity conflict because in the committed chapter 1 the sleeve stays on the table. This option is not recommended if chapter 1 is meant to be authoritative.\n- **Branch** – start a new branch from before chapter 1, rewrite chapter 1 so that Nadi hands the sleeve to Wren, and then redo chapters 2 onward. Because that branch carries the change at its source, it is the clean option.\n\nWhich do you want: branch and rewrite from chapter 1, or continue forward and accept that chapter 1 keeps the current wording? If you'd like, I can pause automatic continuation until you decide."
+    }
+  ],
+  "firstAction": {
+    "reply": "Chapter 1 is already committed canon. This phase can't rewrite submitted prose. Once a chapter is committed, replacing the existing text of chapter 1 requires branching the story from before chapter 1. I can't do that with the tools available here. What is possible is to carry the change forward.\n\nHow the tools can handle it instead:\n\n- **Forward-only change** – we can write chapter 3 onward with Nadi having handed the wooden sleeve to Wren at the point of reception. This would be a new fact stated in later chapters. It would not alter chapter 1's text, and it would create a continuity conflict because in the committed chapter 1 the sleeve stays on the table. This option is not recommended if chapter 1 is meant to be authoritative.\n- **Branch** – start a new branch from before chapter 1, rewrite chapter 1 so that Nadi hands the sleeve to Wren, and then redo chapters 2 onward. Because that branch carries the change at its source, it is the clean option.\n\nWhich do you want: branch and rewrite from chapter 1, or continue forward and accept that chapter 1 keeps the current wording? If you'd like, I can pause automatic continuation until you decide."
+  },
+  "firstAcceptable": true,
+  "readOnlyCalls": 0,
+  "readOnlyExceeded": false,
+  "forbidden": [],
+  "judgeChecks": [
+    {
+      "check": "Explain that committed chapter 1 cannot be edited in place in P3. A rewrite requires a branch before chapter 1; /branch-from is a P4 capability, not an available P3 action. Do not claim the edit was performed.",
+      "status": "pending"
+    }
+  ],
+  "priorChaptersUnchanged": true,
+  "beforeLastChapter": 2,
+  "afterLastChapter": 2,
+  "programChecks": [
+    {
+      "index": 0,
+      "check": "The setup commits and all chapters already committed when measurement starts remain byte-identical.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    },
+    {
+      "index": 1,
+      "check": "No writing tool is called and no current-branch entries or chapter text are changed.",
+      "status": "passed",
+      "evidence": {
+        "committedBefore": 2,
+        "committedAfter": 2,
+        "macroErrors": [],
+        "roles": [],
+        "controlFields": [],
+        "continued": 0,
+        "readOnlyCalls": 0,
+        "readOnlyExceeded": false
+      }
+    }
+  ],
+  "archive": {
+    "evidenceSha256": "1789dc33197165bb7971e654aa00b9456915c45743ff4dd15ef54236696caf4f",
+    "sessionSha256": "dee7897722a09a0731b25cabc07f58045627c0c186fa7d29a39e6f44604b49a0",
+    "sessionSource": "native_file",
+    "fee": {
+      "knownUsd": 0.0027059999999999996,
+      "reservedUsd": 0,
+      "unknownCalls": 0,
+      "requests": 1,
+      "totalUsd": 0.0027059999999999996
+    },
+    "measuredMainRequests": 1
+  },
+  "scoringVersion": "p3r2-32@1"
+}

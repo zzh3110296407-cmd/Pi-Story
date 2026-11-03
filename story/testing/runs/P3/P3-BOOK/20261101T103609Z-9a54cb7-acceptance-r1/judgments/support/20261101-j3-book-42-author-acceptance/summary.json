@@ -1,0 +1,87 @@
+{
+  "schema": "story/p3-j3-book-approved-summary@1",
+  "date": "2026-11-01",
+  "status": "author_approved_after_specified_reason_erratum",
+  "judge": {
+    "identity": "Codex (AI)",
+    "modelVersion": "GPT-6 (session-disclosed family)",
+    "exactSnapshotId": null,
+    "snapshotLimitation": "No finer immutable build exposed; no independent second-model or personal human-review claim.",
+    "qualification": {
+      "path": "story/testing/runs/P2R/P2R-JUDGE/20261030-calibration/qualification.json",
+      "sha256": "9ad4114baf516d28aff183529f09fa8076c172f653936c354e07d3db309770b0"
+    },
+    "promptVersion": "P3-J3-BOOK-42@1",
+    "promptPath": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-42-ai/protocol.md",
+    "promptSha256": "97c4d14f34724984c4f6c1a6b8189fe06038ae4be8fa61915632c3b3c79767b4",
+    "independence": "Judging chat separate from execution/tuning; original dataset authorship disclosed."
+  },
+  "batchRunId": "20261101T103609Z-9a54cb7-acceptance-r1",
+  "books": [
+    "42"
+  ],
+  "judgmentRows": 15,
+  "T03_BOOK_42": {
+    "observedErrors": 0,
+    "judged": 0,
+    "notApplicable": 0
+  },
+  "T04_BOOK_42": {
+    "related": 15,
+    "unrelated": 0,
+    "n": 15,
+    "programInvalid": 0,
+    "programRepeated": 0,
+    "invalidUnion": 0,
+    "minimum": 100,
+    "passed": null
+  },
+  "notApplicable": 0,
+  "observationGapsInJudgedDimensions": 0,
+  "unobservedToolResults": 0,
+  "formalRootJudgmentRowsFor42": 15,
+  "priorApprovedRowsPreserved": 38,
+  "rawResultsDataMetricsModified": false,
+  "paidJudgeModelCalls": 0,
+  "approval": {
+    "evidence": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-42-author-acceptance/approval.json",
+    "sha256": "0de17362166f555d1baf6c6838bc35ea67c7cdd09558b1fa4e1716fab1358c2e",
+    "conditionSatisfied": true
+  },
+  "reasonErratum": "story/testing/runs/P3/P3-BOOK/20261101T103609Z-9a54cb7-acceptance-r1/judgments/support/20261101-j3-book-42-author-acceptance/reason-erratum.json",
+  "formalRootJudgmentRowsCumulative": 53,
+  "parentJudgmentFilesPreserved": 8,
+  "verdictChanges": 0,
+  "reasonChanges": 1,
+  "evidenceChanges": 0,
+  "cumulativeApprovedScope": {
+    "BOOK_T03": {
+      "correct": 3,
+      "n": 3
+    },
+    "SCEN_plus_observed_BOOK_T03": {
+      "correct": 25,
+      "n": 27,
+      "value": 0.9259259259259259
+    },
+    "BOOK_T04": {
+      "related": 50,
+      "n": 50,
+      "invalidUnion": 2,
+      "value": 0.04,
+      "minimum": 100,
+      "minimumSatisfied": false,
+      "passed": null
+    },
+    "booksIncluded": [
+      "837",
+      "527",
+      "1587",
+      "42"
+    ],
+    "remainingBooks": [
+      "1769"
+    ],
+    "original837InterruptionRetained": true
+  }
+}
