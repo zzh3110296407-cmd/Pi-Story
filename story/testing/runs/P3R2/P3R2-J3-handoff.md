@@ -1,6 +1,6 @@
 # P3R2 J3 独立判定交接
 
-V5产品提交：1f4ea4686b2d11527e5d65593d1130452ff3833f；评分p3r2-32@1。离线视图：D:\AI\Story Dome\Story\pi-Story\story\testing\runs\P3R2\P3R2-ACCEPTANCE\20261103T020418Z-1f4ea46。
+V5产品提交：1f4ea4686b2d11527e5d65593d1130452ff3833f；评分p3r2-32@1。离线视图：D:\AI\Story Dome\Story\pi-Story\story\testing\runs\P3R2\P3R2-ACCEPTANCE\20261103T022557Z-1f4ea46。
 
 仅判本轮正式验收，不改V4记录，不调用付费测量模型。初判ai_preliminary，作者整体认可后author_approved并附approval.evidence。沿用story/p2-judgments@1/@2和readJudgments(folder,"P3")；详细理由放judgments/support。
 
@@ -18,18 +18,10 @@ V5产品提交：1f4ea4686b2d11527e5d65593d1130452ff3833f；评分p3r2-32@1。�
 
 现有未判项和缺测均保持，不推定作者已认可运行结果。后续材料会更新同一交接文件，已认可样本不重复判定。
 
-## 2026-11-03 最终 BOOK 交接（作者停止扩跑）
+## 本批已正式认可并合并（2026-11-03）
 
-作者已决定只保留837、527、42三本完整结束（21章），1587和1769不再补齐、后备不启动。两本部分运行的1+2章及所有调用仍纳入统计；最终质量池为全部24个已提交章。1587的派生封存目录仅复制原生会话并标注未完成请求，不补造工具结果。费用仍3.327187008 USD，全部未知预留保留。
+作者整体认可167条，本地提交8be85a93；新增125项适用、42条NA，原226项不变，合计393原始记录/351项适用。W03=60/60、NA42保留null；W04固定20章35/42通过，7项未覆盖保留。T04分母152、已知无效1、结果缺口1，value/passed仍null。没有新增BOOK T03恢复样本。
 
-已有226项author_approved沿用，不重新判定。新测量源码提交035aa91311e399ad2715ab38b239fffdc1b64d0f；V5产品标识仍1f4ea4686b2d11527e5d65593d1130452ff3833f。Git历史已迁移，旧认可提交号仍是历史证据标识。
+当前正式离线视图：D:\AI\Story Dome\Story\pi-Story\story\testing\runs\P3R2\P3R2-ACCEPTANCE\20261103T022557Z-1f4ea46，测量源码3168eaaf10ad49cdf8e66aa5255242f93c81dcc0。质量样本与原020418固定样本SHA-256完全相同，未重新抽样。硬门槛、程序指标、费用均复算一致；新归档与判定增量扫描通过。
 
-新增T04/relevance共23项，逐项入口为本离线目录J3-pending-T04.json；按原runId/sampleId判定。分布：20261102T065906Z-11effeb-acceptance-r1-1587：5；20261102T065906Z-11effeb-acceptance-r1-42：11；20261102T065906Z-11effeb-acceptance-r1-1769：7。
-其中1条没有保存原生工具结果：只判相关性，不补造结果；即使认可相关性，计分器仍保留结果缺口，不自动判T04完整通过。全部实际调用分母为152，不得缩回已认可部分129。
-
-BOOK没有新增T03恢复样本，沿用SCEN22/24。固定质量抽样已封存：D:\AI\Story Dome\Story\pi-Story\story\testing\runs\P3R2\P3R2-ACCEPTANCE\20261103T020418Z-1f4ea46\quality-sample.json，SHA-256=9a2339a3459fc75335cbf63834ecb992e779176a05e21cf168b01045d83ecf71。
-W03候选274对，严格依种子顺序先审适用性，取前60适用对；不适用必须保留@2的null、理由及引用，失败不能换样。W04固定20章，purpose、turn、hookSeeds每个非空项都判；复合要点全部实现才通过，不能漏点。当前尚无W03/W04正式判定，不把AI初判当作作者认可。
-
-请把新增判定保存到BOOK原批次的judgments/，或提供独立交付路径与整体认可。原226项和原始输出保持不变。新判定的runId与sampleId来自冻结样本；不得调用付费测量模型。
-
-原S01五本尝试3/5；三本完整书另外列3/3。S03等样本不足如实记录，作者停止扩跑不代表这些门槛自动通过。
+此批J3不再待判，不重复请求裁判。剩余本人V5终端检查按docs/p3r2/terminal-check.md；BOOK已关闭，1587/1769与后备不再运行。原五本S01和不足样本仍如实保留，不宣布P3整体通过。
