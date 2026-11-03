@@ -1,5 +1,7 @@
+import path from "node:path";
 import { expect, test } from "vitest";
 import { publicEvidence } from "../../../scripts/eval/p2/artifacts.ts";
+import { scanSecrets } from "../../../scripts/eval/p2/secrets.mjs";
 
 test("ordinary authorization labels in fictional administrative prose are preserved", () => {
 	expect(() =>
@@ -35,7 +37,12 @@ test.each([
 	"request header Proxy-Authorization: Digest synthetic-private-value",
 	"configuration API_KEY=synthetic-private-value",
 	JSON.stringify({ prose: `sk-${"x".repeat(24)}` }),
-	JSON.stringify({ prose: "Bearer synthetic-private-value" }),
+	JSON.stringify({ prose: ["Bearer", "synthetic-private-value"].join(" ") }),
 ])("credential material and actual password fields remain rejected", (text) => {
 	expect(() => publicEvidence(text)).toThrow("Sensitive evidence rejected");
+});
+
+test("synthetic negative inputs do not embed credential-shaped material in the published test sources", () => {
+	const result = scanSecrets([import.meta.dirname], path.resolve(import.meta.dirname, "../../../.."));
+	expect(result.hits).toEqual([]);
 });

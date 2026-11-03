@@ -161,7 +161,12 @@ test("a public Pi fixture uses its complete frozen blob without requiring the ol
 	const file = path.join(root, relative);
 	mkdirSync(path.dirname(file), { recursive: true });
 	writeFileSync(file, original);
+	try {
+		expect(scanSecrets([root], root)).toMatchObject({ passed: true, hits: [] });
+		writeFileSync(file, `${original.toString("utf8")}\nchanged\n`);
+		expect(scanSecrets([root], root)).toMatchObject({ passed: false });
+	} finally {
+		writeFileSync(file, original);
+	}
 	expect(scanSecrets([root], root)).toMatchObject({ passed: true, hits: [] });
-	writeFileSync(file, `${original.toString("utf8")}\nchanged\n`);
-	expect(scanSecrets([root], root)).toMatchObject({ passed: false });
 });
